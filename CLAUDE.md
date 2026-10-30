@@ -32,7 +32,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - Bis 30.10.2026 lief die Seite im IONOS-Webspace (Ordner `/wichtellos`); das IONOS-SSL (96 €/Jahr) wurde gekündigt.
 - Nach dem Deploy live prüfen: Startseite, Auslosung bis zum geheimen Link, alle Ratgeber-Seiten,
   `/gibt-es-nicht/` muss die eigene 404-Seite zeigen, `/sitemap.xml`, `/robots.txt`, Vorschaubild beim Teilen in WhatsApp.
-- Danach Domain in der Google Search Console anmelden und `https://wichtellos.de/sitemap.xml` einreichen.
+- Google Search Console: Domain-Property `wichtellos.de`, bestätigt per DNS-TXT (`google-site-verification=…`, nicht löschen).
+- Bing Webmaster Tools: `https://wichtellos.de/`, bestätigt per DNS-CNAME `b6492afd…` → `verify.bing.com` und Meta-Tag
+  `msvalidate.01` (in `build.py`). Deckt Edge, DuckDuckGo, Yahoo, Ecosia, ChatGPT-Suche ab.
 
 ## Offen
 
@@ -40,7 +42,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] PartnerNet: Steuer-Interview (USA/Kanada) und Zahlungsempfänger (UG) vervollständigen – nötig vor der ersten Auszahlung
 - [x] Livegang und Live-Test (30.10.2026, alle Prüfungen oben grün, damals noch mit SSL)
 - [ ] Umzug auf GitHub Pages abschließen (DNS, Enforce HTTPS), danach SFTP-Benutzer bei IONOS löschen
-- [ ] Google Search Console + Sitemap – erst nach dem HTTPS-Umzug
+- [x] Search Console + Bing eingerichtet, Sitemap bei beiden eingereicht (30.10.2026)
+- [ ] Nach GitHub-Zertifikat: Enforce HTTPS, Sitemap in Search Console neu senden, Indexierung beantragen
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
