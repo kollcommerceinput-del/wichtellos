@@ -76,7 +76,9 @@ textarea { min-height: 70px; resize: vertical; }
 .excl { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: var(--soft); border-radius: 10px; margin-bottom: 6px; }
 .error { background: #fde8e8; color: #8a1c1c; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; }
 .privacy-note { text-align: center; color: var(--muted); font-size: 14px; }
+/* Werbeflächen: ausgeblendet, bis AdSense eingebaut ist – dann display: flex setzen */
 .ad-slot {
+  display: none !important;
   margin: 22px 0; min-height: 100px; border: 2px dashed var(--border); border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 13px;
 }

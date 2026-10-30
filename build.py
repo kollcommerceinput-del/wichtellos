@@ -401,37 +401,39 @@ def scrap_page():
 
 # ---------- Rechtliches (Entwürfe) ----------
 
-def ph(text):
-    return f'<span class="placeholder">[{esc(text)}]</span>'
+COMPANY = ('KOLL Commerce UG (haftungsbeschränkt)<br>Leuchtenfabrik · Haus A, 1. Etage<br>'
+           'Edisonstraße 63<br>12459 Berlin<br>Deutschland')
 
 
 def legal_pages():
-    draft = '<p class="draft-note">Entwurf – bitte vor dem Livegang die Platzhalter ausfüllen und den Text prüfen lassen (z. B. mit einem Generator wie e-recht24 oder anwaltlich). Diesen Hinweis danach entfernen.</p>'
-    impressum = f'''<article>
+    impressum = f"""<article>
 <h1>Impressum</h1>
-{draft}
 <h2>Angaben gemäß § 5 DDG</h2>
-<p>{ph('Vorname Nachname')}<br>{ph('Straße Hausnummer')}<br>{ph('PLZ Ort')}<br>Deutschland</p>
+<p>{COMPANY}</p>
+<p>Vertreten durch den Geschäftsführer: Antonio Koll</p>
 <h2>Kontakt</h2>
-<p>E-Mail: {ph('E-Mail-Adresse')}<br>Telefon: {ph('Telefonnummer')}</p>
+<p>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a><br>Telefon: +49 151 29522767</p>
+<h2>Registereintrag</h2>
+<p>Amtsgericht Charlottenburg, HRB 277995 B</p>
+<h2>Umsatzsteuer-ID</h2>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE457547328</p>
 <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-<p>{ph('Vorname Nachname')}, Anschrift wie oben</p>
+<p>Antonio Koll, Anschrift wie oben</p>
 <h2>Hinweis zu Werbelinks</h2>
 <p>Diese Website enthält Affiliate-Links, die mit einem Sternchen (*) gekennzeichnet sind. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
-</article>'''
+</article>"""
     page('/impressum/', 'Impressum | WichtelLos', 'Impressum von WichtelLos.', impressum, noindex=True)
 
-    datenschutz = f'''<article>
+    datenschutz = f"""<article>
 <h1>Datenschutzerklärung</h1>
-{draft}
 <h2>1. Verantwortlicher</h2>
-<p>{ph('Vorname Nachname')}, {ph('Straße Hausnummer')}, {ph('PLZ Ort')}, E-Mail: {ph('E-Mail-Adresse')}</p>
+<p>{COMPANY}<br>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a></p>
 
 <h2>2. Das Wichtigste in Kürze</h2>
 <p>Wir verarbeiten so wenig Daten wie möglich. Es gibt kein Benutzerkonto, keine Analyse- oder Tracking-Werkzeuge und wir setzen keine Cookies.</p>
 
 <h2>3. Hosting und Server-Protokolle</h2>
-<p>Diese Website wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, betrieben. Beim Aufruf einer Seite verarbeitet der Anbieter technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene Seite und Browsertyp, um die Website auszuliefern und vor Angriffen zu schützen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung. Die Server stehen in Deutschland. {ph('Speicherdauer der Server-Protokolle laut IONOS ergänzen')}</p>
+<p>Diese Website wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, betrieben. Beim Aufruf einer Seite verarbeitet IONOS technisch notwendige Daten wie aufgerufene Seite, Referrer, Browsertyp und -version, Betriebssystem, Gerätetyp, Zeitpunkt des Zugriffs und IP-Adresse, um die Website sicher und stabil auszuliefern. Die IP-Adresse wird dabei anonymisiert. Die Daten werden 8 Wochen gespeichert; eine Übermittlung in Drittländer findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung.</p>
 
 <h2>4. Die Wichtel-Auslosung</h2>
 <p>Namen, Gruppenname, Budget, Datum und Nachricht, die du in das Formular einträgst, werden ausschließlich in deinem Browser verarbeitet. Die Zuteilung wird codiert in den persönlichen Links gespeichert, und zwar im Teil nach dem #-Zeichen. Diesen Teil überträgt der Browser beim Aufruf nicht an unseren Server – wir erhalten von den Namen und Zuteilungen keine Kenntnis.</p>
@@ -449,7 +451,7 @@ def legal_pages():
 <h2>8. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p>
 <p>Stand: Oktober 2026</p>
-</article>'''
+</article>"""
     page('/datenschutz/', 'Datenschutzerklärung | WichtelLos', 'Datenschutzerklärung von WichtelLos.', datenschutz, noindex=True)
 
 
@@ -484,6 +486,7 @@ def extras():
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+    (OUT / '.htaccess').write_text('ErrorDocument 404 /404.html\n', encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
