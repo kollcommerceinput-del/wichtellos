@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wichteln online auslosen – kostenlos &amp; ohne Anmeldung | WichtelLos</title>
+<meta name="description" content="Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.">
+<link rel="canonical" href="https://wichtellos.de/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="WichtelLos">
+<meta property="og:title" content="Wichteln online auslosen – kostenlos &amp; ohne Anmeldung | WichtelLos">
+<meta property="og:description" content="Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.">
+<meta property="og:url" content="https://wichtellos.de/">
+<meta property="og:image" content="https://wichtellos.de/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c62828">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "WichtelLos", "url": "https://wichtellos.de/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Alle", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wie funktioniert Wichteln online?", "acceptedAnswer": {"@type": "Answer", "text": "Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link und sieht nur, wen sie selbst beschenkt."}}, {"@type": "Question", "name": "Muss ich mich anmelden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Weder der Organisator noch die Teilnehmer brauchen ein Konto oder eine E-Mail-Adresse."}}, {"@type": "Question", "name": "Werden unsere Namen gespeichert?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht auf unserem Server. Die Zuteilung steckt codiert im Link nach dem #-Zeichen, den der Browser nicht an den Server schickt."}}, {"@type": "Question", "name": "Können Paare ausgeschlossen werden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="logo" href="/"><img src="/favicon.svg" alt="" width="26" height="26"><span>Wichtel<b>Los</b></span></a>
+  <nav>
+    <a href="/wichtelgeschenke-unter-10-euro/">Geschenkideen</a>
+    <a href="/wichteln-wuerfeln-regeln/">Spiele</a>
+  </nav>
+</div></header>
+
+<main>
+  <!-- Ansicht 1: Gruppe anlegen -->
+  <section id="view-create">
+    <div class="hero">
+      <div>
+        <h1>Wichteln online auslosen</h1>
+        <p class="lead">Kostenlos, ohne Anmeldung, in 1 Minute. Jeder bekommt seinen eigenen geheimen Link – per WhatsApp, E-Mail oder zum Kopieren.</p>
+      </div>
+      <img class="mascot" src="/wichtel.svg" alt="" width="96" height="122">
+    </div>
+
+    <form id="form" novalidate>
+      <div class="card">
+        <h2>1. Eure Gruppe</h2>
+        <label>Name der Gruppe
+          <input id="group" maxlength="60" placeholder="z. B. Büro-Weihnachten 2026">
+        </label>
+        <div class="row2">
+          <label>Budget pro Geschenk
+            <input id="budget" maxlength="20" placeholder="z. B. 15 €">
+          </label>
+          <label>Datum der Bescherung
+            <input id="date" type="date">
+          </label>
+        </div>
+        <label>Nachricht an alle <span class="opt">(optional)</span>
+          <textarea id="msg" maxlength="200" placeholder="z. B. Bescherung beim Weihnachtsessen am Freitag!"></textarea>
+        </label>
+      </div>
+
+      <div class="card">
+        <h2>2. Wer macht mit?</h2>
+        <p class="hint">Mindestens 3 Personen, jeder Name nur einmal.</p>
+        <div id="people"></div>
+        <button type="button" id="add-person" class="btn-secondary">+ Person hinzufügen</button>
+      </div>
+
+      <div class="card">
+        <h2>3. Ausschlüsse <span class="opt">(optional)</span></h2>
+        <p class="hint">Zum Beispiel Paare, die sich nicht gegenseitig ziehen sollen.</p>
+        <div id="excl-list"></div>
+        <div class="excl-add">
+          <select id="ex-a" aria-label="Person 1"></select>
+          <span aria-hidden="true">↔</span>
+          <select id="ex-b" aria-label="Person 2"></select>
+          <button type="button" id="add-excl" class="btn-secondary">Ausschluss hinzufügen</button>
+        </div>
+      </div>
+
+      <div id="error" class="error" role="alert" hidden></div>
+      <button type="submit" class="btn-primary big">🎲 Jetzt auslosen</button>
+      <p class="privacy-note">🔒 Eure Namen landen nicht auf unserem Server – die Auslosung passiert in deinem Browser.</p>
+    </form>
+
+    <div class="ad-slot">Anzeige (Platzhalter)</div>
+
+    <section class="faq">
+      <h2>Häufige Fragen</h2>
+      <details><summary>Wie funktioniert Wichteln online?</summary>
+        <p>Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.</p></details>
+      <details><summary>Muss ich mich anmelden?</summary>
+        <p>Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.</p></details>
+      <details><summary>Sieht der Organisator, wer wen zieht?</summary>
+        <p>Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.</p></details>
+      <details><summary>Werden unsere Namen gespeichert?</summary>
+        <p>Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf.</p></details>
+      <details><summary>Können Paare ausgeschlossen werden?</summary>
+        <p>Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.</p></details>
+    </section>
+
+    <h2>Ideen und Spiele rund ums Wichteln</h2>
+    <div class="chips">
+      <a href="/wichtelgeschenke-unter-5-euro/">Geschenke unter 5 €</a>
+      <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a>
+      <a href="/wichtelgeschenke-unter-15-euro/">unter 15 €</a>
+      <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a>
+      <a href="/wichtelgeschenke-unter-30-euro/">unter 30 €</a>
+      <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
+      <a href="/schrottwichteln/">Schrottwichteln</a>
+    </div>
+  </section>
+
+  <!-- Ansicht 2: Ergebnis mit Links -->
+  <section id="view-result" hidden>
+    <h2 class="h1">Ausgelost! 🎉</h2>
+    <p class="lead">Schicke jeder Person <b>nur ihren eigenen</b> Link. Wer wen beschenkt, steht codiert darin.</p>
+    <ul id="links" class="links"></ul>
+    <div class="tip">💡 Machst du selbst mit? Öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.</div>
+    <div class="tip">⚠️ Wenn du neu auslost, bekommen alle neue Links. Schicke dann die neuen Links an alle, sonst gelten zwei Auslosungen gleichzeitig.</div>
+    <div class="row2">
+      <button type="button" id="edit" class="btn-secondary">Gruppe bearbeiten</button>
+      <button type="button" id="redraw" class="btn-secondary">Neu auslosen</button>
+    </div>
+    <div class="ad-slot">Anzeige (Platzhalter)</div>
+  </section>
+
+  <!-- Ansicht 3: geheimer Link -->
+  <section id="view-reveal" hidden>
+    <div class="card reveal">
+      <img class="mascot-reveal" src="/wichtel.svg" alt="" width="90" height="114">
+      <p class="hello">Hallo <span id="r-name"></span>! 👋</p>
+      <p>Du bist in der Wichtelgruppe <b id="r-group"></b>.</p>
+      <button type="button" id="reveal-btn" class="btn-primary big">🎁 Antippen und Geheimnis lüften</button>
+      <div id="secret" class="secret" hidden>
+        <p>Du beschenkst:</p>
+        <p class="target" id="r-target"></p>
+        <p>🤫 Psst – nicht verraten!</p>
+      </div>
+      <dl id="r-info" class="info"></dl>
+    </div>
+
+    <h2>Geschenkideen <span id="ideas-budget" class="opt"></span></h2>
+    <div id="ideas" class="ideas"></div>
+    <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
+    <p class="disclosure">* Werbelinks: Bei einem Kauf erhalten wir eine kleine Provision, für dich ändert sich am Preis nichts.</p>
+
+    <div class="ad-slot">Anzeige (Platzhalter)</div>
+
+    <div class="card" style="text-align:center">
+      <h2>Selbst eine Wichtelgruppe auslosen?</h2>
+      <p class="hint">Kostenlos und ohne Anmeldung – für Familie, Freunde oder das Büro.</p>
+      <a class="btn-primary" href="/">Eigene Gruppe erstellen</a>
+    </div>
+  </section>
+
+  <section id="view-invalid" hidden>
+    <div class="card">
+      <h2 class="h1">Link ungültig 😕</h2>
+      <p>Dieser Wichtel-Link ist unvollständig. Bitte den Organisator, ihn noch einmal zu schicken.</p>
+      <a class="btn-primary" href="/">Eigene Gruppe erstellen</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Wichteln auslosen</a>
+    <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a>
+    <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
+    <a href="/schrottwichteln/">Schrottwichteln</a>
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+  </div>
+  <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+  <p>© 2026 WichtelLos</p>
+</footer>
+<script src="/assets/site.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = (s) => document.querySelector(s);
+  const MAX_PEOPLE = 60;
+  const DRAFT_KEY = 'wichtellos-draft';
+  const RESULT_KEY = 'wichtellos-result';
+
+  // ---------- Speicher (nur Komfort, darf fehlschlagen) ----------
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* ignorieren */ } },
+  };
+
+  // ---------- Link-Kodierung: Zuteilung steckt im #-Teil, der nie an den Server geht ----------
+  const KEY = new TextEncoder().encode('wichtel-los-2026');
+  const b64url = (bytes) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  const unb64url = (s) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+
+  function encode(obj) {
+    const data = new TextEncoder().encode(JSON.stringify(obj));
+    const salt = crypto.getRandomValues(new Uint8Array(4));
+    const out = new Uint8Array(4 + data.length);
+    out.set(salt, 0);
+    for (let i = 0; i < data.length; i++) out[4 + i] = data[i] ^ KEY[i % KEY.length] ^ salt[i % 4];
+    return b64url(out);
+  }
+
+  function decode(str) {
+    try {
+      const raw = unb64url(str);
+      const salt = raw.slice(0, 4);
+      const data = raw.slice(4).map((b, i) => b ^ KEY[i % KEY.length] ^ salt[i % 4]);
+      const obj = JSON.parse(new TextDecoder().decode(data));
+      return obj && obj.v === 1 && obj.n && obj.r ? obj : null;
+    } catch { return null; }
+  }
+
+  // ---------- Auslosung: niemand zieht sich selbst, Ausschlüsse gelten in beide Richtungen ----------
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = crypto.getRandomValues(new Uint32Array(1))[0] % (i + 1);
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function solve(n, allowed) {
+    const givers = shuffle([...Array(n).keys()]);
+    const used = new Array(n).fill(false);
+    const res = new Array(n);
+    let steps = 0;
+    function dfs(k) {
+      if (k === n) return true;
+      if (++steps > 200000) return false;
+      const g = givers[k];
+      const opts = shuffle([...Array(n).keys()].filter((r) => !used[r] && allowed(g, r)));
+      for (const r of opts) {
+        used[r] = true; res[g] = r;
+        if (dfs(k + 1)) return true;
+        used[r] = false;
+      }
+      return false;
+    }
+    return dfs(0) ? res : null;
+  }
+
+  // ---------- Formular-Zustand ----------
+  let nextId = 1;
+  let people = [];
+  let exclusions = []; // [idA, idB]
+
+  function addPerson(name = '') {
+    if (people.length >= MAX_PEOPLE) return;
+    people.push({ id: nextId++, name });
+  }
+
+  function saveDraft() {
+    store.set(DRAFT_KEY, {
+      group: $('#group').value, budget: $('#budget').value, date: $('#date').value, msg: $('#msg').value,
+      people: people.map((p) => p.name),
+      exclusions: exclusions.map(([a, b]) => [people.findIndex((p) => p.id === a), people.findIndex((p) => p.id === b)]),
+    });
+  }
+
+  function loadDraft() {
+    const d = store.get(DRAFT_KEY);
+    if (!d || !Array.isArray(d.people)) { for (let i = 0; i < 3; i++) addPerson(); return; }
+    $('#group').value = d.group || ''; $('#budget').value = d.budget || '';
+    $('#date').value = d.date || ''; $('#msg').value = d.msg || '';
+    d.people.forEach((n) => addPerson(String(n)));
+    while (people.length < 3) addPerson();
+    (d.exclusions || []).forEach(([a, b]) => {
+      if (people[a] && people[b]) exclusions.push([people[a].id, people[b].id]);
+    });
+  }
+
+  const named = () => people.filter((p) => p.name.trim());
+  const nameOf = (id) => (people.find((p) => p.id === id) || {}).name || '';
+
+  function renderPeople() {
+    const box = $('#people');
+    box.innerHTML = '';
+    people.forEach((p, i) => {
+      const row = document.createElement('div');
+      row.className = 'person';
+      const input = document.createElement('input');
+      input.value = p.name; input.maxLength = 30;
+      input.placeholder = ['z. B. Anna', 'z. B. Ben', 'z. B. Clara'][i] || 'Name';
+      input.setAttribute('aria-label', `Person ${i + 1}`);
+      input.addEventListener('input', () => { p.name = input.value; renderExclusions(); saveDraft(); });
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); if (i === people.length - 1) { addPerson(); renderPeople(); } focusPerson(i + 1); }
+      });
+      row.append(input);
+      if (people.length > 3) {
+        const del = document.createElement('button');
+        del.type = 'button'; del.className = 'icon-btn'; del.textContent = '✕';
+        del.setAttribute('aria-label', `Person ${i + 1} entfernen`);
+        del.addEventListener('click', () => {
+          people = people.filter((x) => x.id !== p.id);
+          exclusions = exclusions.filter(([a, b]) => a !== p.id && b !== p.id);
+          renderPeople(); saveDraft();
+        });
+        row.append(del);
+      }
+      box.append(row);
+    });
+    renderExclusions();
+  }
+
+  function focusPerson(i) {
+    const inputs = document.querySelectorAll('#people input');
+    if (inputs[i]) inputs[i].focus();
+  }
+
+  function renderExclusions() {
+    const list = $('#excl-list');
+    list.innerHTML = '';
+    exclusions.forEach(([a, b], idx) => {
+      if (!nameOf(a).trim() || !nameOf(b).trim()) return;
+      const row = document.createElement('div');
+      row.className = 'excl';
+      row.textContent = `${nameOf(a)} ↔ ${nameOf(b)}`;
+      const del = document.createElement('button');
+      del.type = 'button'; del.className = 'icon-btn'; del.textContent = '✕';
+      del.setAttribute('aria-label', 'Ausschluss entfernen');
+      del.addEventListener('click', () => { exclusions.splice(idx, 1); renderExclusions(); saveDraft(); });
+      row.append(del);
+      list.append(row);
+    });
+    for (const sel of [$('#ex-a'), $('#ex-b')]) {
+      const keep = sel.value;
+      sel.innerHTML = '<option value="">Person wählen</option>';
+      named().forEach((p) => {
+        const o = document.createElement('option');
+        o.value = p.id; o.textContent = p.name;
+        sel.append(o);
+      });
+      sel.value = keep;
+    }
+  }
+
+  function showError(text) {
+    const e = $('#error');
+    e.textContent = text; e.hidden = !text;
+    if (text) e.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ---------- Auslosen ----------
+  function runDraw() {
+    const list = named();
+    if (list.length < 3) return showError('Bitte mindestens 3 Namen eintragen.');
+    const lower = list.map((p) => p.name.trim().toLowerCase());
+    const dup = lower.find((n, i) => lower.indexOf(n) !== i);
+    if (dup) return showError(`Der Name „${list[lower.indexOf(dup)].name.trim()}“ kommt doppelt vor. Bitte z. B. „Anna M.“ und „Anna K.“ schreiben.`);
+
+    const idx = new Map(list.map((p, i) => [p.id, i]));
+    const banned = new Set();
+    exclusions.forEach(([a, b]) => {
+      if (idx.has(a) && idx.has(b)) { banned.add(`${idx.get(a)}-${idx.get(b)}`); banned.add(`${idx.get(b)}-${idx.get(a)}`); }
+    });
+    const res = solve(list.length, (g, r) => g !== r && !banned.has(`${g}-${r}`));
+    if (!res) return showError('Mit diesen Ausschlüssen geht die Auslosung nicht auf. Bitte einen Ausschluss entfernen.');
+    showError('');
+
+    const base = location.href.split('#')[0];
+    const meta = { g: $('#group').value.trim() || 'Wichteln', b: $('#budget').value.trim(), d: $('#date').value, m: $('#msg').value.trim() };
+    const result = list.map((p, i) => ({
+      name: p.name.trim(),
+      url: `${base}#w=${encode({ v: 1, ...meta, n: p.name.trim(), r: list[res[i]].name.trim() })}`,
+    }));
+    store.set(RESULT_KEY, { group: meta.g, links: result });
+    renderResult(meta.g, result);
+  }
+
+  function renderResult(group, links) {
+    const ul = $('#links');
+    ul.innerHTML = '';
+    links.forEach(({ name, url }) => {
+      const text = `Hallo ${name}! 🎁 Hier ist dein geheimer Wichtel-Link für „${group}“:\n${url}\n\nBitte nicht weitergeben 🤫`;
+      const li = document.createElement('li');
+      li.innerHTML = `<div class="who"></div><div class="actions">
+          <a class="btn-secondary wa" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn-secondary mail">E-Mail</a>
+          <button type="button" class="btn-secondary copy">Link kopieren</button></div>`;
+      li.querySelector('.who').textContent = name;
+      li.querySelector('.wa').href = `https://wa.me/?text=${encodeURIComponent(text)}`;
+      li.querySelector('.mail').href = `mailto:?subject=${encodeURIComponent(`Dein Wichtel-Link: ${group}`)}&body=${encodeURIComponent(text)}`;
+      const btn = li.querySelector('.copy');
+      btn.addEventListener('click', async () => {
+        await copy(url);
+        btn.textContent = '✓ Kopiert';
+        setTimeout(() => { btn.textContent = 'Link kopieren'; }, 1800);
+      });
+      ul.append(li);
+    });
+    show('result');
+    window.scrollTo(0, 0);
+  }
+
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); return; } catch { /* Fallback unten */ }
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.append(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nichts */ }
+    ta.remove();
+  }
+
+  // ---------- Geheimer Link ----------
+  function formatDate(iso) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    if (!m) return '';
+    return new Date(+m[1], m[2] - 1, +m[3]).toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  const IDEAS = [
+    { max: 5, items: ['Kakao am Stiel', 'Glückskekse', 'Badekugel', 'Duftteelichter', 'Washi Tape', 'Kresse Anzuchtset'] },
+    { max: 10, items: ['Kuschelsocken', 'Tasse mit Spruch', 'Gourmet Schokolade', 'Sukkulenten Set', 'Notizbuch', 'Handwärmer'] },
+    { max: 15, items: ['Thermobecher', 'Lichterkette Batterie', 'Puzzle 1000 Teile', 'Zauberwürfel', 'Backmischung im Glas', 'Wärmflasche mit Bezug'] },
+    { max: 20, items: ['Kuscheldecke', 'Escape Room Spiel', 'Quizspiel', 'Cocktail Set', 'Leselampe Buch', 'Duftkerzen Set'] },
+    { max: 30, items: ['Brettspiel Familie', 'Krimidinner Spiel', 'Bluetooth Lautsprecher klein', 'Pizzastein', 'Kaffee Probierset', 'Decke mit Ärmeln'] },
+  ];
+
+  function renderIdeas(budget) {
+    const num = parseFloat(String(budget).replace(',', '.').replace(/[^\d.]/g, ''));
+    const tier = isNaN(num) ? IDEAS[1] : (IDEAS.find((t) => num <= t.max) || IDEAS[IDEAS.length - 1]);
+    $('#ideas-budget').textContent = isNaN(num) ? '' : `bis ${num} €`;
+    $('#ideas-more').href = `/wichtelgeschenke-unter-${tier.max}-euro/`;
+    $('#ideas-more').textContent = `Mehr Geschenkideen unter ${tier.max} € →`;
+    const box = $('#ideas');
+    box.innerHTML = '';
+    tier.items.forEach((item) => {
+      const a = document.createElement('a');
+      a.href = window.amazonUrl ? window.amazonUrl(item) : `https://www.amazon.de/s?k=${encodeURIComponent(item)}`;
+      a.target = '_blank'; a.rel = 'sponsored nofollow noopener';
+      a.innerHTML = '<span>Ideen ansehen*</span>';
+      a.prepend(document.createTextNode(item));
+      box.append(a);
+    });
+  }
+
+  function renderReveal(data) {
+    $('#r-name').textContent = data.n;
+    $('#r-group').textContent = data.g || 'Wichteln';
+    $('#r-target').textContent = data.r;
+    const info = $('#r-info');
+    info.innerHTML = '';
+    const rows = [['Budget', data.b], ['Bescherung', formatDate(data.d)], ['Nachricht', data.m]];
+    rows.filter(([, v]) => v).forEach(([k, v]) => {
+      const dt = document.createElement('dt'); dt.textContent = k;
+      const dd = document.createElement('dd'); dd.textContent = v;
+      info.append(dt, dd);
+    });
+    renderIdeas(data.b || '');
+    $('#reveal-btn').addEventListener('click', () => {
+      $('#reveal-btn').hidden = true;
+      $('#secret').hidden = false;
+      $('.mascot-reveal').classList.add('hop');
+      confetti();
+    });
+    show('reveal');
+  }
+
+  function confetti() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const colors = ['#c62828', '#f2b705', '#1f6f4a', '#ffffff', '#e57373'];
+    for (let i = 0; i < 60; i++) {
+      const c = document.createElement('span');
+      c.className = 'confetti';
+      c.style.left = `${Math.random() * 100}vw`;
+      c.style.background = colors[i % colors.length];
+      c.style.animationDuration = `${2 + Math.random() * 2}s`;
+      c.style.animationDelay = `${Math.random() * 0.4}s`;
+      document.body.append(c);
+      setTimeout(() => c.remove(), 4600);
+    }
+  }
+
+  // ---------- Ansichten ----------
+  function show(name) {
+    for (const v of ['create', 'result', 'reveal', 'invalid']) $(`#view-${v}`).hidden = v !== name;
+  }
+
+  function init() {
+    const m = /^#w=(.+)$/.exec(location.hash);
+    if (m) {
+      const data = decode(m[1]);
+      if (data) renderReveal(data); else show('invalid');
+      return;
+    }
+    loadDraft();
+    renderPeople();
+    ['#group', '#budget', '#date', '#msg'].forEach((s) => $(s).addEventListener('input', saveDraft));
+    $('#add-person').addEventListener('click', () => { addPerson(); renderPeople(); saveDraft(); focusPerson(people.length - 1); });
+    $('#add-excl').addEventListener('click', () => {
+      const a = +$('#ex-a').value, b = +$('#ex-b').value;
+      if (!a || !b || a === b) return showError('Bitte zwei verschiedene Personen für den Ausschluss wählen.');
+      if (!exclusions.some(([x, y]) => (x === a && y === b) || (x === b && y === a))) exclusions.push([a, b]);
+      showError(''); renderExclusions(); saveDraft();
+    });
+    $('#form').addEventListener('submit', (e) => { e.preventDefault(); runDraw(); });
+    $('#edit').addEventListener('click', () => { show('create'); window.scrollTo(0, 0); });
+    $('#redraw').addEventListener('click', runDraw);
+    show('create');
+  }
+
+  window.addEventListener('hashchange', () => location.reload());
+  init();
+})();
+</script>
+</body>
+</html>
