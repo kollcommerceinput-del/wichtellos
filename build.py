@@ -100,7 +100,18 @@ CTA = '''<div class="cta-box">
 </div>'''
 
 
-def page(path, title, desc, body, extra='', noindex=False, crumb=None):
+# Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
+POSES = {'winkt': (132, 152), 'geschenk': (120, 152), 'lupe': (132, 152), 'wuerfel': (132, 152), 'schlaeft': (152, 162)}
+
+
+def pose_img(pose, cls='page-mascot'):
+    w, h = POSES[pose]
+    return f'<img class="{cls}" src="/grafik/wichtel-{pose}.svg" alt="" width="{w}" height="{h}">'
+
+
+def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False):
+    if mascot:
+        body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if crumb:
         nav, trail = crumbs(path, crumb)
         body = nav + '\n' + body
@@ -110,7 +121,7 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None):
 <head>
 {head(title, desc, path, extra, noindex)}
 </head>
-<body>
+<body{' class="verspielt"' if playful else ''}>
 {HEADER}
 <main>
 {body}
@@ -363,9 +374,16 @@ def idea_card(idea, data=False):
 </div>'''
 
 
+CAT_ICONS = {'naschen': '🍪', 'gemuetlich': '☕', 'spiele': '🎲', 'kreativ': '✂️', 'technik': '🎧', 'lustig': '😄'}
+
+
+def chip_ico(field, v):
+    return f'<span class="ico" aria-hidden="true">{CAT_ICONS[v]}</span>' if field == 'mag' and v in CAT_ICONS else ''
+
+
 def chip_group(label, field, options, with_all=True):
     chips = [f'<button type="button" class="chip" data-f="{field}" data-v="" aria-pressed="true">Alle</button>'] if with_all else []
-    chips += [f'<button type="button" class="chip" data-f="{field}" data-v="{v}" aria-pressed="false">{esc(t)}</button>'
+    chips += [f'<button type="button" class="chip" data-f="{field}" data-v="{v}" aria-pressed="false">{chip_ico(field, v)}{esc(t)}</button>'
               for v, t in options]
     return (f'<div class="f-group" role="group" aria-label="{esc(label)}"><span class="f-label">{esc(label)}</span>'
             f'{"".join(chips)}</div>')
@@ -397,7 +415,7 @@ def finder_page():
 </article>'''
     page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter & Budget',
          'Wichtelgeschenke finden: nach Alter (Kind, Teenager, Erwachsene, Kollegen), Budget von 5 bis 30 Euro und Interessen filtern – mit über 100 Ideen.',
-         body, extra='\n<script src="/assets/finder.js" defer></script>', crumb='Geschenkfinder')
+         body, extra='\n<script src="/assets/finder.js" defer></script>', crumb='Geschenkfinder', mascot='lupe')
 
 
 def kids_page():
@@ -431,7 +449,7 @@ def kids_page():
 </article>'''
     page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 & für Teens',
          'Wichtelgeschenke für Kinder und Teenager: passende Ideen für Kindergarten, Schule und Verein – sortiert nach Alter, mit Tipps zu Budget und Sicherheit.',
-         body, crumb='Wichtelgeschenke für Kinder')
+         body, crumb='Wichtelgeschenke für Kinder', mascot='geschenk', playful=True)
 
 
 def diy_page():
@@ -531,7 +549,7 @@ def dice_page():
 </article>'''
     page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln, Ablauf & Varianten zum Ausdrucken',
          'Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.', body,
-         crumb='Wichteln mit Würfeln')
+         crumb='Wichteln mit Würfeln', mascot='wuerfel')
 
 
 SCRAP_IDEAS = [
@@ -587,7 +605,7 @@ def scrap_page():
 </article>'''
     page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen für Büro und Familie',
          'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body,
-         crumb='Schrottwichteln')
+         crumb='Schrottwichteln', mascot='wuerfel')
 
 
 # ---------- Rechtliches (Entwürfe) ----------
@@ -712,7 +730,7 @@ def tool_page():
 
 def extras():
     page('/404/', 'Seite nicht gefunden | WichtelLos', 'Diese Seite gibt es nicht.',
-         '<img class="mascot-reveal" src="/wichtel.svg" alt="" width="90" height="114"><h1>Seite nicht gefunden 😕</h1><p>Diese Seite gibt es leider nicht – unser Wichtel hat sie wohl versteckt.</p><p><a class="btn-primary" href="/">Zur Wichtel-Auslosung</a></p>',
+         pose_img('schlaeft', 'mascot-reveal') + '<h1>Seite nicht gefunden 😕</h1><p>Diese Seite gibt es leider nicht – unser Wichtel hat sie wohl versteckt.</p><p><a class="btn-primary" href="/">Zur Wichtel-Auslosung</a></p>',
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()

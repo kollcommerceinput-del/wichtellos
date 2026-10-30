@@ -222,3 +222,13 @@ body::after { content: ''; position: fixed; left: 0; right: 0; top: -240px; heig
 @media (max-width: 420px) { .hero .mascot { width: 92px; } }
 @media (prefers-reduced-motion: reduce) { body::after { display: none; } }
 @media print { body::after, .top::after, footer::before { display: none !important; } main { padding-top: 0; } }
+/* Wichtel neben Überschriften */
+.page-mascot { float: right; width: 84px; height: auto; margin: 0 0 8px 12px; }
+@media (max-width: 420px) { .page-mascot { width: 70px; } }
+.mascot-reveal { width: 110px; }
+.chip .ico { margin-right: 6px; }
+/* verspielter: Kinder-Seite */
+.verspielt main h1 { color: var(--primary); }
+.verspielt main h2::before { content: '★ '; color: var(--gold); }
+.verspielt .idea { position: relative; overflow: hidden; padding-top: 18px; }
+.verspielt .idea::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: repeating-linear-gradient(135deg, var(--primary) 0 8px, #fff 8px 13px); }
