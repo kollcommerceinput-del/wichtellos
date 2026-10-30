@@ -486,7 +486,13 @@ def extras():
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
-    (OUT / '.htaccess').write_text('ErrorDocument 404 /404.html\n', encoding='utf-8')
+    # IONOS liefert http und www sonst parallel aus (Duplicate Content) – alles auf https://wichtellos.de
+    (OUT / '.htaccess').write_text(
+        'ErrorDocument 404 /404.html\n\n'
+        'RewriteEngine On\n'
+        'RewriteCond %{HTTPS} !=on [OR]\n'
+        'RewriteCond %{HTTP_HOST} ^www\\. [NC]\n'
+        f'RewriteRule ^ {DOMAIN}%{{REQUEST_URI}} [R=301,L]\n', encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
