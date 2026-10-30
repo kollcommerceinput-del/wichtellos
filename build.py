@@ -724,6 +724,9 @@ def tool_page():
     html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenlos & ohne Anmeldung | WichtelLos',
                                              'Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.',
                                              '/', extra))
+    gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
+    gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
+    html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 

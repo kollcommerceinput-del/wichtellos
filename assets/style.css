@@ -232,3 +232,7 @@ body::after { content: ''; position: fixed; left: 0; right: 0; top: -240px; heig
 .verspielt main h2::before { content: '★ '; color: var(--gold); }
 .verspielt .idea { position: relative; overflow: hidden; padding-top: 18px; }
 .verspielt .idea::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: repeating-linear-gradient(135deg, var(--primary) 0 8px, #fff 8px 13px); }
+/* geheimer Link: Schleife geht auf */
+.mascot-reveal .lid { transform-box: view-box; transform-origin: 60px 112px; transition: transform .7s cubic-bezier(.3, 1.5, .5, 1), opacity .4s .35s; }
+.mascot-reveal.open .lid { transform: translate(16px, -38px) rotate(30deg); opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .mascot-reveal .lid { transition: none; } }

@@ -159,8 +159,29 @@
 
   <!-- Ansicht 3: geheimer Link -->
   <section id="view-reveal" hidden>
-    <div class="card reveal">
-      <img class="mascot-reveal" src="/wichtel.svg" alt="" width="90" height="114">
+    <div class="card reveal candy">
+      <svg class="mascot-reveal" aria-hidden="true" width="120" height="152" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 152">
+  <ellipse cx="60" cy="118" rx="34" ry="28" fill="#1f6f4a"/>
+  <ellipse cx="44" cy="145" rx="13" ry="6" fill="#5b3a29"/>
+  <ellipse cx="76" cy="145" rx="13" ry="6" fill="#5b3a29"/>
+  <path d="M23 82 C20 110 40 134 60 138 C80 134 100 110 97 82 Z" fill="#f3ece6"/>
+  <path d="M34 96 C40 112 50 122 60 124 M86 96 C80 112 70 122 60 124" fill="none" stroke="#e2d6cc" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M60 8 C70 24 92 50 100 84 L20 84 C28 50 50 24 60 8 Z" fill="#c62828"/>
+  <path d="M60 8 C66 18 74 30 80 42" fill="none" stroke="#e53935" stroke-width="4" stroke-linecap="round"/>
+  <rect x="15" y="77" width="90" height="13" rx="6.5" fill="#9f1f1f"/>
+  <circle cx="60" cy="8" r="7" fill="#f3ece6"/>
+  <circle cx="60" cy="96" r="10.5" fill="#f2a58e"/>
+  <circle cx="56.5" cy="92.5" r="3" fill="#fbd3c5"/>
+  <rect x="33" y="114" width="54" height="34" rx="4" fill="#c62828"/>
+  <rect x="56" y="114" width="8" height="34" fill="#f2b705"/>
+  <g class="lid">
+    <rect x="30" y="106" width="60" height="11" rx="3" fill="#9f1f1f"/>
+    <rect x="56" y="106" width="8" height="11" fill="#f2b705"/>
+    <path d="M60 106 C50 92 40 100 52 106 Z M60 106 C70 92 80 100 68 106 Z" fill="#f2b705"/>
+  </g>
+  <circle cx="31" cy="124" r="7.5" fill="#f2a58e"/>
+  <circle cx="89" cy="124" r="7.5" fill="#f2a58e"/>
+</svg>
       <p class="hello">Hallo <span id="r-name"></span>! 👋</p>
       <p>Du bist in der Wichtelgruppe <b id="r-group"></b>.</p>
       <button type="button" id="reveal-btn" class="btn-primary big">🎁 Antippen und Geheimnis lüften</button>
@@ -492,10 +513,13 @@
     });
     renderIdeas(data.b || '');
     $('#reveal-btn').addEventListener('click', () => {
-      $('#reveal-btn').hidden = true;
-      $('#secret').hidden = false;
-      $('.mascot-reveal').classList.add('hop');
-      confetti();
+      // erst geht die Schleife auf, dann erscheint der Name; der Knopf hält so lange seinen Platz
+      const btn = $('#reveal-btn');
+      btn.disabled = true; btn.style.visibility = 'hidden';
+      const gift = $('.mascot-reveal');
+      gift.classList.add('open');
+      const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setTimeout(() => { btn.hidden = true; $('#secret').hidden = false; gift.classList.add('hop'); confetti(); }, calm ? 0 : 700);
     });
     show('reveal');
   }

@@ -95,8 +95,8 @@
 
   <!-- Ansicht 3: geheimer Link -->
   <section id="view-reveal" hidden>
-    <div class="card reveal">
-      <img class="mascot-reveal" src="/wichtel.svg" alt="" width="90" height="114">
+    <div class="card reveal candy">
+      <!--WICHTEL-GESCHENK-->
       <p class="hello">Hallo <span id="r-name"></span>! 👋</p>
       <p>Du bist in der Wichtelgruppe <b id="r-group"></b>.</p>
       <button type="button" id="reveal-btn" class="btn-primary big">🎁 Antippen und Geheimnis lüften</button>
@@ -414,10 +414,13 @@
     });
     renderIdeas(data.b || '');
     $('#reveal-btn').addEventListener('click', () => {
-      $('#reveal-btn').hidden = true;
-      $('#secret').hidden = false;
-      $('.mascot-reveal').classList.add('hop');
-      confetti();
+      // erst geht die Schleife auf, dann erscheint der Name; der Knopf hält so lange seinen Platz
+      const btn = $('#reveal-btn');
+      btn.disabled = true; btn.style.visibility = 'hidden';
+      const gift = $('.mascot-reveal');
+      gift.classList.add('open');
+      const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setTimeout(() => { btn.hidden = true; $('#secret').hidden = false; gift.classList.add('hop'); confetti(); }, calm ? 0 : 700);
     });
     show('reveal');
   }
