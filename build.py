@@ -386,6 +386,7 @@ def finder_page():
   <p class="f-foot"><span id="f-count" aria-live="polite">{len(IDEAS)} Ideen</span> · <button type="button" id="f-reset" class="link-btn">Filter zurücksetzen</button></p>
 </div>
 <p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="{esc(amazon_url('Wichtelgeschenk'))}" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
+<h2 class="sr-only">Alle Geschenkideen</h2>
 <div id="f-results" class="idea-grid">
 {cards}
 </div>
