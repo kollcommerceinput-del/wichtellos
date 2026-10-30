@@ -4,6 +4,7 @@ import re
 import shutil
 import sys
 from html import escape as esc
+from urllib.parse import urlencode
 from pathlib import Path
 
 SRC = Path(__file__).parent
@@ -16,6 +17,8 @@ FORCE_HTTPS = False
 TODAY = '2026-10-30'
 
 GIFT_BUDGETS = [5, 10, 15, 20, 30]
+# Amazon-Partner-ID – nur hier ändern; landet beim Bauen in allen Links und in site.js
+AMAZON_TAG = 'wichtellos-21'
 PUBLISHED = '2026-10-30'
 
 ORG = {'@type': 'Organization', 'name': 'KOLL Commerce UG (haftungsbeschränkt)', 'url': DOMAIN + '/',
@@ -121,8 +124,13 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None):
     target.write_text(html, encoding='utf-8')
 
 
+def amazon_url(query):
+    params = {'k': query, **({'tag': AMAZON_TAG} if AMAZON_TAG else {})}
+    return 'https://www.amazon.de/s?' + urlencode(params)
+
+
 def amazon_link(query, label='Ideen bei Amazon ansehen*'):
-    href = 'https://www.amazon.de/s?k=' + query.replace(' ', '+')
+    href = amazon_url(query)
     return f'<a href="{esc(href)}" data-amazon="{esc(query)}" rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
 
 
@@ -377,7 +385,7 @@ def finder_page():
   {chip_group('Mag gern', 'mag', list(CAT_LABELS.items()), with_all=False)}
   <p class="f-foot"><span id="f-count" aria-live="polite">{len(IDEAS)} Ideen</span> · <button type="button" id="f-reset" class="link-btn">Filter zurücksetzen</button></p>
 </div>
-<p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="https://www.amazon.de/s?k=Wichtelgeschenk" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
+<p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="{esc(amazon_url('Wichtelgeschenk'))}" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
 <div id="f-results" class="idea-grid">
 {cards}
 </div>
@@ -725,8 +733,11 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / 'assets').mkdir(parents=True)
-    for f in ('style.css', 'site.js', 'finder.js'):
+    for f in ('style.css', 'finder.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
+    site_js = (SRC / 'assets' / 'site.js').read_text(encoding='utf-8')
+    site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
+    (OUT / 'assets' / 'site.js').write_text(site_js, encoding='utf-8')
     for f in ('favicon.svg', 'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):
         if (SRC / f).exists():
             shutil.copy(SRC / f, OUT / f)

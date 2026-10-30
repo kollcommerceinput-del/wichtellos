@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  // Nach der Anmeldung bei Amazon PartnerNet hier die Partner-ID eintragen, z. B. 'wichtellos-21'
+  // Partner-ID setzt build.py beim Bauen ein (AMAZON_TAG dort) – hier leer lassen
   const AMAZON_TAG = 'wichtellos-21';
 
   window.amazonUrl = (query) => {
