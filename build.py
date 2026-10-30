@@ -1,5 +1,6 @@
 """Baut die statische Seite WichtelLos in den Ordner, der als erstes Argument übergeben wird."""
 import json
+import re
 import shutil
 import sys
 from html import escape as esc
@@ -489,15 +490,54 @@ def legal_pages():
     page('/datenschutz/', 'Datenschutzerklärung | WichtelLos', 'Datenschutzerklärung von WichtelLos.', datenschutz, noindex=True)
 
 
+BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' for b in GIFT_BUDGETS[:-1]) + \
+    f' und <a href="/wichtelgeschenke-unter-{GIFT_BUDGETS[-1]}-euro/">{GIFT_BUDGETS[-1]}</a>'
+
+# Sichtbare FAQ und FAQPage-Daten kommen aus dieser einen Liste (Antworten dürfen Links enthalten)
+FAQ = [
+    ('Was ist Wichteln?', 'Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule.'),
+    ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
+    ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
+    ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
+    ('Sieht der Organisator, wer wen zieht?', 'Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
+    ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.'),
+    ('Können Paare ausgeschlossen werden?', 'Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.'),
+    ('Kann ich jemanden nachträglich hinzufügen?', 'Ja: Person ergänzen, neu auslosen und allen die neuen Links schicken. Die alten Links funktionieren weiter und zeigen die alte Auslosung – deshalb wirklich allen die neuen Links schicken.'),
+    ('Was passiert, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken.'),
+    ('Wie viel sollte ein Wichtelgeschenk kosten?', f'Häufig sind es 5 bis 20 Euro, im Büro meist 10 Euro. Wichtig ist, dass sich alle vorher auf ein Budget einigen. Ideen findest du bei unseren Wichtelgeschenken unter {BUDGET_LINKS} Euro.'),
+    ('Funktioniert das auch für Wichteln im Büro oder per Videocall?', 'Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice.'),
+    ('Ist WichtelLos wirklich kostenlos?', 'Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts.'),
+]
+
+HOW_TO = [
+    ('Namen eintragen', 'Gruppe anlegen, alle Teilnehmer eintragen, auf Wunsch Budget und Datum dazu.'),
+    ('Auslosen', 'Ein Klick, und jeder bekommt einen eigenen geheimen Link. Paare, die sich nicht ziehen sollen, schließt du vorher aus.'),
+    ('Links verschicken', 'Per WhatsApp, E-Mail oder kopieren. Jeder sieht nur, wen er selbst beschenkt.'),
+]
+
+
+def faq_html():
+    steps = '\n'.join(f'      <li><b>{esc(h)}</b> – {esc(x)}</li>' for h, x in HOW_TO)
+    items = '\n'.join(f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>' for q, a in FAQ)
+    return f'''    <section class="how">
+      <h2>So funktioniert's</h2>
+      <ol>
+{steps}
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h2>Häufige Fragen</h2>
+{items}
+    </section>'''
+
+
 def tool_page():
+    # Schema-Text = sichtbarer Text ohne HTML-Tags, wörtlich
     faq = {
         '@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
-            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in [
-                ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link und sieht nur, wen sie selbst beschenkt.'),
-                ('Muss ich mich anmelden?', 'Nein. Weder der Organisator noch die Teilnehmer brauchen ein Konto oder eine E-Mail-Adresse.'),
-                ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link nach dem #-Zeichen, den der Browser nicht an den Server schickt.'),
-                ('Können Paare ausgeschlossen werden?', 'Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.'),
-            ]]}
+            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': re.sub(r'<[^>]+>', '', a)}}
+            for q, a in FAQ]}
     app = {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'WichtelLos', 'url': DOMAIN + '/',
            'applicationCategory': 'UtilitiesApplication', 'operatingSystem': 'Alle',
            'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'}, 'publisher': ORG}
@@ -508,7 +548,7 @@ def tool_page():
     html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenlos & ohne Anmeldung | WichtelLos',
                                              'Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.',
                                              '/', extra))
-    html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER)
+    html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 
 

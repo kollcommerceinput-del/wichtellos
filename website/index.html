@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "WichtelLos", "url": "https://wichtellos.de/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Alle", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "KOLL Commerce UG (haftungsbeschränkt)", "url": "https://wichtellos.de/", "logo": "https://wichtellos.de/apple-touch-icon.png", "email": "kollcommerce@mailbox.org"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wie funktioniert Wichteln online?", "acceptedAnswer": {"@type": "Answer", "text": "Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link und sieht nur, wen sie selbst beschenkt."}}, {"@type": "Question", "name": "Muss ich mich anmelden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Weder der Organisator noch die Teilnehmer brauchen ein Konto oder eine E-Mail-Adresse."}}, {"@type": "Question", "name": "Werden unsere Namen gespeichert?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht auf unserem Server. Die Zuteilung steckt codiert im Link nach dem #-Zeichen, den der Browser nicht an den Server schickt."}}, {"@type": "Question", "name": "Können Paare ausgeschlossen werden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist Wichteln?", "acceptedAnswer": {"@type": "Answer", "text": "Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule."}}, {"@type": "Question", "name": "Wie funktioniert Wichteln online?", "acceptedAnswer": {"@type": "Answer", "text": "Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt."}}, {"@type": "Question", "name": "Muss ich mich anmelden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse."}}, {"@type": "Question", "name": "Wie viele Personen können mitmachen?", "acceptedAnswer": {"@type": "Answer", "text": "Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein."}}, {"@type": "Question", "name": "Sieht der Organisator, wer wen zieht?", "acceptedAnswer": {"@type": "Answer", "text": "Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung."}}, {"@type": "Question", "name": "Werden unsere Namen gespeichert?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links."}}, {"@type": "Question", "name": "Können Paare ausgeschlossen werden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen."}}, {"@type": "Question", "name": "Kann ich jemanden nachträglich hinzufügen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja: Person ergänzen, neu auslosen und allen die neuen Links schicken. Die alten Links funktionieren weiter und zeigen die alte Auslosung – deshalb wirklich allen die neuen Links schicken."}}, {"@type": "Question", "name": "Was passiert, wenn jemand seinen Link verliert?", "acceptedAnswer": {"@type": "Answer", "text": "Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken."}}, {"@type": "Question", "name": "Wie viel sollte ein Wichtelgeschenk kosten?", "acceptedAnswer": {"@type": "Answer", "text": "Häufig sind es 5 bis 20 Euro, im Büro meist 10 Euro. Wichtig ist, dass sich alle vorher auf ein Budget einigen. Ideen findest du bei unseren Wichtelgeschenken unter 5, 10, 15, 20 und 30 Euro."}}, {"@type": "Question", "name": "Funktioniert das auch für Wichteln im Büro oder per Videocall?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice."}}, {"@type": "Question", "name": "Ist WichtelLos wirklich kostenlos?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "WichtelLos", "url": "https://wichtellos.de/", "inLanguage": "de-DE", "publisher": {"@type": "Organization", "name": "KOLL Commerce UG (haftungsbeschränkt)", "url": "https://wichtellos.de/", "logo": "https://wichtellos.de/apple-touch-icon.png", "email": "kollcommerce@mailbox.org"}}</script>
 </head>
 <body>
@@ -44,6 +44,8 @@
       </div>
       <img class="mascot" src="/wichtel.svg" alt="" width="96" height="122">
     </div>
+
+    <p id="last-wrap" hidden><button type="button" id="show-last" class="btn-secondary">Letzte Auslosung wieder anzeigen</button></p>
 
     <form id="form" novalidate>
       <div class="card">
@@ -90,18 +92,41 @@
 
     <div class="ad-slot">Anzeige (Platzhalter)</div>
 
+    <section class="how">
+      <h2>So funktioniert's</h2>
+      <ol>
+      <li><b>Namen eintragen</b> – Gruppe anlegen, alle Teilnehmer eintragen, auf Wunsch Budget und Datum dazu.</li>
+      <li><b>Auslosen</b> – Ein Klick, und jeder bekommt einen eigenen geheimen Link. Paare, die sich nicht ziehen sollen, schließt du vorher aus.</li>
+      <li><b>Links verschicken</b> – Per WhatsApp, E-Mail oder kopieren. Jeder sieht nur, wen er selbst beschenkt.</li>
+      </ol>
+    </section>
+
     <section class="faq">
       <h2>Häufige Fragen</h2>
+      <details><summary>Was ist Wichteln?</summary>
+        <p>Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule.</p></details>
       <details><summary>Wie funktioniert Wichteln online?</summary>
         <p>Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.</p></details>
       <details><summary>Muss ich mich anmelden?</summary>
         <p>Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.</p></details>
+      <details><summary>Wie viele Personen können mitmachen?</summary>
+        <p>Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.</p></details>
       <details><summary>Sieht der Organisator, wer wen zieht?</summary>
         <p>Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.</p></details>
       <details><summary>Werden unsere Namen gespeichert?</summary>
-        <p>Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf.</p></details>
+        <p>Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.</p></details>
       <details><summary>Können Paare ausgeschlossen werden?</summary>
         <p>Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.</p></details>
+      <details><summary>Kann ich jemanden nachträglich hinzufügen?</summary>
+        <p>Ja: Person ergänzen, neu auslosen und allen die neuen Links schicken. Die alten Links funktionieren weiter und zeigen die alte Auslosung – deshalb wirklich allen die neuen Links schicken.</p></details>
+      <details><summary>Was passiert, wenn jemand seinen Link verliert?</summary>
+        <p>Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken.</p></details>
+      <details><summary>Wie viel sollte ein Wichtelgeschenk kosten?</summary>
+        <p>Häufig sind es 5 bis 20 Euro, im Büro meist 10 Euro. Wichtig ist, dass sich alle vorher auf ein Budget einigen. Ideen findest du bei unseren Wichtelgeschenken unter <a href="/wichtelgeschenke-unter-5-euro/">5</a>, <a href="/wichtelgeschenke-unter-10-euro/">10</a>, <a href="/wichtelgeschenke-unter-15-euro/">15</a>, <a href="/wichtelgeschenke-unter-20-euro/">20</a> und <a href="/wichtelgeschenke-unter-30-euro/">30</a> Euro.</p></details>
+      <details><summary>Funktioniert das auch für Wichteln im Büro oder per Videocall?</summary>
+        <p>Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice.</p></details>
+      <details><summary>Ist WichtelLos wirklich kostenlos?</summary>
+        <p>Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts.</p></details>
     </section>
 
     <h2>Ideen und Spiele rund ums Wichteln</h2>
@@ -484,6 +509,13 @@
   // ---------- Ansichten ----------
   function show(name) {
     for (const v of ['create', 'result', 'reveal', 'invalid']) $(`#view-${v}`).hidden = v !== name;
+    if (name === 'create') $('#last-wrap').hidden = !lastResult();
+  }
+
+  // zuletzt erzeugte Links aus dem eigenen Browser
+  function lastResult() {
+    const last = store.get(RESULT_KEY);
+    return last && Array.isArray(last.links) && last.links.length ? last : null;
   }
 
   function init() {
@@ -506,6 +538,7 @@
     $('#form').addEventListener('submit', (e) => { e.preventDefault(); runDraw(); });
     $('#edit').addEventListener('click', () => { show('create'); window.scrollTo(0, 0); });
     $('#redraw').addEventListener('click', runDraw);
+    $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links); });
     show('create');
   }
 

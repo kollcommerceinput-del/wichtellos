@@ -17,6 +17,8 @@
       <img class="mascot" src="/wichtel.svg" alt="" width="96" height="122">
     </div>
 
+    <p id="last-wrap" hidden><button type="button" id="show-last" class="btn-secondary">Letzte Auslosung wieder anzeigen</button></p>
+
     <form id="form" novalidate>
       <div class="card">
         <h2>1. Eure Gruppe</h2>
@@ -62,19 +64,7 @@
 
     <div class="ad-slot">Anzeige (Platzhalter)</div>
 
-    <section class="faq">
-      <h2>Häufige Fragen</h2>
-      <details><summary>Wie funktioniert Wichteln online?</summary>
-        <p>Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.</p></details>
-      <details><summary>Muss ich mich anmelden?</summary>
-        <p>Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.</p></details>
-      <details><summary>Sieht der Organisator, wer wen zieht?</summary>
-        <p>Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.</p></details>
-      <details><summary>Werden unsere Namen gespeichert?</summary>
-        <p>Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf.</p></details>
-      <details><summary>Können Paare ausgeschlossen werden?</summary>
-        <p>Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.</p></details>
-    </section>
+<!--FAQ-->
 
     <h2>Ideen und Spiele rund ums Wichteln</h2>
     <div class="chips">
@@ -445,6 +435,13 @@
   // ---------- Ansichten ----------
   function show(name) {
     for (const v of ['create', 'result', 'reveal', 'invalid']) $(`#view-${v}`).hidden = v !== name;
+    if (name === 'create') $('#last-wrap').hidden = !lastResult();
+  }
+
+  // zuletzt erzeugte Links aus dem eigenen Browser
+  function lastResult() {
+    const last = store.get(RESULT_KEY);
+    return last && Array.isArray(last.links) && last.links.length ? last : null;
   }
 
   function init() {
@@ -467,6 +464,7 @@
     $('#form').addEventListener('submit', (e) => { e.preventDefault(); runDraw(); });
     $('#edit').addEventListener('click', () => { show('create'); window.scrollTo(0, 0); });
     $('#redraw').addEventListener('click', runDraw);
+    $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links); });
     show('create');
   }
 
