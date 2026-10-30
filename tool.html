@@ -43,6 +43,7 @@
         <p class="hint">Mindestens 3 Personen, jeder Name nur einmal.</p>
         <div id="people"></div>
         <button type="button" id="add-person" class="btn-secondary">+ Person hinzufügen</button>
+        <p id="max-note" class="hint" hidden>Maximal 60 Personen.</p>
       </div>
 
       <div class="card">
@@ -261,6 +262,8 @@
       }
       box.append(row);
     });
+    $('#add-person').hidden = people.length >= MAX_PEOPLE;
+    $('#max-note').hidden = people.length < MAX_PEOPLE;
     renderExclusions();
   }
 
