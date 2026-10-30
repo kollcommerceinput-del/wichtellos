@@ -42,9 +42,14 @@ node tests/site-check.js /tmp
 node tests/auslosung-stress.js
 ```
 
-## Vor dem Livegang
+## Grafiken und Schriften (Lizenzen)
 
-1. Amazon-Partner-ID in `assets/site.js` bei `AMAZON_TAG` eintragen, neu bauen.
-2. Impressum und Datenschutz: Platzhalter in `build.py` (Funktion `legal_pages`) ausfüllen, Entwurf-Hinweis entfernen, neu bauen.
-3. Platzhalter „Anzeige“ entfernen oder durch AdSense ersetzen.
-4. `website/` per WinSCP hochladen, SSL in IONOS aktivieren, Sitemap in der Google Search Console einreichen.
+- `wichtel.svg`, `favicon.svg`, alle Dateien in `grafik/` (Wichtel-Posen, Winterlandschaft, Lichterkette) und die
+  Bilder in `marketing/`: eigene Grafiken der KOLL Commerce UG.
+- Schrift **Fredoka** (`assets/fonts/fredoka-latin-600-normal.woff2`): SIL Open Font License 1.1,
+  © The Fredoka Project Authors – Lizenztext in `assets/fonts/OFL-Fredoka.txt`. Selbst gehostet, kein Google Fonts.
+- Kategorie-Symbole im Geschenkfinder sind Emoji des jeweiligen Geräts, keine Bilddateien.
+
+## Veröffentlichen
+
+Jeder Push auf `main` geht über GitHub Pages live (siehe `CLAUDE.md`). Die Amazon-Partner-ID steht nur in `build.py` (`AMAZON_TAG`).

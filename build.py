@@ -739,6 +739,8 @@ def main():
     site_js = (SRC / 'assets' / 'site.js').read_text(encoding='utf-8')
     site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
     (OUT / 'assets' / 'site.js').write_text(site_js, encoding='utf-8')
+    shutil.copytree(SRC / 'grafik', OUT / 'grafik')
+    shutil.copytree(SRC / 'assets' / 'fonts', OUT / 'assets' / 'fonts')
     for f in ('favicon.svg', 'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):
         if (SRC / f).exists():
             shutil.copy(SRC / f, OUT / f)
