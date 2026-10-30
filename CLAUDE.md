@@ -35,7 +35,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 
 ## Offen
 
-- [ ] Amazon-PartnerNet-Konto → Partner-ID in `assets/site.js` eintragen, neu bauen, hochladen
+- [x] Amazon-PartnerNet-Konto angelegt, Partner-ID `wichtellos-21` in `assets/site.js` eingetragen (30.10.2026)
+- [ ] PartnerNet: Steuer-Interview (USA/Kanada) und Zahlungsempfänger (UG) vervollständigen – nötig vor der ersten Auszahlung
 - [ ] Livegang (siehe oben) und Live-Test
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   // Nach der Anmeldung bei Amazon PartnerNet hier die Partner-ID eintragen, z. B. 'wichtellos-21'
-  const AMAZON_TAG = '';
+  const AMAZON_TAG = 'wichtellos-21';
 
   window.amazonUrl = (query) => {
     const url = new URL('https://www.amazon.de/s');
