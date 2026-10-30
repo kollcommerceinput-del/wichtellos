@@ -49,8 +49,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Umzug auf GitHub Pages abgeschlossen: DNS, Let's-Encrypt-Zertifikat, Enforce HTTPS an; SFTP-Benutzer bei IONOS gelöscht (30.10.2026)
 - [x] Search Console + Bing eingerichtet, Sitemap bei beiden eingereicht (30.10.2026)
 - [x] Sitemap in der Search Console erfolgreich gelesen (8 Seiten, 30.10.2026); Bing: alle 8 URLs übermittelt
-- [ ] Sitemap in der Search Console neu senden (jetzt 11 Seiten) und die 3 neuen Adressen bei Bing übermitteln
-      (`/geschenkfinder/`, `/wichtelgeschenke-fuer-kinder/`, `/wichtelgeschenke-selber-machen/`)
+- [x] 3 neue Adressen bei Bing übermittelt (alle 11 drin); Sitemap in der Search Console neu gesendet (30.10.,
+      zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
 - [ ] Google-Indexierung beantragen (11 URLs, Startseite zuerst) – am 30.10. sofort „Kontingent überschritten“ (Ursache unklar, vermutlich neue Property); morgen erneut versuchen
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
