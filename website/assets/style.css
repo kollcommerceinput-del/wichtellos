@@ -243,3 +243,4 @@ body::after { content: ''; position: fixed; left: 0; right: 0; top: -240px; heig
 .gift-teaser p { margin: 0 0 10px; }
 .gift-teaser .gt-title { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.2; margin-bottom: 6px; }
 @media (max-width: 360px) { .gift-teaser img { width: 56px; } }
+footer .social a { display: inline-block; padding: 12px 4px; font-weight: 700; color: var(--primary); text-decoration: none; }

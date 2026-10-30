@@ -22,7 +22,8 @@ AMAZON_TAG = 'wichtellos-21'
 PUBLISHED = '2026-10-30'
 
 ORG = {'@type': 'Organization', 'name': 'KOLL Commerce UG (haftungsbeschränkt)', 'url': DOMAIN + '/',
-       'logo': DOMAIN + '/apple-touch-icon.png', 'email': 'kollcommerce@mailbox.org'}
+       'logo': DOMAIN + '/apple-touch-icon.png', 'email': 'kollcommerce@mailbox.org',
+       'sameAs': ['https://www.instagram.com/wichtellos/']}
 
 
 def ld(*objs):
@@ -91,6 +92,7 @@ FOOTER = '''<footer>
     <a href="/datenschutz/">Datenschutz</a>
   </div>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+  <p class="social"><a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Folge uns auf Instagram: @wichtellos</a></p>
   <p>© 2026 WichtelLos</p>
 </footer>'''
 
