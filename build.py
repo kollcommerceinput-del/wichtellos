@@ -13,6 +13,29 @@ FORCE_HTTPS = False
 TODAY = '2026-10-30'
 
 GIFT_BUDGETS = [5, 10, 15, 20, 30]
+PUBLISHED = '2026-10-30'
+
+ORG = {'@type': 'Organization', 'name': 'KOLL Commerce UG (haftungsbeschränkt)', 'url': DOMAIN + '/',
+       'logo': DOMAIN + '/apple-touch-icon.png', 'email': 'kollcommerce@mailbox.org'}
+
+
+def ld(*objs):
+    return ''.join(f'\n<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in objs)
+
+
+def crumbs(path, name):
+    # sichtbare Brotkrumen + BreadcrumbList/Article für Unterseiten
+    html = f'<nav class="crumbs" aria-label="Brotkrumen"><a href="/">Startseite</a> › <span>{esc(name)}</span></nav>'
+    trail = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Startseite', 'item': DOMAIN + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': name, 'item': DOMAIN + path}]}
+    return html, trail
+
+
+def article_ld(path, title, desc):
+    return {'@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': desc,
+            'image': DOMAIN + '/og-image.png', 'inLanguage': 'de-DE', 'mainEntityOfPage': DOMAIN + path,
+            'datePublished': PUBLISHED, 'dateModified': TODAY, 'author': ORG, 'publisher': ORG}
 
 
 def head(title, desc, path, extra='', noindex=False):
@@ -67,7 +90,11 @@ CTA = '''<div class="cta-box">
 </div>'''
 
 
-def page(path, title, desc, body, extra='', noindex=False):
+def page(path, title, desc, body, extra='', noindex=False, crumb=None):
+    if crumb:
+        nav, trail = crumbs(path, crumb)
+        body = nav + '\n' + body
+        extra += ld(trail, article_ld(path, title, desc))
     html = f'''<!doctype html>
 <html lang="de">
 <head>
@@ -286,7 +313,7 @@ def gift_page(budget):
 <p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 {CTA}
 </article>'''
-    page(path, g['title'], g['desc'], body)
+    page(path, g['title'], g['desc'], body, crumb=f'Wichtelgeschenke unter {budget} Euro')
 
 
 # ---------- Spiele ----------
@@ -344,7 +371,8 @@ def dice_page():
 </div>
 </article>'''
     page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln, Ablauf & Varianten zum Ausdrucken',
-         'Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.', body)
+         'Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.', body,
+         crumb='Wichteln mit Würfeln')
 
 
 SCRAP_IDEAS = [
@@ -399,7 +427,8 @@ def scrap_page():
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 </article>'''
     page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen für Büro und Familie',
-         'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body)
+         'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body,
+         crumb='Schrottwichteln')
 
 
 # ---------- Rechtliches (Entwürfe) ----------
@@ -436,7 +465,9 @@ def legal_pages():
 <p>Wir verarbeiten so wenig Daten wie möglich. Es gibt kein Benutzerkonto, keine Analyse- oder Tracking-Werkzeuge und wir setzen keine Cookies.</p>
 
 <h2>3. Hosting und Server-Protokolle</h2>
-<p>Diese Website wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, betrieben. Beim Aufruf einer Seite verarbeitet IONOS technisch notwendige Daten wie aufgerufene Seite, Referrer, Browsertyp und -version, Betriebssystem, Gerätetyp, Zeitpunkt des Zugriffs und IP-Adresse, um die Website sicher und stabil auszuliefern. Die IP-Adresse wird dabei anonymisiert. Die Daten werden 8 Wochen gespeichert; eine Übermittlung in Drittländer findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung.</p>
+<p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Daten, insbesondere die IP-Adresse, aufgerufene Seite, Zeitpunkt des Zugriffs und Browserangaben, um die Website sicher und stabil auszuliefern und Angriffe abzuwehren. Wir selbst erhalten diese Daten nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website.</p>
+<p>Dabei können Daten in die USA übermittelt werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert (Angemessenheitsbeschluss der EU-Kommission, Art. 45 DSGVO); ergänzend verwendet GitHub Standardvertragsklauseln. Näheres in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">docs.github.com</a>.</p>
+<p>Die Domain wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, verwaltet (Namensauflösung, DNS).</p>
 
 <h2>4. Die Wichtel-Auslosung</h2>
 <p>Namen, Gruppenname, Budget, Datum und Nachricht, die du in das Formular einträgst, werden ausschließlich in deinem Browser verarbeitet. Die Zuteilung wird codiert in den persönlichen Links gespeichert, und zwar im Teil nach dem #-Zeichen. Diesen Teil überträgt der Browser beim Aufruf nicht an unseren Server – wir erhalten von den Namen und Zuteilungen keine Kenntnis.</p>
@@ -469,8 +500,10 @@ def tool_page():
             ]]}
     app = {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'WichtelLos', 'url': DOMAIN + '/',
            'applicationCategory': 'UtilitiesApplication', 'operatingSystem': 'Alle',
-           'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'}}
-    extra = ''.join(f'\n<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (app, faq))
+           'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'}, 'publisher': ORG}
+    site = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'WichtelLos', 'url': DOMAIN + '/',
+            'inLanguage': 'de-DE', 'publisher': ORG}
+    extra = ld(app, faq, site)
     html = (SRC / 'tool.html').read_text(encoding='utf-8')
     html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenlos & ohne Anmeldung | WichtelLos',
                                              'Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.',
