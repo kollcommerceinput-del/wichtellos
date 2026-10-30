@@ -8,6 +8,8 @@ from pathlib import Path
 SRC = Path(__file__).parent
 OUT = Path(sys.argv[1])
 DOMAIN = 'https://wichtellos.de'  # bei anderer Domain hier ändern und neu bauen
+# IONOS-SSL am 30.10.2026 gekündigt (96 €/Jahr): bis HTTPS wieder steht, nicht auf https umleiten
+FORCE_HTTPS = False
 TODAY = '2026-10-30'
 
 GIFT_BUDGETS = [5, 10, 15, 20, 30]
@@ -486,13 +488,14 @@ def extras():
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
-    # IONOS liefert http und www sonst parallel aus (Duplicate Content) – alles auf https://wichtellos.de
-    (OUT / '.htaccess').write_text(
-        'ErrorDocument 404 /404.html\n\n'
-        'RewriteEngine On\n'
-        'RewriteCond %{HTTPS} !=on [OR]\n'
-        'RewriteCond %{HTTP_HOST} ^www\\. [NC]\n'
-        f'RewriteRule ^ {DOMAIN}%{{REQUEST_URI}} [R=301,L]\n', encoding='utf-8')
+    # IONOS liefert http und www sonst parallel aus (Duplicate Content) – www immer weg, http nur mit FORCE_HTTPS
+    host = DOMAIN.split('://')[1]
+    rules = ('RewriteCond %{HTTPS} !=on [OR]\n'
+             'RewriteCond %{HTTP_HOST} ^www\\. [NC]\n'
+             f'RewriteRule ^ {DOMAIN}%{{REQUEST_URI}} [R=301,L]\n') if FORCE_HTTPS else (
+             'RewriteCond %{HTTP_HOST} ^www\\. [NC]\n'
+             f'RewriteRule ^ http://{host}%{{REQUEST_URI}} [R=301,L]\n')
+    (OUT / '.htaccess').write_text('ErrorDocument 404 /404.html\n\nRewriteEngine On\n' + rules, encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
