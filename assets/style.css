@@ -167,3 +167,15 @@ table.rules td.num { width: 56px; text-align: center; font-size: 26px; font-weig
 /* So funktioniert's */
 .how ol { padding-left: 22px; }
 .how li { margin-bottom: 8px; }
+/* Antippziele mindestens 44 px (Handy) */
+.top .bar { padding-top: 4px; padding-bottom: 4px; }
+.top nav a { display: inline-block; padding: 11px 4px; }
+.chip { min-height: 44px; }
+.faq summary { padding: 10px 0; margin: -10px 0; }
+.footer-links { gap: 0 12px; }
+.footer-links a { display: inline-block; padding: 12px 2px; }
+.idea a, .crumbs a { display: inline-block; padding: 11px 0; margin: -11px 0; }
+.link-btn { padding: 11px 0; }
+.logo { padding: 8px 0; }
+.chips a { display: inline-flex; align-items: center; min-height: 44px; }
+.icon-btn { min-width: 44px; min-height: 44px; }
