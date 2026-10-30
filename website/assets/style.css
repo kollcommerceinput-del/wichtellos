@@ -236,3 +236,10 @@ body::after { content: ''; position: fixed; left: 0; right: 0; top: -240px; heig
 .mascot-reveal .lid { transform-box: view-box; transform-origin: 60px 112px; transition: transform .7s cubic-bezier(.3, 1.5, .5, 1), opacity .4s .35s; }
 .mascot-reveal.open .lid { transform: translate(16px, -38px) rotate(30deg); opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .mascot-reveal .lid { transition: none; } }
+/* Hinweis „Schon alle Weihnachtsgeschenke zusammen?“ */
+.gift-teaser { display: flex; gap: 14px; align-items: center; background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--gold);
+  border-radius: var(--radius); padding: 16px; margin: 22px 0; box-shadow: 0 6px 18px rgba(43,27,23,.06); }
+.gift-teaser img { flex: none; width: 72px; height: auto; }
+.gift-teaser p { margin: 0 0 10px; }
+.gift-teaser .gt-title { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.2; margin-bottom: 6px; }
+@media (max-width: 360px) { .gift-teaser img { width: 56px; } }
