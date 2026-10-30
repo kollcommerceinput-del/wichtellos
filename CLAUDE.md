@@ -41,9 +41,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Amazon-PartnerNet-Konto angelegt, Partner-ID `wichtellos-21` in `assets/site.js` eingetragen (30.10.2026)
 - [ ] PartnerNet: Steuer-Interview (USA/Kanada) und Zahlungsempfänger (UG) vervollständigen – nötig vor der ersten Auszahlung
 - [x] Livegang und Live-Test (30.10.2026, alle Prüfungen oben grün, damals noch mit SSL)
-- [ ] Umzug auf GitHub Pages abschließen (DNS, Enforce HTTPS), danach SFTP-Benutzer bei IONOS löschen
+- [x] Umzug auf GitHub Pages abgeschlossen: DNS, Let's-Encrypt-Zertifikat, Enforce HTTPS an; SFTP-Benutzer bei IONOS gelöscht (30.10.2026)
 - [x] Search Console + Bing eingerichtet, Sitemap bei beiden eingereicht (30.10.2026)
-- [ ] Nach GitHub-Zertifikat: Enforce HTTPS, Sitemap in Search Console neu senden, Indexierung beantragen
+- [x] Sitemap in der Search Console erfolgreich gelesen (8 Seiten, 30.10.2026)
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
