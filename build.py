@@ -66,6 +66,7 @@ def head(title, desc, path, extra='', noindex=False):
 <meta name="msvalidate.01" content="17BAEEA0B1BBFF97909DD4B13DE0C9D7">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/fredoka-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">{extra}'''
 
 
