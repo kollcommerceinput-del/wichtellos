@@ -84,7 +84,7 @@ textarea { min-height: 70px; resize: vertical; }
 .links .who { font-weight: 700; margin-bottom: 8px; }
 .links .actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .links .actions a, .links .actions button { flex: 1 1 auto; }
-.wa { background: #1f9d55; color: #fff; border: 0; }
+.wa { background: #157a42; color: #fff; border: 0; }
 .tip { background: var(--soft); border-radius: var(--radius); padding: 12px 14px; font-size: 14px; margin: 14px 0; }
 .reveal { text-align: center; }
 .reveal .hello { font-size: 26px; font-weight: 800; margin: 6px 0; }
