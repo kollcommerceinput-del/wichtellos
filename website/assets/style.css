@@ -118,6 +118,23 @@ dl.info dd { margin: 0; font-weight: 600; }
 @keyframes hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
 @media (prefers-reduced-motion: reduce) { .hop, .hero .mascot { animation: none; } }
 
+/* Geschenkfinder */
+.finder .f-search { margin: 0; }
+.f-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 14px; }
+.f-label { width: 100%; font-weight: 700; font-size: 14px; }
+.chip {
+  padding: 7px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card);
+  color: var(--text); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+.f-foot { margin: 14px 0 0; color: var(--muted); font-size: 14px; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; color: var(--primary); text-decoration: underline; cursor: pointer; }
+.f-amazon { background: var(--soft); border-radius: var(--radius); padding: 12px 14px; font-weight: 600; }
+.idea .tags { font-size: 13px; color: var(--muted); margin: 0 0 8px; flex: 0; }
+.more-link + .more-link { display: block; }
+.diy h3 { margin-top: 14px; }
+.diy-links { font-size: 15px; }
+
 /* Ratgeber-Seiten */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
 .chips a { padding: 7px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); text-decoration: none; font-weight: 600; font-size: 14px; }

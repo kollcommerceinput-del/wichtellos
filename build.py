@@ -7,6 +7,8 @@ from html import escape as esc
 from pathlib import Path
 
 SRC = Path(__file__).parent
+sys.path.insert(0, str(SRC))
+from gifts import AGE_LABELS, BUDGETS, CAT_LABELS, DIY, IDEAS  # noqa: E402
 OUT = Path(sys.argv[1])
 DOMAIN = 'https://wichtellos.de'  # bei anderer Domain hier ändern und neu bauen
 # IONOS-SSL am 30.10.2026 gekündigt (96 €/Jahr): bis HTTPS wieder steht, nicht auf https umleiten
@@ -67,7 +69,7 @@ def head(title, desc, path, extra='', noindex=False):
 HEADER = '''<header class="top"><div class="bar">
   <a class="logo" href="/"><img src="/favicon.svg" alt="" width="26" height="26"><span>Wichtel<b>Los</b></span></a>
   <nav>
-    <a href="/wichtelgeschenke-unter-10-euro/">Geschenkideen</a>
+    <a href="/geschenkfinder/">Geschenkideen</a>
     <a href="/wichteln-wuerfeln-regeln/">Spiele</a>
   </nav>
 </div></header>'''
@@ -75,7 +77,10 @@ HEADER = '''<header class="top"><div class="bar">
 FOOTER = '''<footer>
   <div class="footer-links">
     <a href="/">Wichteln auslosen</a>
+    <a href="/geschenkfinder/">Geschenkfinder</a>
     <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a>
+    <a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a>
+    <a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/impressum/">Impressum</a>
@@ -304,6 +309,7 @@ def gift_page(budget):
 <div class="chips">
 {chips}
 </div>
+<p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a></p>
 {CTA}
 {chr(10).join(sections)}
 <div class="ad-slot">Anzeige (Platzhalter)</div>
@@ -315,6 +321,148 @@ def gift_page(budget):
 {CTA}
 </article>'''
     page(path, g['title'], g['desc'], body, crumb=f'Wichtelgeschenke unter {budget} Euro')
+
+
+# ---------- Geschenkfinder, Kinder, Selbst gemacht ----------
+
+def norm(text):
+    # muss zu norm() in assets/finder.js passen
+    text = text.lower()
+    for a, b in (('ä', 'ae'), ('ö', 'oe'), ('ü', 'ue'), ('ß', 'ss')):
+        text = text.replace(a, b)
+    return text
+
+
+def tag_line(idea):
+    ages = 'Für alle Altersgruppen' if len(idea['ages']) == 4 else ' · '.join(AGE_LABELS[a] for a in idea['ages'])
+    office = ' · fürs Büro' if idea['office'] else ''
+    return f"{ages} · bis {idea['budget']} €{office}"
+
+
+def idea_card(idea, data=False):
+    attrs = ''
+    if data:
+        # Alter bewusst nicht im Suchtext: „tee“ fände sonst alle Teenager-Ideen; Alter filtern die Chips
+        search = norm(' '.join([idea['name'], idea['text'], idea['query'], *(CAT_LABELS[c] for c in idea['cats'])]))
+        attrs = (f' data-ages="{" ".join(idea["ages"])}" data-budget="{idea["budget"]}" data-cats="{" ".join(idea["cats"])}"'
+                 f' data-office="{1 if idea["office"] else 0}" data-search="{esc(search)}"')
+    return f'''<div class="idea"{attrs}>
+  <h3>{esc(idea['name'])}</h3>
+  <p>{esc(idea['text'])}</p>
+  <p class="tags">{esc(tag_line(idea))}</p>
+  {amazon_link(idea['query'])}
+</div>'''
+
+
+def chip_group(label, field, options, with_all=True):
+    chips = [f'<button type="button" class="chip" data-f="{field}" data-v="" aria-pressed="true">Alle</button>'] if with_all else []
+    chips += [f'<button type="button" class="chip" data-f="{field}" data-v="{v}" aria-pressed="false">{esc(t)}</button>'
+              for v, t in options]
+    return (f'<div class="f-group" role="group" aria-label="{esc(label)}"><span class="f-label">{esc(label)}</span>'
+            f'{"".join(chips)}</div>')
+
+
+def finder_page():
+    who = list(AGE_LABELS.items()) + [('office', 'Kollegen')]
+    cards = '\n'.join(idea_card(i, data=True) for i in IDEAS)
+    body = f'''<article>
+<h1>Geschenkfinder fürs Wichteln</h1>
+<p class="lead">{len(IDEAS)} Geschenkideen für Kinder, Teenager, Erwachsene und Kollegen – filtere nach Alter, Budget und dem, was die beschenkte Person mag.</p>
+<div class="card finder">
+  <label class="f-search">Wonach suchst du?
+    <input id="f-q" type="search" placeholder="z. B. Tee, Basteln, Socken" autocomplete="off">
+  </label>
+  {chip_group('Für wen?', 'fuer', who)}
+  {chip_group('Budget', 'budget', [(str(b), f'bis {b} €') for b in BUDGETS])}
+  {chip_group('Mag gern', 'mag', list(CAT_LABELS.items()), with_all=False)}
+  <p class="f-foot"><span id="f-count" aria-live="polite">{len(IDEAS)} Ideen</span> · <button type="button" id="f-reset" class="link-btn">Filter zurücksetzen</button></p>
+</div>
+<p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="https://www.amazon.de/s?k=Wichtelgeschenk" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
+<div id="f-results" class="idea-grid">
+{cards}
+</div>
+<p class="hint">Bei Geschenken für Kinder bitte die Altersangabe auf der Verpackung beachten, zum Beispiel wegen verschluckbarer Kleinteile.</p>
+<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+{CTA}
+</article>'''
+    page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter, Budget & Interessen',
+         'Wichtelgeschenke finden: nach Alter (Kind, Teenager, Erwachsene, Kollegen), Budget von 5 bis 30 Euro und Interessen filtern – mit über 100 Ideen.',
+         body, extra='\n<script src="/assets/finder.js" defer></script>', crumb='Geschenkfinder')
+
+
+def kids_page():
+    def fits(idea, age):
+        # Kinder: nur Kinder-Ideen und solche für alle Altersgruppen; Teenager: alles mit Teenager
+        return age in idea['ages'] and (age == 'teen' or 'adult' not in idea['ages'] or len(idea['ages']) == 4)
+
+    shown, sections = set(), []
+    for age, title in (('k1', 'Für Kinder von 3 bis 7 Jahren'), ('k2', 'Für Kinder von 8 bis 12 Jahren'), ('teen', 'Für Teenager')):
+        picks = [i for i in IDEAS if fits(i, age) and i['name'] not in shown][:12]
+        shown.update(i['name'] for i in picks)
+        cards = '\n'.join(idea_card(i) for i in picks)
+        sections.append(f'''<h2>{esc(title)}</h2>
+<div class="idea-grid">
+{cards}
+</div>
+<p><a class="more-link" href="/geschenkfinder/?fuer={age}">Alle Ideen für {esc(AGE_LABELS[age])} im Geschenkfinder →</a></p>''')
+    body = f'''<article>
+<h1>Wichtelgeschenke für Kinder und Teenager</h1>
+<p class="lead">Ob Kindergarten, Schulklasse, Sportverein oder Familie: Hier findest du Wichtelgeschenke, die zum Alter passen – von Seifenblasen für die Kleinen bis zum Escape-Spiel für Teenager.</p>
+{CTA}
+{chr(10).join(sections)}
+<h2>Tipps fürs Wichteln mit Kindern</h2>
+<ul>
+  <li>Auf die Altersangabe auf der Verpackung achten – Spielzeug mit Kleinteilen ist nichts für die Kleinsten.</li>
+  <li>In Schule und Kindergarten sind 3 bis 5 Euro üblich. Am besten legt die Gruppe das Budget vorher gemeinsam fest.</li>
+  <li>Bei Süßigkeiten an Allergien und Unverträglichkeiten denken.</li>
+  <li>Kinder freuen sich oft mehr über etwas zum Spielen oder Basteln als über reine Deko.</li>
+</ul>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+</article>'''
+    page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 Jahren und für Teenager',
+         'Wichtelgeschenke für Kinder und Teenager: passende Ideen für Kindergarten, Schule und Verein – sortiert nach Alter, mit Tipps zu Budget und Sicherheit.',
+         body, crumb='Wichtelgeschenke für Kinder')
+
+
+def diy_page():
+    blocks = []
+    for title, intro, material, steps, note, links in DIY:
+        mats = '\n'.join(f'<li>{esc(m)}</li>' for m in material)
+        stp = '\n'.join(f'<li>{esc(x)}</li>' for x in steps)
+        note_html = f'<p class="hint">💡 {esc(note)}</p>' if note else ''
+        link_html = ' · '.join(amazon_link(q, f'{t}*') for t, q in links)
+        blocks.append(f'''<section class="card diy">
+<h2>{esc(title)}</h2>
+<p>{esc(intro)}</p>
+<h3>Das brauchst du</h3>
+<ul>
+{mats}
+</ul>
+<h3>So geht's</h3>
+<ol>
+{stp}
+</ol>
+{note_html}
+<p class="diy-links">Material: {link_html}</p>
+</section>''')
+    sets = [i for i in IDEAS if 'kreativ' in i['cats'] and ('teen' in i['ages'] or 'adult' in i['ages'])]
+    cards = '\n'.join(idea_card(i) for i in sets)
+    body = f'''<article>
+<h1>Wichtelgeschenke selber machen</h1>
+<p class="lead">Selbst gemachte Geschenke sind persönlich, günstig und kommen fast immer gut an. Diese {len(DIY)} Ideen gelingen auch ohne Bastel-Talent – die meisten in unter einer Stunde.</p>
+{CTA}
+{chr(10).join(blocks)}
+<h2>Bastelsets für gemütliche Abende</h2>
+<p>Lieber Zeit verschenken als selbst basteln? Diese Sets sorgen für entspannte Winterabende – zum Selbermachen für die beschenkte Person.</p>
+<div class="idea-grid">
+{cards}
+</div>
+<p><a class="more-link" href="/geschenkfinder/?mag=kreativ">Alle Bastel- und Kreativ-Ideen im Geschenkfinder →</a></p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+</article>'''
+    page('/wichtelgeschenke-selber-machen/', f'Wichtelgeschenke selber machen: {len(DIY)} einfache Ideen mit Anleitung',
+         'Wichtelgeschenke selber machen: Backmischung im Glas, Badesalz, gebrannte Mandeln und mehr – einfache Anleitungen plus Bastelsets für gemütliche Abende.',
+         body, crumb='Wichtelgeschenke selber machen')
 
 
 # ---------- Spiele ----------
@@ -558,7 +706,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/wichteln-wuerfeln-regeln/', '/schrottwichteln/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -577,7 +725,7 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / 'assets').mkdir(parents=True)
-    for f in ('style.css', 'site.js'):
+    for f in ('style.css', 'site.js', 'finder.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
     for f in ('favicon.svg', 'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):
         if (SRC / f).exists():
@@ -585,6 +733,9 @@ def main():
     tool_page()
     for b in GIFT_BUDGETS:
         gift_page(b)
+    finder_page()
+    kids_page()
+    diy_page()
     dice_page()
     scrap_page()
     legal_pages()

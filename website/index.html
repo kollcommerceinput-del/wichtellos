@@ -29,7 +29,7 @@
 <header class="top"><div class="bar">
   <a class="logo" href="/"><img src="/favicon.svg" alt="" width="26" height="26"><span>Wichtel<b>Los</b></span></a>
   <nav>
-    <a href="/wichtelgeschenke-unter-10-euro/">Geschenkideen</a>
+    <a href="/geschenkfinder/">Geschenkideen</a>
     <a href="/wichteln-wuerfeln-regeln/">Spiele</a>
   </nav>
 </div></header>
@@ -173,6 +173,7 @@
     <h2>Geschenkideen <span id="ideas-budget" class="opt"></span></h2>
     <div id="ideas" class="ideas"></div>
     <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
+    <a id="ideas-finder" class="more-link" href="/geschenkfinder/">🔍 Im Geschenkfinder nach Alter und Interessen filtern →</a>
     <p class="disclosure">* Werbelinks: Bei einem Kauf erhalten wir eine kleine Provision, für dich ändert sich am Preis nichts.</p>
 
     <div class="ad-slot">Anzeige (Platzhalter)</div>
@@ -196,7 +197,10 @@
 <footer>
   <div class="footer-links">
     <a href="/">Wichteln auslosen</a>
+    <a href="/geschenkfinder/">Geschenkfinder</a>
     <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a>
+    <a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a>
+    <a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/impressum/">Impressum</a>
@@ -457,6 +461,7 @@
     $('#ideas-budget').textContent = isNaN(num) ? '' : `bis ${num} €`;
     $('#ideas-more').href = `/wichtelgeschenke-unter-${tier.max}-euro/`;
     $('#ideas-more').textContent = `Mehr Geschenkideen unter ${tier.max} € →`;
+    $('#ideas-finder').href = `/geschenkfinder/?budget=${tier.max}`;
     const box = $('#ideas');
     box.innerHTML = '';
     tier.items.forEach((item) => {

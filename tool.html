@@ -110,6 +110,7 @@
     <h2>Geschenkideen <span id="ideas-budget" class="opt"></span></h2>
     <div id="ideas" class="ideas"></div>
     <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
+    <a id="ideas-finder" class="more-link" href="/geschenkfinder/">🔍 Im Geschenkfinder nach Alter und Interessen filtern →</a>
     <p class="disclosure">* Werbelinks: Bei einem Kauf erhalten wir eine kleine Provision, für dich ändert sich am Preis nichts.</p>
 
     <div class="ad-slot">Anzeige (Platzhalter)</div>
@@ -383,6 +384,7 @@
     $('#ideas-budget').textContent = isNaN(num) ? '' : `bis ${num} €`;
     $('#ideas-more').href = `/wichtelgeschenke-unter-${tier.max}-euro/`;
     $('#ideas-more').textContent = `Mehr Geschenkideen unter ${tier.max} € →`;
+    $('#ideas-finder').href = `/geschenkfinder/?budget=${tier.max}`;
     const box = $('#ideas');
     box.innerHTML = '';
     tier.items.forEach((item) => {
