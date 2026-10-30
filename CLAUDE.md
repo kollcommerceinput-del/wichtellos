@@ -56,8 +56,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] 3 neue Adressen bei Bing übermittelt (alle 11 drin); Sitemap in der Search Console neu gesendet (30.10.,
       zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
 - [ ] Google-Indexierung beantragen (11 URLs, Startseite zuerst) – am 30.10. sofort „Kontingent überschritten“ (Ursache unklar, vermutlich neue Property); morgen erneut versuchen
-- [ ] Awin-Publisher-Konto beantragt (30.10.2026, Segment Redaktioneller Content). Nach Freischaltung bewerben bei
-      Jochen Schweizer, mydays (Erlebnisgeschenke), Thalia, myToys – zugesagte Partner dann in passende Ideen einbauen
+- [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
+      Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
+      Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
 - [ ] Ko-fi-Konto (Toni, Firmen-PayPal): danach „Spendier dem Wichtel einen Kaffee“ im Fuß + auf der Seite des geheimen Links;
       später Premium-Druckvorlagen im Ko-fi-Shop (Einnahmen der UG, nicht „Spende“ nennen)
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
