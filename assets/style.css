@@ -44,7 +44,7 @@ article p, article li { font-size: 17px; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
 label { display: block; font-weight: 600; font-size: 14px; margin: 10px 0 0; }
 input, textarea, select {
-  width: 100%; margin-top: 4px; padding: 11px 12px; font: inherit; color: var(--text);
+  width: 100%; margin-top: 4px; padding: 11px 12px; font: inherit; font-size: 16px; color: var(--text);
   background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
 }
 input:focus, textarea:focus, select:focus { outline: 2px solid var(--gold); border-color: transparent; }
