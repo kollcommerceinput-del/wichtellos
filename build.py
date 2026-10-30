@@ -34,6 +34,7 @@ def head(title, desc, path, extra='', noindex=False):
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c62828">
+<meta name="msvalidate.01" content="17BAEEA0B1BBFF97909DD4B13DE0C9D7">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">{extra}'''
