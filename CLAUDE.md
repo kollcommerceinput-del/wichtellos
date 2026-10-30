@@ -13,6 +13,9 @@ Antworten auf Deutsch.
 - `assets/style.css`, `assets/site.js` – gemeinsames CSS; in `site.js` steht oben die Amazon-Partner-ID (`AMAZON_TAG`)
 - `gifts.py` – Daten für Geschenkfinder (104 Ideen mit Alter, Budget, Kategorie, bürotauglich) und Selbermach-Anleitungen
 - `assets/finder.js` – Filter des Geschenkfinders (`/geschenkfinder/`, Filter auch per Adresse `?fuer=&budget=&mag=&q=`)
+- `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
+- `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`
+- `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `render-images.js` – erzeugt `og-image.png` und `apple-touch-icon.png` aus `favicon.svg` und `wichtel.svg`
 - `website/` – **generiert**, nie von Hand bearbeiten. Nach jeder Änderung: `python3 build.py website`
 - `tests/` – Playwright-Tests (Server vorher starten: `cd website && python3 -m http.server 8766`)
@@ -46,10 +49,21 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Umzug auf GitHub Pages abgeschlossen: DNS, Let's-Encrypt-Zertifikat, Enforce HTTPS an; SFTP-Benutzer bei IONOS gelöscht (30.10.2026)
 - [x] Search Console + Bing eingerichtet, Sitemap bei beiden eingereicht (30.10.2026)
 - [x] Sitemap in der Search Console erfolgreich gelesen (8 Seiten, 30.10.2026); Bing: alle 8 URLs übermittelt
-- [ ] Google-Indexierung beantragen (8 URLs, Startseite zuerst) – am 30.10. sofort „Kontingent überschritten“ (Ursache unklar, vermutlich neue Property); morgen erneut versuchen
+- [ ] Sitemap in der Search Console neu senden (jetzt 11 Seiten) und die 3 neuen Adressen bei Bing übermitteln
+      (`/geschenkfinder/`, `/wichtelgeschenke-fuer-kinder/`, `/wichtelgeschenke-selber-machen/`)
+- [ ] Google-Indexierung beantragen (11 URLs, Startseite zuerst) – am 30.10. sofort „Kontingent überschritten“ (Ursache unklar, vermutlich neue Property); morgen erneut versuchen
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
+
+## Zusammenarbeit
+
+- Es arbeiten zwei Claude-Sitzungen am Repo: **PC** (Claude Code auf Tonis Rechner) und **Cloud** (claude.ai/code).
+- **Toni legt fest, wer welche Aufgabe macht.** Nie beide an derselben Aufgabe.
+- Vor jeder Arbeit `git pull`, danach kleine Commits und sofort `push`. Ein Push geht live – vorher testen.
+- Commit-Nachrichten beginnen mit **[PC]** oder **[Cloud]**.
+- Wird ein Push abgelehnt: `git pull --rebase`, nie `--force`.
+- Neue Dateien und Funktionen kurz bei „Aufbau“ eintragen. Die CLAUDE.md pflegt nur PC; die Cloud meldet Änderungen über Toni.
 
 ## Regeln
 
