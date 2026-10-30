@@ -22,16 +22,15 @@ die Zuteilung steckt codiert (nicht verschlüsselt) im Teil nach `#` und wird ni
 Entwurf und letzte Links liegen nur im localStorage. Diese Zusagen stehen so auch in Datenschutz und FAQ –
 wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und Einwilligungs-Banner anpassen.
 
-## Hosting und Deploy (IONOS)
+## Hosting und Deploy (GitHub Pages)
 
-- Domain `wichtellos.de` bei IONOS, Ziel: **eigener Ordner `/wichtellos`** im Webspace – nie der Shop-Ordner.
-- Upload: den **Inhalt** von `website/` in diesen Ordner per SFTP, Server `access-5018061993.webspace-host.com`,
-  eigener Benutzer `a2498152` (sieht nur `/wichtellos`, nicht den Shop; Passwort nicht hier ablegen).
-  Auch die versteckte Datei `.htaccess` mit hochladen.
-- `.htaccess` (aus `build.py`): eigene 404-Seite, www → ohne www. Umleitung http → https nur mit `FORCE_HTTPS = True`.
-- SSL: IONOS-Zertifikat (96 €/Jahr) am 30.10.2026 bestellt und gleich wieder gekündigt – Seite läuft vorerst nur
-  über http. Geplant: kostenloses HTTPS über GitHub Pages oder Cloudflare Pages, danach `FORCE_HTTPS = True`.
-- Nach dem Upload live prüfen: Startseite, Auslosung bis zum geheimen Link, alle Ratgeber-Seiten,
+- Repo ist **öffentlich** (nötig für kostenloses GitHub Pages) – also nie Zugangsdaten, Kundendaten o. Ä. committen.
+- Jeder Push auf `main` veröffentlicht `website/` automatisch (`.github/workflows/pages.yml`). Kein Upload mehr.
+- Domain `wichtellos.de` bleibt bei IONOS registriert; DNS zeigt auf GitHub Pages (A-Records 185.199.108–111.153,
+  `www` als CNAME auf `kollcommerceinput-del.github.io`). HTTPS macht GitHub kostenlos („Enforce HTTPS“).
+- `.htaccess` wird von GitHub Pages ignoriert; die 404-Seite (`404.html`) und www → ohne www übernimmt Pages selbst.
+- Bis 30.10.2026 lief die Seite im IONOS-Webspace (Ordner `/wichtellos`); das IONOS-SSL (96 €/Jahr) wurde gekündigt.
+- Nach dem Deploy live prüfen: Startseite, Auslosung bis zum geheimen Link, alle Ratgeber-Seiten,
   `/gibt-es-nicht/` muss die eigene 404-Seite zeigen, `/sitemap.xml`, `/robots.txt`, Vorschaubild beim Teilen in WhatsApp.
 - Danach Domain in der Google Search Console anmelden und `https://wichtellos.de/sitemap.xml` einreichen.
 
@@ -40,7 +39,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Amazon-PartnerNet-Konto angelegt, Partner-ID `wichtellos-21` in `assets/site.js` eingetragen (30.10.2026)
 - [ ] PartnerNet: Steuer-Interview (USA/Kanada) und Zahlungsempfänger (UG) vervollständigen – nötig vor der ersten Auszahlung
 - [x] Livegang und Live-Test (30.10.2026, alle Prüfungen oben grün, damals noch mit SSL)
-- [ ] Kostenloses HTTPS (GitHub Pages/Cloudflare Pages), dann `FORCE_HTTPS = True`, neu bauen
+- [ ] Umzug auf GitHub Pages abschließen (DNS, Enforce HTTPS), danach SFTP-Benutzer bei IONOS löschen
 - [ ] Google Search Console + Sitemap – erst nach dem HTTPS-Umzug
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
