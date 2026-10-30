@@ -44,7 +44,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Umzug auf GitHub Pages abgeschlossen: DNS, Let's-Encrypt-Zertifikat, Enforce HTTPS an; SFTP-Benutzer bei IONOS gelöscht (30.10.2026)
 - [x] Search Console + Bing eingerichtet, Sitemap bei beiden eingereicht (30.10.2026)
 - [x] Sitemap in der Search Console erfolgreich gelesen (8 Seiten, 30.10.2026); Bing: alle 8 URLs übermittelt
-- [ ] Google-Indexierung beantragen (8 URLs, Startseite zuerst) – Tageskontingent teilt sich das Google-Konto mit kollcommerce.de
+- [ ] Google-Indexierung beantragen (8 URLs, Startseite zuerst) – am 30.10. sofort „Kontingent überschritten“ (Ursache unklar, vermutlich neue Property); morgen erneut versuchen
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
