@@ -393,7 +393,7 @@ def finder_page():
 <p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 {CTA}
 </article>'''
-    page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter, Budget & Interessen',
+    page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter & Budget',
          'Wichtelgeschenke finden: nach Alter (Kind, Teenager, Erwachsene, Kollegen), Budget von 5 bis 30 Euro und Interessen filtern – mit über 100 Ideen.',
          body, extra='\n<script src="/assets/finder.js" defer></script>', crumb='Geschenkfinder')
 
@@ -427,7 +427,7 @@ def kids_page():
 </ul>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 </article>'''
-    page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 Jahren und für Teenager',
+    page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 & für Teens',
          'Wichtelgeschenke für Kinder und Teenager: passende Ideen für Kindergarten, Schule und Verein – sortiert nach Alter, mit Tipps zu Budget und Sicherheit.',
          body, crumb='Wichtelgeschenke für Kinder')
 
