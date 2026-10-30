@@ -1,13 +1,8 @@
 :root {
+  color-scheme: light; /* bewusst immer hell, kein Dunkelmodus */
   --bg: #fff8f0; --card: #ffffff; --text: #2b1b17; --muted: #6d5d57;
   --primary: #c62828; --primary-dark: #9f1f1f; --gold: #f2b705; --green: #1f6f4a;
   --border: #ecdcd0; --soft: #fdeee4; --radius: 14px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1b1412; --card: #261c19; --text: #f6ece6; --muted: #c3b1a9;
-    --primary: #e53935; --primary-dark: #c62828; --border: #3a2b26; --soft: #33241f;
-  }
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -112,14 +107,16 @@ dl.info dd { margin: 0; font-weight: 600; }
 
 /* Wichtel-Figur */
 .hero { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.hero .mascot { flex: none; width: 96px; height: auto; }
+.hero .mascot { flex: none; width: 96px; height: auto; transform-origin: 50% 100%; animation: wave 7s ease-in-out 1.5s infinite; }
+/* alle 7 s einmal kurz hin und her schaukeln, sonst Ruhe */
+@keyframes wave { 0%, 12%, 100% { transform: rotate(0); } 3% { transform: rotate(-7deg); } 6% { transform: rotate(6deg); } 9% { transform: rotate(-3deg); } }
 @media (max-width: 420px) { .hero .mascot { width: 68px; } }
 .mascot-reveal { display: block; width: 90px; height: auto; margin: 0 auto 4px; }
 .cta-box .mascot-small { flex: none; width: 44px; height: auto; }
 .cta-box .cta-text { display: flex; align-items: center; gap: 12px; flex: 1 1 260px; }
 .hop { animation: hop .45s ease-in-out 3; }
 @keyframes hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
-@media (prefers-reduced-motion: reduce) { .hop { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .hop, .hero .mascot { animation: none; } }
 
 /* Ratgeber-Seiten */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
