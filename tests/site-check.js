@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 const OUT = process.argv[2];
-const BASE = 'http://localhost:8766';
+const BASE = process.env.BASE || 'http://localhost:8766';
 (async () => {
   const b = await chromium.launch();
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, locale: 'de-DE' });

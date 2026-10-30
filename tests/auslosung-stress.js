@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch();
   const p = await (await b.newContext()).newPage();
-  await p.goto('http://localhost:8766/');
+  await p.goto((process.env.BASE || 'http://localhost:8766') + '/');
   const names = ['Anna', 'Ben', 'Clara', 'David', 'Emil', 'Frida', 'Gus'];
   for (let i = 3; i < names.length; i++) await p.click('#add-person');
   const inputs = await p.$$('#people input');
