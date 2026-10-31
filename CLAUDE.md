@@ -18,6 +18,8 @@ Antworten auf Deutsch.
 - `build.py`: `school_page()` – `/wichteln-schule-kita/` (Ablauf Klasse/Kita, Budget, Elternbrief, Lose ohne Handy; 01.11.)
 - `build.py`: `party_page()` `/weihnachtsfeier-ideen/`, `poems_page()` `/wichtelgedichte/` (eigene Reime in `POEMS` + Reim-Generator
   im Browser, nichts gespeichert), `history_page()` `/woher-kommt-wichteln/` (01.11.); Sitemap jetzt 17 URLs
+- `build.py`: `door_page()` `/wichteltuer/` (24-Tage-Streichplan `DOOR_PLAN`, Begrüßungsbrief, Zubehör `DOOR_SHOP` als Amazon-Suchen);
+  `supplies_block()` „Das brauchst du noch für die Bescherung“ (Anhänger, Würfel, Mützen, Tüten) auf Würfeln/Büro/Weihnachtsfeier (01.11.)
 - `build.py`: `invite_page()` – `/wichteln-einladung-vorlage/`: Aushang „Wir wichteln!“ mit Teilnehmerliste (20 Zeilen) + QR zu
   wichtellos.de (`grafik/qr-wichtellos.svg`), druckt auf 1 Seite A4 (Body-Klasse `poster-page`). Teilen-Knöpfe „Kennst du noch eine
   Gruppe?“ in Ergebnis- und Aufdeck-Ansicht (`.share-wa`, Text ohne Namen/Links)
@@ -95,6 +97,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - Pinterest Trends DE (31.10.): „wichteln“ steigt ab Oktober, Höhepunkt Mitte–Ende November, ab Anfang Dezember fast weg →
   Pins bis spätestens Mitte November live; früh anziehend: „wichtelgeschenke selbstgemacht“, „kleine geschenke basteln weihnachten“.
   Achtung: „Wichtel streiche“/„Wichtelhaus“ = Wichteltür-Brauch (Kinder), anderes Thema
+- Pinterest Trends DE „wichteltür“: Höhepunkt Woche bis 3.12.2025, danach steil runter → Seite/Pins bis Mitte November live
 - [x] 31.10.: LinkedIn-Profil Antonio Koll (neu, 0 Kontakte) – Beitrag „Wichteln im Büro“ (Text 4 aus `marketing/teilen-texte.md`,
       Link-Vorschau mit og-Bild) gepostet. Reel `marketing/reel/reel-lose.mp4` (ohne Ton) gerendert – Hochladen + Musik durch Toni
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen

@@ -99,6 +99,7 @@ FOOTER = '''<footer>
     <a href="/wichteln-im-buero/">Wichteln im Büro</a>
     <a href="/wichteln-schule-kita/">Schule &amp; Kita</a>
     <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a>
+    <a href="/wichteltuer/">Wichteltür</a>
     <a href="/wichtelgedichte/">Wichtelgedichte</a>
     <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
@@ -461,6 +462,7 @@ def kids_page():
 <ul>
   <li>Auf die Altersangabe auf der Verpackung achten – Spielzeug mit Kleinteilen ist nichts für die Kleinsten.</li>
   <li>In Schule und Kindergarten sind 3 bis 5 Euro üblich. Am besten legt die Gruppe das Budget vorher gemeinsam fest. Ablauf, Elternbrief und Lose ohne Handy: <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a>.</li>
+  <li>Zu Hause im Advent: Ideen und 24 Streiche für die <a href="/wichteltuer/">Wichteltür</a>.</li>
   <li>Bei Süßigkeiten an Allergien und Unverträglichkeiten denken.</li>
   <li>Kinder freuen sich oft mehr über etwas zum Spielen oder Basteln als über reine Deko.</li>
 </ul>
@@ -561,6 +563,7 @@ def dice_page():
   <li>Die Regeln vorher einmal laut vorlesen oder ausgedruckt auf den Tisch legen.</li>
   <li>Bei Kindern den Timer kürzer stellen, etwa auf 5 Minuten.</li>
 </ul>
+{supplies_block()}
 <div class="ad-slot">Anzeige (Platzhalter)</div>
 <div class="cta-box">
   <p>Lieber klassisch wichteln, ohne Würfel? Die Namen lassen sich online in einer Minute auslosen.</p>
@@ -662,6 +665,8 @@ def office_page():
   <li><b>Klassisch:</b> Jeder zieht per Los genau eine Person und besorgt ein Geschenk im vereinbarten Budget.</li>
 </ul>
 
+{supplies_block()}
+
 <h2>Ideen für die Weihnachtsfeier</h2>
 <p>Vom Weihnachtsmarkt mit Wichtel-Twist bis zur Online-Feier: <a href="/weihnachtsfeier-ideen/">10 Weihnachtsfeier-Ideen fürs Team</a>. Für die Karte zum Geschenk gibt es <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</p>
 
@@ -724,6 +729,118 @@ def school_page():
          crumb='Wichteln in Schule und Kita', mascot='geschenk', playful=True)
 
 
+SUPPLIES = [
+    ('„Von deinem Wichtel“-Anhänger', 'Damit das Geschenk anonym bleibt.', 'Geschenkanhänger Wichtel Weihnachten'),
+    ('Großer Schaumstoff-Würfel', 'Für Würfelwichteln – gut sichtbar für alle.', 'Schaumstoffwürfel groß'),
+    ('Wichtelmützen', 'Zipfelmützen für die Bescherung, gibt es im Set.', 'Wichtelmütze Set Erwachsene'),
+    ('Geschenktüten aus Kraftpapier', 'Schnell verpackt, alle Päckchen sehen gleich aus.', 'Geschenktüten Kraftpapier Weihnachten'),
+]
+
+
+def supplies_block():
+    cards = '\n'.join(f'''<div class="idea">
+  <h3>{esc(t)}</h3>
+  <p>{esc(x)}</p>
+  {amazon_link(q, 'Bei Amazon ansehen*')}
+</div>''' for t, x, q in SUPPLIES)
+    return f'''<h2>Das brauchst du noch für die Bescherung</h2>
+<div class="idea-grid">
+{cards}
+</div>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>'''
+
+
+DOOR_PLAN = [
+    ('Einzug', 'Die Tür steht plötzlich an der Fußleiste. Davor: ein Begrüßungsbrief und winzige Fußspuren aus Puderzucker.'),
+    ('Frühstücksgruß', 'Auf jedem Teller liegt ein Gummibärchen – in Reih und Glied.'),
+    ('Sockengirlande', 'Der Wichtel hat Socken quer durchs Wohnzimmer aufgehängt.'),
+    ('Kuscheltier-Picknick', 'Alle Kuscheltiere sitzen im Kreis und teilen sich Kekskrümel.'),
+    ('Schneemann-Rolle', 'Eine Klopapierrolle ist über Nacht zum Schneemann geworden.'),
+    ('Nikolaus', 'Die Stiefel sind geputzt – und daneben liegt ein Mini-Brief vom Wichtel.'),
+    ('Stau im Flur', 'Alle Spielzeugautos stehen hintereinander im Stau, mit Wichtel als Verkehrspolizist.'),
+    ('Schnee-Engel', 'Auf einem Teller mit Mehl ist ein winziger Schnee-Engel zu sehen.'),
+    ('Mützen-Tag', 'Alle Zahnbürsten tragen Mini-Mützen aus Bastelfilz.'),
+    ('Ups!', 'Bilder hängen schief, daneben ein Zettel: „Ups! War keine Absicht.“'),
+    ('Rätselpost', 'Der Wichtel schickt ein kleines Rätsel, das zu einer Süßigkeit führt.'),
+    ('Werkstatt', 'Bausteine sind zu einer Mini-Werkstatt vor der Tür geworden.'),
+    ('Bunte Milch', 'Die Milch ist plötzlich grün – ein Tropfen Lebensmittelfarbe reicht.'),
+    ('Mini-Tannenbaum', 'Vor der Wichteltür steht ein geschmückter Mini-Baum.'),
+    ('Schuh-Chaos', 'Alle Schuhe stehen paarweise vertauscht.'),
+    ('Waschtag', 'Eine Mini-Wäscheleine mit winzigen Kleidern hängt vor der Tür.'),
+    ('Bastelwunsch', 'Der Wichtel bittet um einen gemalten Stern für sein Zimmer.'),
+    ('Schaumbad', 'Der Wichtel badet im Spülbecken – in Mini-Marshmallows.'),
+    ('Lesestunde', 'Bücher sind zum Turm gestapelt, oben sitzt der Wichtel und liest.'),
+    ('Backstube', 'Vor der Tür liegen Mini-Plätzchen, überall sind Krümel.'),
+    ('Laser-Labyrinth', 'Wollfäden sind kreuz und quer im Türrahmen gespannt – wer kommt durch?'),
+    ('Wunschzettel', 'Der Wichtel hat einen Wunschzettel für sich selbst geschrieben.'),
+    ('Koffer packen', 'Ein Mini-Koffer steht vor der Tür – der Abschied naht.'),
+    ('Abschied', 'Die Tür ist verschlossen. Zurück bleiben ein Abschiedsbrief und eine kleine Überraschung.'),
+]
+
+DOOR_SHOP = [
+    ('Wichteltür-Set', 'Tür mit Zubehör wie Leiter, Briefkasten und Fußmatte.', 'Wichteltür Set'),
+    ('Wichtel-Figur', 'Der Bewohner selbst – meist mit Zipfelmütze und Bart.', 'Wichtel Figur Wichteltür'),
+    ('Mini-Zubehör', 'Möbel, Werkzeug und Lebensmittel im Puppenhaus-Format.', 'Wichtel Zubehör Miniatur'),
+    ('Wichtel-Briefpapier', 'Winzige Briefe und Umschläge für die Wichtel-Post.', 'Wichtel Briefpapier Mini'),
+    ('Mini-Lichterkette', 'Batteriebetrieben, für die Wichteltür bei Nacht.', 'Mini Lichterkette Batterie warmweiß'),
+    ('Buch mit Wichtel-Streichen', 'Noch mehr Ideen für die 24 Tage.', 'Wichtel Streiche Buch'),
+]
+
+
+def door_page():
+    plan = '\n'.join(f'<li><b>{i}. Dezember – {esc(t)}:</b> {esc(x)}</li>' for i, (t, x) in enumerate(DOOR_PLAN, 1))
+    shop = '\n'.join(f'''<div class="idea">
+  <h3>{esc(t)}</h3>
+  <p>{esc(x)}</p>
+  {amazon_link(q, 'Bei Amazon ansehen*')}
+</div>''' for t, x, q in DOOR_SHOP)
+    body = f'''<article>
+<h1>Wichteltür: Ideen, 24 Streiche und Zubehör</h1>
+<p class="lead">Ab dem 1. Dezember zieht ein Wichtel ein: Eine kleine Tür an der Fußleiste, jede Nacht ein neuer Streich – und am Morgen große Augen. Hier findest du, wie du die Wichteltür startest, einen fertigen Plan für alle 24 Tage, einen Begrüßungsbrief und das passende Zubehör.</p>
+
+<h2>Was ist eine Wichteltür?</h2>
+<p>Die Wichteltür ist ein Adventsbrauch aus Skandinavien, der bei uns seit einigen Jahren immer beliebter wird. Eine Miniatur-Tür wird an die Wand oder Fußleiste gestellt – dahinter wohnt im Advent ein Wichtel. Er bleibt unsichtbar, schreibt Briefe, stellt nachts kleinen Unfug an und verabschiedet sich an Heiligabend wieder. Mit dem <a href="/">Wichteln unter Erwachsenen</a> hat das wenig zu tun, aber beides lebt vom selben Zauber: Jemand tut heimlich etwas Schönes.</p>
+
+<h2>So startest du</h2>
+<ol>
+  <li><b>Platz wählen:</b> Eine ruhige Ecke an der Fußleiste, gut sichtbar für die Kinder, aber nicht im Weg.</li>
+  <li><b>Einzug vorbereiten:</b> Am Abend des 30. November die Tür aufstellen, Fußspuren aus Puderzucker streuen und den Begrüßungsbrief davorlegen.</li>
+  <li><b>Regeln erzählen:</b> Viele Familien erzählen, dass der Wichtel nur nachts aktiv ist und seine Tür nicht geöffnet werden darf – so bleibt das Geheimnis gewahrt.</li>
+  <li><b>Jeden Abend 5 Minuten:</b> Mit dem Plan unten musst du nicht täglich neu überlegen.</li>
+</ol>
+
+<h2>Der Begrüßungsbrief</h2>
+<blockquote class="letter">
+<p>Hallo, ihr Lieben!</p>
+<p>Ich bin [Name], euer Wichtel. Ich bin heute Nacht bei euch eingezogen, weil es hier so gemütlich ist. Bis Weihnachten wohne ich hinter meiner kleinen Tür. Ihr werdet mich nie sehen, aber ihr werdet merken, dass ich da bin – ich habe nämlich viel Quatsch im Kopf!</p>
+<p>Wenn ihr mir schreiben wollt, legt einen Brief vor meine Tür. Ich antworte, so oft ich kann.</p>
+<p>Euer Wichtel 🧡</p>
+</blockquote>
+<p class="hint">Tipp: Mit winziger Schrift oder am Computer in kleiner Schrift schreiben, auf ein kleines Stück Papier – das wirkt echt. Weitere Reime findest du bei den <a href="/wichtelgedichte/">Wichtelgedichten</a>.</p>
+
+<h2>24 Wichtel-Streiche: der Plan für den Advent</h2>
+<p><button type="button" class="btn-secondary" data-print>🖨️ Plan drucken</button></p>
+<ol class="door-plan">
+{plan}
+</ol>
+<p class="hint">Sicherheit geht vor: Bei kleinen Kindern keine verschluckbaren Kleinteile verwenden, Fäden nicht in Stolperhöhe spannen und Lebensmittelfarbe nur tropfenweise nehmen.</p>
+
+<h2>Zubehör für die Wichteltür</h2>
+<div class="idea-grid">
+{shop}
+</div>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+
+<h2>Und für die Großen: Wichteln in der Familie</h2>
+<p>Während der Wichtel bei den Kindern Quatsch macht, können die Erwachsenen selbst wichteln: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
+{CTA}
+<p>Passende Geschenke für Kinder: <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a> · In Kita und Schule: <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a></p>
+</article>'''
+    page('/wichteltuer/', 'Wichteltür: Ideen, 24 Streiche & Zubehör für den Advent',
+         'Wichteltür für Kinder: So startest du, Begrüßungsbrief zum Abschreiben, ein fertiger Plan mit 24 Wichtel-Streichen für den Advent und das passende Zubehör.', body,
+         crumb='Wichteltür', mascot='geschenk', playful=True)
+
+
 def party_page():
     body = f'''<article>
 <h1>Weihnachtsfeier-Ideen fürs Team: 10 Ideen, die gut ankommen</h1>
@@ -751,6 +868,7 @@ def party_page():
   <li><b>Online-Feier fürs Homeoffice:</b> Wichtelgeschenke per Post verschicken und gemeinsam im Videocall auspacken, dazu ein Weihnachts-Quiz. Mehr dazu unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
 </ol>
 {CTA}
+{supplies_block()}
 
 <h2>Tipps für die Planung</h2>
 <ul>
@@ -849,7 +967,7 @@ def history_page():
 <p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
-<p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört.</p>
+<p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>
 
 <h2>Der Vorläufer: Julklapp</h2>
 <p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen.</p>
@@ -1050,7 +1168,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteln-einladung-vorlage/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1100,6 +1218,7 @@ def main():
     party_page()
     poems_page()
     history_page()
+    door_page()
     invite_page()
     legal_pages()
     extras()

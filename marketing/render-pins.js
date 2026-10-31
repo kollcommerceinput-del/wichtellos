@@ -22,6 +22,10 @@ const PINS = [
   ['tipp', 'wichtel-lupe.svg', 'Verrate deinem Wichtel heimlich, was du magst', 'Tipp pro Person – nur der Wichtel sieht ihn, mit passenden Ideen', '', 'Kostenlos auslosen →'],
   ['buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf – auch fürs Homeoffice', '/wichteln-im-buero', 'Tipps fürs Team ansehen →'],
   ['auslosen', 'wichtel-winkt.svg', 'Wichteln online auslosen', 'In 1 Minute – kostenlos, ohne Anmeldung, geheime Links per WhatsApp', '', 'Jetzt Gruppe erstellen →'],
+  ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür: 24 Streiche für den Advent', 'Fertiger Plan, Begrüßungsbrief & Zubehör', '/wichteltuer', 'Plan & Ideen ansehen →'],
+  ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtel&shy;gedichte', 'Kurze Reime für die Geschenk-Karte – plus Reim-Generator', '/wichtelgedichte', 'Reime ansehen →'],
+  ['weihnachtsfeier', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen fürs Team', '10 Ideen – vom Weihnachtsmarkt bis zur Online-Feier', '/weihnachtsfeier-ideen', '10 Ideen ansehen →'],
+  ['schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Lose ohne Handy, Elternbrief & faires Budget', '/wichteln-schule-kita', 'Ablauf ansehen →'],
 ];
 
 const html = ([, pose, title, sub, url, cta = 'Alle Ideen mit Links ansehen →']) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

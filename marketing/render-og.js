@@ -25,6 +25,7 @@ const PAGES = [
   ['weihnachtsfeier-ideen', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen', '10 Ideen fürs Team – vom Markt bis online'],
   ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtelgedichte', 'Kurze Reime für die Geschenk-Karte'],
   ['woher-kommt-wichteln', 'wichtel-lupe.svg', 'Woher kommt Wichteln?', 'Wichtel, Julklapp & Secret Santa'],
+  ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür', 'Ideen, 24 Streiche & Zubehör für den Advent'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
