@@ -49,6 +49,8 @@ def article_ld(path, title, desc):
 
 def head(title, desc, path, extra='', noindex=False):
     url = DOMAIN + path
+    slug = path.strip('/')
+    og = f'/og/{slug}.png' if slug and (SRC / 'og' / f'{slug}.png').exists() else '/og-image.png'
     robots = '<meta name="robots" content="noindex">\n' if noindex else ''
     return f'''<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,14 +63,17 @@ def head(title, desc, path, extra='', noindex=False):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{DOMAIN}/og-image.png">
+<meta property="og:image" content="{DOMAIN}{og}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c62828">
 <meta name="msvalidate.01" content="17BAEEA0B1BBFF97909DD4B13DE0C9D7">
 <meta name="p:domain_verify" content="1d84f7ff53bf1ac6ce44bb91577542e9"/>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/fredoka-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">{extra}'''
@@ -807,6 +812,11 @@ def extras():
              f'RewriteRule ^ http://{host}%{{REQUEST_URI}} [R=301,L]\n')
     (OUT / '.htaccess').write_text('ErrorDocument 404 /404.html\n\nRewriteEngine On\n' + rules, encoding='utf-8')
     (OUT / f'{INDEXNOW_KEY}.txt').write_text(INDEXNOW_KEY, encoding='utf-8')
+    manifest = {'name': 'WichtelLos – Wichteln online auslosen', 'short_name': 'WichtelLos', 'lang': 'de',
+                'start_url': '/', 'display': 'standalone', 'background_color': '#fff8f0', 'theme_color': '#c62828',
+                'icons': [{'src': '/icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
+                          {'src': '/icon-512.png', 'sizes': '512x512', 'type': 'image/png'}]}
+    (OUT / 'site.webmanifest').write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
@@ -820,8 +830,10 @@ def main():
     site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
     (OUT / 'assets' / 'site.js').write_text(site_js, encoding='utf-8')
     shutil.copytree(SRC / 'grafik', OUT / 'grafik')
+    shutil.copytree(SRC / 'og', OUT / 'og')
     shutil.copytree(SRC / 'assets' / 'fonts', OUT / 'assets' / 'fonts')
-    for f in ('favicon.svg', 'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):
+    for f in ('favicon.svg', 'favicon.ico', 'favicon-48.png', 'favicon-96.png', 'icon-192.png', 'icon-512.png',
+              'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):
         if (SRC / f).exists():
             shutil.copy(SRC / f, OUT / f)
     tool_page()
