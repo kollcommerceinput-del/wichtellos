@@ -29,3 +29,27 @@ jobs:
           path: website
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Meldet geänderte Seiten per IndexNow an Bing, Yandex & Co. (Schlüssel: INDEXNOW_KEY in build.py)
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Geänderte Seiten an IndexNow melden
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          KEY=$(grep -oP "^INDEXNOW_KEY = '\K[0-9a-f]+" build.py)
+          if git cat-file -e "$BEFORE" 2>/dev/null; then RANGE="$BEFORE HEAD"; else RANGE="HEAD~1 HEAD"; fi
+          URLS=$(git diff --name-only $RANGE -- 'website/*index.html' \
+            | sed -E 's#^website/##; s#index\.html$##; s#^#https://wichtellos.de/#' \
+            | while read u; do grep -q "<loc>$u</loc>" website/sitemap.xml && echo "$u"; done | sort -u)
+          if [ -z "$URLS" ]; then echo "Keine geänderten Seiten"; exit 0; fi
+          echo "$URLS"
+          sleep 30
+          JSON=$(printf '%s\n' "$URLS" | python3 -c "import sys,json;print(json.dumps({'host':'wichtellos.de','key':sys.argv[1],'keyLocation':'https://wichtellos.de/'+sys.argv[1]+'.txt','urlList':[l.strip() for l in sys.stdin if l.strip()]}))" "$KEY")
+          curl -sS -o /dev/null -w "IndexNow-Antwort: %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' -d "$JSON"

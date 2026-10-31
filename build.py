@@ -19,6 +19,7 @@ TODAY = '2026-10-31'
 GIFT_BUDGETS = [5, 10, 15, 20, 30]
 # Amazon-Partner-ID – nur hier ändern; landet beim Bauen in allen Links und in site.js
 AMAZON_TAG = 'wichtellos-21'
+INDEXNOW_KEY = '1ad0ea986d461d98be992b90c6be2615'  # öffentlich (liegt als /<key>.txt auf der Seite), kein Geheimnis
 PUBLISHED = '2026-10-30'
 
 ORG = {'@type': 'Organization', 'name': 'KOLL Commerce UG (haftungsbeschränkt)', 'url': DOMAIN + '/',
@@ -157,7 +158,7 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*'):
 
 GIFTS = {
     5: dict(
-        title='Wichtelgeschenke unter 5 Euro: 12 kleine Ideen mit großer Wirkung',
+        title='Wichtelgeschenke unter 5 Euro: 12 kleine Ideen mit Wirkung',
         desc='Wichtelgeschenke unter 5 Euro: 12 Ideen zum Naschen, Wohlfühlen und für den Schreibtisch – perfekt für Büro, Schule und kleine Budgets.',
         intro='5 Euro sind knapp – aber gerade dann zählt die Idee mehr als der Preis. Diese Kleinigkeiten passen ins Budget und sorgen trotzdem für ein Lächeln, ob im Büro, in der Schulklasse oder im Verein.',
         groups=[
@@ -217,7 +218,7 @@ GIFTS = {
         ],
     ),
     15: dict(
-        title='Wichtelgeschenke unter 15 Euro: 12 Ideen mit etwas mehr Spielraum',
+        title='Wichtelgeschenke unter 15 Euro: 12 Ideen mit Spielraum',
         desc='Wichtelgeschenke unter 15 Euro: 12 Ideen für gemütliche Abende, Knobelfans und Genießer – Geschenke, die länger Freude machen.',
         intro='Mit 15 Euro hast du schon etwas mehr Spielraum – genug für ein Geschenk, das nicht nur kurz Freude macht, sondern auch nach Weihnachten noch benutzt wird.',
         groups=[
@@ -249,7 +250,7 @@ GIFTS = {
         ],
     ),
     20: dict(
-        title='Wichtelgeschenke unter 20 Euro: 12 Ideen für Familie und Freunde',
+        title='Wichtelgeschenke unter 20 Euro: 12 Ideen für Familie',
         desc='Wichtelgeschenke unter 20 Euro: 12 Ideen von Kuscheldecke bis Escape-Spiel – für Familie, Freunde und alle, die etwas Besonderes suchen.',
         intro='20 Euro sind ein beliebtes Budget im Freundeskreis und in der Familie. Damit findest du schon ein richtig schönes Geschenk – ob gemütlich, zum Spielen oder zum Genießen.',
         groups=[
@@ -281,7 +282,7 @@ GIFTS = {
         ],
     ),
     30: dict(
-        title='Wichtelgeschenke unter 30 Euro: 12 Ideen, die richtig Eindruck machen',
+        title='Wichtelgeschenke unter 30 Euro: 12 Ideen mit Wow-Effekt',
         desc='Wichtelgeschenke unter 30 Euro: 12 Ideen vom Krimidinner über Bluetooth-Lautsprecher bis Pizzastein – für Familie und gute Freunde.',
         intro='Mit 30 Euro wird aus dem Wichtelgeschenk ein richtiges Geschenk. Ideal für die Familie und gute Freunde, bei denen du weißt, was ihnen gefällt.',
         groups=[
@@ -344,6 +345,7 @@ def gift_page(budget):
 <ul>
 {tips}
 </ul>
+{'<p>Wichtelt ihr im Team? Budget, Regeln und Ablauf findest du unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</p>' if budget <= 15 else ''}
 <p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 {CTA}
 </article>'''
@@ -495,7 +497,7 @@ def diy_page():
 <p><a class="more-link" href="/geschenkfinder/?mag=kreativ">Alle Bastel- und Kreativ-Ideen im Geschenkfinder →</a></p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 </article>'''
-    page('/wichtelgeschenke-selber-machen/', f'Wichtelgeschenke selber machen: {len(DIY)} einfache Ideen mit Anleitung',
+    page('/wichtelgeschenke-selber-machen/', f'Wichtelgeschenke selber machen: {len(DIY)} Ideen mit Anleitung',
          'Wichtelgeschenke selber machen: Backmischung im Glas, Badesalz, gebrannte Mandeln und mehr – einfache Anleitungen plus Bastelsets für gemütliche Abende.',
          body, crumb='Wichtelgeschenke selber machen')
 
@@ -540,6 +542,7 @@ def dice_page():
   <li><b>Mit Auspacken:</b> Wer in Runde 1 ein Geschenk bekommt, packt es sofort aus. In Runde 2 wird dann gezielt um die beliebtesten Geschenke gewürfelt.</li>
   <li><b>Große Gruppen:</b> Mit zwei Würfeln gleichzeitig spielen, die auf gegenüberliegenden Seiten starten.</li>
   <li><b>Schrottwichteln:</b> Statt gekaufter Geschenke bringt jeder etwas Kurioses von zu Hause mit. Mehr dazu unter <a href="/schrottwichteln/">Schrottwichteln</a>.</li>
+  <li><b>Im Büro:</b> Wie ihr das Wichteln im Team organisiert – Budget, Regeln, Homeoffice –, steht unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
 </ul>
 
 <h2>Tipps für eine gelungene Runde</h2>
@@ -554,7 +557,7 @@ def dice_page():
   <a class="btn-primary" href="/">Wichteln auslosen</a>
 </div>
 </article>'''
-    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln, Ablauf & Varianten zum Ausdrucken',
+    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln, Ablauf & Varianten',
          'Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.', body,
          crumb='Wichteln mit Würfeln', mascot='wuerfel')
 
@@ -595,7 +598,7 @@ def scrap_page():
 </ul>
 
 <h2>So läuft es ab</h2>
-<p>Am beliebtesten ist Schrottwichteln mit Würfeln: Erst werden die Päckchen verteilt, dann mit Timer getauscht. Die genauen Regeln findest du unter <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>. Alternativ lost ihr einfach aus, wer wem ein Päckchen schenkt.</p>
+<p>Am beliebtesten ist Schrottwichteln mit Würfeln: Erst werden die Päckchen verteilt, dann mit Timer getauscht. Die genauen Regeln findest du unter <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>. Alternativ lost ihr einfach aus, wer wem ein Päckchen schenkt. Mehr Tipps fürs Team: <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</p>
 {CTA}
 
 <h2>24 Ideen fürs Schrottwichteln</h2>
@@ -610,7 +613,7 @@ def scrap_page():
 </div>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 </article>'''
-    page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen für Büro und Familie',
+    page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen fürs Büro',
          'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body,
          crumb='Schrottwichteln', mascot='wuerfel')
 
@@ -803,6 +806,7 @@ def extras():
              'RewriteCond %{HTTP_HOST} ^www\\. [NC]\n'
              f'RewriteRule ^ http://{host}%{{REQUEST_URI}} [R=301,L]\n')
     (OUT / '.htaccess').write_text('ErrorDocument 404 /404.html\n\nRewriteEngine On\n' + rules, encoding='utf-8')
+    (OUT / f'{INDEXNOW_KEY}.txt').write_text(INDEXNOW_KEY, encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 

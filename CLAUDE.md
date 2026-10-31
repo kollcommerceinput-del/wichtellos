@@ -16,7 +16,9 @@ Antworten auf Deutsch.
 - `build.py`: `office_page()` – `/wichteln-im-buero/` (Büro-Wichteln, verlinkt Geschenkfinder `?fuer=office`); Suchbegriffe
   Wichtelgenerator/Julklapp/Secret Santa stehen in Startseiten-Titel, Lead und FAQ (31.10.)
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
-- `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`
+- `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
+  Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
+  Schlüssel `INDEXNOW_KEY` in `build.py`, liegt öffentlich als `/<key>.txt` – nicht ändern
 - `grafik/` – eigene SVGs: Wichtel-Posen (`wichtel-winkt/-geschenk/-lupe/-wuerfel/-schlaeft.svg`), Winterlandschaft, Lichterkette;
   in `build.py` über `pose_img()` / `page(..., mascot=..., playful=True)`. Die Geschenk-Pose wird auf der Startseite inline eingesetzt
   (Animation „Schleife geht auf“, Gruppe `class="lid"` nicht umbenennen).
