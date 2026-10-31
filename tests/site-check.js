@@ -45,8 +45,8 @@ const BASE = process.env.BASE || 'http://localhost:8766';
   // 3) Tool: auslosen -> geheimer Link -> Geschenkideen
   await p.goto(BASE + '/');
   await p.evaluate(() => localStorage.clear()); await p.reload();
-  await p.fill('#budget', '15 €');
-  const inputs = await p.$$('#people input');
+  await p.fill('#budget', '15 â‚¬');
+  const inputs = await p.$$('#people .person input');
   for (const [i, nme] of ['Anna', 'Ben', 'Clara'].entries()) await inputs[i].fill(nme);
   await p.click('button[type=submit]');
   const url = await p.evaluate(() => JSON.parse(localStorage.getItem('wichtellos-result')).links[0].url);
@@ -54,7 +54,7 @@ const BASE = process.env.BASE || 'http://localhost:8766';
   await p.click('#reveal-btn');
   const more = await p.getAttribute('#ideas-more', 'href');
   const ideaHref = await p.getAttribute('#ideas a', 'href');
-  console.log('Geheimer Link: Mehr-Link ->', more, '| erste Idee ->', ideaHref.slice(0, 60) + '…');
+  console.log('Geheimer Link: Mehr-Link ->', more, '| erste Idee ->', ideaHref.slice(0, 60) + 'â€¦');
   const moreRes = await p.goto(BASE + more);
   console.log('Mehr-Link erreichbar:', moreRes.status());
 

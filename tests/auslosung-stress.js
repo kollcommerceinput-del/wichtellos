@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
   await p.goto((process.env.BASE || 'http://localhost:8766') + '/');
   const names = ['Anna', 'Ben', 'Clara', 'David', 'Emil', 'Frida', 'Gus'];
   for (let i = 3; i < names.length; i++) await p.click('#add-person');
-  const inputs = await p.$$('#people input');
+  const inputs = await p.$$('#people .person input');
   for (let i = 0; i < names.length; i++) await inputs[i].fill(names[i]);
   for (const [a, c] of [['Anna', 'Ben'], ['Clara', 'David'], ['Emil', 'Frida']]) {
     await p.selectOption('#ex-a', { label: a }); await p.selectOption('#ex-b', { label: c }); await p.click('#add-excl');
@@ -34,9 +34,9 @@ const { chromium } = require('playwright');
     if (!ok) { bad++; console.log('FEHLER', JSON.stringify(map)); }
     for (const x of g) pairCount[`${x}>${map[x]}`] = (pairCount[`${x}>${map[x]}`] || 0) + 1;
   }
-  console.log(`${RUNS} Auslosungen mit 7 Personen und 3 Ausschlüssen, Fehler: ${bad}`);
+  console.log(`${RUNS} Auslosungen mit 7 Personen und 3 AusschlÃ¼ssen, Fehler: ${bad}`);
   console.log('Wen zieht Anna (Verteilung):', Object.entries(pairCount).filter(([k]) => k.startsWith('Anna>')).map(([k, v]) => `${k.split('>')[1]}=${v}`).join(' '));
   const url = await p.evaluate(() => JSON.parse(localStorage.getItem('wichtellos-result')).links[0].url);
-  console.log('Beispiel-Linklänge:', url.length, 'Zeichen');
+  console.log('Beispiel-LinklÃ¤nge:', url.length, 'Zeichen');
   await b.close();
 })();
