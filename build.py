@@ -14,7 +14,7 @@ OUT = Path(sys.argv[1])
 DOMAIN = 'https://wichtellos.de'  # bei anderer Domain hier ändern und neu bauen
 # IONOS-SSL am 30.10.2026 gekündigt (96 €/Jahr): bis HTTPS wieder steht, nicht auf https umleiten
 FORCE_HTTPS = False
-TODAY = '2026-10-30'
+TODAY = '2026-10-31'
 
 GIFT_BUDGETS = [5, 10, 15, 20, 30]
 # Amazon-Partner-ID – nur hier ändern; landet beim Bauen in allen Links und in site.js
@@ -90,6 +90,7 @@ FOOTER = '''<footer>
     <a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
+    <a href="/wichteln-im-buero/">Wichteln im Büro</a>
     <a href="/impressum/">Impressum</a>
     <a href="/datenschutz/">Datenschutz</a>
   </div>
@@ -614,6 +615,49 @@ def scrap_page():
          crumb='Schrottwichteln', mascot='wuerfel')
 
 
+def office_page():
+    n_office = sum(1 for i in IDEAS if i['office'])
+    body = f'''<article>
+<h1>Wichteln im Büro: Regeln, Budget und Ablauf</h1>
+<p class="lead">Büro-Wichteln ist der Klassiker vor Weihnachten: Jeder im Team beschenkt eine Kollegin oder einen Kollegen, ausgelost per Los. Mit ein paar klaren Regeln wird es für alle entspannt – auch für die, die sich kaum kennen oder im Homeoffice arbeiten.</p>
+
+<h2>In 4 Schritten zum Büro-Wichteln</h2>
+<ol>
+  <li><b>Budget festlegen:</b> Im Büro sind 10 Euro üblich, manchmal 5 oder 15 Euro. Wichtig ist, dass es für alle gleich ist und niemand unter Druck gerät.</li>
+  <li><b>Datum festlegen:</b> Meist die Weihnachtsfeier oder der letzte Arbeitstag vor den Feiertagen.</li>
+  <li><b>Online auslosen:</b> Namen eintragen, auf Wunsch Paare ausschließen (zum Beispiel Teamleitung und Stellvertretung) und jedem seinen geheimen Link schicken – per WhatsApp, Teams-Chat oder E-Mail.</li>
+  <li><b>Bescherung:</b> Geschenke einsammeln und gemeinsam auspacken – oder per Würfelspiel verteilen.</li>
+</ol>
+{CTA}
+
+<h2>Die wichtigsten Regeln</h2>
+<ul>
+  <li><b>Freiwillig:</b> Wer nicht mitmachen möchte, muss nicht – und muss es auch nicht begründen.</li>
+  <li><b>Neutral bleiben:</b> Nichts Anzügliches, nichts Politisches, keine Witze auf Kosten anderer.</li>
+  <li><b>Lieber unpersönlich als peinlich:</b> Wer die beschenkte Person kaum kennt, liegt mit Naschereien, etwas für den Schreibtisch oder Gemütlichem fast immer richtig.</li>
+  <li><b>Budget einhalten:</b> Deutlich teurere Geschenke setzen die anderen unter Druck.</li>
+  <li><b>Alkohol nur, wenn es passt:</b> Im Zweifel lieber alkoholfrei – nicht jeder trinkt.</li>
+</ul>
+
+<h2>Wichteln im Homeoffice oder mit verteiltem Team</h2>
+<p>Bei WichtelLos muss niemand vor Ort sein: Jeder öffnet seinen Link auf dem eigenen Handy oder Rechner. Die Geschenke schickt ihr per Post an die Privatadresse oder ins Büro und packt sie gemeinsam im Videocall aus. Tipp: Ein Budget inklusive Versand vereinbaren.</p>
+
+<h2>Spiel-Varianten fürs Team</h2>
+<ul>
+  <li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>: Päckchen werden erwürfelt und getauscht – perfekt für die Weihnachtsfeier.</li>
+  <li><a href="/schrottwichteln/">Schrottwichteln</a>: Jeder bringt etwas Kurioses von zu Hause mit – kostet nichts und sorgt für Lacher.</li>
+  <li><b>Klassisch:</b> Jeder zieht per Los genau eine Person und besorgt ein Geschenk im vereinbarten Budget.</li>
+</ul>
+
+<h2>Geschenkideen für Kollegen</h2>
+<p>Im Geschenkfinder findest du {n_office} bürotaugliche Ideen: <a class="more-link" href="/geschenkfinder/?fuer=office">Alle Ideen für Kollegen ansehen →</a></p>
+<p>Nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a></p>
+</article>'''
+    page('/wichteln-im-buero/', 'Wichteln im Büro: Regeln, Budget & Ablauf fürs Team',
+         'Büro-Wichteln organisieren: übliches Budget, faire Regeln, Ablauf im Homeoffice, Spiel-Varianten und Ideen für Kollegen – mit kostenloser Online-Auslosung.', body,
+         crumb='Wichteln im Büro', mascot='geschenk')
+
+
 # ---------- Rechtliches (Entwürfe) ----------
 
 COMPANY = ('KOLL Commerce UG (haftungsbeschränkt)<br>Leuchtenfabrik · Haus A, 1. Etage<br>'
@@ -678,6 +722,8 @@ BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' 
 # Sichtbare FAQ und FAQPage-Daten kommen aus dieser einen Liste (Antworten dürfen Links enthalten)
 FAQ = [
     ('Was ist Wichteln?', 'Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule.'),
+    ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
+    ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier.'),
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
     ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
@@ -687,7 +733,7 @@ FAQ = [
     ('Kann ich jemanden nachträglich hinzufügen?', 'Ja: Person ergänzen, neu auslosen und allen die neuen Links schicken. Die alten Links funktionieren weiter und zeigen die alte Auslosung – deshalb wirklich allen die neuen Links schicken.'),
     ('Was passiert, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken.'),
     ('Wie viel sollte ein Wichtelgeschenk kosten?', f'Häufig sind es 5 bis 20 Euro, im Büro meist 10 Euro. Wichtig ist, dass sich alle vorher auf ein Budget einigen. Ideen findest du bei unseren Wichtelgeschenken unter {BUDGET_LINKS} Euro.'),
-    ('Funktioniert das auch für Wichteln im Büro oder per Videocall?', 'Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice.'),
+    ('Funktioniert das auch für Wichteln im Büro oder per Videocall?', 'Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice. Tipps zu Budget, Regeln und Ablauf findest du unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.'),
     ('Ist WichtelLos wirklich kostenlos?', 'Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts.'),
 ]
 
@@ -727,8 +773,8 @@ def tool_page():
             'inLanguage': 'de-DE', 'publisher': ORG}
     extra = ld(app, faq, site)
     html = (SRC / 'tool.html').read_text(encoding='utf-8')
-    html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenlos & ohne Anmeldung | WichtelLos',
-                                             'Wichtelgruppe in 1 Minute auslosen: Namen eintragen, Paare ausschließen, geheime Links per WhatsApp verschicken. Kostenlos, ohne Anmeldung, ohne E-Mail.',
+    html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenloser Wichtelgenerator',
+                                             'Kostenloser Wichtelgenerator: Wichtelgruppe in 1 Minute auslosen, Paare ausschließen, geheime Links per WhatsApp verschicken. Ohne Anmeldung, ohne E-Mail.',
                                              '/', extra))
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
@@ -743,7 +789,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -780,6 +826,7 @@ def main():
     diy_page()
     dice_page()
     scrap_page()
+    office_page()
     legal_pages()
     extras()
     print('Fertig:', sorted(str(p.relative_to(OUT)) for p in OUT.rglob('*') if p.is_file()))
