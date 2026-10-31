@@ -342,3 +342,10 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .door-plan { padding-left: 0; list-style: none; display: grid; gap: 8px; }
 .door-plan li { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--green); border-radius: 10px; padding: 10px 14px; }
 @media print { .door-plan li { break-inside: avoid; padding: 4px 10px; } }
+/* Fotos (Unsplash, selbst gehostet) */
+.photo { margin: 18px 0 22px; }
+.photo img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 6px 20px rgba(43,27,23,.12); }
+.photo figcaption { font-size: .78rem; color: #6d5d57; margin-top: 6px; text-align: right; }
+.photo figcaption a { color: inherit; }
+.photo-tall { max-width: 360px; margin-left: auto; margin-right: auto; }
+@media print { .photo { display: none; } }

@@ -128,6 +128,14 @@ def pose_img(pose, cls='page-mascot'):
     return f'<img class="{cls}" src="/grafik/wichtel-{pose}.svg" alt="" width="{w}" height="{h}">'
 
 
+# Fotos in fotos/ (Unsplash-Lizenz, selbst gehostet -> keine Anfrage an Unsplash beim Seitenaufruf)
+def photo(name, sizes, alt, author, url, cls='photo'):
+    (w1, h1), (w2, h2) = sizes
+    return (f'<figure class="{cls}"><img src="/fotos/{name}-{w2}.webp" srcset="/fotos/{name}-{w1}.webp {w1}w, /fotos/{name}-{w2}.webp {w2}w" '
+            f'sizes="(max-width: 720px) 100vw, 680px" width="{w2}" height="{h2}" alt="{esc(alt)}" loading="lazy" decoding="async">'
+            f'<figcaption>Foto: <a href="{url}" rel="nofollow noopener" target="_blank">{esc(author)} / Unsplash</a></figcaption></figure>')
+
+
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
     if mascot:
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
@@ -797,6 +805,7 @@ def door_page():
     body = f'''<article>
 <h1>Wichteltür: Ideen, 24 Streiche und Zubehör</h1>
 <p class="lead">Ab dem 1. Dezember zieht ein Wichtel ein: Eine kleine Tür an der Fußleiste, jede Nacht ein neuer Streich – und am Morgen große Augen. Hier findest du, wie du die Wichteltür startest, einen fertigen Plan für alle 24 Tage, einen Begrüßungsbrief und das passende Zubehör.</p>
+{photo('wichtel-figuren', ((700, 317), (1060, 480)), 'Drei kleine Wichtelfiguren mit Strickmützen und weißem Bart auf einem Regal', 'Sergej', 'https://unsplash.com/photos/hQpFp87WQO8')}
 
 <h2>Was ist eine Wichteltür?</h2>
 <p>Die Wichteltür ist ein Adventsbrauch aus Skandinavien, der bei uns seit einigen Jahren immer beliebter wird. Eine Miniatur-Tür wird an die Wand oder Fußleiste gestellt – dahinter wohnt im Advent ein Wichtel. Er bleibt unsichtbar, schreibt Briefe, stellt nachts kleinen Unfug an und verabschiedet sich an Heiligabend wieder. Mit dem <a href="/">Wichteln unter Erwachsenen</a> hat das wenig zu tun, aber beides lebt vom selben Zauber: Jemand tut heimlich etwas Schönes.</p>
@@ -845,6 +854,7 @@ def party_page():
     body = f'''<article>
 <h1>Weihnachtsfeier-Ideen fürs Team: 10 Ideen, die gut ankommen</h1>
 <p class="lead">Ob kleines Team oder ganze Abteilung: Eine gute Weihnachtsfeier braucht keinen großen Aufwand – aber einen Plan, der zu euch passt. Hier sind 10 Ideen vom Weihnachtsmarkt bis zur Online-Feier, plus Tipps zu Planung und Budget.</p>
+{photo('wichtel-weihnachtsmarkt', ((800, 533), (1200, 800)), 'Weihnachtsstand mit Wichtelfiguren, Schneekugeln und Weihnachtsdeko', 'X F', 'https://unsplash.com/photos/ugrNyyXC-0M')}
 
 <h2>Unterwegs</h2>
 <ol>
@@ -965,6 +975,7 @@ def history_page():
     body = f'''<article>
 <h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
 <p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
+{photo('wichtel-strickmuetzen', ((480, 600), (800, 1000)), 'Zwei Wichtel mit roten Strickmützen und weißem Bart hängen an einer Schnur', 'Nguyen Mazic', 'https://unsplash.com/photos/w-VBf-zoWRY', 'photo photo-tall')}
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
 <p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>
@@ -1200,6 +1211,7 @@ def main():
     (OUT / 'assets' / 'site.js').write_text(site_js, encoding='utf-8')
     shutil.copytree(SRC / 'grafik', OUT / 'grafik')
     shutil.copytree(SRC / 'og', OUT / 'og')
+    shutil.copytree(SRC / 'fotos', OUT / 'fotos')
     shutil.copytree(SRC / 'assets' / 'fonts', OUT / 'assets' / 'fonts')
     for f in ('favicon.svg', 'favicon.ico', 'favicon-48.png', 'favicon-96.png', 'icon-192.png', 'icon-512.png',
               'wichtel.svg', 'og-image.png', 'apple-touch-icon.png'):

@@ -33,6 +33,9 @@ Antworten auf Deutsch.
 - `assets/fonts/` – Fredoka (OFL, selbst gehostet) für Überschriften; Lizenzen stehen in der README
 - `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `marketing/render-pins.js` – Pinterest-Pins 1000×1500 je Ratgeberseite nach `marketing/pins/` (`node marketing/render-pins.js`)
+- `fotos/` – Unsplash-Fotos (Unsplash-Lizenz, kein Unsplash+), selbst gehostet als WebP in 2 Breiten, eingebunden über `photo()` in
+  `build.py` mit Namensnennung + Link. Nur Ratgeberseiten (Woher kommt Wichteln, Weihnachtsfeier, Wichteltür), nicht Tool/Startseite.
+  Regeln: keine erkennbaren Gesichter, keine Marken/Logos im Ausschnitt (ggf. zuschneiden), nie direkt von Unsplash einbinden (Datenschutz).
 - `og/` – Vorschaubild (1200×630) je Ratgeberseite, `build.py` setzt es automatisch als og:image; neu erzeugen mit
   `node marketing/render-og.js` (neue Seite = dort eintragen). Startseite nutzt weiter `og-image.png`
 - `render-icons.js` – erzeugt `favicon.ico` (16/32/48), `favicon-48/96.png`, `icon-192/512.png` aus `favicon.svg`;
