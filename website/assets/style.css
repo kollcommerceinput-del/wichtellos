@@ -351,3 +351,13 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 @media print { .photo { display: none; } }
 .alt-link { font-size: .85rem; margin-left: 6px; }
 .alt-link a { color: var(--muted, #6d5d57); }
+/* Breite Bildschirme: Winterwald mit Wichteln links und rechts neben dem Inhalt (nur Deko) */
+@media (min-width: 1180px) {
+  main::before, main::after { content: ''; position: fixed; bottom: 0; width: min(260px, calc((100vw - 760px) / 2)); height: 300px;
+    z-index: -1; pointer-events: none; background-repeat: no-repeat; }
+  main::before { left: 2vw; background-image: url(/grafik/wichtel-geschenk.svg), url(/grafik/seite-baeume.svg);
+    background-size: 96px auto, contain; background-position: 62% 92%, bottom left; }
+  main::after { right: 2vw; transform: scaleX(-1); background-image: url(/grafik/wichtel-winkt.svg), url(/grafik/seite-baeume.svg);
+    background-size: 104px auto, contain; background-position: 62% 92%, bottom left; }
+}
+@media print { main::before, main::after { display: none !important; } }
