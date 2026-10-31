@@ -75,9 +75,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Sitemap in der Search Console erfolgreich gelesen (8 Seiten, 30.10.2026); Bing: alle 8 URLs übermittelt
 - [x] 3 neue Adressen bei Bing übermittelt (alle 11 drin); Sitemap in der Search Console neu gesendet (30.10.,
       zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
-- [ ] Google-Indexierung beantragen – 30.10. und 31.10. (11 Uhr, vor allen Shop-Anträgen) jeweils beim ersten Antrag „Kontingent überschritten“
-      → Sperre gilt für die neue Property, nicht geteiltes Konto-Kontingent. Startseite trotzdem schon indexiert (31.10.), Rest kommt über die Sitemap;
-      in ein paar Tagen erneut versuchen
+- [ ] Google-Indexierung: 31.10. nachmittags beantragt (7, dann Kontingent ~7/Tag/Property): Büro, Einladung-Vorlage,
+      Geschenkfinder, unter-10, unter-5, Schrottwichteln, Würfeln. Startseite schon indexiert. Noch offen (1.11.):
+      selber-machen, fuer-kinder, unter-20, unter-15, unter-30
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
