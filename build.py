@@ -97,6 +97,7 @@ FOOTER = '''<footer>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/wichteln-im-buero/">Wichteln im Büro</a>
+    <a href="/wichteln-schule-kita/">Schule &amp; Kita</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
     <a href="/datenschutz/">Datenschutz</a>
@@ -456,7 +457,7 @@ def kids_page():
 <h2>Tipps fürs Wichteln mit Kindern</h2>
 <ul>
   <li>Auf die Altersangabe auf der Verpackung achten – Spielzeug mit Kleinteilen ist nichts für die Kleinsten.</li>
-  <li>In Schule und Kindergarten sind 3 bis 5 Euro üblich. Am besten legt die Gruppe das Budget vorher gemeinsam fest.</li>
+  <li>In Schule und Kindergarten sind 3 bis 5 Euro üblich. Am besten legt die Gruppe das Budget vorher gemeinsam fest. Ablauf, Elternbrief und Lose ohne Handy: <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a>.</li>
   <li>Bei Süßigkeiten an Allergien und Unverträglichkeiten denken.</li>
   <li>Kinder freuen sich oft mehr über etwas zum Spielen oder Basteln als über reine Deko.</li>
 </ul>
@@ -667,6 +668,56 @@ def office_page():
          crumb='Wichteln im Büro', mascot='geschenk')
 
 
+def school_page():
+    body = f'''<article>
+<h1>Wichteln in der Schulklasse und Kita: so klappt's</h1>
+<p class="lead">Wichteln mit Kindern macht riesig Spaß – wenn das Auslosen fair ist und keiner leer ausgeht. Hier findest du den Ablauf für Klasse, Kita und Verein, ein faires Budget, einen Elternbrief zum Kopieren und Wichtel-Lose, für die kein Kind ein Handy braucht.</p>
+
+<h2>Ablauf in 5 Schritten</h2>
+<ol>
+  <li><b>Eltern informieren:</b> Kurz per Elternbrief oder in der Eltern-WhatsApp-Gruppe Budget und Datum ankündigen (Vorlage unten).</li>
+  <li><b>Namen eintragen:</b> Alle Kinder <a href="/">bei WichtelLos eintragen</a>. Geschwister in derselben Gruppe kannst du unter „Ausschlüsse“ trennen.</li>
+  <li><b>Auslosen und Lose drucken:</b> Nach dem Auslosen auf „Lose anzeigen und drucken“ tippen und <b>„Ohne Handy – für Kinder“</b> wählen. Außen steht der Name des Kindes, innen, wen es beschenkt.</li>
+  <li><b>Lose verteilen:</b> Ausschneiden, falten, zukleben und jedem Kind sein eigenes Los geben – das Öffnen ist der schönste Moment. Wer das Los verliert, bekommt es einfach neu ausgedruckt.</li>
+  <li><b>Bescherung:</b> Geschenke an einem festen Tag mitbringen, im Sitzkreis verteilen und gemeinsam auspacken.</li>
+</ol>
+{CTA}
+
+<h2>Lose ohne Handy – der Unterschied</h2>
+<p>Ältere Schüler und Erwachsene scannen bei WichtelLos einen QR-Code oder bekommen einen Link aufs Handy. Für Kita und Grundschule gibt es die Druck-Variante <b>„Ohne Handy“</b>: Der Name des Wichtel-Partners steht direkt innen auf dem Los, auf Wunsch mit einem Tipp wie „malt gern“. So zieht jedes Kind sein eigenes Los wie früher aus dem Hut – nur dass niemand sich selbst erwischt und Geschwister nicht zusammen landen.</p>
+<p>Tipp: dickeres Papier nehmen oder das Los zweimal falten, dann scheint der Name nicht durch.</p>
+
+<h2>Welches Budget ist fair?</h2>
+<ul>
+  <li><b>Kita und Grundschule:</b> 3 bis 5 Euro. So können alle Familien mitmachen.</li>
+  <li><b>Weiterführende Schule:</b> 5 bis 10 Euro.</li>
+  <li><b>Selbst gemacht zählt doppelt:</b> Gebasteltes, Gebackenes oder ein selbst bemalter Stein sind willkommen. Ideen: <a href="/wichtelgeschenke-selber-machen/">Wichtelgeschenke selber machen</a>.</li>
+  <li><b>Für Familien, die sich das Geschenk nicht leisten können:</b> Am besten still ein paar Ersatzgeschenke aus der Klassenkasse bereithalten.</li>
+</ul>
+<p>Passende Ideen nach Alter: <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a> · <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a></p>
+
+<h2>Elternbrief zum Kopieren</h2>
+<blockquote class="letter">
+<p>Liebe Eltern,</p>
+<p>in der Adventszeit wollen wir in der Klasse wichteln: Jedes Kind beschenkt ein anderes Kind, das es per Los zieht. Das Los bringt Ihr Kind am [Datum] mit nach Hause – bitte erst zu Hause gemeinsam öffnen und das Geheimnis nicht verraten.</p>
+<p>Das Geschenk sollte höchstens [3–5] Euro kosten, gern auch selbst gebastelt oder gebacken. Bitte bringen Sie es bis zum [Datum] eingepackt und mit dem Namen des beschenkten Kindes in die Schule mit.</p>
+<p>Wenn Ihr Kind nicht mitmachen kann oder möchte, geben Sie uns bitte bis zum [Datum] kurz Bescheid.</p>
+<p>Vielen Dank und eine schöne Adventszeit!</p>
+</blockquote>
+<p class="hint">Allergien im Blick behalten: Bei Süßigkeiten bitte vorher in der Elterngruppe nachfragen.</p>
+
+<h2>Spiele für die Bescherung</h2>
+<ul>
+  <li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>: Bei Kindern den Timer auf etwa 5 Minuten kürzen, damit niemand ungeduldig wird.</li>
+  <li><b>Wichtel-Raten:</b> Jedes Kind darf dreimal raten, von wem sein Geschenk ist.</li>
+</ul>
+<p>Zum Einsammeln der Anmeldungen im Lehrerzimmer oder Verein: <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>.</p>
+</article>'''
+    page('/wichteln-schule-kita/', 'Wichteln in Schulklasse & Kita: Ablauf, Budget, Lose',
+         'Wichteln mit Kindern in Klasse, Kita und Verein: Ablauf, faires Budget, Elternbrief zum Kopieren und Wichtel-Lose zum Ausdrucken ohne Handy – kostenlos.', body,
+         crumb='Wichteln in Schule und Kita', mascot='geschenk', playful=True)
+
+
 def invite_page():
     qr = (SRC / 'grafik' / 'qr-wichtellos.svg').read_text(encoding='utf-8').strip()
     qr = qr.replace('<svg ', '<svg class="poster-qr" aria-hidden="true" ', 1)
@@ -785,7 +836,7 @@ FAQ = [
     ('Sieht der Organisator, wer wen zieht?', 'Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
     ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.'),
     ('Kann ich Wünsche oder Tipps für den Wichtel hinterlegen?', 'Ja. Tippe neben einem Namen auf „💡 Tipp“ und notiere z. B. „mag Tee, liebt Katzen“. Den Tipp sieht nur, wer diese Person zieht – zusammen mit passenden Geschenkideen. Auch Tipps stecken nur im Link und landen nicht auf unserem Server.'),
-    ('Kann ich die Wichtel-Lose ausdrucken?', 'Ja. Nach dem Auslosen auf „Lose anzeigen und drucken“ tippen: Jede Person bekommt ein Los mit ihrem Namen außen und einem QR-Code innen. Ausschneiden, falten, verteilen – wer seinen Code scannt, sieht, wen er beschenkt. Die QR-Codes entstehen direkt in deinem Browser.'),
+    ('Kann ich die Wichtel-Lose ausdrucken?', 'Ja. Nach dem Auslosen auf „Lose anzeigen und drucken“ tippen: Jede Person bekommt ein Los mit ihrem Namen außen und einem QR-Code innen. Ausschneiden, falten, verteilen – wer seinen Code scannt, sieht, wen er beschenkt. Die QR-Codes entstehen direkt in deinem Browser. Für Kinder ohne Handy gibt es Lose mit dem Namen innen, mehr unter <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a>.'),
     ('Können Paare ausgeschlossen werden?', 'Ja. Unter „Ausschlüsse“ legst du fest, wer wen nicht ziehen darf – in beide Richtungen.'),
     ('Kann ich jemanden nachträglich hinzufügen?', 'Ja: Person ergänzen, neu auslosen und allen die neuen Links schicken. Die alten Links funktionieren weiter und zeigen die alte Auslosung – deshalb wirklich allen die neuen Links schicken.'),
     ('Was passiert, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken.'),
@@ -846,7 +897,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-einladung-vorlage/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/wichteln-einladung-vorlage/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -892,6 +943,7 @@ def main():
     dice_page()
     scrap_page()
     office_page()
+    school_page()
     invite_page()
     legal_pages()
     extras()

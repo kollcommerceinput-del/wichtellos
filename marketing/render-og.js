@@ -21,6 +21,7 @@ const PAGES = [
   ['schrottwichteln', 'wichtel-wuerfel.svg', 'Schrottwichteln', 'Regeln & 24 lustige Ideen'],
   ['wichteln-einladung-vorlage', 'wichtel-geschenk.svg', 'Einladung zum Aushängen', 'Wir wichteln! Vorlage mit Teilnehmerliste'],
   ['wichteln-im-buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team'],
+  ['wichteln-schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Ablauf, Elternbrief & Lose ohne Handy'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

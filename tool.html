@@ -102,7 +102,7 @@
     <div class="tip">💡 Machst du selbst mit? Öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.</div>
     <div class="card print-card">
       <h2>🖨️ Wichtel-Lose zum Ausdrucken</h2>
-      <p class="hint">Für die Weihnachtsfeier: ausdrucken, ausschneiden, falten. Jeder bekommt sein Los und scannt den QR-Code – wie Zettel ziehen, nur ohne Schummeln.</p>
+      <p class="hint">Für die Weihnachtsfeier: ausdrucken, ausschneiden, falten. Jeder bekommt sein Los und scannt den QR-Code – wie Zettel ziehen, nur ohne Schummeln. Für Kinder ohne Handy gibt es Lose mit dem Namen innen.</p>
       <button type="button" id="print-lose" class="btn-secondary">Lose anzeigen und drucken</button>
     </div>
     <div class="card share-card">
@@ -169,7 +169,11 @@
   <section id="view-print" hidden>
     <div class="print-bar">
       <h2 class="h1">Wichtel-Lose 🖨️</h2>
-      <p class="hint">Ausdrucken, an den gestrichelten Linien ausschneiden, in der Mitte falten – der QR-Code liegt innen. Tipp: dickeres Papier, dann scheint nichts durch.</p>
+      <div class="lose-mode" role="radiogroup" aria-label="Art der Lose">
+        <label><input type="radio" name="lose-mode" value="qr" checked> 📱 Mit QR-Code</label>
+        <label><input type="radio" name="lose-mode" value="name"> ✏️ Ohne Handy – für Kinder</label>
+      </div>
+      <p class="hint" id="lose-hint"></p>
       <div class="row2">
         <button type="button" id="print-now" class="btn-primary">Jetzt drucken</button>
         <button type="button" id="print-back" class="btn-secondary">Zurück zu den Links</button>
@@ -418,21 +422,40 @@
   async function showLose() {
     if (!current) return;
     try { await loadQr(); } catch { return showError('Die Lose konnten nicht erstellt werden. Bitte Seite neu laden.'); }
+    renderLose();
+    show('print');
+    window.scrollTo(0, 0);
+  }
+
+  const LOSE_HINT = {
+    qr: 'Ausdrucken, an den gestrichelten Linien ausschneiden, in der Mitte falten – der QR-Code liegt innen. Jeder scannt sein Los mit dem Handy. Tipp: dickeres Papier, dann scheint nichts durch.',
+    name: 'Für Kita, Klasse und alle ohne Handy: Der Name des Wichtel-Partners steht innen. Ausschneiden, falten, am besten zusätzlich zukleben – und erst nach dem Verteilen öffnen. Bitte dickeres Papier nehmen, dann scheint nichts durch.',
+  };
+
+  function renderLose() {
+    const mode = $('input[name="lose-mode"]:checked').value;
+    $('#lose-hint').textContent = LOSE_HINT[mode];
     const box = $('#lose');
     box.innerHTML = '';
     current.links.forEach(({ name, url }) => {
       const los = document.createElement('div');
       los.className = 'los';
+      const inner = mode === 'qr'
+        ? '<div class="los-in"><div class="los-qr"></div><div class="los-txt"><b>Scannen und Geheimnis lüften</b><span>Nur dein eigenes Los öffnen 🤫</span><span class="los-url">wichtellos.de</span></div></div>'
+        : '<div class="los-in los-in-name"><span class="los-kicker">Du beschenkst:</span><b class="los-target"></b><span class="los-tip" hidden></span><span class="los-psst">🤫 Psst – nicht verraten!</span></div>';
       los.innerHTML = `<div class="los-out"><span class="los-kicker">🎁 Wichtel-Los für</span><b class="los-name"></b><span class="los-group"></span></div>
-        <div class="los-fold">✂ hier falten ✂</div>
-        <div class="los-in"><div class="los-qr"></div><div class="los-txt"><b>Scannen und Geheimnis lüften</b><span>Nur dein eigenes Los öffnen 🤫</span><span class="los-url">wichtellos.de</span></div></div>`;
+        <div class="los-fold">✂ hier falten ✂</div>${inner}`;
       los.querySelector('.los-name').textContent = name;
       los.querySelector('.los-group').textContent = current.group;
-      los.querySelector('.los-qr').innerHTML = window.WichtelQR.svg(url);
+      if (mode === 'qr') {
+        los.querySelector('.los-qr').innerHTML = window.WichtelQR.svg(url);
+      } else {
+        const d = decode(url.split('#w=')[1] || '');
+        los.querySelector('.los-target').textContent = d ? d.r : '?';
+        if (d && d.t) { const t = los.querySelector('.los-tip'); t.textContent = '💡 ' + d.t; t.hidden = false; }
+      }
       box.append(los);
     });
-    show('print');
-    window.scrollTo(0, 0);
   }
 
   function renderResult(group, links) {
@@ -608,6 +631,7 @@
     $('#redraw').addEventListener('click', runDraw);
     $('#print-lose').addEventListener('click', showLose);
     $('#print-now').addEventListener('click', () => window.print());
+    document.querySelectorAll('input[name="lose-mode"]').forEach((r) => r.addEventListener('change', renderLose));
     $('#print-back').addEventListener('click', () => { show('result'); window.scrollTo(0, 0); });
     $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links); });
     show('create');

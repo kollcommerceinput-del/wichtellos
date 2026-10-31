@@ -271,6 +271,14 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .los-txt { display: flex; flex-direction: column; gap: 4px; text-align: left; font-size: 13px; color: var(--muted); }
 .los-txt b { color: var(--text); font-size: 15px; }
 .los-url { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; color: var(--primary); font-size: 16px; }
+.los-in-name { flex-direction: column; justify-content: center; gap: 4px; }
+.los-target { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 30px; line-height: 1.1; color: var(--green, #1f6f4a); word-break: break-word; }
+.los-tip { font-size: 13px; background: #fff7dc; border-radius: 8px; padding: 3px 8px; }
+.los-psst { font-size: 13px; color: var(--muted); }
+.lose-mode { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0; }
+.lose-mode label { display: flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border: 1.5px solid var(--border); border-radius: 999px; background: #fff; cursor: pointer; font-weight: 600; }
+.lose-mode label:has(input:checked) { border-color: var(--primary); background: #fff0ee; }
+.lose-mode input { width: auto; min-height: 0; height: auto; margin: 0; padding: 0; flex: none; box-shadow: none; accent-color: var(--primary); }
 @media print {
   @page { size: A4; margin: 10mm; }
   body { background: #fff !important; }
@@ -316,3 +324,8 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
   body.poster-page .poster-qr { width: 32mm; height: 32mm; }
   body.poster-page .poster-foot p { font-size: 12pt; }
 }
+
+/* Elternbrief zum Kopieren */
+.letter { margin: 12px 0; padding: 14px 18px; background: #fff; border: 1.5px dashed var(--border); border-left: 5px solid var(--gold); border-radius: var(--radius); }
+.letter p { margin: 0 0 10px; }
+.letter p:last-child { margin-bottom: 0; }
