@@ -173,6 +173,15 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*'):
     return f'<a href="{esc(href)}" data-amazon="{esc(query)}" rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
 
 
+
+def product_links(q, asin=None):
+    # Direktlink aufs Produkt + Suchlink als Rückfallebene, falls es mal ausverkauft ist
+    if not asin:
+        return amazon_link(q, 'Bei Amazon ansehen*')
+    href = f'https://www.amazon.de/dp/{asin}' + (f'?tag={AMAZON_TAG}' if AMAZON_TAG else '')
+    return (f'<a href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank">Bei Amazon ansehen*</a>'
+            f' <span class="alt-link">{amazon_link(q, "weitere Modelle*")}</span>')
+
 # ---------- Geschenkseiten ----------
 
 GIFTS = {
@@ -739,9 +748,9 @@ def school_page():
 
 SUPPLIES = [
     ('„Von deinem Wichtel“-Anhänger', 'Damit das Geschenk anonym bleibt.', 'Geschenkanhänger Wichtel Weihnachten'),
-    ('Großer Schaumstoff-Würfel', 'Für Würfelwichteln – gut sichtbar für alle.', 'Schaumstoffwürfel groß'),
+    ('Großer Schaumstoff-Würfel', 'Für Würfelwichteln – gut sichtbar für alle.', 'Schaumstoffwürfel groß', 'B0BZSS2PKR'),
     ('Wichtelmützen', 'Zipfelmützen für die Bescherung, gibt es im Set.', 'Wichtelmütze Set Erwachsene'),
-    ('Geschenktüten aus Kraftpapier', 'Schnell verpackt, alle Päckchen sehen gleich aus.', 'Geschenktüten Kraftpapier Weihnachten'),
+    ('Geschenktüten aus Kraftpapier', 'Schnell verpackt, alle Päckchen sehen gleich aus.', 'Geschenktüten Kraftpapier Weihnachten', 'B0B6BRP5KP'),
 ]
 
 
@@ -749,8 +758,8 @@ def supplies_block():
     cards = '\n'.join(f'''<div class="idea">
   <h3>{esc(t)}</h3>
   <p>{esc(x)}</p>
-  {amazon_link(q, 'Bei Amazon ansehen*')}
-</div>''' for t, x, q in SUPPLIES)
+  {product_links(*r)}
+</div>''' for t, x, *r in SUPPLIES)
     return f'''<h2>Das brauchst du noch für die Bescherung</h2>
 <div class="idea-grid">
 {cards}
@@ -786,11 +795,11 @@ DOOR_PLAN = [
 ]
 
 DOOR_SHOP = [
-    ('Wichteltür-Set', 'Tür mit Zubehör wie Leiter, Briefkasten und Fußmatte.', 'Wichteltür Set'),
-    ('Wichtel-Figur', 'Der Bewohner selbst – meist mit Zipfelmütze und Bart.', 'Wichtel Figur Wichteltür'),
+    ('Wichteltür-Set', 'Tür mit Zubehör wie Leiter, Briefkasten und Fußmatte.', 'Wichteltür Set', 'B0DK3D8M31'),
+    ('Wichtel-Figur', 'Der Bewohner selbst – meist mit Zipfelmütze und Bart.', 'Wichtel Figur Wichteltür', 'B0BLKHPYQV'),
     ('Mini-Zubehör', 'Möbel, Werkzeug und Lebensmittel im Puppenhaus-Format.', 'Wichtel Zubehör Miniatur'),
     ('Wichtel-Briefpapier', 'Winzige Briefe und Umschläge für die Wichtel-Post.', 'Wichtel Briefpapier Mini'),
-    ('Mini-Lichterkette', 'Batteriebetrieben, für die Wichteltür bei Nacht.', 'Mini Lichterkette Batterie warmweiß'),
+    ('Mini-Lichterkette', 'Batteriebetrieben, für die Wichteltür bei Nacht.', 'Mini Lichterkette Batterie warmweiß', 'B0BLYQGD2Z'),
     ('Buch mit Wichtel-Streichen', 'Noch mehr Ideen für die 24 Tage.', 'Wichtel Streiche Buch'),
 ]
 
@@ -800,8 +809,8 @@ def door_page():
     shop = '\n'.join(f'''<div class="idea">
   <h3>{esc(t)}</h3>
   <p>{esc(x)}</p>
-  {amazon_link(q, 'Bei Amazon ansehen*')}
-</div>''' for t, x, q in DOOR_SHOP)
+  {product_links(*r)}
+</div>''' for t, x, *r in DOOR_SHOP)
     body = f'''<article>
 <h1>Wichteltür: Ideen, 24 Streiche und Zubehör</h1>
 <p class="lead">Ab dem 1. Dezember zieht ein Wichtel ein: Eine kleine Tür an der Fußleiste, jede Nacht ein neuer Streich – und am Morgen große Augen. Hier findest du, wie du die Wichteltür startest, einen fertigen Plan für alle 24 Tage, einen Begrüßungsbrief und das passende Zubehör.</p>
