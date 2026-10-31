@@ -1169,6 +1169,7 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
+    html = html.replace('<!--FOTO-->', photo('wichtel-raureif', ((800, 534), (1200, 800)), 'Drei Stoffwichtel mit roten Zipfelmützen und weißem Bart stehen im Raureif', 'Brigitta Schneiter', 'https://unsplash.com/photos/_SB32j-cVrU'))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 
