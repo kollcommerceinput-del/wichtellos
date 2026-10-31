@@ -1128,14 +1128,14 @@ FAQ = [
 ]
 
 HOW_TO = [
-    ('Namen eintragen', 'Gruppe anlegen, alle Teilnehmer eintragen, auf Wunsch Budget und Datum dazu.'),
-    ('Auslosen', 'Ein Klick, und jeder bekommt einen eigenen geheimen Link. Paare, die sich nicht ziehen sollen, schließt du vorher aus.'),
-    ('Links verschicken', 'Per WhatsApp, E-Mail oder kopieren. Jeder sieht nur, wen er selbst beschenkt.'),
+    ('✏️', 'Ausfüllen', 'Gruppe, Teilnehmer und auf Wunsch Ausschlüsse eintragen (Schritt 1 bis 3 oben).'),
+    ('🎲', 'Auslosen', 'Ein Klick auf „Jetzt auslosen“, und jeder bekommt einen eigenen geheimen Link.'),
+    ('📲', 'Links verschicken', 'Per WhatsApp, E-Mail oder kopieren. Jeder sieht nur, wen er selbst beschenkt.'),
 ]
 
 
 def faq_html():
-    steps = '\n'.join(f'      <li><b>{esc(h)}</b> – {esc(x)}</li>' for h, x in HOW_TO)
+    steps = '\n'.join(f'      <li data-i="{i}"><b>{esc(h)}</b> – {esc(x)}</li>' for i, h, x in HOW_TO)
     items = '\n'.join(f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>' for q, a in FAQ)
     return f'''    <section class="how">
       <h2>So funktioniert's</h2>
