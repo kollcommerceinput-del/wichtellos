@@ -5,7 +5,7 @@ Bilder dazu: `marketing/whatsapp-status.png`, `marketing/linkedin-buero-wichteln
 
 ## 1. WhatsApp – Familie / Freunde (persönlich)
 
-> Hey! 🎁 Ich hab mit einem Freund eine kleine Seite gebaut, mit der man Wichteln in 1 Minute auslost: wichtellos.de
+> Hey! 🎁 Ich hab eine kleine Seite gebaut, mit der man Wichteln in 1 Minute auslost: wichtellos.de
 > Kostenlos, ohne Anmeldung, jeder kriegt seinen geheimen Link aufs Handy. Neu: man kann jedem heimlich einen Tipp mitgeben („mag Tee“) und für die Feier sogar Lose mit QR-Code ausdrucken.
 > Wenn ihr dieses Jahr wichtelt – probiert's gern aus und sagt mir, wie's war 🙏
 
