@@ -18,6 +18,9 @@ const PINS = [
   ['selber-machen', 'wichtel-geschenk.svg', 'Wichtel&shy;geschenke selber machen', 'Einfache DIY-Ideen mit Anleitung', '/wichtelgeschenke-selber-machen', 'Anleitungen ansehen →'],
   ['wuerfeln', 'wichtel-wuerfel.svg', 'Wichteln mit Würfeln', 'Die Regeln – einfach erklärt', '/wichteln-wuerfeln-regeln', 'Regeln ansehen →'],
   ['schrottwichteln', 'wichtel-wuerfel.svg', 'Schrott&shy;wichteln', 'Regeln, Ablauf & lustige Ideen', '/schrottwichteln', 'Regeln & Ideen ansehen →'],
+  ['lose-drucken', 'wichtel-geschenk.svg', 'Wichtel-Lose zum Ausdrucken', 'Mit QR-Code: scannen und Geheimnis lüften – für die Weihnachtsfeier', '', 'Kostenlos erstellen →'],
+  ['tipp', 'wichtel-lupe.svg', 'Verrate deinem Wichtel heimlich, was du magst', 'Tipp pro Person – nur der Wichtel sieht ihn, mit passenden Ideen', '', 'Kostenlos auslosen →'],
+  ['buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf – auch fürs Homeoffice', '/wichteln-im-buero', 'Tipps fürs Team ansehen →'],
   ['auslosen', 'wichtel-winkt.svg', 'Wichteln online auslosen', 'In 1 Minute – kostenlos, ohne Anmeldung, geheime Links per WhatsApp', '', 'Jetzt Gruppe erstellen →'],
 ];
 
