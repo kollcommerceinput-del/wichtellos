@@ -279,3 +279,10 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
   .los { height: 92mm; border-radius: 0; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .los-qr svg { width: 36mm; height: 36mm; }
 }
+
+/* Vorteile unter der Startseiten-Überschrift */
+.usp { list-style: none; margin: 4px 0 18px; padding: 0; display: grid; gap: 6px; }
+.usp li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.4; color: var(--muted); }
+.usp li span { position: absolute; left: 0; top: 0; }
+.usp b { color: var(--text); }
+@media (min-width: 760px) { .usp { grid-template-columns: repeat(3, 1fr); gap: 12px; } }

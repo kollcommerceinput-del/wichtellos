@@ -776,7 +776,7 @@ def tool_page():
     extra = ld(app, faq, site)
     html = (SRC / 'tool.html').read_text(encoding='utf-8')
     html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenloser Wichtelgenerator',
-                                             'Kostenloser Wichtelgenerator: Wichtelgruppe in 1 Minute auslosen, Paare ausschließen, geheime Links per WhatsApp verschicken. Ohne Anmeldung, ohne E-Mail.',
+                                             'Kostenloser Wichtelgenerator: in 1 Minute auslosen, geheime Links per WhatsApp, Tipps für den Wichtel und Lose mit QR-Code zum Ausdrucken. Ohne Anmeldung.',
                                              '/', extra))
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
