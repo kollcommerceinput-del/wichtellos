@@ -329,3 +329,11 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .letter { margin: 12px 0; padding: 14px 18px; background: #fff; border: 1.5px dashed var(--border); border-left: 5px solid var(--gold); border-radius: var(--radius); }
 .letter p { margin: 0 0 10px; }
 .letter p:last-child { margin-bottom: 0; }
+
+/* Wichtelgedichte */
+.poems { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin: 12px 0; }
+.poem { margin: 0; padding: 14px 16px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); }
+.poem figcaption { font-size: 13px; font-weight: 600; color: var(--green); margin-bottom: 6px; }
+.poem p, .poem-out { margin: 0; font-style: italic; line-height: 1.55; }
+.poem-gen label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 14px; flex: 1; }
+.poem-out { white-space: pre-line; margin: 14px 0; padding: 12px 14px; background: #fff7dc; border-radius: 10px; font-size: 17px; }

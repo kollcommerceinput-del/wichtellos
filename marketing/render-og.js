@@ -22,6 +22,9 @@ const PAGES = [
   ['wichteln-einladung-vorlage', 'wichtel-geschenk.svg', 'Einladung zum Aushängen', 'Wir wichteln! Vorlage mit Teilnehmerliste'],
   ['wichteln-im-buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team'],
   ['wichteln-schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Ablauf, Elternbrief & Lose ohne Handy'],
+  ['weihnachtsfeier-ideen', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen', '10 Ideen fürs Team – vom Markt bis online'],
+  ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtelgedichte', 'Kurze Reime für die Geschenk-Karte'],
+  ['woher-kommt-wichteln', 'wichtel-lupe.svg', 'Woher kommt Wichteln?', 'Wichtel, Julklapp & Secret Santa'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

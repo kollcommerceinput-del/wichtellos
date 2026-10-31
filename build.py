@@ -98,6 +98,9 @@ FOOTER = '''<footer>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/wichteln-im-buero/">Wichteln im Büro</a>
     <a href="/wichteln-schule-kita/">Schule &amp; Kita</a>
+    <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a>
+    <a href="/wichtelgedichte/">Wichtelgedichte</a>
+    <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
     <a href="/datenschutz/">Datenschutz</a>
@@ -659,6 +662,9 @@ def office_page():
   <li><b>Klassisch:</b> Jeder zieht per Los genau eine Person und besorgt ein Geschenk im vereinbarten Budget.</li>
 </ul>
 
+<h2>Ideen für die Weihnachtsfeier</h2>
+<p>Vom Weihnachtsmarkt mit Wichtel-Twist bis zur Online-Feier: <a href="/weihnachtsfeier-ideen/">10 Weihnachtsfeier-Ideen fürs Team</a>. Für die Karte zum Geschenk gibt es <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</p>
+
 <h2>Geschenkideen für Kollegen</h2>
 <p>Im Geschenkfinder findest du {n_office} bürotaugliche Ideen: <a class="more-link" href="/geschenkfinder/?fuer=office">Alle Ideen für Kollegen ansehen →</a></p>
 <p>Nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a></p>
@@ -716,6 +722,153 @@ def school_page():
     page('/wichteln-schule-kita/', 'Wichteln in Schulklasse & Kita: Ablauf, Budget, Lose',
          'Wichteln mit Kindern in Klasse, Kita und Verein: Ablauf, faires Budget, Elternbrief zum Kopieren und Wichtel-Lose zum Ausdrucken ohne Handy – kostenlos.', body,
          crumb='Wichteln in Schule und Kita', mascot='geschenk', playful=True)
+
+
+def party_page():
+    body = f'''<article>
+<h1>Weihnachtsfeier-Ideen fürs Team: 10 Ideen, die gut ankommen</h1>
+<p class="lead">Ob kleines Team oder ganze Abteilung: Eine gute Weihnachtsfeier braucht keinen großen Aufwand – aber einen Plan, der zu euch passt. Hier sind 10 Ideen vom Weihnachtsmarkt bis zur Online-Feier, plus Tipps zu Planung und Budget.</p>
+
+<h2>Unterwegs</h2>
+<ol>
+  <li><b>Weihnachtsmarkt mit Wichtel-Twist:</b> Ihr lost vorher aus, wer wen „bewichtelt“ – und auf dem Markt zahlt jeder seinem Wichtel einen Glühwein, eine Bratwurst oder gebrannte Mandeln. Kostet wenig, bringt alle ins Gespräch.</li>
+  <li><b>Glühwein- oder Fackelwanderung:</b> Eine kurze Runde durch Park oder Wald, unterwegs Punsch aus der Thermoskanne. Ideal für Teams, die sonst nur am Schreibtisch sitzen.</li>
+  <li><b>Stadtführung im Advent:</b> Viele Städte bieten Nachtwächter-, Laternen- oder Weihnachtsführungen an – oft mit Abschluss auf dem Weihnachtsmarkt.</li>
+  <li><b>Eisstockschießen oder Schlittschuhlaufen:</b> Wintersport light, den auch Ungeübte schaffen. Im Anschluss geht es zum Essen.</li>
+</ol>
+
+<h2>Drinnen</h2>
+<ol start="5">
+  <li><b>Escape-Room:</b> Rätseln im Team, meist 4 bis 6 Personen pro Raum. Größere Gruppen spielen parallel gegeneinander.</li>
+  <li><b>Krimidinner:</b> Essen und Mitraten – jeder bekommt eine Rolle. Gibt es als Event im Restaurant oder als Spiel für zu Hause.</li>
+  <li><b>Gemeinsam kochen oder Plätzchen backen:</b> Kochkurs buchen oder einfach die Büroküche nutzen. Was entsteht, wird gleich gegessen.</li>
+  <li><b>Bowling oder Kegeln:</b> Unkompliziert, für jedes Alter, und die Bahn lässt sich meist kurzfristig reservieren.</li>
+</ol>
+
+<h2>Im Büro oder online</h2>
+<ol start="9">
+  <li><b>Büro-Feier mit Wichtel-Spiel:</b> Essen bestellen, Musik an und als Höhepunkt <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> oder <a href="/schrottwichteln/">Schrottwichteln</a>. Das Auslosen erledigt ihr vorher <a href="/">online in 1 Minute</a>.</li>
+  <li><b>Online-Feier fürs Homeoffice:</b> Wichtelgeschenke per Post verschicken und gemeinsam im Videocall auspacken, dazu ein Weihnachts-Quiz. Mehr dazu unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
+</ol>
+{CTA}
+
+<h2>Tipps für die Planung</h2>
+<ul>
+  <li><b>Früh buchen:</b> Im Dezember sind Restaurants, Escape-Rooms und Führungen schnell ausgebucht – am besten schon im November reservieren.</li>
+  <li><b>Termin per Umfrage finden:</b> Zwei, drei Termine zur Wahl stellen und die Mehrheit entscheiden lassen.</li>
+  <li><b>Für alle passend:</b> Alkoholfreie Getränke und vegetarisches Essen einplanen, auf Barrierefreiheit achten.</li>
+  <li><b>Budget klären:</b> Vorher sagen, was die Firma übernimmt und was jeder selbst zahlt – zum Beispiel das Wichtelgeschenk.</li>
+  <li><b>Freiwillig bleibt freiwillig:</b> Wer nicht mitkommen kann oder will, muss sich nicht rechtfertigen.</li>
+</ul>
+<p>Für die Anmeldung im Büro: <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>. Für die Geschenk-Karte: <a href="/wichtelgedichte/">Wichtelgedichte</a>.</p>
+</article>'''
+    page('/weihnachtsfeier-ideen/', 'Weihnachtsfeier-Ideen fürs Team: 10 Ideen & Tipps',
+         'Weihnachtsfeier im Team planen: 10 Ideen vom Weihnachtsmarkt mit Wichtel-Twist über Escape-Room bis zur Online-Feier – plus Tipps zu Termin und Budget.', body,
+         crumb='Weihnachtsfeier-Ideen', mascot='winkt')
+
+
+POEMS = [
+    ('Für alle', 'Ein Wichtel kam auf leisen Sohlen,\nhat sich hier rein- und rausgestohlen.\nEr ließ dir dies Geschenk zurück\nund wünscht dir ganz viel Weihnachtsglück.'),
+    ('Für alle', 'Wer mich gebracht hat, bleibt geheim,\ndrum schick ich nur den kleinen Reim:\nPack aus, freu dich und rate weiter –\ndein Wichtel grinst und bleibt ganz heiter.'),
+    ('Für Kollegen', 'Montagmorgen, Stapel hoch,\nder Drucker streikt mal wieder doch –\nda kommt ein Wichtel, leis und sacht,\nund hat dir dieses mitgebracht.'),
+    ('Für Kollegen', 'Zwischen Meeting, Mail und Kaffee\ndacht ich heimlich nur an dich.\nHier ein kleines Wichtelpäckchen –\nwer es war? Das sag ich nicht.'),
+    ('Für die Familie', 'Die ganze Sippe sitzt beisammen,\nder Baum, der glänzt, die Kerzen flammen.\nUnd einer hier – du rätst es kaum –\nhat dir gewichtelt unterm Baum.'),
+    ('Für Kinder', 'Ich bin ein Wichtel, klitzeklein,\nund pack dir was Besonderes ein.\nWer ich bin? Das bleibt geheim –\nich schick dir nur den Wichtelreim.'),
+    ('Für Kinder', 'Rate, rate, wer ich bin!\nHalt dein Ohr ans Päckchen hin.\nHörst du es kichern, leis und fein?\nDas muss dein Wichtel sein!'),
+    ('Fürs Schrottwichteln', 'Ich fand es tief im Keller drin,\nes hat zwar keinen tiefern Sinn,\ndoch eins ist sicher, glaub es mir:\nJetzt ist es deins – und nicht mehr hier!'),
+    ('Fürs Schrottwichteln', 'Es staubte jahrelang im Schrank,\njetzt bist du dran – hab vielen Dank!\nBehalt es gut, verschenk es weiter,\ndas Wichteln macht das Leben heiter.'),
+]
+
+
+def poems_page():
+    cards = '\n'.join(f'<figure class="poem"><figcaption>{esc(k)}</figcaption><p>{esc(t).replace(chr(10), "<br>")}</p></figure>' for k, t in POEMS)
+    body = f'''<article>
+<h1>Wichtelgedichte: kurze Reime für die Geschenk-Karte</h1>
+<p class="lead">Ein kleiner Reim macht aus jedem Wichtelgeschenk etwas Besonderes – und verrät trotzdem nicht, von wem es kommt. Hier findest du kurze Wichtelgedichte für Kollegen, Familie, Kinder und Schrottwichteln, dazu einen Generator für einen persönlichen Reim.</p>
+
+<h2>Persönlichen Wichtel-Reim erstellen</h2>
+<div class="card poem-gen">
+  <div class="row2">
+    <label>Name<input id="pg-name" maxlength="30" placeholder="z. B. Anna"></label>
+    <label>Mag gern …<input id="pg-like" maxlength="30" placeholder="z. B. Kaffee"></label>
+  </div>
+  <p id="pg-out" class="poem-out"></p>
+  <div class="row2">
+    <button type="button" id="pg-next" class="btn-secondary">🔄 Anderer Reim</button>
+    <button type="button" id="pg-copy" class="btn-primary">📋 Reim kopieren</button>
+  </div>
+  <p class="hint">Alles passiert nur in deinem Browser – nichts wird gespeichert.</p>
+</div>
+
+<h2>Fertige Wichtelgedichte</h2>
+<div class="poems">
+{cards}
+</div>
+{CTA}
+
+<h2>Tipps für die Wichtel-Karte</h2>
+<ul>
+  <li><b>Nicht mit Namen unterschreiben</b> – „Dein Wichtel“ reicht. Wer mag, gibt einen kleinen Hinweis zum Raten.</li>
+  <li><b>Handschrift verstellen</b> oder den Reim ausdrucken, sonst ist das Geheimnis schnell gelüftet.</li>
+  <li><b>Zum Geschenk passend:</b> Beim <a href="/schrottwichteln/">Schrottwichteln</a> darf es frech sein, bei Kollegen lieber freundlich und neutral.</li>
+</ul>
+<p>Noch kein Geschenk? <a href="/geschenkfinder/">Im Geschenkfinder nach Alter und Budget suchen →</a></p>
+</article>
+<script>
+(() => {{
+  const T = [
+    (n, x) => `Für ${{n}}, denn ${{x}} ist dein Ding,\\nein Päckchen, das ich heimlich bring.\\nWer ich bin? Das bleibt geheim –\\ndein Wichtel schickt dir diesen Reim.`,
+    (n, x) => `Hallo ${{n}}! Ich weiß Bescheid:\\n${{x[0].toUpperCase() + x.slice(1)}} macht dir Freude jederzeit.\\nDrum hab ich gesucht und auch gefunden –\\nviel Spaß damit in frohen Stunden!`,
+    (n, x) => `Ho, ho, ho, ${{n}}, schau mal her:\\nein Wichtelpäckchen, gar nicht schwer.\\nUnd weil du ${{x}} so gerne hast,\\nhoff ich, dass es zu dir passt.`,
+  ];
+  let i = 0;
+  const $ = (s) => document.querySelector(s);
+  const render = () => {{
+    const n = $('#pg-name').value.trim() || 'Anna', x0 = $('#pg-like').value.trim() || 'Kaffee', x = x0[0].toUpperCase() + x0.slice(1);
+    $('#pg-out').textContent = T[i % T.length](n, x);
+  }};
+  $('#pg-name').addEventListener('input', render);
+  $('#pg-like').addEventListener('input', render);
+  $('#pg-next').addEventListener('click', () => {{ i++; render(); }});
+  $('#pg-copy').addEventListener('click', async () => {{
+    try {{ await navigator.clipboard.writeText($('#pg-out').textContent); $('#pg-copy').textContent = '✅ Kopiert'; }}
+    catch {{ $('#pg-copy').textContent = 'Bitte markieren und kopieren'; }}
+    setTimeout(() => {{ $('#pg-copy').textContent = '📋 Reim kopieren'; }}, 2000);
+  }});
+  render();
+}})();
+</script>'''
+    page('/wichtelgedichte/', 'Wichtelgedichte: kurze Reime für die Wichtel-Karte',
+         'Kurze Wichtelgedichte für die Geschenk-Karte: Reime für Kollegen, Familie, Kinder und Schrottwichteln – plus Generator für deinen persönlichen Wichtel-Reim.', body,
+         crumb='Wichtelgedichte', mascot='geschenk', playful=True)
+
+
+def history_page():
+    body = f'''<article>
+<h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
+<p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
+
+<h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
+<p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört.</p>
+
+<h2>Der Vorläufer: Julklapp</h2>
+<p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen.</p>
+
+<h2>Wichteln in anderen Ländern</h2>
+<ul>
+  <li><b>Secret Santa</b> heißt das Spiel in englischsprachigen Ländern – „geheimer Weihnachtsmann“.</li>
+  <li><b>Engerl-Bengerl</b> sagt man vor allem in Bayern und Österreich: Wer gezogen hat, ist das „Engerl“ für sein „Bengerl“.</li>
+  <li><b>White Elephant</b> oder Yankee Swap ist die amerikanische Spielart, bei der Geschenke getauscht und „geklaut“ werden – ähnlich wie <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>.</li>
+</ul>
+
+<h2>Wichteln heute</h2>
+<p>Aus dem Brauch ist ein fester Teil der Adventszeit geworden: im Büro, in der Familie, im Verein und in der <a href="/wichteln-schule-kita/">Schulklasse</a>. Statt Zettel aus dem Hut lost man heute oft online aus – so zieht niemand sich selbst, und auch wer nicht vor Ort ist, kann mitmachen. Beliebte Varianten sind <a href="/schrottwichteln/">Schrottwichteln</a> mit kuriosen Fundstücken und das Würfelspiel auf der <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier</a>.</p>
+{CTA}
+<p>Passende Reime für die Karte: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Ideen fürs Geschenk: <a href="/geschenkfinder/">Geschenkfinder</a></p>
+</article>'''
+    page('/woher-kommt-wichteln/', 'Woher kommt Wichteln? Julklapp, Secret Santa & Co.',
+         'Woher kommt der Brauch des Wichtelns? Wichtel im Volksglauben, der Julklapp aus Skandinavien und Norddeutschland, Secret Santa und Engerl-Bengerl kurz erklärt.', body,
+         crumb='Woher kommt Wichteln?', mascot='lupe')
 
 
 def invite_page():
@@ -829,7 +982,7 @@ BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' 
 FAQ = [
     ('Was ist Wichteln?', 'Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule.'),
     ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
-    ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier.'),
+    ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>'),
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
     ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
@@ -897,7 +1050,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/wichteln-einladung-vorlage/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteln-einladung-vorlage/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -944,6 +1097,9 @@ def main():
     scrap_page()
     office_page()
     school_page()
+    party_page()
+    poems_page()
+    history_page()
     invite_page()
     legal_pages()
     extras()
