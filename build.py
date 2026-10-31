@@ -1133,6 +1133,7 @@ FAQ = [
     ('Was passiert, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort kannst du den Link erneut verschicken.'),
     ('Wie viel sollte ein Wichtelgeschenk kosten?', f'Häufig sind es 5 bis 20 Euro, im Büro meist 10 Euro. Wichtig ist, dass sich alle vorher auf ein Budget einigen. Ideen findest du bei unseren Wichtelgeschenken unter {BUDGET_LINKS} Euro.'),
     ('Funktioniert das auch für Wichteln im Büro oder per Videocall?', 'Ja. Die Links funktionieren auf jedem Handy und Computer, niemand muss vor Ort sein. Ideal auch für Teams im Homeoffice. Tipps zu Budget, Regeln und Ablauf findest du unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.'),
+    ('Funktioniert WichtelLos auch in Österreich und der Schweiz?', 'Ja, überall, wo Deutsch gesprochen wird – egal ob ihr Wichteln, Engerl-Bengerl oder Julklapp sagt. Das Budget kannst du in Euro oder Franken eintragen, zum Beispiel „20 CHF“. Die Geschenkideen führen zu Amazon.de, das nach Österreich und bei vielen Artikeln auch in die Schweiz liefert.'),
     ('Ist WichtelLos wirklich kostenlos?', 'Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts.'),
 ]
 

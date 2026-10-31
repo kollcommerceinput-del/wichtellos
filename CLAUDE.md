@@ -99,6 +99,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       (Bank/Steuer) erst nach 2FA-Aktivierung erreichbar – Toni. Vor erstem Awin-Link: Datenschutz um Awin ergänzen
       01.11. Fotogeschenke: Myposter DE + Pixum DE beworben (EPC 0,33 € bzw. 10 %); fotokasten verworfen (Awin-Risikostufe 2),
       MyHappyMoments/meinbildkalender (EPC ≤0,04 €) nicht. Bei Zusage: Fotokalender/-tasse in Selber-machen, Oma/Opa, unter 20 €.
+- [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
+      frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [ ] Ko-fi-Konto (Toni, Firmen-PayPal): danach „Spendier dem Wichtel einen Kaffee“ im Fuß + auf der Seite des geheimen Links;
       später Premium-Druckvorlagen im Ko-fi-Shop (Einnahmen der UG, nicht „Spende“ nennen)
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,

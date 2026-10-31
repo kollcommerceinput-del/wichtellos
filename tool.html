@@ -513,7 +513,8 @@
   function renderIdeas(budget) {
     const num = parseFloat(String(budget).replace(',', '.').replace(/[^\d.]/g, ''));
     const tier = isNaN(num) ? IDEAS[1] : (IDEAS.find((t) => num <= t.max) || IDEAS[IDEAS.length - 1]);
-    $('#ideas-budget').textContent = isNaN(num) ? '' : `bis ${num} €`;
+    const cur = /chf|franken|\d\s*fr\.?$/i.test(String(budget).trim()) ? 'CHF' : '€';
+    $('#ideas-budget').textContent = isNaN(num) ? '' : `bis ${num} ${cur}`;
     $('#ideas-more').href = `/wichtelgeschenke-unter-${tier.max}-euro/`;
     $('#ideas-more').textContent = `Mehr Geschenkideen unter ${tier.max} € →`;
     $('#ideas-finder').href = `/geschenkfinder/?budget=${tier.max}`;
