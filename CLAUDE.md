@@ -61,6 +61,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
 - [ ] Ko-fi-Konto (Toni, Firmen-PayPal): danach „Spendier dem Wichtel einen Kaffee“ im Fuß + auf der Seite des geheimen Links;
       später Premium-Druckvorlagen im Ko-fi-Shop (Einnahmen der UG, nicht „Spende“ nennen)
+- [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
+      Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
 - [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
