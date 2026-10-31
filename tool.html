@@ -105,6 +105,14 @@
       <p class="hint">Für die Weihnachtsfeier: ausdrucken, ausschneiden, falten. Jeder bekommt sein Los und scannt den QR-Code – wie Zettel ziehen, nur ohne Schummeln.</p>
       <button type="button" id="print-lose" class="btn-secondary">Lose anzeigen und drucken</button>
     </div>
+    <div class="card share-card">
+      <h2>📣 Kennst du noch eine Gruppe?</h2>
+      <p class="hint">Familie, Verein, Klasse oder das andere Team – mit einem Tipp weiterschicken.</p>
+      <div class="row2">
+        <a class="btn-primary share-wa" target="_blank" rel="noopener">Per WhatsApp teilen</a>
+        <button type="button" class="btn-secondary share-copy">Link kopieren</button>
+      </div>
+    </div>
     <div class="tip">⚠️ Wenn du neu auslost, bekommen alle neue Links. Schicke dann die neuen Links an alle, sonst gelten zwei Auslosungen gleichzeitig.</div>
     <div class="row2">
       <button type="button" id="edit" class="btn-secondary">Gruppe bearbeiten</button>
@@ -153,6 +161,7 @@
       <h2>Selbst eine Wichtelgruppe auslosen?</h2>
       <p class="hint">Kostenlos und ohne Anmeldung – für Familie, Freunde oder das Büro.</p>
       <a class="btn-primary" href="/">Eigene Gruppe erstellen</a>
+      <p><a class="more-link share-wa" target="_blank" rel="noopener">📣 WichtelLos per WhatsApp weiterempfehlen</a></p>
     </div>
   </section>
 
@@ -603,6 +612,13 @@
     $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links); });
     show('create');
   }
+
+  // Weiterempfehlen (Text ohne persönliche Daten)
+  const SHARE = 'Wir wichteln mit wichtellos.de 🎁 Kostenlos, ohne Anmeldung – mit geheimen Links per WhatsApp und sogar Losen zum Ausdrucken: https://wichtellos.de';
+  document.querySelectorAll('.share-wa').forEach((a) => { a.href = `https://wa.me/?text=${encodeURIComponent(SHARE)}`; });
+  document.querySelectorAll('.share-copy').forEach((b) => b.addEventListener('click', async () => {
+    await copy('https://wichtellos.de'); b.textContent = '✓ Kopiert'; setTimeout(() => { b.textContent = 'Link kopieren'; }, 1800);
+  }));
 
   window.addEventListener('hashchange', () => location.reload());
   init();

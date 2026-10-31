@@ -97,6 +97,7 @@ FOOTER = '''<footer>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/wichteln-im-buero/">Wichteln im Büro</a>
+    <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
     <a href="/datenschutz/">Datenschutz</a>
   </div>
@@ -122,7 +123,7 @@ def pose_img(pose, cls='page-mascot'):
     return f'<img class="{cls}" src="/grafik/wichtel-{pose}.svg" alt="" width="{w}" height="{h}">'
 
 
-def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False):
+def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
     if mascot:
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if crumb:
@@ -134,7 +135,7 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
 <head>
 {head(title, desc, path, extra, noindex)}
 </head>
-<body{' class="verspielt"' if playful else ''}>
+<body{(' class="' + ' '.join(c for c in ('verspielt' if playful else '', body_class) if c) + '"') if (playful or body_class) else ''}>
 {HEADER}
 <main>
 {body}
@@ -632,7 +633,7 @@ def office_page():
 <h2>In 4 Schritten zum Büro-Wichteln</h2>
 <ol>
   <li><b>Budget festlegen:</b> Im Büro sind 10 Euro üblich, manchmal 5 oder 15 Euro. Wichtig ist, dass es für alle gleich ist und niemand unter Druck gerät.</li>
-  <li><b>Datum festlegen:</b> Meist die Weihnachtsfeier oder der letzte Arbeitstag vor den Feiertagen.</li>
+  <li><b>Datum festlegen:</b> Meist die Weihnachtsfeier oder der letzte Arbeitstag vor den Feiertagen. Zum Einsammeln der Namen eignet sich unsere <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>.</li>
   <li><b>Online auslosen:</b> Namen eintragen, auf Wunsch Paare ausschließen (zum Beispiel Teamleitung und Stellvertretung) und jedem seinen geheimen Link schicken – per WhatsApp, Teams-Chat oder E-Mail.</li>
   <li><b>Bescherung:</b> Geschenke einsammeln und gemeinsam auspacken – oder per Würfelspiel verteilen.</li>
 </ol>
@@ -664,6 +665,52 @@ def office_page():
     page('/wichteln-im-buero/', 'Wichteln im Büro: Regeln, Budget & Ablauf fürs Team',
          'Büro-Wichteln organisieren: übliches Budget, faire Regeln, Ablauf im Homeoffice, Spiel-Varianten und Ideen für Kollegen – mit kostenloser Online-Auslosung.', body,
          crumb='Wichteln im Büro', mascot='geschenk')
+
+
+def invite_page():
+    qr = (SRC / 'grafik' / 'qr-wichtellos.svg').read_text(encoding='utf-8').strip()
+    qr = qr.replace('<svg ', '<svg class="poster-qr" aria-hidden="true" ', 1)
+    lines = '\n'.join('<li><span></span></li>' for _ in range(20))
+    body = f'''<article>
+<div class="no-print">
+<h1>Wichteln Einladung: Vorlage zum Aushängen</h1>
+<p class="lead">Aushang mit Teilnehmerliste für Büro, Lehrerzimmer, Verein oder Treppenhaus: ausdrucken, Datum und Budget eintragen, aufhängen – wer mitmachen will, schreibt sich ein. Ausgelost wird danach in 1 Minute online.</p>
+<p><button type="button" class="btn-primary" onclick="window.print()">🖨️ Vorlage drucken</button></p>
+</div>
+
+<div class="poster">
+  <img class="poster-mascot" src="/grafik/wichtel-geschenk.svg" alt="" width="120" height="152">
+  <p class="poster-kicker">Achtung, Wichtel-Alarm! 🎁</p>
+  <h2 class="poster-title">Wir wichteln!</h2>
+  <div class="poster-fields">
+    <p>Bescherung am: <span></span></p>
+    <p>Budget: <span class="short"></span> €</p>
+    <p>Eintragen bis: <span></span></p>
+  </div>
+  <p class="poster-sub">Wer macht mit? Einfach Namen eintragen:</p>
+  <ol class="poster-list">
+{lines}
+  </ol>
+  <div class="poster-foot">
+    {qr}
+    <p><b>Ausgelost wird online mit wichtellos.de</b><br>Jeder bekommt seinen geheimen Link aufs Handy. Wer sich drückt, bekommt Schrott. 😉</p>
+  </div>
+</div>
+
+<div class="no-print">
+<h2>So geht's</h2>
+<ol>
+  <li><b>Drucken</b> und Datum, Budget sowie den Anmeldeschluss eintragen.</li>
+  <li><b>Aufhängen</b> – in der Kaffeeküche, im Lehrerzimmer oder am Schwarzen Brett.</li>
+  <li><b>Namen abtippen</b> und auf <a href="/">wichtellos.de</a> auslosen. Jeder bekommt seinen geheimen Link per WhatsApp – oder ihr druckt <b>Wichtel-Lose mit QR-Code</b> zum Verteilen.</li>
+</ol>
+{CTA}
+<p>Mehr Tipps fürs Team: <a href="/wichteln-im-buero/">Wichteln im Büro</a> · Spielideen: <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> und <a href="/schrottwichteln/">Schrottwichteln</a></p>
+</div>
+</article>'''
+    page('/wichteln-einladung-vorlage/', 'Wichteln Einladung: Vorlage zum Aushängen (kostenlos)',
+         'Kostenlose Wichteln-Einladung zum Ausdrucken: Aushang mit Teilnehmerliste für Büro, Schule und Verein. Danach in 1 Minute online auslosen.', body,
+         crumb='Einladung zum Aushängen', body_class='poster-page')
 
 
 # ---------- Rechtliches (Entwürfe) ----------
@@ -799,7 +846,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-einladung-vorlage/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -845,6 +892,7 @@ def main():
     dice_page()
     scrap_page()
     office_page()
+    invite_page()
     legal_pages()
     extras()
     print('Fertig:', sorted(str(p.relative_to(OUT)) for p in OUT.rglob('*') if p.is_file()))

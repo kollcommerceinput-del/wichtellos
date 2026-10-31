@@ -286,3 +286,33 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .usp li span { position: absolute; left: 0; top: 0; }
 .usp b { color: var(--text); }
 @media (min-width: 760px) { .usp { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
+
+/* Aushang „Wir wichteln!“ mit Teilnehmerliste */
+.poster { position: relative; background: #fff; border: 3px solid var(--primary); border-radius: 18px; padding: 26px 26px 20px; margin: 18px 0 26px; box-shadow: 0 6px 18px rgba(43,27,23,.06); }
+.poster-mascot { position: absolute; right: 18px; top: 14px; width: 84px; height: auto; }
+.poster-kicker { margin: 0; color: var(--primary); font-weight: 700; font-size: 17px; }
+.poster-title { font-family: 'Fredoka', system-ui, sans-serif; font-size: 52px; line-height: 1; margin: 6px 0 16px; }
+.poster-fields p { margin: 6px 0; font-size: 17px; display: flex; gap: 8px; align-items: flex-end; }
+.poster-fields span { flex: 1; border-bottom: 2px dotted #9b8b84; min-height: 22px; }
+.poster-fields span.short { flex: 0 0 70px; }
+.poster-sub { font-weight: 700; margin: 16px 0 6px; }
+.poster-list { margin: 0 0 14px; padding-left: 28px; columns: 2; column-gap: 28px; }
+.poster-list li { break-inside: avoid; height: 34px; }
+.poster-list li span { display: block; border-bottom: 1px solid #c9bbb3; height: 26px; }
+.poster-foot { display: flex; gap: 14px; align-items: center; border-top: 2px dashed var(--border); padding-top: 12px; }
+.poster-qr { width: 92px; height: 92px; flex: none; }
+.poster-foot p { margin: 0; font-size: 15px; color: var(--muted); }
+.poster-foot b { color: var(--text); }
+@media (max-width: 480px) { .poster-title { font-size: 40px; } .poster-mascot { width: 60px; } .poster-list { columns: 1; } }
+@media print {
+  body.poster-page header.top, body.poster-page footer, body.poster-page .no-print, body.poster-page .crumbs, body.poster-page .page-mascot { display: none !important; }
+  body.poster-page main { padding: 0; max-width: none; }
+  body.poster-page .poster { box-shadow: none; margin: 0; padding: 14mm 14mm 10mm; border-width: 2px; min-height: 270mm; display: flex; flex-direction: column; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body.poster-page .poster-title { font-size: 64pt; }
+  body.poster-page .poster-mascot { width: 34mm; }
+  body.poster-page .poster-fields p { font-size: 15pt; margin: 4mm 0; }
+  body.poster-page .poster-list { columns: 2; flex: 1; }
+  body.poster-page .poster-list li { height: 12mm; font-size: 13pt; }
+  body.poster-page .poster-qr { width: 32mm; height: 32mm; }
+  body.poster-page .poster-foot p { font-size: 12pt; }
+}

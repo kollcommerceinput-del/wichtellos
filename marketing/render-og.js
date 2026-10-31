@@ -19,6 +19,7 @@ const PAGES = [
   ['wichtelgeschenke-selber-machen', 'wichtel-geschenk.svg', 'Wichtelgeschenke selber machen', 'Einfache DIY-Ideen mit Anleitung'],
   ['wichteln-wuerfeln-regeln', 'wichtel-wuerfel.svg', 'Wichteln mit Würfeln', 'Regeln, Ablauf & Varianten'],
   ['schrottwichteln', 'wichtel-wuerfel.svg', 'Schrottwichteln', 'Regeln & 24 lustige Ideen'],
+  ['wichteln-einladung-vorlage', 'wichtel-geschenk.svg', 'Einladung zum Aushängen', 'Wir wichteln! Vorlage mit Teilnehmerliste'],
   ['wichteln-im-buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team'],
 ];
 
