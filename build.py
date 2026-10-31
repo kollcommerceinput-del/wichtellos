@@ -4,7 +4,7 @@ import re
 import shutil
 import sys
 from html import escape as esc
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from pathlib import Path
 
 SRC = Path(__file__).parent
@@ -1055,6 +1055,52 @@ def invite_page():
          crumb='Einladung zum Aushängen', body_class='poster-page')
 
 
+SHARE_TEXT = ('Wichteln wir dieses Jahr? 🎄\nKostenlos auslosen, jeder bekommt seinen geheimen Link '
+              'per WhatsApp, E-Mail oder zum Kopieren 🎁')
+
+
+def share_page():
+    """Kurze Adresse /teilen/ für Status, Posts und Aushänge: Weiterleiten mit fertigem Text (keine Daten, nicht in der Sitemap)."""
+    full = f'{SHARE_TEXT}\n{DOMAIN}/'
+    wa = 'https://wa.me/?text=' + quote(full, safe='')
+    mail = 'mailto:?subject=' + quote('Wichteln wir dieses Jahr? 🎄', safe='') + '&body=' + quote(full, safe='')
+    preview = esc(full).replace('\n', '<br>')
+    body = f'''<article>
+<h1>WichtelLos weiterleiten 📲</h1>
+<p class="lead">Danke fürs Weitersagen! Die Nachricht ist schon fertig – du wählst nur noch aus, an wen sie geht.</p>
+<div class="card">
+  <p class="tip">{preview}</p>
+  <p><a class="btn-primary big" href="{esc(wa)}">💬 Per WhatsApp weiterleiten</a></p>
+  <div class="row2">
+    <a class="btn-secondary" href="{esc(mail)}">✉️ Per E-Mail</a>
+    <button type="button" class="btn-secondary" id="share-copy">🔗 Link kopieren</button>
+  </div>
+  <p><button type="button" class="btn-secondary big" id="share-more" hidden>📤 Andere App …</button></p>
+</div>
+<p>Selbst eine Gruppe auslosen? <a href="/">Zur Wichtel-Auslosung</a></p>
+</article>
+<script>
+(() => {{
+  const url = '{DOMAIN}/';
+  const copyBtn = document.getElementById('share-copy');
+  copyBtn.addEventListener('click', async () => {{
+    try {{ await navigator.clipboard.writeText(url); }} catch {{
+      const ta = document.createElement('textarea'); ta.value = url; document.body.append(ta); ta.select();
+      try {{ document.execCommand('copy'); }} catch {{ /* nichts */ }} ta.remove();
+    }}
+    copyBtn.textContent = '✓ Kopiert'; setTimeout(() => {{ copyBtn.textContent = '🔗 Link kopieren'; }}, 1800);
+  }});
+  const more = document.getElementById('share-more');
+  if (navigator.share) {{
+    more.hidden = false;
+    more.addEventListener('click', () => navigator.share({{ title: 'WichtelLos', text: {json.dumps(SHARE_TEXT, ensure_ascii=False)}, url }}).catch(() => {{}}));
+  }}
+}})();
+</script>'''
+    page('/teilen/', 'WichtelLos weiterleiten', 'Wichteln online auslosen – kostenlos und ohne Anmeldung. Hier mit einem Tipp an Freunde und Kollegen weiterleiten.',
+         body, noindex=True, mascot='winkt')
+
+
 # ---------- Rechtliches (Entwürfe) ----------
 
 COMPANY = ('KOLL Commerce UG (haftungsbeschränkt)<br>Leuchtenfabrik · Haus A, 1. Etage<br>'
@@ -1243,6 +1289,7 @@ def main():
     history_page()
     door_page()
     invite_page()
+    share_page()
     legal_pages()
     extras()
     print('Fertig:', sorted(str(p.relative_to(OUT)) for p in OUT.rglob('*') if p.is_file()))
