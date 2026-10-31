@@ -256,3 +256,26 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .tip-btn.has-tip { border-style: solid; border-color: var(--gold); color: var(--text); background: #fff7dc; }
 .tip-input { margin: -2px 0 10px; font-size: 15px; }
 .r-tip { background: #fff7dc; border: 1px solid var(--gold); border-radius: 10px; padding: 8px 12px; font-weight: 600; }
+
+/* Wichtel-Lose zum Ausdrucken: 2 x 3 pro A4-Seite */
+.print-card h2 { margin-top: 0; }
+.lose { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 16px 0; }
+.los { border: 1.5px dashed #9b8b84; border-radius: 6px; background: #fff; display: flex; flex-direction: column; text-align: center; overflow: hidden; }
+.los-out { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 14px 10px; background: #fff8f0; border-top: 6px solid var(--primary); }
+.los-kicker { font-size: 14px; color: var(--muted); }
+.los-name { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 30px; line-height: 1.1; color: var(--primary); word-break: break-word; }
+.los-group { font-size: 13px; color: var(--muted); }
+.los-fold { font-size: 11px; letter-spacing: .08em; color: #9b8b84; border-top: 1px dashed #9b8b84; padding: 2px 0; }
+.los-in { flex: 1; display: flex; align-items: center; gap: 10px; padding: 10px 12px; }
+.los-qr svg { width: 120px; height: 120px; display: block; }
+.los-txt { display: flex; flex-direction: column; gap: 4px; text-align: left; font-size: 13px; color: var(--muted); }
+.los-txt b { color: var(--text); font-size: 15px; }
+.los-url { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; color: var(--primary); font-size: 16px; }
+@media print {
+  @page { size: A4; margin: 10mm; }
+  body { background: #fff !important; }
+  body.printing header.top, body.printing footer, body.printing .print-bar, body.printing .confetti { display: none !important; }
+  .lose { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; }
+  .los { height: 92mm; border-radius: 0; break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .los-qr svg { width: 36mm; height: 36mm; }
+}
