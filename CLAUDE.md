@@ -106,8 +106,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       später Premium-Druckvorlagen im Ko-fi-Shop (Einnahmen der UG, nicht „Spende“ nennen)
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
-- [ ] Pinterest: die 11 Pins + 3 Reels sind veröffentlicht (Stand 01.11.). Noch ohne Pin, Bild in `marketing/pins/` liegt bereit:
-      unter-30, schule-kita, weihnachtsfeier, wichtelgedichte, wichteltuer; 4 Pinnwände + „Wichteln: Ideen & Reels“ (Instagram-Import). Fuß: „Folge uns“ Instagram/Pinterest/TikTok
+- [x] Pinterest: 16 Pins + 3 Reels veröffentlicht; 01.11. dazu unter-30 (Budget), schule-kita + wichteltuer (Kinder),
+      weihnachtsfeier (Schrottwichteln & Wichtelspiele), wichtelgedichte (Ideen & Reels). Neue Seite = neuer Pin; 4 Pinnwände + „Wichteln: Ideen & Reels“ (Instagram-Import). Fuß: „Folge uns“ Instagram/Pinterest/TikTok
 - Pinterest Trends DE (31.10.): „wichteln“ steigt ab Oktober, Höhepunkt Mitte–Ende November, ab Anfang Dezember fast weg →
   Pins bis spätestens Mitte November live; früh anziehend: „wichtelgeschenke selbstgemacht“, „kleine geschenke basteln weihnachten“.
   Achtung: „Wichtel streiche“/„Wichtelhaus“ = Wichteltür-Brauch (Kinder), anderes Thema
