@@ -115,7 +115,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
       Knopf „🎁 Ein Geschenk für den Wichtel“ (Toni: Geschenk statt Kaffee, nicht bettelnd) (`.kofi-btn`, reiner Link) im FOOTER + Seite des geheimen Links (`.kofi-hint`
       in tool.html); Datenschutz Abschn. 6 ergänzt. Ko-fi-Einstellungen: Simple tip, Euro, Wording „Tip“, Mindestbetrag 5 €,
-      Membership mode „Off“ (keine Monats-Abos), deutsche Dankesnachricht, Bio + Website wichtellos.de. Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
+      Membership mode „Off“ (keine Monats-Abos), deutsche Dankesnachricht, Bio + Website wichtellos.de.
+      Galerie: nur Album „So geht's: Wichteln in 1 Minute auslosen“ (7 Folien `social/auslosen`). Toni: dort keine
+      Geschenkideen/Kaufwerbung, nur dezent zeigen, was WichtelLos macht. Ko-fi-Oberfläche bleibt Englisch (keine Spracheinstellung). Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
       Später Premium-Druckvorlagen im Ko-fi-Shop
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
