@@ -28,6 +28,14 @@ const SETS = {
     { big: '🧩', kicker: 'Idee 5', title: 'Knobelspiel', text: 'Ein kleines Geduldsspiel für kurze Pausen.' },
     { cta: 'Über 100 Ideen ansehen', title: 'Noch mehr Ideen?', text: 'Geschenkfinder nach Budget & Alter – Link in der Bio 🎁' },
   ],
+  lose: [
+    { pose: 'wichtel-geschenk.svg', title: 'Wichtel-Lose zum Ausdrucken', text: 'Für die Weihnachtsfeier – kostenlos', swipe: true },
+    { big: '🖨️', kicker: 'Schritt 1', title: 'Auslosen & drucken', text: 'Gruppe online auslosen, dann die Lose ausdrucken – 6 pro A4-Seite.' },
+    { big: '📱', kicker: 'Schritt 2', title: 'QR-Code scannen', text: 'Außen der Name, innen der QR-Code – Handy drauf, Geheimnis gelüftet.' },
+    { big: '🧒', kicker: 'Für Kinder', title: 'Ganz ohne Handy', text: 'Auf Wunsch steht innen einfach der Name. Perfekt für Kita und Klasse.' },
+    { big: '📋', kicker: 'Extra', title: 'Aushang „Wir wichteln!“', text: 'Mit Teilnehmerliste zum Eintragen – für Kaffeeküche oder Klassenzimmer.' },
+    { cta: 'Lose kostenlos erstellen', title: 'Bereit für die Feier?', text: 'Link in der Bio 🎁' },
+  ],
   wichteltuer: [
     { pose: 'wichtel-schlaeft.svg', title: 'Wichteltür: die ersten 6 Streiche', text: 'Für den Advent mit Kindern – zum Nachmachen', swipe: true },
     { big: '1', kicker: '1. Dezember', title: 'Einzug', text: 'Die Tür steht plötzlich da. Davor: ein Brief und Fußspuren aus Puderzucker.' },

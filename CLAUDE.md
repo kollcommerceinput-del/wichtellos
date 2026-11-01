@@ -33,7 +33,7 @@ Antworten auf Deutsch.
 - `assets/fonts/` – Fredoka (OFL, selbst gehostet) für Überschriften; Lizenzen stehen in der README
 - `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `marketing/render-pins.js` – Pinterest-Pins 1000×1500 je Ratgeberseite nach `marketing/pins/` (`node marketing/render-pins.js`)
-- `marketing/render-social.js` – Instagram-/TikTok-Karussells (`SETS`: auslosen, buero-unter-10, wichteltuer) nach
+- `marketing/render-social.js` – Instagram-/TikTok-Karussells (`SETS`: auslosen, buero-unter-10, lose, wichteltuer) nach
   `marketing/social/<set>/`, je Folie `ig-NN.png` (1080×1350) und `tt-NN.png` (1080×1920) (01.11.)
 - Amazon-Direktlinks: `product_links(query, asin)` in `build.py` – Produktlink `/dp/ASIN?tag=` + Suchlink „weitere Modelle“ als
   Rückfall. Seit 01.11. bei SUPPLIES (Würfel, Kraftpapier-Tüten) und DOOR_SHOP (Set, Figur, Lichterkette). Keine Preise/Amazon-Fotos zeigen
@@ -111,7 +111,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] 01.11.: Instagram-Storys + Highlights „So geht's“ (Auslosen, Link-Sticker wichtellos.de) und „Geschenke“ (Büro unter 10 €,
       Link-Sticker /geschenkfinder/). Storys gehen nur über Meta Business Suite (business.facebook.com, Asset wichtellos;
       Datei-Upload per JS-Hook auf input.click). Highlight-Titel am Desktop nur aus Story-Folien wählbar – eigene Titelbilder
-      `marketing/social/highlights/` nur per App. Offen: „Wichteltür“ (Mitte Nov.) und „Lose“
+      `marketing/social/highlights/` nur per App. 01.11. 11:2x: auch „Wichteltür“ (8 Folien, Sticker /wichteltuer/) und „Lose“ (Set `lose`, Sticker
+      wichtellos.de) – 4 Highlights komplett. Achtung: Business Suite lässt bei Mehrfach-Upload gelegentlich eine Folie fallen
+      (v. a. die mit Sticker) → im Highlight-Dialog zählen, fehlende einzeln nachposten und per „Bearbeiten“ ergänzen.
+      Profil: Link wichtellos.de (Toni, App), öffentliche E-Mail = Impressum-Adresse, „Einbetten auf Websites“ an
 - [x] 01.11. 10:40: Reel „Wichteln in 1 Minute auslosen“ (Folien-Video `marketing/social/auslosen/reel-folien.mp4`, 2,5 s/Folie,
       ffmpeg aus imageio_ffmpeg) mit Song „Christmas Is Coming“ (DM Production), Text+Hashtags aus `teilen-texte.md`.
       Musik nur im Reel-Editor der Business Suite (Bearbeiten → Audio, ▶ auf Cover = Hörprobe); Karussell-Beiträge und
