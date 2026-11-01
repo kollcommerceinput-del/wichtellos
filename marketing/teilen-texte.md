@@ -40,3 +40,20 @@ Bilder dazu: `marketing/whatsapp-status.png`, `marketing/linkedin-buero-wichteln
 - **Nachbarschafts- und Eltern-Gruppen auf Facebook / nebenan.de**: nur dort posten, wo Tipps erlaubt sind, nicht spammen.
 - **Eigenes Büro / Verein**: Aushang von `wichtellos.de/wichteln-einladung-vorlage/` ausdrucken und aufhängen.
 - **Bekannte mit Blog oder Firmen-Intranet**: fragen, ob sie wichtellos in einem Beitrag zur Weihnachtsfeier erwähnen (das bringt echte Backlinks).
+
+## TikTok-Fotobeiträge (Bilder `marketing/social/<set>/tt-01…png`, in dieser Reihenfolge hochladen)
+
+### auslosen
+Titel: Wichteln in 1 Minute auslosen 🎁
+> Kein Zettelziehen, kein „Ich hab mich selbst gezogen“ 😅 Namen eintragen, auslosen, jeder bekommt seinen geheimen Link per WhatsApp. Mit heimlichem Tipp („mag Tee“) und Losen zum Ausdrucken. Kostenlos, ohne Anmeldung: wichtellos.de
+> #wichteln #wichtelgeschenk #weihnachten #secretsanta #wichtelgenerator #weihnachtsfeier #familie #lifehack
+
+### buero-unter-10
+Titel: 5 Wichtelgeschenke fürs Büro unter 10 € ☕
+> Du hast die Kollegin aus der Buchhaltung gezogen und keine Ahnung? Diese 5 gehen immer. Welche Idee nimmst du? 👇 Über 100 weitere nach Budget & Alter im Geschenkfinder auf wichtellos.de
+> #wichteln #wichtelgeschenk #wichtelnimbüro #geschenkideen #weihnachtsgeschenk #kollegen #weihnachtsfeier #unter10euro
+
+### wichteltuer
+Titel: Wichteltür: die ersten 6 Streiche 🚪✨
+> Ab 1. Dezember zieht der Wichtel ein! Hier die erste Woche zum Nachmachen – alle 24 Streiche plus Begrüßungsbrief kostenlos auf wichtellos.de. Speichern für später 📌
+> #wichteltür #wichtelstreiche #wichtel #advent #adventszeit #weihnachtenmitkindern #mamaleben #wichtelzeit
