@@ -126,6 +126,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       ffmpeg aus imageio_ffmpeg) mit Song „Christmas Is Coming“ (DM Production), Text+Hashtags aus `teilen-texte.md`.
       Musik nur im Reel-Editor der Business Suite (Bearbeiten → Audio, ▶ auf Cover = Hörprobe); Karussell-Beiträge und
       Foto-Reels haben dort keine Musik. Song wählt Toni nach Gehör. Karussell-Version noch nicht gepostet
+- [x] 01.11. ~13 Uhr: Reel „Wichteln? Ganz simpel.“ (reel-whatsapp.mp4) auf Instagram, Song „Kleine Geschenke“ (Cindy & Bert,
+      von Toni gewählt), Text+8 Hashtags inkl. #wichtelnperwhatsapp. TikTok noch offen
 - [x] 01.11.: LinkedIn (Antonio Koll) Video-Beitrag „Wichteln im Team – in 1 Minute ausgelost“ mit reel-folien.mp4, ohne Musik
       (LinkedIn-Editor hat keine Musikbibliothek; Instagram-Musik darf nicht übernommen werden), Link /wichteln-im-buero/
 - [x] Pinterest: 16 Pins + 3 Reels veröffentlicht; 01.11. dazu unter-30 (Budget), schule-kita + wichteltuer (Kinder),
