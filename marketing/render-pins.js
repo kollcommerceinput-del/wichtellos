@@ -25,6 +25,7 @@ const PINS = [
   ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür: 24 Streiche für den Advent', 'Fertiger Plan, Begrüßungsbrief & Zubehör', '/wichteltuer', 'Plan & Ideen ansehen →'],
   ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtel&shy;gedichte', 'Kurze Reime für die Geschenk-Karte – plus Reim-Generator', '/wichtelgedichte', 'Reime ansehen →'],
   ['weihnachtsfeier', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen fürs Team', '10 Ideen – vom Weihnachtsmarkt bis zur Online-Feier', '/weihnachtsfeier-ideen', '10 Ideen ansehen →'],
+  ['whatsapp', 'wichtel-winkt.svg', 'Wichteln per WhatsApp', 'Auslosen, Links privat verschicken – auch über Distanz', '/wichteln-per-whatsapp', 'Anleitung ansehen →'],
   ['schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Lose ohne Handy, Elternbrief & faires Budget', '/wichteln-schule-kita', 'Ablauf ansehen →'],
 ];
 
