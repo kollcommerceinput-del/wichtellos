@@ -111,7 +111,7 @@ FOOTER = '''<footer>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
     <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">📌 Pinterest</a>
     <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a></p>
-  <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">☕ Spendier dem Wichtel einen Kaffee</a></p>
+  <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">🎁 Ein Geschenk für den Wichtel</a></p>
   <p>© 2026 WichtelLos</p>
 </footer>'''
 
@@ -1204,7 +1204,7 @@ def legal_pages():
 
 <h2>6. Werbelinks zu Amazon und Link zu Ko-fi</h2>
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
-<p>Der Knopf „Spendier dem Wichtel einen Kaffee“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
+<p>Der Knopf „Ein Geschenk für den Wichtel“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
 
 <h2>7. Kontakt per E-Mail</h2>
 <p>Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald sie dafür nicht mehr benötigt werden.</p>

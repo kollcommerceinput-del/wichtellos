@@ -113,7 +113,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
-      Knopf „☕ Spendier dem Wichtel einen Kaffee“ (`.kofi-btn`, reiner Link) im FOOTER + Seite des geheimen Links (`.kofi-hint`
+      Knopf „🎁 Ein Geschenk für den Wichtel“ (Toni: Geschenk statt Kaffee, nicht bettelnd) (`.kofi-btn`, reiner Link) im FOOTER + Seite des geheimen Links (`.kofi-hint`
       in tool.html); Datenschutz Abschn. 6 ergänzt. Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
       Später Premium-Druckvorlagen im Ko-fi-Shop
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
