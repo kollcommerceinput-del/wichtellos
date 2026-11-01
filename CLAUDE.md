@@ -108,6 +108,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       später Premium-Druckvorlagen im Ko-fi-Shop (Einnahmen der UG, nicht „Spende“ nennen)
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
+- [x] 01.11.: Instagram-Storys + Highlights „So geht's“ (Auslosen, Link-Sticker wichtellos.de) und „Geschenke“ (Büro unter 10 €,
+      Link-Sticker /geschenkfinder/). Storys gehen nur über Meta Business Suite (business.facebook.com, Asset wichtellos;
+      Datei-Upload per JS-Hook auf input.click). Highlight-Titel am Desktop nur aus Story-Folien wählbar – eigene Titelbilder
+      `marketing/social/highlights/` nur per App. Offen: „Wichteltür“ (Mitte Nov.) und „Lose“
 - [x] Pinterest: 16 Pins + 3 Reels veröffentlicht; 01.11. dazu unter-30 (Budget), schule-kita + wichteltuer (Kinder),
       weihnachtsfeier (Schrottwichteln & Wichtelspiele), wichtelgedichte (Ideen & Reels). Neue Seite = neuer Pin; 4 Pinnwände + „Wichteln: Ideen & Reels“ (Instagram-Import). Fuß: „Folge uns“ Instagram/Pinterest/TikTok
 - Pinterest Trends DE (31.10.): „wichteln“ steigt ab Oktober, Höhepunkt Mitte–Ende November, ab Anfang Dezember fast weg →
