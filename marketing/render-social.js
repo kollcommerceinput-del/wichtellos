@@ -91,6 +91,19 @@ p{font-size:${tall ? 52 : 46}px;line-height:1.32;margin:0 100px;color:#6d5d57}
       await p.close();
     }
   }
+  // Highlight-Titelbilder (Instagram zeigt den Kreis aus der Mitte)
+  const COVERS = [['so-gehts', 'wichtel-winkt.svg', '#1f6f4a'], ['geschenke', 'wichtel-geschenk.svg', '#c62828'],
+    ['wichteltuer', 'wichtel-schlaeft.svg', '#1f6f4a'], ['lose', 'wichtel-wuerfel.svg', '#f2b705']];
+  const dir = path.join(OUT, 'highlights');
+  fs.mkdirSync(dir, { recursive: true });
+  const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  for (const [name, pose, color] of COVERS) {
+    await p.setContent(`<!doctype html><body style="margin:0;width:1080px;height:1920px;background:#fff8f0;display:flex;align-items:center;justify-content:center">
+      <div style="width:900px;height:900px;border-radius:50%;background:${color};display:flex;align-items:center;justify-content:center">
+      <div style="width:780px;height:780px;border-radius:50%;background:#fff8f0;display:flex;align-items:center;justify-content:center">
+      ${svg(pose).replace('<svg', '<svg style="height:560px;width:auto"')}</div></div></body>`);
+    await p.screenshot({ path: path.join(dir, `cover-${name}.png`) });
+  }
   await b.close();
-  console.log('Karussells in ' + OUT);
+  console.log('Karussells + Highlight-Titel in ' + OUT);
 })();
