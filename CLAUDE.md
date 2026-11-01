@@ -99,8 +99,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
 - [ ] Google-Indexierung: 31.10. nachmittags beantragt (7, dann Kontingent ~7/Tag/Property): Büro, Einladung-Vorlage,
       Geschenkfinder, unter-10, unter-5, Schrottwichteln, Würfeln. Startseite schon indexiert. 01.11. 09:30: Kontingent noch
-      voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). Noch offen, in dieser Reihenfolge: wichteltuer, wichteln-per-whatsapp, selber-machen,
-      fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier, wichtelgedichte, woher-kommt-wichteln
+      voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). 01.11. abends 9 beantragt: wichteltuer, wichteln-per-whatsapp,
+      selber-machen, fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier (10. = Kontingent).
+      Noch offen: wichtelgedichte, woher-kommt-wichteln (ab 02.11. abends). Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
