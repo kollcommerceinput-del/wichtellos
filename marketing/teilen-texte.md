@@ -57,3 +57,8 @@ Titel: 5 Wichtelgeschenke fürs Büro unter 10 € ☕
 Titel: Wichteltür: die ersten 6 Streiche 🚪✨
 > Ab 1. Dezember zieht der Wichtel ein! Hier die erste Woche zum Nachmachen – alle 24 Streiche plus Begrüßungsbrief kostenlos auf wichtellos.de. Speichern für später 📌
 > #wichteltür #wichtelstreiche #wichtel #advent #adventszeit #weihnachtenmitkindern #mamaleben #wichtelzeit
+
+### reel-whatsapp (Video `marketing/reel/reel-whatsapp.mp4`)
+Titel: Wichteln per WhatsApp – ganz simpel 🎁
+> Zettel ziehen war gestern 😅 Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – per WhatsApp, E-Mail oder SMS. Wichtig: Links nur privat schicken, nicht in den Gruppenchat 🤫 Kostenlos, ohne Anmeldung: wichtellos.de
+> #wichteln #wichtelnperwhatsapp #wichtelgeschenk #weihnachten #secretsanta #wichtelgenerator #weihnachtsfeier #lifehack
