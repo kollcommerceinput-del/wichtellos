@@ -114,7 +114,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
       Knopf „🎁 Ein Geschenk für den Wichtel“ (Toni: Geschenk statt Kaffee, nicht bettelnd) (`.kofi-btn`, reiner Link) im FOOTER + Seite des geheimen Links (`.kofi-hint`
-      in tool.html); Datenschutz Abschn. 6 ergänzt. Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
+      in tool.html); Datenschutz Abschn. 6 ergänzt. Ko-fi-Einstellungen: Simple tip, Euro, Wording „Tip“, Mindestbetrag 5 €,
+      Membership mode „Off“ (keine Monats-Abos), deutsche Dankesnachricht, Bio + Website wichtellos.de. Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
       Später Premium-Druckvorlagen im Ko-fi-Shop
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
