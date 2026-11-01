@@ -97,6 +97,7 @@ FOOTER = '''<footer>
     <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
     <a href="/schrottwichteln/">Schrottwichteln</a>
     <a href="/wichteln-im-buero/">Wichteln im Büro</a>
+    <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a>
     <a href="/wichteln-schule-kita/">Schule &amp; Kita</a>
     <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a>
     <a href="/wichteltuer/">Wichteltür</a>
@@ -746,6 +747,60 @@ def school_page():
          crumb='Wichteln in Schule und Kita', mascot='geschenk', playful=True)
 
 
+WA_FAQ = [
+    ('Kann ich die Links einfach in unsere WhatsApp-Gruppe posten?', 'Bitte nicht: Jeder Link verrät, wen die jeweilige Person beschenkt. In die Gruppe gehört nur die Ankündigung – die Links schickst du einzeln im privaten Chat.'),
+    ('Brauchen alle WhatsApp?', 'Nein. Für jede Person gibt es auch „E-Mail“ und „Link kopieren“, etwa für Signal, Telegram, Teams oder SMS. Für Kinder ohne Handy kannst du Lose ausdrucken.'),
+    ('Sieht der Organisator, wer wen gezogen hat?', 'Nur, wenn er fremde Links öffnet. Machst du selbst mit, öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.'),
+    ('Was mache ich, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort schickst du den Link einfach noch einmal.'),
+    ('Kostet das etwas oder braucht man ein Konto?', 'Nein. WichtelLos ist kostenlos, niemand muss sich anmelden oder eine Nummer hinterlegen.'),
+]
+
+
+def whatsapp_page():
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in WA_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in WA_FAQ]}
+    body = f'''<article>
+<h1>Wichteln per WhatsApp: Namen online ziehen und Links verschicken</h1>
+<p class="lead">Keine Zettel, kein Treffen: Mit WichtelLos lost du eure Wichtelgruppe online aus und schickst jedem seinen geheimen Link per WhatsApp. Jeder sieht nur, wen er selbst beschenkt – auch der Organisator nicht, wenn er mitmacht.</p>
+
+<h2>So geht's in 4 Schritten</h2>
+<ol>
+  <li><b>Gruppe anlegen:</b> <a href="/">Auf der Startseite</a> Gruppennamen, Budget und auf Wunsch das Datum der Bescherung eintragen.</li>
+  <li><b>Namen eintragen:</b> Alle Teilnehmer eintragen. Paare, die sich nicht gegenseitig ziehen sollen, schließt du unter „Ausschlüsse“ aus.</li>
+  <li><b>Auslosen:</b> Auf „Jetzt auslosen“ tippen. Für jede Person entsteht ein eigener geheimer Link.</li>
+  <li><b>Per WhatsApp verschicken:</b> Neben jedem Namen auf „WhatsApp“ tippen und den passenden Kontakt wählen. Die Nachricht ist schon fertig: „Hallo …! Hier ist dein geheimer Wichtel-Link …“.</li>
+</ol>
+{CTA}
+
+<h2>Wichtig: Links nicht in die Gruppe posten</h2>
+<p>Jeder Link verrät, wen <b>diese</b> Person beschenkt. Postest du alle Links in den Gruppenchat, kann jeder jeden öffnen – und die Überraschung ist dahin. So klappt es:</p>
+<ul>
+  <li><b>In die WhatsApp-Gruppe:</b> nur die Ankündigung, also Budget, Datum und „Eure Links kommen gleich privat“.</li>
+  <li><b>Im Einzelchat:</b> jeder bekommt nur seinen eigenen Link.</li>
+  <li><b>Machst du selbst mit:</b> Öffne nur deinen eigenen Link.</li>
+</ul>
+
+<h2>Ohne WhatsApp geht's auch</h2>
+<p>Für jede Person gibt es zusätzlich „E-Mail“ und „Link kopieren“ – praktisch für Teams-Chat, Signal oder SMS. Für die Weihnachtsfeier oder Kinder ohne Handy kannst du <b>Wichtel-Lose zum Ausdrucken</b> erstellen, mehr unter <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a>.</p>
+
+<h2>Wichteln auf Distanz</h2>
+<p>Familie in verschiedenen Städten oder Team im Homeoffice? Auslosen per WhatsApp, Geschenke per Post schicken und gemeinsam im Videocall auspacken. Tipp: das Budget inklusive Versand vereinbaren. Mehr fürs Team unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</p>
+
+<h2>Was steht im Link?</h2>
+<p>Die Zuteilung steckt codiert im Link selbst. Sie wird nicht auf unserem Server gespeichert, und es gibt kein Konto. Deshalb gilt: Wer einen Link hat, kann ihn öffnen – also wirklich nur an die richtige Person schicken.</p>
+
+<h2>Häufige Fragen</h2>
+{faq}
+
+<h2>Und jetzt: das passende Geschenk</h2>
+<p>Ideen nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a> – oder im <a href="/geschenkfinder/">Geschenkfinder</a> nach Alter und Interessen filtern.</p>
+</article>'''
+    page('/wichteln-per-whatsapp/', 'Wichteln per WhatsApp: Namen online ziehen & Links verschicken',
+         'Wichteln per WhatsApp: Gruppe online auslosen, jedem seinen geheimen Link schicken – ohne Zettel, ohne Anmeldung. So geht\'s in 4 Schritten, kostenlos.', body,
+         extra=ld(faq_ld), crumb='Wichteln per WhatsApp', mascot='winkt')
+
+
 SUPPLIES = [
     ('„Von deinem Wichtel“-Anhänger', 'Damit das Geschenk anonym bleibt.', 'Geschenkanhänger Wichtel Weihnachten'),
     ('Großer Schaumstoff-Würfel', 'Für Würfelwichteln – gut sichtbar für alle.', 'Schaumstoffwürfel groß', 'B0BZSS2PKR'),
@@ -1236,7 +1291,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1283,6 +1338,7 @@ def main():
     dice_page()
     scrap_page()
     office_page()
+    whatsapp_page()
     school_page()
     party_page()
     poems_page()

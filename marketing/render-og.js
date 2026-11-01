@@ -21,6 +21,7 @@ const PAGES = [
   ['schrottwichteln', 'wichtel-wuerfel.svg', 'Schrottwichteln', 'Regeln & 24 lustige Ideen'],
   ['wichteln-einladung-vorlage', 'wichtel-geschenk.svg', 'Einladung zum Aushängen', 'Wir wichteln! Vorlage mit Teilnehmerliste'],
   ['wichteln-im-buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team'],
+  ['wichteln-per-whatsapp', 'wichtel-winkt.svg', 'Wichteln per WhatsApp', 'Namen online ziehen, Links privat verschicken'],
   ['wichteln-schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Ablauf, Elternbrief & Lose ohne Handy'],
   ['weihnachtsfeier-ideen', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen', '10 Ideen fürs Team – vom Markt bis online'],
   ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtelgedichte', 'Kurze Reime für die Geschenk-Karte'],

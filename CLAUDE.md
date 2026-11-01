@@ -15,6 +15,8 @@ Antworten auf Deutsch.
 - `assets/finder.js` – Filter des Geschenkfinders (`/geschenkfinder/`, Filter auch per Adresse `?fuer=&budget=&mag=&q=`)
 - `build.py`: `office_page()` – `/wichteln-im-buero/` (Büro-Wichteln, verlinkt Geschenkfinder `?fuer=office`); Suchbegriffe
   Wichtelgenerator/Julklapp/Secret Santa stehen in Startseiten-Titel, Lead und FAQ (31.10.)
+- `build.py`: `whatsapp_page()` – `/wichteln-per-whatsapp/` (Anleitung + `WA_FAQ` mit FAQPage-Schema; Grund: Google Trends
+  „wichteln whatsapp“ und „wichteln namen ziehen online“ steigend, 01.11.); Sitemap jetzt 19 URLs
 - `build.py`: `school_page()` – `/wichteln-schule-kita/` (Ablauf Klasse/Kita, Budget, Elternbrief, Lose ohne Handy; 01.11.)
 - `build.py`: `party_page()` `/weihnachtsfeier-ideen/`, `poems_page()` `/wichtelgedichte/` (eigene Reime in `POEMS` + Reim-Generator
   im Browser, nichts gespeichert), `history_page()` `/woher-kommt-wichteln/` (01.11.); Sitemap jetzt 17 URLs
@@ -92,7 +94,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
 - [ ] Google-Indexierung: 31.10. nachmittags beantragt (7, dann Kontingent ~7/Tag/Property): Büro, Einladung-Vorlage,
       Geschenkfinder, unter-10, unter-5, Schrottwichteln, Würfeln. Startseite schon indexiert. 01.11. 09:30: Kontingent noch
-      voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). Noch offen, in dieser Reihenfolge: wichteltuer, selber-machen,
+      voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). Noch offen, in dieser Reihenfolge: wichteltuer, wichteln-per-whatsapp, selber-machen,
       fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier, wichtelgedichte, woher-kommt-wichteln
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
