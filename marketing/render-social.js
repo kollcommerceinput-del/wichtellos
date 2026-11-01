@@ -42,6 +42,18 @@ const SETS = {
     { big: '🎁', kicker: 'Schritt 10', title: 'Geheimnis lüften', text: 'Link antippen, sehen, wen man beschenkt – mit Geschenkideen.' },
     { cta: 'Jetzt auslosen', title: 'Speichern & ausprobieren', text: 'Link in der Bio 🎁' },
   ],
+  whatsapp8: [ // Business Suite erlaubt max. 10 Bilder pro Beitrag
+    { pose: 'wichtel-winkt.svg', title: 'Wichteln per WhatsApp', text: 'In 8 einfachen Schritten – kostenlos', swipe: true },
+    { big: '🌐', kicker: 'Schritt 1', title: 'wichtellos.de öffnen', text: 'Am Handy oder Computer – ohne App, ohne Anmeldung.' },
+    { big: '🏷️', kicker: 'Schritt 2', title: 'Gruppe benennen', text: 'Zum Beispiel „Familie 2026“ oder „Büro-Weihnachten“.' },
+    { big: '💶', kicker: 'Schritt 3', title: 'Budget & Datum', text: 'Wie viel darf das Geschenk kosten, wann ist Bescherung?' },
+    { big: '✏️', kicker: 'Schritt 4', title: 'Namen eintragen', text: 'Alle, die mitmachen – ab 3 Personen. Optional mit Tipp: „mag Tee“.' },
+    { big: '🎲', kicker: 'Schritt 5', title: 'Jetzt auslosen', text: 'Ein Tipp – jeder bekommt seinen eigenen geheimen Link.' },
+    { big: '💬', kicker: 'Schritt 6', title: 'Per WhatsApp senden', text: 'Neben jedem Namen auf „WhatsApp“ tippen, Kontakt wählen – fertig.' },
+    { big: '🤫', kicker: 'Schritt 7', title: 'Nur privat schicken', text: 'Nicht alle Links in den Gruppenchat – sonst ist die Überraschung weg.' },
+    { big: '🎁', kicker: 'Schritt 8', title: 'Geheimnis lüften', text: 'Link antippen, sehen, wen man beschenkt – mit Geschenkideen.' },
+    { cta: 'Jetzt auslosen', title: 'Speichern & ausprobieren', text: 'Link in der Bio 🎁' },
+  ],
   lose: [
     { pose: 'wichtel-geschenk.svg', title: 'Wichtel-Lose zum Ausdrucken', text: 'Für die Weihnachtsfeier – kostenlos', swipe: true },
     { big: '🖨️', kicker: 'Schritt 1', title: 'Auslosen & drucken', text: 'Gruppe online auslosen, dann die Lose ausdrucken – 6 pro A4-Seite.' },
