@@ -116,6 +116,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       ffmpeg aus imageio_ffmpeg) mit Song „Christmas Is Coming“ (DM Production), Text+Hashtags aus `teilen-texte.md`.
       Musik nur im Reel-Editor der Business Suite (Bearbeiten → Audio, ▶ auf Cover = Hörprobe); Karussell-Beiträge und
       Foto-Reels haben dort keine Musik. Song wählt Toni nach Gehör. Karussell-Version noch nicht gepostet
+- [x] 01.11.: LinkedIn (Antonio Koll) Video-Beitrag „Wichteln im Team – in 1 Minute ausgelost“ mit reel-folien.mp4, ohne Musik
+      (LinkedIn-Editor hat keine Musikbibliothek; Instagram-Musik darf nicht übernommen werden), Link /wichteln-im-buero/
 - [x] Pinterest: 16 Pins + 3 Reels veröffentlicht; 01.11. dazu unter-30 (Budget), schule-kita + wichteltuer (Kinder),
       weihnachtsfeier (Schrottwichteln & Wichtelspiele), wichtelgedichte (Ideen & Reels). Neue Seite = neuer Pin; 4 Pinnwände + „Wichteln: Ideen & Reels“ (Instagram-Import). Fuß: „Folge uns“ Instagram/Pinterest/TikTok
 - Pinterest Trends DE (31.10.): „wichteln“ steigt ab Oktober, Höhepunkt Mitte–Ende November, ab Anfang Dezember fast weg →
