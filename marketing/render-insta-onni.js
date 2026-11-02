@@ -24,6 +24,7 @@ const COVERS = [
   ['lose', 'jubel', '#f2b705'],
   ['wichteltuer', 'schlaeft', '#1f6f4a'],
   ['kinder', 'herz', '#c62828'],
+  ['zubehoer', 'daumen', '#f2b705'],
 ];
 
 const story = (pin, hint) => `<!doctype html><html><head><meta charset="utf-8"><style>
