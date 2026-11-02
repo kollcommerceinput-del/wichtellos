@@ -51,6 +51,8 @@ Antworten auf Deutsch.
   Tipp Themenfeld: Vorschlag per find-Ref anklicken; Strg+A im leeren Feld hinterlässt ein „a“ → vor dem Veröffentlichen prüfen.
 - `marketing/reel/render-reel-onni.js` → `reel-onni.mp4` (9,5 s, ohne Ton): Onni stellt sich vor, Ausmalbilder, Sticker, Namen,
   Abspann wichtellos.de. Toni 02.11.: Videos knapp halten, keine langen Szenen.
+  02.11.: TikTok (Toni), Pinterest-Video-Pin (Kinder; Wichteln, Malvorlagen, Kindergarten). Erklär-Galerie `galerie.mp4` als
+  Video-Pin (Ideen & Reels; Wichteln, Weihnachtsparty, Weihnachten, Link Startseite). Instagram-Reel vorbereitet – Musik + Teilen: Toni.
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
