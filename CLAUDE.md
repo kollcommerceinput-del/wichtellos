@@ -49,6 +49,10 @@ Antworten auf Deutsch.
   wichtelnamen → /wichteltuer/#wichtelname (Kinder; Wichteln, Weihnachtsbräuche, Kindergarten),
   tuer-vorlagen → /wichteltuer/ (Kinder; Wichteln, Weihnachtsbasteln, Kindergarten).
   Tipp Themenfeld: Vorschlag per find-Ref anklicken; Strg+A im leeren Feld hinterlässt ein „a“ → vor dem Veröffentlichen prüfen.
+- `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
+  (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
+  angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
+  Bildmitte und lässt sich oft nicht verschieben → Bildmitte (≈46 % Höhe) frei halten. Mehrere Bilder > 10 MB → als JPG hochladen.
 - `marketing/render-gallery3d.js` → `marketing/social/wichtel3d/`: Erklär-Galerie mit 3D-Wichtel, 8 Folien (Werkstatt, Namen, Auslosen,
   Link schicken, Tipp, Lose, Geheimnis lüften, CTA) als `ig-NN` 1080×1350, `tt-NN` 1080×1920, `pin-NN` 1000×1500 + `galerie.mp4`
   (24 s, 3 s/Folie, ohne Ton). Bildausschnitt je Folie über `focus` (02.11.)

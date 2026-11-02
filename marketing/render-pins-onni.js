@@ -57,10 +57,10 @@ const PINS = {
 <h1>Wie heißt<br>dein <em>Wichtel?</em></h1><div class="line"></div><p class="sub">36 Wichtelnamen mit Bedeutung – plus Begrüßungsbrief</p></div>
 <div class="stage" style="top:590px;height:720px">
   ${[['Onni', 70, 60, 20, '#c62828', 6], ['Lumi', 52, 150, 650, '#1f6f4a', -4], ['Pelle', 48, 40, 690, '#2b1b17', 5], ['Svea', 50, 330, 640, '#c62828', -6],
-     ['Nisse', 46, 520, 40, '#1f6f4a', -5], ['Ronja', 46, 395, 40, '#2b1b17', 4], ['Knut', 44, 80, 260, '#1f6f4a', -3], ['Pippa', 48, 250, 30, '#c62828', -4],
+     ['Nisse', 46, 520, 40, '#1f6f4a', -5], ['Ronja', 46, 395, 40, '#2b1b17', 4], ['Pippa', 48, 250, 30, '#c62828', -4],
      ['Tomte', 42, 560, 650, '#c62828', 3], ['Smilla', 44, 230, 700, '#1f6f4a', 7]]
     .map(([n, s, t, l, c, r]) => `<span style="position:absolute;top:${t}px;left:${l}px;font-family:Fredoka,sans-serif;font-size:${s}px;color:${c};background:#fff;padding:8px 26px;border-radius:999px;box-shadow:0 8px 20px rgba(43,27,23,.12);transform:rotate(${r}deg)">${n}</span>`).join('')}
-  <img class="onni" src="${png('sticker-winkt.png')}" style="left:290px;top:120px;width:420px">
+  <img class="onni" src="${png('sticker-winkt.png')}" style="left:320px;top:250px;width:360px">
 </div>${foot('Namen-Generator ausprobieren →')}`),
 
   'tuer-vorlagen': doc(`<div class="head"><span class="badge">Gratis zum Ausdrucken</span>
