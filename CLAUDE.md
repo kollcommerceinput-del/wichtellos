@@ -38,6 +38,10 @@ Antworten auf Deutsch.
 - `marketing/reel/render-reel-whatsapp.js` → `reel-whatsapp.mp4` (17,5 s, „Wichteln? Ganz simpel.“: Namen, Link per
   WhatsApp/E-Mail/Messenger/SMS, Geheimnis lüften, Abspann mit /wichteln-per-whatsapp). Kein WhatsApp-Logo (Markenrecht).
   Standbilder zur Kontrolle: `node marketing/reel/render-reel-whatsapp.js "1.5,8.8,15.5"`
+- `marketing/reel/render-reel-wichtel3d.js` → `reel-wichtel3d.mp4` (25,8 s, 3D-Plüsch-Wichtel: Umschlag, Namen, Auslosen, Geschenk,
+  Abspann wichtellos.de, mit Umgebungston). Clips in `marketing/reel/wichtel3d/` aus Google Flow (Projekt „Nov 02 - 10:17“,
+  Omni 1.1 Flash, 12 Credits/Clip, Startbilder von Toni aus Gemini). Gemini-Funkeln unten rechts: Clip 1–3 erst ab 2,2 s, Clip 4
+  gezoomt. 3D-Wichtel nur für Social/Pins/Vorschaubilder; Tool/Startseite/Icons bleiben SVG. Beim Posten „Mit KI erstellt“ angeben (02.11.)
 - `marketing/render-social.js` – Instagram-/TikTok-Karussells (`SETS`: auslosen, buero-unter-10, whatsapp (10 Schritte), whatsapp8 (8 Schritte, max. 10 Bilder Business Suite), lose, wichteltuer) nach
   `marketing/social/<set>/`, je Folie `ig-NN.png` (1080×1350) und `tt-NN.png` (1080×1920) (01.11.)
 - Amazon-Direktlinks: `product_links(query, asin)` in `build.py` – Produktlink `/dp/ASIN?tag=` + Suchlink „weitere Modelle“ als
