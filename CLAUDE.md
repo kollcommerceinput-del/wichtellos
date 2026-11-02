@@ -43,6 +43,12 @@ Antworten auf Deutsch.
     + Druckvorlagen (Begrüßungs-/Abschiedsbrief 4×A6, Urkunde, 6 Türschilder)
   - Tool: Onni-Sprechblase nach dem Auslosen (+ Konfetti) und auf der Seite des geheimen Links („Onni flüstert“)
   - `marketing/render-onni-druck.js` erzeugt alle PDFs nach `fotos/onni/` (Quellen `marketing/onni/`); Sticker freigestellt per Python
+- `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
+  ausmalbilder → /wichtel-ausmalbilder/ (Kinder; Malvorlagen, Weihnachtsmalvorlagen, Wichteln, Kindergarten),
+  sticker → /wichtel-ausmalbilder/#sticker (Ideen & Reels; Wichteln, Weihnachtsgrüße, Weihnachten),
+  wichtelnamen → /wichteltuer/#wichtelname (Kinder; Wichteln, Weihnachtsbräuche, Kindergarten),
+  tuer-vorlagen → /wichteltuer/ (Kinder; Wichteln, Weihnachtsbasteln, Kindergarten).
+  Tipp Themenfeld: Vorschlag per find-Ref anklicken; Strg+A im leeren Feld hinterlässt ein „a“ → vor dem Veröffentlichen prüfen.
 - `marketing/render-gallery3d.js` → `marketing/social/wichtel3d/`: Erklär-Galerie mit 3D-Wichtel, 8 Folien (Werkstatt, Namen, Auslosen,
   Link schicken, Tipp, Lose, Geheimnis lüften, CTA) als `ig-NN` 1080×1350, `tt-NN` 1080×1920, `pin-NN` 1000×1500 + `galerie.mp4`
   (24 s, 3 s/Folie, ohne Ton). Bildausschnitt je Folie über `focus` (02.11.)
