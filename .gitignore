@@ -2,3 +2,5 @@ node_modules/
 __pycache__/
 *.zip
 undefined/
+!fotos/onni/onni-sticker.zip
+!website/fotos/onni/onni-sticker.zip
