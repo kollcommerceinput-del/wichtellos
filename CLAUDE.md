@@ -140,6 +140,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       MyHappyMoments/meinbildkalender (EPC ≤0,04 €) nicht. Bei Zusage: Fotokalender/-tasse in Selber-machen, Oma/Opa, unter 20 €.
       02.11.: **Thalia DE abgelehnt** („Aktuell noch zu geringe organische Reichweite“). Bücher bleiben Amazon-Suchlinks.
       Neu bewerben, wenn Search Console/Social spürbar Reichweite zeigen (frühestens Ende Nov., sonst 2027).
+      02.11.: **Tchibo DE abgelehnt** – Grund „Keine URL angegeben“ (formaler Fehler, nicht Reichweite). Vor neuer Bewerbung
+      im Awin-Profil prüfen, ob wichtellos.de als Werbefläche (Promotional Space) eingetragen ist und bei der Bewerbung mitgeht.
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
