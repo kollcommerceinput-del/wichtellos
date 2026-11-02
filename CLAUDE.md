@@ -36,6 +36,9 @@ Antworten auf Deutsch.
 - `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `marketing/render-pins.js` – Pinterest-Pins 1000×1500 je Ratgeberseite nach `marketing/pins/` (`node marketing/render-pins.js`)
 - `marketing/render-pinterest-cover.js` → `pinterest-cover-3d.png` (1920×1080): Pinterest-Profil-Titelbild mit 3D-Werkstatt (seit 02.11. live)
+- `marketing/render-gallery3d.js` → `marketing/social/wichtel3d/`: Erklär-Galerie mit 3D-Wichtel, 8 Folien (Werkstatt, Namen, Auslosen,
+  Link schicken, Tipp, Lose, Geheimnis lüften, CTA) als `ig-NN` 1080×1350, `tt-NN` 1080×1920, `pin-NN` 1000×1500 + `galerie.mp4`
+  (24 s, 3 s/Folie, ohne Ton). Bildausschnitt je Folie über `focus` (02.11.)
 - `marketing/render-pins3d.js` – Foto-Pins mit 3D-Wichtel nach `marketing/pins3d/` (Standbilder `marketing/reel/wichtel3d/stills/`, 02.11.)
   02.11. alle 6 veröffentlicht (auslosen, whatsapp, wichtelgedichte, lose-drucken → „Ideen & Reels“; buero → „Ideen & Reels“; unter-10 →
   „nach Budget“), alle KI-markiert + Alt-Text. Themen-Tags nur bei buero + unter-10 (bei den ersten 4 vergessen, nachträglich nicht möglich).
