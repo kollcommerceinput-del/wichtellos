@@ -437,3 +437,16 @@ body { overflow-x: clip; }
 @media (max-width: 380px) { .hero-btns a { width: 100%; text-align: center; } .step-onni { width: 44px; height: 44px; } }
 @media print { .hero-3d, .usp img, .step-onni { display: none; } }
 .cta-box .mascot-small { width: 64px; }
+
+/* Hauptmenü Variante A (Toni 02.11.): Seiten mit Amazon-Links nach oben, Geschenkideen als roter Knopf;
+   schmal (< 900 px) = eigene Zeile unter dem Logo zum Wischen */
+.top .bar { flex-wrap: wrap; row-gap: 4px; }
+.top nav { flex-wrap: nowrap; align-items: center; }
+.top nav a.nav-hi { background: var(--primary); color: #fff; border-radius: 999px; padding: 7px 14px; }
+.top nav a.nav-hi:hover { background: var(--primary-dark); color: #fff; }
+@media (max-width: 900px) {
+  .top nav { order: 2; width: 100%; overflow-x: auto; gap: 16px; padding-bottom: 2px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .top nav::-webkit-scrollbar { display: none; }
+  .top nav a { white-space: nowrap; flex: none; }
+}
+@media print { .top nav { display: none; } }
