@@ -1501,6 +1501,17 @@ def main():
     legal_pages()
     extras()
     print('Fertig:', sorted(str(p.relative_to(OUT)) for p in OUT.rglob('*') if p.is_file()))
+    # Schutz: Dateien, die Git ignoriert, gehen nie live (02.11.: Sticker-ZIP fehlte wegen *.zip in .gitignore)
+    import subprocess
+    files = [p.as_posix() for p in OUT.rglob('*') if p.is_file()]
+    # -z + Bytes: unter Windows würde text=True die Zeilenenden zu \r\n machen und nichts mehr passen
+    ign = subprocess.run(['git', 'check-ignore', '-z', '--stdin'], input='\0'.join(files).encode(),
+                         capture_output=True).stdout.decode().split('\0')
+    ign = [f for f in ign if f]
+    if ign:
+        print('\n!!! ACHTUNG: Diese Dateien ignoriert Git – sie gehen NICHT live (.gitignore anpassen):')
+        for f in ign:
+            print('   ', f)
 
 
 if __name__ == '__main__':

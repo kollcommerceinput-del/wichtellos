@@ -96,6 +96,8 @@ Antworten auf Deutsch.
   `site.webmanifest` schreibt `build.py`
 - `render-images.js` – erzeugt `og-image.png` und `apple-touch-icon.png` aus `favicon.svg` und `wichtel.svg`
 - `website/` – **generiert**, nie von Hand bearbeiten. Nach jeder Änderung: `python3 build.py website`
+- `tests/live-check.py` – nach jedem Deploy: prüft alle Seiten + jede verlinkte Datei live auf 200 (02.11. eingeführt, nachdem die
+  Sticker-ZIP wegen `*.zip` in `.gitignore` nie online war). `build.py` warnt am Ende, wenn Git eine Datei in `website/` ignoriert.
 - `tests/` – Playwright-Tests (Server vorher starten: `cd website && python3 -m http.server 8766`)
 
 ## Wie das Tool funktioniert
