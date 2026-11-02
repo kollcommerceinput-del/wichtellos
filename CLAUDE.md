@@ -61,6 +61,7 @@ Antworten auf Deutsch.
   Knöpfe „Los geht’s“ → #form und „So geht’s in 25 s“ → #so-gehts), Handy: Bild oben, Text darunter auf Dunkelbraun. USP-Karten mit
   Onni-Stickern überlappen das Bild, Onni-Sticker an den Schritten 1–3 (`.step-onni`) und im Geschenk-Hinweis. Das frühere Werkstatt-Foto
   unter dem Formular ist entfallen (`<!--FOTO-->` weg).
+  Deko links/rechts (≥1180 px) und CTA-Box „Noch nicht ausgelost?“ zeigen jetzt Onni-Sticker statt der gezeichneten Wichtel (Tannen bleiben).
 - 3D-Wichtel auf der Website (Toni 02.11.: „freundlicher“): `ai_photo()` in `build.py`, Bilder `fotos/wichtel3d-*.webp`, Bildunterschrift
   „Bild: KI-generiert“. Startseite: Werkstatt-Bild (statt Unsplash-Raureif). Ratgeber: kleines Hochformat rechts neben dem Lead
   (`.photo-ai`, ersetzt dort den SVG-Wichtel): Budgetseiten + Büro (Geschenk), Schule/Kita (Los), WhatsApp (Umschlag), Gedichte (Feder).

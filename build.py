@@ -117,7 +117,7 @@ FOOTER = '''<footer>
 </footer>'''
 
 CTA = '''<div class="cta-box">
-  <div class="cta-text"><img class="mascot-small" src="/wichtel.svg" alt="" width="44" height="56"><p>Noch nicht ausgelost? Wichtelgruppe in 1 Minute erstellen – kostenlos und ohne Anmeldung.</p></div>
+  <div class="cta-text"><img class="mascot-small" src="/fotos/onni/sticker-winkt.webp" alt="" width="512" height="512" loading="lazy"><p>Noch nicht ausgelost? Wichtelgruppe in 1 Minute erstellen – kostenlos und ohne Anmeldung.</p></div>
   <a class="btn-primary" href="/">Jetzt auslosen</a>
 </div>'''
 

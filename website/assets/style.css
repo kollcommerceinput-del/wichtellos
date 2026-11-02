@@ -368,10 +368,10 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 @media (min-width: 1180px) {
   main::before, main::after { content: ''; position: fixed; bottom: 0; width: min(260px, calc((100vw - 760px) / 2)); height: 300px;
     z-index: -1; pointer-events: none; background-repeat: no-repeat; }
-  main::before { left: 2vw; background-image: url(/grafik/wichtel-geschenk.svg), url(/grafik/seite-baeume.svg);
-    background-size: 96px auto, contain; background-position: 62% 92%, bottom left; }
-  main::after { right: 2vw; transform: scaleX(-1); background-image: url(/grafik/wichtel-winkt.svg), url(/grafik/seite-baeume.svg);
-    background-size: 104px auto, contain; background-position: 62% 92%, bottom left; }
+  main::before { left: 2vw; background-image: url(/fotos/onni/sticker-geschenk.webp), url(/grafik/seite-baeume.svg);
+    background-size: 150px auto, contain; background-position: 58% 100%, bottom left; }
+  main::after { right: 2vw; transform: scaleX(-1); background-image: url(/fotos/onni/sticker-winkt.webp), url(/grafik/seite-baeume.svg);
+    background-size: 150px auto, contain; background-position: 58% 100%, bottom left; }
 }
 @media print { main::before, main::after { display: none !important; } }
 /* Ko-fi-Knopf (reiner Link, kein Fremd-Skript) */
@@ -436,3 +436,4 @@ body { overflow-x: clip; }
 }
 @media (max-width: 380px) { .hero-btns a { width: 100%; text-align: center; } .step-onni { width: 44px; height: 44px; } }
 @media print { .hero-3d, .usp img, .step-onni { display: none; } }
+.cta-box .mascot-small { width: 64px; }
