@@ -36,6 +36,9 @@ Antworten auf Deutsch.
 - `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `marketing/render-pins.js` – Pinterest-Pins 1000×1500 je Ratgeberseite nach `marketing/pins/` (`node marketing/render-pins.js`)
 - `marketing/render-pins3d.js` – Foto-Pins mit 3D-Wichtel nach `marketing/pins3d/` (Standbilder `marketing/reel/wichtel3d/stills/`, 02.11.)
+  02.11. alle 6 veröffentlicht (auslosen, whatsapp, wichtelgedichte, lose-drucken → „Ideen & Reels“; buero → „Ideen & Reels“; unter-10 →
+  „nach Budget“), alle KI-markiert + Alt-Text. Themen-Tags nur bei buero + unter-10 (bei den ersten 4 vergessen, nachträglich nicht möglich).
+  Regel: jeder Pin mit Themen, Alt-Text, KI-Label.
 - `marketing/reel/render-reel-whatsapp.js` → `reel-whatsapp.mp4` (17,5 s, „Wichteln? Ganz simpel.“: Namen, Link per
   WhatsApp/E-Mail/Messenger/SMS, Geheimnis lüften, Abspann mit /wichteln-per-whatsapp). Kein WhatsApp-Logo (Markenrecht).
   Standbilder zur Kontrolle: `node marketing/reel/render-reel-whatsapp.js "1.5,8.8,15.5"`
