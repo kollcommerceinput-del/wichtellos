@@ -146,6 +146,24 @@ def ai_photo(name, alt, sizes=((480, 720), (800, 1200)), cls='photo photo-ai'):
             f'<figcaption>Bild: KI-generiert</figcaption></figure>')
 
 
+# Erklärvideo mit 3D-Wichtel (marketing/reel/reel-wichtel3d.mp4, fürs Web 540x960 ~2 MB): lädt erst nach Klick (site.js, data-video)
+VIDEO = {'src': '/fotos/wichtel3d-video.mp4', 'poster': '/fotos/wichtel3d-video-poster.webp', 'dauer': 'PT26S', 'datum': '2026-11-02'}
+
+
+def video_block():
+    return (f'<figure class="video-wichtel"><button type="button" data-video="{VIDEO['src']}" '
+            f'aria-label="Video abspielen: Wichteln in 25 Sekunden erklärt">'
+            f'<img src="{VIDEO['poster']}" width="540" height="960" alt="Plüsch-Wichtel hält einen Umschlag – Wichteln? Ganz simpel." loading="lazy" decoding="async">'
+            f'<span class="play" aria-hidden="true">▶</span></button>'
+            f'<figcaption>So geht’s in 25 Sekunden · KI-generiert</figcaption></figure>')
+
+
+def video_ld():
+    return {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': 'Wichteln online auslosen – so geht’s in 25 Sekunden',
+            'description': 'Namen eintragen, auslosen, jeder bekommt seinen geheimen Link per WhatsApp, E-Mail oder SMS – Geheimnis lüften und beschenken. Kostenlos, ohne Anmeldung.',
+            'thumbnailUrl': DOMAIN + VIDEO['poster'], 'contentUrl': DOMAIN + VIDEO['src'], 'uploadDate': VIDEO['datum'], 'duration': VIDEO['dauer']}
+
+
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
     if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
@@ -774,10 +792,11 @@ def whatsapp_page():
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in WA_FAQ]}
     body = f'''<article>
 <h1>Wichteln per WhatsApp: Namen online ziehen und Links verschicken</h1>
-{ai_photo('wichtel3d-umschlag', 'Plüsch-Wichtel hält einen versiegelten Umschlag in einer gemütlichen Werkstatt')}
+{ai_photo('wichtel3d-los', 'Plüsch-Wichtel zieht ein Los aus einer alten Holzkiste')}
 <p class="lead">Keine Zettel, kein Treffen: Mit WichtelLos lost du eure Wichtelgruppe online aus und schickst jedem seinen geheimen Link per WhatsApp. Jeder sieht nur, wen er selbst beschenkt – auch der Organisator nicht, wenn er mitmacht.</p>
 
 <h2>So geht's in 4 Schritten</h2>
+{video_block()}
 <ol>
   <li><b>Gruppe anlegen:</b> <a href="/">Auf der Startseite</a> Gruppennamen, Budget und auf Wunsch das Datum der Bescherung eintragen.</li>
   <li><b>Namen eintragen:</b> Alle Teilnehmer eintragen. Paare, die sich nicht gegenseitig ziehen sollen, schließt du unter „Ausschlüsse“ aus.</li>
@@ -1265,6 +1284,7 @@ def faq_html():
     items = '\n'.join(f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>' for q, a in FAQ)
     return f'''    <section class="how">
       <h2>So funktioniert's</h2>
+      {video_block()}
       <ol>
 {steps}
       </ol>
@@ -1287,7 +1307,7 @@ def tool_page():
            'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR'}, 'publisher': ORG}
     site = {'@context': 'https://schema.org', '@type': 'WebSite', 'name': 'WichtelLos', 'url': DOMAIN + '/',
             'inLanguage': 'de-DE', 'publisher': ORG}
-    extra = ld(app, faq, site)
+    extra = ld(app, faq, site, video_ld())
     html = (SRC / 'tool.html').read_text(encoding='utf-8')
     html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenloser Wichtelgenerator',
                                              'Kostenloser Wichtelgenerator: in 1 Minute auslosen, geheime Links per WhatsApp, Tipps für den Wichtel und Lose mit QR-Code zum Ausdrucken. Ohne Anmeldung.',

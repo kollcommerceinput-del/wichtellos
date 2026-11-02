@@ -17,4 +17,18 @@
   });
 
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+
+  // Erklärvideo: erst nach Klick laden (kein Datenverbrauch vorher)
+  document.querySelectorAll('[data-video]').forEach((b) => b.addEventListener('click', () => {
+    const v = document.createElement('video');
+    v.src = b.dataset.video;
+    v.poster = b.querySelector('img').src;
+    v.controls = true;
+    v.playsInline = true;
+    v.width = 540;
+    v.height = 960;
+    b.replaceWith(v);
+    v.play().catch(() => {});
+    v.focus();
+  }));
 })();

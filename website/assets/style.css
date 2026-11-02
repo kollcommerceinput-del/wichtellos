@@ -352,6 +352,16 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .photo-ai figcaption { text-align: center; }
 @media (max-width: 600px) { .photo-ai { width: 150px; margin-left: 14px; } }
 @media print { .photo { display: none; } }
+.how { display: flow-root; }
+.video-wichtel { float: right; width: 230px; margin: 4px 0 14px 22px; }
+.video-wichtel button { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(43,27,23,.18); }
+.video-wichtel img, .video-wichtel video { display: block; width: 100%; height: auto; border-radius: 14px; background: #2b1b17; }
+.video-wichtel .play { position: absolute; left: 50%; top: 74%; transform: translate(-50%,-50%); width: 72px; height: 72px; border-radius: 50%; background: rgba(198,40,40,.93); color: #fff; font-size: 30px; line-height: 72px; text-align: center; padding-left: 5px; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: transform .15s; }
+.video-wichtel button:hover .play, .video-wichtel button:focus-visible .play { transform: translate(-50%,-50%) scale(1.08); }
+.video-wichtel button:focus-visible { outline: 3px solid #f2b705; outline-offset: 3px; }
+.video-wichtel figcaption { font-size: .78rem; color: #6d5d57; margin-top: 6px; text-align: center; }
+@media (max-width: 600px) { .video-wichtel { float: none; width: 200px; margin: 8px auto 18px; } }
+@media print { .video-wichtel { display: none; } }
 .alt-link { font-size: .85rem; margin-left: 6px; }
 .alt-link a { color: var(--muted, #6d5d57); }
 /* Breite Bildschirme: Winterwald mit Wichteln links und rechts neben dem Inhalt (nur Deko) */

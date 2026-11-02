@@ -51,6 +51,9 @@ Antworten auf Deutsch.
   „Bild: KI-generiert“. Startseite: Werkstatt-Bild (statt Unsplash-Raureif). Ratgeber: kleines Hochformat rechts neben dem Lead
   (`.photo-ai`, ersetzt dort den SVG-Wichtel): Budgetseiten + Büro (Geschenk), Schule/Kita (Los), WhatsApp (Umschlag), Gedichte (Feder).
   Tool, Icons und Animation bleiben SVG.
+- Erklärvideo (02.11.): `video_block()` in `build.py` → `fotos/wichtel3d-video.mp4` (540×960, 2,1 MB, mit Ton) + Poster;
+  lädt erst nach Klick (`data-video` in `site.js`, kein Autoplay, kein YouTube). Startseite „So funktioniert's“ + WhatsApp-Seite;
+  VideoObject-Schema auf der Startseite. Neu erzeugen: Reel rendern, dann ffmpeg scale=540:960 crf 28.
 - `marketing/render-social.js` – Instagram-/TikTok-Karussells (`SETS`: auslosen, buero-unter-10, whatsapp (10 Schritte), whatsapp8 (8 Schritte, max. 10 Bilder Business Suite), lose, wichteltuer) nach
   `marketing/social/<set>/`, je Folie `ig-NN.png` (1080×1350) und `tt-NN.png` (1080×1920) (01.11.)
 - Amazon-Direktlinks: `product_links(query, asin)` in `build.py` – Produktlink `/dp/ASIN?tag=` + Suchlink „weitere Modelle“ als
