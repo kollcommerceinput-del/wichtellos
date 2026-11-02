@@ -59,9 +59,10 @@ Antworten auf Deutsch.
 - Amazon-Direktlinks: `product_links(query, asin)` in `build.py` – Produktlink `/dp/ASIN?tag=` + Suchlink „weitere Modelle“ als
   Rückfall. Seit 01.11. bei SUPPLIES (Würfel, Kraftpapier-Tüten) und DOOR_SHOP (Set, Figur, Lichterkette). Keine Preise/Amazon-Fotos zeigen
   (PartnerNet-Regeln). ASINs ab und zu auf „Auf Lager“ prüfen; Geschenkfinder/Geschenkseiten bleiben Suchlinks.
-- `fotos/` – Unsplash-Fotos (Unsplash-Lizenz, kein Unsplash+), selbst gehostet als WebP in 2 Breiten, eingebunden über `photo()` in
-  `build.py` mit Namensnennung + Link. Nur Ratgeberseiten (Woher kommt Wichteln, Weihnachtsfeier, Wichteltür), nicht Tool/Startseite.
-  Regeln: keine erkennbaren Gesichter, keine Marken/Logos im Ausschnitt (ggf. zuschneiden), nie direkt von Unsplash einbinden (Datenschutz).
+- `fotos/` – Bilder der Website: 3D-Wichtel (`wichtel3d-*`, KI aus Google Flow, Quellen `marketing/reel/wichtel3d/stills/`) als WebP
+  in 2 Breiten über `ai_photo()`, dazu das Erklärvideo. Seit 02.11. keine Unsplash-Fotos mehr (`photo()` bleibt für spätere Fotos:
+  Unsplash-Lizenz, nie direkt von Unsplash einbinden, keine Gesichter/Logos). 3D-Szenen: werkstatt, umschlag, feder, los, geschenk,
+  wuerfel, schrott, lupe, basteln, tuer, kinder, feier (Bilder in Flow kosten im Pro-Abo keine Credits, Videos schon)
 - `og/` – Vorschaubild (1200×630) je Ratgeberseite, `build.py` setzt es automatisch als og:image; neu erzeugen mit
   `node marketing/render-og.js` (neue Seite = dort eintragen). Startseite nutzt weiter `og-image.png`
 - `render-icons.js` – erzeugt `favicon.ico` (16/32/48), `favicon-48/96.png`, `icon-192/512.png` aus `favicon.svg`;

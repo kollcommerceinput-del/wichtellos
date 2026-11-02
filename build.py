@@ -501,6 +501,7 @@ def kids_page():
 <p><a class="more-link" href="/geschenkfinder/?fuer={age}">Alle Ideen für {esc(AGE_LABELS[age])} im Geschenkfinder →</a></p>''')
     body = f'''<article>
 <h1>Wichtelgeschenke für Kinder und Teenager</h1>
+{ai_photo('wichtel3d-kinder', 'Plüsch-Wichtel sitzt zwischen Holzspielzeug: Schaukelpferd, Bauklötze, Eisenbahn und Teddy')}
 <p class="lead">Ob Kindergarten, Schulklasse, Sportverein oder Familie: Hier findest du Wichtelgeschenke, die zum Alter passen – von Seifenblasen für die Kleinen bis zum Escape-Spiel für Teenager.</p>
 {CTA}
 {chr(10).join(sections)}
@@ -544,6 +545,7 @@ def diy_page():
     cards = '\n'.join(idea_card(i) for i in sets)
     body = f'''<article>
 <h1>Wichtelgeschenke selber machen</h1>
+{ai_photo('wichtel3d-basteln', 'Plüsch-Wichtel bastelt mit buntem Papier, Bändern und Keksgläsern')}
 <p class="lead">Selbst gemachte Geschenke sind persönlich, günstig und kommen fast immer gut an. Diese {len(DIY)} Ideen gelingen auch ohne Bastel-Talent – die meisten in unter einer Stunde.</p>
 {CTA}
 {chr(10).join(blocks)}
@@ -565,6 +567,7 @@ def diy_page():
 def dice_page():
     body = f'''<article>
 <h1>Wichteln mit Würfeln: Regeln, Ablauf und Varianten</h1>
+{ai_photo('wichtel3d-wuerfel', 'Plüsch-Wichtel mit roter Zipfelmütze hält einen großen Holzwürfel')}
 <p class="lead">Beim Würfelwichteln entscheidet der Würfel, wer am Ende welches Geschenk mit nach Hause nimmt. Das sorgt für Spannung, Gelächter und so manchen Tausch in letzter Sekunde – perfekt für Weihnachtsfeiern mit Kollegen, Freunden oder der Familie.</p>
 <p class="no-print"><button type="button" class="btn-secondary" data-print>🖨️ Regeln ausdrucken</button></p>
 
@@ -645,6 +648,7 @@ def scrap_page():
 </div>''' for t, q in buy)
     body = f'''<article>
 <h1>Schrottwichteln: Regeln und 24 lustige Ideen</h1>
+{ai_photo('wichtel3d-schrott', 'Plüsch-Wichtel sitzt grinsend auf einem Berg kurioser Schrottgeschenke mit Teekanne, Quietscheente und Lavalampe')}
 <p class="lead">Beim Schrottwichteln wird nichts gekauft: Jeder bringt etwas mit, das zu Hause herumliegt und niemand mehr braucht – je kurioser, desto besser. Das kostet nichts, schont die Umwelt und sorgt garantiert für Lacher.</p>
 
 <h2>Die Regeln</h2>
@@ -900,8 +904,8 @@ def door_page():
 </div>''' for t, x, *r in DOOR_SHOP)
     body = f'''<article>
 <h1>Wichteltür: Ideen, 24 Streiche und Zubehör</h1>
+{ai_photo('wichtel3d-tuer', 'Kleine rote Wichteltür in der Fußleiste, aus der ein Plüsch-Wichtel herausschaut, davor Mehl-Fußspuren')}
 <p class="lead">Ab dem 1. Dezember zieht ein Wichtel ein: Eine kleine Tür an der Fußleiste, jede Nacht ein neuer Streich – und am Morgen große Augen. Hier findest du, wie du die Wichteltür startest, einen fertigen Plan für alle 24 Tage, einen Begrüßungsbrief und das passende Zubehör.</p>
-{photo('wichtel-figuren', ((700, 317), (1060, 480)), 'Drei kleine Wichtelfiguren mit Strickmützen und weißem Bart auf einem Regal', 'Sergej', 'https://unsplash.com/photos/hQpFp87WQO8')}
 
 <h2>Was ist eine Wichteltür?</h2>
 <p>Die Wichteltür ist ein Adventsbrauch aus Skandinavien, der bei uns seit einigen Jahren immer beliebter wird. Eine Miniatur-Tür wird an die Wand oder Fußleiste gestellt – dahinter wohnt im Advent ein Wichtel. Er bleibt unsichtbar, schreibt Briefe, stellt nachts kleinen Unfug an und verabschiedet sich an Heiligabend wieder. Mit dem <a href="/">Wichteln unter Erwachsenen</a> hat das wenig zu tun, aber beides lebt vom selben Zauber: Jemand tut heimlich etwas Schönes.</p>
@@ -949,8 +953,8 @@ def door_page():
 def party_page():
     body = f'''<article>
 <h1>Weihnachtsfeier-Ideen fürs Team: 10 Ideen, die gut ankommen</h1>
+{ai_photo('wichtel3d-feier', 'Drei Plüsch-Wichtel feiern an einem festlichen Tisch mit Kerzen, Keksen und Kakao')}
 <p class="lead">Ob kleines Team oder ganze Abteilung: Eine gute Weihnachtsfeier braucht keinen großen Aufwand – aber einen Plan, der zu euch passt. Hier sind 10 Ideen vom Weihnachtsmarkt bis zur Online-Feier, plus Tipps zu Planung und Budget.</p>
-{photo('wichtel-weihnachtsmarkt', ((800, 533), (1200, 800)), 'Weihnachtsstand mit Wichtelfiguren, Schneekugeln und Weihnachtsdeko', 'X F', 'https://unsplash.com/photos/ugrNyyXC-0M')}
 
 <h2>Unterwegs</h2>
 <ol>
@@ -1071,8 +1075,8 @@ def poems_page():
 def history_page():
     body = f'''<article>
 <h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
+{ai_photo('wichtel3d-lupe', 'Plüsch-Wichtel betrachtet ein kleines Geschenk durch eine große Lupe')}
 <p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
-{photo('wichtel-strickmuetzen', ((480, 600), (800, 1000)), 'Zwei Wichtel mit roten Strickmützen und weißem Bart hängen an einer Schnur', 'Nguyen Mazic', 'https://unsplash.com/photos/w-VBf-zoWRY', 'photo photo-tall')}
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
 <p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>
