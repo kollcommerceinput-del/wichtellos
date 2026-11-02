@@ -124,6 +124,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Google 12:25 erneut „Kontingent überschritten“
 - [x] 3 neue Adressen bei Bing übermittelt (alle 11 drin); Sitemap in der Search Console neu gesendet (30.10.,
       zeigte direkt danach noch 8 Seiten – Google liest sie später neu, in ein paar Tagen auf 11 prüfen)
+- [ ] Bing-Index 02.11. (URL-Prüfung): 6 von 20 indiziert (Start, unter-10, Geschenkfinder, Kinder, Würfeln, Wichteltür),
+      Rest „Erkannt, aber nicht gecrawlt“ (alle übermittelt, Bing crawlt neue Domains langsam). Bing-Hinweis „Alt-Attribut fehlt“
+      = dekorative Bilder mit alt="" (gewollt). site:-Suche bei Bing zeigt noch nichts → Site-Explorer/URL-Prüfung nutzen
 - [ ] Google-Indexierung: 31.10. nachmittags beantragt (7, dann Kontingent ~7/Tag/Property): Büro, Einladung-Vorlage,
       Geschenkfinder, unter-10, unter-5, Schrottwichteln, Würfeln. Startseite schon indexiert. 01.11. 09:30: Kontingent noch
       voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). 01.11. abends 9 beantragt: wichteltuer, wichteln-per-whatsapp,
