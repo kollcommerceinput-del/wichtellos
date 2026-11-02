@@ -132,6 +132,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Membership mode „Off“ (keine Monats-Abos), deutsche Dankesnachricht, Bio + Website wichtellos.de.
       Galerie: nur Album „So geht's: Wichteln in 1 Minute auslosen“ (7 Folien `social/auslosen`). Toni: dort keine
       Geschenkideen/Kaufwerbung, nur dezent zeigen, was WichtelLos macht. Ko-fi-Oberfläche bleibt Englisch (keine Spracheinstellung). Buchhaltung: Umsatz 19 % der UG, keine Spendenquittungen, nie „Spende“ nennen.
+      02.11. aufgehübscht (Toni: „Potenzial nach oben“): Farbe #c62828 statt Ko-fi-Blau, Cover = 3D-Werkstatt (`marketing/kofi-cover-3d.jpg`),
+      Status „🎄 Wichtel-Saison läuft – frohes Auslosen!“, angepinnter Bild-Beitrag „Hallo, ich bin der Wichtel von WichtelLos“
+      (`marketing/kofi-intro-3d.jpg`, Text ohne Betteln/„Spende“). Achtung: „Pin to top“ und Datei-Uploads können den Tab kurz einfrieren.
       Später Premium-Druckvorlagen im Ko-fi-Shop
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
