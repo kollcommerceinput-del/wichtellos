@@ -348,6 +348,9 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .photo figcaption { font-size: .78rem; color: #6d5d57; margin-top: 6px; text-align: right; }
 .photo figcaption a { color: inherit; }
 .photo-tall { max-width: 360px; margin-left: auto; margin-right: auto; }
+.photo-ai { float: right; width: 220px; margin: 4px 0 14px 22px; }
+.photo-ai figcaption { text-align: center; }
+@media (max-width: 600px) { .photo-ai { width: 150px; margin-left: 14px; } }
 @media print { .photo { display: none; } }
 .alt-link { font-size: .85rem; margin-left: 6px; }
 .alt-link a { color: var(--muted, #6d5d57); }

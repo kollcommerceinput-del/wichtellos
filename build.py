@@ -138,8 +138,16 @@ def photo(name, sizes, alt, author, url, cls='photo'):
             f'<figcaption>Foto: <a href="{url}" rel="nofollow noopener" target="_blank">{esc(author)} / Unsplash</a></figcaption></figure>')
 
 
+# 3D-Plüsch-Wichtel (KI-generiert mit Google Gemini/Flow, Standbilder aus marketing/reel/wichtel3d/), Hochformat 2:3
+def ai_photo(name, alt, sizes=((480, 720), (800, 1200)), cls='photo photo-ai'):
+    (w1, h1), (w2, h2) = sizes
+    return (f'<figure class="{cls}"><img src="/fotos/{name}-{w2}.webp" srcset="/fotos/{name}-{w1}.webp {w1}w, /fotos/{name}-{w2}.webp {w2}w" '
+            f'sizes="' + ('(max-width: 600px) 150px, 220px' if 'photo-ai' in cls else '(max-width: 720px) 100vw, 680px') + f'" width="{w2}" height="{h2}" alt="{esc(alt)}" loading="{'eager' if 'photo-ai' in cls else 'lazy'}" decoding="async">'
+            f'<figcaption>Bild: KI-generiert</figcaption></figure>')
+
+
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
-    if mascot:
+    if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if crumb:
         nav, trail = crumbs(path, crumb)
@@ -363,6 +371,7 @@ def gift_page(budget):
     tips = '\n'.join(f'<li>{esc(t)}</li>' for t in g['tips'])
     body = f'''<article>
 <h1>Wichtelgeschenke unter {budget} Euro</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
 <p class="lead">{esc(g['intro'])}</p>
 <div class="chips">
 {chips}
@@ -654,6 +663,7 @@ def office_page():
     n_office = sum(1 for i in IDEAS if i['office'])
     body = f'''<article>
 <h1>Wichteln im Büro: Regeln, Budget und Ablauf</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
 <p class="lead">Büro-Wichteln ist der Klassiker vor Weihnachten: Jeder im Team beschenkt eine Kollegin oder einen Kollegen, ausgelost per Los. Mit ein paar klaren Regeln wird es für alle entspannt – auch für die, die sich kaum kennen oder im Homeoffice arbeiten.</p>
 
 <h2>In 4 Schritten zum Büro-Wichteln</h2>
@@ -701,6 +711,7 @@ def office_page():
 def school_page():
     body = f'''<article>
 <h1>Wichteln in der Schulklasse und Kita: so klappt's</h1>
+{ai_photo('wichtel3d-los', 'Plüsch-Wichtel zieht ein Los aus einer alten Holzkiste')}
 <p class="lead">Wichteln mit Kindern macht riesig Spaß – wenn das Auslosen fair ist und keiner leer ausgeht. Hier findest du den Ablauf für Klasse, Kita und Verein, ein faires Budget, einen Elternbrief zum Kopieren und Wichtel-Lose, für die kein Kind ein Handy braucht.</p>
 
 <h2>Ablauf in 5 Schritten</h2>
@@ -763,6 +774,7 @@ def whatsapp_page():
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in WA_FAQ]}
     body = f'''<article>
 <h1>Wichteln per WhatsApp: Namen online ziehen und Links verschicken</h1>
+{ai_photo('wichtel3d-umschlag', 'Plüsch-Wichtel hält einen versiegelten Umschlag in einer gemütlichen Werkstatt')}
 <p class="lead">Keine Zettel, kein Treffen: Mit WichtelLos lost du eure Wichtelgruppe online aus und schickst jedem seinen geheimen Link per WhatsApp. Jeder sieht nur, wen er selbst beschenkt – auch der Organisator nicht, wenn er mitmacht.</p>
 
 <h2>So geht's in 4 Schritten</h2>
@@ -977,6 +989,7 @@ def poems_page():
     cards = '\n'.join(f'<figure class="poem"><figcaption>{esc(k)}</figcaption><p>{esc(t).replace(chr(10), "<br>")}</p></figure>' for k, t in POEMS)
     body = f'''<article>
 <h1>Wichtelgedichte: kurze Reime für die Geschenk-Karte</h1>
+{ai_photo('wichtel3d-feder', 'Plüsch-Wichtel schreibt mit einer Feder auf eine Pergamentrolle')}
 <p class="lead">Ein kleiner Reim macht aus jedem Wichtelgeschenk etwas Besonderes – und verrät trotzdem nicht, von wem es kommt. Hier findest du kurze Wichtelgedichte für Kollegen, Familie, Kinder und Schrottwichteln, dazu einen Generator für einen persönlichen Reim.</p>
 
 <h2>Persönlichen Wichtel-Reim erstellen</h2>
@@ -1282,7 +1295,7 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
-    html = html.replace('<!--FOTO-->', photo('wichtel-raureif', ((800, 534), (1200, 800)), 'Drei Stoffwichtel mit roten Zipfelmützen und weißem Bart stehen im Raureif', 'Brigitta Schneiter', 'https://unsplash.com/photos/_SB32j-cVrU'))
+    html = html.replace('<!--FOTO-->', ai_photo('wichtel3d-werkstatt', 'Plüsch-Wichtel mit roter Zipfelmütze schnitzt ein Holzpferdchen in einer gemütlichen Weihnachtswerkstatt', ((800, 533), (1152, 768)), 'photo'))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 
