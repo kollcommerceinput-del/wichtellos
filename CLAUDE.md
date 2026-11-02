@@ -143,6 +143,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       02.11.: **Tchibo DE abgelehnt** – Grund „Keine URL angegeben“ (formaler Fehler, nicht Reichweite). Vor neuer Bewerbung
       im Awin-Profil prüfen, ob wichtellos.de als Werbefläche (Promotional Space) eingetragen ist und bei der Bewerbung mitgeht.
       Ursache: Werbefläche war bei Awin nicht validiert → Meta-Tag `<meta name="verification" …>` (Awin, in `build.py`, nicht löschen) eingebaut, 02.11. „Site validieren“ geklickt (Antwort true) – Schild-Symbol zeigte danach noch „validieren“, später prüfen.
+      Awin-Social-Links: Blog-URL = instagram.com/wichtellos (kein X-Konto, keine Facebook-Seite im Business-Portfolio).
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
