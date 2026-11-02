@@ -172,6 +172,11 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Neu bewerben, wenn Search Console/Social spürbar Reichweite zeigen (frühestens Ende Nov., sonst 2027).
       02.11.: **Tchibo DE abgelehnt** – Grund „Keine URL angegeben“ (formaler Fehler, nicht Reichweite). Vor neuer Bewerbung
       im Awin-Profil prüfen, ob wichtellos.de als Werbefläche (Promotional Space) eingetragen ist und bei der Bewerbung mitgeht.
+      02.11. Recherche Awin-Verzeichnis (öffentlich: awin.com/de/search/advertiser-directory, ohne Login, Suche per Stichwort):
+      passende DE-Programme – Spiele/Kinder: Spielemax, idee+spiel, Milan-Spiele, Pinolino, puzzleYOU; Basteln: idee-shop, Rayher,
+      Buttinette; Süßes/Tee: my-schoko-world, Zotter, Swiss Chocolate Club, Besser im Glas, Tee Handelskontor Bremen, Ronnefeldt;
+      Advent: Kalendermaxx, Schneekugelhaus; Geschenke: Sheepworld, Gravur Geschenkideen (15 %), Hofmeister, Kartenliebe, PosterXXL;
+      Socken: Socken-online.de, VON JUNGFELD; Bücher: bücher.de; Erlebnis: WellCard, Pfotenklee. Erst nach Validierung bewerben.
       Ursache: Werbefläche war bei Awin nicht validiert → Meta-Tag `<meta name="verification" …>` (Awin, in `build.py`, nicht löschen) eingebaut, 02.11. „Site validieren“ geklickt (Antwort true) – Schild-Symbol zeigte danach noch „validieren“, später prüfen.
       Awin-Social-Links: Blog-URL = instagram.com/wichtellos (kein X-Konto, keine Facebook-Seite im Business-Portfolio).
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
