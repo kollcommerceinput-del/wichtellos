@@ -401,3 +401,38 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
 .onni-says { display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid #f2b705; border-radius: 18px; padding: 6px 16px 6px 6px; margin: 12px auto; max-width: 560px; }
 .onni-says img { width: 64px; height: 64px; flex: none; }
 @media print { .sticker-grid, .namegen { display: none; } }
+
+/* Startseite aufgepeppt (02.11.): großes 3D-Werkstatt-Bild oben, Onni-Sticker an USPs und Schritten */
+body { overflow-x: clip; }
+.hero-3d { position: relative; display: block; width: min(1080px, calc(100vw - 24px)); margin: -8px 0 0 50%; transform: translateX(-50%);
+  min-height: 420px; border-radius: 22px; overflow: hidden; color: #fff; box-shadow: 0 14px 40px rgba(43,27,23,.22); }
+.hero-3d .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 45%; z-index: 0; }
+.hero-3d::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,14,8,.9) 0%, rgba(28,14,8,.78) 42%, rgba(28,14,8,.1) 72%); z-index: 1; }
+.hero-3d .hero-text { position: relative; z-index: 2; max-width: 560px; padding: 54px 44px 96px; }
+.hero-3d h1 { color: #fff; font-size: 46px; margin-top: 0; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.hero-3d .lead { color: #fbeee2; font-size: 18px; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; }
+.hero-btns .btn-primary { font-size: 18px; padding: 14px 26px; border-radius: 999px; box-shadow: 0 6px 18px rgba(198,40,40,.45); text-decoration: none; }
+.btn-ghost { display: inline-block; padding: 13px 22px; border-radius: 999px; border: 2px solid rgba(255,255,255,.75); color: #fff; font-weight: 700; text-decoration: none; }
+.btn-ghost:hover { background: rgba(255,255,255,.14); }
+.hero-ki { position: absolute; z-index: 2; left: 14px; bottom: 8px; font-size: 11px; color: rgba(255,255,255,.7); }
+.usp { position: relative; z-index: 1; margin-top: -54px !important; }
+.usp li { background: #fff; border-radius: 16px; padding: 10px 12px; box-shadow: 0 8px 22px rgba(43,27,23,.12); border-top: 3px solid var(--gold); display: flex; align-items: center; gap: 8px; }
+.usp li img { width: 46px; height: 46px; flex: none; }
+.usp li span { position: static; }
+.usp li { padding-left: 10px; }
+.step-onni { float: right; width: 58px; height: 58px; margin: -6px -4px 0 8px; }
+@media (min-width: 480px) { .gift-teaser img { width: 96px; } }
+#so-gehts { scroll-margin-top: 12px; }
+@media (max-width: 720px) {
+  .hero-3d { min-height: 0; border-radius: 0 0 22px 22px; width: 100vw; margin-top: -20px; background: #2a160c; }
+  .hero-3d .hero-bg { position: relative; display: block; height: 250px; object-position: 70% 35%; }
+  .hero-3d::before { inset: auto 0 auto 0; top: 170px; height: 82px; background: linear-gradient(180deg, rgba(42,22,12,0), #2a160c); }
+  .hero-3d .hero-text { padding: 0 18px 80px; margin-top: -34px; }
+  .hero-3d h1 { font-size: 32px; }
+  .hero-3d .lead { font-size: 16px; }
+  .hero-ki { top: 8px; bottom: auto; left: auto; right: 12px; text-shadow: 0 1px 3px #000; }
+  .usp { margin-top: -46px !important; }
+}
+@media (max-width: 380px) { .hero-btns a { width: 100%; text-align: center; } .step-onni { width: 44px; height: 44px; } }
+@media print { .hero-3d, .usp img, .step-onni { display: none; } }

@@ -57,6 +57,10 @@ Antworten auf Deutsch.
   Abspann wichtellos.de, mit Umgebungston). Clips in `marketing/reel/wichtel3d/` aus Google Flow (Projekt „Nov 02 - 10:17“,
   Omni 1.1 Flash, 12 Credits/Clip, Startbilder von Toni aus Gemini). Gemini-Funkeln unten rechts: Clip 1–3 erst ab 2,2 s, Clip 4
   gezoomt. Beim Posten „Mit KI erstellt“ angeben (02.11.)
+- Startseite aufgepeppt (Toni 02.11.): Kopfbereich `.hero-3d` in `tool.html` = großes Werkstatt-Bild (bis 1080 px breit, dunkler Verlauf,
+  Knöpfe „Los geht’s“ → #form und „So geht’s in 25 s“ → #so-gehts), Handy: Bild oben, Text darunter auf Dunkelbraun. USP-Karten mit
+  Onni-Stickern überlappen das Bild, Onni-Sticker an den Schritten 1–3 (`.step-onni`) und im Geschenk-Hinweis. Das frühere Werkstatt-Foto
+  unter dem Formular ist entfallen (`<!--FOTO-->` weg).
 - 3D-Wichtel auf der Website (Toni 02.11.: „freundlicher“): `ai_photo()` in `build.py`, Bilder `fotos/wichtel3d-*.webp`, Bildunterschrift
   „Bild: KI-generiert“. Startseite: Werkstatt-Bild (statt Unsplash-Raureif). Ratgeber: kleines Hochformat rechts neben dem Lead
   (`.photo-ai`, ersetzt dort den SVG-Wichtel): Budgetseiten + Büro (Geschenk), Schule/Kita (Los), WhatsApp (Umschlag), Gedichte (Feder).

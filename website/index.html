@@ -44,25 +44,27 @@
 <main>
   <!-- Ansicht 1: Gruppe anlegen -->
   <section id="view-create">
-    <div class="hero">
-      <div>
+    <div class="hero hero-3d">
+      <img class="hero-bg" src="/fotos/wichtel3d-werkstatt-1152.webp" srcset="/fotos/wichtel3d-werkstatt-800.webp 800w, /fotos/wichtel3d-werkstatt-1152.webp 1152w" sizes="(max-width: 1112px) 100vw, 1080px" width="1152" height="768" alt="" fetchpriority="high" decoding="async">
+      <div class="hero-text">
         <h1>Wichteln online auslosen</h1>
         <p class="lead">Der kostenlose Wichtelgenerator: ohne Anmeldung, in 1 Minute. Jeder bekommt seinen eigenen geheimen Link – per WhatsApp, E-Mail oder zum Kopieren.</p>
+        <p class="hero-btns"><a class="btn-primary" href="#form">🎲 Los geht’s</a> <a class="btn-ghost" href="#so-gehts">▶ So geht’s in 25 s</a></p>
       </div>
-      <img class="mascot" src="/grafik/wichtel-winkt.svg" alt="" width="132" height="152">
+      <span class="hero-ki">Bild: KI-generiert</span>
     </div>
 
     <ul class="usp">
-      <li><span>💡</span> <b>Tipp für den Wichtel</b> – verrate heimlich, was jemand mag</li>
-      <li><span>🖨️</span> <b>Lose zum Ausdrucken</b> – mit QR-Code für die Weihnachtsfeier</li>
-      <li><span>🔒</span> <b>Eure Namen bleiben bei euch</b> – nichts landet auf einem Server</li>
+      <li><img src="/fotos/onni/sticker-lupe.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Tipp für den Wichtel</b> – verrate heimlich, was jemand mag</span></li>
+      <li><img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Lose zum Ausdrucken</b> – mit QR-Code für die Weihnachtsfeier</span></li>
+      <li><img src="/fotos/onni/sticker-psst.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Eure Namen bleiben bei euch</b> – nichts landet auf einem Server</span></li>
     </ul>
 
     <p id="last-wrap" hidden><button type="button" id="show-last" class="btn-secondary">Letzte Auslosung wieder anzeigen</button></p>
 
     <form id="form" novalidate>
       <div class="card">
-        <h2>1. Eure Gruppe</h2>
+        <img class="step-onni" src="/fotos/onni/sticker-herz.webp" alt="" width="512" height="512" loading="lazy"><h2>1. Eure Gruppe</h2>
         <label>Name der Gruppe
           <input id="group" maxlength="60" placeholder="z. B. Büro-Weihnachten 2026">
         </label>
@@ -80,7 +82,7 @@
       </div>
 
       <div class="card">
-        <h2>2. Wer macht mit?</h2>
+        <img class="step-onni" src="/fotos/onni/sticker-jubel.webp" alt="" width="512" height="512" loading="lazy"><h2>2. Wer macht mit?</h2>
         <p class="hint">Mindestens 3 Personen, jeder Name nur einmal. Mit <b>💡 Tipp</b> kannst du pro Person einen Hinweis hinterlegen (z. B. „mag Tee, liebt Katzen“) – den sieht nur, wer diese Person zieht.</p>
         <div id="people"></div>
         <button type="button" id="add-person" class="btn-secondary">+ Person hinzufügen</button>
@@ -88,7 +90,7 @@
       </div>
 
       <div class="card">
-        <h2>3. Ausschlüsse <span class="opt">(optional)</span></h2>
+        <img class="step-onni" src="/fotos/onni/sticker-daumen.webp" alt="" width="512" height="512" loading="lazy"><h2>3. Ausschlüsse <span class="opt">(optional)</span></h2>
         <p class="hint">Zum Beispiel Paare, die sich nicht gegenseitig ziehen sollen.</p>
         <div id="excl-list"></div>
         <div class="excl-add">
@@ -105,7 +107,7 @@
     </form>
 
     <aside class="gift-teaser">
-      <img src="/grafik/wichtel-geschenk.svg" alt="" width="120" height="152">
+      <img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy">
       <div>
         <p class="gt-title">Schon alle Weihnachtsgeschenke zusammen? 🎄</p>
         <p>Für Mama, Kollegen oder das Patenkind: über 100 Ideen nach Alter und Budget – mit einem Klick bei Amazon.</p>
@@ -113,9 +115,8 @@
       </div>
     </aside>
     <div class="ad-slot">Anzeige (Platzhalter)</div>
-    <figure class="photo"><img src="/fotos/wichtel3d-werkstatt-1152.webp" srcset="/fotos/wichtel3d-werkstatt-800.webp 800w, /fotos/wichtel3d-werkstatt-1152.webp 1152w" sizes="(max-width: 720px) 100vw, 680px" width="1152" height="768" alt="Plüsch-Wichtel mit roter Zipfelmütze schnitzt ein Holzpferdchen in einer gemütlichen Weihnachtswerkstatt" loading="lazy" decoding="async"><figcaption>Bild: KI-generiert</figcaption></figure>
 
-    <section class="how">
+    <section class="how" id="so-gehts">
       <h2>So funktioniert's</h2>
       <figure class="video-wichtel"><button type="button" data-video="/fotos/wichtel3d-video.mp4" aria-label="Video abspielen: Wichteln in 25 Sekunden erklärt"><img src="/fotos/wichtel3d-video-poster.webp" width="540" height="960" alt="Plüsch-Wichtel hält einen Umschlag – Wichteln? Ganz simpel." loading="lazy" decoding="async"><span class="play" aria-hidden="true">▶</span></button><figcaption>So geht’s in 25 Sekunden · KI-generiert</figcaption></figure>
       <ol>

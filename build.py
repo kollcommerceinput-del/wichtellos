@@ -1399,7 +1399,7 @@ HOW_TO = [
 def faq_html():
     steps = '\n'.join(f'      <li data-i="{i}"><b>{esc(h)}</b> – {esc(x)}</li>' for i, h, x in HOW_TO)
     items = '\n'.join(f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>' for q, a in FAQ)
-    return f'''    <section class="how">
+    return f'''    <section class="how" id="so-gehts">
       <h2>So funktioniert's</h2>
       {video_block()}
       <ol>
@@ -1432,7 +1432,6 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
-    html = html.replace('<!--FOTO-->', ai_photo('wichtel3d-werkstatt', 'Plüsch-Wichtel mit roter Zipfelmütze schnitzt ein Holzpferdchen in einer gemütlichen Weihnachtswerkstatt', ((800, 533), (1152, 768)), 'photo'))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 
