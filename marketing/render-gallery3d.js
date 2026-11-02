@@ -2,7 +2,7 @@
 //   marketing/social/wichtel3d/ig-NN.png  1080x1350 (Instagram-/Facebook-Karussell, LinkedIn-Dokument)
 //   marketing/social/wichtel3d/tt-NN.png  1080x1920 (TikTok-Fotomodus, Instagram-Story)
 //   marketing/social/wichtel3d/pin-NN.png 1000x1500 (Pinterest-Karussell)
-//   marketing/social/wichtel3d/galerie.mp4 1080x1920, 3 s je Folie mit Überblendung, ohne Ton (Reel/TikTok/Shorts – Musik in der App)
+//   marketing/social/wichtel3d/galerie.mp4 1080x1920, 1,8 s je Folie mit Überblendung, ohne Ton (Reel/TikTok/Shorts – Musik in der App)
 // node marketing/render-gallery3d.js   (Bilder: KI aus Google Flow -> beim Posten „Mit KI erstellt“ angeben)
 const fs = require('fs');
 const path = require('path');
@@ -85,8 +85,8 @@ p{font-size:${fmt === 'ig' ? 38 : 42}px;line-height:1.35;margin:0;color:#6d5d57;
   }
   await b.close();
 
-  // Video aus den Hochformat-Folien: 3 s je Folie, 0,6 s Überblendung, ohne Ton
-  const D = 3, XF = 0.6, n = SLIDES.length;
+  // Video aus den Hochformat-Folien: 1,8 s je Folie (Toni: 3 s war zu lang gezogen), 0,35 s Überblendung, ohne Ton
+  const D = 1.8, XF = 0.35, n = SLIDES.length;
   const args = ['-y', '-loglevel', 'error'];
   for (let i = 1; i <= n; i++) args.push('-loop', '1', '-framerate', '30', '-t', String(D + XF), '-i', path.join(OUT, `tt-${String(i).padStart(2, '0')}.png`));
   const fc = [];
