@@ -36,6 +36,13 @@ Antworten auf Deutsch.
 - `marketing/` – QR-Code, WhatsApp-Status- und LinkedIn-Bild; neu erzeugen mit `node marketing/render-status.js` bzw. `render-linkedin.js`
 - `marketing/render-pins.js` – Pinterest-Pins 1000×1500 je Ratgeberseite nach `marketing/pins/` (`node marketing/render-pins.js`)
 - `marketing/render-pinterest-cover.js` → `pinterest-cover-3d.png` (1920×1080): Pinterest-Profil-Titelbild mit 3D-Werkstatt (seit 02.11. live)
+- **Onni** = Name des WichtelLos-Wichtels (Toni 02.11., finnisch „Glück“, aus Liste mein-wichtel.de gewählt). Sticker/Ausmalbilder/
+  Vorlagen aus Google Flow (Bilder kostenlos im Pro-Abo). Wichtel sind KLEIN – Bäume, Häuser, Geschenke groß (Toni 02.11.).
+  - `/wichtel-ausmalbilder/` (`ausmal_page()`): 6 Ausmalbilder als A4-PDF + Gesamt-PDF, 8 Onni-Sticker (WebP 512, ZIP) mit WhatsApp-Anleitung
+  - `/wichteltuer/`: Wichtelnamen-Generator (`WICHTEL_NAMEN`, eigene Bedeutungen, setzt Namen in den Begrüßungsbrief, JS in `site.js`)
+    + Druckvorlagen (Begrüßungs-/Abschiedsbrief 4×A6, Urkunde, 6 Türschilder)
+  - Tool: Onni-Sprechblase nach dem Auslosen (+ Konfetti) und auf der Seite des geheimen Links („Onni flüstert“)
+  - `marketing/render-onni-druck.js` erzeugt alle PDFs nach `fotos/onni/` (Quellen `marketing/onni/`); Sticker freigestellt per Python
 - `marketing/render-gallery3d.js` → `marketing/social/wichtel3d/`: Erklär-Galerie mit 3D-Wichtel, 8 Folien (Werkstatt, Namen, Auslosen,
   Link schicken, Tipp, Lose, Geheimnis lüften, CTA) als `ig-NN` 1080×1350, `tt-NN` 1080×1920, `pin-NN` 1000×1500 + `galerie.mp4`
   (24 s, 3 s/Folie, ohne Ton). Bildausschnitt je Folie über `focus` (02.11.)

@@ -379,3 +379,25 @@ footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; c
   font-weight: 700; text-decoration: none; font-size: 15px; }
 .kofi-btn:hover { background: #ffc928; }
 .kofi-hint { margin-top: 16px; color: var(--muted); font-size: 14px; }
+
+/* Onni: Ausmalbilder, Druckvorlagen, Sticker, Namensgenerator, Sprechblase im Tool */
+.ausmal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; margin: 14px 0 18px; clear: both; }
+.ausmal { margin: 0; background: #fff; border-radius: 14px; padding: 10px; box-shadow: 0 4px 16px rgba(43,27,23,.10); text-align: center; }
+.ausmal img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee5de; }
+.ausmal figcaption { display: flex; flex-direction: column; gap: 8px; align-items: center; margin-top: 10px; }
+.ausmal figcaption .btn-secondary { font-size: .9rem; padding: 8px 14px; }
+.onni-portrait { background: none; }
+.onni-portrait img { display: block; width: 100%; height: auto; box-shadow: none; }
+.sticker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; margin: 12px 0 16px; }
+.sticker { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px 8px; border-radius: 14px; background: #f1e6dc; color: inherit; text-decoration: none; font-size: .88rem; transition: transform .15s; }
+.sticker:hover, .sticker:focus-visible { transform: translateY(-3px) rotate(-2deg); }
+.sticker img { width: 100%; max-width: 130px; height: auto; }
+.namegen { text-align: center; }
+.namegen-btns { justify-content: center; flex-wrap: wrap; }
+.ng-out { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 16px 0 4px; }
+.ng-name { font-family: Fredoka, sans-serif; font-weight: 600; font-size: 2.3rem; line-height: 1.1; color: #c62828; }
+.ng-mean { color: #6d5d57; }
+.letter-name { font-weight: 700; color: #c62828; }
+.onni-says { display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 2px solid #f2b705; border-radius: 18px; padding: 6px 16px 6px 6px; margin: 12px auto; max-width: 560px; }
+.onni-says img { width: 64px; height: 64px; flex: none; }
+@media print { .sticker-grid, .namegen { display: none; } }

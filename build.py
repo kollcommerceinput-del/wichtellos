@@ -513,6 +513,7 @@ def kids_page():
   <li>Bei Süßigkeiten an Allergien und Unverträglichkeiten denken.</li>
   <li>Kinder freuen sich oft mehr über etwas zum Spielen oder Basteln als über reine Deko.</li>
 </ul>
+<p>Zum Ausmalen: <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbilder zum Ausdrucken</a> – kostenlos als PDF.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 </article>'''
     page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 & für Teens',
@@ -774,7 +775,7 @@ def school_page():
   <li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>: Bei Kindern den Timer auf etwa 5 Minuten kürzen, damit niemand ungeduldig wird.</li>
   <li><b>Wichtel-Raten:</b> Jedes Kind darf dreimal raten, von wem sein Geschenk ist.</li>
 </ul>
-<p>Zum Einsammeln der Anmeldungen im Lehrerzimmer oder Verein: <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>.</p>
+<p>Zum Einsammeln der Anmeldungen im Lehrerzimmer oder Verein: <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>. Für die Wartezeit bis zur Bescherung: <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbilder</a> zum Ausdrucken.</p>
 </article>'''
     page('/wichteln-schule-kita/', 'Wichteln in Schulklasse & Kita: Ablauf, Budget, Lose',
          'Wichteln mit Kindern in Klasse, Kita und Verein: Ablauf, faires Budget, Elternbrief zum Kopieren und Wichtel-Lose zum Ausdrucken ohne Handy – kostenlos.', body,
@@ -895,6 +896,107 @@ DOOR_SHOP = [
 ]
 
 
+# Onni = der WichtelLos-Wichtel (Name gewählt 02.11., finnisch „Glück“). Wichtelnamen für den Generator auf /wichteltuer/,
+# Bedeutungen selbst formuliert (keine fremden Texte übernehmen)
+WICHTEL_NAMEN = {
+    'm': [('Onni', 'finnisch für „Glück“ – bringt Losglück ins Haus'), ('Pelle', 'der Tüftler, repariert heimlich kaputtes Spielzeug'),
+          ('Nisse', 'der klassische Hauswichtel aus Skandinavien'), ('Finn', 'der Abenteurer, immer unterwegs'),
+          ('Knut', 'der Mutige, hat vor nichts Angst – außer vor Staubsaugern'), ('Lasse', 'der Fröhliche, pfeift beim Aufräumen'),
+          ('Bo', 'der Kleine, der am liebsten zu Hause bleibt'), ('Ole', 'der Spaßvogel mit den besten Streichen'),
+          ('Sven', 'der Neugierige, steckt seine Nase überall hinein'), ('Tomte', 'der Hüter, passt nachts auf das Haus auf'),
+          ('Jonte', 'der Friedliche, schlichtet jeden Streit'), ('Rune', 'der Rätselfreund, versteckt gern Botschaften'),
+          ('Mats', 'der Krümelsammler, findet jeden Keks'), ('Frode', 'der Kluge, hat schon alle Bücher gelesen'),
+          ('Kalle', 'das Schlitzohr, immer einen Trick im Ärmel'), ('Bjarne', 'der Bärenstarke mit dem weichsten Herz'),
+          ('Vidar', 'der Waldwichtel, riecht nach Tannennadeln'), ('Emil', 'der Lausbub, der nie stillsitzt')],
+    'w': [('Lumi', 'finnisch für „Schnee“ – liebt den Winter'), ('Svea', 'die Stolze, trägt ihre Mütze besonders hoch'),
+          ('Ronja', 'die Wilde, klettert auf jeden Schrank'), ('Maja', 'die Sonnige, macht jeden Tag ein bisschen heller'),
+          ('Freja', 'die Liebevolle, kümmert sich um alle'), ('Liv', 'die Lebensfrohe, tanzt durchs Wohnzimmer'),
+          ('Ida', 'die Fleißige, bastelt die ganze Nacht'), ('Greta', 'die Schatzsammlerin, hortet glänzende Knöpfe'),
+          ('Elin', 'die Leuchtende mit dem warmen Herz'), ('Alva', 'die Elfenhafte, tanzt im Mondlicht'),
+          ('Tilda', 'die Tapfere, beschützt die Kleinsten'), ('Smilla', 'die Lächelnde, steckt alle mit guter Laune an'),
+          ('Wilma', 'die Willensstarke, gibt nie auf'), ('Saga', 'die Geschichtenerzählerin'),
+          ('Linnea', 'die Blümchenfreundin, pflegt die Zimmerpflanzen'), ('Pippa', 'die Quirlige, immer in Bewegung'),
+          ('Merle', 'die Singende, trällert leise in der Nacht'), ('Fine', 'die Feine, deckt den Puppentisch')],
+}
+
+AUSMAL = [('geschenk', 'Onni mit Geschenk', 'Onni winkt und hält ein Geschenk mit großer Schleife'),
+          ('baum', 'Onni schmückt den Baum', 'Der kleine Onni steht auf einer Leiter vor einem großen Weihnachtsbaum mit Geschenken'),
+          ('laterne', 'Onni im Winterwald', 'Onni läuft mit einer Laterne durch den verschneiten Wald, im Hintergrund ein Haus'),
+          ('kekse', 'Onni backt Plätzchen', 'Onni rollt Teig aus, auf dem Tisch Stern- und Herzplätzchen und eine Keksdose'),
+          ('los', 'Onni zieht ein Los', 'Onni zieht einen Brief aus einer großen Strickmütze, um ihn herum Sterne'),
+          ('tuer', 'Onni an der Wichteltür', 'Onni schaut aus einer kleinen Wichteltür in der Fußleiste, davor Fußspuren')]
+
+STICKER = [('winkt', 'winkt'), ('geschenk', 'mit Geschenk'), ('psst', 'Psst, geheim!'), ('daumen', 'Daumen hoch'),
+           ('herz', 'mit Herz'), ('schlaeft', 'schläft'), ('jubel', 'jubelt'), ('lupe', 'mit Lupe')]
+
+DRUCK_TUER = [('tuer-begruessung', 'Begrüßungsbrief (30. November)'), ('tuer-abschied', 'Abschiedsbrief (24. Dezember)'),
+              ('tuer-urkunde', 'Wichtel-Urkunde'), ('tuer-schilder', '6 Türschilder zum Ausschneiden')]
+
+
+def onni_img(name, alt='', size=96, cls='onni-img'):
+    return f'<img class="{cls}" src="/fotos/onni/sticker-{name}.webp" width="{size}" height="{size}" alt="{esc(alt)}" loading="lazy" decoding="async">'
+
+
+def druck_card(n, t, h, alt):
+    return (f'<figure class="ausmal"><a href="/fotos/onni/{n}.pdf" target="_blank" rel="noopener">'
+            f'<img src="/fotos/onni/{n}-480.webp" width="480" height="{h}" alt="{esc(alt)}" loading="lazy" decoding="async"></a>'
+            f'<figcaption><b>{esc(t)}</b><a class="btn-secondary" href="/fotos/onni/{n}.pdf" target="_blank" rel="noopener">🖨️ PDF drucken</a></figcaption></figure>')
+
+
+def ausmal_page():
+    cards = '\n'.join(druck_card(f'ausmal-{n}', t, 643, f'Ausmalbild: {alt}') for n, t, alt in AUSMAL)
+    sticker = '\n'.join(f'<a class="sticker" href="/fotos/onni/sticker-{n}.webp" download="onni-{n}.webp">{onni_img(n, f"Onni-Sticker: {t}", 160)}<span>{esc(t)}</span></a>' for n, t in STICKER)
+    body = f"""<article>
+<h1>Wichtel-Ausmalbilder zum Ausdrucken</h1>
+<figure class="photo photo-ai onni-portrait">{onni_img('winkt', 'Onni, der Wichtel von WichtelLos, winkt', 220, '')}<figcaption>Das ist Onni · KI-generiert</figcaption></figure>
+<p class="lead">Das ist Onni, der Wichtel von WichtelLos – sein Name heißt auf Finnisch „Glück“. Hier gibt es 6 Ausmalbilder mit Onni zum kostenlosen Ausdrucken: für die Adventszeit zu Hause, die Wichteltür, die Kita oder die Grundschule. Oben auf jedem Blatt ist Platz für den Namen eures Wichtels.</p>
+<p><a class="btn-primary" href="/fotos/onni/ausmalbilder-alle.pdf" target="_blank" rel="noopener">🖨️ Alle 6 Ausmalbilder als PDF</a></p>
+
+<h2>Die Ausmalbilder</h2>
+<div class="ausmal-grid">
+{cards}
+</div>
+<p class="hint">Tipp: Am besten auf normalem Druckerpapier in DIN A4 drucken. Die Linien sind extra dick – gut für Wachsmalstifte und kleine Hände.
+Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wichtelnamen-Generator</a> hilft.</p>
+
+<h2 id="sticker">Onni als WhatsApp-Sticker</h2>
+<p>Für eure Wichtelgruppe: 8 Sticker mit Onni – zum Verschicken, wenn ausgelost ist, wenn das Geschenk ankommt oder einfach so.</p>
+<div class="sticker-grid">
+{sticker}
+</div>
+<p><a class="btn-secondary" href="/fotos/onni/onni-sticker.zip" download>⬇️ Alle 8 Sticker herunterladen (ZIP)</a></p>
+<h3>So kommen die Sticker in WhatsApp</h3>
+<ol>
+  <li><b>Sticker speichern:</b> Antippen und speichern – oder alle als ZIP laden und entpacken.</li>
+  <li><b>In WhatsApp:</b> Chat öffnen, auf das Sticker-Symbol tippen und „Sticker erstellen“ bzw. „+“ wählen (iPhone, WhatsApp Web und Desktop; auf Android je nach Version).</li>
+  <li><b>Bild auswählen:</b> Onni aussuchen, fertig – der Sticker liegt jetzt bei deinen Stickern.</li>
+</ol>
+<p class="hint">Klappt „Sticker erstellen“ bei dir noch nicht, schick Onni einfach als Bild – der Hintergrund ist durchsichtig.</p>
+
+<h2>Und jetzt: wichteln!</h2>
+<p>Für Familie, Klasse oder Kita: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link. Für Kinder ohne Handy gibt es Lose zum Ausdrucken, bei denen der Name innen steht.</p>
+{CTA}
+<p>Mehr für Kinder: <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a> · <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a></p>
+<p class="hint">Ausmalbilder und Sticker sind für zu Hause, Kita und Schule kostenlos. Sie wurden mit KI erstellt (Google Gemini/Flow).</p>
+</article>"""
+    page('/wichtel-ausmalbilder/', 'Wichtel-Ausmalbilder zum Ausdrucken – kostenlos (PDF)',
+         '6 Wichtel-Ausmalbilder mit Onni kostenlos als PDF: Wichtel mit Geschenk, am Tannenbaum, an der Wichteltür, beim Plätzchenbacken – plus Wichtel-Sticker für WhatsApp.', body,
+         crumb='Wichtel-Ausmalbilder', playful=True)
+
+
+def namegen_html():
+    return ('<div class="namegen card" data-namegen>\n'
+            '  <p>Jeder Wichtel braucht einen Namen! Tippe auf einen Knopf – der Generator schlägt einen skandinavischen Wichtelnamen mit Bedeutung vor und setzt ihn gleich in den Begrüßungsbrief unten ein.</p>\n'
+            '  <div class="row2 namegen-btns">\n'
+            '    <button type="button" class="btn-secondary" data-g="m">👦 Wichteljunge</button>\n'
+            '    <button type="button" class="btn-secondary" data-g="w">👧 Wichtelmädchen</button>\n'
+            '    <button type="button" class="btn-secondary" data-g="x">🎲 Egal</button>\n'
+            '  </div>\n'
+            '  <p class="ng-out" aria-live="polite"><b class="ng-name">Onni</b><span class="ng-mean">finnisch für „Glück“ – so heißt der Wichtel von WichtelLos</span></p>\n'
+            f'  <script type="application/json">{json.dumps(WICHTEL_NAMEN, ensure_ascii=False)}</script>\n'
+            '</div>')
+
+
 def door_page():
     plan = '\n'.join(f'<li><b>{i}. Dezember – {esc(t)}:</b> {esc(x)}</li>' for i, (t, x) in enumerate(DOOR_PLAN, 1))
     shop = '\n'.join(f'''<div class="idea">
@@ -918,14 +1020,24 @@ def door_page():
   <li><b>Jeden Abend 5 Minuten:</b> Mit dem Plan unten musst du nicht täglich neu überlegen.</li>
 </ol>
 
+<h2 id="wichtelname">Wie heißt dein Wichtel?</h2>
+{namegen_html()}
+
 <h2>Der Begrüßungsbrief</h2>
 <blockquote class="letter">
 <p>Hallo, ihr Lieben!</p>
-<p>Ich bin [Name], euer Wichtel. Ich bin heute Nacht bei euch eingezogen, weil es hier so gemütlich ist. Bis Weihnachten wohne ich hinter meiner kleinen Tür. Ihr werdet mich nie sehen, aber ihr werdet merken, dass ich da bin – ich habe nämlich viel Quatsch im Kopf!</p>
+<p>Ich bin <span class="letter-name">[Name]</span>, euer Wichtel. Ich bin heute Nacht bei euch eingezogen, weil es hier so gemütlich ist. Bis Weihnachten wohne ich hinter meiner kleinen Tür. Ihr werdet mich nie sehen, aber ihr werdet merken, dass ich da bin – ich habe nämlich viel Quatsch im Kopf!</p>
 <p>Wenn ihr mir schreiben wollt, legt einen Brief vor meine Tür. Ich antworte, so oft ich kann.</p>
 <p>Euer Wichtel 🧡</p>
 </blockquote>
 <p class="hint">Tipp: Mit winziger Schrift oder am Computer in kleiner Schrift schreiben, auf ein kleines Stück Papier – das wirkt echt. Weitere Reime findest du bei den <a href="/wichtelgedichte/">Wichtelgedichten</a>.</p>
+
+<h2>Druckvorlagen für die Wichteltür</h2>
+<p>Fertig zum Ausdrucken – mit Onni, unserem Wichtel. Den Namen eures Wichtels tragt ihr selbst ein. Die Briefe sind klein (4 pro Seite), damit sie nach echter Wichtelpost aussehen.</p>
+<div class="ausmal-grid druck-grid">
+{"".join(druck_card(n, t, 679, f"Vorschau: {t}") for n, t in DRUCK_TUER)}
+</div>
+<p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
 <h2>24 Wichtel-Streiche: der Plan für den Advent</h2>
 <p><button type="button" class="btn-secondary" data-print>🖨️ Plan drucken</button></p>
@@ -1326,11 +1438,11 @@ def tool_page():
 
 def extras():
     page('/404/', 'Seite nicht gefunden | WichtelLos', 'Diese Seite gibt es nicht.',
-         pose_img('schlaeft', 'mascot-reveal') + '<h1>Seite nicht gefunden 😕</h1><p>Diese Seite gibt es leider nicht – unser Wichtel hat sie wohl versteckt.</p><p><a class="btn-primary" href="/">Zur Wichtel-Auslosung</a></p>',
+         pose_img('schlaeft', 'mascot-reveal') + '<h1>Seite nicht gefunden 😕</h1><p>Diese Seite gibt es leider nicht – Onni, unser Wichtel, hat sie wohl versteckt.</p><p><a class="btn-primary" href="/">Zur Wichtel-Auslosung</a></p>',
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1383,6 +1495,7 @@ def main():
     poems_page()
     history_page()
     door_page()
+    ausmal_page()
     invite_page()
     share_page()
     legal_pages()

@@ -27,6 +27,7 @@ const PAGES = [
   ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtelgedichte', 'Kurze Reime für die Geschenk-Karte'],
   ['woher-kommt-wichteln', 'wichtel-lupe.svg', 'Woher kommt Wichteln?', 'Wichtel, Julklapp & Secret Santa'],
   ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür', 'Ideen, 24 Streiche & Zubehör für den Advent'],
+  ['wichtel-ausmalbilder', 'onni/sticker-winkt.png', 'Wichtel-Ausmalbilder', '6 Motive mit Onni – kostenlos als PDF'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
@@ -46,7 +47,7 @@ p{font-size:38px;line-height:1.25;margin:0;color:#6d5d57}
 .tag{font-size:26px;opacity:.92}
 </style></head><body>
 <div class="stripe"></div><div class="lights">${svg('lichterkette.svg')}${svg('lichterkette.svg')}</div>
-<div class="pose">${svg(pose)}</div>
+<div class="pose">${pose.endsWith('.png') ? `<img style="height:340px;width:auto" src="data:image/png;base64,${fs.readFileSync(path.join(__dirname, pose)).toString('base64')}">` : svg(pose)}</div>
 <div class="txt"><h1>${title}</h1><div class="line"></div><p>${sub}</p></div>
 <div class="foot"><span class="url">wichtellos.de</span><span class="tag">Wichteln online auslosen · kostenlos</span></div>
 </body></html>`;

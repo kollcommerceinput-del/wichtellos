@@ -179,6 +179,7 @@
   <!-- Ansicht 2: Ergebnis mit Links -->
   <section id="view-result" hidden>
     <h2 class="h1">Ausgelost! 🎉</h2>
+    <p class="onni-says"><img src="/fotos/onni/sticker-jubel.webp" width="64" height="64" alt=""><span><b>Onni</b> hat für euch ausgelost – niemand hat sich selbst gezogen. Jetzt jedem seinen eigenen Link schicken!</span></p>
     <p class="lead">Schicke jeder Person <b>nur ihren eigenen</b> Link. Wer wen beschenkt, steht codiert darin.</p>
     <ul id="links" class="links"></ul>
     <div class="tip">💡 Machst du selbst mit? Öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.</div>
@@ -235,7 +236,7 @@
         <p>Du beschenkst:</p>
         <p class="target" id="r-target"></p>
         <p id="r-tip" class="r-tip" hidden></p>
-        <p>🤫 Psst – nicht verraten!</p>
+        <p class="onni-says"><img src="/fotos/onni/sticker-psst.webp" width="64" height="64" alt=""><span><b>Onni</b> flüstert: Psst – nicht verraten! Viel Spaß beim Aussuchen.</span></p>
       </div>
       <dl id="r-info" class="info"></dl>
     </div>
@@ -539,6 +540,7 @@
     }));
     store.set(RESULT_KEY, { group: meta.g, links: result });
     renderResult(meta.g, result);
+    confetti();
   }
 
   let current = null; // zuletzt angezeigte Auslosung, für die Lose
