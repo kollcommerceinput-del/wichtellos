@@ -894,7 +894,21 @@ DOOR_SHOP = [
     ('Wichtel-Briefpapier', 'Winzige Briefe und Umschläge für die Wichtel-Post.', 'Wichtel Briefpapier Mini'),
     ('Mini-Lichterkette', 'Batteriebetrieben, für die Wichteltür bei Nacht.', 'Mini Lichterkette Batterie warmweiß', 'B0BLYQGD2Z'),
     ('Buch mit Wichtel-Streichen', 'Noch mehr Ideen für die 24 Tage.', 'Wichtel Streiche Buch'),
+    ('Wichteltür zum Bemalen', 'Holztür-Rohling zum Selbstgestalten – ein schönes Bastelprojekt mit Kindern.', 'Wichteltür Holz zum Bemalen'),
+    ('Mini-Leiter aus Holz', 'Damit der Wichtel aufs Regal und in den Weihnachtsbaum kommt.', 'Wichtel Leiter Miniatur Holz'),
+    ('Bastelfilz & Deko-Moos', 'Für Mini-Mützen, Fußmatte und den Vorgarten vor der Tür.', 'Bastelfilz Set Deko Moos'),
 ]
+
+# Zubehör für die Ausmalbilder-Seite (nur Amazon-Suchen, keine Preise/Fotos – PartnerNet-Regeln)
+MAL_SHOP = [
+    ('Dicke Buntstifte', 'Liegen gut in Kinderhänden und brechen nicht so schnell ab.', 'dicke Buntstifte Kinder'),
+    ('Wachsmalstifte', 'Kräftige Farben schon für die Kleinsten in der Kita.', 'Wachsmalstifte Kinder'),
+    ('Glitzer- und Gelstifte', 'Für Onnis Mütze und den Schnee im Winterwald.', 'Glitzerstifte Kinder'),
+    ('Laminierfolien', 'Machen Türschilder und Urkunde für die Wichteltür haltbar.', 'Laminierfolien A4'),
+    ('Kinderschere', 'Zum Ausschneiden der Wichtelbriefe und Türschilder.', 'Kinderschere abgerundet'),
+    ('Weihnachts-Sticker', 'Für Briefe, Lose und Wichtelgeschenke.', 'Weihnachtssticker Kinder'),
+]
+
 
 
 # Onni = der WichtelLos-Wichtel (Name gewählt 02.11., finnisch „Glück“). Wichtelnamen für den Generator auf /wichteltuer/,
@@ -945,6 +959,8 @@ def druck_card(n, t, h, alt):
 
 
 def ausmal_page():
+    mal_shop = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>'
+                         for t, x, *r in MAL_SHOP)
     cards = '\n'.join(druck_card(f'ausmal-{n}', t, 643, f'Ausmalbild: {alt}') for n, t, alt in AUSMAL)
     sticker = '\n'.join(f'<a class="sticker" href="/fotos/onni/sticker-{n}.webp" download="onni-{n}.webp">{onni_img(n, f"Onni-Sticker: {t}", 160)}<span>{esc(t)}</span></a>' for n, t in STICKER)
     body = f"""<article>
@@ -974,10 +990,17 @@ Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wi
 </ol>
 <p class="hint">Klappt „Sticker erstellen“ bei dir noch nicht, schick Onni einfach als Bild – der Hintergrund ist durchsichtig.</p>
 
+<h2>Für die Mal-Ecke</h2>
+<p>Damit Onni schön bunt wird – und die Vorlagen für die Wichteltür lange halten:</p>
+<div class="idea-grid">
+{mal_shop}
+</div>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+
 <h2>Und jetzt: wichteln!</h2>
 <p>Für Familie, Klasse oder Kita: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link. Für Kinder ohne Handy gibt es Lose zum Ausdrucken, bei denen der Name innen steht.</p>
 {CTA}
-<p>Mehr für Kinder: <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a> · <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a></p>
+<p>Mehr für Kinder: <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a> · <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> · <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a></p>
 <p class="hint">Ausmalbilder und Sticker sind für zu Hause, Kita und Schule kostenlos. Sie wurden mit KI erstellt (Google Gemini/Flow).</p>
 </article>"""
     page('/wichtel-ausmalbilder/', 'Wichtel-Ausmalbilder zum Ausdrucken – kostenlos (PDF)',
@@ -996,6 +1019,95 @@ def namegen_html():
             '  <p class="ng-out" aria-live="polite"><b class="ng-name">Onni</b><span class="ng-mean">finnisch für „Glück“ – so heißt der Wichtel von WichtelLos</span></p>\n'
             f'  <script type="application/json">{json.dumps(WICHTEL_NAMEN, ensure_ascii=False)}</script>\n'
             '</div>')
+
+
+# /wichtel-zubehoer/ (Toni 02.11.: „alles, was wir als Zubehör finden – auch über 30 €“). Nur Amazon-Suchlinks (Rückfall
+# product_links), keine Preise/Amazon-Fotos (PartnerNet-Regeln). Kategorie, Einleitung, [(Titel, Text, Suchbegriff[, ASIN])]
+ZUBEHOER = [
+    ('Tür & Haus', 'Das Herzstück: Hier wohnt der Wichtel.', [
+        ('Wichteltür-Set', 'Tür mit Leiter, Briefkasten und Fußmatte – fertig zum Aufstellen.', 'Wichteltür Set', 'B0DK3D8M31'),
+        ('Wichteltür mit Licht', 'Mit kleinen LEDs im Fenster, leuchtet abends.', 'Wichteltür mit Beleuchtung'),
+        ('Wichteltür zum Bemalen', 'Holz-Rohling zum Selbstgestalten mit den Kindern.', 'Wichteltür Holz zum Bemalen'),
+        ('Wichtelfenster', 'Ein Mini-Fenster mit Gardine für die Wand daneben.', 'Wichtel Fenster Miniatur'),
+        ('Wichtelhaus', 'Ein ganzes Häuschen statt nur einer Tür – für Regal oder Fensterbank.', 'Wichtelhaus Holz'),
+        ('Wichteltreppe', 'Kleine Stufen hoch zur Tür an der Fußleiste.', 'Wichtel Treppe Miniatur'),
+    ]),
+    ('Möbel & Einrichtung', 'Damit es der Wichtel gemütlich hat.', [
+        ('Wichtelbett', 'Mit Kissen und Decke – für den Wichtel, der morgens verschlafen hat.', 'Wichtel Bett Miniatur'),
+        ('Wichtelküche', 'Herd, Töpfe und Geschirr im Puppenhaus-Format.', 'Wichtel Küche Miniatur'),
+        ('Wichtel-Werkstatt', 'Werkbank und Werkzeug für die Geschenke-Produktion.', 'Wichtel Werkstatt Miniatur'),
+        ('Tisch & Stühle', 'Für das Frühstück mit Krümel-Keksen.', 'Wichtel Tisch Stühle Miniatur'),
+        ('Mini-Weihnachtsbaum', 'Ein eigener kleiner Baum mit Kugeln.', 'Miniatur Weihnachtsbaum Wichtel'),
+        ('Mini-Lebensmittel', 'Brötchen, Plätzchen, Milchflasche – alles winzig.', 'Miniatur Lebensmittel Wichtel'),
+    ]),
+    ('Licht & Deko', 'Für die Abendstimmung vor der Tür.', [
+        ('Mini-Lichterkette', 'Batteriebetrieben und warmweiß.', 'Mini Lichterkette Batterie warmweiß', 'B0BLYQGD2Z'),
+        ('Mini-Laterne', 'Eine kleine LED-Laterne neben der Tür.', 'Miniatur Laterne LED Wichtel'),
+        ('Kunstschnee', 'Für den verschneiten Vorgarten.', 'Kunstschnee Deko'),
+        ('Wichtel-Fußmatte & Zaun', 'Der Eingangsbereich im Kleinformat.', 'Wichtel Zaun Fußmatte Miniatur'),
+        ('Mini-Schlitten', 'Für die Ausfahrt am Nikolaustag.', 'Miniatur Schlitten Holz'),
+        ('Deko-Moos & Tannenzweige', 'Damit der Vorgarten lebendig aussieht.', 'Deko Moos Tannenzweige künstlich'),
+    ]),
+    ('Post & Briefe', 'Für die Wichtel-Post zwischen Kindern und Wichtel.', [
+        ('Wichtel-Briefkasten', 'Ein Mini-Briefkasten an der Tür.', 'Wichtel Briefkasten Miniatur'),
+        ('Wichtel-Briefpapier', 'Winzige Briefe und Umschläge.', 'Wichtel Briefpapier Mini'),
+        ('Mini-Stempel', 'Ein Wichtel-Stempel für die Antwortbriefe.', 'Wichtel Stempel'),
+        ('Lupe', 'Damit die Kinder die winzige Schrift lesen können.', 'Lupe Kinder'),
+    ]),
+    ('Figuren & Plüsch', 'Der Bewohner selbst – und seine Freunde.', [
+        ('Wichtel-Figur', 'Klassisch mit Zipfelmütze und Bart.', 'Wichtel Figur Wichteltür', 'B0BLKHPYQV'),
+        ('Wichtel aus Plüsch', 'Zum Kuscheln für die Kleinen.', 'Wichtel Plüsch Kuscheltier'),
+        ('Große Wichtel-Figur', 'Ein großer Wichtel als Deko für Flur oder Fensterbank.', 'Wichtel groß Deko stehend'),
+        ('Wichtel-Familie', 'Mehrere Figuren – falls der Wichtel Besuch bekommt.', 'Wichtel Figuren Set'),
+    ]),
+    ('Bücher & Ideen', 'Für Eltern, denen die Streiche ausgehen.', [
+        ('Buch mit Wichtel-Streichen', 'Noch mehr Ideen für die 24 Tage.', 'Wichtel Streiche Buch'),
+        ('Bilderbuch über Wichtel', 'Zum Vorlesen am ersten Dezember.', 'Wichtel Bilderbuch Kinder'),
+        ('Wichtel-Adventskalender', 'Fertige Streiche und Briefe für jeden Tag.', 'Wichtel Adventskalender Streiche'),
+    ]),
+    ('Basteln & Selbermachen', 'Für alle, die lieber selbst bauen.', [
+        ('Bastelfilz', 'Für Mini-Mützen, Fußmatte und Decken.', 'Bastelfilz Set'),
+        ('Mini-Leiter aus Holz', 'Damit der Wichtel aufs Regal kommt.', 'Wichtel Leiter Miniatur Holz'),
+        ('Holzperlen & Pfeifenputzer', 'Für eigene kleine Wichtel.', 'Holzperlen Pfeifenputzer Basteln'),
+        ('Puppenhaus-Werkzeug', 'Mini-Hammer, Säge und Pinsel.', 'Miniatur Werkzeug Puppenhaus'),
+    ]),
+    ('Für die große Wichtelwelt', 'Wenn es etwas mehr sein darf – oft über 30 €, aber jahrelang im Einsatz.', [
+        ('Großes Wichtelhaus mit Licht', 'Mehrere Räume, Beleuchtung und Möbel in einem.', 'Wichtelhaus groß beleuchtet'),
+        ('Komplettset Wichtelwelt', 'Tür, Möbel, Deko und Zubehör als großes Set.', 'Wichteltür Set groß Zubehör komplett'),
+        ('Leuchtendes Wichteldorf', 'Mehrere Häuschen mit LED für die Fensterbank.', 'Wichteldorf LED Weihnachtsdorf'),
+        ('Wichtel-Puppenhaus', 'Ein ganzes Puppenhaus im Wichtel-Stil.', 'Wichtel Puppenhaus Holz'),
+        ('Wichtel-Kostüm für Kinder', 'Mütze, Bart und Weste – für den eigenen Auftritt.', 'Wichtel Kostüm Kinder'),
+    ]),
+]
+
+
+def zubehoer_page():
+    secs = []
+    n = 0
+    for title, intro, items in ZUBEHOER:
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>'
+                          for t, x, *r in items)
+        secs.append(f'<h2>{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    sections = '\n\n'.join(secs)
+    body = f"""<article>
+<h1>Wichtel-Zubehör: alles für die Wichteltür</h1>
+{ai_photo('wichtel3d-tuer', 'Kleine rote Wichteltür in der Fußleiste, aus der ein Plüsch-Wichtel herausschaut')}
+<p class="lead">Von der kleinen Tür bis zum leuchtenden Wichteldorf: Hier findest du {n} Ideen für Wichtel-Zubehör – Möbel, Licht, Wichtel-Post, Figuren, Bücher und Bastelmaterial. Alles im Puppenhaus-Format, vieles unter 10 €, manches für die ganz große Wichtelwelt.</p>
+<p>Noch keinen Plan für die 24 Tage? Den gibt es mit Begrüßungsbrief und Wichtelnamen-Generator auf der Seite <a href="/wichteltuer/">Wichteltür: 24 Streiche</a>. Ausmalbilder und Türschilder zum Ausdrucken findest du bei den <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbildern</a>.</p>
+
+{sections}
+
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Die Links führen zur Amazon-Suche, damit du Größe, Preis und Bewertungen selbst vergleichen kannst.</p>
+<p class="hint">Sicherheit geht vor: Miniaturen sind oft verschluckbar – bei Kindern unter 3 Jahren außer Reichweite aufstellen.</p>
+
+<h2>Und für die Großen: wichteln!</h2>
+<p>Während der Wichtel bei den Kindern Quatsch macht, können die Erwachsenen selbst wichteln: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
+{CTA}
+</article>"""
+    page('/wichtel-zubehoer/', 'Wichtel-Zubehör: Wichteltür, Möbel, Licht & mehr',
+         f'Wichtel-Zubehör für die Wichteltür: {n} Ideen von Mini-Möbeln, Licht und Wichtel-Post bis zum leuchtenden Wichteldorf – mit Links zu Amazon.',
+         body, crumb='Wichtel-Zubehör', playful=True)
 
 
 def door_page():
@@ -1051,6 +1163,7 @@ def door_page():
 <div class="idea-grid">
 {shop}
 </div>
+<p><b>Noch mehr Ideen:</b> Möbel, Licht, Wichtel-Post bis zum leuchtenden Wichteldorf findest du beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 
 <h2>Und für die Großen: Wichteln in der Familie</h2>
@@ -1442,7 +1555,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1496,6 +1609,7 @@ def main():
     history_page()
     door_page()
     ausmal_page()
+    zubehoer_page()
     invite_page()
     share_page()
     legal_pages()

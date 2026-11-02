@@ -28,6 +28,7 @@ const PAGES = [
   ['woher-kommt-wichteln', 'wichtel-lupe.svg', 'Woher kommt Wichteln?', 'Wichtel, Julklapp & Secret Santa'],
   ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür', 'Ideen, 24 Streiche & Zubehör für den Advent'],
   ['wichtel-ausmalbilder', 'onni/sticker-winkt.png', 'Wichtel-Ausmalbilder', '6 Motive mit Onni – kostenlos als PDF'],
+  ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

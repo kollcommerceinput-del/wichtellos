@@ -43,6 +43,10 @@ Antworten auf Deutsch.
     + Druckvorlagen (Begrüßungs-/Abschiedsbrief 4×A6, Urkunde, 6 Türschilder)
   - Tool: Onni-Sprechblase nach dem Auslosen (+ Konfetti) und auf der Seite des geheimen Links („Onni flüstert“)
   - `marketing/render-onni-druck.js` erzeugt alle PDFs nach `fotos/onni/` (Quellen `marketing/onni/`); Sticker freigestellt per Python
+- `build.py`: `zubehoer_page()` – `/wichtel-zubehoer/` (Toni 02.11.: „alles, was wir als Zubehör finden, auch über 30 €“): `ZUBEHOER`,
+  38 Ideen in 8 Kategorien (Tür & Haus, Möbel, Licht & Deko, Post, Figuren, Bücher, Basteln, „große Wichtelwelt“ über 30 €), nur Amazon-Suchen.
+  Verlinkt von Wichteltür + Ausmalbilder; Ausmalbilder-Seite hat zusätzlich „Für die Mal-Ecke“ (`MAL_SHOP`), Wichteltür +3 Bastel-Ideen.
+  Sitemap jetzt 21 URLs.
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
   ausmalbilder → /wichtel-ausmalbilder/ (Kinder; Malvorlagen, Weihnachtsmalvorlagen, Wichteln, Kindergarten),
   sticker → /wichtel-ausmalbilder/#sticker (Ideen & Reels; Wichteln, Weihnachtsgrüße, Weihnachten),
