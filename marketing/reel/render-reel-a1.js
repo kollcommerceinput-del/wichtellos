@@ -1,7 +1,9 @@
 // Reel A1 „Onni lost aus“ (1080x1920, ~13 s): Flow-Clips a1-tuer (Onni kommt aus der Wichteltür, schüttet Lose aus)
 // + a2-winken (winkt zwischen den Losen), weiche Überblendung, Text-Einblendungen, Spieluhr + leiser Original-Ton.
 // Clips: marketing/reel/wichtel3d/clips-a/ (Google Flow, Omni 1.1 Flash, KI) -> „Mit KI erstellt“ angeben.
-// node marketing/reel/render-reel-a1.js
+// node marketing/reel/render-reel-a1.js            (mit Spieluhr)
+// OHNE_MUSIK=1 node marketing/reel/render-reel-a1.js  -> reel-a1-lose-ohne-musik.mp4 (nur Original-Ton der Clips, Musik in der App wählen)
+const MUSIK = !process.env.OHNE_MUSIK;
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
@@ -42,7 +44,7 @@ p{font-family:'Segoe UI',system-ui,sans-serif;font-size:50px;color:#6d5d57;margi
 
   const wav = path.join(tmp, 'ton.wav');
   execFileSync('python', [path.join(__dirname, 'spieluhr.py'), wav, String(DUR)], { stdio: 'inherit' });
-  const out = path.join(__dirname, 'reel-a1-lose.mp4');
+  const out = path.join(__dirname, MUSIK ? 'reel-a1-lose.mp4' : 'reel-a1-lose-ohne-musik.mp4');
   const fade = (i, [a, e]) => `[${i}:v]format=rgba,fade=t=in:st=${a}:d=0.3:alpha=1,fade=t=out:st=${(e - 0.3).toFixed(2)}:d=0.3:alpha=1[o${i}]`;
   const fc = [
     `[0:v]trim=0:${C1},setpts=PTS-STARTPTS,scale=1080:1920:flags=lanczos,fps=30,format=yuv420p[v1]`,
@@ -53,8 +55,9 @@ p{font-family:'Segoe UI',system-ui,sans-serif;font-size:50px;color:#6d5d57;margi
     `[5:v]loop=loop=-1:size=1,trim=0:${DUR},setpts=PTS-STARTPTS[o5]`,
     `[v][o3]overlay=0:0[w1]`, `[w1][o4]overlay=0:0[w2]`, `[w2][o5]overlay=0:0,format=yuv420p[vout]`,
     `[0:a]atrim=0:${C1},asetpts=PTS-STARTPTS[a1]`, `[1:a]atrim=0:${C2},asetpts=PTS-STARTPTS[a2]`,
-    `[a1][a2]acrossfade=d=${XF}[orig]`, `[orig]volume=0.35[origq]`, `[2:a]volume=1.0[mus]`,
-    `[origq][mus]amix=inputs=2:duration=longest:normalize=0,afade=t=out:st=${(DUR - 1).toFixed(2)}:d=1[aout]`,
+    `[a1][a2]acrossfade=d=${XF}[orig]`,
+    ...(MUSIK ? [`[orig]volume=0.35[origq]`, `[2:a]volume=1.0[mus]`, `[origq][mus]amix=inputs=2:duration=longest:normalize=0,afade=t=out:st=${(DUR - 1).toFixed(2)}:d=1[aout]`]
+      : [`[orig]afade=t=out:st=${(DUR - 1).toFixed(2)}:d=1[aout]`]),
   ].join(';');
   execFileSync(FFMPEG, ['-y', '-loglevel', 'error',
     '-i', path.join(CLIPS, 'a1-tuer.mp4'), '-i', path.join(CLIPS, 'a2-winken.mp4'), '-i', wav,
