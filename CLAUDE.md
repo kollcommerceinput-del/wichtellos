@@ -197,7 +197,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       selber-machen, fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier (10. = Kontingent).
       02.11. 15:50: wichtel-ausmalbilder beantragt, danach Kontingent wieder voll. Bing: ausmalbilder + wichteltuer übermittelt.
       03.11. ~14:00: wichtelgruss, wunschzettel, adventskalender-ideen, wichtelgedichte, woher-kommt-wichteln beantragt →
-      **alle Seiten bei Google beantragt.** Sitemap neu eingereicht (Google erkennt 24 Seiten). Bing: diese 3 neuen + wichteltuer übermittelt. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
+      **alle Seiten bei Google beantragt.** Sitemap neu eingereicht (Google erkennt 24 Seiten). Bing: diese 3 neuen + wichteltuer übermittelt.
+      03.11. ~16:30: geschenke-fuer-maenner + geschenke-fuer-frauen beantragt, dann „Kontingent überschritten“ (Tageslimit lag heute bei 7).
+      **Offen ab 04.11. nachmittags:** adventskalender-befuellen, wichtelgeschenke-selber-machen (Pinterest-Trend), wichtelgeschenke-fuer-kinder.
+      Bing nicht von Hand (Toni 03.11.): IndexNow-Job meldet Sitemap-URLs bei jedem Push – nur prüfen, dass neue Seiten in der Sitemap stehen. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
