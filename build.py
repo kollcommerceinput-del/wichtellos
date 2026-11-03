@@ -1250,12 +1250,28 @@ def door_page():
 </blockquote>
 <p class="hint">Tipp: Mit winziger Schrift oder am Computer in kleiner Schrift schreiben, auf ein kleines Stück Papier – das wirkt echt. Weitere Reime findest du bei den <a href="/wichtelgedichte/">Wichtelgedichten</a>.</p>
 
+<h2 id="briefe">24 Briefe von Onni: jeden Tag Wichtelpost</h2>
+<div class="briefe-box">
+  <a href="/fotos/onni/onni-briefe-24.pdf" target="_blank" rel="noopener"><img src="/fotos/onni/onni-briefe-24-480.webp" width="480" height="679" alt="Titelseite „24 Briefe von Onni“ mit dem Wichtel Onni, der ein Geschenk hochhält" loading="lazy" decoding="async"></a>
+  <div>
+    <p>Vom 1. bis 24. Dezember findet euer Kind jeden Morgen einen Brief von Onni vor der Wichteltür: Er zieht ein, vertauscht Socken, probiert einen Keks, feiert Nikolaus und Lucia, schickt Rätsel und Geheimbotschaften – und verabschiedet sich an Heiligabend.</p>
+    <ul>
+      <li><b>24 Briefe</b> in A5, je 2 pro A4-Seite – mit Platz für den Namen eures Kindes</li>
+      <li><b>„Liebe Eltern“</b> mit Onnis Steckbrief zum Ausfüllen (Spitzname, Lieblingskekse …)</li>
+      <li><b>Vorbereitungsliste</b>: was ihr am Abend vorher hinlegt – an manchen Tagen gar nichts</li>
+      <li><b>Bonus</b>: 5 Türschilder wie „Hier wohnt Onni“ und „Psst! Onni schläft“</li>
+    </ul>
+    <p><a class="btn-primary" href="/fotos/onni/onni-briefe-24.pdf" target="_blank" rel="noopener">🖨️ Alle 24 Briefe als PDF – kostenlos</a></p>
+    <p class="hint">16 Seiten A4, für den privaten Gebrauch. Grafiken mit KI-Unterstützung erstellt.</p>
+  </div>
+</div>
+{KOFI_LINE}
+
 <h2>Druckvorlagen für die Wichteltür</h2>
 <p>Fertig zum Ausdrucken – mit Onni, unserem Wichtel. Den Namen eures Wichtels tragt ihr selbst ein. Die Briefe sind klein (4 pro Seite), damit sie nach echter Wichtelpost aussehen.</p>
 <div class="ausmal-grid druck-grid">
 {"".join(druck_card(n, t, 679, f"Vorschau: {t}") for n, t in DRUCK_TUER)}
 </div>
-{KOFI_LINE}
 <p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
 <h2>24 Wichtel-Streiche: der Plan für den Advent</h2>

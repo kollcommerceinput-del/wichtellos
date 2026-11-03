@@ -498,3 +498,10 @@ body { overflow-x: clip; }
 .kofi-line { text-align: center; margin: 14px 0 18px; color: var(--muted); }
 footer .kofi { margin: 0 0 14px; }
 footer .kofi-sub { color: inherit; opacity: .8; }
+
+/* 24 Briefe von Onni (/wichteltuer/#briefe) */
+.briefe-box { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: start; background: #fff; border-radius: 16px; padding: 16px; box-shadow: 0 4px 16px rgba(43,27,23,.10); }
+.briefe-box img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee5de; transform: rotate(-2deg); }
+.briefe-box ul { padding-left: 1.2em; }
+.briefe-box p:first-child { margin-top: 0; }
+@media (max-width: 600px) { .briefe-box { grid-template-columns: 1fr; } .briefe-box img { max-width: 220px; margin: 0 auto; } }
