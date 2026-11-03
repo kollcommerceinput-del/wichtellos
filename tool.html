@@ -15,6 +15,7 @@
         <h1>Wichteln online auslosen</h1>
         <p class="lead">Der kostenlose Wichtelgenerator: ohne Anmeldung, in 1 Minute. Jeder bekommt seinen eigenen geheimen Link – per WhatsApp, E-Mail oder zum Kopieren.</p>
         <p class="hero-btns"><a class="btn-primary" href="#form">🎲 Los geht’s</a> <a class="btn-ghost" href="#so-gehts">▶ So geht’s in 25 s</a></p>
+        <p id="last-wrap" class="last-wrap" hidden><button type="button" id="show-last" class="btn-ghost">↩ Deine letzte Auslosung<span id="last-name"></span> – Links wieder anzeigen</button></p>
       </div>
       <span class="hero-ki">Bild: KI-generiert</span>
     </div>
@@ -25,19 +26,17 @@
       <li><img src="/fotos/onni/sticker-psst.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Eure Namen bleiben bei euch</b> – nichts landet auf einem Server</span></li>
     </ul>
 
-    <p id="last-wrap" hidden><button type="button" id="show-last" class="btn-secondary">Letzte Auslosung wieder anzeigen</button></p>
-
     <form id="form" novalidate>
       <div class="card">
         <img class="step-onni" src="/fotos/onni/sticker-herz.webp" alt="" width="512" height="512" loading="lazy"><h2>1. Eure Gruppe</h2>
-        <label>Name der Gruppe
+        <label>Name der Gruppe <span class="opt">(optional)</span>
           <input id="group" maxlength="60" placeholder="z. B. Büro-Weihnachten 2026">
         </label>
         <div class="row2">
-          <label>Budget pro Geschenk
+          <label>Budget pro Geschenk <span class="opt">(optional)</span>
             <input id="budget" maxlength="20" placeholder="z. B. 15 €">
           </label>
-          <label>Datum der Bescherung
+          <label>Datum der Bescherung <span class="opt">(optional)</span>
             <input id="date" type="date">
           </label>
         </div>
@@ -54,8 +53,8 @@
         <p id="max-note" class="hint" hidden>Maximal 60 Personen.</p>
       </div>
 
-      <div class="card">
-        <img class="step-onni" src="/fotos/onni/sticker-daumen.webp" alt="" width="512" height="512" loading="lazy"><h2>3. Ausschlüsse <span class="opt">(optional)</span></h2>
+      <details class="card excl-card" id="excl-card">
+        <summary>3. Paare ausschließen <span class="opt">(optional)</span></summary>
         <p class="hint">Zum Beispiel Paare, die sich nicht gegenseitig ziehen sollen.</p>
         <div id="excl-list"></div>
         <div class="excl-add">
@@ -64,7 +63,7 @@
           <select id="ex-b" aria-label="Person 2"></select>
           <button type="button" id="add-excl" class="btn-secondary">Ausschluss hinzufügen</button>
         </div>
-      </div>
+      </details>
 
       <div id="error" class="error" role="alert" hidden></div>
       <button type="submit" class="btn-primary big">🎲 Jetzt auslosen</button>
@@ -83,18 +82,6 @@
 
 <!--FAQ-->
 
-    <h2>Ideen und Spiele rund ums Wichteln</h2>
-    <div class="chips">
-      <a href="/wichtelgeschenke-unter-5-euro/">Geschenke unter 5 €</a>
-      <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a>
-      <a href="/wichtelgeschenke-unter-15-euro/">unter 15 €</a>
-      <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a>
-      <a href="/wichtelgeschenke-unter-30-euro/">unter 30 €</a>
-      <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
-      <a href="/schrottwichteln/">Schrottwichteln</a>
-      <a href="/wichteln-im-buero/">Wichteln im Büro</a>
-      <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a>
-    </div>
   </section>
 
   <!-- Ansicht 2: Ergebnis mit Links -->
@@ -104,7 +91,15 @@
     <p class="lead">Schicke jeder Person <b>nur ihren eigenen</b> Link. Wer wen beschenkt, steht codiert darin.</p>
     <ul id="links" class="links"></ul>
     <div class="tip">💡 Machst du selbst mit? Öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.</div>
-    <p class="kofi-line">Hat alles geklappt? <a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
+    <div class="card save-card">
+      <h2>🔒 Links sichern</h2>
+      <p class="hint">Die Links sind nur hier in diesem Browser gespeichert – auf einem anderen Gerät, im privaten Modus oder nach dem Löschen des Verlaufs sind sie weg. Schick dir am besten alle Links selbst, dann kannst du sie jederzeit erneut verschicken.</p>
+      <div class="actions">
+        <a class="btn-secondary save-wa" target="_blank" rel="noopener">WhatsApp an mich</a>
+        <a class="btn-secondary save-mail">E-Mail an mich</a>
+        <button type="button" class="btn-secondary save-copy">Alle Links kopieren</button>
+      </div>
+    </div>
     <div class="card print-card">
       <h2>🖨️ Wichtel-Lose zum Ausdrucken</h2>
       <p class="hint">Für die Weihnachtsfeier: ausdrucken, ausschneiden, falten. Jeder bekommt sein Los und scannt den QR-Code – wie Zettel ziehen, nur ohne Schummeln. Für Kinder ohne Handy gibt es Lose mit dem Namen innen.</p>
@@ -114,7 +109,7 @@
       <h2>📣 Kennst du noch eine Gruppe?</h2>
       <p class="hint">Familie, Verein, Klasse oder das andere Team – mit einem Tipp weiterschicken.</p>
       <div class="row2">
-        <a class="btn-primary share-wa" target="_blank" rel="noopener">Per WhatsApp teilen</a>
+        <a class="btn-secondary share-wa" target="_blank" rel="noopener">Per WhatsApp teilen</a>
         <button type="button" class="btn-secondary share-copy">Link kopieren</button>
       </div>
     </div>
@@ -122,6 +117,13 @@
     <div class="row2">
       <button type="button" id="edit" class="btn-secondary">Gruppe bearbeiten</button>
       <button type="button" id="redraw" class="btn-secondary">Neu auslosen</button>
+    </div>
+    <div id="redraw-confirm" class="confirm-box" role="alertdialog" aria-labelledby="redraw-q" hidden>
+      <p id="redraw-q"><b>Wirklich neu auslosen?</b> Alle bisherigen Links passen dann nicht mehr zur neuen Auslosung – du musst allen die neuen Links schicken.</p>
+      <div class="row2">
+        <button type="button" id="redraw-yes" class="btn-primary">Ja, neu auslosen</button>
+        <button type="button" id="redraw-no" class="btn-secondary">Abbrechen</button>
+      </div>
     </div>
     <div class="ad-slot">Anzeige (Platzhalter)</div>
   </section>
@@ -152,14 +154,6 @@
     <div id="ideas" class="ideas"></div>
     <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
     <!--VERPACKEN-->
-    <aside class="gift-teaser">
-      <img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy">
-      <div>
-        <p class="gt-title">Schon alle Weihnachtsgeschenke zusammen? 🎄</p>
-        <p>Für Mama, Kollegen oder das Patenkind: über 100 Ideen nach Alter und Budget – mit einem Klick bei Amazon.</p>
-        <a class="btn-primary" href="/geschenkfinder/">Jetzt Ideen entdecken →</a>
-      </div>
-    </aside>
     <a id="ideas-finder" class="more-link" href="/geschenkfinder/">🔍 Im Geschenkfinder nach Alter und Interessen filtern →</a>
     <a class="more-link" href="/wichtelgedichte/">✍️ Ein Wichtelgedicht für die Karte →</a>
     <a class="more-link" href="/wichtelgruss/">💌 Deinem Wichtel-Partner einen Gruß schicken →</a>
@@ -172,8 +166,6 @@
       <p class="hint">Kostenlos und ohne Anmeldung – für Familie, Freunde oder das Büro.</p>
       <a class="btn-primary" href="/">Eigene Gruppe erstellen</a>
       <p><a class="more-link share-wa" target="_blank" rel="noopener">📣 WichtelLos per WhatsApp weiterempfehlen</a></p>
-      <p class="kofi-hint">WichtelLos ist kostenlos, ohne Anmeldung und ohne Datensammeln – und soll es bleiben.<br>
-        <a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
     </div>
   </section>
 
@@ -442,7 +434,7 @@
 
   const LOSE_HINT = {
     qr: 'Ausdrucken, an den gestrichelten Linien ausschneiden, in der Mitte falten – der QR-Code liegt innen. Jeder scannt sein Los mit dem Handy. Tipp: dickeres Papier, dann scheint nichts durch.',
-    name: 'Für Kita, Klasse und alle ohne Handy: Der Name des Wichtel-Partners steht innen. Ausschneiden, falten, am besten zusätzlich zukleben – und erst nach dem Verteilen öffnen. Bitte dickeres Papier nehmen, dann scheint nichts durch.',
+    name: 'Für Kita, Klasse und alle ohne Handy: Der Name des Wichtel-Partners steht innen. Ausschneiden, falten, am besten zusätzlich zukleben – und erst nach dem Verteilen öffnen. Bitte dickeres Papier nehmen, dann scheint nichts durch. Wenn du selbst mitspielst: Lass jemand anderen drucken – hier stehen alle Namen.',
   };
 
   function renderLose() {
@@ -471,7 +463,7 @@
     });
   }
 
-  function renderResult(group, links) {
+  function renderResult(group, links, sent = []) {
     current = { group, links };
     const ul = $('#links');
     ul.innerHTML = '';
@@ -483,16 +475,38 @@
           <a class="btn-secondary mail">E-Mail</a>
           <button type="button" class="btn-secondary copy">Link kopieren</button></div>`;
       li.querySelector('.who').textContent = name;
+      const markSent = () => {
+        if (li.classList.contains('sent')) return;
+        li.classList.add('sent');
+        const last = store.get(RESULT_KEY);
+        if (last && last.links && last.links[0] && last.links[0].url === links[0].url) {
+          last.sent = [...new Set([...(last.sent || []), name])]; store.set(RESULT_KEY, last);
+        }
+      };
+      if (sent.includes(name)) li.classList.add('sent');
+      li.querySelectorAll('.wa, .mail').forEach((x) => x.addEventListener('click', markSent));
       li.querySelector('.wa').href = `https://wa.me/?text=${encodeURIComponent(text)}`;
       li.querySelector('.mail').href = `mailto:?subject=${encodeURIComponent(`Dein Wichtel-Link: ${group}`)}&body=${encodeURIComponent(text)}`;
       const btn = li.querySelector('.copy');
       btn.addEventListener('click', async () => {
         await copy(url);
+        markSent();
         btn.textContent = '✓ Kopiert';
         setTimeout(() => { btn.textContent = 'Link kopieren'; }, 1800);
       });
       ul.append(li);
     });
+    const all = `Nur für dich – nicht in die Gruppe weiterleiten.\n\nWichtel-Links für „${group}“:\n\n`
+      + links.map(({ name, url }) => `${name}:\n${url}`).join('\n\n');
+    $('.save-wa').href = `https://wa.me/?text=${encodeURIComponent(all)}`;
+    const mail = `mailto:?subject=${encodeURIComponent(`Wichtel-Links: ${group} (nur für dich)`)}&body=${encodeURIComponent(all)}`;
+    $('.save-mail').href = mail;
+    $('.save-mail').hidden = mail.length > 1900; // manche Mail-Programme kürzen lange Links
+    $('.save-copy').onclick = async () => {
+      await copy(all); $('.save-copy').textContent = '✓ Kopiert';
+      setTimeout(() => { $('.save-copy').textContent = 'Alle Links kopieren'; }, 1800);
+    };
+    $('#redraw-confirm').hidden = true;
     show('result');
     window.scrollTo(0, 0);
   }
@@ -636,7 +650,11 @@
   function show(name) {
     for (const v of ['create', 'result', 'reveal', 'invalid', 'print']) $(`#view-${v}`).hidden = v !== name;
     document.body.classList.toggle('printing', name === 'print');
-    if (name === 'create') $('#last-wrap').hidden = !lastResult();
+    if (name === 'create') {
+      const last = lastResult();
+      $('#last-wrap').hidden = !last;
+      if (last) $('#last-name').textContent = ` „${last.group}“`;
+    }
   }
 
   // zuletzt erzeugte Links aus dem eigenen Browser
@@ -654,6 +672,7 @@
     }
     loadDraft();
     renderPeople();
+    if (exclusions.length) $('#excl-card').open = true;
     ['#group', '#budget', '#date', '#msg'].forEach((s) => $(s).addEventListener('input', saveDraft));
     $('#add-person').addEventListener('click', () => { addPerson(); renderPeople(); saveDraft(); focusPerson(people.length - 1); });
     $('#add-excl').addEventListener('click', () => {
@@ -664,12 +683,14 @@
     });
     $('#form').addEventListener('submit', (e) => { e.preventDefault(); runDraw(); });
     $('#edit').addEventListener('click', () => { show('create'); window.scrollTo(0, 0); });
-    $('#redraw').addEventListener('click', runDraw);
+    $('#redraw').addEventListener('click', () => { $('#redraw-confirm').hidden = false; $('#redraw-yes').focus(); });
+    $('#redraw-no').addEventListener('click', () => { $('#redraw-confirm').hidden = true; });
+    $('#redraw-yes').addEventListener('click', () => { $('#redraw-confirm').hidden = true; runDraw(); });
     $('#print-lose').addEventListener('click', showLose);
     $('#print-now').addEventListener('click', () => window.print());
     document.querySelectorAll('input[name="lose-mode"]').forEach((r) => r.addEventListener('change', renderLose));
     $('#print-back').addEventListener('click', () => { show('result'); window.scrollTo(0, 0); });
-    $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links); });
+    $('#show-last').addEventListener('click', () => { const last = lastResult(); if (last) renderResult(last.group, last.links, last.sent || []); });
     show('create');
   }
 

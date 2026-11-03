@@ -545,3 +545,18 @@ footer .kofi-sub { color: inherit; opacity: .8; }
 footer .legal { font-size: 12px; }
 footer .legal a { color: var(--muted); }
 .cols2 { columns: 2; column-gap: 28px; } @media (max-width: 520px) { .cols2 { columns: 1; } }
+
+/* Paket 1 Bedienbarkeit (03.11.) */
+.links li.sent { border-color: #1f6f4a; background: #f3faf5; }
+.links li.sent .who::after { content: ' ✓ verschickt'; color: #1f6f4a; font-weight: 600; font-size: 14px; }
+.save-card .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.save-card .actions a, .save-card .actions button { flex: 1 1 auto; }
+.confirm-box { background: #fff4e5; border: 2px solid var(--primary); border-radius: var(--radius); padding: 14px 16px; margin: 0 0 14px; }
+.confirm-box p { margin: 0 0 12px; }
+.excl-card > summary { cursor: pointer; list-style: none; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 19px; display: flex; align-items: center; gap: 6px; min-height: 44px; }
+.excl-card > summary::-webkit-details-marker { display: none; }
+.excl-card > summary::after { content: '+'; margin-left: auto; color: var(--primary); font-size: 24px; line-height: 1; }
+.excl-card[open] > summary::after { content: '–'; }
+.excl-card > summary .opt { margin: 0; }
+.last-wrap { margin: 14px 0 0; }
+.last-wrap .btn-ghost { font: inherit; font-weight: 700; background: transparent; cursor: pointer; text-align: left; }

@@ -38,6 +38,14 @@ Antworten auf Deutsch.
   Kinder-/Schul-/Wichteltür-Seiten, kein Wichtel mit Flasche, keine eigene Alkohol-Seite. Alkoholfrei + bürotauglich: alkoholfreier Sekt/Gin,
   Whisky-Steine mit Glas, Bierglas mit Spruch. Geschenkfinder jetzt 112 Ideen. `gifts.py` pflegt PC (Cloud fasst sie nicht an).
 - `/llms.txt` (03.11., Toni): Kurzbeschreibung für KI-Assistenten, schreibt `extras()` aus Sitemap-URLs + `SEARCH` (neue Seite = automatisch drin). robots.txt erlaubt alle Bots (auch KI-Crawler)
+- Bedienbarkeit Paket 1 (03.11., Toni nach Prüfbericht): Ergebnis-Ansicht mit „✓ verschickt“ je Person (`sent` im localStorage-Ergebnis),
+  Karte „🔒 Links sichern“ (WhatsApp/E-Mail an mich – Mail ab ~1900 Zeichen ausgeblendet – oder alle kopieren; Text beginnt mit
+  „Nur für dich – nicht in die Gruppe weiterleiten.“), Rückfrage `#redraw-confirm` vor „Neu auslosen“, „Deine letzte Auslosung „…““ im
+  Kopfbereich, Ausschlüsse als zugeklapptes `<details id="excl-card">`, Gruppe/Budget/Datum „(optional)“. Ko-fi in Ergebnis-Ansicht und auf
+  der Seite des geheimen Links nur noch im Fuß; Geschenk-Kasten auf der Link-Seite und Schlagwort-Reihe auf der Startseite entfernt.
+  Fuß-Gruppe 4 jetzt „Kinder & Advent“ (Wichteltür, Ausmalbilder, Zubehör, Adventskalender ×2); Gedichte → „Wichteln organisieren“,
+  „Woher kommt Wichteln?“ → „Spiele & Anlässe“. Menüpunkt „Geschenke für Kinder“. Nicht umsetzen: Verlauf/Zurück-Taste (Hash-Reload-Risiko),
+  Menü bleibt Variante A. Paket 2 offen: Namenliste einfügen, Wichteltür-Sprungmarken, FAQ kürzen, Schrift 15–16 px, Tippflächen 44 px, Geschenkfinder-Filter.
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
 - `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
   Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
