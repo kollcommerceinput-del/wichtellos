@@ -245,7 +245,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Schritte: Business Suite erlaubt max. 10 Bilder pro Beitrag/Karussell; Tipp steckt jetzt in Schritt 4
 - [ ] Später (Toni 01.11.): 10-Schritte-Karussell `marketing/social/whatsapp/` auch auf `/wichteln-per-whatsapp/` einbinden
       bzw. von dort auf den Instagram-Beitrag verlinken
-- [ ] Rechtstexte (Impressum, Datenschutz) einmal fachlich prüfen lassen
+- [ ] Rechtstexte 03.11. geprüft: beide gut. Erledigt 03.11.: Datenschutz um Aufsichtsbehörde (BlnBDI), Speicherdauer GitHub,
+      Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt; Telefon aus dem Impressum entfernt (Toni).
+      Offen: zweiter Kontaktweg im Impressum (Telefon oder Kontaktformular – Toni entscheidet); vor Ko-fi-Verkauf Abschnitt
+      zum Verkauf + AGB/Widerruf. IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
