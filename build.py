@@ -1790,7 +1790,7 @@ def legal_pages():
 <h2>Hinweis zu Werbelinks</h2>
 <p>Diese Website enthält Affiliate-Links, die mit einem Sternchen (*) gekennzeichnet sind. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>"""
-    page('/impressum/', 'Impressum | WichtelLos', 'Impressum von WichtelLos.', impressum, noindex=True)
+    page('/impressum/', 'Impressum | WichtelLos', 'Impressum von WichtelLos.', impressum)
 
     datenschutz = f"""<article>
 <h1>Datenschutzerklärung</h1>
@@ -1827,7 +1827,7 @@ def legal_pages():
 <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für uns zuständig ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin, <a href="https://www.datenschutz-berlin.de/" rel="noopener">datenschutz-berlin.de</a>.</p>
 <p>Stand: November 2026</p>
 </article>"""
-    page('/datenschutz/', 'Datenschutzerklärung | WichtelLos', 'Datenschutzerklärung von WichtelLos.', datenschutz, noindex=True)
+    page('/datenschutz/', 'Datenschutzerklärung | WichtelLos', 'Datenschutzerklärung von WichtelLos.', datenschutz)
 
 
 BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' for b in GIFT_BUDGETS[:-1]) + \
@@ -1916,7 +1916,9 @@ def extras():
     (OUT / '404').rmdir()
     urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
-        f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
+        f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
+        f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
+        for u in ('/impressum/', '/datenschutz/')) + '</urlset>\n'  # Rechtstexte indexierbar (Toni 03.11., Gemini fand sie nicht)
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
     # Suchindex (läuft komplett im Browser, keine externen Dienste)
     from gifts import IDEAS, CAT_LABELS, AGE_LABELS
