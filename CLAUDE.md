@@ -112,6 +112,12 @@ Antworten auf Deutsch.
   Fassung ohne Musik `reel-a1-lose-ohne-musik.mp4` (`OHNE_MUSIK=1`; Toni: Musik nicht automatisch, nicht immer dieselbe).
   03.11. als Pinterest-Video-Pin veröffentlicht (ohne Musik; „Wichteln: Ideen & Reels“, Link Startseite, Themen Wichteln/Weihnachten/
   Weihnachtsparty, Alt-Text, KI-Label). Instagram/TikTok: Toni (Texte im Chat 03.11.).
+- **Veo 3.1 Fast (20 Punkte/8 s) hält Onni im Original** (Mütze über den Augen, kein Gesicht) – Standard-Videomodell im Flow-Agent seit
+  03.11. Prompt: „Mütze bleibt tief über den Augen, Augen/Gesicht/Ohren nie sichtbar, Onni bewegt vor allem die Hände, Kopf ruhig“.
+  Flow kann Videos auch direkt auf YouTube hochladen (Toni 03.11.: jetzt nicht). Herunterladen 1080p (hochskaliert) ging ohne Zusatzkosten.
+- `marketing/reel/render-reel-b1.js` → `reel-b1-socken.mp4` (9,6 s, ohne Musik): Clip `clips-a/b1-socken.mp4` (Onni packt Kuschelsocken aus),
+  letztes Bild 1,8 s stehen, Texte „Wichtelgeschenk unter 10 €“ / „Kuschelsocken – über 100 Ideen – wichtellos.de“. Posten mit „Werbung“.
+  Flow-Guthaben 03.11. abends: ~1.006 Punkte.
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in

@@ -109,3 +109,18 @@ Titel: Euer Wichtel schreibt 24 Briefe – kostenlos zum Ausdrucken 💌
 Titel: Zettel ziehen war gestern 😅
 > Onni kommt aus der Wichteltür – und schüttet einfach alle Lose aus 🙈 Zum Glück geht Auslosen auch ohne Zettelchaos: Namen eintragen, jeder bekommt seinen geheimen Link. Kostenlos und ohne Anmeldung auf wichtellos.de 🎁
 > #wichteln #wichtelgenerator #secretsanta #wichtelnimbüro #weihnachtsfeier #wichteltür #weihnachten #lifehack
+
+### reel-b1-socken (Video `marketing/reel/reel-b1-socken.mp4`, 9,6 s, ohne Musik, Flow/Veo → „Mit KI erstellt“, Werbung)
+Instagram:
+Onni hat sein Wichtelgeschenk schon ausgepackt 🧦 Kuschelsocken gehen immer – warm, lustig und garantiert unter 10 €.
+
+Über 100 weitere Wichtelgeschenke nach Budget, Alter und fürs Büro findest du auf wichtellos.de 🎁 (Link im Profil)
+Werbung: Die Seite enthält Amazon-Partnerlinks.
+
+Was war euer bestes Wichtelgeschenk? 👇
+
+#wichteln #wichtelgeschenk #wichtelgeschenke #geschenkideen #unter10euro #kuschelsocken #wichtelnimbüro #weihnachten
+
+TikTok:
+Wichtelgeschenk unter 10 €, das wirklich benutzt wird 🧦 Mehr Ideen auf wichtellos.de (Werbung: Amazon-Partnerlinks)
+#wichteln #wichtelgeschenk #geschenkideen #weihnachten #fyp
