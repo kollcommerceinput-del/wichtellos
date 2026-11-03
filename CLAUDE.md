@@ -49,6 +49,9 @@ Antworten auf Deutsch.
   38 Ideen in 8 Kategorien (Tür & Haus, Möbel, Licht & Deko, Post, Figuren, Bücher, Basteln, „große Wichtelwelt“ über 30 €), nur Amazon-Suchen.
   Verlinkt von Wichteltür + Ausmalbilder; Ausmalbilder-Seite hat zusätzlich „Für die Mal-Ecke“ (`MAL_SHOP`), Wichteltür +3 Bastel-Ideen.
   Sitemap jetzt 21 URLs.
+- `build.py`: `gruss_page()` + `assets/gruss.js` – `/wichtelgruss/` (03.11.): digitale Wichtel-Karte, 8 Anlässe (`GRUSS`, je ein
+  Onni-Sticker), 4 Farben, Canvas 1080×1350 → „Als Bild teilen“ (Web Share mit Datei, sonst Download) oder Link `/wichtelgruss/#g=…`
+  (Base64url-JSON, nur im #, Empfänger sieht die Karte + Hinweis). Verlinkt: Fuß, Gedichte, Seite des geheimen Links. Sitemap 22 URLs.
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
   ausmalbilder → /wichtel-ausmalbilder/ (Kinder; Malvorlagen, Weihnachtsmalvorlagen, Wichteln, Kindergarten),
   sticker → /wichtel-ausmalbilder/#sticker (Ideen & Reels; Wichteln, Weihnachtsgrüße, Weihnachten),

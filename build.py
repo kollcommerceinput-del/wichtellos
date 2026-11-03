@@ -106,6 +106,7 @@ FOOTER = '''<footer>
     <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a>
     <a href="/wichteltuer/">Wichteltür</a>
     <a href="/wichtelgedichte/">Wichtelgedichte</a>
+    <a href="/wichtelgruss/">Wichtelgruß verschicken</a>
     <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
@@ -1270,6 +1271,7 @@ def poems_page():
   <li><b>Handschrift verstellen</b> oder den Reim ausdrucken, sonst ist das Geheimnis schnell gelüftet.</li>
   <li><b>Zum Geschenk passend:</b> Beim <a href="/schrottwichteln/">Schrottwichteln</a> darf es frech sein, bei Kollegen lieber freundlich und neutral.</li>
 </ul>
+<p>Lieber digital? <a href="/wichtelgruss/">Wichtelgruß mit Onni per WhatsApp verschicken →</a></p>
 <p>Noch kein Geschenk? <a href="/geschenkfinder/">Im Geschenkfinder nach Alter und Budget suchen →</a></p>
 </article>
 <script>
@@ -1299,6 +1301,68 @@ def poems_page():
     page('/wichtelgedichte/', 'Wichtelgedichte: kurze Reime für die Wichtel-Karte',
          'Kurze Wichtelgedichte für die Geschenk-Karte: Reime für Kollegen, Familie, Kinder und Schrottwichteln – plus Generator für deinen persönlichen Wichtel-Reim.', body,
          crumb='Wichtelgedichte', mascot='geschenk', playful=True)
+
+
+# Wichtelgruß: Anlass (Überschrift, Vorschlagstext, Unterschrift, Onni-Sticker)
+GRUSS = [
+    {'h': 'Ich hab dich gezogen!', 't': 'Psst … du bist mein Wichtel-Los. Freu dich schon mal – mehr wird nicht verraten!', 'v': 'Dein Wichtel', 's': 'psst'},
+    {'h': 'Dein Wichtel denkt an dich', 't': 'Ich weiß schon ziemlich genau, was dir gefallen könnte. Bald ist es so weit!', 'v': 'Dein Wichtel', 's': 'winkt'},
+    {'h': 'Ich bin auf der Suche …', 't': 'Was magst du gerade besonders gern? Verrate es einfach ganz nebenbei – ich höre heimlich zu.', 'v': 'Dein Wichtel', 's': 'lupe'},
+    {'h': 'Dein Geschenk ist unterwegs', 't': 'Nicht schütteln, nicht spicken – nur noch ein bisschen Geduld!', 'v': 'Dein Wichtel', 's': 'geschenk'},
+    {'h': 'Nur noch ein paar Mal schlafen', 't': 'Dann ist Bescherung. Ich bin schon ganz aufgeregt!', 'v': 'Dein Wichtel', 's': 'schlaeft'},
+    {'h': 'Danke, lieber Wichtel!', 't': 'Mein Geschenk hat mich riesig gefreut. Du hast genau ins Schwarze getroffen!', 'v': '', 's': 'herz'},
+    {'h': 'Ausgelost – es geht los!', 't': 'Jeder hat seinen geheimen Link bekommen. Viel Spaß beim Suchen, Basteln und Verpacken!', 'v': 'Eure Wichtel-Orga', 's': 'jubel'},
+    {'h': 'Frohe Weihnachten!', 't': 'Schöne Feiertage, gemütliche Stunden und ganz viel Plätzchen wünscht', 'v': 'Dein Wichtel', 's': 'daumen'},
+]
+
+
+def gruss_page():
+    data = json.dumps(GRUSS, ensure_ascii=False).replace('</', '<\\/')
+    body = f'''<article>
+<h1>Wichtelgruß: digitale Karte mit Onni verschicken</h1>
+<p id="gr-received" class="tip" hidden>🎁 <b>Du hast einen Wichtelgruß bekommen!</b> Wer ihn geschickt hat? Das bleibt vielleicht ein Geheimnis … Unten kannst du gleich einen Gruß zurückschicken.</p>
+<p class="lead">Ein kleiner Gruß vom Wichtel macht die Wartezeit bis zur Bescherung spannender: Anlass wählen, Text anpassen – und die Karte als Bild oder Link per WhatsApp verschicken. Kostenlos, ohne Anmeldung, nichts wird gespeichert.</p>
+
+<div class="card gruss" data-gruss>
+  <script type="application/json">{data}</script>
+  <div class="gr-preview"><canvas id="gr-canvas" width="1080" height="1350" role="img" aria-label="Vorschau der Wichtel-Karte"></canvas></div>
+  <div class="gr-form">
+    <h2>1. Anlass wählen</h2>
+    <div id="gr-occ" class="gr-occs"></div>
+    <h2>2. Text anpassen</h2>
+    <label>Für (optional)<input id="gr-a" maxlength="30" placeholder="z. B. Anna"></label>
+    <label>Dein Gruß<textarea id="gr-t" maxlength="180" rows="3"></textarea></label>
+    <label>Unterschrift<input id="gr-v" maxlength="30" placeholder="z. B. Dein Wichtel"></label>
+    <p class="gr-label">Farbe</p>
+    <div id="gr-theme" class="gr-themes"></div>
+    <h2>3. Verschicken</h2>
+    <p><button type="button" id="gr-share" class="btn-primary big">📤 Als Bild teilen</button></p>
+    <div class="row2">
+      <button type="button" id="gr-wa" class="btn-secondary">💬 Als Link per WhatsApp</button>
+      <button type="button" id="gr-copy" class="btn-secondary">🔗 Link kopieren</button>
+    </div>
+    <p><button type="button" id="gr-save" class="btn-secondary">💾 Bild speichern</button></p>
+    <p class="hint">Die Karte entsteht nur in deinem Browser. Beim Link steckt der Text im Teil nach „#“ – er wird nie an unseren Server geschickt. Onni-Bilder: KI-generiert.</p>
+  </div>
+</div>
+
+<h2>Wann passt ein Wichtelgruß?</h2>
+<ul>
+  <li><b>Direkt nach dem Auslosen:</b> „Ich hab dich gezogen!“ – ohne Namen unterschrieben, sorgt das für Rätselspaß.</li>
+  <li><b>In der Wartezeit:</b> Ein „Dein Wichtel denkt an dich“ zwischendurch hält die Spannung hoch – besonders beim Büro-Wichteln über mehrere Wochen.</li>
+  <li><b>Für Tipps:</b> „Ich bin auf der Suche …“ lädt ein, ganz nebenbei einen Wunsch fallen zu lassen.</li>
+  <li><b>Nach der Bescherung:</b> „Danke, lieber Wichtel!“ – mit eigenem Namen unterschrieben, an die ganze Gruppe oder den Wichtel direkt.</li>
+</ul>
+<p class="hint">Tipp: Damit dein Name geheim bleibt, schick den Gruß über jemand anderen – oder bitte die Person, die ausgelost hat, ihn weiterzuleiten. Als Link verschickt verrät die Karte nichts über dich.</p>
+
+<h2>Noch nicht ausgelost?</h2>
+{CTA}
+<p>Für die Karte zum Geschenk: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Onni als <a href="/wichtel-ausmalbilder/#sticker">WhatsApp-Sticker</a> · Alles zum <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
+</article>
+<script src="/assets/gruss.js" defer></script>'''
+    page('/wichtelgruss/', 'Wichtelgruß: digitale Wichtel-Karte per WhatsApp verschicken',
+         'Digitaler Wichtelgruß mit Onni: Anlass wählen, Text anpassen und die Wichtel-Karte als Bild oder Link per WhatsApp verschicken – kostenlos, ohne Anmeldung.', body,
+         crumb='Wichtelgruß', playful=True)
 
 
 def history_page():
@@ -1558,7 +1622,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1583,7 +1647,7 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / 'assets').mkdir(parents=True)
-    for f in ('style.css', 'finder.js', 'qrcode.js'):
+    for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
     site_js = (SRC / 'assets' / 'site.js').read_text(encoding='utf-8')
     site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
@@ -1609,6 +1673,7 @@ def main():
     school_page()
     party_page()
     poems_page()
+    gruss_page()
     history_page()
     door_page()
     ausmal_page()

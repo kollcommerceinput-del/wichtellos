@@ -450,3 +450,23 @@ body { overflow-x: clip; }
   .top nav a { white-space: nowrap; flex: none; }
 }
 @media print { .top nav { display: none; } }
+
+/* Wichtelgruß (/wichtelgruss/): Vorschau links, Formular rechts; Handy untereinander */
+.gruss { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 22px; align-items: start; }
+.gr-preview { position: sticky; top: 12px; }
+.gr-preview canvas { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 24px rgba(43,27,23,.18); }
+.gr-form h2 { font-size: 1.15rem; margin: 18px 0 8px; }
+.gr-form h2:first-child { margin-top: 0; }
+.gr-form label { display: block; margin: 8px 0; font-weight: 600; }
+.gr-form input, .gr-form textarea { display: block; width: 100%; margin-top: 4px; font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.gr-occs { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.gr-occ { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 6px; border: 2px solid var(--border); border-radius: 12px; background: #fff; font: inherit; font-size: .82rem; line-height: 1.2; cursor: pointer; color: var(--text); }
+.gr-occ img { width: 56px; height: 56px; }
+.gr-occ[aria-pressed="true"] { border-color: var(--primary); background: var(--soft); }
+.gr-label { font-weight: 600; margin: 10px 0 6px; }
+.gr-themes { display: flex; gap: 10px; }
+.gr-theme { width: 40px; height: 40px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--border); cursor: pointer; }
+.gr-theme[aria-pressed="true"] { box-shadow: 0 0 0 3px var(--text); }
+.gruss .btn-primary.big { width: 100%; }
+.gruss .row2 button, #gr-save { width: 100%; }
+@media (max-width: 760px) { .gruss { grid-template-columns: 1fr; } .gr-preview { position: static; max-width: 420px; margin: 0 auto; } }
