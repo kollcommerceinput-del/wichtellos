@@ -1333,6 +1333,13 @@ def door_page():
 <h1>Wichteltür: Ideen, 24 Streiche und Zubehör</h1>
 {ai_photo('wichtel3d-tuer', 'Kleine rote Wichteltür in der Fußleiste, aus der ein Plüsch-Wichtel herausschaut, davor Mehl-Fußspuren')}
 <p class="lead">Ab dem 1. Dezember zieht ein Wichtel ein: Eine kleine Tür an der Fußleiste, jede Nacht ein neuer Streich – und am Morgen große Augen. Hier findest du, wie du die Wichteltür startest, einen fertigen Plan für alle 24 Tage, einen Begrüßungsbrief und das passende Zubehör.</p>
+<nav class="chips jump no-print" aria-label="Auf dieser Seite">
+  <a href="#briefe">📬 24 Briefe (PDF)</a>
+  <a href="#vorlagen">🖨️ Druckvorlagen</a>
+  <a href="#wichtelname">🏷️ Wichtelname</a>
+  <a href="#streiche">😜 24 Streiche</a>
+  <a href="#zubehoer">🛒 Zubehör</a>
+</nav>
 
 <h2>Was ist eine Wichteltür?</h2>
 <p>Die Wichteltür ist ein Adventsbrauch aus Skandinavien, der bei uns seit einigen Jahren immer beliebter wird. Eine Miniatur-Tür wird an die Wand oder Fußleiste gestellt – dahinter wohnt im Advent ein Wichtel. Er bleibt unsichtbar, schreibt Briefe, stellt nachts kleinen Unfug an und verabschiedet sich an Heiligabend wieder. Mit dem <a href="/">Wichteln unter Erwachsenen</a> hat das wenig zu tun, aber beides lebt vom selben Zauber: Jemand tut heimlich etwas Schönes.</p>
@@ -1374,21 +1381,25 @@ def door_page():
 </div>
 {KOFI_LINE}
 
-<h2>Druckvorlagen für die Wichteltür</h2>
+<h2 id="vorlagen">Druckvorlagen für die Wichteltür</h2>
 <p>Fertig zum Ausdrucken – mit Onni, unserem Wichtel. Den Namen eures Wichtels tragt ihr selbst ein. Die Briefe sind klein (4 pro Seite), damit sie nach echter Wichtelpost aussehen.</p>
 <div class="ausmal-grid druck-grid">
 {"".join(druck_card(n, t, 679, f"Vorschau: {t}") for n, t in DRUCK_TUER)}
 </div>
 <p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
-<h2>24 Wichtel-Streiche: der Plan für den Advent</h2>
+<h2 id="streiche">24 Wichtel-Streiche: der Plan für den Advent</h2>
+<p>Für jeden Tag eine Idee – vom Einzug am 1. Dezember bis zum Abschied an Heiligabend. Die meisten dauern abends nur 5 Minuten.</p>
 <p><button type="button" class="btn-secondary" data-print>🖨️ Plan drucken</button></p>
+<details class="plan-details print-open">
+<summary>📋 Alle 24 Streiche anzeigen</summary>
 <ol class="door-plan">
 {plan}
 </ol>
+</details>
 <p class="hint">Sicherheit geht vor: Bei kleinen Kindern keine verschluckbaren Kleinteile verwenden, Fäden nicht in Stolperhöhe spannen und Lebensmittelfarbe nur tropfenweise nehmen.</p>
 
-<h2>Zubehör für die Wichteltür</h2>
+<h2 id="zubehoer">Zubehör für die Wichteltür</h2>
 <div class="idea-grid">
 {shop}
 </div>

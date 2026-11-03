@@ -17,6 +17,8 @@
   });
 
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+  // Zugeklappte Bereiche (z. B. 24-Tage-Plan) beim Drucken aufklappen
+  window.addEventListener('beforeprint', () => document.querySelectorAll('details.print-open').forEach((d) => { d.open = true; }));
 
   // Wichtelnamen-Generator (/wichteltuer/): Namen stehen als JSON im Block, setzt den Namen auch in den Begrüßungsbrief
   const ng = document.querySelector('[data-namegen]');
