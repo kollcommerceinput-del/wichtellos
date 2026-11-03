@@ -28,6 +28,16 @@ _RAW = [
     ('Kochbuch', 'Zu einem Lieblingsthema wie Pasta, Backen oder vegetarisch.', 'Kochbuch Geschenk', ADULT, 20, 'naschen', False),
     ('Feinkost-Box', 'Kleine Leckereien zum Probieren in einer schönen Box.', 'Feinkost Geschenkbox', ADULT, 20, 'naschen', True),
     ('Gin-Tasting-Set (ab 18)', 'Mehrere kleine Flaschen zum Probieren – nur für Erwachsene.', 'Gin Tasting Set', ADULT, 30, 'naschen', False),
+    # Alkohol (Toni 03.11., Regeln der Cloud): „(ab 18)“ im Namen, nur Erwachsene, nie bürotauglich, nüchtern beschrieben
+    ('Piccolo-Sekt mit Schleife (ab 18)', 'Ein kleines Fläschchen zum Anstoßen – nur, wenn du sicher weißt, dass die Person Alkohol trinkt.', 'Piccolo Sekt Geschenk', ADULT, 5, 'naschen', False),
+    ('Likör-Probierset (ab 18)', 'Mehrere Mini-Flaschen in verschiedenen Sorten – nur für Erwachsene.', 'Likör Probierset Miniaturen', ADULT, 10, 'naschen', False),
+    ('Craft-Bier-Probierset (ab 18)', 'Verschiedene Sorten kleiner Brauereien zum Probieren.', 'Craft Beer Probierset', ADULT, 15, 'naschen', False),
+    ('Wein mit Spruch-Etikett (ab 18)', 'Eine Flasche mit witzigem Etikett – nur für Weintrinker.', 'Wein Flasche Spruch Etikett Geschenk', ADULT, 20, 'naschen lustig', False),
+    ('Whisky- oder Rum-Tasting-Set (ab 18)', 'Kleine Flaschen zum Vergleichen – nur für Erwachsene.', 'Whisky Tasting Set', ADULT, 30, 'naschen', False),
+    # Alkoholfrei – passen auch ins Büro
+    ('Alkoholfreier Sekt oder Gin', 'Feiner Geschmack ohne Alkohol – passt für alle, auch im Büro.', 'alkoholfreier Gin Sekt', GROWN, 10, 'naschen', True),
+    ('Whisky-Steine mit Glas', 'Kühlen ohne zu verwässern – ganz ohne Alkohol im Paket.', 'Whisky Steine Glas Set', ADULT, 15, 'naschen', True),
+    ('Bierglas mit Spruch', 'Ein Glas mit witzigem Spruch – das Getränk sucht man sich selbst aus.', 'Bierglas mit Spruch', ADULT, 10, 'lustig', True),
     ('Pizzastein', 'Für knusprige Pizza aus dem eigenen Ofen.', 'Pizzastein', ADULT, 30, 'naschen', False),
     ('Kaffee-Probierset', 'Verschiedene Röstungen für Kaffeefans.', 'Kaffee Probierset', ADULT, 30, 'naschen', True),
     # Gemütlich

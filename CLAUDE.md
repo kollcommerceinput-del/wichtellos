@@ -31,6 +31,12 @@ Antworten auf Deutsch.
   Impressum/Datenschutz in der Copyright-Zeile. Suche: Lupe `.search-btn` im `HEADER`, Panel `#search-panel`, Index `/suche.json`
   (schreibt `extras()`: alle Seiten aus `page()` über `SEARCH` + Startseite + `IDEAS` aus gifts.py → `/geschenkfinder/?q=`), Logik in
   `site.js` (lädt erst beim Öffnen, `/` öffnet, Pfeile/Enter/Esc). Neue Seite = automatisch im Index.
+- `build.py`: `share_page()` – `/teilen/` (Cloud, 31.10.): kurze Adresse fürs Weiterleiten (WhatsApp, E-Mail, Link kopieren, andere App über
+  `navigator.share`) mit fertigem Text `SHARE_TEXT`. noindex, nicht in der Sitemap, nicht zur Indexierung anmelden. Wird im WhatsApp-Status verwendet.
+- `gifts.py` (03.11., Toni/Regeln der Cloud): 5 Alkohol-Ideen „(ab 18)“ (Piccolo 5 €, Likör-Probierset 10 €, Craft-Bier 15 €, Wein mit
+  Spruch-Etikett 20 €, Whisky/Rum-Tasting 30 €; dazu bestehendes Gin-Set) – nur `ADULT`, nie bürotauglich, nüchtern beschrieben, nie auf
+  Kinder-/Schul-/Wichteltür-Seiten, kein Wichtel mit Flasche, keine eigene Alkohol-Seite. Alkoholfrei + bürotauglich: alkoholfreier Sekt/Gin,
+  Whisky-Steine mit Glas, Bierglas mit Spruch. Geschenkfinder jetzt 112 Ideen. `gifts.py` pflegt PC (Cloud fasst sie nicht an).
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
 - `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
   Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
