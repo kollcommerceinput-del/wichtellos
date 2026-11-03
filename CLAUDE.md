@@ -186,8 +186,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). 01.11. abends 9 beantragt: wichteltuer, wichteln-per-whatsapp,
       selber-machen, fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier (10. = Kontingent).
       02.11. 15:50: wichtel-ausmalbilder beantragt, danach Kontingent wieder voll. Bing: ausmalbilder + wichteltuer übermittelt.
-      Noch offen: wichtelgedichte, woher-kommt-wichteln (ab 03.11. nachmittags), dazu neu seit 03.11.: wichtelgruss,
-      wunschzettel, adventskalender-ideen (Sitemap jetzt 24 URLs; auch bei Bing übermitteln). Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
+      03.11. ~14:00: wichtelgruss, wunschzettel, adventskalender-ideen, wichtelgedichte, woher-kommt-wichteln beantragt →
+      **alle Seiten bei Google beantragt.** Sitemap neu eingereicht (Google erkennt 24 Seiten). Bing: diese 3 neuen + wichteltuer übermittelt. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
