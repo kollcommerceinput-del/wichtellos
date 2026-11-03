@@ -99,3 +99,8 @@ Titel: 24 Briefe von Onni – Wichtelpost für die Wichteltür kostenlos
 Beschreibung: Vom 1. bis 24. Dezember jeden Morgen ein Brief vom Wichtel: Onni zieht ein, vertauscht Socken, probiert einen Keks, feiert Nikolaus und schickt Rätsel und Geheimbotschaften. Mit Eltern-Anleitung, Wichtel-Steckbrief zum Ausfüllen und Türschildern – kostenlos als PDF zum Ausdrucken.
 Alt-Text: Titelseite „24 Briefe von Onni“ mit einem gezeichneten Wichtel mit roter Mütze und Geschenk, daneben eine Seite mit den Briefen für den 1. und 2. Dezember.
 Themen: Wichteln, Weihnachtsbräuche, Advent
+
+### reel-briefe (Video `marketing/reel/reel-briefe.mp4`, 13,6 s, Spieluhr-Ton gemeinfrei, Flat-Onni KI-unterstützt → „Mit KI erstellt“)
+Titel: Euer Wichtel schreibt 24 Briefe – kostenlos zum Ausdrucken 💌
+> Vom 1. bis 24. Dezember jeden Morgen ein Brief vom Wichtel: Onni zieht ein, feiert Nikolaus, schickt Geheimbotschaften in Spiegelschrift – mit Steckbrief für Eltern und 6 Ausmalbildern. Kostenlos als PDF auf wichtellos.de (→ Wichteltür) 🎄
+> #wichteltür #wichtelbriefe #wichtel #advent #adventszeit #weihnachtenmitkindern #wichtelstreiche #kostenlos
