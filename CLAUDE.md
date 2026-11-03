@@ -219,6 +219,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Advent: Kalendermaxx, Schneekugelhaus; Geschenke: Sheepworld, Gravur Geschenkideen (15 %), Hofmeister, Kartenliebe, PosterXXL;
       Socken: Socken-online.de, VON JUNGFELD; Bücher: bücher.de; Erlebnis: WellCard, Pfotenklee. Erst nach Validierung bewerben.
       Ursache: Werbefläche war bei Awin nicht validiert → Meta-Tag `<meta name="verification" …>` (Awin, in `build.py`, nicht löschen) eingebaut, 02.11. „Site validieren“ geklickt (Antwort true) – Schild-Symbol zeigte danach noch „validieren“, später prüfen.
+      03.11.: Etsy erneut gesucht – weder im Awin-Verzeichnis (auch mit Nordamerika/GB) noch im öffentlichen Verzeichnis. Etsy-Links
+      derzeit nicht möglich; eigener Etsy-Shop vertagt auf 2027 (Toni-Entscheidung offen, Empfehlung PC).
       Awin-Social-Links: Blog-URL = instagram.com/wichtellos (kein X-Konto, keine Facebook-Seite im Business-Portfolio).
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
