@@ -93,3 +93,9 @@ Titel: Wunschzettel fürs Wichteln – online erstellen & teilen
 Beschreibung: Keiner weiß, was er schenken soll? Bis zu 5 Wünsche aufschreiben, „Bitte nicht“ ergänzen und den Wunschzettel als Link in die Wichtelgruppe schicken – dein Wichtel liest heimlich mit. Kostenlos, ohne Anmeldung, nichts gespeichert.
 Alt-Text: Ein Plüsch-Wichtel schaut in einer Werkstatt durch eine große Lupe, daneben kleine Geschenke.
 Themen: Wichteln, Wichtelgeschenke, Geschenkideen für Weihnachten (veröffentlicht 03.11.)
+
+### Pin briefe (`marketing/pins-onni/pin-briefe.png`, Pinnwand „Wichtelgeschenke für Kinder“, Link https://wichtellos.de/wichteltuer/#briefe, KI-Label, veröffentlicht 03.11.)
+Titel: 24 Briefe von Onni – Wichtelpost für die Wichteltür kostenlos
+Beschreibung: Vom 1. bis 24. Dezember jeden Morgen ein Brief vom Wichtel: Onni zieht ein, vertauscht Socken, probiert einen Keks, feiert Nikolaus und schickt Rätsel und Geheimbotschaften. Mit Eltern-Anleitung, Wichtel-Steckbrief zum Ausfüllen und Türschildern – kostenlos als PDF zum Ausdrucken.
+Alt-Text: Titelseite „24 Briefe von Onni“ mit einem gezeichneten Wichtel mit roter Mütze und Geschenk, daneben eine Seite mit den Briefen für den 1. und 2. Dezember.
+Themen: Wichteln, Weihnachtsbräuche, Advent

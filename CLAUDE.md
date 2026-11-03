@@ -259,7 +259,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       herunterladbar (nicht hinter Ko-fi); darunter einmal pro Seite `KOFI_LINE` „Gefällt dir das? 💛 WichtelLos unterstützen“
       (Ausmalbilder; Wichteltür: unter den 24 Briefen).
       03.11.: „24 Briefe von Onni“ (Flat-Onni, aus wichtellos-content, von Toni freigegeben) kostenlos auf `/wichteltuer/#briefe`:
-      `fotos/onni/onni-briefe-24.pdf` (16 S.) + Vorschau `-480.webp`. Quelle/Neu rendern im Content-Projekt, dann PDF hierher kopieren. IONOS-Satz bleibt (Domain/DNS).
+      `fotos/onni/onni-briefe-24.pdf` (16 S.) + Vorschau `-480.webp`. Quelle/Neu rendern im Content-Projekt, dann PDF hierher kopieren.
+      Ko-fi: Gratis-Artikel https://ko-fi.com/s/62d307cd11 (0 €, „Pay what you want“ aus, 3 Vorschaubilder aus `marketing/kofi-briefe/`).
+      Pin `marketing/pins-onni/pin-briefe.png` (`node marketing/render-pin-briefe.js`) 03.11. veröffentlicht: Pinnwand „Wichtelgeschenke
+      für Kinder“, Link /wichteltuer/#briefe, Themen Wichteln/Weihnachtsbräuche/Advent („Kindergarten“ gab es diesmal nicht), Alt-Text, KI-Label. IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
