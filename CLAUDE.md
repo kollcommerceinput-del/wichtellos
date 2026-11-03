@@ -241,6 +241,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - Pinterest Trends DE (31.10.): „wichteln“ steigt ab Oktober, Höhepunkt Mitte–Ende November, ab Anfang Dezember fast weg →
   Pins bis spätestens Mitte November live; früh anziehend: „wichtelgeschenke selbstgemacht“, „kleine geschenke basteln weihnachten“.
   Achtung: „Wichtel streiche“/„Wichtelhaus“ = Wichteltür-Brauch (Kinder), anderes Thema
+- Google Trends DE (Okt.–Dez. 2025, geprüft 03.11.2026): „geschenke für männer“ / „… für frauen“ = größte Suchen, steigen ab Nov.,
+  Höhepunkt 10.–20.12. „adventskalender befüllen“ Höhepunkt Mitte–Ende Nov., ab 1.12. weg. „nikolaus geschenke“ Spitze 1.–6.12.
+  „wichteln“ selbst: Höhepunkte Anfang Dez. und 22./23.12. (Saison läuft also den ganzen Dezember). Weihnachtsgrüße/-sprüche/-gedichte:
+  riesig, aber nur 22.–24.12. (starke Konkurrenz). Kaum gesucht: „weihnachtsfeier spiele“, „geschenk kollegen“, „geschenke für oma“, „last minute geschenke“.
 - Pinterest Trends DE „wichteltür“: Höhepunkt Woche bis 3.12.2025, danach steil runter → Seite/Pins bis Mitte November live
 - [x] 31.10.: LinkedIn-Profil Antonio Koll (neu, 0 Kontakte) – Beitrag „Wichteln im Büro“ (Text 4 aus `marketing/teilen-texte.md`,
       Link-Vorschau mit og-Bild) gepostet. Reel `marketing/reel/reel-lose.mp4` (ohne Ton) gerendert – Hochladen + Musik durch Toni
