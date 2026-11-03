@@ -214,7 +214,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       02.11. aufgehübscht (Toni: „Potenzial nach oben“): Farbe #c62828 statt Ko-fi-Blau, Cover = 3D-Werkstatt (`marketing/kofi-cover-3d.jpg`),
       Status „🎄 Wichtel-Saison läuft – frohes Auslosen!“, angepinnter Bild-Beitrag „Hallo, ich bin der Wichtel von WichtelLos“
       (`marketing/kofi-intro-3d.jpg`, Text ohne Betteln/„Spende“). Achtung: „Pin to top“ und Datei-Uploads können den Tab kurz einfrieren.
-      Später Premium-Druckvorlagen im Ko-fi-Shop
+      Ko-fi-Shop/Premium-Vorlagen verworfen (Toni 03.11.: nichts verkaufen, nur Trinkgeld)
 - [x] Social: Instagram @wichtellos (Profil + erstes Reel 31.10.), TikTok @wichtellos (Profil fertig; erstes Video vorbereitet,
       Veröffentlichen durch Toni). Getrennt von den Shop-Konten (@sneaker_drops_and_more / @kollstore). Bilder in `marketing/`
 - [x] 01.11.: Instagram-Storys + Highlights „So geht's“ (Auslosen, Link-Sticker wichtellos.de) und „Geschenke“ (Büro unter 10 €,
@@ -248,8 +248,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] Rechtstexte 03.11. geprüft: beide gut. Erledigt 03.11.: Datenschutz um Aufsichtsbehörde (BlnBDI), Speicherdauer GitHub,
       Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt. Telefon kurz entfernt, dann wieder eingetragen (Toni 03.11.:
       zweiter Kontaktweg Pflicht; Kontaktformular verworfen – n8n-Server des Shops nicht für öffentliche Formulare nutzen).
-      Offen: vor Ko-fi-Verkauf Abschnitt
-      zum Verkauf + AGB/Widerruf. IONOS-Satz bleibt (Domain/DNS).
+      **Toni 03.11.: Kein Verkauf über Ko-fi** (kein Shop, keine Premium-Vorlagen) – damit entfallen AGB/Widerruf/EU-USt.
+      Ko-fi bleibt reines Trinkgeld („Geschenk für den Wichtel“, nie „Spende“). IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
