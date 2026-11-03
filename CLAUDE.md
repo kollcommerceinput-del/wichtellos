@@ -70,6 +70,10 @@ Antworten auf Deutsch.
   Verlinkt: Fuß, alle Budgetseiten (Hinweis unter den Chips), Wichteltür. Sitemap 24 URLs.
 - Seite des geheimen Links (03.11.): „📅 Bescherung in den Kalender“ (.ics ganztägig + Erinnerung 1 Tag vorher, ohne Namen des
   Beschenkten; nur wenn ein Datum gesetzt ist) und „📝 Eigenen Wunschzettel schreiben“
+- `themen.py` + `themen_pages()` in `build.py` (03.11., nach Google Trends): `/adventskalender-befuellen/` (`AK_FUELLEN` 24 Ideen,
+  `AK_BASTELN` 4 Bastelanleitungen mit Material-Links – Toni: „Anleitungen mit Zubehör von Amazon“, `AK_GUTSCHEINE`),
+  `/geschenke-fuer-maenner/` (`MAENNER`, 23) und `/geschenke-fuer-frauen/` (`FRAUEN`, 21). Gemeinsamer Baustein `idea_sections()`.
+  Alkohol-Sets (Craft-Beer, Gin „ab 18“) bleiben drin (Toni). Footer + Sitemap (27 URLs) ergänzt.
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
   ausmalbilder → /wichtel-ausmalbilder/ (Kinder; Malvorlagen, Weihnachtsmalvorlagen, Wichteln, Kindergarten),
   sticker → /wichtel-ausmalbilder/#sticker (Ideen & Reels; Wichteln, Weihnachtsgrüße, Weihnachten),

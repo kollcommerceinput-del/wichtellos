@@ -544,3 +544,4 @@ footer .kofi-sub { color: inherit; opacity: .8; }
 }
 footer .legal { font-size: 12px; }
 footer .legal a { color: var(--muted); }
+.cols2 { columns: 2; column-gap: 28px; } @media (max-width: 520px) { .cols2 { columns: 1; } }

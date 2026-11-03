@@ -108,9 +108,9 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li></ul></details>
-    <details class="fgroup"><summary>Advent &amp; Wissen</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
+    <details class="fgroup"><summary>Advent &amp; Wissen</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
   </nav>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
@@ -1143,7 +1143,7 @@ ADVENT = [
         ('Adventskalender-Buch', 'Eine Geschichte in 24 Kapiteln zum Vorlesen.', 'Adventskalender Buch Kinder vorlesen'),
         ('Wichtel-Adventskalender', 'Passend zur Wichteltür: Mini-Möbel und Zubehör hinter jedem Türchen.', 'Wichtel Adventskalender Miniatur'),
     ]),
-    ('Zum Selbstbefüllen', 'lupe', 'Am persönlichsten: Du entscheidest, was hinter jedem Türchen steckt.', [
+    ('Zum Selbstbefüllen', 'lupe', 'Am persönlichsten: Du entscheidest, was hinter jedem Türchen steckt. Füllideen, Gutscheine und Bastelanleitungen: Adventskalender befüllen.', [
         ('Holz-Adventskalender zum Befüllen', 'Hält viele Jahre – jedes Jahr neu befüllen.', 'Adventskalender Holz zum Befüllen'),
         ('Kraftpapier-Tüten mit Zahlen', 'Günstig, schnell gepackt, an einer Schnur aufgehängt.', 'Adventskalender Tüten Kraftpapier Zahlen'),
         ('Stoffsäckchen', 'Wiederverwendbar und sieht an Zweig oder Leiter schön aus.', 'Adventskalender Stoffsäckchen'),
@@ -1162,6 +1162,7 @@ def advent_page():
         secs.append(f'<h2 class="h-onni">{onni_img(st, "", 56, "h-onni-img")}{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
     jump = ' · '.join(f'<a href="#ak-{i}">{esc(t)}</a>' for i, (t, *_r) in enumerate(ADVENT))
     secs = [s.replace('<h2 class="h-onni">', f'<h2 class="h-onni" id="ak-{i}">', 1) for i, s in enumerate(secs)]
+    secs = [x.replace('Bastelanleitungen: Adventskalender befüllen.', 'Bastelanleitungen: <a href="/adventskalender-befuellen/">Adventskalender befüllen</a>.') for x in secs]
     body = f"""<article>
 <h1>Adventskalender-Ideen: {n} Kalender für Kollegen, Erwachsene & Kinder</h1>
 {ai_photo('wichtel3d-basteln', 'Plüsch-Wichtel bastelt mit buntem Papier, Bändern und Keksgläsern')}
@@ -1172,7 +1173,7 @@ def advent_page():
 
 <p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 
-<h2>Idee: Adventskalender-Wichteln</h2>
+<h2 id="adventskalender-wichteln">Idee: Adventskalender-Wichteln</h2>
 <p>Statt eines großen Geschenks zur Bescherung beschenkt ihr euch den ganzen Dezember: Jeder zieht einen Namen und füllt für diese Person einen kleinen Kalender – zum Beispiel 24 Kleinigkeiten für zusammen 15–20 €. Für Büros reichen auch 5 Türchen für die Arbeitstage einer Woche.</p>
 <ul>
   <li><b>Früh auslosen:</b> Bis Mitte November, damit genug Zeit zum Sammeln und Packen bleibt.</li>
@@ -1186,6 +1187,109 @@ def advent_page():
     page('/adventskalender-ideen/', f'Adventskalender-Ideen: {n} Kalender für Kollegen, Erwachsene & Kinder',
          f'Adventskalender-Ideen 2026: {n} Kalender für Kollegen, Genießer, Erwachsene und Kinder – plus Adventskalender zum Selbstbefüllen und Tipps fürs Adventskalender-Wichteln.',
          body, crumb='Adventskalender-Ideen', playful=True)
+
+
+def idea_sections(groups, prefix):
+    """Abschnitte mit Onni-Sticker an der Überschrift + Sprungleiste (wie Adventskalender-Ideen)."""
+    secs, n = [], 0
+    for i, (title, st, intro, items) in enumerate(groups):
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>' for t, x, *r in items)
+        secs.append(f'<h2 class="h-onni" id="{prefix}-{i}">{onni_img(st, "", 56, "h-onni-img")}{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    jump = ' · '.join(f'<a href="#{prefix}-{i}">{esc(t)}</a>' for i, (t, *_r) in enumerate(groups))
+    return '\n\n'.join(secs), jump, n
+
+
+DISC_SEARCH = '<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>'
+
+
+def themen_pages():
+    from themen import AK_FUELLEN, AK_GUTSCHEINE, AK_BASTELN, MAENNER, FRAUEN
+    # Adventskalender befüllen (Google Trends: Höhepunkt Mitte–Ende November)
+    secs, jump, n = idea_sections(AK_FUELLEN, 'akf')
+    gut = '\n'.join(f'<li>{esc(g)}</li>' for g in AK_GUTSCHEINE)
+    bast = []
+    for title, intro, material, steps, note, links in AK_BASTELN:
+        mats = ''.join(f'<li>{esc(m)}</li>' for m in material)
+        stp = ''.join(f'<li>{esc(x)}</li>' for x in steps)
+        lnk = ' · '.join(amazon_link(q, f'{t}*') for t, q in links)
+        bast.append(f'''<section class="card diy">
+<h3>{esc(title)}</h3>
+<p>{esc(intro)}</p>
+<p><b>Das brauchst du:</b></p>
+<ul>{mats}</ul>
+<p><b>So geht's:</b></p>
+<ol>{stp}</ol>
+<p class="hint">💡 {esc(note)}</p>
+<p class="diy-links">Material: {lnk}</p>
+</section>''')
+    bast = '\n'.join(bast)
+    body = f"""<article>
+<h1>Adventskalender befüllen: {n} Ideen für Kinder, Erwachsene & Kollegen</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
+<p class="lead">24 Türchen wollen gefüllt werden – und zwar nicht nur mit Schokolade. Hier findest du {n} Füllideen für Kinder, Erwachsene und Kollegen, dazu {len(AK_GUTSCHEINE)} Gutschein-Ideen, die nichts kosten, und das passende Zubehör. Unser Tipp: Mische Kleinigkeiten, Süßes und Gutscheine – so bleibt es bis zum 24. spannend.</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#akf-basteln">Kalender selber basteln</a> · <a href="#akf-gutscheine">Gutscheine</a></p>
+
+{secs}
+
+<h2 id="akf-basteln">Adventskalender selber basteln: {len(AK_BASTELN)} Anleitungen</h2>
+<p>Noch keinen Kalender? Diese Varianten gehen schnell und günstig – das Material bekommst du bei Amazon.</p>
+{bast}
+
+<h2 id="akf-gutscheine">Gutscheine: Türchen, die nichts kosten</h2>
+<p>Schreib sie auf kleine Zettel und rolle sie zusammen – gerade bei Partnern und Familie oft die schönsten Türchen:</p>
+<ul class="cols2">
+{gut}
+</ul>
+
+{DISC_SEARCH}
+
+<h2>So klappt das Befüllen</h2>
+<ul>
+  <li><b>Budget pro Kalender festlegen</b>, nicht pro Türchen: 24 Füllungen für 20–30 € sind gut machbar, wenn sich Kleinigkeiten, Süßes und Gutscheine abwechseln.</li>
+  <li><b>Höhepunkte einplanen:</b> Am 6. (Nikolaus) und am 24. etwas Besonderes, dazwischen Kleinigkeiten.</li>
+  <li><b>Früh anfangen:</b> Bis Ende November packen, dann hängt der Kalender rechtzeitig.</li>
+  <li><b>Fertig statt selbst gefüllt?</b> Bei den <a href="/adventskalender-ideen/">Adventskalender-Ideen</a> findest du 28 fertige Kalender.</li>
+</ul>
+<p>Im Team oder in der Familie: Beim <a href="/adventskalender-ideen/#adventskalender-wichteln">Adventskalender-Wichteln</a> lost ihr aus, wer für wen einen Kalender füllt.</p>
+{CTA}
+</article>"""
+    page('/adventskalender-befuellen/', f'Adventskalender befüllen: {n} Ideen für Kinder, Erwachsene & Kollegen',
+         f'Adventskalender befüllen: {n} Füllideen für Kinder, Erwachsene und Kollegen, {len(AK_GUTSCHEINE)} Gutschein-Ideen, die nichts kosten, und {len(AK_BASTELN)} Anleitungen zum Selberbasteln.',
+         body, crumb='Adventskalender befüllen', playful=True)
+
+    for path, data, who, pron, photo, alt, lead in (
+        ('/geschenke-fuer-maenner/', MAENNER, 'Männer', 'ihn', 'wichtel3d-lupe',
+         'Plüsch-Wichtel betrachtet ein kleines Geschenk durch eine große Lupe',
+         'Socken, Duschgel, Krawatte? Muss nicht sein. Hier findest du {n} Geschenkideen für Männer, die wirklich benutzt werden – vom Grillgewürz über kleine Technik-Helfer bis zum Multitool. Für Partner, Vater, Bruder, Freund oder Kollegen, vieles schon unter 20 €.'),
+        ('/geschenke-fuer-frauen/', FRAUEN, 'Frauen', 'sie', 'wichtel3d-feder',
+         'Plüsch-Wichtel schreibt mit einer Feder auf eine Pergamentrolle',
+         'Mehr als Parfum und Pralinen: Hier findest du {n} Geschenkideen für Frauen – zum Entspannen, Genießen, Kreativsein und Kuscheln. Für Partnerin, Mutter, Schwester, Freundin oder Kollegin, vieles schon unter 20 €.')):
+        slug = path.strip('/')
+        secs, jump, n = idea_sections(data, slug[:3] + slug[-3:])
+        body = f"""<article>
+<h1>Geschenke für {who}: {n} Ideen, die wirklich ankommen</h1>
+{ai_photo(photo, alt)}
+<p class="lead">{esc(lead.format(n=n))}</p>
+<p class="chips-line">Direkt zu: {jump}</p>
+<p class="hint">Lieber nach Budget und Alter filtern? <a href="/geschenkfinder/">Zum Geschenkfinder mit über 100 Ideen →</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>So findest du das passende Geschenk für {pron}</h2>
+<ul>
+  <li><b>Vom Alltag ausgehen:</b> Was nutzt {pron} jeden Tag – und was davon nervt gerade? Eine bessere Thermoflasche, eine wärmere Decke oder ein funktionierendes Ladekabel sind oft willkommener als ein Deko-Artikel.</li>
+  <li><b>Hobby statt Allerweltsgeschenk:</b> Lieber eine Kleinigkeit fürs Hobby als ein teures Standardgeschenk.</li>
+  <li><b>Nachfragen erlaubt:</b> Mit unserem <a href="/wunschzettel/">Wunschzettel als Link</a> sammelt ihr Wünsche, ohne dass die Überraschung verloren geht.</li>
+</ul>
+<p>Wichtelt ihr? Dann helfen die Budgetseiten: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/wichtelgeschenke-unter-30-euro/">unter 30 €</a></p>
+{CTA}
+</article>"""
+        page(path, f'Geschenke für {who}: {n} Ideen, die wirklich ankommen',
+             f'Geschenke für {who}: {n} Ideen zu Weihnachten und Geburtstag – Genuss, Wellness, Technik, Kreatives und Gemütliches. Für Partner, Familie, Freunde und Kollegen.',
+             body, crumb=f'Geschenke für {who}', playful=True)
 
 
 def zubehoer_page():
@@ -1803,7 +1907,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1872,6 +1976,7 @@ def main():
     ausmal_page()
     zubehoer_page()
     advent_page()
+    themen_pages()
     invite_page()
     share_page()
     legal_pages()

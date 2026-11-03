@@ -31,6 +31,9 @@ const PAGES = [
   ['wichtelgruss', 'onni/sticker-psst.png', 'Wichtelgruß verschicken', 'Digitale Karte mit Onni – per WhatsApp'],
   ['wunschzettel', 'onni/sticker-lupe.png', 'Wunschzettel fürs Wichteln', 'Bis zu 5 Wünsche – als Link per WhatsApp'],
   ['adventskalender-ideen', 'onni/sticker-geschenk.png', 'Adventskalender-Ideen', '28 Kalender für Kollegen, Erwachsene & Kinder'],
+  ['adventskalender-befuellen', 'onni/sticker-lupe.png', 'Adventskalender befüllen', 'Füllideen, Gutscheine & Bastelanleitungen'],
+  ['geschenke-fuer-maenner', 'onni/sticker-daumen.png', 'Geschenke für Männer', 'Ideen, die wirklich ankommen'],
+  ['geschenke-fuer-frauen', 'onni/sticker-herz.png', 'Geschenke für Frauen', 'Ideen, die wirklich ankommen'],
   ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
 ];
 
