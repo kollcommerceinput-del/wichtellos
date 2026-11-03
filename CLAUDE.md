@@ -37,6 +37,7 @@ Antworten auf Deutsch.
   Spruch-Etikett 20 €, Whisky/Rum-Tasting 30 €; dazu bestehendes Gin-Set) – nur `ADULT`, nie bürotauglich, nüchtern beschrieben, nie auf
   Kinder-/Schul-/Wichteltür-Seiten, kein Wichtel mit Flasche, keine eigene Alkohol-Seite. Alkoholfrei + bürotauglich: alkoholfreier Sekt/Gin,
   Whisky-Steine mit Glas, Bierglas mit Spruch. Geschenkfinder jetzt 112 Ideen. `gifts.py` pflegt PC (Cloud fasst sie nicht an).
+- `/llms.txt` (03.11., Toni): Kurzbeschreibung für KI-Assistenten, schreibt `extras()` aus Sitemap-URLs + `SEARCH` (neue Seite = automatisch drin). robots.txt erlaubt alle Bots (auch KI-Crawler)
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
 - `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
   Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
