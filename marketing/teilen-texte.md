@@ -86,10 +86,10 @@ Themen: Wichteln, Wichtelgeschenke, Geschenkideen
 Titel: Wichtelgruß per WhatsApp – digitale Wichtel-Karte gratis
 Beschreibung: Ein kleiner Gruß vom Wichtel macht die Wartezeit bis zur Bescherung spannender: „Ich hab dich gezogen!“, „Rate mal, wer ich bin!“ oder „Danke, lieber Wichtel!“ – Karte mit Onni gestalten und als Bild oder Link per WhatsApp verschicken. Kostenlos, ohne Anmeldung.
 Alt-Text: Zwei digitale Wichtel-Karten mit einem kleinen Wichtel: rot „Ich hab dich gezogen!“ und grün „Danke, lieber Wichtel!“.
-Themen: Wichteln, Weihnachtsgrüße, Weihnachten
+Themen: Wichteln, Weihnachtsgrüße, Weihnachtskarten (veröffentlicht 03.11.)
 
 ### Pin wunschzettel (`marketing/pins3d/pin3d-wunschzettel.png`, Pinnwand „Ideen & Reels“, Link https://wichtellos.de/wunschzettel/, KI-Label)
 Titel: Wunschzettel fürs Wichteln – online erstellen & teilen
 Beschreibung: Keiner weiß, was er schenken soll? Bis zu 5 Wünsche aufschreiben, „Bitte nicht“ ergänzen und den Wunschzettel als Link in die Wichtelgruppe schicken – dein Wichtel liest heimlich mit. Kostenlos, ohne Anmeldung, nichts gespeichert.
 Alt-Text: Ein Plüsch-Wichtel schaut in einer Werkstatt durch eine große Lupe, daneben kleine Geschenke.
-Themen: Wichteln, Wichtelgeschenke, Wunschzettel
+Themen: Wichteln, Wichtelgeschenke, Geschenkideen für Weihnachten (veröffentlicht 03.11.)

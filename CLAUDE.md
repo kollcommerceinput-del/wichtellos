@@ -56,6 +56,8 @@ Antworten auf Deutsch.
 - `build.py`: `wunsch_page()` + `assets/wunsch.js` – `/wunschzettel/` (03.11.): bis 5 Wünsche + „Bitte nicht“, Link `/wunschzettel/#z=…`
   (nur im #), Empfänger-Ansicht mit Amazon-Suchlink je Wunsch („Größe …“ wird aus der Suche entfernt). WhatsApp-Text enthält die Liste
   im Klartext + Link. Pin `pins3d/pin3d-wunschzettel.png`. Sitemap 23 URLs. Pin-Texte in `teilen-texte.md`.
+  03.11. beide Pins veröffentlicht (Ideen & Reels, KI-Label, Alt-Text): wichtelgruss (Wichteln, Weihnachtsgrüße, Weihnachtskarten),
+  wunschzettel (Wichteln, Wichtelgeschenke, Geschenkideen für Weihnachten – „Wunschzettel“ gibt es als Thema nicht).
 - Seite des geheimen Links (03.11.): „📅 Bescherung in den Kalender“ (.ics ganztägig + Erinnerung 1 Tag vorher, ohne Namen des
   Beschenkten; nur wenn ein Datum gesetzt ist) und „📝 Eigenen Wunschzettel schreiben“
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
