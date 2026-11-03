@@ -1919,6 +1919,22 @@ def extras():
              'k': f"bis {i['budget']} € " + ' '.join(CAT_LABELS[c] for c in i['cats']) + ' ' + ' '.join(AGE_LABELS[a] for a in i['ages']) + (' Büro Kollegen' if i['office'] else ''),
              'g': 'i'} for i in IDEAS]
     (OUT / 'suche.json').write_text(json.dumps(idx, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    # /llms.txt (Vorschlag llmstxt.org): kurze Beschreibung für KI-Assistenten, Seiten aus der Sitemap (03.11., Toni)
+    info = {e['u']: e for e in SEARCH}
+    lines = ['# WichtelLos', '',
+             '> WichtelLos (wichtellos.de) ist ein kostenloses Online-Tool zum Wichteln auslosen (Wichtelgenerator, Julklapp, '
+             'Secret Santa) – ohne Anmeldung, ohne App, ohne Server. Namen eintragen, auslosen, jeder bekommt einen geheimen '
+             'Link (z. B. per WhatsApp). Dazu Ratgeber: Wichtelgeschenke nach Budget, Geschenkfinder, Spielregeln, Vorlagen '
+             'zum Ausdrucken. Sprache: Deutsch (Deutschland, Österreich, Schweiz).', '',
+             'Betreiber: KOLL Commerce UG (haftungsbeschränkt), Berlin. Maskottchen: Onni, der Wichtel.',
+             'Die Auslosung läuft komplett im Browser; die Zuteilung steckt nur im Link und wird nicht gespeichert. '
+             'Ratgeber-Seiten enthalten Amazon-Partnerlinks (gekennzeichnet).', '',
+             '## Tool', '', f'- [Wichteln online auslosen]({DOMAIN}/): kostenloser Wichtelgenerator mit geheimen Links, '
+             'Ausschlüssen, Tipps pro Person, Losen zum Ausdrucken (auch ohne Handy für Kinder)', '', '## Seiten', '']
+    lines += [f"- [{info[u]['t']}]({DOMAIN}{u}): {info[u]['d']}" for u in urls if u in info]
+    lines += ['', '## Social', '', '- Instagram: https://www.instagram.com/wichtellos/',
+              '- Pinterest: https://www.pinterest.com/wichtellos/', '- TikTok: https://www.tiktok.com/@wichtellos', '']
+    (OUT / 'llms.txt').write_text('\n'.join(lines), encoding='utf-8')
     # IONOS liefert http und www sonst parallel aus (Duplicate Content) – www immer weg, http nur mit FORCE_HTTPS
     host = DOMAIN.split('://')[1]
     rules = ('RewriteCond %{HTTPS} !=on [OR]\n'

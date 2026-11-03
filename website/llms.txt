@@ -1,0 +1,45 @@
+# WichtelLos
+
+> WichtelLos (wichtellos.de) ist ein kostenloses Online-Tool zum Wichteln auslosen (Wichtelgenerator, Julklapp, Secret Santa) – ohne Anmeldung, ohne App, ohne Server. Namen eintragen, auslosen, jeder bekommt einen geheimen Link (z. B. per WhatsApp). Dazu Ratgeber: Wichtelgeschenke nach Budget, Geschenkfinder, Spielregeln, Vorlagen zum Ausdrucken. Sprache: Deutsch (Deutschland, Österreich, Schweiz).
+
+Betreiber: KOLL Commerce UG (haftungsbeschränkt), Berlin. Maskottchen: Onni, der Wichtel.
+Die Auslosung läuft komplett im Browser; die Zuteilung steckt nur im Link und wird nicht gespeichert. Ratgeber-Seiten enthalten Amazon-Partnerlinks (gekennzeichnet).
+
+## Tool
+
+- [Wichteln online auslosen](https://wichtellos.de/): kostenloser Wichtelgenerator mit geheimen Links, Ausschlüssen, Tipps pro Person, Losen zum Ausdrucken (auch ohne Handy für Kinder)
+
+## Seiten
+
+- [Wichtelgeschenke unter 5 Euro: 12 kleine Ideen mit Wirkung](https://wichtellos.de/wichtelgeschenke-unter-5-euro/): Wichtelgeschenke unter 5 Euro: 12 Ideen zum Naschen, Wohlfühlen und für den Schreibtisch – perfekt für Büro, Schule und kleine Budgets.
+- [Wichtelgeschenke unter 10 Euro: 12 Ideen, auch für Kollegen](https://wichtellos.de/wichtelgeschenke-unter-10-euro/): Wichtelgeschenke unter 10 Euro: 12 Ideen, die fast immer passen – auch für Kollegen, die du kaum kennst. Mit Tipps fürs Büro-Wichteln.
+- [Wichtelgeschenke unter 15 Euro: 12 Ideen mit Spielraum](https://wichtellos.de/wichtelgeschenke-unter-15-euro/): Wichtelgeschenke unter 15 Euro: 12 Ideen für gemütliche Abende, Knobelfans und Genießer – Geschenke, die länger Freude machen.
+- [Wichtelgeschenke unter 20 Euro: 12 Ideen für Familie](https://wichtellos.de/wichtelgeschenke-unter-20-euro/): Wichtelgeschenke unter 20 Euro: 12 Ideen von Kuscheldecke bis Escape-Spiel – für Familie, Freunde und alle, die etwas Besonderes suchen.
+- [Wichtelgeschenke unter 30 Euro: 12 Ideen mit Wow-Effekt](https://wichtellos.de/wichtelgeschenke-unter-30-euro/): Wichtelgeschenke unter 30 Euro: 12 Ideen vom Krimidinner über Bluetooth-Lautsprecher bis Pizzastein – für Familie und gute Freunde.
+- [Geschenkfinder fürs Wichteln: 112 Ideen nach Alter & Budget](https://wichtellos.de/geschenkfinder/): Wichtelgeschenke finden: nach Alter (Kind, Teenager, Erwachsene, Kollegen), Budget von 5 bis 30 Euro und Interessen filtern – mit über 100 Ideen.
+- [Wichtelgeschenke für Kinder: Ideen von 3 bis 12 & für Teens](https://wichtellos.de/wichtelgeschenke-fuer-kinder/): Wichtelgeschenke für Kinder und Teenager: passende Ideen für Kindergarten, Schule und Verein – sortiert nach Alter, mit Tipps zu Budget und Sicherheit.
+- [Wichtelgeschenke selber machen: 9 Ideen mit Anleitung](https://wichtellos.de/wichtelgeschenke-selber-machen/): Wichtelgeschenke selber machen: Backmischung im Glas, Badesalz, gebrannte Mandeln und mehr – einfache Anleitungen plus Bastelsets für gemütliche Abende.
+- [Wichteln mit Würfeln: Regeln, Ablauf & Varianten](https://wichtellos.de/wichteln-wuerfeln-regeln/): Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.
+- [Schrottwichteln: Regeln & 24 lustige Ideen fürs Büro](https://wichtellos.de/schrottwichteln/): Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.
+- [Wichteln im Büro: Regeln, Budget & Ablauf fürs Team](https://wichtellos.de/wichteln-im-buero/): Büro-Wichteln organisieren: übliches Budget, faire Regeln, Ablauf im Homeoffice, Spiel-Varianten und Ideen für Kollegen – mit kostenloser Online-Auslosung.
+- [Wichteln per WhatsApp: Namen online ziehen & Links verschicken](https://wichtellos.de/wichteln-per-whatsapp/): Wichteln per WhatsApp: Gruppe online auslosen, jedem seinen geheimen Link schicken – ohne Zettel, ohne Anmeldung. So geht's in 4 Schritten, kostenlos.
+- [Wichteln in Schulklasse & Kita: Ablauf, Budget, Lose](https://wichtellos.de/wichteln-schule-kita/): Wichteln mit Kindern in Klasse, Kita und Verein: Ablauf, faires Budget, Elternbrief zum Kopieren und Wichtel-Lose zum Ausdrucken ohne Handy – kostenlos.
+- [Weihnachtsfeier-Ideen fürs Team: 10 Ideen & Tipps](https://wichtellos.de/weihnachtsfeier-ideen/): Weihnachtsfeier im Team planen: 10 Ideen vom Weihnachtsmarkt mit Wichtel-Twist über Escape-Room bis zur Online-Feier – plus Tipps zu Termin und Budget.
+- [Wichtelgedichte: kurze Reime für die Wichtel-Karte](https://wichtellos.de/wichtelgedichte/): Kurze Wichtelgedichte für die Geschenk-Karte: Reime für Kollegen, Familie, Kinder und Schrottwichteln – plus Generator für deinen persönlichen Wichtel-Reim.
+- [Woher kommt Wichteln? Julklapp, Secret Santa & Co.](https://wichtellos.de/woher-kommt-wichteln/): Woher kommt der Brauch des Wichtelns? Wichtel im Volksglauben, der Julklapp aus Skandinavien und Norddeutschland, Secret Santa und Engerl-Bengerl kurz erklärt.
+- [Wichteltür: Ideen, 24 Streiche & Zubehör für den Advent](https://wichtellos.de/wichteltuer/): Wichteltür für Kinder: So startest du, Begrüßungsbrief zum Abschreiben, ein fertiger Plan mit 24 Wichtel-Streichen für den Advent und das passende Zubehör.
+- [Wichteln Einladung: Vorlage zum Aushängen (kostenlos)](https://wichtellos.de/wichteln-einladung-vorlage/): Kostenlose Wichteln-Einladung zum Ausdrucken: Aushang mit Teilnehmerliste für Büro, Schule und Verein. Danach in 1 Minute online auslosen.
+- [Wichtel-Ausmalbilder zum Ausdrucken – kostenlos (PDF)](https://wichtellos.de/wichtel-ausmalbilder/): 6 Wichtel-Ausmalbilder mit Onni kostenlos als PDF: Wichtel mit Geschenk, am Tannenbaum, an der Wichteltür, beim Plätzchenbacken – plus Wichtel-Sticker für WhatsApp.
+- [Wichtel-Zubehör: Wichteltür, Möbel, Licht & mehr](https://wichtellos.de/wichtel-zubehoer/): Wichtel-Zubehör für die Wichteltür: 38 Ideen von Mini-Möbeln, Licht und Wichtel-Post bis zum leuchtenden Wichteldorf – mit Links zu Amazon.
+- [Wichtelgruß: digitale Wichtel-Karte per WhatsApp verschicken](https://wichtellos.de/wichtelgruss/): Digitaler Wichtelgruß mit Onni: Anlass wählen, Text anpassen und die Wichtel-Karte als Bild oder Link per WhatsApp verschicken – kostenlos, ohne Anmeldung.
+- [Wunschzettel fürs Wichteln online erstellen – per WhatsApp teilen](https://wichtellos.de/wunschzettel/): Wichtel-Wunschzettel online schreiben: bis zu 5 Wünsche plus „Bitte nicht“, als Link per WhatsApp in die Wichtelgruppe schicken – kostenlos, ohne Anmeldung, nichts gespeichert.
+- [Adventskalender-Ideen: 28 Kalender für Kollegen, Erwachsene & Kinder](https://wichtellos.de/adventskalender-ideen/): Adventskalender-Ideen 2026: 28 Kalender für Kollegen, Genießer, Erwachsene und Kinder – plus Adventskalender zum Selbstbefüllen und Tipps fürs Adventskalender-Wichteln.
+- [Adventskalender befüllen: 24 Ideen für Kinder, Erwachsene & Kollegen](https://wichtellos.de/adventskalender-befuellen/): Adventskalender befüllen: 24 Füllideen für Kinder, Erwachsene und Kollegen, 12 Gutschein-Ideen, die nichts kosten, und 4 Anleitungen zum Selberbasteln.
+- [Geschenke für Männer: 23 Ideen, die wirklich ankommen](https://wichtellos.de/geschenke-fuer-maenner/): Geschenke für Männer: 23 Ideen zu Weihnachten und Geburtstag – Genuss, Wellness, Technik, Kreatives und Gemütliches. Für Partner, Familie, Freunde und Kollegen.
+- [Geschenke für Frauen: 21 Ideen, die wirklich ankommen](https://wichtellos.de/geschenke-fuer-frauen/): Geschenke für Frauen: 21 Ideen zu Weihnachten und Geburtstag – Genuss, Wellness, Technik, Kreatives und Gemütliches. Für Partner, Familie, Freunde und Kollegen.
+
+## Social
+
+- Instagram: https://www.instagram.com/wichtellos/
+- Pinterest: https://www.pinterest.com/wichtellos/
+- TikTok: https://www.tiktok.com/@wichtellos
