@@ -98,6 +98,8 @@ Antworten auf Deutsch.
   Geschenkideen für Weihnachten, Alt-Text, KI-Label). Texte für Instagram/TikTok/LinkedIn in `teilen-texte.md`.
 - `marketing/reel/render-reel-briefe.js` → `reel-briefe.mp4` (13,6 s, Spieluhr): 24 Briefe von Onni (Titel, 1.12., Nikolaus, Spiegelschrift,
   Steckbrief) + 3 Ausmalbilder + CTA wichtellos.de → Wichteltür. Briefe-Bilder fotografiert aus wichtellos-content nach `marketing/reel/briefe/` (03.11.)
+  Zweite Fassung `render-reel-briefe-3d.js` → `reel-briefe-3d.mp4` (13,6 s): gleiche Szenen auf 3D-Plüsch-Wichtel-Hintergründen
+  (feder, umschlag, tuer, lupe, basteln, kinder, geschenk) mit Textbox oben (Toni 03.11.: „mit 3D-Bildern“).
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
