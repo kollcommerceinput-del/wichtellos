@@ -246,8 +246,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] Später (Toni 01.11.): 10-Schritte-Karussell `marketing/social/whatsapp/` auch auf `/wichteln-per-whatsapp/` einbinden
       bzw. von dort auf den Instagram-Beitrag verlinken
 - [ ] Rechtstexte 03.11. geprüft: beide gut. Erledigt 03.11.: Datenschutz um Aufsichtsbehörde (BlnBDI), Speicherdauer GitHub,
-      Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt; Telefon aus dem Impressum entfernt (Toni).
-      Offen: zweiter Kontaktweg im Impressum (Telefon oder Kontaktformular – Toni entscheidet); vor Ko-fi-Verkauf Abschnitt
+      Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt. Telefon kurz entfernt, dann wieder eingetragen (Toni 03.11.:
+      zweiter Kontaktweg Pflicht; Kontaktformular verworfen – n8n-Server des Shops nicht für öffentliche Formulare nutzen).
+      Offen: vor Ko-fi-Verkauf Abschnitt
       zum Verkauf + AGB/Widerruf. IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
