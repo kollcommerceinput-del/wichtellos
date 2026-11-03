@@ -122,6 +122,10 @@ FOOTER = '''<footer>
   <p>© 2026 WichtelLos · Powered by KOLL Commerce</p>
 </footer>'''
 
+# Unterstützen-Zeile unter Gratis-Downloads (einmal pro Seite, dezent – Toni 03.11.)
+KOFI_LINE = ('<p class="kofi-line">Gefällt dir das? <a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">'
+             '💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>')
+
 CTA = '''<div class="cta-box">
   <div class="cta-text"><img class="mascot-small" src="/fotos/onni/sticker-winkt.webp" alt="" width="512" height="512" loading="lazy"><p>Noch nicht ausgelost? Wichtelgruppe in 1 Minute erstellen – kostenlos und ohne Anmeldung.</p></div>
   <a class="btn-primary" href="/">Jetzt auslosen</a>
@@ -991,6 +995,7 @@ def ausmal_page():
 <figure class="photo photo-ai onni-portrait">{onni_img('winkt', 'Onni, der Wichtel von WichtelLos, winkt', 220, '')}<figcaption>Das ist Onni · KI-generiert</figcaption></figure>
 <p class="lead">Das ist Onni, der Wichtel von WichtelLos – sein Name heißt auf Finnisch „Glück“. Hier gibt es 6 Ausmalbilder mit Onni zum kostenlosen Ausdrucken: für die Adventszeit zu Hause, die Wichteltür, die Kita oder die Grundschule. Oben auf jedem Blatt ist Platz für den Namen eures Wichtels.</p>
 <p><a class="btn-primary" href="/fotos/onni/ausmalbilder-alle.pdf" target="_blank" rel="noopener">🖨️ Alle 6 Ausmalbilder als PDF</a></p>
+{KOFI_LINE}
 
 <h2>Die Ausmalbilder</h2>
 <div class="ausmal-grid">
@@ -1250,6 +1255,7 @@ def door_page():
 <div class="ausmal-grid druck-grid">
 {"".join(druck_card(n, t, 679, f"Vorschau: {t}") for n, t in DRUCK_TUER)}
 </div>
+{KOFI_LINE}
 <p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
 <h2>24 Wichtel-Streiche: der Plan für den Advent</h2>
