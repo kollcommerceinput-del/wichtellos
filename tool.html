@@ -48,7 +48,9 @@
       <div class="card">
         <img class="step-onni" src="/fotos/onni/sticker-jubel.webp" alt="" width="512" height="512" loading="lazy"><h2>2. Wer macht mit?</h2>
         <p class="hint">Mindestens 3 Personen, jeder Name nur einmal. Mit <b>💡 Tipp</b> kannst du pro Person einen Hinweis hinterlegen (z. B. „mag Tee, liebt Katzen“) – den sieht nur, wer diese Person zieht.</p>
+        <p class="hint">📋 Ganze Liste? Einfach in ein Namensfeld einfügen – z. B. aus Excel, Outlook, Teams oder WhatsApp.</p>
         <div id="people"></div>
+        <p id="paste-note" class="paste-note" role="status" hidden></p>
         <button type="button" id="add-person" class="btn-secondary">+ Person hinzufügen</button>
         <p id="max-note" class="hint" hidden>Maximal 60 Personen.</p>
       </div>
@@ -95,7 +97,7 @@
       <h2>🔒 Links sichern</h2>
       <p class="hint">Die Links sind nur hier in diesem Browser gespeichert – auf einem anderen Gerät, im privaten Modus oder nach dem Löschen des Verlaufs sind sie weg. Schick dir am besten alle Links selbst, dann kannst du sie jederzeit erneut verschicken.</p>
       <div class="actions">
-        <a class="btn-secondary save-wa" target="_blank" rel="noopener">WhatsApp an mich</a>
+        <span class="save-wa-box"></span>
         <a class="btn-secondary save-mail">E-Mail an mich</a>
         <button type="button" class="btn-secondary save-copy">Alle Links kopieren</button>
       </div>
@@ -308,6 +310,12 @@
       input.placeholder = ['z. B. Anna', 'z. B. Ben', 'z. B. Clara'][i] || 'Name';
       input.setAttribute('aria-label', `Person ${i + 1}`);
       input.addEventListener('input', () => { p.name = input.value; renderExclusions(); saveDraft(); });
+      input.addEventListener('paste', (e) => {
+        const names = splitNames((e.clipboardData || window.clipboardData).getData('text'));
+        if (names.length < 2) return; // einzelner Name: normal einfügen
+        e.preventDefault();
+        pasteNames(i, names);
+      });
       input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') { e.preventDefault(); if (i === people.length - 1) { addPerson(); renderPeople(); } focusPerson(i + 1); }
       });
@@ -345,6 +353,39 @@
     $('#add-person').hidden = people.length >= MAX_PEOPLE;
     $('#max-note').hidden = people.length < MAX_PEOPLE;
     renderExclusions();
+  }
+
+  // Namenliste einfügen: Zeilen oder Semikolons (Outlook/Teams: „Müller, Anna <anna@firma.de>; …“), sonst Kommas
+  function splitNames(text) {
+    const t = String(text || '').replace(/\r/g, '');
+    const parts = /[\n;]/.test(t) ? t.split(/[\n;]+/) : t.split(',');
+    return parts
+      .map((x) => x.replace(/<[^>]*>/g, '').replace(/^[\s"'„“”•\-–*\d.)]*(?=\D)/, '').replace(/["'„“”]/g, '').replace(/\s+/g, ' ').trim().slice(0, 30))
+      .filter(Boolean);
+  }
+
+  function pasteNames(at, names) {
+    const taken = new Set(people.filter((p, k) => k !== at && p.name.trim()).map((p) => p.name.trim().toLowerCase()));
+    const fresh = [];
+    let dups = 0;
+    names.forEach((n) => {
+      const k = n.toLowerCase();
+      if (taken.has(k)) { dups++; return; }
+      taken.add(k); fresh.push(n);
+    });
+    let added = 0, k = at;
+    for (const n of fresh) {
+      while (k < people.length && k !== at && people[k].name.trim()) k++;
+      if (k >= people.length) { if (people.length >= MAX_PEOPLE) break; addPerson(); }
+      people[k].name = n; added++; k++;
+    }
+    const cut = fresh.length - added;
+    renderPeople(); saveDraft();
+    const note = $('#paste-note');
+    note.textContent = `✓ ${added} ${added === 1 ? 'Name' : 'Namen'} eingefügt`
+      + (dups ? ` · ${dups} doppelt, übersprungen` : '') + (cut ? ` · ${cut} zu viel (max. ${MAX_PEOPLE})` : '');
+    note.hidden = false;
+    focusPerson(Math.min(k, people.length - 1));
   }
 
   function focusPerson(i) {
@@ -498,7 +539,18 @@
     });
     const all = `Nur für dich – nicht in die Gruppe weiterleiten.\n\nWichtel-Links für „${group}“:\n\n`
       + links.map(({ name, url }) => `${name}:\n${url}`).join('\n\n');
-    $('.save-wa').href = `https://wa.me/?text=${encodeURIComponent(all)}`;
+    // Sehr lange WhatsApp-Links können abgeschnitten werden -> ab 15 Personen in Teilen (je 15 Links)
+    const PART = 15, waBox = $('.save-wa-box');
+    waBox.innerHTML = '';
+    for (let k = 0; k < links.length; k += PART) {
+      const chunk = links.slice(k, k + PART), multi = links.length > PART;
+      const head = `Nur für dich – nicht in die Gruppe weiterleiten.\n\nWichtel-Links für „${group}“${multi ? ` (Teil ${k / PART + 1} von ${Math.ceil(links.length / PART)})` : ''}:\n\n`;
+      const a = document.createElement('a');
+      a.className = 'btn-secondary save-wa'; a.target = '_blank'; a.rel = 'noopener';
+      a.href = `https://wa.me/?text=${encodeURIComponent(head + chunk.map(({ name, url }) => `${name}:\n${url}`).join('\n\n'))}`;
+      a.textContent = multi ? `WhatsApp an mich ${k + 1}–${k + chunk.length}` : 'WhatsApp an mich';
+      waBox.append(a);
+    }
     const mail = `mailto:?subject=${encodeURIComponent(`Wichtel-Links: ${group} (nur für dich)`)}&body=${encodeURIComponent(all)}`;
     $('.save-mail').href = mail;
     $('.save-mail').hidden = mail.length > 1900; // manche Mail-Programme kürzen lange Links

@@ -560,3 +560,5 @@ footer .legal a { color: var(--muted); }
 .excl-card > summary .opt { margin: 0; }
 .last-wrap { margin: 14px 0 0; }
 .last-wrap .btn-ghost { font: inherit; font-weight: 700; background: transparent; cursor: pointer; text-align: left; }
+.paste-note { margin: 4px 0 10px; color: #1f6f4a; font-weight: 600; font-size: 15px; }
+.save-wa-box { display: contents; }
