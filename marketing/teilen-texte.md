@@ -104,3 +104,8 @@ Themen: Wichteln, Weihnachtsbräuche, Advent
 Titel: Euer Wichtel schreibt 24 Briefe – kostenlos zum Ausdrucken 💌
 > Vom 1. bis 24. Dezember jeden Morgen ein Brief vom Wichtel: Onni zieht ein, feiert Nikolaus, schickt Geheimbotschaften in Spiegelschrift – mit Steckbrief für Eltern und 6 Ausmalbildern. Kostenlos als PDF auf wichtellos.de (→ Wichteltür) 🎄
 > #wichteltür #wichtelbriefe #wichtel #advent #adventszeit #weihnachtenmitkindern #wichtelstreiche #kostenlos
+
+### reel-a1-lose (Video `marketing/reel/reel-a1-lose.mp4`, 13,2 s, Flow-Clips + Spieluhr → „Mit KI erstellt“)
+Titel: Zettel ziehen war gestern 😅
+> Onni kommt aus der Wichteltür – und schüttet einfach alle Lose aus 🙈 Zum Glück geht Auslosen auch ohne Zettelchaos: Namen eintragen, jeder bekommt seinen geheimen Link. Kostenlos und ohne Anmeldung auf wichtellos.de 🎁
+> #wichteln #wichtelgenerator #secretsanta #wichtelnimbüro #weihnachtsfeier #wichteltür #weihnachten #lifehack

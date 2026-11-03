@@ -103,6 +103,12 @@ Antworten auf Deutsch.
   03.11.: helle Fassung als Pinterest-Video-Pin veröffentlicht (Pinnwand „Wichtelgeschenke für Kinder“, Link /wichteltuer/#briefe,
   Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label); der Ton läuft auf Pinterest mit. 3D-Fassung auf Instagram + TikTok
   gepostet (Toni, 03.11.).
+- Google Flow (03.11.): neues Projekt „Nov 03 - 17:06“, Charakter **„Onni 3D“** (aus `geschenk.jpg`) – beim Prompt immer per „+“ als
+  Referenz anhängen, sonst erfindet Flow fremde Figuren. Agent-Einstellung „vor dem Generieren bestätigen: Immer“, Format 9:16.
+  Omni 1.1 Flash (12 Punkte/8-s-Clip) lässt die Mütze hochrutschen → Gesicht mit Augen sichtbar (Toni: „egal“). Für exakten Onni Veo testen.
+  Verlängern („Extend“) nur bei Veo-Clips. Guthaben 1.050 Punkte bis 02.12. 09:34 (Plan: Themen A Auslosen, B Geschenke, C Streiche, D Saison).
+- `marketing/reel/render-reel-a1.js` → `reel-a1-lose.mp4` (13,2 s): Clips `wichtel3d/clips-a/a1-tuer.mp4` (Onni kommt aus der Wichteltür,
+  schüttet Lose aus) + `a2-winken.mp4`, Überblendung 0,4 s, Texte „Zettel ziehen war gestern“ / „WichtelLos – kostenlos … wichtellos.de“.
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
