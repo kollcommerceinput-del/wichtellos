@@ -1651,7 +1651,7 @@ def legal_pages():
 <p>{COMPANY}</p>
 <p>Vertreten durch den Geschäftsführer: Antonio Koll</p>
 <h2>Kontakt</h2>
-<p>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a><br>Telefon: +49 151 29522767</p>
+<p>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a></p>
 <h2>Registereintrag</h2>
 <p>Amtsgericht Charlottenburg, HRB 277995 B</p>
 <h2>Umsatzsteuer-ID</h2>

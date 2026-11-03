@@ -1,5 +1,0 @@
-ErrorDocument 404 /404.html
-
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ http://wichtellos.de%{REQUEST_URI} [R=301,L]
