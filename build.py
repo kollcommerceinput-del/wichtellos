@@ -1797,8 +1797,11 @@ def extras():
 
 
 def main():
+    # Nur den Inhalt löschen, nicht den Ordner selbst: Läuft ein Testserver in website/, ist der Ordner gesperrt –
+    # rmtree brach dann mittendrin ab und ein halb leerer Stand wurde gepusht (03.11.)
     if OUT.exists():
-        shutil.rmtree(OUT)
+        for p in OUT.iterdir():
+            shutil.rmtree(p) if p.is_dir() else p.unlink()
     (OUT / 'assets').mkdir(parents=True)
     for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js', 'wunsch.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
