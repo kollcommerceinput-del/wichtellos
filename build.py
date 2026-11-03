@@ -478,14 +478,18 @@ def finder_page():
   <label class="f-search">Wonach suchst du?
     <input id="f-q" type="search" placeholder="z. B. Tee, Basteln, Socken" autocomplete="off">
   </label>
+  <details class="f-more" id="f-more">
+    <summary><span class="f-sum">⚙️ Filter: Für wen · Budget · Mag gern</span><span id="f-active" class="f-active"></span></summary>
   {chip_group('Für wen?', 'fuer', who)}
   {chip_group('Budget', 'budget', [(str(b), f'bis {b} €') for b in BUDGETS])}
   {chip_group('Mag gern', 'mag', list(CAT_LABELS.items()), with_all=False)}
+    <p class="f-show"><button type="button" id="f-show" class="btn-primary">Ideen ansehen</button></p>
+  </details>
   <p class="f-foot"><span id="f-count" aria-live="polite">{len(IDEAS)} Ideen</span> · <button type="button" id="f-reset" class="link-btn">Filter zurücksetzen</button></p>
 </div>
 <p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="{esc(amazon_url('Wichtelgeschenk'))}" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
 <h2 class="sr-only">Alle Geschenkideen</h2>
-<div id="f-results" class="idea-grid">
+<div id="f-results" class="idea-grid" tabindex="-1">
 {cards}
 </div>
 <p class="hint">Bei Geschenken für Kinder bitte die Altersangabe auf der Verpackung beachten, zum Beispiel wegen verschluckbarer Kleinteile.</p>

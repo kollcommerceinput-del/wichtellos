@@ -65,14 +65,18 @@
   <label class="f-search">Wonach suchst du?
     <input id="f-q" type="search" placeholder="z. B. Tee, Basteln, Socken" autocomplete="off">
   </label>
+  <details class="f-more" id="f-more">
+    <summary><span class="f-sum">⚙️ Filter: Für wen · Budget · Mag gern</span><span id="f-active" class="f-active"></span></summary>
   <div class="f-group" role="group" aria-label="Für wen?"><span class="f-label">Für wen?</span><button type="button" class="chip" data-f="fuer" data-v="" aria-pressed="true">Alle</button><button type="button" class="chip" data-f="fuer" data-v="k1" aria-pressed="false">Kind 3–7</button><button type="button" class="chip" data-f="fuer" data-v="k2" aria-pressed="false">Kind 8–12</button><button type="button" class="chip" data-f="fuer" data-v="teen" aria-pressed="false">Teenager</button><button type="button" class="chip" data-f="fuer" data-v="adult" aria-pressed="false">Erwachsene</button><button type="button" class="chip" data-f="fuer" data-v="office" aria-pressed="false">Kollegen</button></div>
   <div class="f-group" role="group" aria-label="Budget"><span class="f-label">Budget</span><button type="button" class="chip" data-f="budget" data-v="" aria-pressed="true">Alle</button><button type="button" class="chip" data-f="budget" data-v="5" aria-pressed="false">bis 5 €</button><button type="button" class="chip" data-f="budget" data-v="10" aria-pressed="false">bis 10 €</button><button type="button" class="chip" data-f="budget" data-v="15" aria-pressed="false">bis 15 €</button><button type="button" class="chip" data-f="budget" data-v="20" aria-pressed="false">bis 20 €</button><button type="button" class="chip" data-f="budget" data-v="30" aria-pressed="false">bis 30 €</button></div>
   <div class="f-group" role="group" aria-label="Mag gern"><span class="f-label">Mag gern</span><button type="button" class="chip" data-f="mag" data-v="naschen" aria-pressed="false"><span class="ico" aria-hidden="true">🍪</span>Naschen &amp; Genuss</button><button type="button" class="chip" data-f="mag" data-v="gemuetlich" aria-pressed="false"><span class="ico" aria-hidden="true">☕</span>Gemütlich</button><button type="button" class="chip" data-f="mag" data-v="spiele" aria-pressed="false"><span class="ico" aria-hidden="true">🎲</span>Spiele &amp; Rätsel</button><button type="button" class="chip" data-f="mag" data-v="kreativ" aria-pressed="false"><span class="ico" aria-hidden="true">✂️</span>Basteln &amp; Kreativ</button><button type="button" class="chip" data-f="mag" data-v="technik" aria-pressed="false"><span class="ico" aria-hidden="true">🎧</span>Technik</button><button type="button" class="chip" data-f="mag" data-v="lustig" aria-pressed="false"><span class="ico" aria-hidden="true">😄</span>Lustig</button></div>
+    <p class="f-show"><button type="button" id="f-show" class="btn-primary">Ideen ansehen</button></p>
+  </details>
   <p class="f-foot"><span id="f-count" aria-live="polite">112 Ideen</span> · <button type="button" id="f-reset" class="link-btn">Filter zurücksetzen</button></p>
 </div>
 <p id="f-amazon-box" class="f-amazon" hidden>Nicht das Richtige dabei? <a id="f-amazon" href="https://www.amazon.de/s?k=Wichtelgeschenk&amp;tag=wichtellos-21" rel="sponsored nofollow noopener" target="_blank">Bei Amazon suchen*</a></p>
 <h2 class="sr-only">Alle Geschenkideen</h2>
-<div id="f-results" class="idea-grid">
+<div id="f-results" class="idea-grid" tabindex="-1">
 <div class="idea" data-ages="k2 teen adult" data-budget="5" data-cats="gemuetlich" data-office="0" data-search="badekugel duftet, sprudelt und macht das bad zum wellness-abend. badekugel gemuetlich">
   <h3>Badekugel</h3>
   <p>Duftet, sprudelt und macht das Bad zum Wellness-Abend.</p>

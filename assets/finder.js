@@ -42,6 +42,7 @@
     let count = 0;
     cards.forEach((c) => { const ok = matches(c); c.hidden = !ok; if (ok) count++; });
     $('#f-count').textContent = count === 1 ? '1 Idee' : `${count} Ideen`;
+    $('#f-show').textContent = count === 1 ? '1 Idee ansehen' : `${count} Ideen ansehen`;
 
     const query = `${state.q.trim() || 'Wichtelgeschenk'} ${AGE_QUERY[state.fuer] || ''}`.trim();
     const link = $('#f-amazon');
@@ -54,6 +55,8 @@
       const on = f === 'mag' ? state.mag.has(v) : state[f] === v;
       chip.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
+    const act = [...document.querySelectorAll('.chip[data-f][aria-pressed="true"]')].filter((c) => c.dataset.v).map((c) => c.textContent.trim());
+    $('#f-active').textContent = act.length ? `Aktiv: ${act.join(' · ')}` : '';
     writeUrl();
   }
 
@@ -77,6 +80,16 @@
     state.fuer = ''; state.budget = ''; state.mag.clear(); state.q = '';
     $('#f-q').value = '';
     apply();
+  });
+
+  // Filter auf dem Handy zugeklappt; kommt man mit Filtern in der Adresse (z. B. ?fuer=office), immer zugeklappt
+  const fromUrl = /[?&](fuer|budget|mag|q)=/.test(location.search);
+  $('#f-more').open = !fromUrl && matchMedia('(min-width: 700px)').matches;
+  $('#f-show').addEventListener('click', () => {
+    $('#f-more').open = false;
+    const r = $('#f-results');
+    r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    r.focus({ preventScroll: true });
   });
 
   readUrl();

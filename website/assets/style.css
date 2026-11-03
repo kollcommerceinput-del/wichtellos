@@ -577,3 +577,16 @@ h2[id] { scroll-margin-top: 16px; }
 .faq .faq-more > summary { display: inline-block; margin: 6px 0 10px; padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--primary); list-style: none; min-height: 44px; }
 .faq .faq-more > summary::-webkit-details-marker { display: none; }
 .faq .faq-more[open] > summary { display: none; }
+.f-more { margin: 12px 0 0; }
+.f-more > summary { cursor: pointer; list-style: none; font-weight: 700; min-height: 44px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; padding: 8px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--soft); }
+.f-more > summary::-webkit-details-marker { display: none; }
+.f-more > summary::after { content: '+'; margin-left: auto; color: var(--primary); font-size: 22px; line-height: 1; }
+.f-more[open] > summary::after { content: '–'; }
+.f-more[open] > summary { margin-bottom: 6px; }
+.f-active { flex-basis: 100%; order: 3; font-weight: 600; color: var(--primary); font-size: 15px; }
+.f-active:empty { display: none; }
+.f-show { margin: 14px 0 0; }
+.f-show .btn-primary { width: 100%; }
+#f-results:focus { outline: none; }
+@media (min-width: 700px) { .f-show { display: none; } }
+.f-sum { flex: 1 1 0; min-width: 0; }
