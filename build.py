@@ -852,17 +852,34 @@ SUPPLIES = [
 ]
 
 
-def supplies_block():
+# Seite des geheimen Links: Verpacken + anonym bleiben (Kaufabsicht ist dort am höchsten)
+WRAP = [
+    ('„Von deinem Wichtel“-Anhänger', 'Damit keiner errät, von wem das Geschenk kommt.', 'Geschenkanhänger Wichtel Weihnachten'),
+    ('Geschenktüten aus Kraftpapier', 'Schnell verpackt – und alle Päckchen sehen gleich aus.', 'Geschenktüten Kraftpapier Weihnachten', 'B0B6BRP5KP'),
+    ('Weihnachtliches Geschenkpapier', 'Eine Rolle reicht für alle Geschenke bis Weihnachten.', 'Geschenkpapier Weihnachten Rolle'),
+    ('Geschenkband & Schleifen', 'Der letzte Schliff – auch für schief gepackte Päckchen.', 'Geschenkband Weihnachten Schleifen Set'),
+]
+
+# Wichtelgruß: Kleinigkeiten, die zum Gruß passen
+GRUSS_SHOP = [
+    ('Mini-Weihnachtskarten', 'Den Gruß auch auf Papier – für ans Geschenk oder an den Schreibtisch.', 'Mini Weihnachtskarten Set'),
+    ('Schoko-Weihnachtsmann', 'Die kleinste Wichtel-Überraschung: einfach heimlich hinlegen.', 'Schoko Weihnachtsmann klein'),
+    ('Wichtel-Sticker', 'Für Umschläge, Tüten und kleine Botschaften.', 'Sticker Wichtel Weihnachten'),
+    ('Adventskalender-Tütchen', 'Für Rätsel-Hinweise in Etappen: Tütchen mit Zahlen.', 'Adventskalender Tüten Zahlen Kraftpapier'),
+]
+
+
+def supplies_block(items=None, title='Das brauchst du noch für die Bescherung', note=True):
     cards = '\n'.join(f'''<div class="idea">
   <h3>{esc(t)}</h3>
   <p>{esc(x)}</p>
   {product_links(*r)}
-</div>''' for t, x, *r in SUPPLIES)
-    return f'''<h2>Das brauchst du noch für die Bescherung</h2>
+</div>''' for t, x, *r in (items or SUPPLIES))
+    disc = '\n<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>' if note else ''
+    return f'''<h2>{esc(title)}</h2>
 <div class="idea-grid">
 {cards}
-</div>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>'''
+</div>{disc}'''
 
 
 DOOR_PLAN = [
@@ -1348,6 +1365,10 @@ def gruss_page():
   </div>
 </div>
 
+<h2>Noch ein Geschenk dazu?</h2>
+<p>Zum Gruß gehört irgendwann auch das Päckchen: <a href="/wichtelgeschenke-unter-5-euro/">Ideen unter 5 €</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
+{supplies_block(GRUSS_SHOP, 'Kleine Grüße zum Anfassen')}
+
 <h2>Wann passt ein Wichtelgruß?</h2>
 <ul>
   <li><b>Direkt nach dem Auslosen:</b> „Ich hab dich gezogen!“ – ohne Namen unterschrieben, sorgt das für Rätselspaß.</li>
@@ -1665,6 +1686,7 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
+    html = html.replace('<!--VERPACKEN-->', supplies_block(WRAP, 'Schön verpacken – und geheim bleiben 🎀', note=False))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(html, encoding='utf-8')
 

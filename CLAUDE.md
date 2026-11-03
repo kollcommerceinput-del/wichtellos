@@ -58,6 +58,8 @@ Antworten auf Deutsch.
   im Klartext + Link. Pin `pins3d/pin3d-wunschzettel.png`. Sitemap 23 URLs. Pin-Texte in `teilen-texte.md`.
   03.11. beide Pins veröffentlicht (Ideen & Reels, KI-Label, Alt-Text): wichtelgruss (Wichteln, Weihnachtsgrüße, Weihnachtskarten),
   wunschzettel (Wichteln, Wichtelgeschenke, Geschenkideen für Weihnachten – „Wunschzettel“ gibt es als Thema nicht).
+- `supplies_block(items, title, note)` mit Listen `SUPPLIES` (Würfeln/Büro/Feier), `WRAP` (Seite des geheimen Links, Platzhalter
+  `<!--VERPACKEN-->` in tool.html, „Schön verpacken – und geheim bleiben“) und `GRUSS_SHOP` (/wichtelgruss/ „Kleine Grüße zum Anfassen“) (03.11.)
 - Seite des geheimen Links (03.11.): „📅 Bescherung in den Kalender“ (.ics ganztägig + Erinnerung 1 Tag vorher, ohne Namen des
   Beschenkten; nur wenn ein Datum gesetzt ist) und „📝 Eigenen Wunschzettel schreiben“
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
