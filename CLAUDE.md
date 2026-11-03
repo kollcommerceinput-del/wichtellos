@@ -109,6 +109,9 @@ Antworten auf Deutsch.
   Verlängern („Extend“) nur bei Veo-Clips. Guthaben 1.050 Punkte bis 02.12. 09:34 (Plan: Themen A Auslosen, B Geschenke, C Streiche, D Saison).
 - `marketing/reel/render-reel-a1.js` → `reel-a1-lose.mp4` (13,2 s): Clips `wichtel3d/clips-a/a1-tuer.mp4` (Onni kommt aus der Wichteltür,
   schüttet Lose aus) + `a2-winken.mp4`, Überblendung 0,4 s, Texte „Zettel ziehen war gestern“ / „WichtelLos – kostenlos … wichtellos.de“.
+  Fassung ohne Musik `reel-a1-lose-ohne-musik.mp4` (`OHNE_MUSIK=1`; Toni: Musik nicht automatisch, nicht immer dieselbe).
+  03.11. als Pinterest-Video-Pin veröffentlicht (ohne Musik; „Wichteln: Ideen & Reels“, Link Startseite, Themen Wichteln/Weihnachten/
+  Weihnachtsparty, Alt-Text, KI-Label). Instagram/TikTok: Toni (Texte im Chat 03.11.).
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
