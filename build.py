@@ -1672,12 +1672,13 @@ def legal_pages():
 <p>Wir verarbeiten so wenig Daten wie möglich. Es gibt kein Benutzerkonto, keine Analyse- oder Tracking-Werkzeuge und wir setzen keine Cookies.</p>
 
 <h2>3. Hosting und Server-Protokolle</h2>
-<p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Daten, insbesondere die IP-Adresse, aufgerufene Seite, Zeitpunkt des Zugriffs und Browserangaben, um die Website sicher und stabil auszuliefern und Angriffe abzuwehren. Wir selbst erhalten diese Daten nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website.</p>
+<p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf einer Seite verarbeitet GitHub technisch notwendige Daten, insbesondere die IP-Adresse, aufgerufene Seite, Zeitpunkt des Zugriffs und Browserangaben, um die Website sicher und stabil auszuliefern und Angriffe abzuwehren. Wir selbst erhalten diese Daten nicht. Wie lange GitHub diese Server-Protokolle speichert, legt GitHub fest; darauf haben wir keinen Einfluss. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website.</p>
 <p>Dabei können Daten in die USA übermittelt werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert (Angemessenheitsbeschluss der EU-Kommission, Art. 45 DSGVO); ergänzend verwendet GitHub Standardvertragsklauseln. Näheres in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">docs.github.com</a>.</p>
 <p>Die Domain wird bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, verwaltet (Namensauflösung, DNS).</p>
 
 <h2>4. Die Wichtel-Auslosung</h2>
 <p>Namen, Tipps zu einzelnen Personen, Gruppenname, Budget, Datum und Nachricht, die du in das Formular einträgst, werden ausschließlich in deinem Browser verarbeitet. Die Zuteilung wird codiert in den persönlichen Links gespeichert, und zwar im Teil nach dem #-Zeichen. Diesen Teil überträgt der Browser beim Aufruf nicht an unseren Server – wir erhalten von den Namen und Zuteilungen keine Kenntnis.</p>
+<p>Genauso funktionieren der Wichtelgruß (/wichtelgruss/) und der Wunschzettel (/wunschzettel/): Texte, Namen und Wünsche stecken nur im Link nach dem #-Zeichen, die Grußkarte als Bild entsteht in deinem Browser. Auch die Kalenderdatei zur Bescherung erzeugt dein Browser selbst. Nichts davon wird an uns übertragen oder bei uns gespeichert.</p>
 <p>Wenn du Links per WhatsApp oder E-Mail verschickst, gelten dafür die Datenschutzbestimmungen des jeweiligen Dienstes.</p>
 
 <h2>5. Speicherung im Browser (Local Storage)</h2>
@@ -1687,12 +1688,15 @@ def legal_pages():
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
 <p>Der Knopf „Ein Geschenk für den Wichtel“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
 
-<h2>7. Kontakt per E-Mail</h2>
+<h2>7. Links zu Instagram, Pinterest und TikTok</h2>
+<p>Im Fußbereich verlinken wir auf unsere Profile bei Instagram, Pinterest und TikTok. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+
+<h2>8. Kontakt per E-Mail</h2>
 <p>Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald sie dafür nicht mehr benötigt werden.</p>
 
-<h2>8. Deine Rechte</h2>
-<p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p>
-<p>Stand: Oktober 2026</p>
+<h2>9. Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO). Für uns zuständig ist die Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin, <a href="https://www.datenschutz-berlin.de/" rel="noopener">datenschutz-berlin.de</a>.</p>
+<p>Stand: November 2026</p>
 </article>"""
     page('/datenschutz/', 'Datenschutzerklärung | WichtelLos', 'Datenschutzerklärung von WichtelLos.', datenschutz, noindex=True)
 
