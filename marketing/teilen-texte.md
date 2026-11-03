@@ -81,3 +81,15 @@ Titel: 5 Wichtelgeschenke unter 10 € – die keiner wegwirft
 Beschreibung: Kleine Wichtelgeschenke unter 10 Euro, die wirklich benutzt werden: Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze und Gourmet-Schokolade. Perfekt fürs Büro-Wichteln, die Familie oder Freunde. Über 100 weitere Ideen im Geschenkfinder auf wichtellos.de.
 Alt-Text: Ein kleiner Plüsch-Wichtel steht neben fünf Geschenkideen unter 10 Euro: Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze und Schokolade.
 Themen: Wichteln, Wichtelgeschenke, Geschenkideen
+
+### Pin wichtelgruss (`marketing/pins-onni/pin-wichtelgruss.png`, Pinnwand „Ideen & Reels“, Link https://wichtellos.de/wichtelgruss/, KI-Label)
+Titel: Wichtelgruß per WhatsApp – digitale Wichtel-Karte gratis
+Beschreibung: Ein kleiner Gruß vom Wichtel macht die Wartezeit bis zur Bescherung spannender: „Ich hab dich gezogen!“, „Rate mal, wer ich bin!“ oder „Danke, lieber Wichtel!“ – Karte mit Onni gestalten und als Bild oder Link per WhatsApp verschicken. Kostenlos, ohne Anmeldung.
+Alt-Text: Zwei digitale Wichtel-Karten mit einem kleinen Wichtel: rot „Ich hab dich gezogen!“ und grün „Danke, lieber Wichtel!“.
+Themen: Wichteln, Weihnachtsgrüße, Weihnachten
+
+### Pin wunschzettel (`marketing/pins3d/pin3d-wunschzettel.png`, Pinnwand „Ideen & Reels“, Link https://wichtellos.de/wunschzettel/, KI-Label)
+Titel: Wunschzettel fürs Wichteln – online erstellen & teilen
+Beschreibung: Keiner weiß, was er schenken soll? Bis zu 5 Wünsche aufschreiben, „Bitte nicht“ ergänzen und den Wunschzettel als Link in die Wichtelgruppe schicken – dein Wichtel liest heimlich mit. Kostenlos, ohne Anmeldung, nichts gespeichert.
+Alt-Text: Ein Plüsch-Wichtel schaut in einer Werkstatt durch eine große Lupe, daneben kleine Geschenke.
+Themen: Wichteln, Wichtelgeschenke, Wunschzettel

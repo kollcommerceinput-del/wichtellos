@@ -52,6 +52,12 @@ Antworten auf Deutsch.
 - `build.py`: `gruss_page()` + `assets/gruss.js` – `/wichtelgruss/` (03.11.): digitale Wichtel-Karte, 8 Anlässe (`GRUSS`, je ein
   Onni-Sticker), 4 Farben, Canvas 1080×1350 → „Als Bild teilen“ (Web Share mit Datei, sonst Download) oder Link `/wichtelgruss/#g=…`
   (Base64url-JSON, nur im #, Empfänger sieht die Karte + Hinweis). Verlinkt: Fuß, Gedichte, Seite des geheimen Links. Sitemap 22 URLs.
+  9. Anlass „Rate mal, wer ich bin!“ (Rätsel-Hinweise). Pin: `marketing/render-pins-gruss.js` (braucht lokalen Server) → `pins-onni/pin-wichtelgruss.png`
+- `build.py`: `wunsch_page()` + `assets/wunsch.js` – `/wunschzettel/` (03.11.): bis 5 Wünsche + „Bitte nicht“, Link `/wunschzettel/#z=…`
+  (nur im #), Empfänger-Ansicht mit Amazon-Suchlink je Wunsch („Größe …“ wird aus der Suche entfernt). WhatsApp-Text enthält die Liste
+  im Klartext + Link. Pin `pins3d/pin3d-wunschzettel.png`. Sitemap 23 URLs. Pin-Texte in `teilen-texte.md`.
+- Seite des geheimen Links (03.11.): „📅 Bescherung in den Kalender“ (.ics ganztägig + Erinnerung 1 Tag vorher, ohne Namen des
+  Beschenkten; nur wenn ein Datum gesetzt ist) und „📝 Eigenen Wunschzettel schreiben“
 - `marketing/render-pins-onni.js` → `marketing/pins-onni/` (02.11. alle 4 veröffentlicht, KI-markiert, Alt-Text, Themen):
   ausmalbilder → /wichtel-ausmalbilder/ (Kinder; Malvorlagen, Weihnachtsmalvorlagen, Wichteln, Kindergarten),
   sticker → /wichtel-ausmalbilder/#sticker (Ideen & Reels; Wichteln, Weihnachtsgrüße, Weihnachten),

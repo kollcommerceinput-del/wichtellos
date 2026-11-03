@@ -107,6 +107,7 @@ FOOTER = '''<footer>
     <a href="/wichteltuer/">Wichteltür</a>
     <a href="/wichtelgedichte/">Wichtelgedichte</a>
     <a href="/wichtelgruss/">Wichtelgruß verschicken</a>
+    <a href="/wunschzettel/">Wunschzettel</a>
     <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
@@ -1310,6 +1311,7 @@ GRUSS = [
     {'h': 'Ich bin auf der Suche …', 't': 'Was magst du gerade besonders gern? Verrate es einfach ganz nebenbei – ich höre heimlich zu.', 'v': 'Dein Wichtel', 's': 'lupe'},
     {'h': 'Dein Geschenk ist unterwegs', 't': 'Nicht schütteln, nicht spicken – nur noch ein bisschen Geduld!', 'v': 'Dein Wichtel', 's': 'geschenk'},
     {'h': 'Nur noch ein paar Mal schlafen', 't': 'Dann ist Bescherung. Ich bin schon ganz aufgeregt!', 'v': 'Dein Wichtel', 's': 'schlaeft'},
+    {'h': 'Rate mal, wer ich bin!', 't': 'Hinweis Nr. 1: Ich sitze gar nicht so weit weg von dir. Mehr verrate ich (noch) nicht …', 'v': 'Dein Wichtel', 's': 'lupe'},
     {'h': 'Danke, lieber Wichtel!', 't': 'Mein Geschenk hat mich riesig gefreut. Du hast genau ins Schwarze getroffen!', 'v': '', 's': 'herz'},
     {'h': 'Ausgelost – es geht los!', 't': 'Jeder hat seinen geheimen Link bekommen. Viel Spaß beim Suchen, Basteln und Verpacken!', 'v': 'Eure Wichtel-Orga', 's': 'jubel'},
     {'h': 'Frohe Weihnachten!', 't': 'Schöne Feiertage, gemütliche Stunden und ganz viel Plätzchen wünscht', 'v': 'Dein Wichtel', 's': 'daumen'},
@@ -1351,18 +1353,69 @@ def gruss_page():
   <li><b>Direkt nach dem Auslosen:</b> „Ich hab dich gezogen!“ – ohne Namen unterschrieben, sorgt das für Rätselspaß.</li>
   <li><b>In der Wartezeit:</b> Ein „Dein Wichtel denkt an dich“ zwischendurch hält die Spannung hoch – besonders beim Büro-Wichteln über mehrere Wochen.</li>
   <li><b>Für Tipps:</b> „Ich bin auf der Suche …“ lädt ein, ganz nebenbei einen Wunsch fallen zu lassen.</li>
+  <li><b>Zum Raten:</b> „Rate mal, wer ich bin!“ – schick bis zur Bescherung jede Woche einen neuen Hinweis (Hinweis Nr. 1, 2, 3 …).</li>
   <li><b>Nach der Bescherung:</b> „Danke, lieber Wichtel!“ – mit eigenem Namen unterschrieben, an die ganze Gruppe oder den Wichtel direkt.</li>
 </ul>
 <p class="hint">Tipp: Damit dein Name geheim bleibt, schick den Gruß über jemand anderen – oder bitte die Person, die ausgelost hat, ihn weiterzuleiten. Als Link verschickt verrät die Karte nichts über dich.</p>
 
 <h2>Noch nicht ausgelost?</h2>
 {CTA}
-<p>Für die Karte zum Geschenk: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Onni als <a href="/wichtel-ausmalbilder/#sticker">WhatsApp-Sticker</a> · Alles zum <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
+<p>Wünsche sammeln: <a href="/wunschzettel/">Wunschzettel als Link</a> · Für die Karte zum Geschenk: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Onni als <a href="/wichtel-ausmalbilder/#sticker">WhatsApp-Sticker</a> · Alles zum <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
 </article>
 <script src="/assets/gruss.js" defer></script>'''
     page('/wichtelgruss/', 'Wichtelgruß: digitale Wichtel-Karte per WhatsApp verschicken',
          'Digitaler Wichtelgruß mit Onni: Anlass wählen, Text anpassen und die Wichtel-Karte als Bild oder Link per WhatsApp verschicken – kostenlos, ohne Anmeldung.', body,
          crumb='Wichtelgruß', playful=True)
+
+
+def wunsch_page():
+    body = f'''<article>
+<h1>Wunschzettel fürs Wichteln online erstellen</h1>
+<div id="wz-show" class="card wz-show" hidden>
+  <p class="wz-kicker">📝 Psst, nur für deinen Wichtel …</p>
+  <h2 id="wz-s-name"></h2>
+  <p id="wz-s-group" class="hint"></p>
+  <ol id="wz-s-list" class="wz-s-list"></ol>
+  <p id="wz-s-x" class="tip" hidden></p>
+  <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+  <p class="onni-says"><img src="/fotos/onni/sticker-lupe.webp" width="64" height="64" alt=""><span><b>Onni</b> meint: Ein Wunsch ist eine Idee, kein Muss – eine kleine Überraschung darf es immer sein.</span></p>
+  <p><a class="btn-secondary" href="/wunschzettel/">✍️ Eigenen Wunschzettel schreiben</a></p>
+</div>
+<p class="lead">Du weißt nicht, was du dir wünschen sollst – und dein Wichtel erst recht nicht? Schreib bis zu 5 Wünsche auf und schick den Wunschzettel als Link in eure Wichtelgruppe. Dein Wichtel liest heimlich mit, und keiner muss raten. Kostenlos, ohne Anmeldung.</p>
+
+<div class="card wunsch" data-wunsch>
+  <div class="row2">
+    <label>Dein Name<input id="wz-n" maxlength="30" placeholder="z. B. Anna"></label>
+    <label>Wichtelgruppe (optional)<input id="wz-g" maxlength="40" placeholder="z. B. Büro 2026"></label>
+  </div>
+  <p class="gr-label">Deine Wünsche</p>
+  <div id="wz-list" class="wz-list"></div>
+  <label>Bitte nicht … (optional)<input id="wz-x" maxlength="80" placeholder="z. B. Süßigkeiten, Duftkerzen"></label>
+  <p id="wz-err" class="error" hidden>Bitte trag mindestens einen Wunsch ein.</p>
+  <p><button type="button" id="wz-wa" class="btn-primary big">💬 Per WhatsApp in die Gruppe schicken</button></p>
+  <div class="row2">
+    <button type="button" id="wz-copy" class="btn-secondary">📋 Text + Link kopieren</button>
+    <button type="button" id="wz-view" class="btn-secondary">👀 Vorschau ansehen</button>
+  </div>
+  <p><button type="button" id="wz-more" class="btn-secondary big" hidden>📤 Andere App …</button></p>
+  <p class="hint">Die Wünsche stecken nur im Link (im Teil nach „#“) – sie werden nie an unseren Server geschickt und nirgends gespeichert.</p>
+</div>
+
+<h2>So klappt’s mit dem Wunschzettel</h2>
+<ul>
+  <li><b>Lieber Ideen als Produkte:</b> „Krimi aus Schweden“ oder „etwas für die Teepause“ lässt deinem Wichtel Spielraum – und die Überraschung bleibt.</li>
+  <li><b>Ans Budget denken:</b> Bei <a href="/wichtelgeschenke-unter-10-euro/">10 €</a> passt kein Kopfhörer – kleine Wünsche machen es allen leichter.</li>
+  <li><b>Größen dazuschreiben:</b> Bei Socken, Mützen oder Handschuhen spart das den Umtausch.</li>
+  <li><b>„Bitte nicht“ nutzen:</b> Allergien, kein Alkohol, keine Deko – ein Satz verhindert Fehlkäufe.</li>
+</ul>
+<p>Noch keine Idee, was du dir wünschen sollst? Stöbere im <a href="/geschenkfinder/">Geschenkfinder</a>. Mit WichtelLos kann jeder Teilnehmer beim Auslosen auch einen kurzen „💡 Tipp“ bekommen – der steckt direkt im geheimen Link.</p>
+{CTA}
+<p>Passend dazu: <a href="/wichtelgruss/">Wichtelgruß mit Onni verschicken</a> · <a href="/wichtelgedichte/">Wichtelgedichte</a> · <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
+</article>
+<script src="/assets/wunsch.js" defer></script>'''
+    page('/wunschzettel/', 'Wunschzettel fürs Wichteln online erstellen – per WhatsApp teilen',
+         'Wichtel-Wunschzettel online schreiben: bis zu 5 Wünsche plus „Bitte nicht“, als Link per WhatsApp in die Wichtelgruppe schicken – kostenlos, ohne Anmeldung, nichts gespeichert.', body,
+         crumb='Wunschzettel', playful=True)
 
 
 def history_page():
@@ -1622,7 +1675,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1647,7 +1700,7 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / 'assets').mkdir(parents=True)
-    for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js'):
+    for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js', 'wunsch.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
     site_js = (SRC / 'assets' / 'site.js').read_text(encoding='utf-8')
     site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
@@ -1674,6 +1727,7 @@ def main():
     party_page()
     poems_page()
     gruss_page()
+    wunsch_page()
     history_page()
     door_page()
     ausmal_page()

@@ -244,6 +244,8 @@
         <p class="onni-says"><img src="/fotos/onni/sticker-psst.webp" width="64" height="64" alt=""><span><b>Onni</b> flüstert: Psst – nicht verraten! Viel Spaß beim Aussuchen.</span></p>
       </div>
       <dl id="r-info" class="info"></dl>
+      <p id="r-cal-wrap" class="r-actions" hidden><button type="button" id="r-cal" class="btn-secondary">📅 Bescherung in den Kalender</button></p>
+      <p class="r-actions"><a class="btn-secondary" href="/wunschzettel/">📝 Eigenen Wunschzettel schreiben</a></p>
     </div>
 
     <div id="tip-ideas-wrap" hidden>
@@ -321,6 +323,7 @@
     <a href="/wichteltuer/">Wichteltür</a>
     <a href="/wichtelgedichte/">Wichtelgedichte</a>
     <a href="/wichtelgruss/">Wichtelgruß verschicken</a>
+    <a href="/wunschzettel/">Wunschzettel</a>
     <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
@@ -709,6 +712,28 @@
       const dd = document.createElement('dd'); dd.textContent = v;
       info.append(dt, dd);
     });
+    if (/^\d{4}-\d{2}-\d{2}$/.test(data.d || '')) {
+      $('#r-cal-wrap').hidden = false;
+      $('#r-cal').addEventListener('click', () => {
+        // Kalenderdatei (ganztägig) – ohne den Namen des Beschenkten
+        const day = data.d.replace(/-/g, '');
+        const nx = new Date(data.d + 'T12:00:00'); nx.setDate(nx.getDate() + 1);
+        const end = nx.toISOString().slice(0, 10).replace(/-/g, '');
+        const esc = (t) => String(t).replace(/[\\;,]/g, (c) => '\\' + c).replace(/\r?\n/g, '\\n');
+        const desc = [data.b && 'Budget: ' + data.b, data.m].filter(Boolean).concat('Ausgelost mit wichtellos.de').join('\n');
+        const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//WichtelLos//DE', 'BEGIN:VEVENT',
+          'UID:' + day + '-' + Math.random().toString(36).slice(2) + '@wichtellos.de',
+          'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z',
+          'DTSTART;VALUE=DATE:' + day, 'DTEND;VALUE=DATE:' + end,
+          'SUMMARY:' + esc('🎁 Wichtel-Bescherung: ' + (data.g || 'Wichteln')), 'DESCRIPTION:' + esc(desc),
+          'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Wichtelgeschenk dabei?', 'TRIGGER:-P1D', 'END:VALARM',
+          'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+        a.download = 'wichtel-bescherung.ics';
+        document.body.append(a); a.click(); a.remove();
+      });
+    }
     renderIdeas(data.b || '');
     if (data.t) { $('#r-tip').textContent = `💡 Tipp: ${data.t}`; $('#r-tip').hidden = false; }
     renderTipIdeas(data.t);

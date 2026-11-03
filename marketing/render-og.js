@@ -29,6 +29,7 @@ const PAGES = [
   ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür', 'Ideen, 24 Streiche & Zubehör für den Advent'],
   ['wichtel-ausmalbilder', 'onni/sticker-winkt.png', 'Wichtel-Ausmalbilder', '6 Motive mit Onni – kostenlos als PDF'],
   ['wichtelgruss', 'onni/sticker-psst.png', 'Wichtelgruß verschicken', 'Digitale Karte mit Onni – per WhatsApp'],
+  ['wunschzettel', 'onni/sticker-lupe.png', 'Wunschzettel fürs Wichteln', 'Bis zu 5 Wünsche – als Link per WhatsApp'],
   ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
 ];
 

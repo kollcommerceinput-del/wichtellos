@@ -17,6 +17,7 @@ const PINS = [
   ['lose-drucken', 'los.jpg', '50% -330px', 'Wichtel-Lose zum Ausdrucken', 'Mit QR-Code oder ganz ohne Handy', 'Kostenlos erstellen →'],
   ['buero', 'geschenk.jpg', '50% -480px', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team', 'Tipps fürs Team ansehen →'],
   ['unter-10-euro', 'geschenk-muetze.jpg', '50% -500px', 'Wichtel&shy;geschenke unter 10 €', '12 Ideen – auch für Kollegen', 'Alle Ideen ansehen →'],
+  ['wunschzettel', 'lupe.jpg', '50% -380px', 'Wunschzettel fürs Wichteln', 'Als Link in die Wichtelgruppe schicken', 'Kostenlos erstellen →'],
 ];
 
 const html = ([, file, pos, title, sub, cta]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

@@ -470,3 +470,21 @@ body { overflow-x: clip; }
 .gruss .btn-primary.big { width: 100%; }
 .gruss .row2 button, #gr-save { width: 100%; }
 @media (max-width: 760px) { .gruss { grid-template-columns: 1fr; } .gr-preview { position: static; max-width: 420px; margin: 0 auto; } }
+
+/* Wunschzettel (/wunschzettel/) + Aktionen auf der Seite des geheimen Links */
+.wz-list { display: grid; gap: 8px; margin-bottom: 8px; }
+.wz-row { display: flex !important; align-items: center; gap: 8px; margin: 0 !important; }
+.wz-row span { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; color: var(--primary); width: 1.4em; }
+.wunsch label, .wz-row input { font-weight: 600; }
+.wunsch label { display: block; margin: 8px 0; }
+.wunsch input { display: block; width: 100%; margin-top: 4px; font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.wz-row input { margin-top: 0; flex: 1; }
+.wz-show { border: 3px solid var(--gold); }
+.wz-kicker { color: var(--muted); margin: 0; }
+.wz-show h2 { margin-top: 4px; color: var(--primary); }
+.wz-s-list { padding-left: 1.4em; }
+.wz-s-list li { margin: 10px 0; }
+.wz-s-list li b { display: block; font-size: 1.1rem; }
+.wz-s-list .btn-secondary { display: inline-block; margin-top: 4px; font-size: .88rem; padding: 6px 12px; text-decoration: none; }
+.r-actions { margin: 10px 0 0; }
+.r-actions .btn-secondary { display: inline-block; text-decoration: none; }
