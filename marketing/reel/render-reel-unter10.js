@@ -1,7 +1,7 @@
 // Reel „5 Wichtelgeschenke unter 10 €, die keiner wegwirft“ (1080x1920, 13,5 s, mit Spieluhr-Ton, gemeinfrei)
 // -> marketing/reel/reel-unter10.mp4   Szenen ~1,8 s (Toni: Videos knapp halten)
-// Ideen aus gifts.py (bürotauglich, alle bis 10 €). Keine Preise/Amazon-Fotos, nur Emojis.
-// Foto Szene 1: 3D-Geschenk (KI, Google Flow) -> „Mit KI erstellt“ angeben. Seite hat Werbelinks -> Text mit „Werbung“.
+// Ideen aus gifts.py (bürotauglich, alle bis 10 €). Keine Preise/Amazon-Fotos.
+// Alle Fotos 3D-Wichtel (KI, Google Flow) -> „Mit KI erstellt“ angeben. Seite hat Werbelinks -> Text mit „Werbung“.
 // node marketing/reel/render-reel-unter10.js     (Standbilder: ... "1,3,5,7,9,10.5,12.5")
 const fs = require('fs');
 const path = require('path');
@@ -13,12 +13,12 @@ const FPS = 30, DUR = 13.5, T0 = 2.2, STEP = 1.8;
 const jpg = (f) => 'data:image/jpeg;base64,' + fs.readFileSync(path.join(__dirname, 'wichtel3d', 'stills', f)).toString('base64');
 const png = (f) => 'data:image/png;base64,' + fs.readFileSync(path.join(ROOT, 'marketing', 'onni', f)).toString('base64');
 const font = 'data:font/woff2;base64,' + fs.readFileSync(path.join(ROOT, 'assets/fonts/fredoka-latin-600-normal.woff2')).toString('base64');
-const GIFTS = [
-  ['☕', 'Kakao am Stiel', 'In heiße Milch rühren – fertig', '#fde7e7'],
-  ['🧦', 'Kuschelsocken', 'Warm, weich, lustige Muster', '#e3f1ea'],
-  ['🕯️', 'Duftkerze', 'Zimt oder Tanne – sofort Weihnachten', '#fff1cc'],
-  ['🌵', 'Mini-Pflanze', 'Braucht kaum Pflege', '#e3f1ea'],
-  ['🍫', 'Gourmet-Schokolade', 'Statt der Standardtafel', '#fde7e7'],
+const GIFTS = [ // Bilder: Google Flow (Nano Banana 2.1), 896x1200, in wichtel3d/stills/geschenke/
+  ['kakao', 'Kakao am Stiel', 'In heiße Milch rühren – fertig'],
+  ['socken', 'Kuschelsocken', 'Warm, weich, lustige Muster'],
+  ['kerze', 'Duftkerze', 'Zimt oder Tanne – sofort Weihnachten'],
+  ['pflanze', 'Mini-Pflanze', 'Braucht kaum Pflege'],
+  ['schoko', 'Gourmet-Schokolade', 'Statt der Standardtafel'],
 ];
 const END = T0 + GIFTS.length * STEP;
 
@@ -31,11 +31,12 @@ body{margin:0;width:1080px;height:1920px;overflow:hidden;position:relative;backg
 .badge{display:inline-block;background:#1f6f4a;color:#fff;font-size:44px;padding:10px 36px;border-radius:999px}
 h1{font-size:110px;line-height:1.02;margin:18px 0 0;font-weight:600}h1 em{font-style:normal;color:#c62828}
 .sub{font-family:'Segoe UI',system-ui,sans-serif;color:#6d5d57;font-size:52px;margin:24px 0 0}
-.num{position:absolute;top:150px;left:0;right:0}
-.num span{display:inline-block;background:#c62828;color:#fff;font-size:64px;padding:12px 44px;border-radius:999px}
-.disc{position:absolute;left:190px;top:330px;width:700px;height:700px;border-radius:50%}
-.emo{position:absolute;left:0;right:0;top:420px;font-size:440px;line-height:1;font-family:'Segoe UI Emoji',sans-serif}
-.gt{position:absolute;left:50px;right:50px;top:1120px}
+.num{position:absolute;top:70px;left:0;right:0}
+.pw{position:absolute;left:0;top:0;width:1080px;height:1300px;overflow:hidden}
+.gp{width:1080px;height:1300px;object-fit:cover;object-position:50% 60%;transform-origin:50% 60%}
+.fade{position:absolute;left:0;right:0;top:1100px;height:210px;background:linear-gradient(rgba(255,248,240,0),#fff8f0)}
+.num span{display:inline-block;background:#c62828;color:#fff;font-size:64px;padding:12px 44px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.gt{position:absolute;left:50px;right:50px;top:1290px}
 .url{display:inline-block;background:#c62828;color:#fff;font-size:84px;padding:20px 60px;border-radius:999px}
 img.onni{position:absolute;filter:drop-shadow(0 14px 20px rgba(43,27,23,.25))}
 .dots{position:absolute;left:0;right:0;bottom:120px;display:flex;gap:22px;justify-content:center}
@@ -44,10 +45,9 @@ img.onni{position:absolute;filter:drop-shadow(0 14px 20px rgba(43,27,23,.25))}
 <div class="scene" id="s0"><div style="position:absolute;left:0;top:0;width:1080px;height:1150px;overflow:hidden"><img id="ph" src="${jpg('geschenk.jpg')}" style="position:absolute;left:0;top:0;width:1080px;height:1150px;object-fit:cover;object-position:50% 40%;transform-origin:50% 0"></div>
   <div style="position:absolute;left:0;right:0;top:950px;height:220px;background:linear-gradient(rgba(255,248,240,0),#fff8f0)"></div>
   <div id="t0" style="position:absolute;left:50px;right:50px;top:1110px"><span class="badge">Wichteln 2026</span><h1>5 Geschenke<br>unter <em>10 €</em></h1><p class="sub">die keiner wegwirft</p></div></div>
-${GIFTS.map(([e, n, t, c], i) => `<div class="scene" id="g${i}"><div class="num"><span>${i + 1} / ${GIFTS.length}</span></div>
-  <div class="disc" style="background:${c}"></div><div class="emo" id="e${i}">${e}</div>
-  <div class="gt" id="n${i}"><h1 style="font-size:${n.length > 14 ? 96 : 116}px">${n}</h1><p class="sub">${t}</p></div>
-  <img class="onni" src="${png('sticker-daumen.png')}" style="width:250px;right:40px;top:860px"></div>`).join('')}
+${GIFTS.map(([f, n, t], i) => `<div class="scene" id="g${i}"><div class="pw"><img class="gp" id="e${i}" src="${jpg('geschenke/' + f + '.jpg')}"></div>
+  <div class="fade"></div><div class="num"><span>${i + 1} / ${GIFTS.length}</span></div>
+  <div class="gt" id="n${i}"><h1 style="font-size:${n.length > 14 ? 96 : 116}px">${n}</h1><p class="sub">${t}</p></div></div>`).join('')}
 <div class="dots" id="dots">${GIFTS.map((_, i) => `<i id="d${i}"></i>`).join('')}</div>
 <div class="scene" id="s9"><img class="onni" id="on" src="${png('sticker-geschenk.png')}" style="width:560px;left:260px;top:300px">
   <div style="position:absolute;left:50px;right:50px;top:930px"><h1 style="font-size:92px">Über <em>100 Ideen</em><br>im Geschenkfinder</h1>
@@ -65,7 +65,7 @@ function frame(t, n, T0, STEP, END) {
   for (let i = 0; i < n; i++) {
     const a = T0 + i * STEP;
     vis(`g${i}`, a, a + STEP);
-    document.getElementById(`e${i}`).style.transform = `scale(${back((t - a - 0.05) / 0.35)}) rotate(${Math.sin(t * 4 + i) * 4}deg)`;
+    document.getElementById(`e${i}`).style.transform = `scale(${1.08 - clamp((t - a) / STEP) * 0.08})`;
     document.getElementById(`n${i}`).style.transform = `translateY(${(1 - back((t - a - 0.2) / 0.35)) * 90}px)`;
     document.getElementById(`d${i}`).style.background = t >= a ? '#c62828' : '#e6d8cf';
   }

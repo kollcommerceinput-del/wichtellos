@@ -60,7 +60,8 @@ Antworten auf Deutsch.
   02.11.: TikTok (Toni), Pinterest-Video-Pin (Kinder; Wichteln, Malvorlagen, Kindergarten). Erklär-Galerie `galerie.mp4` als
   Video-Pin (Ideen & Reels; Wichteln, Weihnachtsparty, Weihnachten, Link Startseite). Instagram-Reel vorbereitet – Musik + Teilen: Toni.
 - `marketing/reel/render-reel-unter10.js` → `reel-unter10.mp4` (13,5 s, Spieluhr-Ton): „5 Wichtelgeschenke unter 10 €, die keiner
-  wegwirft“ (Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze, Gourmet-Schokolade als Emojis) → Geschenkfinder. Posten mit
+  wegwirft“ (Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze, Gourmet-Schokolade – je ein 3D-Bild aus Flow,
+  `wichtel3d/stills/geschenke/`) → Geschenkfinder. Posten mit
   „Werbung“ + „Mit KI erstellt“ (Titelbild 3D) (03.11.)
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
