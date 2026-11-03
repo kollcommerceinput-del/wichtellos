@@ -571,3 +571,7 @@ h2[id] { scroll-margin-top: 16px; }
 .plan-details[open] > summary { margin-bottom: 10px; }
 .plan-details[open] > summary::after { content: ' –'; }
 @media print { .plan-details > summary { display: none; } }
+.faq .faq-more { background: transparent; border: 0; padding: 0; }
+.faq .faq-more > summary { display: inline-block; margin: 6px 0 10px; padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--primary); list-style: none; min-height: 44px; }
+.faq .faq-more > summary::-webkit-details-marker { display: none; }
+.faq .faq-more[open] > summary { display: none; }

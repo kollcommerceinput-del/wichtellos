@@ -1871,6 +1871,12 @@ FAQ = [
     ('Ist WichtelLos wirklich kostenlos?', 'Ja, komplett. Wir finanzieren uns über Werbelinks zu Geschenkideen. Für dich ändert sich am Preis nichts.'),
 ]
 
+# Diese Fragen sind sofort sichtbar, alle anderen unter „Alle Fragen anzeigen“ (Toni 04.11.: Startseite kürzer).
+# Im FAQPage-Schema stehen weiter alle Fragen – der Text ist auch zugeklappt auf der Seite (wortgleich).
+FAQ_TOP = ['Was ist Wichteln?', 'Wie läuft Wichteln ab?', 'Wie funktioniert Wichteln online?', 'Muss ich mich anmelden?',
+           'Werden unsere Namen gespeichert?', 'Können Paare ausgeschlossen werden?', 'Kann ich die Wichtel-Lose ausdrucken?',
+           'Was passiert, wenn jemand seinen Link verliert?']
+
 HOW_TO = [
     ('✏️', 'Ausfüllen', 'Gruppe, Teilnehmer und auf Wunsch Ausschlüsse eintragen (Schritt 1 bis 3 oben).'),
     ('🎲', 'Auslosen', 'Ein Klick auf „Jetzt auslosen“, und jeder bekommt einen eigenen geheimen Link.'),
@@ -1880,7 +1886,13 @@ HOW_TO = [
 
 def faq_html():
     steps = '\n'.join(f'      <li data-i="{i}"><b>{esc(h)}</b> – {esc(x)}</li>' for i, h, x in HOW_TO)
-    items = '\n'.join(f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>' for q, a in FAQ)
+    assert all(any(q == t for q, _ in FAQ) for t in FAQ_TOP), 'FAQ_TOP passt nicht zu FAQ'
+    item = lambda q, a: f'      <details><summary>{esc(q)}</summary>\n        <p>{a}</p></details>'
+    top = sorted((x for x in FAQ if x[0] in FAQ_TOP), key=lambda x: FAQ_TOP.index(x[0]))
+    rest = [x for x in FAQ if x[0] not in FAQ_TOP]
+    items = '\n'.join(item(q, a) for q, a in top) + (
+        f'\n      <details class="faq-more"><summary>Alle Fragen anzeigen ({len(rest)} weitere)</summary>\n'
+        + '\n'.join(item(q, a) for q, a in rest) + '\n      </details>' if rest else '')
     return f'''    <section class="how" id="so-gehts">
       <h2>So funktioniert's</h2>
       {video_block()}
