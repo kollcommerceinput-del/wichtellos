@@ -182,7 +182,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       voll (rollierend 24 h), Sitemap neu eingereicht (18 URLs). 01.11. abends 9 beantragt: wichteltuer, wichteln-per-whatsapp,
       selber-machen, fuer-kinder, unter-20, unter-15, unter-30, schule-kita, weihnachtsfeier (10. = Kontingent).
       02.11. 15:50: wichtel-ausmalbilder beantragt, danach Kontingent wieder voll. Bing: ausmalbilder + wichteltuer übermittelt.
-      Noch offen: wichtelgedichte, woher-kommt-wichteln (ab 03.11. nachmittags). Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
+      Noch offen: wichtelgedichte, woher-kommt-wichteln (ab 03.11. nachmittags), dazu neu seit 03.11.: wichtelgruss,
+      wunschzettel, adventskalender-ideen (Sitemap jetzt 24 URLs; auch bei Bing übermitteln). Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
       Zugesagte Partner dann in passende Ideen einbauen (Erlebnisse ab 20 €/Büro, Bücher, Kinder 8–12)
@@ -249,6 +250,12 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
 ## Zusammenarbeit
+
+- **Schwesterprojekt `G:\wichtellos-content`** (aus Cloud-Sitzung 02./03.11., kein Git, nicht öffentlich – nie ins Website-Repo
+  kopieren): Flat-Onni als animierbare SVG-Figur (`wichtel/wichtel.js`, Toni 03.11. für Flat-Onni entschieden), Instagram-Story
+  „Wichteln 2026?“ (noch nicht gepostet), **„24 Briefe von Onni“ (PDF für Ko-fi, Texte gegenlesen: Toni)**. Wichtelbriefe also
+  nicht hier noch einmal bauen. Deren Search-Console-Liste ist veraltet – maßgeblich ist „Offen“ unten. `brand.css` dort lädt
+  Google Fonts – auf der Website nie (Datenschutz), dort bleibt Fredoka selbst gehostet.
 
 - Es arbeiten zwei Claude-Sitzungen am Repo: **PC** (Claude Code auf Tonis Rechner) und **Cloud** (claude.ai/code).
 - **Toni legt fest, wer welche Aufgabe macht.** Nie beide an derselben Aufgabe.
