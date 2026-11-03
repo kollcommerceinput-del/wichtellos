@@ -101,7 +101,8 @@ Antworten auf Deutsch.
   Zweite Fassung `render-reel-briefe-3d.js` → `reel-briefe-3d.mp4` (13,6 s): gleiche Szenen auf 3D-Plüsch-Wichtel-Hintergründen
   (feder, umschlag, tuer, lupe, basteln, kinder, geschenk) mit Textbox oben (Toni 03.11.: „mit 3D-Bildern“).
   03.11.: helle Fassung als Pinterest-Video-Pin veröffentlicht (Pinnwand „Wichtelgeschenke für Kinder“, Link /wichteltuer/#briefe,
-  Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label). 3D-Fassung für Instagram/TikTok (Toni).
+  Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label); der Ton läuft auf Pinterest mit. 3D-Fassung auf Instagram + TikTok
+  gepostet (Toni, 03.11.).
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
