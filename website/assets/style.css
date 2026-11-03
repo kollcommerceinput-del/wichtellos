@@ -488,3 +488,9 @@ body { overflow-x: clip; }
 .wz-s-list .btn-secondary { display: inline-block; margin-top: 4px; font-size: .88rem; padding: 6px 12px; text-decoration: none; }
 .r-actions { margin: 10px 0 0; }
 .r-actions .btn-secondary { display: inline-block; text-decoration: none; }
+
+/* Überschriften mit Onni-Sticker (Adventskalender-Ideen) */
+.h-onni { display: flex; align-items: center; gap: 10px; scroll-margin-top: 12px; }
+.h-onni-img { width: 52px; height: 52px; flex: none; }
+.chips-line { font-size: 15px; line-height: 1.8; }
+.verspielt main h2.h-onni::before { content: none; }

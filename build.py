@@ -108,6 +108,7 @@ FOOTER = '''<footer>
     <a href="/wichtelgedichte/">Wichtelgedichte</a>
     <a href="/wichtelgruss/">Wichtelgruß verschicken</a>
     <a href="/wunschzettel/">Wunschzettel</a>
+    <a href="/adventskalender-ideen/">Adventskalender-Ideen</a>
     <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
     <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
     <a href="/impressum/">Impressum</a>
@@ -400,7 +401,7 @@ def gift_page(budget):
 <div class="chips">
 {chips}
 </div>
-<p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a></p>
+<p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a> · Lieber 24 kleine Freuden? <a href="/adventskalender-ideen/">Adventskalender-Ideen →</a></p>
 {CTA}
 {chr(10).join(sections)}
 <div class="ad-slot">Anzeige (Platzhalter)</div>
@@ -1103,6 +1104,83 @@ ZUBEHOER = [
 ]
 
 
+# Adventskalender-Ideen (/adventskalender-ideen/, 03.11.): (Überschrift, Onni-Sticker, Einleitung, Ideen)
+ADVENT = [
+    ('Für Kollegen und das Büro', 'daumen', 'Neutral, für jeden Geschmack und mit Platz auf dem Schreibtisch.', [
+        ('Tee-Adventskalender', '24 Sorten für die Teepause – der Klassiker fürs Büro.', 'Tee Adventskalender'),
+        ('Kaffee-Adventskalender', 'Jeden Morgen eine andere Röstung oder Kapsel.', 'Kaffee Adventskalender'),
+        ('Rätsel-Adventskalender', '24 Knobelaufgaben – gut für die Mittagspause im Team.', 'Rätsel Adventskalender Erwachsene'),
+        ('Escape-Room-Adventskalender', 'Jeden Tag ein Rätsel, am 24. ist der Fall gelöst.', 'Escape Room Adventskalender'),
+        ('Socken-Adventskalender', 'Verrückte Socken für 12 oder 24 Tage – sorgt für Gesprächsstoff.', 'Socken Adventskalender'),
+        ('Mini-Pflanzen-Adventskalender', 'Samen und Töpfchen – im Frühling wächst die Erinnerung.', 'Adventskalender Samen Pflanzen'),
+    ]),
+    ('Für Genießer', 'geschenk', 'Süß, würzig oder heiß – für alle, die gern naschen und kochen.', [
+        ('Schokoladen-Adventskalender', 'Mal Pralinen, mal Tafeln: mehr als die Billig-Schoko vom Discounter.', 'Schokolade Adventskalender Premium'),
+        ('Gewürz-Adventskalender', '24 Gewürze mit Rezeptideen – für Hobbyköche.', 'Gewürz Adventskalender'),
+        ('Fruchtgummi-Adventskalender', 'Bunt, vegan oder sauer – je nach Vorliebe.', 'Fruchtgummi Adventskalender'),
+        ('Kakao-Adventskalender', 'Jeden Tag eine andere heiße Schokolade.', 'Trinkschokolade Adventskalender'),
+        ('Popcorn- oder Snack-Adventskalender', 'Für Filmabende im Dezember.', 'Snack Adventskalender'),
+    ]),
+    ('Für Erwachsene und Partner', 'herz', 'Ein bisschen persönlicher – für Freundin, Freund oder die beste Freundin.', [
+        ('Beauty-Adventskalender', 'Pflege, Masken und Make-up in Probiergröße.', 'Beauty Adventskalender'),
+        ('Puzzle-Adventskalender', 'Jeden Tag ein Teil-Beutel, am Ende ein ganzes Motiv.', 'Puzzle Adventskalender Erwachsene'),
+        ('Krimi-Adventskalender', 'Ein Buch mit 24 Kapiteln – jeden Abend ein Stück weiter.', 'Krimi Adventskalender Buch'),
+        ('Wellness-Adventskalender', 'Badesalz, Kerzen, Tee – 24 kleine Auszeiten.', 'Wellness Adventskalender'),
+        ('Schmuck-Adventskalender', 'Ohrringe, Ketten, Anhänger – oft mit Organizer.', 'Schmuck Adventskalender'),
+    ]),
+    ('Für Kinder', 'jubel', 'Spielen, forschen und basteln statt nur Schokolade.', [
+        ('Bausteine-Adventskalender', 'Jeden Tag eine kleine Figur oder ein Bausatz – am Ende eine ganze Szene.', 'Bausteine Adventskalender Kinder'),
+        ('Spielfiguren-Adventskalender', 'Bauernhof, Ritter, Einhorn: zum Weiterspielen nach Weihnachten.', 'Spielfiguren Adventskalender Kinder'),
+        ('Experimente-Adventskalender', '24 kleine Versuche für Forscher ab 8.', 'Experimente Adventskalender Kinder'),
+        ('Bastel-Adventskalender', 'Jeden Tag ein Bastelprojekt – gut für kalte Nachmittage.', 'Bastel Adventskalender Kinder'),
+        ('Adventskalender-Buch', 'Eine Geschichte in 24 Kapiteln zum Vorlesen.', 'Adventskalender Buch Kinder vorlesen'),
+        ('Wichtel-Adventskalender', 'Passend zur Wichteltür: Mini-Möbel und Zubehör hinter jedem Türchen.', 'Wichtel Adventskalender Miniatur'),
+    ]),
+    ('Zum Selbstbefüllen', 'lupe', 'Am persönlichsten: Du entscheidest, was hinter jedem Türchen steckt.', [
+        ('Holz-Adventskalender zum Befüllen', 'Hält viele Jahre – jedes Jahr neu befüllen.', 'Adventskalender Holz zum Befüllen'),
+        ('Kraftpapier-Tüten mit Zahlen', 'Günstig, schnell gepackt, an einer Schnur aufgehängt.', 'Adventskalender Tüten Kraftpapier Zahlen'),
+        ('Stoffsäckchen', 'Wiederverwendbar und sieht an Zweig oder Leiter schön aus.', 'Adventskalender Stoffsäckchen'),
+        ('Adventskalender-Boxen', 'Kleine Schachteln zum Stapeln oder als Häuserzeile.', 'Adventskalender Boxen zum Befüllen'),
+        ('Zahlen-Sticker 1–24', 'Für Tüten, Gläser oder Umschläge.', 'Adventskalender Zahlen Sticker'),
+        ('Kleine Füllideen', 'Mini-Süßes, Anhänger, Radiergummis – passend für 24 Türchen.', 'Adventskalender Füllung Kleinigkeiten'),
+    ]),
+]
+
+
+def advent_page():
+    secs, n = [], 0
+    for title, st, intro, items in ADVENT:
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>' for t, x, *r in items)
+        secs.append(f'<h2 class="h-onni">{onni_img(st, "", 56, "h-onni-img")}{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    jump = ' · '.join(f'<a href="#ak-{i}">{esc(t)}</a>' for i, (t, *_r) in enumerate(ADVENT))
+    secs = [s.replace('<h2 class="h-onni">', f'<h2 class="h-onni" id="ak-{i}">', 1) for i, s in enumerate(secs)]
+    body = f"""<article>
+<h1>Adventskalender-Ideen: {n} Kalender für Kollegen, Erwachsene & Kinder</h1>
+{ai_photo('wichtel3d-basteln', 'Plüsch-Wichtel bastelt mit buntem Papier, Bändern und Keksgläsern')}
+<p class="lead">Ein Adventskalender macht 24 Tage lang Freude – viel länger als jedes andere Geschenk. Hier findest du {n} Ideen: fertige Kalender fürs Büro, für Genießer, Erwachsene und Kinder, dazu alles, um einen Adventskalender selbst zu befüllen. Wichtig: bis Ende November bestellen, damit er am 1. Dezember hängt.</p>
+<p class="chips-line">Direkt zu: {jump}</p>
+
+{chr(10).join(secs)}
+
+<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+
+<h2>Idee: Adventskalender-Wichteln</h2>
+<p>Statt eines großen Geschenks zur Bescherung beschenkt ihr euch den ganzen Dezember: Jeder zieht einen Namen und füllt für diese Person einen kleinen Kalender – zum Beispiel 24 Kleinigkeiten für zusammen 15–20 €. Für Büros reichen auch 5 Türchen für die Arbeitstage einer Woche.</p>
+<ul>
+  <li><b>Früh auslosen:</b> Bis Mitte November, damit genug Zeit zum Sammeln und Packen bleibt.</li>
+  <li><b>Budget festlegen:</b> Gesamtbetrag statt pro Türchen – das macht es leichter.</li>
+  <li><b>Wunschzettel nutzen:</b> Mit dem <a href="/wunschzettel/">Wichtel-Wunschzettel</a> weiß jeder, was ankommt.</li>
+  <li><b>Gemeinsam übergeben:</b> Am 30. November oder beim ersten Treffen im Dezember.</li>
+</ul>
+{CTA}
+<p>Mehr Ideen: <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke unter 10 €</a> · <a href="/wichtelgeschenke-selber-machen/">Geschenke selber machen</a> · <a href="/wichteltuer/">Wichteltür für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder</a></p>
+</article>"""
+    page('/adventskalender-ideen/', f'Adventskalender-Ideen: {n} Kalender für Kollegen, Erwachsene & Kinder',
+         f'Adventskalender-Ideen 2026: {n} Kalender für Kollegen, Genießer, Erwachsene und Kinder – plus Adventskalender zum Selbstbefüllen und Tipps fürs Adventskalender-Wichteln.',
+         body, crumb='Adventskalender-Ideen', playful=True)
+
+
 def zubehoer_page():
     secs = []
     n = 0
@@ -1185,7 +1263,7 @@ def door_page():
 <div class="idea-grid">
 {shop}
 </div>
-<p><b>Noch mehr Ideen:</b> Möbel, Licht, Wichtel-Post bis zum leuchtenden Wichteldorf findest du beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>.</p>
+<p><b>Noch mehr Ideen:</b> Möbel, Licht, Wichtel-Post bis zum leuchtenden Wichteldorf findest du beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>. Fertige Kalender für Kinder und Erwachsene: <a href="/adventskalender-ideen/">Adventskalender-Ideen</a>.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
 
 <h2>Und für die Großen: Wichteln in der Familie</h2>
@@ -1697,7 +1775,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
@@ -1754,6 +1832,7 @@ def main():
     door_page()
     ausmal_page()
     zubehoer_page()
+    advent_page()
     invite_page()
     share_page()
     legal_pages()
