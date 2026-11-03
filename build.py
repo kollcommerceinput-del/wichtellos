@@ -89,37 +89,34 @@ HEADER = '''<header class="top"><div class="bar">
     <a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a>
     <a href="/wichteln-wuerfeln-regeln/">Spiele</a>
   </nav>
+  <button type="button" class="search-btn" aria-label="Suche öffnen" aria-expanded="false" aria-controls="search-panel" title="Suchen">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+  </button>
+</div>
+<div id="search-panel" class="search-panel" hidden>
+  <div class="search-inner" role="search">
+    <label for="search-q" class="sr-only">Suche auf WichtelLos</label>
+    <input id="search-q" type="search" autocomplete="off" placeholder="Suchen: z. B. Büro, Kinder, 10 €, Socken …"
+      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-list">
+    <button type="button" class="search-close" aria-label="Suche schließen">✕</button>
+    <ul id="search-list" class="search-list" role="listbox" aria-label="Suchtreffer"></ul>
+    <p class="search-empty" hidden>Nichts gefunden – probier ein anderes Wort oder den <a href="/geschenkfinder/">Geschenkfinder</a>.</p>
+  </div>
 </div></header>'''
 
 FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
-  <div class="footer-links">
-    <a href="/">Wichteln auslosen</a>
-    <a href="/geschenkfinder/">Geschenkfinder</a>
-    <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a>
-    <a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a>
-    <a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a>
-    <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>
-    <a href="/schrottwichteln/">Schrottwichteln</a>
-    <a href="/wichteln-im-buero/">Wichteln im Büro</a>
-    <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a>
-    <a href="/wichteln-schule-kita/">Schule &amp; Kita</a>
-    <a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a>
-    <a href="/wichteltuer/">Wichteltür</a>
-    <a href="/wichtelgedichte/">Wichtelgedichte</a>
-    <a href="/wichtelgruss/">Wichtelgruß verschicken</a>
-    <a href="/wunschzettel/">Wunschzettel</a>
-    <a href="/adventskalender-ideen/">Adventskalender-Ideen</a>
-    <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>
-    <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>
-    <a href="/impressum/">Impressum</a>
-    <a href="/datenschutz/">Datenschutz</a>
-  </div>
+  <nav class="footer-groups" aria-label="Alle Seiten">
+    <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li></ul></details>
+    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li></ul></details>
+    <details class="fgroup"><summary>Advent &amp; Wissen</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
+  </nav>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
     <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">📌 Pinterest</a>
     <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a></p>
-  <p>© 2026 WichtelLos · Powered by KOLL Commerce</p>
+  <p class="legal">© 2026 WichtelLos · Powered by KOLL Commerce · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
 </footer>'''
 
 # Unterstützen-Zeile unter Gratis-Downloads (einmal pro Seite, dezent – Toni 03.11.)
@@ -175,7 +172,12 @@ def video_ld():
             'thumbnailUrl': DOMAIN + VIDEO['poster'], 'contentUrl': DOMAIN + VIDEO['src'], 'uploadDate': VIDEO['datum'], 'duration': VIDEO['dauer']}
 
 
+SEARCH = []  # Suchindex: (Pfad, Titel, Beschreibung, Stichworte) – schreibt extras() nach /suche.json
+
+
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
+    if not noindex:
+        SEARCH.append({'u': path, 't': title.split(' | ')[0], 'd': desc, 'k': ' '.join(re.sub(r'<[^>]+>', '', h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', body, re.S))})
     if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if crumb:
@@ -1805,6 +1807,14 @@ def extras():
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+    # Suchindex (läuft komplett im Browser, keine externen Dienste)
+    from gifts import IDEAS, CAT_LABELS, AGE_LABELS
+    idx = [{'u': '/', 't': 'Wichteln online auslosen', 'd': 'Kostenloser Wichtelgenerator: Namen eintragen, auslosen, geheime Links per WhatsApp – ohne Anmeldung.', 'k': 'Wichtelgenerator Julklapp Secret Santa Lose drucken Ausschlüsse Tipp', 'g': 's'}]
+    idx += [dict(e, g='s') for e in SEARCH if e['u'] not in ('/', '/teilen/')]
+    idx += [{'u': '/geschenkfinder/?q=' + quote(i['name']), 't': i['name'], 'd': i['text'],
+             'k': f"bis {i['budget']} € " + ' '.join(CAT_LABELS[c] for c in i['cats']) + ' ' + ' '.join(AGE_LABELS[a] for a in i['ages']) + (' Büro Kollegen' if i['office'] else ''),
+             'g': 'i'} for i in IDEAS]
+    (OUT / 'suche.json').write_text(json.dumps(idx, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     # IONOS liefert http und www sonst parallel aus (Duplicate Content) – www immer weg, http nur mit FORCE_HTTPS
     host = DOMAIN.split('://')[1]
     rules = ('RewriteCond %{HTTPS} !=on [OR]\n'

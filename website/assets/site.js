@@ -34,6 +34,82 @@
     }));
   }
 
+  // Footer: am Handy aufklappbare Gruppen, ab 700 px alle offen
+  const fq = matchMedia('(min-width: 700px)');
+  const fsync = () => document.querySelectorAll('details.fgroup').forEach((d) => { d.open = fq.matches; });
+  fsync();
+  if (fq.addEventListener) fq.addEventListener('change', fsync);
+
+  // Suche: Index /suche.json wird erst beim Öffnen geladen, alles läuft im Browser
+  const sBtn = document.querySelector('.search-btn');
+  const sPanel = document.getElementById('search-panel');
+  if (sBtn && sPanel) {
+    const q = document.getElementById('search-q');
+    const list = document.getElementById('search-list');
+    const empty = sPanel.querySelector('.search-empty');
+    let idx = null, hits = [], cur = -1;
+    const norm = (t) => String(t).toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .normalize('NFD').replace(/\p{M}/gu, '');
+    const load = () => idx || fetch('/suche.json').then((r) => r.json()).then((d) => {
+      idx = d.map((e) => Object.assign(e, { nt: norm(e.t), nall: norm(e.t + ' ' + e.d + ' ' + e.k) }));
+      return idx;
+    });
+    const open = () => {
+      sPanel.hidden = false; sBtn.setAttribute('aria-expanded', 'true'); q.focus(); q.select();
+      Promise.resolve(load()).then(run).catch(() => {});
+    };
+    const close = () => {
+      sPanel.hidden = true; sBtn.setAttribute('aria-expanded', 'false'); q.setAttribute('aria-expanded', 'false'); sBtn.focus();
+    };
+    const mark = (i) => {
+      cur = i;
+      list.querySelectorAll('[role=option]').forEach((li, k) => li.setAttribute('aria-selected', String(k === i)));
+      const el = list.children[i];
+      if (el) { q.setAttribute('aria-activedescendant', el.id); el.scrollIntoView({ block: 'nearest' }); }
+      else q.removeAttribute('aria-activedescendant');
+    };
+    const run = () => {
+      if (!idx) return;
+      const words = norm(q.value).split(/[\s,]+/).filter((w) => w.length > 1 || /\d/.test(w));
+      list.innerHTML = ''; cur = -1; hits = []; q.removeAttribute('aria-activedescendant');
+      if (!words.length) { empty.hidden = true; q.setAttribute('aria-expanded', 'false'); return; }
+      hits = idx.map((e) => {
+        if (!words.every((w) => e.nall.includes(w))) return null;
+        let sc = e.g === 's' ? 3 : 0;
+        words.forEach((w) => { if (e.nt.includes(w)) sc += 5; if (e.nt.startsWith(w)) sc += 3; });
+        return [sc, e];
+      }).filter(Boolean).sort((a, b) => b[0] - a[0]).slice(0, 8).map((h) => h[1]);
+      hits.forEach((e, i) => {
+        const li = document.createElement('li');
+        li.id = 'sr-' + i; li.setAttribute('role', 'option'); li.setAttribute('aria-selected', 'false');
+        const a = document.createElement('a'); a.href = e.u; a.tabIndex = -1;
+        const b = document.createElement('b'); b.textContent = e.t;
+        const tag = document.createElement('span'); tag.className = 'sr-tag'; tag.textContent = e.g === 'i' ? 'Geschenkidee' : 'Seite';
+        const d = document.createElement('small'); d.textContent = e.d.length > 110 ? e.d.slice(0, 108) + '…' : e.d;
+        a.append(b, tag, d); li.append(a); list.append(li);
+      });
+      empty.hidden = hits.length > 0;
+      q.setAttribute('aria-expanded', hits.length > 0 ? 'true' : 'false');
+    };
+    sBtn.addEventListener('click', () => (sPanel.hidden ? open() : close()));
+    sPanel.querySelector('.search-close').addEventListener('click', close);
+    q.addEventListener('input', run);
+    q.addEventListener('keydown', (ev) => {
+      if (ev.key === 'ArrowDown') { ev.preventDefault(); if (hits.length) mark((cur + 1) % hits.length); }
+      else if (ev.key === 'ArrowUp') { ev.preventDefault(); if (hits.length) mark(cur <= 0 ? hits.length - 1 : cur - 1); }
+      else if (ev.key === 'Enter') { const h = hits[cur >= 0 ? cur : 0]; if (h) { ev.preventDefault(); location.href = h.u; } }
+      else if (ev.key === 'Escape') { ev.preventDefault(); close(); }
+    });
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && !sPanel.hidden) close();
+      const tag = document.activeElement ? document.activeElement.tagName : '';
+      if (ev.key === '/' && sPanel.hidden && !/INPUT|TEXTAREA|SELECT/.test(tag)) { ev.preventDefault(); open(); }
+    });
+    document.addEventListener('click', (ev) => {
+      if (!sPanel.hidden && !sPanel.contains(ev.target) && !sBtn.contains(ev.target)) close();
+    });
+  }
+
   // Erklärvideo: erst nach Klick laden (kein Datenverbrauch vorher)
   document.querySelectorAll('[data-video]').forEach((b) => b.addEventListener('click', () => {
     const v = document.createElement('video');

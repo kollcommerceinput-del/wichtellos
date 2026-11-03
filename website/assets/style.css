@@ -505,3 +505,42 @@ footer .kofi-sub { color: inherit; opacity: .8; }
 .briefe-box ul { padding-left: 1.2em; }
 .briefe-box p:first-child { margin-top: 0; }
 @media (max-width: 600px) { .briefe-box { grid-template-columns: 1fr; } .briefe-box img { max-width: 220px; margin: 0 auto; } }
+
+/* Suche im Kopfbereich (03.11.): Index /suche.json, läuft im Browser */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.top { position: relative; }
+.search-btn { order: 3; flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--soft); color: var(--text); cursor: pointer; }
+.search-btn:hover, .search-btn[aria-expanded="true"] { background: var(--primary); color: #fff; border-color: var(--primary); }
+@media (max-width: 900px) { .search-btn { order: 1; margin-left: auto; } }
+.search-panel { position: absolute; left: 0; right: 0; top: 100%; z-index: 50; padding: 0 12px; }
+.search-inner { position: relative; max-width: 640px; margin: 8px auto 0; background: #fff; border-radius: 16px; box-shadow: 0 14px 40px rgba(43,27,23,.22); padding: 12px; border: 1px solid var(--border); }
+.search-inner input { width: 100%; box-sizing: border-box; font: inherit; font-size: 17px; padding: 12px 44px 12px 14px; border: 2px solid var(--primary); border-radius: 12px; }
+.search-inner input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+.search-close { position: absolute; right: 20px; top: 20px; width: 32px; height: 32px; border: 0; border-radius: 50%; background: var(--soft); cursor: pointer; font-size: 14px; }
+.search-list { list-style: none; margin: 8px 0 0; padding: 0; max-height: min(60vh, 460px); overflow-y: auto; }
+.search-list a { display: block; padding: 10px 12px; border-radius: 10px; color: var(--text); text-decoration: none; }
+.search-list a:hover, .search-list [aria-selected="true"] a { background: var(--soft); }
+.search-list b { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; }
+.search-list small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+.sr-tag { margin-left: 8px; font-size: 11px; padding: 1px 7px; border-radius: 999px; background: #f1e6dc; color: var(--muted); vertical-align: 2px; }
+.search-empty { margin: 10px 4px 2px; color: var(--muted); font-size: 14px; }
+@media print { .search-btn, .search-panel { display: none !important; } }
+
+/* Footer in vier Gruppen (03.11.): Handy aufklappbar, ab 700 px vier Spalten */
+.footer-groups { max-width: 900px; margin: 6px auto 18px; text-align: left; }
+.fgroup { border-bottom: 1px solid var(--border); }
+.fgroup summary { cursor: pointer; padding: 12px 4px; font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 16px; color: var(--text); list-style: none; display: flex; justify-content: space-between; }
+.fgroup summary::-webkit-details-marker { display: none; }
+.fgroup summary::after { content: '+'; color: var(--primary); font-size: 20px; line-height: 1; }
+.fgroup[open] summary::after { content: '–'; }
+.fgroup ul { list-style: none; margin: 0 0 10px; padding: 0 4px; }
+.fgroup li a { display: block; padding: 7px 0; font-size: 14px; color: var(--muted); }
+@media (min-width: 700px) {
+  .footer-groups { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .fgroup { border: 0; }
+  .fgroup summary { pointer-events: none; padding: 0 0 6px; font-size: 15px; }
+  .fgroup summary::after, .fgroup[open] summary::after { content: none; }
+  .fgroup li a { padding: 4px 0; }
+}
+footer .legal { font-size: 12px; }
+footer .legal a { color: var(--muted); }

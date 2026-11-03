@@ -27,6 +27,10 @@ Antworten auf Deutsch.
   Gruppe?“ in Ergebnis- und Aufdeck-Ansicht (`.share-wa`, Text ohne Namen/Links)
 - Hauptmenü (`HEADER` in `build.py`, Toni 02.11. Variante A): roter Knopf „🎁 Geschenkideen“ (/geschenkfinder/), Nach Budget (/unter-10/),
   Wichtel-Zubehör, Für Kinder, Spiele – Seiten mit Amazon-Links nach oben. Unter 900 px eigene Zeile zum Wischen.
+- Footer (03.11., Toni): 4 Gruppen als `<details class="fgroup">` (Handy aufklappbar, ab 700 px per JS in `site.js` offen),
+  Impressum/Datenschutz in der Copyright-Zeile. Suche: Lupe `.search-btn` im `HEADER`, Panel `#search-panel`, Index `/suche.json`
+  (schreibt `extras()`: alle Seiten aus `page()` über `SEARCH` + Startseite + `IDEAS` aus gifts.py → `/geschenkfinder/?q=`), Logik in
+  `site.js` (lädt erst beim Öffnen, `/` öffnet, Pfeile/Enter/Esc). Neue Seite = automatisch im Index.
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
 - `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
   Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
