@@ -62,3 +62,22 @@ Titel: Wichteltür: die ersten 6 Streiche 🚪✨
 Titel: Wichteln per WhatsApp – ganz simpel 🎁
 > Zettel ziehen war gestern 😅 Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – per WhatsApp, E-Mail oder SMS. Wichtig: Links nur privat schicken, nicht in den Gruppenchat 🤫 Kostenlos, ohne Anmeldung: wichtellos.de
 > #wichteln #wichtelnperwhatsapp #wichtelgeschenk #weihnachten #secretsanta #wichtelgenerator #weihnachtsfeier #lifehack
+
+### reel-unter10 (Video `marketing/reel/reel-unter10.mp4`, 13,5 s, 3D-Bilder → „Mit KI erstellt“, Werbung)
+Titel: 5 Wichtelgeschenke unter 10 €, die keiner wegwirft 🎁
+> Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze, Gourmet-Schokolade – kleine Geschenke, die wirklich benutzt werden. Welches ist dein Favorit? 👇 Über 100 weitere Ideen nach Budget, Alter & fürs Büro im Geschenkfinder auf wichtellos.de
+> Werbung: Die Seite enthält Amazon-Partnerlinks.
+> #wichteln #wichtelgeschenk #wichtelgeschenke #geschenkideen #weihnachtsgeschenke #wichtelnimbüro #unter10euro #secretsanta
+
+LinkedIn (Link /wichteln-im-buero/):
+> Wichteln im Team steht an – und die große Frage: Was schenke ich für 10 €? 🎁
+> Fünf Ideen, die nicht in der Schublade landen: Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze, Gourmet-Schokolade.
+> Auslosen geht kostenlos und ohne Anmeldung auf wichtellos.de – mehr Ideen fürs Büro: https://wichtellos.de/wichteln-im-buero/
+> (Werbung: Die Seite enthält Amazon-Partnerlinks. Bilder KI-generiert.)
+> #Wichteln #Weihnachtsfeier #Team #Büro
+
+Pinterest (Video-Pin, Pinnwand „nach Budget“, Link https://wichtellos.de/unter-10/):
+Titel: 5 Wichtelgeschenke unter 10 € – die keiner wegwirft
+Beschreibung: Kleine Wichtelgeschenke unter 10 Euro, die wirklich benutzt werden: Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze und Gourmet-Schokolade. Perfekt fürs Büro-Wichteln, die Familie oder Freunde. Über 100 weitere Ideen im Geschenkfinder auf wichtellos.de.
+Alt-Text: Ein kleiner Plüsch-Wichtel steht neben fünf Geschenkideen unter 10 Euro: Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze und Schokolade.
+Themen: Wichteln, Wichtelgeschenke, Geschenkideen

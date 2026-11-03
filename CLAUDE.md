@@ -63,6 +63,8 @@ Antworten auf Deutsch.
   wegwirft“ (Kakao am Stiel, Kuschelsocken, Duftkerze, Mini-Pflanze, Gourmet-Schokolade – je ein 3D-Bild aus Flow,
   `wichtel3d/stills/geschenke/`) → Geschenkfinder. Posten mit
   „Werbung“ + „Mit KI erstellt“ (Titelbild 3D) (03.11.)
+  03.11.: Pinterest-Video-Pin veröffentlicht (Wichtelgeschenke nach Budget, Link /unter-10/, Themen Wichteln/Wichtelgeschenke/
+  Geschenkideen für Weihnachten, Alt-Text, KI-Label). Texte für Instagram/TikTok/LinkedIn in `teilen-texte.md`.
 - `marketing/render-insta-onni.js` → `social/kinder/story-NN.png` (4 Storys aus den Onni-Pins) + `social/highlights-onni/cover-*.png`
   (Highlight-Titelbilder Onni auf Kreis; nur in der App setzbar – Toni). 02.11.: Highlight „Für Kinder“ (4 Storys mit Link-Stickern)
   angelegt; „So geht's“ um die 8 Galerie-Folien (`social/wichtel3d/story-NN.jpg`) ergänzt. Business Suite: Link-Sticker landet in
