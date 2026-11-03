@@ -45,7 +45,14 @@ Antworten auf Deutsch.
   der Seite des geheimen Links nur noch im Fuß; Geschenk-Kasten auf der Link-Seite und Schlagwort-Reihe auf der Startseite entfernt.
   Fuß-Gruppe 4 jetzt „Kinder & Advent“ (Wichteltür, Ausmalbilder, Zubehör, Adventskalender ×2); Gedichte → „Wichteln organisieren“,
   „Woher kommt Wichteln?“ → „Spiele & Anlässe“. Menüpunkt „Geschenke für Kinder“. Nicht umsetzen: Verlauf/Zurück-Taste (Hash-Reload-Risiko),
-  Menü bleibt Variante A. Paket 2 offen: Namenliste einfügen, Wichteltür-Sprungmarken, FAQ kürzen, Schrift 15–16 px, Tippflächen 44 px, Geschenkfinder-Filter.
+  Menü bleibt Variante A.
+- Bedienbarkeit Paket 2 (04.11.): Namenliste einfügen (`splitNames()`/`pasteNames()` in tool.html: Zeilen/Semikolon, sonst Komma; <E-Mail>,
+  Aufzählungszeichen, Dubletten raus, max. 60, Meldung `#paste-note`). „WhatsApp an mich“ ab 15 Personen in Teilen à 15 Links (je ~2,7 kB).
+  Wichteltür: Sprungmarken `.jump` (#briefe, #vorlagen, #wichtelname, #streiche, #zubehoer – #briefe/#wichtelname/#sticker nie umbenennen,
+  Pins verlinken darauf), 24-Tage-Plan in `<details class="plan-details print-open">` (site.js klappt beim Drucken auf). Startseite: `FAQ_TOP`
+  (8 Fragen sichtbar, Rest in `.faq-more`, Schema = alle, wortgleich). Schrift: .hint/label/.tip 15 px, .idea p 16 px. Tippflächen Menü/Fuß
+  (Handy) ≥ 44 px. Geschenkfinder: Filter in `<details id="f-more">`, Handy zu, Desktop offen, mit Filtern in der Adresse immer zu;
+  „Aktiv: …“ + Knopf „N Ideen ansehen“.
 - `build.py`: `FAQ`/`HOW_TO` – sichtbare FAQ der Startseite und FAQPage-Daten aus einer Liste (Schema-Text = sichtbarer Text)
 - `.github/workflows/pages.yml` – veröffentlicht `website/` bei jedem Push auf `main`;
   Job `indexnow` meldet danach die geänderten Seiten (nur Sitemap-URLs) an IndexNow (Bing, Yandex …),
