@@ -494,3 +494,7 @@ body { overflow-x: clip; }
 .h-onni-img { width: 52px; height: 52px; flex: none; }
 .chips-line { font-size: 15px; line-height: 1.8; }
 .verspielt main h2.h-onni::before { content: none; }
+.kofi-sub { display: inline-block; font-size: 13px; color: var(--muted); }
+.kofi-line { text-align: center; margin: 14px 0 18px; color: var(--muted); }
+footer .kofi { margin: 0 0 14px; }
+footer .kofi-sub { color: inherit; opacity: .8; }

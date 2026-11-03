@@ -92,6 +92,7 @@ HEADER = '''<header class="top"><div class="bar">
 </div></header>'''
 
 FOOTER = '''<footer>
+  <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <div class="footer-links">
     <a href="/">Wichteln auslosen</a>
     <a href="/geschenkfinder/">Geschenkfinder</a>
@@ -118,7 +119,6 @@ FOOTER = '''<footer>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
     <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">📌 Pinterest</a>
     <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a></p>
-  <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">🎁 Ein Geschenk für den Wichtel</a></p>
   <p>© 2026 WichtelLos · Powered by KOLL Commerce</p>
 </footer>'''
 
@@ -1686,7 +1686,7 @@ def legal_pages():
 
 <h2>6. Werbelinks zu Amazon und Link zu Ko-fi</h2>
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
-<p>Der Knopf „Ein Geschenk für den Wichtel“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
+<p>Der Knopf „WichtelLos unterstützen“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
 
 <h2>7. Links zu Instagram, Pinterest und TikTok</h2>
 <p>Im Fußbereich verlinken wir auf unsere Profile bei Instagram, Pinterest und TikTok. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>

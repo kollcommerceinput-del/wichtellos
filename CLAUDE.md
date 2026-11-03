@@ -249,7 +249,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt. Telefon kurz entfernt, dann wieder eingetragen (Toni 03.11.:
       zweiter Kontaktweg Pflicht; Kontaktformular verworfen – n8n-Server des Shops nicht für öffentliche Formulare nutzen).
       **Toni 03.11.: Kein Verkauf über Ko-fi** (kein Shop, keine Premium-Vorlagen) – damit entfallen AGB/Widerruf/EU-USt.
-      Ko-fi bleibt reines Trinkgeld („Geschenk für den Wichtel“, nie „Spende“). IONOS-Satz bleibt (Domain/DNS).
+      Ko-fi bleibt reines Trinkgeld, nie „Spende“. Knopf seit 03.11. „💛 WichtelLos unterstützen“ + „Freiwillig – hilft, WichtelLos
+      kostenlos zu halten.“: oben im Footer, in der Ergebnis-Ansicht unter den Links („Hat alles geklappt?“, `.kofi-line`), auf der Seite
+      des geheimen Links. Ko-fi-Shop nur für kostenlose Downloads (z. B. 24 Briefe von Onni). IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
