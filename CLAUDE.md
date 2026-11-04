@@ -331,6 +331,11 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       24 Briefen + Streichplan), Seite /onni-adventskalender/ mit eigenem Player + MP3 (Kreativ-Tonie/Yoto), evtl. Podcast/YouTube (Kinder-Haken).
       Start muss 1.12. sein. Erst Folge 1 als Probe; Stimme Toni oder KI (ElevenLabs, gewerbl. Abo). Keine Werbung im Kindertext, ruhige Enden,
       keine gefährlichen Streiche, eigene Musik. Texte gehören ins Content-Projekt. Toni legt fest, ob PC oder Cloud.
+      04.11.: Entscheidung Video mit Ton (60–90 s je Folge, für Reels/TikTok/YouTube + Website). Folge 1 als Probe:
+      `node marketing/reel/render-adventskalender.js 1` → `marketing/reel/adventskalender/folge-01/folge-01.mp4` (Texte/Bildzuordnung in
+      `folge.json`, Ton `ton-N.wav` je Absatz, sonst `platzhalter-N.wav` = Windows-Stimme Hedda, nur zum Anhören). Bilder b1 Wald, b5 Bett
+      (Flow 2K, Projekt „Nov 03 - 17:06“, Onni 3D), b3 tuer/b4 feder aus stills; **b2-eule.jpg fehlt noch** („Gnome flying on snowy owl“ in Flow
+      herunterladen). Geschichten im Content-Projekt `produkte/2026-onni-adventskalender/`. Stimme: später (Toni nimmt auf, ich verbessere).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 

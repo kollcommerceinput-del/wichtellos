@@ -1,0 +1,20 @@
+{
+  "tag": "Onnis Adventskalender · 1. Dezember",
+  "titel": "Onni zieht ein",
+  "absaetze": [
+    { "bild": "b1-wald.jpg", "text": "Tief im Norden, im verschneiten Wichtelwald, wohnt Onni. Er ist so groß wie dein Daumen, und seine rote Mütze rutscht ihm immer über die Augen. Darum sieht er nicht viel – aber er hört alles.",
+      "untertitel": ["Tief im Norden, im verschneiten Wichtelwald, wohnt Onni.", "Er ist so groß wie dein Daumen,", "und seine rote Mütze rutscht ihm immer über die Augen.", "Darum sieht er nicht viel – aber er hört alles."] },
+    { "bild": "b1-wald.jpg", "text": "Eines Abends trug der Wind ein Geräusch zu ihm. Es klang warm. Nach Kakao, nach Kuscheldecke … nach einem Zuhause.",
+      "untertitel": ["Eines Abends trug der Wind ein Geräusch zu ihm.", "Es klang warm. Nach Kakao, nach Kuscheldecke …", "… nach einem Zuhause."] },
+    { "bild": "b5-bett.jpg", "text": "„Da will ich hin“, flüsterte Onni. Er packte ein Taschentuch als Decke ein, einen Fingerhut als Becher und ein winziges Notizbuch.",
+      "untertitel": ["„Da will ich hin“, flüsterte Onni.", "Er packte ein Taschentuch als Decke ein,", "einen Fingerhut als Becher und ein winziges Notizbuch."] },
+    { "bild": "b2-eule.jpg", "text": "Eine freundliche Eule trug ihn über den dunklen Wald bis zu den Lichtern der Stadt.",
+      "untertitel": ["Eine freundliche Eule trug ihn über den dunklen Wald", "bis zu den Lichtern der Stadt."] },
+    { "bild": "b3-tuer.jpg", "text": "Leise schlüpfte Onni unter einer Haustür hindurch …",
+      "untertitel": ["Leise schlüpfte Onni unter einer Haustür hindurch.", "Er tapste über den Teppich und hinterließ winzige Fußspuren aus Schnee.", "Plötzlich stand er vor einer kleinen Tür. Genau so groß wie er.", "„Eine Wichteltür!“, staunte er. „Hier wohne ich ab jetzt!“"] },
+    { "bild": "b4-brief.jpg", "text": "Bevor er einschlief, schrieb er seinen ersten Brief: „Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“",
+      "untertitel": ["Bevor er einschlief, schrieb er seinen ersten Brief:", "„Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“"] },
+    { "bild": "b5-bett.jpg", "text": "„Gute Nacht“, flüsterte er. „Bis morgen.“",
+      "untertitel": ["„Gute Nacht“, flüsterte er. „Bis morgen.“"] }
+  ]
+}
