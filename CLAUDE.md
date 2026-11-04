@@ -318,6 +318,13 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       03.11.: „24 Briefe von Onni“ (Flat-Onni, aus wichtellos-content, von Toni freigegeben) kostenlos auf `/wichteltuer/#briefe`:
       `fotos/onni/onni-briefe-24.pdf` (16 S.) + Vorschau `-480.webp`. Quelle/Neu rendern im Content-Projekt, dann PDF hierher kopieren.
       Ko-fi: Gratis-Artikel https://ko-fi.com/s/62d307cd11 (0 €, „Pay what you want“ aus, 3 Vorschaubilder aus `marketing/kofi-briefe/`).
+      **Ko-fi-Gratis-Artikel (Stand 04.11. abends, morgen weiter):** Briefe-Text neu (Bitte „💛 Onni und WichtelLos sind kostenlos …
+      Geschenk dalassen: ko-fi.com/wichtellos – ganz freiwillig“ + „Illustrationen mit KI-Unterstützung.“), gespeichert. Offen: 3 neue Artikel
+      Ausmalbilder (`fotos/onni/ausmalbilder-alle.pdf`), Wichteltür-Vorlagen (`marketing/kofi-vorlagen/wichteltuer-vorlagen.zip`, nicht im Git
+      wegen *.zip – neu: zipfile aus den 4 tuer-*.pdf), Sticker (`fotos/onni/onni-sticker.zip`); Vorschaubilder `marketing/kofi-vorlagen/vorschau-*.jpg`.
+      Je Kategorie „wichtel“ (Toni angelegt) + Käufer-Nachricht (Toni wählt: kurz oder mit Druck-Tipp). Rechte-Häkchen setzt Toni.
+      Entscheidung offen: „Zahl, was du willst“ ab 0 € (= Verkauf → Bedingungen/Widerruf; Entwurf im Chat 04.11., erst Prüfstelle) oder ohne.
+      Datei-Upload bei Ko-fi: `input[type=file]` per JS sichtbar machen + aria-label, dann find → file_upload.
       Pin `marketing/pins-onni/pin-briefe.png` (`node marketing/render-pin-briefe.js`) 03.11. veröffentlicht: Pinnwand „Wichtelgeschenke
       für Kinder“, Link /wichteltuer/#briefe, Themen Wichteln/Weihnachtsbräuche/Advent („Kindergarten“ gab es diesmal nicht), Alt-Text, KI-Label. IONOS-Satz bleibt (Domain/DNS).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
