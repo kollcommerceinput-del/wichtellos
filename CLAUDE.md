@@ -327,6 +327,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Datei-Upload bei Ko-fi: `input[type=file]` per JS sichtbar machen + aria-label, dann find → file_upload.
       Pin `marketing/pins-onni/pin-briefe.png` (`node marketing/render-pin-briefe.js`) 03.11. veröffentlicht: Pinnwand „Wichtelgeschenke
       für Kinder“, Link /wichteltuer/#briefe, Themen Wichteln/Weihnachtsbräuche/Advent („Kindergarten“ gab es diesmal nicht), Alt-Text, KI-Label. IONOS-Satz bleibt (Domain/DNS).
+- [ ] Idee 04.11. (Vorschlag aus anderer Sitzung, Toni prüft morgen): „Onnis Adventskalender“ – 24 Hörgeschichten (3–4 Min., passend zu
+      24 Briefen + Streichplan), Seite /onni-adventskalender/ mit eigenem Player + MP3 (Kreativ-Tonie/Yoto), evtl. Podcast/YouTube (Kinder-Haken).
+      Start muss 1.12. sein. Erst Folge 1 als Probe; Stimme Toni oder KI (ElevenLabs, gewerbl. Abo). Keine Werbung im Kindertext, ruhige Enden,
+      keine gefährlichen Streiche, eigene Musik. Texte gehören ins Content-Projekt. Toni legt fest, ob PC oder Cloud.
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
