@@ -2,19 +2,16 @@
   "tag": "Onnis Adventskalender · 1. Dezember",
   "titel": "Onni zieht ein",
   "absaetze": [
-    { "bild": "b1-wald.jpg", "text": "Tief im Norden, im verschneiten Wichtelwald, wohnt Onni. Er ist so groß wie dein Daumen, und seine rote Mütze rutscht ihm immer über die Augen. Darum sieht er nicht viel – aber er hört alles.",
-      "untertitel": ["Tief im Norden, im verschneiten Wichtelwald, wohnt Onni.", "Er ist so groß wie dein Daumen,", "und seine rote Mütze rutscht ihm immer über die Augen.", "Darum sieht er nicht viel – aber er hört alles."] },
-    { "bild": "b1-wald.jpg", "text": "Eines Abends trug der Wind ein Geräusch zu ihm. Es klang warm. Nach Kakao, nach Kuscheldecke … nach einem Zuhause.",
-      "untertitel": ["Eines Abends trug der Wind ein Geräusch zu ihm.", "Es klang warm. Nach Kakao, nach Kuscheldecke …", "… nach einem Zuhause."] },
-    { "bild": "b5-bett.jpg", "text": "„Da will ich hin“, flüsterte Onni. Er packte ein Taschentuch als Decke ein, einen Fingerhut als Becher und ein winziges Notizbuch.",
-      "untertitel": ["„Da will ich hin“, flüsterte Onni.", "Er packte ein Taschentuch als Decke ein,", "einen Fingerhut als Becher und ein winziges Notizbuch."] },
-    { "bild": "b2-eule.jpg", "text": "Eine freundliche Eule trug ihn über den dunklen Wald bis zu den Lichtern der Stadt.",
-      "untertitel": ["Eine freundliche Eule trug ihn über den dunklen Wald", "bis zu den Lichtern der Stadt."] },
-    { "bild": "b3-tuer.jpg", "text": "Leise schlüpfte Onni unter einer Haustür hindurch …",
-      "untertitel": ["Leise schlüpfte Onni unter einer Haustür hindurch.", "Er tapste über den Teppich und hinterließ winzige Fußspuren aus Schnee.", "Plötzlich stand er vor einer kleinen Tür. Genau so groß wie er.", "„Eine Wichteltür!“, staunte er. „Hier wohne ich ab jetzt!“"] },
-    { "bild": "b4-brief.jpg", "text": "Bevor er einschlief, schrieb er seinen ersten Brief: „Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“",
-      "untertitel": ["Bevor er einschlief, schrieb er seinen ersten Brief:", "„Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“"] },
-    { "bild": "b5-bett.jpg", "text": "„Gute Nacht“, flüsterte er. „Bis morgen.“",
-      "untertitel": ["„Gute Nacht“, flüsterte er. „Bis morgen.“"] }
+    { "bild": "b01-wald.jpg", "untertitel": ["Tief im Norden, im verschneiten Wichtelwald, wohnt Onni."] },
+    { "bild": "b02-zapfen.jpg", "untertitel": ["Er ist so groß wie dein Daumen,", "und seine rote Mütze rutscht ihm immer über die Augen.", "Darum sieht er nicht viel.", "Aber seine Nase riecht alles!"] },
+    { "bild": "b03-nase.jpg", "untertitel": ["Eines Abends schnupperte Onni in den Wind.", "Kakao! Frische Kekse! Und eine warme Kuscheldecke.", "„So riecht ein Zuhause“, seufzte er. „Da will ich hin!“"] },
+    { "bild": "b04-weit.jpg", "untertitel": ["Doch der Duft kam von weit her,", "viel zu weit für kleine Wichtelbeine."] },
+    { "bild": "b05-ulla.jpg", "untertitel": ["Da raschelte es im Baum.", "Es war Ulla, die alte Schneeeule.", "„Steig auf!“, sagte sie. „Ich fliege heute Nacht in die Stadt.“"] },
+    { "bild": "b06-packen.jpg", "untertitel": ["Schnell packte Onni ein:", "ein Taschentuch als Decke, einen Fingerhut als Becher", "und ein winziges Notizbuch."] },
+    { "bild": "b07-flug.jpg", "untertitel": ["Dann kletterte er auf Ullas weichen Rücken,", "und los ging es: hoch über den dunklen Wald,", "bis zu den Lichtern der Stadt."] },
+    { "bild": "b08-haus.jpg", "untertitel": ["Vor einem Haus setzte Ulla ihn ab.", "Hier roch es genau richtig!", "Leise schlüpfte Onni unter der Haustür hindurch."] },
+    { "bild": "b09-tuer.jpg", "untertitel": ["Da stand sie: eine kleine rote Tür, genau so groß wie er.", "„Eine Wichteltür!“, staunte Onni. „Hier wohne ich ab jetzt!“"] },
+    { "bild": "b10-brief.jpg", "untertitel": ["Dann schrieb er seinen ersten Brief:", "„Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“"] },
+    { "bild": "b11-gutenacht.jpg", "untertitel": ["„Gute Nacht“, flüsterte er. „Bis morgen.“"] }
   ]
 }

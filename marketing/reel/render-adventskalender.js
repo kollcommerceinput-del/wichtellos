@@ -49,7 +49,9 @@ const page = (inner) => `<!doctype html><html><head><meta charset="utf-8"><style
   let t = INTRO;
   const segs = cfg.absaetze.map((a, i) => {
     const f = ['ton', 'platzhalter'].map((p) => path.join(DIR, `${p}-${i + 1}.wav`)).find((x) => fs.existsSync(x));
-    const d = wavDur(f), s = { ...a, f, start: t, end: t + d };
+    // ohne Aufnahme: Dauer nach Lesetempo (ca. 13 Zeichen/s, mind. 2,4 s je Zeile)
+    const d = f ? wavDur(f) : (a.untertitel || [a.text]).reduce((x, u) => x + Math.max(2.4, u.length / 13), 0);
+    const s = { ...a, f, start: t, end: t + d };
     t += d + PAUSE;
     return s;
   });
@@ -114,9 +116,16 @@ const page = (inner) => `<!doctype html><html><head><meta charset="utf-8"><style
   });
   // Ton: Absätze zeitversetzt mischen
   const aBase = inputs.filter((x) => x === '-i').length;
-  segs.forEach((s) => inputs.push('-i', s.f));
-  segs.forEach((s, i) => fc.push(`[${aBase + i}:a]aresample=48000,adelay=${Math.round(s.start * 1000)}:all=1[a${i}]`));
-  fc.push(`${segs.map((_, i) => `[a${i}]`).join('')}amix=inputs=${segs.length}:normalize=0,apad,atrim=0:${DUR.toFixed(2)},loudnorm=I=-16:TP=-1.5:LRA=11[aout]`);
+  const voiced = segs.filter((s) => s.f);
+  if (voiced.length) {
+    voiced.forEach((s) => inputs.push('-i', s.f));
+    voiced.forEach((s, i) => fc.push(`[${aBase + i}:a]aresample=48000,adelay=${Math.round(s.start * 1000)}:all=1[a${i}]`));
+    fc.push(`${voiced.map((_, i) => `[a${i}]`).join('')}amix=inputs=${voiced.length}:normalize=0,apad,atrim=0:${DUR.toFixed(2)},loudnorm=I=-16:TP=-1.5:LRA=11[aout]`);
+  } else {
+    // nur Untertitel: stille Tonspur (Plattformen erwarten Ton), Stimme kommt später
+    inputs.push('-f', 'lavfi', '-t', DUR.toFixed(2), '-i', 'anullsrc=r=48000:cl=stereo');
+    fc.push(`[${aBase}:a]anull[aout]`);
+  }
   const out = path.join(DIR, `folge-${N}.mp4`);
   execFileSync(FFMPEG, ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', fc.join(';'), '-map', `[${cur}]`, '-map', '[aout]',
     '-t', DUR.toFixed(2), '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out], { stdio: 'inherit' });
