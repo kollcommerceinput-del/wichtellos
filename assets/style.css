@@ -590,3 +590,30 @@ h2[id] { scroll-margin-top: 16px; }
 #f-results:focus { outline: none; }
 @media (min-width: 700px) { .f-show { display: none; } }
 .f-sum { flex: 1 1 0; min-width: 0; }
+
+/* Onnis Adventskalender: 24 Türchen (site.js öffnet nach Datum) */
+.ak-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0 8px; padding: 12px; border-radius: 18px;
+  background: #2b1b17 url(/fotos/onni/kalender-bg.webp) center 74% / cover no-repeat; box-shadow: 0 8px 24px rgba(43,27,23,.25); }
+/* geschlossen: nur Rahmen + Nummer auf dem großen Onni-Bild, wie beim echten Adventskalender */
+.ak-door { position: relative; aspect-ratio: 3 / 4; border: 0; border-radius: 4px; padding: 6px; cursor: pointer; font: inherit;
+  background: transparent center / cover no-repeat; color: #fff;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center; overflow: hidden; transition: transform .15s; }
+.ak-door .ak-num { font-family: Fredoka, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2; text-shadow: 0 2px 6px rgba(0,0,0,.8), 0 0 2px #000; }
+.ak-door .ak-info { font-size: 12px; line-height: 1.2; text-align: center; background: rgba(0,0,0,.5); border-radius: 8px; padding: 3px 5px; width: 100%; }
+.ak-door.auf { background-color: #2b1b17; background-position: center 72%; box-shadow: 0 3px 10px rgba(0,0,0,.35); }
+.ak-door.auf .ak-num { color: #f2b705; }
+.ak-door.auf .ak-info { background: rgba(0,0,0,.6); }
+.ak-door.aktiv { outline: 3px solid #f2b705; outline-offset: 2px; }
+.ak-door.zu { cursor: default; }
+.ak-door:hover:not(.zu), .ak-door:focus-visible { transform: translateY(-2px); }
+.ak-door:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+.ak-door.wackel { animation: ak-wackel .4s; }
+@keyframes ak-wackel { 25% { transform: rotate(-4deg); } 75% { transform: rotate(4deg); } }
+.ak-msg { min-height: 1.4em; font-size: 15px; color: #6d5d57; margin: 4px 0 10px; }
+.ak-player { max-width: 360px; margin: 0 auto 20px; text-align: center; scroll-margin-top: 80px; }
+.ak-player video { display: block; width: 100%; height: auto; border-radius: 14px; background: #2b1b17; box-shadow: 0 6px 20px rgba(43,27,23,.18); }
+.ak-player h3 { margin: 6px 0 10px; }
+.ak-links { font-size: 15px; margin-top: 10px; }
+.ak-gross { color: #6d5d57; }
+@media (max-width: 600px) { .ak-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 8px; background-position: center; } .ak-door .ak-num { font-size: 22px; } .ak-door .ak-info { font-size: 11px; } }
+@media print { .ak-grid, .ak-player, .ak-msg { display: none; } }

@@ -125,4 +125,61 @@
     v.play().catch(() => {});
     v.focus();
   }));
+
+  // Onnis Adventskalender: Türchen N öffnet sich am N. Dezember um 0 Uhr (deutsche Zeit). Video lädt erst beim Klick.
+  const grid = document.querySelector('.ak-grid');
+  if (grid) {
+    const jahr = +grid.dataset.akJahr;
+    const parts = (d) => Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' })
+      .formatToParts(d).filter((p) => p.type !== 'literal').map((p) => [p.type, +p.value]));
+    let heute = parts(new Date());
+    // Nur lokal zum Testen: ?datum=2026-12-05
+    const test = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && new URLSearchParams(location.search).get('datum');
+    if (test) { const [y, m, d] = test.split('-').map(Number); heute = { year: y, month: m, day: d }; }
+    const tagHeute = Date.UTC(heute.year, heute.month - 1, heute.day) / 864e5;
+    const player = document.getElementById('ak-player');
+    const msg = document.querySelector('.ak-msg');
+    const vid = player.querySelector('video');
+    const offen = (n) => tagHeute >= Date.UTC(jahr, 11, n) / 864e5;
+    const zeige = (b, scroll) => {
+      grid.querySelectorAll('.ak-door.aktiv').forEach((x) => x.classList.remove('aktiv'));
+      b.classList.add('aktiv');
+      player.querySelector('.ak-titel').textContent = `Türchen ${b.dataset.tag}: ${b.dataset.titel}`;
+      vid.poster = b.dataset.poster;
+      vid.src = b.dataset.src;
+      const yt = b.dataset.yt ? `<a href="${b.dataset.yt}" rel="noopener" target="_blank">▶ Auf YouTube ansehen</a> · ` : '';
+      player.querySelector('.ak-links').innerHTML = `${yt}<span class="ak-gross">Für die Großen: <a href="${b.dataset.gross}">${b.dataset.grossText} →</a></span>`;
+      player.hidden = false;
+      msg.textContent = '';
+      history.replaceState(null, '', `#tag-${b.dataset.tag}`);
+      if (scroll) player.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    grid.querySelectorAll('.ak-door').forEach((b) => {
+      const n = +b.dataset.tag;
+      const info = b.querySelector('.ak-info');
+      if (!offen(n)) {
+        const rest = Date.UTC(jahr, 11, n) / 864e5 - tagHeute;
+        b.classList.add('zu');
+        info.textContent = rest === 1 ? 'Morgen!' : `Noch ${rest}× schlafen`;
+        b.setAttribute('aria-label', `Türchen ${n} – öffnet sich am ${n}. Dezember`);
+        b.addEventListener('click', () => {
+          b.classList.remove('wackel'); void b.offsetWidth; b.classList.add('wackel');
+          msg.textContent = `Psst … Türchen ${n} öffnet sich erst am ${n}. Dezember.`;
+        });
+      } else if (b.dataset.src) {
+        b.classList.add('auf');
+        b.style.backgroundImage = `url("${b.dataset.poster}")`;
+        info.textContent = b.dataset.titel;
+        b.setAttribute('aria-label', `Türchen ${n}: ${b.dataset.titel} – Video ansehen`);
+        b.addEventListener('click', () => { zeige(b, true); vid.play().catch(() => {}); });
+      } else {
+        b.classList.add('bald');
+        info.textContent = 'Kommt gleich';
+        b.addEventListener('click', () => { msg.textContent = `Türchen ${n} wird gerade noch gepackt – schau bald wieder vorbei.`; });
+      }
+    });
+    const m = location.hash.match(/^#tag-(\d+)$/);
+    const ziel = m && document.getElementById(`tag-${m[1]}`);
+    if (ziel && ziel.classList.contains('auf')) zeige(ziel, true);
+  }
 })();

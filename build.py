@@ -110,7 +110,7 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
@@ -1296,6 +1296,34 @@ def themen_pages():
              f'Geschenke für {who}: {n} Ideen zu Weihnachten und Geburtstag – Genuss, Wellness, Technik, Kreatives und Gemütliches. Für Partner, Familie, Freunde und Kollegen.',
              body, crumb=f'Geschenke für {who}', playful=True)
 
+    # Nikolaus (05.11.): Werbung aus Onnis Adventskalender (Posts 1.–5.12. verlinken hierher)
+    from themen import NIKOLAUS
+    secs, jump, n = idea_sections(NIKOLAUS, 'nik')
+    body = f"""<article>
+<h1>Nikolaus-Geschenke: {n} Ideen für den Stiefel</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
+<p class="lead">Am Abend des 5. Dezember werden die Stiefel geputzt und vor die Tür gestellt – und am Morgen des 6. Dezember liegt etwas darin. Hier findest du {n} Nikolaus-Geschenke, die in den Stiefel passen: für Kinder, für Erwachsene und für Kollegen im Büro, dazu den passenden Stiefel.</p>
+<p class="chips-line">Direkt zu: {jump}</p>
+<p class="hint">Mehr Ideen nach Budget und Alter: <a href="/geschenkfinder/">Zum Geschenkfinder mit über 100 Ideen →</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>So wird der Nikolaustag schön</h2>
+<ul>
+  <li><b>Wenig, aber liebevoll:</b> Ein Schoko-Nikolaus, Mandarinen, Nüsse und eine Kleinigkeit reichen. Das große Geschenk kommt an Weihnachten.</li>
+  <li><b>Stiefel am Vorabend putzen:</b> Für Kinder gehört das Putzen am 5. Dezember dazu – dann ist die Freude am Morgen umso größer.</li>
+  <li><b>Im Büro:</b> Ein kleiner Schoko-Nikolaus auf jedem Schreibtisch ist eine schöne Geste – oder ihr lost aus und <a href="/wichteln-im-buero/">wichtelt im Büro</a>.</li>
+  <li><b>Wichteltür zu Hause?</b> Dann kann auch der Wichtel einen Nikolausgruß dalassen – Ideen findest du bei der <a href="/wichteltuer/">Wichteltür</a> und in <a href="/onni-adventskalender/">Onnis Adventskalender</a>.</li>
+</ul>
+<p>Noch mehr Advent: <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/adventskalender-ideen/">fertige Adventskalender</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a></p>
+{CTA}
+</article>"""
+    page('/nikolaus-geschenke/', f'Nikolaus-Geschenke: {n} Ideen für den Stiefel',
+         f'Nikolaus-Geschenke: {n} Ideen für den Stiefel – für Kinder, Erwachsene und Kollegen, dazu Nikolausstiefel zum Befüllen. Kleine Geschenke zum 6. Dezember.',
+         body, crumb='Nikolaus-Geschenke', playful=True)
+
 
 def zubehoer_page():
     secs = []
@@ -1329,15 +1357,52 @@ def zubehoer_page():
 # Onnis Adventskalender (05.11., Toni): 24 Video-Geschichten ab 1.12. – Seite vorab live, damit Google sie bis Dezember kennt.
 # Videos/Texte: marketing/reel/adventskalender/folge-NN/, Geschichten im Content-Projekt. Neue Folge = Titel hier eintragen.
 ONNI_FOLGEN = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni im Sockenkorb', 'Onnis Waschtag', 'Onni und der Keks']
+# YouTube-Links je Folge (Tag: URL), sobald der Kanal steht – Knopf „Auf YouTube ansehen“ erscheint dann automatisch
+ONNI_YT = {}
+# „Für die Großen“ unter dem Video – getrennt von der Geschichte, je nach Tag ein anderes Ziel (Toni 05.11.)
+ONNI_GROSS = [(5, '/nikolaus-geschenke/', 'Nikolaus-Geschenke für den Stiefel'),
+              (19, '/geschenkfinder/', 'Geschenkideen für Weihnachten und zum Wichteln'),
+              (24, '/wichtelgeschenke-unter-10-euro/', 'Schnelle Wichtelgeschenke unter 10 €')]
+ONNI_REIHE = [17, 3, 22, 9, 1, 14, 6, 20, 11, 24, 4, 15, 8, 19, 2, 12, 23, 7, 16, 5, 21, 10, 18, 13]
+ONNI_SHOP = [
+    ('Nikolausstiefel zum Befüllen', 'Aus Filz oder Stoff – am 5. Dezember putzen und vor die Tür stellen.', 'Nikolausstiefel zum Befüllen'),
+    ('Wichteltür-Set', 'Damit Onni bei euch einziehen kann: Tür mit Leiter, Briefkasten und Fußmatte.', 'Wichteltür Set', 'B0DK3D8M31'),
+    ('Adventskalender zum Befüllen', 'Hält viele Jahre – jedes Jahr neu gefüllt.', 'Adventskalender Holz zum Befüllen'),
+    ('Wichtel-Bücher zum Vorlesen', 'Noch mehr Wichtel-Geschichten für die Abende im Advent.', 'Wichtel Buch Kinder Weihnachten'),
+]
 
 
 def onni_kalender_page():
-    folgen = '\n'.join(f'<li><b>{i}. Dezember:</b> {esc(t)}</li>' for i, t in enumerate(ONNI_FOLGEN, 1))
+    doors = []
+    for tag in range(1, 25):
+        n = f'{tag:02d}'
+        has = tag <= len(ONNI_FOLGEN) and (SRC / 'fotos' / 'onni' / f'folge-{n}.mp4').exists()
+        titel = ONNI_FOLGEN[tag - 1] if has else ''
+        href, label = next((h, l) for bis, h, l in ONNI_GROSS if tag <= bis)
+        attrs = f' data-src="/fotos/onni/folge-{n}.mp4" data-poster="/fotos/onni/folge-{n}-poster.webp" data-titel="{esc(titel)}"' if has else ''
+        yt = f' data-yt="{esc(ONNI_YT[tag])}"' if tag in ONNI_YT else ''
+        doors.append(f'<button type="button" class="ak-door" id="tag-{tag}" data-tag="{tag}"{attrs}{yt} data-gross="{href}" data-gross-text="{esc(label)}">'
+                     f'<span class="ak-num">{tag}</span><span class="ak-info">{tag}. Dezember</span></button>')
+    # Türchen durcheinander wie bei einem echten Adventskalender (Toni 05.11.) – feste Reihenfolge, damit sie sich nicht ändert
+    doors = '\n'.join(doors[t - 1] for t in ONNI_REIHE)
     body = f'''<article>
-<h1>Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder</h1>
+<h1>Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder</h1>
 {ai_photo('wichtel3d-onni-kekse', 'Plüsch-Wichtel Onni steht unter dem Weihnachtsbaum neben einem Teddy vor einem Teller mit riesigen Keksen')}
-<p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember gibt es hier jeden Abend eine neue Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
-<p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
+<p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember öffnet sich hier jeden Tag ein Türchen mit einer neuen Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
+<p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
+
+<h2 id="kalender">Die 24 Türchen</h2>
+<p>Jedes Türchen öffnet sich um Mitternacht an seinem Tag. Tippe auf ein offenes Türchen, dann startet die Geschichte.</p>
+<div class="ak-grid" data-ak-jahr="2026">
+{doors}
+</div>
+<p class="ak-msg" role="status" aria-live="polite"></p>
+<section class="ak-player" id="ak-player" hidden>
+  <h3 class="ak-titel"></h3>
+  <video controls playsinline preload="none" width="540" height="960"></video>
+  <p class="ak-links"></p>
+</section>
+<p>Folge uns auf <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">Instagram</a>, <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">Pinterest</a> oder <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">TikTok</a>, dann verpasst du keine Folge.</p>
 
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
@@ -1347,12 +1412,6 @@ def onni_kalender_page():
   <li><b>Ohne Werbung in den Geschichten:</b> Onni verkauft nichts. Die Folgen sind für Kinder ab etwa 3 Jahren gedacht.</li>
 </ul>
 
-<h2 id="folgen">Die ersten Abenteuer</h2>
-<ul class="folgen">
-{folgen}
-</ul>
-<p>… und so weiter bis Heiligabend. Folge uns auf <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">Instagram</a>, <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">Pinterest</a> oder <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">TikTok</a>, dann verpasst du keine Folge.</p>
-
 <h2 id="vorbereiten">Das kannst du schon vorbereiten</h2>
 <ul>
   <li><a href="/wichteltuer/">Wichteltür</a> – so startest du, mit 24 Streichen und Begrüßungsbrief</li>
@@ -1361,10 +1420,13 @@ def onni_kalender_page():
   <li><a href="/wichtel-ausmalbilder/">Ausmalbilder und Sticker mit Onni</a></li>
   <li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> – Tür, Möbel, Lichterkette</li>
 </ul>
+
+{supplies_block(ONNI_SHOP, 'Für die Großen: Du suchst noch Geschenke?')}
+<p class="hint">Hier geht's direkt zu den Ideen: <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
 <p class="hint">Bilder und Erzählstimme der Geschichten sind mit KI-Unterstützung entstanden, die Geschichten haben wir selbst geschrieben.</p>
 </article>'''
-    page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder',
-         'Onnis Adventskalender: Ab 1. Dezember jeden Abend eine kurze Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür und den 24 Briefen von Onni.',
+    page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder',
+         'Onnis Adventskalender: Ab 1. Dezember öffnet sich jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür und den 24 Briefen von Onni.',
          body, crumb='Onnis Adventskalender', playful=True)
 
 
@@ -1983,7 +2045,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'

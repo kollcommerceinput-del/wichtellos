@@ -141,3 +141,36 @@ AK_BASTELN = [
      'Die Gläser kann man danach weiter benutzen – nachhaltig und hübsch.',
      [('Mini-Gläser', 'Mini Gläser mit Deckel Set'), ('Etiketten', 'Etiketten Gläser Kreide'), ('Geschenkband', 'Geschenkband Weihnachten')]),
 ]
+
+# Nikolaus (05.11., Toni: Werbung zu Onnis Adventskalender; Google Trends „nikolaus geschenke“ Höhepunkt 1.–6.12.)
+NIKOLAUS = [
+    ('Für Kinder', 'jubel', 'Klein genug für den Stiefel – und lieber zum Spielen als nur Süßes.', [
+        ('Schoko-Nikolaus', 'Der Klassiker gehört in jeden Stiefel – gern aus fairer Schokolade.', 'Schoko Nikolaus fair'),
+        ('Mandarinen-Netz und Nüsse', 'Wie früher: Mandarinen, Walnüsse und Erdnüsse in der Schale.', 'Nussmischung in Schale Weihnachten'),
+        ('Malbuch Winter', 'Für den Nachmittag nach dem Auspacken.', 'Malbuch Winter Weihnachten Kinder'),
+        ('Pixi-Bücher zu Weihnachten', 'Passen genau in den Stiefel und sind schnell vorgelesen.', 'Pixi Bücher Weihnachten'),
+        ('Kuschelsocken', 'Warme Füße für die kalten Tage.', 'Kuschelsocken Kinder Weihnachten'),
+        ('Kleines Spiel', 'Ein Kartenspiel oder Mitbringspiel für die Familie.', 'Mitbringspiel Kinder Kartenspiel'),
+        ('Taschenlampe für Kinder', 'Für Abenteuer im Dunkeln – und für die Suche nach dem Wichtel.', 'Taschenlampe Kinder'),
+        ('Knete oder Bastelset', 'Etwas für die Hände an langen Winterabenden.', 'Bastelset Kinder Weihnachten'),
+    ]),
+    ('Für Erwachsene', 'herz', 'Auch Große freuen sich über einen gefüllten Stiefel.', [
+        ('Feine Schokolade', 'Eine besondere Tafel statt Massenware.', 'Schokolade Geschenk edel'),
+        ('Winter-Tee', 'Mit Zimt, Orange oder Lebkuchen.', 'Wintertee Geschenk'),
+        ('Kuschelsocken für Erwachsene', 'Wird garantiert getragen.', 'Kuschelsocken Damen Herren'),
+        ('Duftkerze', 'Für gemütliche Abende im Advent.', 'Duftkerze Winter'),
+        ('Handcreme', 'Klein, nützlich, im Winter immer gebraucht.', 'Handcreme Geschenk'),
+        ('Lebkuchen', 'Ein Stück Weihnachten zum Nachmittagskaffee.', 'Elisenlebkuchen'),
+    ]),
+    ('Für Kollegen und das Büro', 'daumen', 'Neutral, klein und schreibtischtauglich – gut für den 6. Dezember im Büro.', [
+        ('Mini-Schoko-Nikoläuse', 'Für jeden Schreibtisch einer.', 'Schoko Nikolaus klein Großpackung'),
+        ('Tassen-Kakao', 'Heiße Schokolade am Stiel für die Kaffeepause.', 'Kakao am Stiel'),
+        ('Haftnotizen mit Wintermotiv', 'Klein, lustig und wird benutzt.', 'Haftnotizen Weihnachten'),
+    ]),
+    ('Stiefel und Zubehör', 'lupe', 'Damit am Morgen des 6. Dezember alles bereitsteht.', [
+        ('Nikolausstiefel zum Befüllen', 'Aus Filz oder Stoff – hält viele Jahre.', 'Nikolausstiefel zum Befüllen'),
+        ('Nikolausstiefel mit Namen', 'Persönlich bestickt oder zum Selbstbeschriften.', 'Nikolausstiefel personalisiert'),
+        ('Nikolaus-Brief', 'Ein Brief vom Nikolaus macht den Morgen besonders.', 'Nikolaus Brief Vorlage'),
+        ('Kleine Geschenktüten', 'Für alles, was nicht in den Stiefel passt.', 'Geschenktüten klein Weihnachten'),
+    ]),
+]

@@ -182,6 +182,18 @@ Antworten auf Deutsch.
 - `tests/live-check.py` – nach jedem Deploy: prüft alle Seiten + jede verlinkte Datei live auf 200 (02.11. eingeführt, nachdem die
   Sticker-ZIP wegen `*.zip` in `.gitignore` nie online war). `build.py` warnt am Ende, wenn Git eine Datei in `website/` ignoriert.
 - `tests/` – Playwright-Tests (Server vorher starten: `cd website && python3 -m http.server 8766`)
+- `build.py`: `onni_kalender_page()` – `/onni-adventskalender/` (05.11., Toni): „24 Wichtel-Geschichten für kleine und große Kinder“.
+  Kalender mit 24 Türchen auf großem Onni-Bild (`fotos/onni/kalender-bg.webp` aus folge-05/b04-kekse), Reihenfolge gemischt
+  (`ONNI_REIHE`, fest). Türchen N öffnet um 0 Uhr deutscher Zeit am N. Dezember (Logik in `site.js`, `.ak-grid`; lokal testen mit
+  `?datum=2026-12-05`, geht nur auf localhost). Offen = Videobild + gelbe Zahl, Klick spielt Video (lädt erst dann), Adresse `#tag-N`
+  (Posts verlinken darauf). Videos: `fotos/onni/folge-NN.mp4` (540×960, crf 29, ~4–5 MB) + `folge-NN-poster.webp` (Bild bei 1,5 s) aus
+  `marketing/reel/adventskalender/folge-NN/folge-NN.mp4` – alle vorab online (Toni: ok, wer den Dateinamen errät, sieht sie früher).
+  Neue Folge = Titel in `ONNI_FOLGEN` + Video/Poster nach `fotos/onni/`. `ONNI_YT` {Tag: URL} → Knopf „Auf YouTube ansehen“ (Kanal legt Toni an,
+  Uploads geplant 0 Uhr, „für Kinder“). Unter dem Video „Für die Großen“ (`ONNI_GROSS`: 1.–5. Nikolaus, bis 19. Geschenkfinder, dann unter 10 €),
+  unten `ONNI_SHOP` „Für die Großen: Du suchst noch Geschenke?“. Geschenk-Werbung nie im Video/Kindertext (UWG), nur für Eltern.
+  Lesefassung aller 24 Geschichten kommt Ende November. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
+- `themen.py` `NIKOLAUS` + `/nikolaus-geschenke/` in `themen_pages()` (05.11.): 21 Ideen (Kinder, Erwachsene, Büro, Stiefel & Zubehör), Ziel der
+  Posts zu Türchen 1–5 (Google Trends „nikolaus geschenke“ 1.–6.12.). Fuß „Kinder & Advent“, Sitemap jetzt 31 URLs.
 
 ## Wie das Tool funktioniert
 
@@ -237,7 +249,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       03.11. ~14:00: wichtelgruss, wunschzettel, adventskalender-ideen, wichtelgedichte, woher-kommt-wichteln beantragt →
       **alle Seiten bei Google beantragt.** Sitemap neu eingereicht (Google erkennt 24 Seiten). Bing: diese 3 neuen + wichteltuer übermittelt.
       03.11. ~16:30: geschenke-fuer-maenner + geschenke-fuer-frauen beantragt, dann „Kontingent überschritten“ (Tageslimit lag heute bei 7).
-      **Offen ab 04.11. nachmittags:** adventskalender-befuellen, wichtelgeschenke-selber-machen (Pinterest-Trend), wichtelgeschenke-fuer-kinder.
+      04.11. ~17:40: adventskalender-befuellen beantragt („nicht bekannt“ → in Warteschlange); wichtelgeschenke-selber-machen und
+      wichtelgeschenke-fuer-kinder waren bereits indexiert. 04.11. ~18 Uhr alle 29 Sitemap-URLs geprüft: 27 indexiert;
+      impressum + adventskalender-befuellen beantragt; Startseite neu beantragt (FAQ geändert). Ende 04.11.: nichts mehr offen.
       Bing nicht von Hand (Toni 03.11.): IndexNow-Job meldet Sitemap-URLs bei jedem Push – nur prüfen, dass neue Seiten in der Sitemap stehen. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
