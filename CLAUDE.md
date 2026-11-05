@@ -221,6 +221,12 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - Google Search Console: Domain-Property `wichtellos.de`, bestätigt per DNS-TXT (`google-site-verification=…`, nicht löschen).
 - Bing Webmaster Tools: `https://wichtellos.de/`, bestätigt per DNS-CNAME `b6492afd…` → `verify.bing.com` und Meta-Tag
   `msvalidate.01` (in `build.py`). Deckt Edge, DuckDuckGo, Yahoo, Ecosia, ChatGPT-Suche ab.
+- YouTube (05.11.): Kanal **@WichtelLos** https://www.youtube.com/@WichtelLos (ID UCBaoI654NB6hH052CYAT08Q, Google-Login
+  kollcommerce.input@gmail.com, Dienste nicht verknüpft). Banner `marketing/youtube-banner.jpg` (`node marketing/render-youtube-banner.js`),
+  Logo = `marketing/instagram-profilbild.png`. Zielgruppe „je Video prüfen“ (Folgen = „für Kinder“), Upload-Standards: Deutsch, Film & Animation,
+  Tags, Standard-Beschreibung mit Link + KI-Hinweis. Jedes Video: KI-Verwendung „Ja“. Erstes Short 05.11.: youtube.com/shorts/RHBsgQK2bxk
+  (TikTok-Countdown 26). Planen auf 0 Uhr erst nach Telefon-Bestätigung (youtube.com/verify, Toni). Links in Fuß, Onni-Seite, Schema, llms.txt.
+- E-Mail-Adresse der Website seit 05.11.: **wichtellos@mailbox.org** (Alias im mailbox.org-Postfach, Toni) – Impressum, Datenschutz, Schema.
 - Pinterest: Unternehmensprofil pinterest.com/WichtelLos (entstand durch Umstellen des Logins kollcommerce;
   Kurzinfo + Impressum-Link gesetzt; Instagram @wichtellos verknüpft → neue Posts automatisch auf Pinnwand
   „Wichteln: Ideen & Reels“, ausgenommen #nopin/#anzeige; Werbe-Benachrichtigungen und Anzeigen-Personalisierung aus), Website bestätigt per Meta-Tag `p:domain_verify` (in `build.py`, nicht löschen). Pinterest-Tag (Tracking)

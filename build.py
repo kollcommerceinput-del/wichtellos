@@ -23,9 +23,9 @@ INDEXNOW_KEY = '1ad0ea986d461d98be992b90c6be2615'  # öffentlich (liegt als /<ke
 PUBLISHED = '2026-10-30'
 
 ORG = {'@type': 'Organization', 'name': 'KOLL Commerce UG (haftungsbeschränkt)', 'url': DOMAIN + '/',
-       'logo': DOMAIN + '/apple-touch-icon.png', 'email': 'kollcommerce@mailbox.org',
+       'logo': DOMAIN + '/apple-touch-icon.png', 'email': 'wichtellos@mailbox.org',
        'sameAs': ['https://www.instagram.com/wichtellos/', 'https://www.pinterest.com/wichtellos/',
-                  'https://www.tiktok.com/@wichtellos']}
+                  'https://www.tiktok.com/@wichtellos', 'https://www.youtube.com/@WichtelLos']}
 
 
 def ld(*objs):
@@ -115,7 +115,8 @@ FOOTER = '''<footer>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
     <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">📌 Pinterest</a>
-    <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a></p>
+    <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a>
+    <a href="https://www.youtube.com/@WichtelLos" rel="noopener" target="_blank">▶️ YouTube</a></p>
   <p class="legal">© 2026 WichtelLos · Powered by KOLL Commerce · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
 </footer>'''
 
@@ -1402,7 +1403,7 @@ def onni_kalender_page():
   <video controls playsinline preload="none" width="540" height="960"></video>
   <p class="ak-links"></p>
 </section>
-<p>Folge uns auf <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">Instagram</a>, <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">Pinterest</a> oder <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">TikTok</a>, dann verpasst du keine Folge.</p>
+<p>Folge uns auf <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">Instagram</a>, <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">Pinterest</a>, <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">TikTok</a> oder abonniere uns auf <a href="https://www.youtube.com/@WichtelLos" rel="noopener" target="_blank">YouTube</a>, dann verpasst du keine Folge.</p>
 
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
@@ -1899,7 +1900,7 @@ def legal_pages():
 <p>{COMPANY}</p>
 <p>Vertreten durch den Geschäftsführer: Antonio Koll</p>
 <h2>Kontakt</h2>
-<p>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a><br>Telefon: +49 151 29522767</p>
+<p>E-Mail: <a href="mailto:wichtellos@mailbox.org">wichtellos@mailbox.org</a><br>Telefon: +49 151 29522767</p>
 <h2>Registereintrag</h2>
 <p>Amtsgericht Charlottenburg, HRB 277995 B</p>
 <h2>Umsatzsteuer-ID</h2>
@@ -1914,7 +1915,7 @@ def legal_pages():
     datenschutz = f"""<article>
 <h1>Datenschutzerklärung</h1>
 <h2>1. Verantwortlicher</h2>
-<p>{COMPANY}<br>E-Mail: <a href="mailto:kollcommerce@mailbox.org">kollcommerce@mailbox.org</a></p>
+<p>{COMPANY}<br>E-Mail: <a href="mailto:wichtellos@mailbox.org">wichtellos@mailbox.org</a></p>
 
 <h2>2. Das Wichtigste in Kürze</h2>
 <p>Wir verarbeiten so wenig Daten wie möglich. Es gibt kein Benutzerkonto, keine Analyse- oder Tracking-Werkzeuge und wir setzen keine Cookies.</p>
@@ -1936,8 +1937,8 @@ def legal_pages():
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
 <p>Der Knopf „WichtelLos unterstützen“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
 
-<h2>7. Links zu Instagram, Pinterest und TikTok</h2>
-<p>Im Fußbereich verlinken wir auf unsere Profile bei Instagram, Pinterest und TikTok. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+<h2>7. Links zu Instagram, Pinterest, TikTok und YouTube</h2>
+<p>Im Fußbereich und auf der Seite „Onnis Adventskalender“ verlinken wir auf unsere Profile bei Instagram, Pinterest, TikTok und YouTube. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
 
 <h2>8. Kontakt per E-Mail</h2>
 <p>Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald sie dafür nicht mehr benötigt werden.</p>
@@ -2073,7 +2074,7 @@ def extras():
              'Ausschlüssen, Tipps pro Person, Losen zum Ausdrucken (auch ohne Handy für Kinder)', '', '## Seiten', '']
     lines += [f"- [{info[u]['t']}]({DOMAIN}{u}): {info[u]['d']}" for u in urls if u in info]
     lines += ['', '## Social', '', '- Instagram: https://www.instagram.com/wichtellos/',
-              '- Pinterest: https://www.pinterest.com/wichtellos/', '- TikTok: https://www.tiktok.com/@wichtellos', '']
+              '- Pinterest: https://www.pinterest.com/wichtellos/', '- TikTok: https://www.tiktok.com/@wichtellos', '- YouTube: https://www.youtube.com/@WichtelLos', '']
     (OUT / 'llms.txt').write_text('\n'.join(lines), encoding='utf-8')
     # IONOS liefert http und www sonst parallel aus (Duplicate Content) – www immer weg, http nur mit FORCE_HTTPS
     host = DOMAIN.split('://')[1]
