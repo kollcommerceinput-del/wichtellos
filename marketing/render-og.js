@@ -34,6 +34,7 @@ const PAGES = [
   ['adventskalender-befuellen', 'onni/sticker-lupe.png', 'Adventskalender befüllen', 'Füllideen, Gutscheine & Bastelanleitungen'],
   ['geschenke-fuer-maenner', 'onni/sticker-daumen.png', 'Geschenke für Männer', 'Ideen, die wirklich ankommen'],
   ['geschenke-fuer-frauen', 'onni/sticker-herz.png', 'Geschenke für Frauen', 'Ideen, die wirklich ankommen'],
+  ['onni-adventskalender', 'onni/sticker-winkt.png', 'Onnis Adventskalender', '24 Wichtel-Geschichten – ab 1. Dezember'],
   ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
 ];
 
