@@ -124,3 +124,13 @@ Was war euer bestes Wichtelgeschenk? 👇
 TikTok:
 Wichtelgeschenk unter 10 €, das wirklich benutzt wird 🧦 Mehr Ideen auf wichtellos.de (Werbung: Amazon-Partnerlinks)
 #wichteln #wichtelgeschenk #geschenkideen #weihnachten #fyp
+
+## TikTok 06.11.: Reel „Handy + Stimme“ (reel-handy-tiktok-15s.mp4)
+
+```
+Wichteln per WhatsApp in 1 Minute ausgelost 🎁 Namen rein, auslosen – jeder bekommt seinen eigenen geheimen Link. Kein Zettelziehen, keine Anmeldung, kostenlos.
+👉 wichtellos.de (Link im Profil)
+
+#wichteln #wichtelnperwhatsapp #secretsanta #wichtelgeschenk #bürowichteln #weihnachtsfeier #weihnachten #lifehack
+```
+Beim Posten: „KI-generierte Inhalte“ einschalten (Stimme + Onni-Bild am Ende sind KI).

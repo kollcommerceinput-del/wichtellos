@@ -201,6 +201,12 @@ Antworten auf Deutsch.
   (Anlass/für wen/Budget/mag → 3 Lose zum Freirubbeln, 🎲 je Los, Merkliste `wl-merkliste` im localStorage, Adresse `?anlass=&fuer=&budget=&mag=`),
   `rubbellos_page()` → `/rubbellos/` (Geschenk hinter Rubbelschicht, Link `#r=` Base64url, `?g=` füllt vor). JS: `assets/rubbel.js`
   (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Menü unverändert.
+- `marketing/reel/handy-auslosen/` (06.11., Toni): Reel „Wichteln per WhatsApp am Handy“ aus echten Bildschirmen (Website neu mit Anna/Ben…,
+  WhatsApp aus Tonis Screenshots, private Kontakte entfernt: `wa-edit.js`), Wischen/Tippen/seitlicher App-Wechsel in `render.py`.
+  Fassungen: `reel-handy-auslosen.mp4` (26 s, Texte), `reel-handy-stimme.mp4` (28 s, Stimme Gemini „Charon“), `reel-handy-tiktok-15s.mp4`
+  (`SCHNELL=1`), `reel-handy-28s-musik.mp4` (+ leise Spieluhr). 06.11.: Pinterest-Video-Pin (Ideen & Reels, Link /wichteln-per-whatsapp/,
+  Themen Wichteln/Weihnachtswichtel/Geschenkideen für Weihnachten, Alt-Text, KI-Label) + Instagram-Story (ohne Link-Sticker – bei Videos
+  in der Business Suite nicht möglich). TikTok: Toni (Text in teilen-texte.md).
 - `themen.py` `NIKOLAUS` + `/nikolaus-geschenke/` in `themen_pages()` (05.11.): 21 Ideen (Kinder, Erwachsene, Büro, Stiefel & Zubehör), Ziel der
   Posts zu Türchen 1–5 (Google Trends „nikolaus geschenke“ 1.–6.12.). Fuß „Kinder & Advent“, Sitemap jetzt 31 URLs.
 
@@ -267,6 +273,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       04.11. ~17:40: adventskalender-befuellen beantragt („nicht bekannt“ → in Warteschlange); wichtelgeschenke-selber-machen und
       wichtelgeschenke-fuer-kinder waren bereits indexiert. 04.11. ~18 Uhr alle 29 Sitemap-URLs geprüft: 27 indexiert;
       impressum + adventskalender-befuellen beantragt; Startseite neu beantragt (FAQ geändert). Ende 04.11.: nichts mehr offen.
+      06.11. ~17 Uhr: geschenke-generator beantragt (Ergebnis nicht bestätigt, Tab geschlossen), rubbellos → „Kontingent überschritten“ →
+      06.11. abends: rubbellos + geschenke-generator beantragt (beide „Indexierung wurde beantragt“, waren noch „nicht bekannt“) → in ein paar Tagen prüfen.
       Bing nicht von Hand (Toni 03.11.): IndexNow-Job meldet Sitemap-URLs bei jedem Push – nur prüfen, dass neue Seiten in der Sitemap stehen. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.

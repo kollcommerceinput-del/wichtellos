@@ -2,16 +2,210 @@
   "tag": "Onnis Adventskalender · 1. Dezember",
   "titel": "Onni zieht ein",
   "absaetze": [
-    { "bild": "b01-wald.jpg", "untertitel": ["Tief im Norden, im verschneiten Wichtelwald, wohnt Onni."] },
-    { "bild": "b02-zapfen.jpg", "untertitel": ["Er ist so groß wie dein Daumen,", "und seine rote Mütze rutscht ihm immer über die Augen.", "Darum sieht er nicht viel.", "Aber seine Nase riecht alles!"] },
-    { "bild": "b03-nase.jpg", "untertitel": ["Eines Abends schnupperte Onni in den Wind.", "Kakao! Frische Kekse! Und eine warme Kuscheldecke.", "„So riecht ein Zuhause“, seufzte er. „Da will ich hin!“"] },
-    { "bild": "b04-weit.jpg", "untertitel": ["Doch der Duft kam von weit her,", "viel zu weit für kleine Wichtelbeine."] },
-    { "bild": "b05-ulla.jpg", "untertitel": ["Da raschelte es im Baum.", "Es war Ulla, die alte Schneeeule.", "„Steig auf!“, sagte sie. „Ich fliege heute Nacht in die Stadt.“"] },
-    { "bild": "b06-packen.jpg", "untertitel": ["Schnell packte Onni ein:", "ein Taschentuch als Decke, einen Fingerhut als Becher", "und ein winziges Notizbuch."] },
-    { "bild": "b07-flug.jpg", "untertitel": ["Dann kletterte er auf Ullas weichen Rücken,", "und los ging es: hoch über den dunklen Wald,", "bis zu den Lichtern der Stadt."] },
-    { "bild": "b08-haus.jpg", "untertitel": ["Vor einem Haus setzte Ulla ihn ab.", "Hier roch es genau richtig!", "Leise schlüpfte Onni unter der Haustür hindurch."] },
-    { "bild": "b09-tuer.jpg", "untertitel": ["Da stand sie: eine kleine rote Tür, genau so groß wie er.", "„Eine Wichteltür!“, staunte Onni. „Hier wohne ich ab jetzt!“"] },
-    { "bild": "b10-brief.jpg", "untertitel": ["Dann schrieb er seinen ersten Brief:", "„Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“"] },
-    { "bild": "b11-gutenacht.jpg", "untertitel": ["„Gute Nacht“, flüsterte er. „Bis morgen.“"] }
-  ]
+    {
+      "bild": "b01-wald.jpg",
+      "untertitel": [
+        "Tief im Norden, im verschneiten Wichtelwald, wohnt Onni."
+      ],
+      "stimmung": "ruhig, ein bisschen geheimnisvoll"
+    },
+    {
+      "bild": "b02-zapfen.jpg",
+      "untertitel": [
+        "Er ist so groß wie dein Daumen,",
+        "und seine rote Mütze rutscht ihm immer über die Augen.",
+        "Darum sieht er nicht viel.",
+        "Aber seine Nase riecht alles!"
+      ],
+      "stimmung": "verschmitzt, schmunzelnd; bei 'riecht alles!' stolz"
+    },
+    {
+      "bild": "b03-nase.jpg",
+      "untertitel": [
+        "Eines Abends schnupperte Onni in den Wind.",
+        "Kakao! Frische Kekse! Und eine warme Kuscheldecke.",
+        "„So riecht ein Zuhause“, seufzte er. „Da will ich hin!“"
+      ],
+      "stimmung": "neugierig, begeistert bei 'Kakao! Frische Kekse!', sehnsüchtig bei 'Da will ich hin!'"
+    },
+    {
+      "bild": "b04-weit.jpg",
+      "untertitel": [
+        "Doch der Duft kam von weit her,",
+        "viel zu weit für kleine Wichtelbeine."
+      ],
+      "stimmung": "nachdenklich, etwas traurig"
+    },
+    {
+      "bild": "b05-ulla.jpg",
+      "untertitel": [
+        "Da raschelte es im Baum.",
+        "Es war Ulla, die alte Schneeeule.",
+        "„Steig auf!“, sagte sie. „Ich fliege heute Nacht in die Stadt.“"
+      ],
+      "stimmung": "überrascht beim Rascheln; Ulla spricht tiefer und freundlich"
+    },
+    {
+      "bild": "b06-packen.jpg",
+      "untertitel": [
+        "Schnell packte Onni ein:",
+        "ein weißes Tuch als Decke, einen Fingerhut als Becher",
+        "und ein winziges Notizbuch.",
+        "Alles passte unter seine große Mütze."
+      ],
+      "stimmung": "eilig, aufgeregt"
+    },
+    {
+      "bild": "b07-flug.jpg",
+      "untertitel": [
+        "Dann kletterte er auf Ullas weichen Rücken,",
+        "und los ging es: hoch über den dunklen Wald,",
+        "bis zu den Lichtern der Stadt."
+      ],
+      "stimmung": "schwungvoll, abenteuerlich"
+    },
+    {
+      "bild": "b08-haus.jpg",
+      "untertitel": [
+        "Vor einem Haus setzte Ulla ihn ab.",
+        "Hier roch es genau richtig!",
+        "Leise schlüpfte Onni unter der Haustür hindurch."
+      ],
+      "stimmung": "leiser, vorsichtig, am Ende fast geflüstert"
+    },
+    {
+      "bild": "b09-tuer.jpg",
+      "untertitel": [
+        "Da stand sie: eine kleine rote Tür, genau so groß wie er.",
+        "„Eine Wichteltür!“, staunte Onni. „Hier wohne ich ab jetzt!“"
+      ],
+      "stimmung": "staunend, freudig"
+    },
+    {
+      "bild": "b10-brief.jpg",
+      "untertitel": [
+        "Dann schrieb er seinen ersten Brief:",
+        "„Ich bin Onni. Bis Heiligabend bleibe ich bei euch.“"
+      ],
+      "stimmung": "warm, ein bisschen feierlich"
+    },
+    {
+      "bild": "b11-gutenacht.jpg",
+      "untertitel": [
+        "Er legte den Brief vor die Tür",
+        "und kuschelte sich unter sein weißes Tuch.",
+        "„Gute Nacht“, flüsterte er. „Bis morgen.“"
+      ],
+      "stimmung": "leise, langsam, flüsternd"
+    }
+  ],
+  "ton": [
+    {
+      "datei": "wind",
+      "von": "start",
+      "bis": 7,
+      "aus": 20,
+      "db": 0,
+      "fade": 1.5
+    },
+    {
+      "datei": "schnuppern",
+      "von": 1,
+      "plus": 10.2,
+      "dauer": 0.8,
+      "aus": 0,
+      "db": 0
+    },
+    {
+      "datei": "schnuppern",
+      "von": 2,
+      "plus": 0.3,
+      "dauer": 0.9,
+      "aus": 0,
+      "db": 0
+    },
+    {
+      "datei": "schnuppern",
+      "von": 2,
+      "plus": 1.4,
+      "dauer": 0.9,
+      "aus": 0,
+      "db": 0
+    },
+    {
+      "datei": "schnuppern",
+      "von": 2,
+      "plus": 2.9,
+      "dauer": 0.7,
+      "aus": 0,
+      "db": 0
+    },
+    {
+      "datei": "eule",
+      "von": 4,
+      "plus": 1.8,
+      "dauer": 2.6,
+      "aus": 5.5,
+      "db": 12
+    },
+    {
+      "datei": "eule",
+      "von": 4,
+      "plus": 4.5,
+      "dauer": 2.0,
+      "aus": 5.5,
+      "db": 10
+    },
+    {
+      "datei": "papier",
+      "von": 5,
+      "plus": 0.3,
+      "dauer": 4,
+      "aus": 0,
+      "db": 6
+    },
+    {
+      "datei": "wind",
+      "von": 6,
+      "bis": 6,
+      "aus": 60,
+      "db": 6,
+      "schneller": 1.35,
+      "fade": 1.0
+    },
+    {
+      "datei": "fluegel",
+      "von": 6,
+      "bis": 6,
+      "aus": 0.9,
+      "db": 3,
+      "fade": 0.8
+    },
+    {
+      "datei": "fluegel",
+      "von": 7,
+      "plus": 0.6,
+      "dauer": 2,
+      "aus": 0.9,
+      "db": 0
+    },
+    {
+      "datei": "kamin",
+      "von": 8,
+      "bis": "ende",
+      "aus": 10,
+      "db": 6,
+      "fade": 1.5
+    },
+    {
+      "datei": "bleistift",
+      "von": 9,
+      "plus": 1.2,
+      "dauer": 3.3,
+      "aus": 0,
+      "db": -12
+    }
+  ],
+  "titelSprache": "Onnis Adventskalender. Erstes Türchen: Onni zieht ein.",
+  "titelStimmung": "freundlich, einladend"
 }

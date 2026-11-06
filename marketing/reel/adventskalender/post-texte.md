@@ -46,10 +46,10 @@ Pinterest-Themen: Wichteln, Nikolaus, Advent
 
 **YouTube-Titel:** Onnis Adventskalender – Türchen 2: Onni und das Kuscheltier | Wichtel-Geschichte für Kinder
 
-## Türchen 3 – 3. Dezember: Onni im Sockenkorb
+## Türchen 3 – 3. Dezember: Onni und der Keks
 
 ```
-🎄 Türchen 3: Onni im Sockenkorb
+🎄 Türchen 3: Onni und der Keks
 Onnis Adventskalender – jede Nacht um Mitternacht öffnet sich ein neues Türchen mit einer Wichtel-Geschichte zum Einschlafen.
 Alle Folgen: wichtellos.de/onni-adventskalender/#tag-3
 🔔 Folgen, damit ihr keine Folge verpasst!
@@ -62,7 +62,7 @@ Werbung (Partnerlinks) · Bilder & Stimme mit KI erstellt
 
 Pinterest-Themen: Wichteln, Nikolaus, Advent
 
-**YouTube-Titel:** Onnis Adventskalender – Türchen 3: Onni im Sockenkorb | Wichtel-Geschichte für Kinder
+**YouTube-Titel:** Onnis Adventskalender – Türchen 3: Onni und der Keks | Wichtel-Geschichte für Kinder
 
 ## Türchen 4 – 4. Dezember: Onnis Waschtag
 
@@ -82,10 +82,10 @@ Pinterest-Themen: Wichteln, Nikolaus, Advent
 
 **YouTube-Titel:** Onnis Adventskalender – Türchen 4: Onnis Waschtag | Wichtel-Geschichte für Kinder
 
-## Türchen 5 – 5. Dezember: Onni und der Keks
+## Türchen 5 – 5. Dezember: Onni im Sockenkorb
 
 ```
-🎄 Türchen 5: Onni und der Keks
+🎄 Türchen 5: Onni im Sockenkorb
 Onnis Adventskalender – jede Nacht um Mitternacht öffnet sich ein neues Türchen mit einer Wichtel-Geschichte zum Einschlafen.
 Alle Folgen: wichtellos.de/onni-adventskalender/#tag-5
 🔔 Folgen, damit ihr keine Folge verpasst!
@@ -98,7 +98,7 @@ Werbung (Partnerlinks) · Bilder & Stimme mit KI erstellt
 
 Pinterest-Themen: Wichteln, Nikolaus, Advent
 
-**YouTube-Titel:** Onnis Adventskalender – Türchen 5: Onni und der Keks | Wichtel-Geschichte für Kinder
+**YouTube-Titel:** Onnis Adventskalender – Türchen 5: Onni im Sockenkorb | Wichtel-Geschichte für Kinder
 
 ## Türchen 6 – 6. Dezember: [Titel Folge 6]
 
