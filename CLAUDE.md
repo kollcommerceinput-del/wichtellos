@@ -25,7 +25,7 @@ Antworten auf Deutsch.
 - `build.py`: `invite_page()` – `/wichteln-einladung-vorlage/`: Aushang „Wir wichteln!“ mit Teilnehmerliste (20 Zeilen) + QR zu
   wichtellos.de (`grafik/qr-wichtellos.svg`), druckt auf 1 Seite A4 (Body-Klasse `poster-page`). Teilen-Knöpfe „Kennst du noch eine
   Gruppe?“ in Ergebnis- und Aufdeck-Ansicht (`.share-wa`, Text ohne Namen/Links)
-- Hauptmenü (`HEADER` in `build.py`, Toni 02.11. Variante A): roter Knopf „🎁 Geschenkideen“ (/geschenkfinder/), Nach Budget (/unter-10/),
+- Hauptmenü (`HEADER` in `build.py`, Toni 02.11. Variante A): roter Knopf „🎁 Geschenkideen“ (/geschenkfinder/), „🎲 Geschenke-Generator“ (06.11., Toni), Nach Budget (/unter-10/),
   Wichtel-Zubehör, Für Kinder, Spiele – Seiten mit Amazon-Links nach oben. Unter 900 px eigene Zeile zum Wischen.
 - Footer (03.11., Toni): 4 Gruppen als `<details class="fgroup">` (Handy aufklappbar, ab 700 px per JS in `site.js` offen),
   Impressum/Datenschutz in der Copyright-Zeile. Suche: Lupe `.search-btn` im `HEADER`, Panel `#search-panel`, Index `/suche.json`
@@ -200,7 +200,7 @@ Antworten auf Deutsch.
   Ideen für alle Anlässe + die Wichtel-Ideen aus gifts.py, zusammen 230; Felder n/t/q/w/b/m/a), `generator_page()` → `/geschenke-generator/`
   (Anlass/für wen/Budget/mag → 3 Lose zum Freirubbeln, 🎲 je Los, Merkliste `wl-merkliste` im localStorage, Adresse `?anlass=&fuer=&budget=&mag=`),
   `rubbellos_page()` → `/rubbellos/` (Geschenk hinter Rubbelschicht, Link `#r=` Base64url, `?g=` füllt vor). JS: `assets/rubbel.js`
-  (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Menü unverändert.
+  (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Generator seit 06.11. im Hauptmenü. Eigene og-Bilder + Pins `pins3d/pin3d-geschenke-generator.png`, `pin3d-rubbellos.png`.
 - `marketing/reel/handy-auslosen/` (06.11., Toni): Reel „Wichteln per WhatsApp am Handy“ aus echten Bildschirmen (Website neu mit Anna/Ben…,
   WhatsApp aus Tonis Screenshots, private Kontakte entfernt: `wa-edit.js`), Wischen/Tippen/seitlicher App-Wechsel in `render.py`.
   Fassungen: `reel-handy-auslosen.mp4` (26 s, Texte), `reel-handy-stimme.mp4` (28 s, Stimme Gemini „Charon“), `reel-handy-tiktok-15s.mp4`
