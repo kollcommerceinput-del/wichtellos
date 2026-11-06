@@ -1769,7 +1769,7 @@ def generator_page():
     anl_links = ' · '.join(f'<a href="/geschenke-generator/?anlass={k}">{e} {esc(t)}</a>' for k, t, e in ANLAESSE)
     body = f'''<article>
 <h1>Geschenke-Generator: Geschenkidee in 3 Klicks – für jeden Anlass</h1>
-<img class="onni-bote" src="/fotos/onni/sticker-geschenk.webp" width="120" height="120" alt="Onni, der Wichtel von WichtelLos, mit einem Geschenk">
+{ai_photo('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife')}
 <p class="lead"><b>Onni bringt dir Geschenkideen!</b> Keine Idee für Geburtstag, Muttertag, Hochzeit oder Weihnachten? Wähle Anlass, Person und Budget – und zieh drei <b>Geschenk-Lose zum Freirubbeln</b>. Aus {n} handverlesenen Ideen, ohne Anmeldung, ohne KI und ohne dass etwas gespeichert wird.</p>
 <div class="card generator" data-generator>
 <script type="application/json">{data}</script>
@@ -1846,7 +1846,7 @@ def rubbellos_page():
 <section id="rl-machen">
 <h1>Rubbellos verschicken: Geschenk zum Freirubbeln per WhatsApp</h1>
 <p id="rl-kaputt" class="tip" hidden>Dieser Rubbellos-Link ist unvollständig – vielleicht wurde er beim Kopieren abgeschnitten. Frag nach dem ganzen Link oder mach unten selbst eins.</p>
-<img class="onni-bote" src="/fotos/onni/sticker-geschenk.webp" width="120" height="120" alt="Onni, der Wichtel von WichtelLos, überbringt dein Rubbellos">
+{ai_photo('wichtel3d-handy', 'Plüsch-Wichtel Onni winkt neben einem Smartphone, auf dem ein Geschenk-Symbol leuchtet')}
 <p class="lead"><b>Onni überbringt dein Geschenk – als Rubbellos.</b> Kinokarten, ein Ausflug, ein Abendessen oder „Ich koche heute“: Verpack dein Geschenk als <b>digitales Rubbellos</b>. Die beschenkte Person rubbelt am Handy frei, was sie bekommt. Kostenlos, ohne Anmeldung – nichts wird gespeichert.</p>
 <div class="card rl-form">
   <label>Anlass <select id="rl-anlass"></select></label>
