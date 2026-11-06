@@ -365,7 +365,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Datei-Upload bei Ko-fi: `input[type=file]` per JS sichtbar machen + aria-label, dann find → file_upload.
       06.11. abends: die 3 Artikel (Ausmalbilder, Sticker, Wichteltür-Vorlagen) komplett ausgefüllt (0 €, „Pay what you want“ aus, je 3 Vorschaubilder,
       Text wie Briefe, keine Käufer-Nachricht) – Ko-fi speichert nicht einmal als Entwurf ohne Rechte-Häkchen → Toni hat sie 06.11. veröffentlicht: Ausmalbilder https://ko-fi.com/s/5d787162da,
-      Sticker https://ko-fi.com/s/4c7dd3c76a, Wichteltür-Vorlagen https://ko-fi.com/s/f07157b789. Offen: Vorschau-Video (nur YouTube-/Vimeo-Link) – Toni entscheidet.
+      Sticker https://ko-fi.com/s/4c7dd3c76a, Wichteltür-Vorlagen https://ko-fi.com/s/f07157b789. Vorschau-Videos (Feld „Embed media“, nur YouTube-/Vimeo-Link) 06.11.:
+      Ausmalbilder + Sticker → YouTube-Short youtube.com/shorts/oX89TTgIkcI (reel-onni.mp4), Vorlagen + Briefe → youtube.com/shorts/y7p02iI3l3Y
+      (reel-briefe.mp4); beide Shorts öffentlich, „für Kinder“, KI „Ja“. Achtung: Ko-fi schaltet „Pay what you want“ bei 0 € gern wieder an →
+      nach jedem Speichern öffentliche Seite prüfen (muss „Free“ zeigen).
       Ko-fi: neues Produkt nur über „Add product“-Dialog (Direktadresse /shop/items/add gibt Fehlerseite); „Pay what you want“ springt bei 0 € an.
       Pin `marketing/pins-onni/pin-briefe.png` (`node marketing/render-pin-briefe.js`) 03.11. veröffentlicht: Pinnwand „Wichtelgeschenke
       für Kinder“, Link /wichteltuer/#briefe, Themen Wichteln/Weihnachtsbräuche/Advent („Kindergarten“ gab es diesmal nicht), Alt-Text, KI-Label. IONOS-Satz bleibt (Domain/DNS).
