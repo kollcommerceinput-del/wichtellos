@@ -16,5 +16,10 @@ const T = ['Wichteln per WhatsApp?<br>So geht’s 👇', 'Gruppe & Budget<br>ein
   .o{width:560px;height:840px;object-fit:cover;border-radius:40px;margin-top:150px;box-shadow:0 20px 60px rgba(0,0,0,.35)}h1{font:600 120px F,sans-serif;margin:60px 0 10px}p{font-size:52px;margin:0;opacity:.95;line-height:1.4}
   .k{font-size:28px;opacity:.75;margin-top:70px}</style><img class="o" src="${onni}"><h1>wichtellos.de</h1><p>Wichteln online auslosen<br>kostenlos · ohne Anmeldung</p><p class="k">Bilder: KI-generiert</p>`);
   await e.evaluate(() => document.fonts.ready); await e.screenshot({ path: path.join(__dirname, 'texte', 'ende.png') });
+  // TikTok-Fassung: zusätzlich Bitte um Like/Kommentar (Toni 06.11.)
+  await e.evaluate(() => { const k = document.querySelector('.k'); const d = document.createElement('div');
+    d.style.cssText = "display:inline-block;margin-top:44px;background:#fff;color:#c62828;border-radius:60px;padding:22px 54px;font:600 58px F,'Segoe UI Emoji',sans-serif";
+    d.textContent = '👍 Like oder 💬 Kommentar'; k.before(d); k.style.marginTop = '40px'; });
+  await e.screenshot({ path: path.join(__dirname, 'texte', 'ende-tiktok.png') });
   await b.close(); console.log('texte ok');
 })();

@@ -134,3 +134,14 @@ Wichteln per WhatsApp in 1 Minute ausgelost 🎁 Namen rein, auslosen – jeder 
 #wichteln #wichtelnperwhatsapp #secretsanta #wichtelgeschenk #bürowichteln #weihnachtsfeier #weihnachten #lifehack
 ```
 Beim Posten: „KI-generierte Inhalte“ einschalten (Stimme + Onni-Bild am Ende sind KI).
+
+## TikTok 06.11. abends: „Hey du – schon Wichteln vorbereitet?“ (reel-tiktok-hey-du.mp4, 21,8 s)
+
+```
+Hey du – schon Wichteln vorbereitet? 🎁 Namen rein, auslosen, jeder bekommt seinen geheimen Link per WhatsApp. Kein Zettelziehen, keine Anmeldung, kostenlos.
+👉 wichtellos.de (Link im Profil)
+Gib uns ein Like oder schreib uns: Wichtelt ihr dieses Jahr in der Familie oder im Büro? 👇
+
+#wichteln #wichtelnperwhatsapp #secretsanta #wichtelgeschenk #bürowichteln #weihnachtsfeier #weihnachten #lifehack
+```
+Beim Posten: „KI-generierte Inhalte“ einschalten (Stimme + Onni-Bilder sind KI). Cover: Standbild mit Onni + „Hey“.

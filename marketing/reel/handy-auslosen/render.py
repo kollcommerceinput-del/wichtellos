@@ -33,7 +33,9 @@ ED_TOP, ED_BOT = edge.crop((0, 0, 1080, 262)), edge.crop((0, 2020, 1080, 2340))
 LANG = {k: lade(D / f'lang/{k}.png') for k in ('a-formular', 'b-ergebnis', 'c-link', 'd-aufgedeckt')}
 WA = {k: lade(D / f'frames/{k}.png') for k in ('w1-kontakt', 'w2-schreiben', 'w3-gesendet')}
 TXT = [Image.open(D / f'texte/t{i}.png').convert('RGBA') for i in range(9)]
-ENDE = Image.open(D / 'texte/ende.png').convert('RGB')
+# TikTok (Toni 06.11.): am Ende erst „Gib uns ein Like …“ (s9), dann „Wichtellos.de – kostenlos …“ (s8)
+LIKE = SCHNELL and (D / 'stimme-schnell/s9.wav').exists()
+ENDE = Image.open(D / ('texte/ende-tiktok.png' if LIKE else 'texte/ende.png')).convert('RGB')
 
 
 def bildschirm(art, name=None, scroll=0.0):
@@ -86,7 +88,7 @@ SZ = [
 DUR = 26.0
 if STIMME:
     L = []
-    for n in range(9):
+    for n in range(10 if LIKE else 9):
         with wave.open(str(D / f'{SDIR}/s{n}.wav')) as w:
             L.append(w.getnframes() / w.getframerate())
     GAP = [0.15, 0.15, 0.15, 0.2, 0.15, 0.6, 0.15, 0.35, 0.0] if SCHNELL else [0.25, 0.25, 0.25, 0.35, 0.25, 1.3, 0.35, 0.6, 0.0]
@@ -109,6 +111,10 @@ if STIMME:
         (st[7], st[8], 8, 'edge', 'd-aufgedeckt', 0, 0, []),
     ]
     DUR = st[8] + L[8] + (0.5 if SCHNELL else 0.9)
+    if LIKE:
+        E0 = st[8] + 0.3
+        START = st[:8] + [E0 + L[9] + 0.25, E0]   # Index 8 = Schlusssatz, Index 9 = Like-Bitte
+        DUR = E0 + L[9] + 0.25 + L[8] + 0.5
 SEITLICH = {5, 8}   # Szenen, die von rechts hereingeschoben werden (App-Wechsel)
 
 
@@ -169,6 +175,41 @@ def frame(t):
     return c.convert('RGB')
 
 
+
+# ---- TikTok (Toni 06.11.): gesprochener Text Wort für Wort, dick; Einstieg „Hey du …“ über Onni mit Handy ----
+CAP, HOOK_END = [], 0.0
+if LIKE:
+    J = json.load(open(D / 'woerter.json', encoding='utf8'))
+    for n, sz in enumerate(J):
+        ws = sz['woerter']
+        for k, (w, t0) in enumerate(ws):
+            a0 = START[n] + t0
+            a1 = START[n] + (ws[k + 1][1] if k + 1 < len(ws) else sz['ende'] + 0.12)
+            CAP.append((a0, a1, n, Image.open(D / f'texte/w-{n}-{k}.png').convert('RGBA')))
+    HOOK_END = START[0] + J[0]['woerter'][5][1]   # bis „vorbereitet?“, ab „Per WhatsApp“ das Handy
+    _o = Image.open(D / '../wichtel3d/stills/onni-handy.jpg').convert('RGB')
+    _s = max(W / _o.width, H / _o.height); _o = _o.resize((round(_o.width * _s), round(_o.height * _s)), Image.LANCZOS)
+    ONNI_BG = _o.crop(((_o.width - W) // 2, (_o.height - H) // 2, (_o.width - W) // 2 + W, (_o.height - H) // 2 + H))
+
+frame_basis = frame
+
+
+def frame(t):
+    if not LIKE:
+        return frame_basis(t)
+    c = frame_basis(t)
+    if t < HOOK_END + 0.2:
+        c = ONNI_BG.copy() if t < HOOK_END else Image.blend(ONNI_BG, c, (t - HOOK_END) / 0.2)
+    c = c.convert('RGBA')
+    for a0, a1, n, img in CAP:
+        if a0 <= t < a1:
+            k = 1.0 + 0.12 * max(0.0, 1 - (t - a0) / 0.08)   # kurzes „Plopp“
+            im = img.resize((round(img.width * k), round(img.height * k))) if k > 1.001 else img
+            y = 1250 if t < HOOK_END else (300 if t >= SZ[-1][1] else 1430)
+            c.alpha_composite(im, ((W - im.width) // 2, y - im.height // 2))
+            break
+    return c.convert('RGB')
+
 if len(sys.argv) > 1:
     for s in sys.argv[1:]:
         frame(float(s)).save(D / f'standbild-{s}.png')
@@ -184,10 +225,12 @@ pr.stdin.close(); pr.wait()
 print('fertig:', out)
 if STIMME:
     ins, flt = [], []
-    for n in range(9):
+    NA = 10 if LIKE else 9
+    for n in range(NA):
         ins += ['-i', str(D / f'{SDIR}/s{n}.wav')]
-        flt.append(f'[{n + 1}:a]adelay={int(START[n] * 1000) if n < 8 else int((SZ[-1][1] + 0.3) * 1000)}|{int(START[n] * 1000) if n < 8 else int((SZ[-1][1] + 0.3) * 1000)}[a{n}]')
-    mix = ''.join(f'[a{n}]' for n in range(9)) + f'amix=inputs=9:normalize=0,apad,atrim=0:{DUR:.2f}[a]'
+        ms = int(START[n] * 1000) if (n < 8 or LIKE) else int((SZ[-1][1] + 0.3) * 1000)
+        flt.append(f'[{n + 1}:a]adelay={ms}|{ms}[a{n}]')
+    mix = ''.join(f'[a{n}]' for n in range(NA)) + f'amix=inputs={NA}:normalize=0,apad,atrim=0:{DUR:.2f}[a]'
     fin = D / ('reel-handy-tiktok-15s.mp4' if SCHNELL else 'reel-handy-stimme.mp4')
     subprocess.run([FFMPEG, '-y', '-loglevel', 'error', '-i', str(out), *ins, '-filter_complex', ';'.join(flt) + ';' + mix,
                     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', str(fin)], check=True)
