@@ -298,6 +298,11 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       03.11.: Etsy erneut gesucht – weder im Awin-Verzeichnis (auch mit Nordamerika/GB) noch im öffentlichen Verzeichnis. Etsy-Links
       derzeit nicht möglich; eigener Etsy-Shop vertagt auf 2027 (Toni-Entscheidung offen, Empfehlung PC).
       Awin-Social-Links: Blog-URL = instagram.com/wichtellos (kein X-Konto, keine Facebook-Seite im Business-Portfolio).
+- [ ] Externe Links/Erwähnungen (06.11., Toni: Gemini behauptet, wichtellos.de existiere nicht; ChatGPT findet uns über Bing).
+      AlternativeTo: Konto „WichtelLos“ (Google-Login kollcommerce.input@gmail.com) angelegt, aber **Eintrag nicht möglich – AlternativeTo
+      nimmt nur Apps, die Englisch unterstützen** (FAQ). Erst mit englischer Fassung (frühestens 2027) eintragen; Screenshots + Text liegen in
+      marketing/alternativeto/. Kostenlose Warteschlange dort sehr lang, Vorziehen kostet einmalig. Nächster Schritt: Mails an Redaktionen
+      (t3n Büro-Wichteln-Apps, Vodafone featured Digitales Wichteln, Karrierebibel Wichteln im Büro, appgefahren) – Toni schickt selbst.
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
 - [x] Ko-fi ko-fi.com/wichtellos (01.11.; Login Google kollcommerce.input@gmail.com, PayPal rechnung@kollcommerce.de, Standort bestätigt).
