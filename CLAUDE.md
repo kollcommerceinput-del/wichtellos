@@ -200,7 +200,8 @@ Antworten auf Deutsch.
   Ideen für alle Anlässe + die Wichtel-Ideen aus gifts.py, zusammen 230; Felder n/t/q/w/b/m/a), `generator_page()` → `/geschenke-generator/`
   (Anlass/für wen/Budget/mag → 3 Lose zum Freirubbeln, 🎲 je Los, Merkliste `wl-merkliste` im localStorage, Adresse `?anlass=&fuer=&budget=&mag=`),
   `rubbellos_page()` → `/rubbellos/` (Geschenk hinter Rubbelschicht, Link `#r=` Base64url, `?g=` füllt vor). JS: `assets/rubbel.js`
-  (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Generator seit 06.11. im Hauptmenü. Eigene og-Bilder + Pins `pins3d/pin3d-geschenke-generator.png`, `pin3d-rubbellos.png`.
+  (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Generator seit 06.11. im Hauptmenü. Eigene og-Bilder + Pins `pins3d/pin3d-geschenke-generator.png`, `pin3d-rubbellos.png` (06.11. veröffentlicht, Ideen & Reels,
+  Themen Generator: Geschenkideen für Weihnachten/Geburtstagsgeschenke/Wichteln; Rubbellos: Gutscheine/Geschenkideen für Weihnachten/Wichteln; Alt-Text, KI-Label).
 - `marketing/reel/handy-auslosen/` (06.11., Toni): Reel „Wichteln per WhatsApp am Handy“ aus echten Bildschirmen (Website neu mit Anna/Ben…,
   WhatsApp aus Tonis Screenshots, private Kontakte entfernt: `wa-edit.js`), Wischen/Tippen/seitlicher App-Wechsel in `render.py`.
   Fassungen: `reel-handy-auslosen.mp4` (26 s, Texte), `reel-handy-stimme.mp4` (28 s, Stimme Gemini „Charon“), `reel-handy-tiktok-15s.mp4`
@@ -362,6 +363,9 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Je Kategorie „wichtel“ (Toni angelegt) + Käufer-Nachricht (Toni wählt: kurz oder mit Druck-Tipp). Rechte-Häkchen setzt Toni.
       Entscheidung offen: „Zahl, was du willst“ ab 0 € (= Verkauf → Bedingungen/Widerruf; Entwurf im Chat 04.11., erst Prüfstelle) oder ohne.
       Datei-Upload bei Ko-fi: `input[type=file]` per JS sichtbar machen + aria-label, dann find → file_upload.
+      06.11. abends: die 3 Artikel (Ausmalbilder, Sticker, Wichteltür-Vorlagen) komplett ausgefüllt (0 €, „Pay what you want“ aus, je 3 Vorschaubilder,
+      Text wie Briefe, keine Käufer-Nachricht) – Ko-fi speichert nicht einmal als Entwurf ohne Rechte-Häkchen → Toni setzt Häkchen + „Save and publish“.
+      Ko-fi: neues Produkt nur über „Add product“-Dialog (Direktadresse /shop/items/add gibt Fehlerseite); „Pay what you want“ springt bei 0 € an.
       Pin `marketing/pins-onni/pin-briefe.png` (`node marketing/render-pin-briefe.js`) 03.11. veröffentlicht: Pinnwand „Wichtelgeschenke
       für Kinder“, Link /wichteltuer/#briefe, Themen Wichteln/Weihnachtsbräuche/Advent („Kindergarten“ gab es diesmal nicht), Alt-Text, KI-Label. IONOS-Satz bleibt (Domain/DNS).
 - [ ] Idee 04.11. (Vorschlag aus anderer Sitzung, Toni prüft morgen): „Onnis Adventskalender“ – 24 Hörgeschichten (3–4 Min., passend zu
