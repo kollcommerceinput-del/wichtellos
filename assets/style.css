@@ -251,6 +251,13 @@ body::after { content: ''; position: fixed; left: 0; right: 0; top: -240px; heig
 @media (max-width: 360px) { .gift-teaser img { width: 56px; } }
 footer .social { font-weight: 700; }
 footer .social a { display: inline-block; padding: 12px 8px; font-weight: 700; color: var(--primary); text-decoration: none; }
+a.soc, footer .social a.soc { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; }
+a.soc .ico, .share-row .ico { flex: none; }
+.share-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.share-row a, .share-row button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 14px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--soft); color: var(--text); font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+.share-row .sh-wa { background: #e7f6ec; border-color: #9fd6b0; }
+.follow-row a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 8px; font-weight: 700; color: var(--primary); text-decoration: none; }
 
 /* Tipp pro Person */
 .tip-btn { flex: none; min-height: 44px; padding: 0 10px; border: 1px dashed var(--border); border-radius: 10px; background: transparent; color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; }

@@ -192,6 +192,10 @@ Antworten auf Deutsch.
   Uploads geplant 0 Uhr, „für Kinder“). Unter dem Video „Für die Großen“ (`ONNI_GROSS`: 1.–5. Nikolaus, bis 19. Geschenkfinder, dann unter 10 €),
   unten `ONNI_SHOP` „Für die Großen: Du suchst noch Geschenke?“. Geschenk-Werbung nie im Video/Kindertext (UWG), nur für Eltern.
   Lesefassung aller 24 Geschichten kommt Ende November. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
+- Teilen + Symbole (06.11., Toni): `share_row(text, betreff)` in `build.py` (WhatsApp/E-Mail/„Link teilen“ = navigator.share bzw.
+  kopieren, Handler `.sh-copy` in `site.js`), auf `/onni-adventskalender/` allgemein (`AK_SHARE`) + je Türchen im Player (`.ak-share`, JS).
+  `ICONS` (eigene Inline-SVGs) + `SOCIAL`/`social_links()` → Fuß „Folge uns“ und „Folge Onni“. Adventskalender-Reihenfolge neu:
+  1 zieht ein, 2 Kuscheltier, 3 Keks, 4 Waschtag, 5 Sockenkorb, 6 Nikolaus (`ONNI_FOLGEN` + Website-Videos 3–5 tauschen, wenn neu gerendert).
 - `themen.py` `NIKOLAUS` + `/nikolaus-geschenke/` in `themen_pages()` (05.11.): 21 Ideen (Kinder, Erwachsene, Büro, Stiefel & Zubehör), Ziel der
   Posts zu Türchen 1–5 (Google Trends „nikolaus geschenke“ 1.–6.12.). Fuß „Kinder & Advent“, Sitemap jetzt 31 URLs.
 

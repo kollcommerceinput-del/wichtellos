@@ -3,6 +3,19 @@
   // Partner-ID setzt build.py beim Bauen ein (AMAZON_TAG dort) – hier leer lassen
   const AMAZON_TAG = '';
 
+  // „Link teilen“: Handy-Teilen-Menü (navigator.share), sonst in die Zwischenablage kopieren
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.sh-copy');
+    if (!b) return;
+    const text = b.dataset.text;
+    const label = b.querySelector('span');
+    if (navigator.share) { navigator.share({ text }).catch(() => {}); return; }
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => {
+      label.textContent = '✓ Kopiert';
+      setTimeout(() => { label.textContent = 'Link teilen'; }, 2000);
+    }).catch(() => { label.textContent = text.split(' ').pop(); });
+  });
+
   window.amazonUrl = (query) => {
     const url = new URL('https://www.amazon.de/s');
     url.searchParams.set('k', query);
@@ -149,6 +162,16 @@
       vid.src = b.dataset.src;
       const yt = b.dataset.yt ? `<a href="${b.dataset.yt}" rel="noopener" target="_blank">▶ Auf YouTube ansehen</a> · ` : '';
       player.querySelector('.ak-links').innerHTML = `${yt}<span class="ak-gross">Für die Großen: <a href="${b.dataset.gross}">${b.dataset.grossText} →</a></span>`;
+      // Teilen-Knöpfe für genau dieses Türchen (Vorlage = allgemeine Reihe unter dem Kalender, gleiche Symbole)
+      const vorlage = document.querySelector('.share-row:not(.ak-share)');
+      const box = player.querySelector('.ak-share');
+      if (vorlage && box) {
+        const text = `Onnis Adventskalender, Türchen ${b.dataset.tag}: ${b.dataset.titel} 🎄 ${location.origin}/onni-adventskalender/#tag-${b.dataset.tag}`;
+        box.innerHTML = vorlage.innerHTML;
+        box.querySelector('.sh-wa').href = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        box.querySelector('.sh-mail').href = `mailto:?subject=${encodeURIComponent(`Onni, Türchen ${b.dataset.tag} 🎄`)}&body=${encodeURIComponent(text)}`;
+        box.querySelector('.sh-copy').dataset.text = text;
+      }
       player.hidden = false;
       msg.textContent = '';
       history.replaceState(null, '', `#tag-${b.dataset.tag}`);

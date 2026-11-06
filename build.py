@@ -113,12 +113,33 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Mit Sternchen markierte Links sind Werbelinks (Affiliate-Links). Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
-  <p class="social">Folge uns: <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">📸 Instagram</a>
-    <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">📌 Pinterest</a>
-    <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">🎵 TikTok</a>
-    <a href="https://www.youtube.com/@WichtelLos" rel="noopener" target="_blank">▶️ YouTube</a></p>
+  <p class="social">Folge uns: <!--SOCIAL--></p>
   <p class="legal">© 2026 WichtelLos · Powered by KOLL Commerce · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
 </footer>'''
+
+# Eigene schlichte Symbole (inline-SVG, currentColor, nichts von fremden Servern) – Toni 06.11.
+_SV = '<svg class="ico" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+ICONS = {
+    'instagram': _SV + '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>',
+    'pinterest': _SV + '<circle cx="12" cy="12" r="9.5"/><path d="M11 20.5l1.6-7"/><path d="M9.6 13.3c-1-1.6-.4-4.4 2.2-5.1 2.8-.8 5 1 4.4 3.8-.5 2.3-2.6 3.3-4.2 2.4"/></svg>',
+    'tiktok': _SV + '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.4 4.6 5 4.8"/></svg>',
+    'youtube': _SV + '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3l5 2.7-5 2.7z" fill="currentColor"/></svg>',
+    'whatsapp': _SV + '<path d="M4 20l1.3-3.8A8.5 8.5 0 1 1 8 19z"/></svg>',
+    'mail': _SV + '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>',
+    'link': _SV + '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
+}
+SOCIAL = [('instagram', 'Instagram', 'https://www.instagram.com/wichtellos/'),
+          ('pinterest', 'Pinterest', 'https://www.pinterest.com/wichtellos/'),
+          ('tiktok', 'TikTok', 'https://www.tiktok.com/@wichtellos'),
+          ('youtube', 'YouTube', 'https://www.youtube.com/@WichtelLos')]
+
+
+def social_links(nur=None):
+    return '\n    '.join(f'<a class="soc" href="{u}" rel="noopener" target="_blank">{ICONS[k]}<span>{n}</span></a>'
+                           for k, n, u in SOCIAL if not nur or k in nur)
+
+
+FOOTER = FOOTER.replace('<!--SOCIAL-->', social_links())
 
 # Unterstützen-Zeile unter Gratis-Downloads (einmal pro Seite, dezent – Toni 03.11.)
 KOFI_LINE = ('<p class="kofi-line">Gefällt dir das? <a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">'
@@ -1373,6 +1394,19 @@ ONNI_SHOP = [
 ]
 
 
+AK_URL = 'https://wichtellos.de/onni-adventskalender/'
+AK_SHARE = f'Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder, jeden Tag ein neues Türchen 🎄 {AK_URL}'
+
+
+def share_row(text, betreff):
+    """WhatsApp / E-Mail / Teilen-Knöpfe als reine Links (Toni 06.11.). 'Link teilen' nutzt navigator.share bzw. kopiert (site.js)."""
+    wa = 'https://wa.me/?text=' + quote(text, safe='')
+    mail = 'mailto:?subject=' + quote(betreff, safe='') + '&body=' + quote(text, safe='')
+    return (f'<div class="share-row"><a class="sh-wa" href="{wa}" target="_blank" rel="noopener">{ICONS["whatsapp"]}Per WhatsApp schicken</a>'
+            f'<a class="sh-mail" href="{mail}">{ICONS["mail"]}Per E-Mail schicken</a>'
+            f'<button type="button" class="sh-copy" data-text="{esc(text)}">{ICONS["link"]}<span>Link teilen</span></button></div>')
+
+
 def onni_kalender_page():
     doors = []
     for tag in range(1, 25):
@@ -1402,8 +1436,13 @@ def onni_kalender_page():
   <h3 class="ak-titel"></h3>
   <video controls playsinline preload="none" width="540" height="960"></video>
   <p class="ak-links"></p>
+  <div class="share-row ak-share"></div>
 </section>
-<p>Folge uns auf <a href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">Instagram</a>, <a href="https://www.pinterest.com/wichtellos/" rel="noopener" target="_blank">Pinterest</a>, <a href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">TikTok</a> oder abonniere uns auf <a href="https://www.youtube.com/@WichtelLos" rel="noopener" target="_blank">YouTube</a>, dann verpasst du keine Folge.</p>
+<h3>Onnis Adventskalender weiterschicken</h3>
+<p>Kennst du Kinder, die sich über Onni freuen? Schick den Kalender direkt weiter:</p>
+{share_row(AK_SHARE, 'Onnis Adventskalender 🎄')}
+<p class="follow-row">Folge Onni, dann verpasst du keine Folge:<br>
+    {social_links()}</p>
 
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
