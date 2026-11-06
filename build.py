@@ -108,7 +108,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -1755,6 +1755,142 @@ def gruss_page():
          crumb='Wichtelgruß', playful=True)
 
 
+def gen_chips(label, key, options):
+    chips = ''.join(f'<button type="button" class="chip" data-v="{v}" aria-pressed="false">{esc(t)}</button>' for v, t in options)
+    return (f'<div class="f-group g-chips" data-k="{key}" role="group" aria-label="{esc(label)}"><span class="f-label">{esc(label)} '
+            f'<span class="hint">(nichts gewählt = egal)</span></span>{chips}</div>')
+
+
+def generator_page():
+    """Geschenke-Generator fürs ganze Jahr (Toni 06.11.): 3 Fragen → 3 Geschenk-Lose zum Freirubbeln."""
+    from geschenke import ALLE_IDEEN, ANLAESSE, BUDGETS as G_BUDGETS, MAG, WER
+    data = json.dumps({'ideen': ALLE_IDEEN, 'anlaesse': ANLAESSE, 'mag': MAG}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    n = len(ALLE_IDEEN)
+    anl_links = ' · '.join(f'<a href="/geschenke-generator/?anlass={k}">{e} {esc(t)}</a>' for k, t, e in ANLAESSE)
+    body = f'''<article>
+<h1>Geschenke-Generator: Geschenkidee in 3 Klicks – für jeden Anlass</h1>
+<img class="onni-bote" src="/fotos/onni/sticker-geschenk.webp" width="120" height="120" alt="Onni, der Wichtel von WichtelLos, mit einem Geschenk">
+<p class="lead"><b>Onni bringt dir Geschenkideen!</b> Keine Idee für Geburtstag, Muttertag, Hochzeit oder Weihnachten? Wähle Anlass, Person und Budget – und zieh drei <b>Geschenk-Lose zum Freirubbeln</b>. Aus {n} handverlesenen Ideen, ohne Anmeldung, ohne KI und ohne dass etwas gespeichert wird.</p>
+<div class="card generator" data-generator>
+<script type="application/json">{data}</script>
+{gen_chips('Welcher Anlass?', 'anlass', [(k, f'{e} {t}') for k, t, e in ANLAESSE])}
+{gen_chips('Für wen?', 'fuer', WER)}
+{gen_chips('Budget', 'budget', [(str(b), f'bis {b} €') for b in G_BUDGETS])}
+{gen_chips('Was mag die Person?', 'mag', MAG)}
+<p class="g-start"><button type="button" id="g-los" class="btn-primary">🎟️ 3 Geschenk-Lose ziehen</button>
+  <label class="g-ohne"><input type="checkbox" id="g-ohne"> ohne Rubbeln, gleich aufdecken</label></p>
+<section id="g-ergebnis" hidden>
+  <h2 id="g-titel">Deine Geschenk-Lose</h2>
+  <p id="g-hinweis" class="hint" hidden></p>
+  <div id="g-lose" class="lose"></div>
+  <p class="g-unter"><button type="button" id="g-alle" class="link-btn">Alle aufdecken</button> · <button type="button" class="link-btn" onclick="document.getElementById('g-los').click()">🎲 3 neue Lose ziehen</button></p>
+  <p class="f-label">Ideen weiterschicken – z. B. an Geschwister, die mitschenken:</p>
+  <div id="g-teilen">{share_row('', 'Geschenkideen')}</div>
+</section>
+<section id="g-merk" class="g-merk-box" hidden>
+  <h2>♥ Deine Merkliste</h2>
+  <p class="hint">Bleibt nur auf diesem Gerät gespeichert.</p>
+  <ul id="g-merk-liste"></ul>
+  <p><a id="g-merk-wa" class="btn-secondary" target="_blank" rel="noopener">{ICONS["whatsapp"]} Merkliste per WhatsApp schicken</a></p>
+</section>
+</div>
+<p class="tip">⏰ <b>Zu spät für die Lieferung?</b> Verschenk die Idee als <a href="/rubbellos/">Rubbellos per WhatsApp</a> – die beschenkte Person rubbelt frei, was sie bekommt, und das Geschenk kommt hinterher.</p>
+
+<h2>So funktioniert der Geschenke-Generator</h2>
+<ol>
+  <li><b>Anlass, Person, Budget wählen</b> – alles freiwillig. Je weniger du wählst, desto bunter die Lose.</li>
+  <li><b>3 Lose ziehen und freirubbeln</b> – mit dem Finger oder der Maus. Wer keine Lust aufs Rubbeln hat, setzt den Haken „ohne Rubbeln“.</li>
+  <li><b>Nicht das Richtige?</b> 🎲 tauscht nur dieses eine Los. Gute Ideen kommen mit ♡ auf die Merkliste.</li>
+  <li><b>Teilen:</b> Schick die Ideen per WhatsApp an alle, die mitschenken – oder verschenk eine Idee direkt als Rubbellos.</li>
+</ol>
+<h2>Was ist anders als bei anderen Geschenke-Generatoren?</h2>
+<ul>
+  <li><b>Kein Eintippen, keine KI:</b> Du musst niemanden beschreiben. Die Ideen sind von Hand ausgesucht – Dinge, die man gern bekommt und nicht gleich weiterverschenkt.</li>
+  <li><b>Nichts wird gespeichert:</b> Die Auswahl passiert in deinem Browser. Die Merkliste bleibt auf deinem Gerät.</li>
+  <li><b>Für jeden Anlass:</b> {anl_links}</li>
+</ul>
+<p>Zum Wichteln gibt es außerdem den <a href="/geschenkfinder/">Wichtel-Geschenkfinder</a> mit Filtern nach Alter und Budget und die Seiten <a href="/geschenke-fuer-maenner/">Geschenke für Männer</a> und <a href="/geschenke-fuer-frauen/">Geschenke für Frauen</a>.</p>
+<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+</article>'''
+    page('/geschenke-generator/', 'Geschenke-Generator: Geschenkidee in 3 Klicks für jeden Anlass',
+         f'Geschenkideen per Zufall: Anlass, Person und Budget wählen und 3 Geschenk-Lose freirubbeln – {n} Ideen für Geburtstag, Weihnachten, Muttertag, Hochzeit & mehr. Kostenlos, ohne Anmeldung.',
+         body, extra='\n<script src="/assets/rubbel.js" defer></script>\n<script src="/assets/generator.js" defer></script>',
+         crumb='Geschenke-Generator')
+
+
+RUBBEL_ANLAESSE = [('Geburtstag', 'Alles Gute zum Geburtstag!', '🎂'), ('Weihnachten', 'Frohe Weihnachten!', '🎄'),
+                   ('Valentinstag', 'Für dich, mein Schatz', '❤️'), ('Muttertag', 'Für die beste Mama', '💐'),
+                   ('Vatertag', 'Für den besten Papa', '🍺'), ('Ostern', 'Frohe Ostern!', '🐣'),
+                   ('Hochzeit', 'Alles Liebe zur Hochzeit!', '💍'), ('Jahrestag', 'Auf uns!', '🥂'),
+                   ('Danke', 'Danke für alles!', '🙏'), ('Wichteln', 'Dein Wichtel hat etwas für dich!', '🎁'),
+                   ('Einfach so', 'Eine kleine Überraschung', '🎟️')]
+
+
+def rubbellos_page():
+    """Rubbellos verschicken (Toni 06.11.): Geschenk geheim hinter Rubbelschicht, Link #r=… (nur im #, nichts gespeichert)."""
+    data = json.dumps(RUBBEL_ANLAESSE, ensure_ascii=False).replace('</', '<\\/')
+    farben = ''.join(f'<button type="button" class="chip rl-f rl-{c}" data-farbe="{i}" aria-pressed="{str(i == 0).lower()}">{t}</button>'
+                     for i, (c, t) in enumerate([('rot', 'Rot'), ('tanne', 'Tanne'), ('nacht', 'Nachtblau'), ('rosa', 'Rosa')]))
+    body = f'''<article>
+<div data-rubbellos>
+<script type="application/json">{data}</script>
+<section id="rl-empfang" hidden>
+  <h1 class="sr-only">Ein Rubbellos für dich</h1>
+  <p class="tip">🎟️ <b>Jemand hat dir ein Rubbellos geschickt!</b> Rubbel das goldene Feld mit dem Finger frei.</p>
+  <div id="rl-gross"></div>
+  <div id="rl-danach" hidden>
+    <p><a class="btn-primary" href="/rubbellos/">🎟️ Selbst ein Rubbellos verschicken</a></p>
+    <p class="hint">Noch auf der Suche nach einem Geschenk? Der <a href="/geschenke-generator/">Geschenke-Generator</a> zieht dir 3 Ideen.</p>
+  </div>
+</section>
+<section id="rl-machen">
+<h1>Rubbellos verschicken: Geschenk zum Freirubbeln per WhatsApp</h1>
+<p id="rl-kaputt" class="tip" hidden>Dieser Rubbellos-Link ist unvollständig – vielleicht wurde er beim Kopieren abgeschnitten. Frag nach dem ganzen Link oder mach unten selbst eins.</p>
+<img class="onni-bote" src="/fotos/onni/sticker-geschenk.webp" width="120" height="120" alt="Onni, der Wichtel von WichtelLos, überbringt dein Rubbellos">
+<p class="lead"><b>Onni überbringt dein Geschenk – als Rubbellos.</b> Kinokarten, ein Ausflug, ein Abendessen oder „Ich koche heute“: Verpack dein Geschenk als <b>digitales Rubbellos</b>. Die beschenkte Person rubbelt am Handy frei, was sie bekommt. Kostenlos, ohne Anmeldung – nichts wird gespeichert.</p>
+<div class="card rl-form">
+  <label>Anlass <select id="rl-anlass"></select></label>
+  <label>Überschrift <input id="rl-titel-in" maxlength="50"></label>
+  <label>Das Geschenk – steht unter der Rubbelschicht <input id="rl-geschenk" maxlength="60" placeholder="z. B. 🎬 Kino mit mir am Samstag!" required></label>
+  <p id="rl-fehler" class="hint" hidden>Bitte schreib, was unter der Rubbelschicht stehen soll.</p>
+  <label>Nachricht (optional) <textarea id="rl-text" maxlength="200" rows="2" placeholder="z. B. Ich freu mich schon auf unseren Abend."></textarea></label>
+  <label>Von (optional) <input id="rl-von" maxlength="30" placeholder="z. B. Deine Lena"></label>
+  <div class="f-group" role="group" aria-label="Farbe"><span class="f-label">Farbe</span>{farben}</div>
+  <p class="f-label">Vorschau (aufgedeckt):</p>
+  <div id="rl-vorschau"></div>
+  <p><button type="button" id="rl-erstellen" class="btn-primary">🎟️ Rubbellos-Link erstellen</button></p>
+  <div id="rl-ergebnis" hidden>
+    <p class="f-label">Fertig! So verschickst du dein Rubbellos – der Text verrät das Geschenk nicht:</p>
+    <div class="share-row"><a id="rl-wa" class="sh-wa" target="_blank" rel="noopener">{ICONS["whatsapp"]}Per WhatsApp schicken</a><a id="rl-mail" class="sh-mail">{ICONS["mail"]}Per E-Mail schicken</a><button type="button" id="rl-share" class="sh-copy" data-text="">{ICONS["link"]}<span>Link teilen</span></button></div>
+    <label>Link <input id="rl-link" readonly onclick="this.select()"></label>
+    <p class="hint"><a id="rl-test" target="_blank" rel="noopener">Selbst ausprobieren →</a> (öffnet die Ansicht der beschenkten Person)</p>
+  </div>
+</div>
+<h2>So funktioniert das Rubbellos</h2>
+<ol>
+  <li><b>Anlass wählen und Geschenk eintragen</b> – das steht später unter der goldenen Rubbelschicht.</li>
+  <li><b>Link erstellen</b> und per WhatsApp, E-Mail oder einer anderen App verschicken.</li>
+  <li><b>Freirubbeln:</b> Die beschenkte Person öffnet den Link und rubbelt mit dem Finger frei – mit Konfetti.</li>
+</ol>
+<h2>Ideen für Rubbellose</h2>
+<ul>
+  <li><b>Erlebnisse:</b> Kino, Konzert, Zoo, Freizeitpark, Wellness-Tag</li>
+  <li><b>Gutscheine von dir:</b> „Ich koche dein Lieblingsessen“, „Einmal Auto putzen“, „Ein Tag ohne Abwasch“</li>
+  <li><b>Reisen und Ausflüge:</b> „Wir fahren ans Meer!“ – perfekt zum Verkünden</li>
+  <li><b>Last Minute:</b> Das Geschenk kommt erst später? Das Rubbellos ist heute schon da.</li>
+</ul>
+<p>Noch keine Idee? Der <a href="/geschenke-generator/">Geschenke-Generator</a> zieht dir 3 Geschenk-Lose – für jeden Anlass.</p>
+<h2>Was passiert mit meinen Daten?</h2>
+<p>Nichts. Text und Geschenk stecken nur im Link nach dem #-Zeichen. Dieser Teil wird nie an unseren Server geschickt – das Rubbellos entsteht im Browser. Wer den Link hat, kann das Rubbellos öffnen, also verschick ihn nur an die richtige Person.</p>
+</section>
+</div>
+</article>'''
+    page('/rubbellos/', 'Rubbellos verschicken: Geschenk zum Freirubbeln per WhatsApp',
+         'Digitales Rubbellos erstellen: Geschenk, Gutschein oder Überraschung eintragen und per WhatsApp verschicken – die beschenkte Person rubbelt am Handy frei. Kostenlos, ohne Anmeldung.',
+         body, extra='\n<script src="/assets/rubbel.js" defer></script>\n<script src="/assets/rubbellos.js" defer></script>',
+         crumb='Rubbellos')
+
+
 def wunsch_page():
     body = f'''<article>
 <h1>Wunschzettel fürs Wichteln online erstellen</h1>
@@ -1966,11 +2102,11 @@ def legal_pages():
 
 <h2>4. Die Wichtel-Auslosung</h2>
 <p>Namen, Tipps zu einzelnen Personen, Gruppenname, Budget, Datum und Nachricht, die du in das Formular einträgst, werden ausschließlich in deinem Browser verarbeitet. Die Zuteilung wird codiert in den persönlichen Links gespeichert, und zwar im Teil nach dem #-Zeichen. Diesen Teil überträgt der Browser beim Aufruf nicht an unseren Server – wir erhalten von den Namen und Zuteilungen keine Kenntnis.</p>
-<p>Genauso funktionieren der Wichtelgruß (/wichtelgruss/) und der Wunschzettel (/wunschzettel/): Texte, Namen und Wünsche stecken nur im Link nach dem #-Zeichen, die Grußkarte als Bild entsteht in deinem Browser. Auch die Kalenderdatei zur Bescherung erzeugt dein Browser selbst. Nichts davon wird an uns übertragen oder bei uns gespeichert.</p>
+<p>Genauso funktionieren der Wichtelgruß (/wichtelgruss/), der Wunschzettel (/wunschzettel/) und das Rubbellos (/rubbellos/): Texte, Namen und Wünsche stecken nur im Link nach dem #-Zeichen, die Grußkarte als Bild entsteht in deinem Browser. Auch die Kalenderdatei zur Bescherung erzeugt dein Browser selbst. Nichts davon wird an uns übertragen oder bei uns gespeichert.</p>
 <p>Wenn du Links per WhatsApp oder E-Mail verschickst, gelten dafür die Datenschutzbestimmungen des jeweiligen Dienstes.</p>
 
 <h2>5. Speicherung im Browser (Local Storage)</h2>
-<p>Damit dein Entwurf und die zuletzt erzeugten Links nicht verloren gehen, werden sie im Local Storage deines Browsers gespeichert. Diese Daten bleiben auf deinem Gerät und werden nicht an uns übertragen. Du kannst sie jederzeit über die Einstellungen deines Browsers löschen. Die Speicherung ist für die von dir gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG).</p>
+<p>Damit dein Entwurf und die zuletzt erzeugten Links nicht verloren gehen, werden sie im Local Storage deines Browsers gespeichert. Dasselbe gilt für die Merkliste im Geschenke-Generator (/geschenke-generator/). Diese Daten bleiben auf deinem Gerät und werden nicht an uns übertragen. Du kannst sie jederzeit über die Einstellungen deines Browsers löschen. Die Speicherung ist für die von dir gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG).</p>
 
 <h2>6. Werbelinks zu Amazon und Link zu Ko-fi</h2>
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
@@ -2085,7 +2221,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2139,7 +2275,7 @@ def main():
         for p in OUT.iterdir():
             shutil.rmtree(p) if p.is_dir() else p.unlink()
     (OUT / 'assets').mkdir(parents=True)
-    for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js', 'wunsch.js'):
+    for f in ('style.css', 'finder.js', 'qrcode.js', 'gruss.js', 'wunsch.js', 'rubbel.js', 'generator.js', 'rubbellos.js'):
         shutil.copy(SRC / 'assets' / f, OUT / 'assets' / f)
     site_js = (SRC / 'assets' / 'site.js').read_text(encoding='utf-8')
     site_js = site_js.replace("const AMAZON_TAG = '';", f"const AMAZON_TAG = '{AMAZON_TAG}';")
@@ -2167,6 +2303,8 @@ def main():
     poems_page()
     gruss_page()
     wunsch_page()
+    generator_page()
+    rubbellos_page()
     history_page()
     door_page()
     onni_kalender_page()

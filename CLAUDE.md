@@ -196,6 +196,11 @@ Antworten auf Deutsch.
   kopieren, Handler `.sh-copy` in `site.js`), auf `/onni-adventskalender/` allgemein (`AK_SHARE`) + je Türchen im Player (`.ak-share`, JS).
   `ICONS` (eigene Inline-SVGs) + `SOCIAL`/`social_links()` → Fuß „Folge uns“ und „Folge Onni“. Adventskalender-Reihenfolge neu:
   1 zieht ein, 2 Kuscheltier, 3 Keks, 4 Waschtag, 5 Sockenkorb, 6 Nikolaus (`ONNI_FOLGEN` + Website-Videos 3–5 tauschen, wenn neu gerendert).
+- Geschenke-Generator + Rubbellos (06.11., Toni: „ganzes Jahr, besser als die anderen“): `geschenke.py` (`ALLE_IDEEN` = 117 neue
+  Ideen für alle Anlässe + die Wichtel-Ideen aus gifts.py, zusammen 230; Felder n/t/q/w/b/m/a), `generator_page()` → `/geschenke-generator/`
+  (Anlass/für wen/Budget/mag → 3 Lose zum Freirubbeln, 🎲 je Los, Merkliste `wl-merkliste` im localStorage, Adresse `?anlass=&fuer=&budget=&mag=`),
+  `rubbellos_page()` → `/rubbellos/` (Geschenk hinter Rubbelschicht, Link `#r=` Base64url, `?g=` füllt vor). JS: `assets/rubbel.js`
+  (gemeinsame Rubbelschicht + Konfetti), `generator.js`, `rubbellos.js`. Fuß „Geschenkideen“, Sitemap, Datenschutz ergänzt. Menü unverändert.
 - `themen.py` `NIKOLAUS` + `/nikolaus-geschenke/` in `themen_pages()` (05.11.): 21 Ideen (Kinder, Erwachsene, Büro, Stiefel & Zubehör), Ziel der
   Posts zu Türchen 1–5 (Google Trends „nikolaus geschenke“ 1.–6.12.). Fuß „Kinder & Advent“, Sitemap jetzt 31 URLs.
 
