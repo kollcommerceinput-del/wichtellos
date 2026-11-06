@@ -61,16 +61,16 @@
   function karte(i, slot) {
     const gemerkt = merkliste().includes(i.n);
     const div = document.createElement('div');
-    div.className = 'los';
+    div.className = 'glos';
     div.innerHTML = `<div class="los-inhalt">
       <p class="los-kat">${esc(i.m.map((m) => MAGN[m]).join(' · '))} · bis ${i.b} €</p>
       <h3>${esc(i.n)}</h3>
       <p>${esc(i.t)}</p>
       <p class="los-links"><a class="btn-primary" href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">Ansehen*</a></p>
       <p class="los-knoepfe">
-        <button type="button" class="link-btn g-merk" aria-pressed="${gemerkt}">${gemerkt ? '♥ Gemerkt' : '♡ Merken'}</button>
-        <button type="button" class="link-btn g-neu">🎲 Neues Los</button>
-        <a class="link-btn" href="/rubbellos/?g=${encodeURIComponent(i.n)}">🎟️ Als Rubbellos verschenken</a>
+        <button type="button" class="g-btn g-merk" aria-pressed="${gemerkt}">${gemerkt ? '♥ Gemerkt' : '♡ Merken'}</button>
+        <button type="button" class="g-btn g-neu">🎲 Neues Los</button>
+        <a class="g-btn g-rl" href="/rubbellos/?g=${encodeURIComponent(i.n)}">🎟️ Als Rubbellos verschenken</a>
       </p></div>`;
     div.querySelector('.g-merk').addEventListener('click', (e) => {
       let l = merkliste();
@@ -140,7 +140,7 @@
     const byName = Object.fromEntries(IDEEN.map((i) => [i.n, i]));
     $('#g-merk-liste').innerHTML = l.filter((n) => byName[n]).map((n) => {
       const i = byName[n];
-      return `<li><a href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">${esc(i.n)}*</a> <span class="hint">bis ${i.b} €</span> <button type="button" class="link-btn" data-weg="${esc(n)}" aria-label="${esc(n)} von der Merkliste nehmen">✕</button></li>`;
+      return `<li><a href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">${esc(i.n)}*</a> <span class="hint">bis ${i.b} €</span> <button type="button" class="g-btn g-weg" data-weg="${esc(n)}" aria-label="${esc(n)} von der Merkliste nehmen">✕ entfernen</button></li>`;
     }).join('');
     const text = `🎁 Meine Geschenk-Merkliste:\n${l.map((n) => '• ' + n).join('\n')}\n\n${location.origin}/geschenke-generator/`;
     $('#g-merk-wa').href = `https://wa.me/?text=${encodeURIComponent(text)}`;
@@ -151,7 +151,7 @@
     speichere(merkliste().filter((x) => x !== b.dataset.weg));
     zeigeMerkliste();
     box.querySelectorAll('.g-merk').forEach((m) => {
-      if (m.closest('.los').querySelector('h3').textContent === b.dataset.weg) { m.textContent = '♡ Merken'; m.setAttribute('aria-pressed', 'false'); }
+      if (m.closest('.glos').querySelector('h3').textContent === b.dataset.weg) { m.textContent = '♡ Merken'; m.setAttribute('aria-pressed', 'false'); }
     });
   });
 

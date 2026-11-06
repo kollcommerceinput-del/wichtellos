@@ -627,21 +627,31 @@ h2[id] { scroll-margin-top: 16px; }
 
 /* Geschenke-Generator + Rubbellos (06.11.) */
 .generator .g-start { margin: 18px 0 4px; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
-.g-ohne { font-size: 15px; display: inline-flex; gap: 6px; align-items: center; margin: 0; }
-.lose { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 10px 0; }
-.los { background: var(--card); border: 2px dashed #d4a531; border-radius: var(--radius); }
-.los-inhalt { padding: 16px; min-height: 230px; display: flex; flex-direction: column; }
-.los-inhalt h3 { margin: 4px 0 6px; }
-.los-inhalt p { margin: 0 0 8px; }
+label.g-ohne { display: inline-flex; gap: 8px; align-items: center; margin: 0; font-size: 15px; font-weight: 600; width: auto; cursor: pointer; }
+label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-color: var(--primary); }
+.glose { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 10px 0; }
+@media (min-width: 900px) { .glose { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.generator, .rl-form { clear: both; }
+.glos { background: #fff; border: 2px dashed #d4a531; border-radius: var(--radius); text-align: left; }
+.los-inhalt { padding: 16px; min-height: 230px; display: flex; flex-direction: column; border-radius: calc(var(--radius) - 2px); }
+.los-inhalt h3 { margin: 4px 0 6px; font-size: 20px; }
+.los-inhalt p { margin: 0 0 10px; }
 .los-kat { font-size: 13px; color: var(--muted); }
 .los-links { margin-top: auto !important; }
-.los-knoepfe { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 15px; }
-.los-knoepfe .link-btn, .los-knoepfe a { min-height: 32px; display: inline-flex; align-items: center; }
+.los-links .btn-primary { display: block; text-align: center; text-decoration: none; }
+.los-knoepfe { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 !important; }
+.g-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--soft); color: var(--text); font: inherit; font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer; }
+.g-btn[aria-pressed="true"] { background: #fde8e8; border-color: var(--primary); color: var(--primary); }
+.g-btn.g-rl { flex-basis: 100%; }
+@media (min-width: 900px) { .g-btn { flex: 1 1 100%; font-size: 14px; padding: 6px 10px; min-height: 40px; } .los-inhalt h3 { font-size: 18px; } }
+.g-weg { min-height: 36px; padding: 2px 10px; margin-left: 6px; font-size: 14px; }
 .rubbel-wrap { position: relative; }
 .rubbel-schicht { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: inherit; cursor: grab; touch-action: none; transition: opacity .45s; z-index: 2; }
 .rubbel-schicht:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
 .rubbel-schicht.weg { opacity: 0; pointer-events: none; }
-.g-unter { font-size: 15px; }
+.g-unter { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 18px; }
+.g-unter .btn-secondary { min-height: 44px; }
 .g-merk-box { margin-top: 18px; border-top: 1px solid var(--border); padding-top: 8px; }
 .g-merk-box ul { padding-left: 18px; }
 .rl-form label { display: block; margin: 0 0 12px; font-weight: 600; }
@@ -651,8 +661,8 @@ h2[id] { scroll-margin-top: 16px; }
 .rl-tanne { background: linear-gradient(160deg, #1f6f4a, #134a31); }
 .rl-nacht { background: linear-gradient(160deg, #23395d, #121e33); }
 .rl-rosa { background: linear-gradient(160deg, #e57399, #b5406a); }
-.rl-f.rl-rot[aria-pressed="true"] { background: #c62828; } .rl-f.rl-tanne[aria-pressed="true"] { background: #1f6f4a; border-color: #1f6f4a; }
-.rl-f.rl-nacht[aria-pressed="true"] { background: #23395d; border-color: #23395d; } .rl-f.rl-rosa[aria-pressed="true"] { background: #e57399; border-color: #e57399; }
+.rl-punkt { display: inline-block; width: 16px; height: 16px; border-radius: 50%; margin-right: 6px; vertical-align: -3px; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.2); }
+.rlp-rot { background: #c62828; } .rlp-tanne { background: #1f6f4a; } .rlp-nacht { background: #23395d; } .rlp-rosa { background: #e57399; }
 .rl-emoji { font-size: 44px; margin: 0; line-height: 1.1; }
 .rl-titel { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; font-size: 26px; margin: 6px 0 14px; line-height: 1.2; }
 .rl-feld { background: #fffaf0; color: #3b2314; border-radius: 16px; min-height: 120px; display: flex; align-items: center; justify-content: center; padding: 18px; }

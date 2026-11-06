@@ -181,7 +181,7 @@ _CAT2MAG = {'naschen': 'genuss', 'gemuetlich': 'gemuetlich', 'spiele': 'spiele',
 
 def _wichtel(i):
     wer = sorted({w for a in i['ages'] for w in _AGE2WER[a]} | ({'kollege'} if i['office'] else set())
-                 | ({'oma', 'opa', 'mama', 'papa'} if 'adult' in i['ages'] and set(i['cats']) & {'naschen', 'gemuetlich'} and '(ab 18)' not in i['name'] else set()))
+                 | ({'oma', 'opa', 'mama', 'papa'} if 'adult' in i['ages'] and 'naschen' in i['cats'] and '(ab 18)' not in i['name'] else set()))
     anl = ['weih', 'wicht'] + (['niko'] if i['budget'] <= 10 and '(ab 18)' not in i['name'] else []) + (['geb'] if i['budget'] >= 10 else [])
     return dict(n=i['name'], t=i['text'], q=i['query'], w=wer, b=i['budget'], m=sorted({_CAT2MAG[c] for c in i['cats']}), a=anl)
 

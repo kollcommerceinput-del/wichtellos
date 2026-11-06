@@ -1782,8 +1782,8 @@ def generator_page():
 <section id="g-ergebnis" hidden>
   <h2 id="g-titel">Deine Geschenk-Lose</h2>
   <p id="g-hinweis" class="hint" hidden></p>
-  <div id="g-lose" class="lose"></div>
-  <p class="g-unter"><button type="button" id="g-alle" class="link-btn">Alle aufdecken</button> · <button type="button" class="link-btn" onclick="document.getElementById('g-los').click()">🎲 3 neue Lose ziehen</button></p>
+  <div id="g-lose" class="glose"></div>
+  <p class="g-unter"><button type="button" id="g-alle" class="btn-secondary">✨ Alle aufdecken</button> <button type="button" class="btn-secondary" onclick="document.getElementById('g-los').click()">🎲 3 neue Lose ziehen</button></p>
   <p class="f-label">Ideen weiterschicken – z. B. an Geschwister, die mitschenken:</p>
   <div id="g-teilen">{share_row('', 'Geschenkideen')}</div>
 </section>
@@ -1829,7 +1829,7 @@ RUBBEL_ANLAESSE = [('Geburtstag', 'Alles Gute zum Geburtstag!', '🎂'), ('Weihn
 def rubbellos_page():
     """Rubbellos verschicken (Toni 06.11.): Geschenk geheim hinter Rubbelschicht, Link #r=… (nur im #, nichts gespeichert)."""
     data = json.dumps(RUBBEL_ANLAESSE, ensure_ascii=False).replace('</', '<\\/')
-    farben = ''.join(f'<button type="button" class="chip rl-f rl-{c}" data-farbe="{i}" aria-pressed="{str(i == 0).lower()}">{t}</button>'
+    farben = ''.join(f'<button type="button" class="chip rl-f" data-farbe="{i}" aria-pressed="{str(i == 0).lower()}"><span class="rl-punkt rlp-{c}" aria-hidden="true"></span>{t}</button>'
                      for i, (c, t) in enumerate([('rot', 'Rot'), ('tanne', 'Tanne'), ('nacht', 'Nachtblau'), ('rosa', 'Rosa')]))
     body = f'''<article>
 <div data-rubbellos>
