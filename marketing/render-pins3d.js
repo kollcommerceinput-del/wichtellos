@@ -17,6 +17,8 @@ const PINS = [
   ['lose-drucken', 'los.jpg', '50% -330px', 'Wichtel-Lose zum Ausdrucken', 'Mit QR-Code oder ganz ohne Handy', 'Kostenlos erstellen →'],
   ['buero', 'geschenk.jpg', '50% -480px', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team', 'Tipps fürs Team ansehen →'],
   ['unter-10-euro', 'geschenk-muetze.jpg', '50% -500px', 'Wichtel&shy;geschenke unter 10 €', '12 Ideen – auch für Kollegen', 'Alle Ideen ansehen →'],
+  ['geschenke-generator', 'onni-geschenk-tisch.jpg', '50% 45%', 'Geschenke-Generator', '3 Fragen – 3 Ideen zum Freirubbeln', 'Jetzt Lose ziehen →'],
+  ['rubbellos', 'onni-handy.jpg', '50% 45%', 'Geschenk als Rubbellos', 'Per WhatsApp – zum Freirubbeln', 'Kostenlos erstellen →'],
   ['wunschzettel', 'lupe.jpg', '50% -380px', 'Wunschzettel fürs Wichteln', 'Als Link in die Wichtelgruppe schicken', 'Kostenlos erstellen →'],
 ];
 

@@ -37,6 +37,8 @@ const PAGES = [
   ['onni-adventskalender', 'onni/sticker-winkt.png', 'Onnis Adventskalender', '24 Wichtel-Geschichten – ab 1. Dezember'],
   ['nikolaus-geschenke', 'onni/sticker-geschenk.png', 'Nikolaus-Geschenke', '21 Ideen für den Stiefel'],
   ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
+  ['geschenke-generator', 'onni/sticker-geschenk.png', 'Geschenke-Generator', '3 Fragen, 3 Ideen zum Freirubbeln – für jeden Anlass'],
+  ['rubbellos', 'onni/sticker-psst.png', 'Geschenk als Rubbellos', 'Überraschung per WhatsApp zum Freirubbeln'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
