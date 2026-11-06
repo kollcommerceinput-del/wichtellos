@@ -1378,7 +1378,7 @@ def zubehoer_page():
 
 # Onnis Adventskalender (05.11., Toni): 24 Video-Geschichten ab 1.12. – Seite vorab live, damit Google sie bis Dezember kennt.
 # Videos/Texte: marketing/reel/adventskalender/folge-NN/, Geschichten im Content-Projekt. Neue Folge = Titel hier eintragen.
-ONNI_FOLGEN = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni im Sockenkorb', 'Onnis Waschtag', 'Onni und der Keks']
+ONNI_FOLGEN = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni und der Keks', 'Onnis Waschtag', 'Onni im Sockenkorb']
 # YouTube-Links je Folge (Tag: URL), sobald der Kanal steht – Knopf „Auf YouTube ansehen“ erscheint dann automatisch
 ONNI_YT = {}
 # „Für die Großen“ unter dem Video – getrennt von der Geschichte, je nach Tag ein anderes Ziel (Toni 05.11.)
