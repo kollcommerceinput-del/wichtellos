@@ -191,7 +191,10 @@ Antworten auf Deutsch.
   Neue Folge = Titel in `ONNI_FOLGEN` + Video/Poster nach `fotos/onni/`. `ONNI_YT` {Tag: URL} → Knopf „Auf YouTube ansehen“ (Kanal legt Toni an,
   Uploads geplant 0 Uhr, „für Kinder“). Unter dem Video „Für die Großen“ (`ONNI_GROSS`: 1.–5. Nikolaus, bis 19. Geschenkfinder, dann unter 10 €),
   unten `ONNI_SHOP` „Für die Großen: Du suchst noch Geschenke?“. Geschenk-Werbung nie im Video/Kindertext (UWG), nur für Eltern.
-  Lesefassung aller 24 Geschichten kommt Ende November. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
+  Lesefassung aller 24 Geschichten kommt Ende November.
+  Countdown: `render-reel-countdown.js [N]` (Reel, `MUSIK=zuckerfee`, `OHNE_ZAHL=1` = „Bald geht’s los …“ für Pinterest) und
+  `render-tiktok-countdown.js [N]` (Stimme Gemini). Seit 07.11. Bilder aus Folge 6/7. 07.11. „Noch 24×“: Insta-Reel + Story (Musik),
+  Pin ohne Zahl (Wichtelgeschenke für Kinder, Themen Adventskalender/Wichteln/Weihnachtsbräuche); TikTok: Toni. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
 - Teilen + Symbole (06.11., Toni): `share_row(text, betreff)` in `build.py` (WhatsApp/E-Mail/„Link teilen“ = navigator.share bzw.
   kopieren, Handler `.sh-copy` in `site.js`), auf `/onni-adventskalender/` allgemein (`AK_SHARE`) + je Türchen im Player (`.ak-share`, JS).
   `ICONS` (eigene Inline-SVGs) + `SOCIAL`/`social_links()` → Fuß „Folge uns“ und „Folge Onni“. Adventskalender-Reihenfolge neu:

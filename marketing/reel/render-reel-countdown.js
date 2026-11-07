@@ -21,15 +21,17 @@ function tageBisDezember() {
 }
 const N = +(process.argv[2] || tageBisDezember());
 if (!(N >= 1)) { console.error('N muss >= 1 sein (am 1. Dezember gibt es keinen Countdown mehr)'); process.exit(1); }
-const schlafen = N === 1 ? 'Nur noch 1× schlafen …' : `Noch ${N}× schlafen …`;
+// OHNE_ZAHL=1 -> „Bald geht's los …“ für Pinterest (Pin läuft wochenlang) -> countdown-ohne-zahl.mp4
+const OHNE_ZAHL = !!process.env.OHNE_ZAHL;
+const schlafen = OHNE_ZAHL ? 'Bald geht’s los …' : N === 1 ? 'Nur noch 1× schlafen …' : `Noch ${N}× schlafen …`;
 
-// [Bild, Dauer s, HTML-Inhalt]
+// [Bild, Dauer s, HTML-Inhalt] – Bilder seit 07.11. aus Folge 6/7 (Toni)
 const SZENEN = [
-  ['folge-05/b04-kekse.jpg', 2.5, `<div class="top"><div class="big">${schlafen}</div>bis Onnis Adventskalender</div>`],
-  ['folge-04/b04-schaum.jpg', 2.3, '<div class="top">Ab 1. Dezember:<br>jeden Tag ein Türchen</div>'],
-  ['folge-05/b07-schlitten.jpg', 2.3, '<div class="top">Jeden Abend eine<br>Wichtel-Geschichte</div>'],
-  ['../wichtel3d/stills/geschenk.jpg', 2.3, '<div class="top">Du suchst noch Geschenke?<div class="sub">Nikolaus · Advent · Wichteln</div></div>'],
-  ['folge-05/b04-kekse.jpg', 3.0, '<div class="end"><p>Schau vorbei:</p><div class="url">wichtellos.de</div><h1>Onnis Adventskalender<br>ab 1.12.</h1></div>'],
+  ['folge-07/b13-gutenacht.jpg', 2.5, `<div class="top"><div class="big">${schlafen}</div>${OHNE_ZAHL ? 'Onnis Adventskalender<br>ab 1. Dezember' : 'bis Onnis Adventskalender'}</div>`],
+  ['folge-06/b07-tuer-spalt.jpg', 2.3, '<div class="top">Ab 1. Dezember:<br>jeden Tag ein Türchen</div>'],
+  ['folge-07/b10-singen.jpg', 2.3, '<div class="top">Jeden Abend eine<br>Wichtel-Geschichte</div>'],
+  ['folge-06/b12-stiefel.jpg', 2.3, '<div class="top">Du suchst noch Geschenke?<div class="sub">Nikolaus · Advent · Wichteln</div></div>'],
+  ['folge-06/b16-kuscheln.jpg', 3.0, '<div class="end"><p>Schau vorbei:</p><div class="url">wichtellos.de</div><h1>Onnis Adventskalender<br>ab 1.12.</h1></div>'],
 ];
 
 const html = (inner) => `<!doctype html><html><head><meta charset="utf-8"><style>
@@ -94,7 +96,7 @@ html,body{margin:0;width:1080px;height:1920px;background:transparent;font-family
     amix.push('[musik]');
   }
   fc.push(`${amix.join('')}amix=inputs=${amix.length}:normalize=0,apad,atrim=0:${total.toFixed(2)},loudnorm=I=-18:TP=-2:LRA=11[aout]`);
-  const out = path.join(OUT, `countdown-${String(N).padStart(2, '0')}${MUSIK ? '-musik' : ''}.mp4`);
+  const out = path.join(OUT, `countdown-${OHNE_ZAHL ? 'ohne-zahl' : String(N).padStart(2, '0')}${MUSIK ? '-musik' : ''}.mp4`);
   execFileSync(FFMPEG, ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', fc.join(';'), '-map', '[vout]', '-map', '[aout]',
     '-t', total.toFixed(2), '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-r', String(FPS), '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out], { stdio: 'inherit' });
   fs.rmSync(tmp, { recursive: true, force: true });

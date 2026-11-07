@@ -32,16 +32,16 @@ const wort = (n) => ZAHL[n] || (n < 10 ? EINER[n] : `${EINER[n % 10]}und${n < 30
 const BLOECKE = [
   { datei: `ton-0-${N}.wav`, sprache: `Psst, hey du! Noch ${wort(N)} Mal schlafen – dann geht es los!`,
     zeilen: ['Psst, hey du!', '#ZAHL#', 'dann geht es los!'],
-    bilder: ['folge-01/b01-wald.jpg', 'folge-01/b07-flug.jpg', 'folge-01/b08-haus.jpg', 'folge-02/b03-baum.jpg', 'folge-03/b02-flur.jpg',
-      'folge-04/b03-wasserhahn.jpg', 'folge-05/b04-kekse.jpg', 'folge-01/b09-tuer.jpg'] },
+    bilder: ['folge-07/b02-wald.jpg', 'folge-01/b07-flug.jpg', 'folge-01/b08-haus.jpg', 'folge-06/b03-schneespuren.jpg', 'folge-07/b05-uhr.jpg',
+      'folge-04/b03-wasserhahn.jpg', 'folge-06/b09-flur-glitzer.jpg', 'folge-01/b09-tuer.jpg'] },
   { datei: 'ton-1.wav', sprache: 'Dann zieht ein Wichtel bei uns ein, treibt Blödsinn und ist nicht allein.',
     zeilen: ['Dann zieht ein Wichtel bei uns ein,', 'treibt Blödsinn und ist nicht allein.'],
-    bilder: ['folge-01/b06-packen.jpg', 'folge-01/b09-tuer.jpg', 'folge-03/b05-chaos.jpg', 'folge-03/b03-klettern.jpg', 'folge-02/b04-teddy.jpg', 'folge-02/b05-anlehnen.jpg'] },
+    bilder: ['folge-01/b06-packen.jpg', 'folge-06/b06-schleichen.jpg', 'folge-05/b05-chaos.jpg', 'folge-07/b09-kichern.jpg', 'folge-02/b04-teddy.jpg', 'folge-06/b08-muetze.jpg'] },
   { datei: 'ton-2.wav', sprache: 'Er bringt uns Streiche, Spaß und Glitzer, der kleine, freche Weihnachtsflitzer!',
     zeilen: ['Er bringt uns Streiche, Spaß und Glitzer,', 'der kleine, freche Weihnachtsflitzer!'],
-    bilder: ['folge-04/b04-schaum.jpg', 'folge-03/b06-socke.jpg', 'folge-05/b05-abbeissen.jpg', 'folge-05/b07-schlitten.jpg', 'folge-04/b05-leine.jpg', 'folge-05/b06-kugelbauch.jpg'] },
+    bilder: ['folge-04/b04-schaum.jpg', 'folge-06/b14-knabbern.jpg', 'folge-03/b05-abbeissen.jpg', 'folge-07/b10-singen.jpg', 'folge-06/b12-stiefel.jpg', 'folge-03/b06-kugelbauch.jpg'] },
 ];
-const SCHLUSS = { bild: 'folge-05/b04-kekse.jpg', dauer: 1.6 };
+const SCHLUSS = { bild: 'folge-06/b16-kuscheln.jpg', dauer: 1.6 };
 
 function wavDur(f) {
   const b = fs.readFileSync(f); let o = 12, rate = 0, block = 0;
