@@ -192,6 +192,8 @@ Antworten auf Deutsch.
   Uploads geplant 0 Uhr, „für Kinder“). Unter dem Video „Für die Großen“ (`ONNI_GROSS`: 1.–5. Nikolaus, bis 19. Geschenkfinder, dann unter 10 €),
   unten `ONNI_SHOP` „Für die Großen: Du suchst noch Geschenke?“. Geschenk-Werbung nie im Video/Kindertext (UWG), nur für Eltern.
   Lesefassung aller 24 Geschichten kommt Ende November.
+  07.11.: Startseiten-Kasten `.ak-teaser` (tool.html, Zahl/Türchen per site.js, ab 25.12. weg), Knopf „Jeden Abend an Onni erinnern“ →
+  `/onni-erinnerung.ics` (schreibt `extras()`, 24× 18:30). Briefe ≠ Folgen (Toni): Seite sagt „unabhängig von den Geschichten“.
   Countdown: `render-reel-countdown.js [N]` (Reel, `MUSIK=zuckerfee`, `OHNE_ZAHL=1` = „Bald geht’s los …“ für Pinterest) und
   `render-tiktok-countdown.js [N]` (Stimme Gemini). Seit 07.11. Bilder aus Folge 6/7. 07.11. „Noch 24×“: Insta-Reel + Story (Musik),
   Pin ohne Zahl (Wichtelgeschenke für Kinder, Themen Adventskalender/Wichteln/Weihnachtsbräuche); TikTok: Toni. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
