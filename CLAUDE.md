@@ -213,6 +213,11 @@ Antworten auf Deutsch.
   (`SCHNELL=1`), `reel-handy-28s-musik.mp4` (+ leise Spieluhr). 06.11.: Pinterest-Video-Pin (Ideen & Reels, Link /wichteln-per-whatsapp/,
   Themen Wichteln/Weihnachtswichtel/Geschenkideen für Weihnachten, Alt-Text, KI-Label) + Instagram-Story (ohne Link-Sticker – bei Videos
   in der Business Suite nicht möglich). TikTok: Toni (Text in teilen-texte.md).
+- `marketing/reel/render-reel-was-ist-wichteln.js` → `was-ist-wichteln/reel-was-ist-wichteln.mp4` (19 s, Toni 07./08.11.): „Schon mal von Wichteln
+  gehört?“ – erklärt Wichteln auf 3D-Stills, Stimme Gemini „puck“ (ton-N.wav gecacht, TEMPO 1.2, Pause nach der Frage), Ende „Mach mit! Per WhatsApp
+  oder E-Mail – ganz einfach, kostenlos und mit Spaß“. Ton und Bild werden getrennt gebaut (in einem ffmpeg-Durchgang hing es). 08.11.: YouTube-Short
+  youtube.com/shorts/TQXJ610aEw0 (nicht für Kinder, KI „Ja“), Pinterest-Video-Pin (Ideen & Reels, Link Startseite, Themen Wichteln/Weihnachtsparty/
+  Weihnachten, Alt-Text, KI-Label). TikTok: Toni. Achtung YouTube: Escape im Upload-Dialog schließt ihn (Video bleibt als Entwurf unter „Shorts“).
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
   Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
