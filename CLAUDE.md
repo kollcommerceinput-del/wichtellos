@@ -196,7 +196,7 @@ Antworten auf Deutsch.
   `/onni-erinnerung.ics` (schreibt `extras()`, 24× 18:30). Briefe ≠ Folgen (Toni): Seite sagt „unabhängig von den Geschichten“.
   Countdown: `render-reel-countdown.js [N]` (Reel, `MUSIK=zuckerfee`, `OHNE_ZAHL=1` = „Bald geht’s los …“ für Pinterest) und
   `render-tiktok-countdown.js [N]` (Stimme Gemini). Seit 07.11. Bilder aus Folge 6/7. 07.11. „Noch 24×“: Insta-Reel + Story (Musik),
-  Pin ohne Zahl (Wichtelgeschenke für Kinder, Themen Adventskalender/Wichteln/Weihnachtsbräuche); TikTok: Toni. Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
+  Pin ohne Zahl (Wichtelgeschenke für Kinder, Themen Adventskalender/Wichteln/Weihnachtsbräuche); TikTok: Toni. YouTube-Short youtube.com/shorts/es-wN7Iy7lQ (TikTok-Fassung, für Kinder, KI „Ja“, öffentlich). Post-Texte je Türchen: `marketing/reel/adventskalender/post-texte.md`.
 - Teilen + Symbole (06.11., Toni): `share_row(text, betreff)` in `build.py` (WhatsApp/E-Mail/„Link teilen“ = navigator.share bzw.
   kopieren, Handler `.sh-copy` in `site.js`), auf `/onni-adventskalender/` allgemein (`AK_SHARE`) + je Türchen im Player (`.ak-share`, JS).
   `ICONS` (eigene Inline-SVGs) + `SOCIAL`/`social_links()` → Fuß „Folge uns“ und „Folge Onni“. Adventskalender-Reihenfolge neu:
