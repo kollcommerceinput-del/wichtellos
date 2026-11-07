@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//WichtelLos//Onni//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:onni-adventskalender-2026@wichtellos.de
+DTSTAMP:20261107T120000Z
+DTSTART:20261201T173000Z
+DURATION:PT15M
+RRULE:FREQ=DAILY;COUNT=24
+SUMMARY:🎄 Onnis Adventskalender: neues Türchen
+DESCRIPTION:Heute wartet eine neue Wichtel-Geschichte auf euch: https://wichtellos.de/onni-adventskalender/
+URL:https://wichtellos.de/onni-adventskalender/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Onnis Adventskalender: neues Türchen
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1427,6 +1427,9 @@ def onni_kalender_page():
 <p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember öffnet sich hier jeden Tag ein Türchen mit einer neuen Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
 <p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
 
+<p class="ak-erinnern"><a class="btn-primary" href="/onni-erinnerung.ics" download>🔔 Jeden Abend an Onni erinnern</a>
+<span class="hint">Trägt vom 1. bis 24. Dezember um 18:30 Uhr eine Erinnerung in deinen Kalender ein – ohne Anmeldung, wir erfahren davon nichts.</span></p>
+
 <h2 id="kalender">Die 24 Türchen</h2>
 <p>Jedes Türchen öffnet sich um Mitternacht an seinem Tag. Tippe auf ein offenes Türchen, dann startet die Geschichte.</p>
 <div class="ak-grid" data-ak-jahr="2026">
@@ -1449,7 +1452,8 @@ def onni_kalender_page():
 <ul>
   <li><b>Jeden Abend eine Folge:</b> etwa anderthalb Minuten, mit Bildern, Erzählstimme und kleinen Geräuschen – genau richtig vor dem Schlafengehen.</li>
   <li><b>Ruhiges Ende:</b> Jede Geschichte endet mit Onnis „Gute Nacht. Bis morgen.“ – keine Spannung, die wach hält.</li>
-  <li><b>Passt zur Wichteltür:</b> Zu jeder Folge gibt es einen der <a href="/wichteltuer/#briefe">24 Briefe von Onni</a> zum Ausdrucken. Leg den Brief des Tages vor die Wichteltür – dann hat Onni wirklich geschrieben.</li>
+  <li><b>Passt zur Wichteltür:</b> Onni wohnt hinter der Wichteltür – die Geschichten erzählen, was er nachts erlebt.</li>
+  <li><b>Extra zum Ausdrucken:</b> die <a href="/wichteltuer/#briefe">24 Briefe von Onni</a>. Das sind eigene kleine Briefe, unabhängig von den Geschichten – du kannst sie zum Beispiel morgens vor die Wichteltür legen.</li>
   <li><b>Ohne Werbung in den Geschichten:</b> Onni verkauft nichts. Die Folgen sind für Kinder ab etwa 3 Jahren gedacht.</li>
 </ul>
 
@@ -1467,7 +1471,7 @@ def onni_kalender_page():
 <p class="hint">Bilder und Erzählstimme der Geschichten sind mit KI-Unterstützung entstanden, die Geschichten haben wir selbst geschrieben.</p>
 </article>'''
     page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder',
-         'Onnis Adventskalender: Ab 1. Dezember öffnet sich jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür und den 24 Briefen von Onni.',
+         'Onnis Adventskalender: Ab 1. Dezember öffnet sich jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür.',
          body, crumb='Onnis Adventskalender', playful=True)
 
 
@@ -2228,6 +2232,16 @@ def extras():
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
         for u in ('/impressum/', '/datenschutz/')) + '</urlset>\n'  # Rechtstexte indexierbar (Toni 03.11., Gemini fand sie nicht)
     (OUT / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+    # Kalender-Erinnerung Onnis Adventskalender (Toni 07.11.): 24× täglich 18:30 Uhr deutsche Zeit (Dezember = UTC+1)
+    CRLF = chr(13) + chr(10)
+    ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//WichtelLos//Onni//DE', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+           'UID:onni-adventskalender-2026@wichtellos.de', 'DTSTAMP:20261107T120000Z', 'DTSTART:20261201T173000Z', 'DURATION:PT15M',
+           'RRULE:FREQ=DAILY;COUNT=24', 'SUMMARY:🎄 Onnis Adventskalender: neues Türchen',
+           'DESCRIPTION:Heute wartet eine neue Wichtel-Geschichte auf euch: https://wichtellos.de/onni-adventskalender/',
+           'URL:https://wichtellos.de/onni-adventskalender/',
+           'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Onnis Adventskalender: neues Türchen', 'TRIGGER:PT0M', 'END:VALARM',
+           'END:VEVENT', 'END:VCALENDAR']
+    (OUT / 'onni-erinnerung.ics').write_bytes((CRLF.join(ics) + CRLF).encode('utf-8'))
     # Suchindex (läuft komplett im Browser, keine externen Dienste)
     from gifts import IDEAS, CAT_LABELS, AGE_LABELS
     idx = [{'u': '/', 't': 'Wichteln online auslosen', 'd': 'Kostenloser Wichtelgenerator: Namen eintragen, auslosen, geheime Links per WhatsApp – ohne Anmeldung.', 'k': 'Wichtelgenerator Julklapp Secret Santa Lose drucken Ausschlüsse Tipp', 'g': 's'}]

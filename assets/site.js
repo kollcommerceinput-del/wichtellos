@@ -139,6 +139,22 @@
     v.focus();
   }));
 
+  // Startseite: Kasten „Onnis Adventskalender“ – vor dem 1.12. „Noch N× schlafen“, 1.–24.12. heutiges Türchen, danach weg
+  const teaser = document.querySelector('.ak-teaser');
+  if (teaser) {
+    const jahr = +teaser.dataset.akJahr;
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' })
+      .formatToParts(new Date()).filter((x) => x.type !== 'literal').map((x) => [x.type, +x.value]));
+    const tage = Date.UTC(jahr, 11, 1) / 864e5 - Date.UTC(p.year, p.month - 1, p.day) / 864e5;
+    const count = teaser.querySelector('.ak-t-count');
+    if (tage > 0) count.textContent = tage === 1 ? 'Morgen geht’s los!' : `Noch ${tage}× schlafen`;
+    else if (tage > -24) {
+      const n = 1 - tage;
+      count.textContent = `Heute: Türchen ${n}`;
+      teaser.href = `/onni-adventskalender/#tag-${n}`;
+    } else teaser.hidden = true;
+  }
+
   // Onnis Adventskalender: Türchen N öffnet sich am N. Dezember um 0 Uhr (deutsche Zeit). Video lädt erst beim Klick.
   const grid = document.querySelector('.ak-grid');
   if (grid) {
