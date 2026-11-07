@@ -139,6 +139,12 @@
     v.focus();
   }));
 
+  // Elemente nur in einem Zeitraum zeigen (z. B. Black Friday): data-zeit-von / data-zeit-bis = JJJJ-MM-TT, beide Tage einschließlich
+  const heuteIso = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(new Date());
+  document.querySelectorAll('[data-zeit-von]').forEach((el) => {
+    el.hidden = !(heuteIso >= el.dataset.zeitVon && heuteIso <= el.dataset.zeitBis);
+  });
+
   // Startseite: Kasten „Onnis Adventskalender“ – vor dem 1.12. „Noch N× schlafen“, 1.–24.12. heutiges Türchen, danach weg
   const teaser = document.querySelector('.ak-teaser');
   if (teaser) {

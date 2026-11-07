@@ -15,7 +15,7 @@ const BASE = process.env.BASE || 'http://localhost:8766';
     const path = queue.shift();
     if (seen.has(path)) continue;
     seen.add(path);
-    if (/\.(pdf|zip|webp|png|jpe?g|mp4)$/i.test(path.split(/[?#]/)[0])) {  // Dateien nur auf Erreichbarkeit prüfen
+    if (/\.(pdf|zip|webp|png|jpe?g|mp4|ics)$/i.test(path.split(/[?#]/)[0])) {  // Dateien nur auf Erreichbarkeit prüfen
       const r = await ctx.request.get(BASE + path); report.push(`${r.status()} ${path} (Datei)`); continue;
     }
     const res = await p.goto(BASE + path);
@@ -39,7 +39,7 @@ const BASE = process.env.BASE || 'http://localhost:8766';
   const n = await narrow.newPage();
   const over = [];
   for (const path of seen) {
-    if (/\.(pdf|zip|webp|png|jpe?g|mp4)$/i.test(path.split(/[?#]/)[0])) continue;
+    if (/\.(pdf|zip|webp|png|jpe?g|mp4|ics)$/i.test(path.split(/[?#]/)[0])) continue;
     await n.goto(BASE + path);
     const o = await n.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     if (o > 0) over.push(`${path} (+${o}px)`);

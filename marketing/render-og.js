@@ -39,6 +39,7 @@ const PAGES = [
   ['wichtel-zubehoer', 'onni/sticker-geschenk.png', 'Wichtel-Zubehör', 'Tür, Möbel, Licht & Wichtel-Post – 38 Ideen'],
   ['geschenke-generator', 'onni/sticker-geschenk.png', 'Geschenke-Generator', '3 Fragen, 3 Ideen zum Freirubbeln – für jeden Anlass'],
   ['rubbellos', 'onni/sticker-psst.png', 'Geschenk als Rubbellos', 'Überraschung per WhatsApp zum Freirubbeln'],
+  ['black-friday-wichtelgeschenke', 'onni/sticker-geschenk.png', 'Black Friday 2026', 'Wichtelgeschenke im Angebot – 36 Ideen'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

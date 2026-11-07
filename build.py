@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -430,6 +430,7 @@ def gift_page(budget):
 <div class="chips">
 {chips}
 </div>
+<a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-12-01" hidden>🏷️ <b>Black Friday:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>
 <p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a> · Lieber 24 kleine Freuden? <a href="/adventskalender-ideen/">Adventskalender-Ideen →</a></p>
 {CTA}
 {chr(10).join(sections)}
@@ -1348,6 +1349,37 @@ def themen_pages():
          body, crumb='Nikolaus-Geschenke', playful=True)
 
 
+    # Black Friday (Toni 07.11.): 27.11.2026, Cyber Monday 30.11. – Kasten auf der Seite des geheimen Links verlinkt hierher
+    from themen import BLACKFRIDAY
+    secs, jump, n = idea_sections(BLACKFRIDAY, 'bf')
+    deals = 'https://www.amazon.de/deals' + (f'?tag={AMAZON_TAG}' if AMAZON_TAG else '')
+    body = f"""<article>
+<h1>Black Friday 2026: Wichtelgeschenke im Angebot</h1>
+{ai_photo('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife')}
+<p class="lead">Wer ohnehin Wichtelgeschenke kaufen muss, kann am Black Friday sparen: Viele Kleinigkeiten, Spiele, Decken und Technik sind in diesen Tagen reduziert. Hier findest du {n} Ideen, die zum Wichteln passen – mit einem Klick zu den aktuellen Angeboten bei Amazon.</p>
+<p class="tip">📅 <b>Black Friday 2026 ist am Freitag, 27. November</b>, der Cyber Monday am <b>30. November</b>. Amazon startet seine Black-Friday-Angebote meist schon einige Tage vorher.</p>
+<p class="bf-cta"><a class="btn-primary big" href="{esc(deals)}" rel="sponsored nofollow noopener" target="_blank">🏷️ Alle aktuellen Angebote bei Amazon*</a></p>
+<p class="chips-line">Direkt zu: {jump}</p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>So sparst du am Black Friday wirklich</h2>
+<ul>
+  <li><b>Erst das Budget, dann das Angebot:</b> Ein Schnäppchen über dem Wichtel-Budget ist kein Schnäppchen. Legt das Budget vorher fest – beim <a href="/">Auslosen</a> könnt ihr es gleich mit eintragen.</li>
+  <li><b>Streichpreise prüfen:</b> Nicht jeder durchgestrichene Preis ist ein echter Rabatt. Vergleiche kurz, was das Produkt sonst kostet.</li>
+  <li><b>Lieferzeit im Blick:</b> Bestell rechtzeitig vor der Bescherung – gerade in der Black-Friday-Woche kann es länger dauern.</li>
+  <li><b>Gleich mit erledigen:</b> Geschenkpapier, Anhänger und den <a href="/adventskalender-befuellen/">Adventskalender</a> kannst du direkt mitbestellen.</li>
+</ul>
+<p>Noch nicht ausgelost, wer wen beschenkt? <a href="/">Jetzt kostenlos auslosen →</a> · Mehr Ideen: <a href="/geschenkfinder/">Geschenkfinder</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/geschenke-generator/">Geschenke-Generator</a></p>
+{CTA}
+</article>"""
+    page('/black-friday-wichtelgeschenke/', 'Black Friday 2026: Wichtelgeschenke im Angebot',
+         f'Black Friday 2026 (27.11.) und Cyber Monday (30.11.): {n} Wichtelgeschenke, die jetzt oft reduziert sind – Kleinigkeiten unter 10 €, Gemütliches, Technik, Spiele und Ideen für Kinder.',
+         body, crumb='Black Friday', playful=True)
+
+
 def zubehoer_page():
     secs = []
     n = 0
@@ -2226,7 +2258,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'

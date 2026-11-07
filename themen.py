@@ -174,3 +174,56 @@ NIKOLAUS = [
         ('Kleine Geschenktüten', 'Für alles, was nicht in den Stiefel passt.', 'Geschenktüten klein Weihnachten'),
     ]),
 ]
+
+
+# Black Friday (Toni 07.11.): Black Friday 27.11.2026, Cyber Monday 30.11.2026 – nur Amazon-Suchen + Angebotsseite, keine Preise
+BLACKFRIDAY = [
+    ('Wichtelgeschenke unter 10 €', 'daumen', 'Für Büro, Schule und Verein – im Angebot oft noch ein paar Euro günstiger.', [
+        ('Kuschelsocken', 'Passen immer und sind im Mehrfachpack besonders günstig.', 'Kuschelsocken Damen Herren'),
+        ('Thermobecher', 'Für den Kaffee auf dem Weg – wird jeden Tag benutzt.', 'Thermobecher Edelstahl'),
+        ('Duftkerze im Glas', 'Winterdüfte wie Zimt, Tanne oder Vanille.', 'Duftkerze im Glas Winter'),
+        ('Handwärmer', 'Wiederverwendbar – klein, praktisch, kommt immer gut an.', 'Handwärmer wiederverwendbar'),
+        ('Schönes Notizbuch', 'Mit festem Einband – für Listen, Ideen und Termine.', 'Notizbuch A5 Hardcover'),
+        ('Schokolade im Geschenkset', 'Etwas Besonderes statt der Tafel aus dem Supermarkt.', 'Schokolade Geschenkset'),
+    ]),
+    ('Gemütliches für den Winter', 'herz', 'Decken, Licht und Wärme – rund um den Black Friday oft reduziert.', [
+        ('Kuscheldecke', 'Weich und groß genug fürs Sofa.', 'Kuscheldecke Flanell'),
+        ('Decke mit Ärmeln', 'Der lustige Klassiker für lange Abende.', 'Decke mit Ärmeln'),
+        ('Wärmflasche mit Strickbezug', 'Sieht schön aus und wärmt richtig.', 'Wärmflasche mit Strickbezug'),
+        ('Lichterkette mit Timer', 'Mit Batterie – passt in jedes Regal und Fenster.', 'Lichterkette Batterie Timer'),
+        ('Tee-Geschenkset', 'Verschiedene Sorten zum Probieren.', 'Tee Geschenkset'),
+        ('Plüsch-Hausschuhe', 'Warme Füße vom Aufstehen bis zum Schlafengehen.', 'Hausschuhe Plüsch'),
+    ]),
+    ('Technik-Kleinigkeiten', 'lupe', 'Kleine Technik ist am Black Friday besonders oft im Angebot.', [
+        ('Kleine Powerbank', 'Passt in jede Tasche – rettet den Tag, wenn der Akku leer ist.', 'Powerbank klein'),
+        ('Bluetooth-Lautsprecher', 'Klein, aber laut genug für Küche und Bad.', 'Bluetooth Lautsprecher klein'),
+        ('Bluetooth-Kopfhörer', 'Für Sport, Bahn und Büro.', 'In Ear Kopfhörer Bluetooth'),
+        ('LED-Leselampe', 'Zum Anklemmen ans Buch – für Leseratten.', 'Leselampe Buch LED'),
+        ('Ladekabel-Set', 'Unspektakulär, aber jeder braucht eins mehr.', 'Ladekabel Set USB C'),
+        ('Handy-Stativ mit Fernauslöser', 'Für Gruppenfotos bei der Weihnachtsfeier.', 'Handy Stativ Bluetooth Fernauslöser'),
+    ]),
+    ('Spiele für den Abend', 'jubel', 'Spiele sind ein Geschenk für alle – und oft deutlich reduziert.', [
+        ('Brettspiel für die Familie', 'Für Abende mit Groß und Klein.', 'Brettspiel Familie'),
+        ('Escape-Room-Spiel', 'Rätseln wie im Escape Room – am Küchentisch.', 'Escape Room Spiel'),
+        ('Partyspiel', 'Schnell erklärt, sorgt sofort für Lacher.', 'Kartenspiel Erwachsene Party'),
+        ('Puzzle mit 1000 Teilen', 'Für ruhige Winterabende.', 'Puzzle 1000 Teile'),
+        ('Quizspiel', 'Wer weiß am meisten? Gut für Familie und Team.', 'Quizspiel'),
+        ('Krimidinner', 'Ein ganzer Abend als Geschenk.', 'Krimidinner Spiel'),
+    ]),
+    ('Für Kinder', 'winkt', 'Für Wichteln in Kita, Schule und Familie.', [
+        ('Bausteine-Set', 'Zum Bauen und Weiterbauen.', 'Bausteine Set Kinder'),
+        ('Kinderbuch zu Weihnachten', 'Zum Vorlesen im Advent.', 'Kinderbuch Weihnachten'),
+        ('Bastelset', 'Für Nachmittage am Basteltisch.', 'Bastelset Kinder Weihnachten'),
+        ('Spiel für Kinder ab 5', 'Kurze Runden, einfache Regeln.', 'Gesellschaftsspiel Kinder ab 5'),
+        ('Kuscheltier', 'Zum Liebhaben – passt zu jedem Alter.', 'Kuscheltier'),
+        ('Malkoffer', 'Stifte, Kreiden und Farben in einem Koffer.', 'Malset Kinder Koffer'),
+    ]),
+    ('Verpacken & Zubehör', 'geschenk', 'Papier, Band und Karten gleich mitbestellen – dann ist zur Bescherung alles da.', [
+        ('Geschenkpapier-Set', 'Mehrere Motive für alle Geschenke.', 'Geschenkpapier Weihnachten Set'),
+        ('Geschenkband', 'Macht auch aus einfachem Papier etwas Schönes.', 'Geschenkband'),
+        ('Geschenkanhänger', 'Damit klar ist, für wen es ist.', 'Geschenkanhänger Weihnachten'),
+        ('Geschenktüten', 'Schnell verpackt, auch für unförmige Geschenke.', 'Geschenktüten Kraftpapier'),
+        ('Adventskalender zum Befüllen', 'Hält viele Jahre.', 'Adventskalender zum Befüllen'),
+        ('Weihnachtskarten', 'Für den Gruß zum Geschenk.', 'Weihnachtskarten Set'),
+    ]),
+]

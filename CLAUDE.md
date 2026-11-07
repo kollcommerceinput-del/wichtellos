@@ -213,6 +213,10 @@ Antworten auf Deutsch.
   (`SCHNELL=1`), `reel-handy-28s-musik.mp4` (+ leise Spieluhr). 06.11.: Pinterest-Video-Pin (Ideen & Reels, Link /wichteln-per-whatsapp/,
   Themen Wichteln/Weihnachtswichtel/Geschenkideen für Weihnachten, Alt-Text, KI-Label) + Instagram-Story (ohne Link-Sticker – bei Videos
   in der Business Suite nicht möglich). TikTok: Toni (Text in teilen-texte.md).
+- `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
+  Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
+  Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
+  „Was schenkst du <Name>?“ + Knopf „Noch mehr Wichtelgeschenke bis X € bei Amazon“. Ganze `.idea`-Kachel klickbar (CSS ::after, „weitere Modelle“ bleibt).
 - `themen.py` `NIKOLAUS` + `/nikolaus-geschenke/` in `themen_pages()` (05.11.): 21 Ideen (Kinder, Erwachsene, Büro, Stiefel & Zubehör), Ziel der
   Posts zu Türchen 1–5 (Google Trends „nikolaus geschenke“ 1.–6.12.). Fuß „Kinder & Advent“, Sitemap jetzt 31 URLs.
 

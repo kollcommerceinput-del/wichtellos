@@ -686,3 +686,26 @@ label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-co
 .ak-teaser:hover, .ak-teaser:focus-visible { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(43,27,23,.28); }
 .ak-erinnern { text-align: center; margin: 18px 0; }
 .ak-erinnern .hint { display: block; margin-top: 8px; }
+
+/* Ganze Produktkachel klickbar (Toni 07.11.: am Handy musste man genau den roten Link treffen) – „weitere Modelle“ bleibt eigener Link */
+.idea { position: relative; }
+.idea > a[rel~="sponsored"]::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.idea .alt-link { position: relative; z-index: 1; }
+.idea:has(> a[rel~="sponsored"]) { cursor: pointer; transition: box-shadow .15s, transform .15s; }
+.idea:has(> a[rel~="sponsored"]):hover { box-shadow: 0 6px 18px rgba(43,27,23,.12); }
+.idea:has(> a[rel~="sponsored"]):active { transform: scale(.985); }
+
+/* Seite des geheimen Links: Geschenkideen als eigene Karte (07.11.) */
+.gift-card { border-top: 4px solid #c62828; }
+.gift-card h2 { margin-top: 0; }
+.gift-card h3 { font-size: 17px; margin: 14px 0 8px; }
+.gift-card .ideas a { border-color: #f0d9d3; }
+.gift-card .ideas a span { color: #c62828; font-weight: 700; margin-top: 4px; }
+.gift-card .ideas a:hover, .gift-card .ideas a:focus-visible { border-color: #c62828; }
+.gift-cta { text-align: center; margin: 16px 0 4px; }
+.gift-cta .btn-primary { display: inline-block; }
+/* Black-Friday-Hinweis (nur 16.11.–1.12., per site.js) */
+.bf-banner { display: block; margin: 10px 0 14px; padding: 12px 14px; border-radius: 14px; background: #111; color: #fff; text-decoration: none; font-size: 16px; }
+.bf-banner[hidden] { display: none; }
+.bf-banner b { color: #f2b705; }
+.bf-cta { text-align: center; margin: 16px 0; }

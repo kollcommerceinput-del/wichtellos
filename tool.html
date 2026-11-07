@@ -155,13 +155,18 @@
       <p class="r-actions"><a class="btn-secondary" href="/wunschzettel/">📝 Eigenen Wunschzettel schreiben</a></p>
     </div>
 
-    <div id="tip-ideas-wrap" hidden>
-      <h2>Passend zum Tipp 💡</h2>
-      <div id="tip-ideas" class="ideas"></div>
+    <div class="card gift-card">
+      <h2>🎁 Was schenkst du <span id="ideas-for"></span>? <span id="ideas-budget" class="opt"></span></h2>
+      <a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-12-01" hidden>🏷️ <b>Black Friday:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>
+      <div id="tip-ideas-wrap" hidden>
+        <h3>Passend zum Tipp 💡</h3>
+        <div id="tip-ideas" class="ideas"></div>
+      </div>
+      <h3 id="ideas-h">Beliebte Ideen in eurem Budget</h3>
+      <div id="ideas" class="ideas"></div>
+      <p class="gift-cta"><a id="ideas-amazon" class="btn-primary" href="https://www.amazon.de/s?k=Wichtelgeschenk" rel="sponsored nofollow noopener" target="_blank">🔎 Noch mehr Wichtelgeschenke bei Amazon*</a></p>
+      <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
     </div>
-    <h2>Geschenkideen <span id="ideas-budget" class="opt"></span></h2>
-    <div id="ideas" class="ideas"></div>
-    <a id="ideas-more" class="more-link" href="/wichtelgeschenke-unter-10-euro/">Mehr Geschenkideen ansehen →</a>
     <!--VERPACKEN-->
     <a id="ideas-finder" class="more-link" href="/geschenkfinder/">🔍 Im Geschenkfinder nach Alter und Interessen filtern →</a>
     <a class="more-link" href="/wichtelgedichte/">✍️ Ein Wichtelgedicht für die Karte →</a>
@@ -602,13 +607,16 @@
     $('#ideas-more').href = `/wichtelgeschenke-unter-${tier.max}-euro/`;
     $('#ideas-more').textContent = `Mehr Geschenkideen unter ${tier.max} € →`;
     $('#ideas-finder').href = `/geschenkfinder/?budget=${tier.max}`;
+    const q = `Wichtelgeschenk unter ${tier.max} Euro`;
+    $('#ideas-amazon').href = window.amazonUrl ? window.amazonUrl(q) : `https://www.amazon.de/s?k=${encodeURIComponent(q)}`;
+    $('#ideas-amazon').textContent = `🔎 Noch mehr Wichtelgeschenke bis ${tier.max} € bei Amazon*`;
     const box = $('#ideas');
     box.innerHTML = '';
     tier.items.forEach((item) => {
       const a = document.createElement('a');
       a.href = window.amazonUrl ? window.amazonUrl(item) : `https://www.amazon.de/s?k=${encodeURIComponent(item)}`;
       a.target = '_blank'; a.rel = 'sponsored nofollow noopener';
-      a.innerHTML = '<span>Ideen ansehen*</span>';
+      a.innerHTML = '<span>Bei Amazon ansehen*</span>';
       a.prepend(document.createTextNode(item));
       box.append(a);
     });
@@ -635,7 +643,7 @@
       const a = document.createElement('a');
       a.href = window.amazonUrl ? window.amazonUrl(q) : `https://www.amazon.de/s?k=${encodeURIComponent(q)}`;
       a.target = '_blank'; a.rel = 'sponsored nofollow noopener';
-      a.innerHTML = '<span>Ideen ansehen*</span>';
+      a.innerHTML = '<span>Bei Amazon ansehen*</span>';
       a.prepend(document.createTextNode(`Geschenke rund um „${w}“`));
       box.append(a);
     });
@@ -645,6 +653,7 @@
     $('#r-name').textContent = data.n;
     $('#r-group').textContent = data.g || 'Wichteln';
     $('#r-target').textContent = data.r;
+    $('#ideas-for').textContent = data.r;
     const info = $('#r-info');
     info.innerHTML = '';
     const rows = [['Budget', data.b], ['Bescherung', formatDate(data.d)], ['Nachricht', data.m]];
