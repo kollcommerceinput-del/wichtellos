@@ -284,7 +284,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       wichtelgeschenke-fuer-kinder waren bereits indexiert. 04.11. ~18 Uhr alle 29 Sitemap-URLs geprüft: 27 indexiert;
       impressum + adventskalender-befuellen beantragt; Startseite neu beantragt (FAQ geändert). Ende 04.11.: nichts mehr offen.
       06.11. ~17 Uhr: geschenke-generator beantragt (Ergebnis nicht bestätigt, Tab geschlossen), rubbellos → „Kontingent überschritten“ →
-      06.11. abends: rubbellos + geschenke-generator beantragt (beide „Indexierung wurde beantragt“, waren noch „nicht bekannt“) → in ein paar Tagen prüfen.
+      06.11. abends: rubbellos + geschenke-generator beantragt (beide „Indexierung wurde beantragt“, waren noch „nicht bekannt“) → in ein paar Tagen prüfen. 07.11.: black-friday-wichtelgeschenke beantragt („Indexierung wurde beantragt“).
       Bing nicht von Hand (Toni 03.11.): IndexNow-Job meldet Sitemap-URLs bei jedem Push – nur prüfen, dass neue Seiten in der Sitemap stehen. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
