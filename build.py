@@ -110,7 +110,7 @@ FOOTER = '''<footer>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li></ul></details>
-    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
+    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
@@ -2167,6 +2167,33 @@ def wunsch_page():
          crumb='Wunschzettel', playful=True)
 
 
+def wissen_pages():
+    """Wissens-Seiten aus wissen.py (08.11.): Anleitung, Was ist ein Wichtel, Varianten, kleine Gruppen, per Post."""
+    from wissen import WISSEN
+    for w in WISSEN:
+        b = w['body']
+        b = b.replace('<!--CTA-->', CTA).replace('<!--VIDEO_ERKLAERT-->', video_block(VIDEO_ERKLAERT))
+        b = b.replace('<!--VIDEO_KINDER-->', video_block(VIDEO_KINDER)).replace('<!--ERKL_KIND-->', erkl_box('kind', link=False))
+        lds = []
+        if w.get('schritte'):
+            b = b.replace('<!--SCHRITTE-->', '<ol class="schritte">' + ''.join(f'<li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in w['schritte']) + '</ol>')
+            lds.append({'@context': 'https://schema.org', '@type': 'HowTo', 'name': w['h1'], 'description': w['desc'],
+                        'step': [{'@type': 'HowToStep', 'position': n + 1, 'name': t, 'text': x} for n, (t, x) in enumerate(w['schritte'])]})
+        faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in w['faq'])
+        lds.append({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in w['faq']]})
+        body = f'''<article>
+<h1>{esc(w['h1'])}</h1>
+{ai_photo(*w['photo'])}
+<p class="lead">{esc(w['lead'])}</p>
+{b}
+
+<h2>Häufige Fragen</h2>
+{faq}
+</article>'''
+        page(w['path'], w['title'], w['desc'], body, extra=ld(*lds), crumb=w['crumb'], mascot=w['mascot'])
+
+
 def history_page():
     body = f'''<article>
 <h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
@@ -2193,6 +2220,8 @@ def history_page():
 {CTA}
 <p>Passende Reime für die Karte: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Ideen fürs Geschenk: <a href="/geschenkfinder/">Geschenkfinder</a></p>
 </article>'''
+    body = body.replace('<p>Passende Reime für die Karte:', '<p>Mehr Wichtel-Wissen: <a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a> · '
+                        '<a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a> · <a href="/wichteln-varianten/">12 Wichtel-Varianten</a></p>\n<p>Passende Reime für die Karte:', 1)
     page('/woher-kommt-wichteln/', 'Woher kommt Wichteln? Julklapp, Secret Santa & Co.',
          'Woher kommt der Brauch des Wichtelns? Wichtel im Volksglauben, der Julklapp aus Skandinavien und Norddeutschland, Secret Santa und Engerl-Bengerl kurz erklärt.', body,
          crumb='Woher kommt Wichteln?', mascot='lupe')
@@ -2360,7 +2389,8 @@ BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' 
 # Sichtbare FAQ und FAQPage-Daten kommen aus dieser einen Liste (Antworten dürfen Links enthalten)
 FAQ = [
     ('Was ist Wichteln?', ERKL_GROSS + ' Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule. ' + LINK_GROSS
-     + ' · Für Kinder: <a href="/onni-adventskalender/#was-ist-ein-wichtel">Was ist ein Wichtel? (Video, 2:42)</a>'),
+     + ' · Für Kinder: <a href="/onni-adventskalender/#was-ist-ein-wichtel">Was ist ein Wichtel? (Video, 2:42)</a>'
+     + ' · Regeln Schritt für Schritt: <a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a>'),
     ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
     ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>'),
     ('Wie läuft Wichteln ab?', 'In 5 Schritten: 1. Gruppe zusammenstellen. 2. Budget und Termin für die Bescherung festlegen. 3. Auslosen, wer wen beschenkt – zum Beispiel hier online. 4. Geschenk besorgen, verpacken und mit dem Namen des Beschenkten beschriften. 5. Bescherung: Alle Geschenke werden gemeinsam übergeben und ausgepackt. Ob ihr danach verratet, wer wessen Wichtel war, entscheidet ihr.'),
@@ -2451,7 +2481,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2546,6 +2576,7 @@ def main():
     generator_page()
     rubbellos_page()
     history_page()
+    wissen_pages()
     door_page()
     onni_kalender_page()
     ausmal_page()

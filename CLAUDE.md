@@ -242,6 +242,7 @@ Antworten auf Deutsch.
 - Erklärvideos auf der Website (Toni 08.11.: nur selbst gehostet, kein YouTube-Link/-Einbettung – Besucher sollen auf der Seite bleiben): `video_block(v)`
   mit `VIDEO_ERKLAERT` (/woher-kommt-wichteln/ unter dem Lead) und `VIDEO_KINDER` (/onni-adventskalender/#was-ist-ein-wichtel unter dem Kalender);
   Dateien `fotos/video-*.mp4` (540×960, crf 28) + `-poster.webp`, laden erst beim Klick.
+- `wissen.py` + `wissen_pages()` (08.11., Toni: „was hilft, sind Seiten wie Was ist ein Wichtel / Wie wichtelt man“): 5 Wissens-Seiten `/wie-funktioniert-wichteln/` (Anleitung 6 Schritte + HowTo-Schema, 10 Regeln), `/was-ist-ein-wichtel/` (Wort, Aussehen, Tomte/Nisse/Heinzelmännchen, Kinderkasten + Kindervideo), `/wichteln-varianten/` (12 Spielarten), `/wichteln-zu-dritt/`, `/wichteln-per-post/`; je FAQPage, og-Bild, Fuß „Spiele & Anlässe“, Sitemap 37 URLs. Platzhalter <!--CTA-->, <!--VIDEO_…-->, <!--ERKL_KIND-->, <!--SCHRITTE-->. Neue Seite = Eintrag in WISSEN + Sitemap + render-og.js.
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
   Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
