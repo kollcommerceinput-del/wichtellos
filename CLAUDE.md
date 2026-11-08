@@ -223,6 +223,12 @@ Antworten auf Deutsch.
   (neu: `klopfen-tuer.mp3`, `handy-ton.mp3`), keine Musik. 08.11. YouTube youtube.com/shorts/-FtaIxCICVw (nicht für Kinder, KI „Ja“, öffentlich).
   YouTube: anklickbare Links + eigenes Vorschaubild erst nach Identitätsbestätigung (youtube.com/verify, Toni) → Links ohne https:// schreiben.
   Upload-Standard-Tags sind Kinder-Tags (Onni) → bei Nicht-Kinder-Videos entfernen. Videos > 10 MB lädt Toni per Drag & Drop hoch.
+- `marketing/reel/render-video-wichtel-kinder.js` → `wichtel-kinder/video-wichtel-kinder.mp4` (2:42, Toni 08.11., Text von Toni gekürzt: nur den Wichtel
+  erklären, keine Sagen/Heinzelmännchen – Kinder hätten Fragen): 45 Bilder aus den Onni-Folgen (mehrere je Szene, Toni: „mehr Bilder“), Vorlesestimme puck
+  TEMPO 1.0, Tonlagen + leise Geräusche, Schluss Abo-Bitte über die Eltern + Wichtelnamen, letztes Bild 1,5 s länger (Toni: „sofort Schluss ist schlecht“).
+  08.11. YouTube youtube.com/shorts/bsDVOosOR74 (für Kinder, KI „Ja“, öffentlich).
+  Upload > 10 MB: Datei mit `split -b 9400000` teilen, je Teil eigenes `<input type=file>` per JS + file_upload (einzeln, nicht im Batch!),
+  dann per JS `new File(teile)` → YouTube-Input; vorher Größe prüfen.
   Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.) gerendert, noch nicht veröffentlicht.
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
