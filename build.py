@@ -440,7 +440,7 @@ def gift_page(budget):
 {tips}
 </ul>
 {'<p>Wichtelt ihr im Team? Budget, Regeln und Ablauf findest du unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</p>' if budget <= 15 else ''}
-<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 {CTA}
 </article>'''
     page(path, g['title'], g['desc'], body, crumb=f'Wichtelgeschenke unter {budget} Euro')
@@ -517,7 +517,7 @@ def finder_page():
 {cards}
 </div>
 <p class="hint">Bei Geschenken für Kinder bitte die Altersangabe auf der Verpackung beachten, zum Beispiel wegen verschluckbarer Kleinteile.</p>
-<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 {CTA}
 </article>'''
     page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter & Budget',
@@ -555,7 +555,7 @@ def kids_page():
   <li>Kinder freuen sich oft mehr über etwas zum Spielen oder Basteln als über reine Deko.</li>
 </ul>
 <p>Zum Ausmalen: <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbilder zum Ausdrucken</a> – kostenlos als PDF.</p>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
     page('/wichtelgeschenke-fuer-kinder/', 'Wichtelgeschenke für Kinder: Ideen von 3 bis 12 & für Teens',
          'Wichtelgeschenke für Kinder und Teenager: passende Ideen für Kindergarten, Schule und Verein – sortiert nach Alter, mit Tipps zu Budget und Sicherheit.',
@@ -597,7 +597,7 @@ def diy_page():
 {cards}
 </div>
 <p><a class="more-link" href="/geschenkfinder/?mag=kreativ">Alle Bastel- und Kreativ-Ideen im Geschenkfinder →</a></p>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
     page('/wichtelgeschenke-selber-machen/', f'Wichtelgeschenke selber machen: {len(DIY)} Ideen mit Anleitung',
          'Wichtelgeschenke selber machen: Backmischung im Glas, Badesalz, gebrannte Mandeln und mehr – einfache Anleitungen plus Bastelsets für gemütliche Abende.',
@@ -717,7 +717,7 @@ def scrap_page():
 <div class="idea-grid">
 {buy_cards}
 </div>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
     page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen fürs Büro',
          'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body,
@@ -911,7 +911,7 @@ def supplies_block(items=None, title='Das brauchst du noch für die Bescherung',
   <p>{esc(x)}</p>
   {product_links(*r)}
 </div>''' for t, x, *r in (items or SUPPLIES))
-    disc = '\n<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>' if note else ''
+    disc = '\n<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>' if note else ''
     return f'''<h2>{esc(title)}</h2>
 <div class="idea-grid">
 {cards}
@@ -1054,7 +1054,7 @@ Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wi
 <div class="idea-grid">
 {mal_shop}
 </div>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 
 <h2>Und jetzt: wichteln!</h2>
 <p>Für Familie, Klasse oder Kita: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link. Für Kinder ohne Handy gibt es Lose zum Ausdrucken, bei denen der Name innen steht.</p>
@@ -1200,7 +1200,7 @@ def advent_page():
 
 {chr(10).join(secs)}
 
-<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 
 <h2 id="adventskalender-wichteln">Idee: Adventskalender-Wichteln</h2>
 <p>Statt eines großen Geschenks zur Bescherung beschenkt ihr euch den ganzen Dezember: Jeder zieht einen Namen und füllt für diese Person einen kleinen Kalender – zum Beispiel 24 Kleinigkeiten für zusammen 15–20 €. Für Büros reichen auch 5 Türchen für die Arbeitstage einer Woche.</p>
@@ -1229,7 +1229,7 @@ def idea_sections(groups, prefix):
     return '\n\n'.join(secs), jump, n
 
 
-DISC_SEARCH = '<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>'
+DISC_SEARCH = '<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>'
 
 
 def themen_pages():
@@ -1397,7 +1397,7 @@ def zubehoer_page():
 
 {sections}
 
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts. Die Links führen zur Amazon-Suche, damit du Größe, Preis und Bewertungen selbst vergleichen kannst.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 <p class="hint">Sicherheit geht vor: Miniaturen sind oft verschluckbar – bei Kindern unter 3 Jahren außer Reichweite aufstellen.</p>
 
 <h2>Und für die Großen: wichteln!</h2>
@@ -1589,7 +1589,7 @@ def door_page():
 {shop}
 </div>
 <p><b>Noch mehr Ideen:</b> Möbel, Licht, Wichtel-Post bis zum leuchtenden Wichteldorf findest du beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>. Fertige Kalender für Kinder und Erwachsene: <a href="/adventskalender-ideen/">Adventskalender-Ideen</a>.</p>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 
 <h2>Und für die Großen: Wichteln in der Familie</h2>
 <p>Während der Wichtel bei den Kindern Quatsch macht, können die Erwachsenen selbst wichteln: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
@@ -1847,7 +1847,7 @@ def generator_page():
   <li><b>Für jeden Anlass:</b> {anl_links}</li>
 </ul>
 <p>Zum Wichteln gibt es außerdem den <a href="/geschenkfinder/">Wichtel-Geschenkfinder</a> mit Filtern nach Alter und Budget und die Seiten <a href="/geschenke-fuer-maenner/">Geschenke für Männer</a> und <a href="/geschenke-fuer-frauen/">Geschenke für Frauen</a>.</p>
-<p class="disclosure">* Werbelinks: Die Links führen zu passenden Suchergebnissen bei Amazon. Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
     page('/geschenke-generator/', 'Geschenke-Generator: Geschenkidee in 3 Klicks für jeden Anlass',
          f'Geschenkideen per Zufall: Anlass, Person und Budget wählen und 3 Geschenk-Lose freirubbeln – {n} Ideen für Geburtstag, Weihnachten, Muttertag, Hochzeit & mehr. Kostenlos, ohne Anmeldung.',
@@ -1937,7 +1937,7 @@ def wunsch_page():
   <p id="wz-s-group" class="hint"></p>
   <ol id="wz-s-list" class="wz-s-list"></ol>
   <p id="wz-s-x" class="tip" hidden></p>
-  <p class="disclosure">* Werbelinks: Kaufst du darüber ein, erhalten wir eine kleine Provision – für dich ändert sich am Preis nichts.</p>
+  <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="onni-says"><img src="/fotos/onni/sticker-lupe.webp" width="64" height="64" alt=""><span><b>Onni</b> meint: Ein Wunsch ist eine Idee, kein Muss – eine kleine Überraschung darf es immer sein.</span></p>
   <p><a class="btn-secondary" href="/wunschzettel/">✍️ Eigenen Wunschzettel schreiben</a></p>
 </div>
@@ -1951,7 +1951,7 @@ def wunsch_page():
   <p class="gr-label">Deine Wünsche</p>
   <div id="wz-list" class="wz-list"></div>
   <label>Bitte nicht … (optional)<input id="wz-x" maxlength="80" placeholder="z. B. Süßigkeiten, Duftkerzen"></label>
-  <p id="wz-err" class="error" hidden>Bitte trag mindestens einen Wunsch ein.</p>
+  <p id="wz-err" class="error" role="alert" hidden>Bitte trag mindestens einen Wunsch ein.</p>
   <p><button type="button" id="wz-wa" class="btn-primary big">💬 Per WhatsApp in die Gruppe schicken</button></p>
   <div class="row2">
     <button type="button" id="wz-copy" class="btn-secondary">📋 Text + Link kopieren</button>

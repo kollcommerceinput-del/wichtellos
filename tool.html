@@ -14,7 +14,7 @@
       <div class="hero-text">
         <h1>Wichteln online auslosen</h1>
         <p class="lead">Der kostenlose Wichtelgenerator: ohne Anmeldung, in 1 Minute. Jeder bekommt seinen eigenen geheimen Link – per WhatsApp, E-Mail oder zum Kopieren.</p>
-        <p class="hero-btns"><a class="btn-primary" href="#form">🎲 Los geht’s</a> <a class="btn-ghost" href="#so-gehts">▶ So geht’s in 25 s</a></p>
+        <p class="hero-btns"><a class="btn-primary" href="#wer" id="start-btn">🎲 Los geht’s</a> <a class="btn-ghost" href="#so-gehts">▶ So geht’s in 25 s</a></p>
         <p id="last-wrap" class="last-wrap" hidden><button type="button" id="show-last" class="btn-ghost">↩ Deine letzte Auslosung<span id="last-name"></span> – Links wieder anzeigen</button></p>
       </div>
       <span class="hero-ki">Bild: KI-generiert</span>
@@ -52,7 +52,7 @@
         </label>
       </div>
 
-      <div class="card">
+      <div class="card" id="wer">
         <img class="step-onni" src="/fotos/onni/sticker-jubel.webp" alt="" width="512" height="512" loading="lazy"><h2>2. Wer macht mit?</h2>
         <p class="hint">Mindestens 3 Personen, jeder Name nur einmal. Mit <b>💡 Tipp</b> kannst du pro Person einen Hinweis hinterlegen (z. B. „mag Tee, liebt Katzen“) – den sieht nur, wer diese Person zieht.</p>
         <p class="hint">📋 Ganze Liste? Einfach in ein Namensfeld einfügen – z. B. aus Excel, Outlook, Teams oder WhatsApp.</p>
@@ -79,14 +79,14 @@
       <p class="privacy-note">🔒 Eure Namen landen nicht auf unserem Server – die Auslosung passiert in deinem Browser.</p>
     </form>
 
-    <aside class="gift-teaser">
+    <div class="gift-teaser">
       <img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy">
       <div>
         <p class="gt-title">Schon alle Weihnachtsgeschenke zusammen? 🎄</p>
         <p>Für Mama, Kollegen oder das Patenkind: über 100 Ideen nach Alter und Budget – mit einem Klick bei Amazon.</p>
         <a class="btn-primary" href="/geschenkfinder/">Jetzt Ideen entdecken →</a>
       </div>
-    </aside>
+    </div>
     <div class="ad-slot">Anzeige (Platzhalter)</div>
 
 <!--FAQ-->
@@ -95,7 +95,7 @@
 
   <!-- Ansicht 2: Ergebnis mit Links -->
   <section id="view-result" hidden>
-    <h2 class="h1">Ausgelost! 🎉</h2>
+    <h2 class="h1" id="result-title" tabindex="-1">Ausgelost! 🎉</h2>
     <p class="onni-says"><img src="/fotos/onni/sticker-jubel.webp" width="64" height="64" alt=""><span><b>Onni</b> hat für euch ausgelost – niemand hat sich selbst gezogen. Jetzt jedem seinen eigenen Link schicken!</span></p>
     <p class="lead">Schicke jeder Person <b>nur ihren eigenen</b> Link. Wer wen beschenkt, steht codiert darin.</p>
     <ul id="links" class="links"></ul>
@@ -144,7 +144,7 @@
       <p class="hello">Hallo <span id="r-name"></span>! 👋</p>
       <p>Du bist in der Wichtelgruppe <b id="r-group"></b>.</p>
       <button type="button" id="reveal-btn" class="btn-primary big">🎁 Antippen und Geheimnis lüften</button>
-      <div id="secret" class="secret" hidden>
+      <div id="secret" class="secret" tabindex="-1" hidden>
         <p>Du beschenkst:</p>
         <p class="target" id="r-target"></p>
         <p id="r-tip" class="r-tip" hidden></p>
@@ -171,7 +171,7 @@
     <a id="ideas-finder" class="more-link" href="/geschenkfinder/">🔍 Im Geschenkfinder nach Alter und Interessen filtern →</a>
     <a class="more-link" href="/wichtelgedichte/">✍️ Ein Wichtelgedicht für die Karte →</a>
     <a class="more-link" href="/wichtelgruss/">💌 Deinem Wichtel-Partner einen Gruß schicken →</a>
-    <p class="disclosure">* Werbelinks: Bei einem Kauf erhalten wir eine kleine Provision, für dich ändert sich am Preis nichts.</p>
+    <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 
     <div class="ad-slot">Anzeige (Platzhalter)</div>
 
@@ -321,6 +321,7 @@
       input.value = p.name; input.maxLength = 30;
       input.placeholder = ['z. B. Anna', 'z. B. Ben', 'z. B. Clara'][i] || 'Name';
       input.setAttribute('aria-label', `Person ${i + 1}`);
+      input.enterKeyHint = 'next'; input.autocomplete = 'off'; input.autocapitalize = 'words'; // Handy-Tastatur „Weiter“, keine Adressvorschläge (08.11.)
       input.addEventListener('input', () => { p.name = input.value; renderExclusions(); saveDraft(); });
       input.addEventListener('paste', (e) => {
         const names = splitNames((e.clipboardData || window.clipboardData).getData('text'));
@@ -573,6 +574,7 @@
     $('#redraw-confirm').hidden = true;
     show('result');
     window.scrollTo(0, 0);
+    $('#result-title').focus({ preventScroll: true }); // Screenreader: Ergebnis ansagen
   }
 
   async function copy(text) {
@@ -694,7 +696,7 @@
       const gift = $('.mascot-reveal');
       gift.classList.add('open');
       const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      setTimeout(() => { btn.hidden = true; $('#secret').hidden = false; gift.classList.add('hop'); confetti(); }, calm ? 0 : 700);
+      setTimeout(() => { btn.hidden = true; $('#secret').hidden = false; $('#secret').focus({ preventScroll: true }); gift.classList.add('hop'); confetti(); }, calm ? 0 : 700);
     });
     show('reveal');
   }
@@ -750,6 +752,13 @@
       showError(''); renderExclusions(); saveDraft();
     });
     $('#form').addEventListener('submit', (e) => { e.preventDefault(); runDraw(); });
+    // „Los geht’s“ (Analyse 08.11.): direkt zu den Namen + erstes Feld fokussieren; Gruppe/Budget/Datum bleiben darüber (Hochscrollen)
+    $('#start-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      $('#wer').scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      const first = people.find((p) => !p.name.trim());
+      focusPerson(first ? people.indexOf(first) : 0);
+    });
     $('#edit').addEventListener('click', () => { show('create'); window.scrollTo(0, 0); });
     $('#redraw').addEventListener('click', () => { $('#redraw-confirm').hidden = false; $('#redraw-yes').focus(); });
     $('#redraw-no').addEventListener('click', () => { $('#redraw-confirm').hidden = true; });
