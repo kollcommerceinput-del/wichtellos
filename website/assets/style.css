@@ -473,7 +473,7 @@ body { overflow-x: clip; }
 .gr-form h2:first-child { margin-top: 0; }
 .gr-form label { display: block; margin: 8px 0; font-weight: 600; }
 .gr-form input, .gr-form textarea { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid var(--field); border-radius: 10px; background: #fff; }
-.gr-occs { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.gr-occs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .gr-occ { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 6px; border: 2px solid var(--border); border-radius: 12px; background: #fff; font: inherit; font-size: .82rem; line-height: 1.2; cursor: pointer; color: var(--text); }
 .gr-occ img { width: 56px; height: 56px; }
 .gr-occ[aria-pressed="true"] { border-color: var(--primary); background: var(--soft); }
@@ -484,6 +484,20 @@ body { overflow-x: clip; }
 .gruss .btn-primary.big { width: 100%; }
 .gruss .row2 button, #gr-save { width: 100%; }
 @media (max-width: 760px) { .gruss { grid-template-columns: 1fr; } .gr-preview { position: static; max-width: 420px; margin: 0 auto; } }
+/* Handy: Anlässe immer 2 je Zeile, eine übrige letzte Kachel geht über die ganze Breite (Toni 08.11.) */
+@media (max-width: 760px) {
+  .gr-occs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gr-occ:last-child:nth-child(odd) { grid-column: 1 / -1; flex-direction: row; justify-content: center; gap: 10px; }
+}
+/* Handy: Leiste „Als Bild teilen“ läuft unten mit, solange man in der Karte ist (nicht bei Schritt 3) */
+.gr-bar { display: none; }
+@media (max-width: 760px) {
+  .gr-bar.on { display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,.96); box-shadow: 0 -4px 16px rgba(43,27,23,.15); }
+  .gr-bar button { flex: 1; margin: 0; padding: 12px 8px; font-size: .95rem; min-height: 48px; }
+  .gruss { padding-bottom: 72px; }
+}
+@media print { .gr-bar { display: none !important; } }
 
 /* Wunschzettel (/wunschzettel/) + Aktionen auf der Seite des geheimen Links */
 .wz-list { display: grid; gap: 8px; margin-bottom: 8px; }

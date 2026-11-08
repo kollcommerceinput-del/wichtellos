@@ -1920,6 +1920,10 @@ def gruss_page():
     <p><button type="button" id="gr-save" class="btn-secondary">💾 Bild speichern</button></p>
     <p class="hint">Die Karte entsteht nur in deinem Browser. Beim Link steckt der Text im Teil nach „#“ – er wird nie an unseren Server geschickt. Onni-Bilder: KI-generiert.</p>
   </div>
+  <div id="gr-bar" class="gr-bar" aria-label="Karte verschicken">
+    <button type="button" id="gr-bar-share" class="btn-primary">📤 Als Bild teilen</button>
+    <button type="button" id="gr-bar-wa" class="btn-secondary">💬 Link per WhatsApp</button>
+  </div>
 </div>
 
 <h2>Noch ein Geschenk dazu?</h2>

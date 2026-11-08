@@ -133,16 +133,29 @@
     const a = document.createElement('a'); a.href = URL.createObjectURL(await blob()); a.download = fname();
     document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   };
-  $('#gr-share').addEventListener('click', async () => {
+  const shareImg = async (btn) => {
     const file = new File([await blob()], fname(), { type: 'image/png' });
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       navigator.share({ files: [file] }).catch(() => {});
-    } else { await download(); flash($('#gr-share'), '✓ Gespeichert – jetzt im Chat anhängen'); }
-  });
-  $('#gr-save').addEventListener('click', download);
-  $('#gr-wa').addEventListener('click', () => {
+    } else { await download(); flash(btn, '✓ Gespeichert – jetzt im Chat anhängen'); }
+  };
+  const shareWa = () => {
     window.open('https://wa.me/?text=' + encodeURIComponent('🎁 Ein Wichtelgruß für dich: ' + link()), '_blank', 'noopener');
-  });
+  };
+  $('#gr-share').addEventListener('click', () => shareImg($('#gr-share')));
+  $('#gr-save').addEventListener('click', download);
+  $('#gr-wa').addEventListener('click', shareWa);
+
+  // Handy: mitlaufende Leiste – sichtbar, solange die Karte im Bild ist, aber nicht bei Schritt 3
+  const bar = $('#gr-bar');
+  if (bar && 'IntersectionObserver' in window) {
+    $('#gr-bar-share').addEventListener('click', () => shareImg($('#gr-bar-share')));
+    $('#gr-bar-wa').addEventListener('click', shareWa);
+    let inCard = false, atStep3 = false;
+    const upd = () => bar.classList.toggle('on', inCard && !atStep3);
+    new IntersectionObserver(([e]) => { inCard = e.isIntersecting; upd(); }, { rootMargin: "0px 0px -80px 0px" }).observe(box);
+    new IntersectionObserver(([e]) => { atStep3 = e.isIntersecting; upd(); }).observe($('#gr-share').closest('p'));
+  }
   $('#gr-copy').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(link()); flash($('#gr-copy'), '✓ Link kopiert'); }
     catch { flash($('#gr-copy'), 'Kopieren klappt hier nicht'); }

@@ -428,7 +428,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] **UX-Analyse 08.11.** (Bericht + Bilder in `G:\wichtellos-content\analysen\2026-11-ux-analyse\`, nicht ins Repo): Q1–Q5, Q7, Q8 umgesetzt
       (Felder 16 px, „Los geht’s“ → `#wer` + Fokus Namensfeld, Fokus auf Ergebnis/Geheimnis, Feldrand `--field` #998479, Fokus 3 px Grün,
       Fuß-Rechtslinks 44 px, Lupe/Farbkreise 44 px). Q6: ein einheitlicher Werbehinweis (Text aus dem Fuß, mit „Als Amazon-Partner …“) überall. Offen:
-      **bis 20.11.: Wichtelgruß – „Als Bild teilen“ weiter nach oben** (heute y≈2000 px am Handy); `tests/auslosung-stress.js` veraltet
+      Wichtelgruß 08.11. erledigt: Handy-Leiste `#gr-bar` („Als Bild teilen“ + „Link per WhatsApp“) läuft unten mit, solange die Karte im Bild ist (nicht bei Schritt 3); Anlässe am Handy 2 je Zeile, übrige letzte Kachel volle Breite, Desktop 3 je Zeile; `tests/auslosung-stress.js` veraltet
       – 08.11. angepasst (Ausschlüsse aufklappen, Rückfrage bestätigen), 300 Auslosungen 0 Fehler.
 - [x] 08.11.: Erklärungen in zwei Fassungen (Toni freigegeben): `ERKL_GROSS` (Was ist Wichteln?) + `ERKL_KIND` (Was ist ein Wichtel?, zum
       Vorlesen, nach dem Kindervideo – keine Sagen) mit Links auf eigene Video-Seiten (kein YouTube), Baustein `erkl_box(art, titel, link)`.
