@@ -1,3 +1,5 @@
+// Stresstest Auslosung: 300× auslosen mit 7 Personen + 3 Ausschlüssen, prüft Regeln und Verteilung.
+// Server vorher: cd website && python3 -m http.server 8766 – dann: node tests/auslosung-stress.js
 const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch();
@@ -7,6 +9,8 @@ const { chromium } = require('playwright');
   for (let i = 3; i < names.length; i++) await p.click('#add-person');
   const inputs = await p.$$('#people .person input');
   for (let i = 0; i < names.length; i++) await inputs[i].fill(names[i]);
+  // Ausschlüsse stecken seit 03.11. in einem zugeklappten <details> – erst aufklappen
+  await p.evaluate(() => { document.querySelector('#excl-card').open = true; });
   for (const [a, c] of [['Anna', 'Ben'], ['Clara', 'David'], ['Emil', 'Frida']]) {
     await p.selectOption('#ex-a', { label: a }); await p.selectOption('#ex-b', { label: c }); await p.click('#add-excl');
   }
@@ -14,7 +18,9 @@ const { chromium } = require('playwright');
   let bad = 0; const pairCount = {};
   const RUNS = 300;
   for (let run = 0; run < RUNS; run++) {
-    await p.click(run === 0 ? 'button[type=submit]' : '#redraw');
+    if (run === 0) await p.click('button[type=submit]');
+    else { await p.click('#redraw'); await p.click('#redraw-yes'); } // „Neu auslosen“ fragt seit 03.11. nach
+    await p.waitForFunction((n) => { const r = JSON.parse(localStorage.getItem('wichtellos-result') || 'null'); return r && r.links && r.links.length === n; }, names.length);
     const map = await p.evaluate(() => {
       const KEY = new TextEncoder().encode('wichtel-los-2026');
       const res = JSON.parse(localStorage.getItem('wichtellos-result'));
@@ -34,9 +40,10 @@ const { chromium } = require('playwright');
     if (!ok) { bad++; console.log('FEHLER', JSON.stringify(map)); }
     for (const x of g) pairCount[`${x}>${map[x]}`] = (pairCount[`${x}>${map[x]}`] || 0) + 1;
   }
-  console.log(`${RUNS} Auslosungen mit 7 Personen und 3 AusschlÃ¼ssen, Fehler: ${bad}`);
+  console.log(`${RUNS} Auslosungen mit 7 Personen und 3 Ausschlüssen, Fehler: ${bad}`);
   console.log('Wen zieht Anna (Verteilung):', Object.entries(pairCount).filter(([k]) => k.startsWith('Anna>')).map(([k, v]) => `${k.split('>')[1]}=${v}`).join(' '));
   const url = await p.evaluate(() => JSON.parse(localStorage.getItem('wichtellos-result')).links[0].url);
-  console.log('Beispiel-LinklÃ¤nge:', url.length, 'Zeichen');
+  console.log('Beispiel-Linklänge:', url.length, 'Zeichen');
   await b.close();
+  if (bad) process.exit(1);
 })();
