@@ -652,9 +652,22 @@ h2[id] { scroll-margin-top: 16px; }
 .g-bereiche { margin-top: 8px; }
 .g-bereiche summary { cursor: pointer; font-weight: 600; font-size: 15px; color: var(--primary); min-height: 44px; display: flex; align-items: center; }
 .g-bereiche .f-label { display: none; }
-.generator .g-start { margin: 18px 0 4px; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
-label.g-ohne { display: inline-flex; gap: 8px; align-items: center; margin: 0; min-height: 44px; font-size: 15px; font-weight: 600; width: auto; cursor: pointer; }
-label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-color: var(--primary); }
+.generator .g-start { margin: 18px 0 4px; }
+/* Zwei Wege (Toni 08.11.): Rubbellose oder Ideen direkt */
+.generator .g-start { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .generator .g-start { grid-template-columns: 1fr; } }
+.g-weg-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; padding: 14px 18px; min-height: 72px;
+  border-radius: var(--radius); border: 2px solid var(--primary); font: inherit; cursor: pointer; }
+.g-weg-btn b { font-size: 18px; }
+.g-weg-btn span { font-size: 14px; font-weight: 400; opacity: .9; }
+.g-weg-rubbel { background: var(--primary); color: #fff; }
+.g-weg-rubbel:hover { filter: brightness(1.08); }
+.g-weg-direkt { background: #fff; color: var(--primary); }
+.g-weg-direkt:hover { background: var(--soft); }
+.g-weg-btn:disabled { opacity: .5; cursor: wait; }
+.g-lade { margin: 8px 0 0; }
+.g-btn.g-rl { flex-direction: column; gap: 2px; background: #fff7e0; border-color: #d4a531; border-radius: 14px; padding: 8px 12px; }
+.g-btn.g-rl small { font-size: 12px; font-weight: 400; color: var(--muted); }
 .glose { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 10px 0; }
 @media (min-width: 900px) { .glose { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .generator, .rl-form { clear: both; }

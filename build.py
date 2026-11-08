@@ -2000,13 +2000,15 @@ def generator_page():
   <datalist id="g-hobby-liste">{hobby_opts}</datalist>
   <details class="g-bereiche"><summary>Oder einen Bereich wählen ({len(MAG)})</summary>
   {gen_chips('Bereich', 'mag', MAG)}</details></div>
-<p class="g-start"><button type="button" id="g-los" class="btn-primary">🎟️ 3 Geschenk-Lose ziehen</button>
-  <label class="g-ohne"><input type="checkbox" id="g-ohne"> ohne Rubbeln, gleich aufdecken</label></p>
+<div class="g-start">
+  <button type="button" id="g-los" class="g-weg-btn g-weg-rubbel"><b>🎟️ Als Rubbellose ziehen</b><span>3 Lose zum Freirubbeln – macht Spaß</span></button>
+  <button type="button" id="g-direkt" class="g-weg-btn g-weg-direkt"><b>💡 Ideen direkt zeigen</b><span>3 Ideen sofort sehen, ohne Rubbeln</span></button>
+</div>
 <section id="g-ergebnis" hidden>
   <h2 id="g-titel">Deine Geschenk-Lose</h2>
   <p id="g-hinweis" class="hint" hidden></p>
   <div id="g-lose" class="glose"></div>
-  <p class="g-unter"><button type="button" id="g-alle" class="btn-secondary">✨ Alle aufdecken</button> <button type="button" class="btn-secondary" onclick="document.getElementById('g-los').click()">🎲 3 neue Lose ziehen</button></p>
+  <p class="g-unter"><button type="button" id="g-alle" class="btn-secondary">✨ Alle aufdecken</button> <button type="button" id="g-nochmal" class="btn-secondary">🎲 3 neue Ideen ziehen</button></p>
   <p class="f-label">Ideen weiterschicken – z. B. an Geschwister, die mitschenken:</p>
   <div id="g-teilen">{share_row('', 'Geschenkideen')}</div>
 </section>
@@ -2022,7 +2024,7 @@ def generator_page():
 <h2>So funktioniert der Geschenke-Generator</h2>
 <ol>
   <li><b>Anlass, Person, Budget und Hobby wählen</b> – alles freiwillig. Je weniger du wählst, desto bunter die Lose. Das Hobby kannst du auch frei eintippen – auch wenn es nicht in der Liste steht.</li>
-  <li><b>3 Lose ziehen und freirubbeln</b> – mit dem Finger oder der Maus. Wer keine Lust aufs Rubbeln hat, setzt den Haken „ohne Rubbeln“.</li>
+  <li><b>3 Lose ziehen und freirubbeln</b> – mit dem Finger oder der Maus. Wer keine Lust aufs Rubbeln hat, tippt auf „Ideen direkt zeigen“.</li>
   <li><b>Nicht das Richtige?</b> 🎲 tauscht nur dieses eine Los. Gute Ideen kommen mit ♡ auf die Merkliste.</li>
   <li><b>Teilen:</b> Schick die Ideen per WhatsApp an alle, die mitschenken – oder verschenk eine Idee direkt als Rubbellos.</li>
 </ol>

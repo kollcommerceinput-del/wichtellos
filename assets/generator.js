@@ -8,12 +8,17 @@
   if (!box) return;
   const D = JSON.parse(box.querySelector('script[type="application/json"]').textContent);
   // Ideen kommen aus /geschenke-daten.json (08.11.: zu groß fürs HTML); bis dahin ist der Los-Knopf gesperrt
-  const losKnopf = box.querySelector('#g-los'), losText = losKnopf.textContent;
-  losKnopf.disabled = true; losKnopf.textContent = '⏳ Ideen werden geladen …';
+  const wege = [...box.querySelectorAll('.g-weg-btn')];
+  wege.forEach((b) => { b.disabled = true; });
+  const ladeHinweis = document.createElement('p');
+  ladeHinweis.className = 'hint g-lade'; ladeHinweis.textContent = '⏳ Ideen werden geladen …';
+  box.querySelector('.g-start').after(ladeHinweis);
   try { Object.assign(D, await (await fetch(D.src)).json()); } catch {
-    losKnopf.textContent = 'Ideen konnten nicht geladen werden – bitte Seite neu laden'; return;
+    ladeHinweis.textContent = 'Die Ideen konnten nicht geladen werden – bitte lade die Seite neu.'; return;
   }
-  losKnopf.disabled = false; losKnopf.textContent = losText;
+  ladeHinweis.remove();
+  wege.forEach((b) => { b.disabled = false; });
+  let direkt = false;  // Weg „Ideen direkt zeigen“ statt Rubbellose (Toni 08.11.)
   const ANL = Object.fromEntries(D.anlaesse.map((a) => [a[0], a])), MAGN = Object.fromEntries(D.mag);
   const HART = new Set(D.hart);
   const ERW = ['frau', 'mann', 'partner', 'mama', 'papa', 'oma', 'opa', 'freund', 'kollege'];
@@ -167,7 +172,7 @@
       <p class="los-knoepfe">
         <button type="button" class="g-btn g-merk" aria-pressed="${gemerkt}">${gemerkt ? '♥ Gemerkt' : '♡ Merken'}</button>
         <button type="button" class="g-btn g-neu">🎲 Neues Los</button>
-        <a class="g-btn g-rl" href="/rubbellos/?g=${encodeURIComponent(i.n)}">🎟️ Als Rubbellos verschenken</a>
+        <a class="g-btn g-rl" href="/rubbellos/?g=${encodeURIComponent(i.n)}">💌 Als Rubbellos per WhatsApp verschicken<small>Die beschenkte Person rubbelt frei, was sie bekommt</small></a>
       </p></div>`;
     div.querySelector('.g-merk').addEventListener('click', (e) => {
       let l = merkliste();
@@ -193,7 +198,7 @@
 
   const offen = [];
   const decke = (k) => {
-    if ($('#g-ohne').checked) return;
+    if (direkt) return;
     const r = window.Rubbel.decke(k.querySelector('.los-inhalt'), {
       text: 'Rubbel mich frei!',
       onReveal: () => { if (offen.every((x) => x.offen)) window.Rubbel.konfetti(); },
@@ -218,10 +223,10 @@
     gezeigt.forEach((i, s) => { const k = karte(i, s); ziel.append(k); decke(k); });
     $('#g-hinweis').textContent = hinweis;
     $('#g-hinweis').hidden = !hinweis;
-    const anl = st.anlass ? ANL[st.anlass][2] + ' ' + ANL[st.anlass][1] : 'Deine Geschenk-Lose';
+    const anl = st.anlass ? ANL[st.anlass][2] + ' ' + ANL[st.anlass][1] : direkt ? 'Deine Geschenkideen' : 'Deine Geschenk-Lose';
     $('#g-titel').textContent = anl;
     $('#g-ergebnis').hidden = false;
-    $('#g-alle').hidden = $('#g-ohne').checked;
+    $('#g-alle').hidden = direkt;
     teilen();
     $('#g-ergebnis').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -258,9 +263,10 @@
     });
   });
 
-  $('#g-los').addEventListener('click', lose);
+  $('#g-los').addEventListener('click', () => { direkt = false; lose(); });
+  $('#g-direkt').addEventListener('click', () => { direkt = true; lose(); });
+  $('#g-nochmal').addEventListener('click', lose);
   $('#g-alle').addEventListener('click', () => { offen.forEach((r) => r.aufdecken()); $('#g-alle').hidden = true; });
-  $('#g-ohne').addEventListener('change', () => { if (gezeigt.length) { if ($('#g-ohne').checked) { offen.forEach((r) => r.aufdecken()); $('#g-alle').hidden = true; } } });
   zeigeMerkliste();
   if (q.get('anlass') || q.get('fuer') || q.get('hobby') || q.get('mag')) lose();
 })();
