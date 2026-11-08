@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -730,6 +730,7 @@ def scrap_page():
 {buy_cards}
 </div>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<p>Und für den Sieger der Runde: die Tasse „Ich habe beim Schrottwichteln gewonnen.“ – bei unseren <a href="/wichtel-tassen/">Wichtel-Tassen</a>.</p>
 </article>'''
     page('/schrottwichteln/', 'Schrottwichteln: Regeln & 24 lustige Ideen fürs Büro',
          'Schrottwichteln: Die Regeln, der Ablauf mit Würfeln und 24 lustige Ideen aus Kitsch, Werbegeschenken und Retro-Fundstücken – kostenlos und nachhaltig.', body,
@@ -779,6 +780,7 @@ def office_page():
 <h2>Geschenkideen für Kollegen</h2>
 <p>Im Geschenkfinder findest du {n_office} bürotaugliche Ideen: <a class="more-link" href="/geschenkfinder/?fuer=office">Alle Ideen für Kollegen ansehen →</a></p>
 <p>Nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a></p>
+<p>Mit Augenzwinkern: <a href="/wichtel-tassen/">Wichtel-Tassen mit Spruch</a> – vom „Wichtel-Champion“ bis „Bester Wichtel der Abteilung“.</p>
 </article>'''
     page('/wichteln-im-buero/', 'Wichteln im Büro: Regeln, Budget & Ablauf fürs Team',
          'Büro-Wichteln organisieren: übliches Budget, faire Regeln, Ablauf im Homeoffice, Spiel-Varianten und Ideen für Kollegen – mit kostenloser Online-Auslosung.', body,
@@ -1419,6 +1421,77 @@ def zubehoer_page():
     page('/wichtel-zubehoer/', 'Wichtel-Zubehör: Wichteltür, Möbel, Licht & mehr',
          f'Wichtel-Zubehör für die Wichteltür: {n} Ideen von Mini-Möbeln, Licht und Wichtel-Post bis zum leuchtenden Wichteldorf – mit Links zu Amazon.',
          body, crumb='Wichtel-Zubehör', playful=True)
+
+
+# Eigener Spreadshop (08.11., Toni): wichtellos.myspreadshop.de – Kunde kauft bei sprd.net AG, wir bekommen eine Gutschrift.
+# Link = /<Artikel-Pfad>?sellable=<Motiv-ID>-<Produkt>: 31 = Tasse, 6 = Männer T-Shirt (1470 = große Tasse 440 ml).
+# Bilder: fotos/merch/tasse-NN.webp aus marketing/merch/tassen/. Neues Motiv = Zeile hier + Bild.
+SHOP_URL = 'https://wichtellos.myspreadshop.de'
+TASSEN = [
+    ('Für Gewinner und Glückspilze', [
+        (14, 'Wichtel-Champion', 'Für alle, die beim Wichteln jedes Jahr das beste Geschenk erwischen.', 'wichtel-champion-A3283492984258d6f', 'rnj98sqoic1b'),
+        (15, 'Wichtel-Legende', 'Seit Jahren dabei, nie ein schlechtes Geschenk gemacht – das verdient eine Tasse.', 'wichtel-legende-A328349280dcff4ac', 'rnj98putdygc'),
+        (16, 'Wichtel des Jahres', 'Die Auszeichnung für den Wichtel, der sich am meisten Mühe gegeben hat.', 'wichtel+des+jahres-A32834927c1313192', 'rnj98p9k1t3m'),
+        (17, 'Wichtel-König', 'Für den König der Bescherung – mit Mütze statt Krone.', 'wichtel-koenig-A328349292c6c5471', 'rnj98s2c9hf5'),
+        (18, 'Wichtel-Königin', 'Für die Königin der Bescherung – mit Mütze statt Krone.', 'wichtel-koenigin-A3283492929305c32', 'rnj98s1fygqa'),
+        (21, 'Wichtel-Glückspilz', 'Für alle, die beim Ziehen immer Glück haben.', 'wichtel-glueckspilz-A32834927e9882040', 'rnj98pkqzoe8'),
+        (20, 'Wichtel-Trophäe', 'Der Pokal für den Schreibtisch – nur mit Henkel und Kaffee drin.', 'wichtel-trophaee-A3283492907d648e8', 'rnj98rs6tc6g'),
+        (19, 'Wichtel-Beute', 'Ehrlich gesagt: Das hier ist die Beute. Und sie ist gut.', 'wichtel-beute-A32834927e7188788', 'rnj98pk2nqfc'),
+    ]),
+    ('Mit Augenzwinkern', [
+        (13, 'Lieber Wichtel, nächstes Jahr bitte einfach Bargeld.', 'Ein Wunsch, den jeder kennt – mit einem Lächeln überreicht.', 'lieber+wichtel+naechstes+jahr+bitte+bargeld-A32834927e6d65860', 'rnj98pk02rmo'),
+        (12, 'Ich hab dich lieb. Aber nur, weil ich dich gezogen hab.', 'Für den Menschen, den du beim Wichteln gezogen hast.', 'ich+hab+dich+lieb+weil+ich+dich+gezogen+hab-A3283492924350818', 'rnj98s02721k'),
+        (1, 'Ich wurde gewichtelt. Mehr gab’s nicht.', 'Das ehrlichste Wichtelgeschenk: Es sagt, was es ist.', 'ich+wurde+gewichtelt+mehr+gabs+nicht-A32823df501e96a7d', 'rngd3p4excal'),
+    ]),
+    ('Fürs Büro und fürs Schrottwichteln', [
+        (3, 'Bester Wichtel der Abteilung', 'Für Kolleginnen und Kollegen, die beim Büro-Wichteln alles geben.', 'bester+wichtel+der+abteilung-A328249a9cb4e7a0a', 'rnghny0w22oa'),
+        (7, 'Ich habe beim Schrottwichteln gewonnen.', 'Endlich ein Schrottwichtel-Gewinn, den man wirklich benutzt.', 'ich+habe+beim+schrottwichteln+gewonnen-A328249ab06ea6efc', 'rngho0ggl8n0'),
+        (8, 'Achtung: Schrottwichtel-Geschenk', 'Umtausch ausgeschlossen – passt zu jeder Schrottwichtel-Runde.', 'achtung+schrottwichtel-geschenk-A328249aae6426153', 'rngho07ee6ab'),
+    ]),
+]
+
+
+def shop_link(slug, mid, produkt):
+    return f'{SHOP_URL}/{slug}?sellable={mid}-{produkt}'
+
+
+def tassen_page():
+    secs, n = [], 0
+    for title, items in TASSEN:
+        cards = []
+        for nr, name, text, slug, mid in items:
+            n += 1
+            cards.append(f'''<div class="merch">
+  <div class="merch-img"><img src="/fotos/merch/tasse-{nr:02d}.webp" alt="Motiv „{esc(name)}“ mit dem WichtelLos-Wichtel" width="440" height="440" loading="lazy" decoding="async"></div>
+  <h3>{esc(name)}</h3>
+  <p>{esc(text)}</p>
+  <a class="btn-primary merch-btn" href="{esc(shop_link(slug, mid, 31))}" target="_blank" rel="noopener">Tasse ansehen</a>
+  <a class="merch-alt" href="{esc(shop_link(slug, mid, 6))}" target="_blank" rel="noopener">auch als T-Shirt</a>
+</div>''')
+        secs.append(f'<h2>{esc(title)}</h2>\n<div class="merch-grid">\n' + '\n'.join(cards) + '\n</div>')
+    body = f"""<article>
+<h1>Wichtel-Tassen mit Spruch: lustige Wichtelgeschenke</h1>
+<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Tassen mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld.</p>
+<p>Alle Motive gibt es in unserem eigenen Shop. Dort findest du sie auch als T-Shirt, als große Tasse, als Panoramatasse und als Weihnachtsteddy.</p>
+
+{''.join(s + chr(10) + chr(10) for s in secs)}<p class="merch-all"><a class="btn-secondary" href="{SHOP_URL}/" target="_blank" rel="noopener">Alle Produkte im WichtelLos-Shop</a></p>
+<p class="hint">Bestellung, Bezahlung und Versand laufen über Spreadshirt (sprd.net AG). Jedes Stück wird erst nach deiner Bestellung bedruckt. Preise, Lieferzeit und Rückgabe stehen im Shop. Mit jedem Kauf unterstützt du WichtelLos.</p>
+
+<h2>Welche Tasse passt zu wem?</h2>
+<ul>
+  <li><b>Büro-Wichteln:</b> „Bester Wichtel der Abteilung“ oder „Wichtel-Champion“ – beides passt auch, wenn du die Person kaum kennst. Mehr Tipps fürs Team: <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
+  <li><b>Schrottwichteln:</b> „Achtung: Schrottwichtel-Geschenk“ ist das einzige Schrottgeschenk, das wirklich benutzt wird. Regeln und Ideen: <a href="/schrottwichteln/">Schrottwichteln</a>.</li>
+  <li><b>Familie und Freunde:</b> „Ich hab dich lieb. Aber nur, weil ich dich gezogen hab.“ – frech, aber mit Herz.</li>
+  <li><b>Budget:</b> Eine Tasse passt gut in ein Wichtel-Budget von 20 €. Weitere Ideen: <a href="/wichtelgeschenke-unter-20-euro/">Wichtelgeschenke unter 20 €</a>.</li>
+</ul>
+
+<h2>Noch nicht ausgelost?</h2>
+<p>Erst die Namen, dann die Tasse: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
+{CTA}
+</article>"""
+    page('/wichtel-tassen/', 'Wichtel-Tassen mit Spruch: lustige Wichtelgeschenke',
+         f'Wichtel-Tassen mit Spruch: {n} lustige Motive mit dem WichtelLos-Wichtel – Wichtel-Champion, Schrottwichtel-Geschenk, Bargeld-Wunsch. Auch als T-Shirt.',
+         body, crumb='Wichtel-Tassen', playful=True)
 
 
 # Onnis Adventskalender (05.11., Toni): 24 Video-Geschichten ab 1.12. – Seite vorab live, damit Google sie bis Dezember kennt.
@@ -2162,9 +2235,10 @@ def legal_pages():
 <h2>5. Speicherung im Browser (Local Storage)</h2>
 <p>Damit dein Entwurf und die zuletzt erzeugten Links nicht verloren gehen, werden sie im Local Storage deines Browsers gespeichert. Dasselbe gilt für die Merkliste im Geschenke-Generator (/geschenke-generator/). Diese Daten bleiben auf deinem Gerät und werden nicht an uns übertragen. Du kannst sie jederzeit über die Einstellungen deines Browsers löschen. Die Speicherung ist für die von dir gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG).</p>
 
-<h2>6. Werbelinks zu Amazon und Link zu Ko-fi</h2>
+<h2>6. Werbelinks zu Amazon, Links zu Ko-fi und zu unserem Shop</h2>
 <p>Mit Sternchen (*) gekennzeichnete Links führen zu Amazon.de. Auf unserer Website werden dabei keine Cookies gesetzt. Erst wenn du einen solchen Link anklickst, verarbeitet Amazon (Amazon Europe Core S.à r.l., Luxemburg) Daten, unter anderem mithilfe von Cookies, um eine Provision zuordnen zu können. Näheres findest du in der Datenschutzerklärung von Amazon.</p>
 <p>Der Knopf „WichtelLos unterstützen“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
+<p>Die Links auf der Seite „Wichtel-Tassen“ (/wichtel-tassen/) führen zu unserem Shop bei Spreadshirt (wichtellos.myspreadshop.de). Auch das sind einfache Links: Auf unserer Website wird nichts von Spreadshirt geladen. Erst wenn du einen Link anklickst, gilt die Datenschutzerklärung von Spreadshirt. Bestellst du dort, ist die sprd.net AG (Leipzig) dein Vertragspartner und verarbeitet deine Bestelldaten; wir erhalten keine Daten von dir.</p>
 
 <h2>7. Links zu Instagram, Pinterest, TikTok und YouTube</h2>
 <p>Im Fußbereich und auf der Seite „Onnis Adventskalender“ verlinken wir auf unsere Profile bei Instagram, Pinterest, TikTok und YouTube. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
@@ -2275,7 +2349,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2374,6 +2448,7 @@ def main():
     onni_kalender_page()
     ausmal_page()
     zubehoer_page()
+    tassen_page()
     advent_page()
     themen_pages()
     invite_page()

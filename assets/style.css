@@ -716,3 +716,20 @@ label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-co
 .bf-banner[hidden] { display: none; }
 .bf-banner b { color: #f2b705; }
 .bf-cta { text-align: center; margin: 16px 0; }
+
+/* Wichtel-Tassen (eigener Spreadshop, 08.11.) */
+.merch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.merch { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; text-align: center; }
+.merch-img { background: #fff; border-radius: 10px; aspect-ratio: 5 / 4; display: flex; align-items: center; justify-content: center; padding: 10px; margin-bottom: 10px; }
+.merch-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; }
+.merch h3 { margin: 0 0 6px; font-size: 17px; }
+.merch p { margin: 0 0 12px; font-size: 16px; color: var(--muted); flex: 1; }
+.merch-btn { min-height: 44px; }
+.merch-alt { display: inline-block; margin-top: 6px; padding: 10px 0; font-size: 15px; }
+.merch-all { text-align: center; margin: 22px 0 8px; }
+@media (max-width: 500px) {
+  .merch-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .merch { padding: 10px; }
+  .merch h3 { font-size: 15px; }
+  .merch p { font-size: 15px; }
+}

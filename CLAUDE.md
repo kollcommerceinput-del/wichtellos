@@ -84,6 +84,10 @@ Antworten auf Deutsch.
   im Klartext + Link. Pin `pins3d/pin3d-wunschzettel.png`. Sitemap 23 URLs. Pin-Texte in `teilen-texte.md`.
   03.11. beide Pins veröffentlicht (Ideen & Reels, KI-Label, Alt-Text): wichtelgruss (Wichteln, Weihnachtsgrüße, Weihnachtskarten),
   wunschzettel (Wichteln, Wichtelgeschenke, Geschenkideen für Weihnachten – „Wunschzettel“ gibt es als Thema nicht).
+- `build.py`: `tassen_page()` – `/wichtel-tassen/` (08.11., Toni): 14 Spreadshop-Motive in 3 Gruppen (`TASSEN`), Knopf „Tasse ansehen“ +
+  „auch als T-Shirt“. Link `shop_link(slug, id, produkt)` = `/<Artikel>?sellable=<Motiv-ID>-<Produkt>` (31 Tasse, 6 Männer-Shirt, 1470 große Tasse).
+  Bilder `fotos/merch/tasse-NN.webp` (aus `marketing/merch/tassen/`). Kein Werbe-Sternchen (eigener Shop). Fuß „Geschenkideen“, Büro, Schrottwichteln,
+  Datenschutz Abschn. 6. `/wichtel-t-shirts/` erst nach dem Shirt-Upload. Neues Motiv = Zeile in `TASSEN` + Bild.
 - `supplies_block(items, title, note)` mit Listen `SUPPLIES` (Würfeln/Büro/Feier), `WRAP` (Seite des geheimen Links, Platzhalter
   `<!--VERPACKEN-->` in tool.html, „Schön verpacken – und geheim bleiben“) und `GRUSS_SHOP` (/wichtelgruss/ „Kleine Grüße zum Anfassen“) (03.11.)
 - `build.py`: `advent_page()` – `/adventskalender-ideen/` (03.11.): `ADVENT`, 28 Ideen in 5 Gruppen (Büro, Genießer, Erwachsene,
