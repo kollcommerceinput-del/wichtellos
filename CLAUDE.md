@@ -229,7 +229,10 @@ Antworten auf Deutsch.
   08.11. YouTube youtube.com/shorts/bsDVOosOR74 (für Kinder, KI „Ja“, öffentlich).
   Upload > 10 MB: Datei mit `split -b 9400000` teilen, je Teil eigenes `<input type=file>` per JS + file_upload (einzeln, nicht im Batch!),
   dann per JS `new File(teile)` → YouTube-Input; vorher Größe prüfen.
-  Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.) gerendert, noch nicht veröffentlicht.
+  Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.): 08.11. Instagram-Story (Business Suite) + Pinterest-Video-Pin
+  (Wichtelgeschenke für Kinder, Link /onni-adventskalender/, Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label). TikTok: Toni.
+  Toni 08.11.: Insta/TikTok nur kurze Fassungen (lange Videos schaut dort keiner) – `render-ausschnitte.js` schneidet `ausschnitte/julklapp.mp4` (30 s)
+  und `wichtel-nachts.mp4` (34 s) aus den langen Videos + Schlussbild „auf YouTube @WichtelLos“; noch nicht gepostet.
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
   Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
