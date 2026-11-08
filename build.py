@@ -181,12 +181,24 @@ def ai_photo(name, alt, sizes=((480, 720), (800, 1200)), cls='photo photo-ai'):
 VIDEO = {'src': '/fotos/wichtel3d-video.mp4', 'poster': '/fotos/wichtel3d-video-poster.webp', 'dauer': 'PT26S', 'datum': '2026-11-02'}
 
 
-def video_block():
-    return (f'<figure class="video-wichtel"><button type="button" data-video="{VIDEO['src']}" '
-            f'aria-label="Video abspielen: Wichteln in 25 Sekunden erklärt">'
-            f'<img src="{VIDEO['poster']}" width="540" height="960" alt="Plüsch-Wichtel hält einen Umschlag – Wichteln? Ganz simpel." loading="lazy" decoding="async">'
+def video_block(v=None):
+    # v: dict mit src/poster/label/alt/caption; ohne v = Erklärvideo der Startseite. Video lädt erst beim Klick (data-video, site.js), kein YouTube.
+    v = v or {**VIDEO, 'label': 'Wichteln in 25 Sekunden erklärt', 'alt': 'Plüsch-Wichtel hält einen Umschlag – Wichteln? Ganz simpel.',
+              'caption': 'So geht’s in 25 Sekunden · KI-generiert'}
+    return (f'<figure class="video-wichtel"><button type="button" data-video="{v['src']}" '
+            f'aria-label="Video abspielen: {v['label']}">'
+            f'<img src="{v['poster']}" width="540" height="960" alt="{v['alt']}" loading="lazy" decoding="async">'
             f'<span class="play" aria-hidden="true">▶</span></button>'
-            f'<figcaption>So geht’s in 25 Sekunden · KI-generiert</figcaption></figure>')
+            f'<figcaption>{v['caption']}</figcaption></figure>')
+
+
+# Erklärvideos (Toni 08.11.): direkt bei uns statt YouTube-Einbettung – Besucher bleiben auf der Seite, keine Daten an Google
+VIDEO_ERKLAERT = {'src': '/fotos/video-wichteln-erklaert.mp4', 'poster': '/fotos/video-wichteln-erklaert-poster.webp',
+                  'label': 'Was ist Wichteln? Woher kommt der Brauch?', 'alt': 'Plüsch-Wichtel in einer Werkstatt, darüber die Frage „Was ist Wichteln?“',
+                  'caption': 'Was ist Wichteln? Einfach erklärt in 2 Minuten · Bilder und Stimme KI-generiert'}
+VIDEO_KINDER = {'src': '/fotos/video-wichtel-kinder.mp4', 'poster': '/fotos/video-wichtel-kinder-poster.webp',
+                'label': 'Was ist ein Wichtel? Für Kinder erklärt', 'alt': 'Kleiner Plüsch-Wichtel Onni neben einem Tannenzapfen im Schnee',
+                'caption': 'Was ist ein Wichtel? Für Kinder erklärt (2:42) · Bilder und Stimme KI-generiert'}
 
 
 def video_ld():
@@ -1480,6 +1492,10 @@ def onni_kalender_page():
 <p class="follow-row">Folge Onni, dann verpasst du keine Folge:<br>
     {social_links()}</p>
 
+<h2 id="was-ist-ein-wichtel">Was ist eigentlich ein Wichtel?</h2>
+<p>Bis das erste Türchen aufgeht: Hier erfahren Kinder, wie ein Wichtel aussieht, wo er wohnt und was er nachts macht, wenn alle schlafen.</p>
+{video_block(VIDEO_KINDER)}
+
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
   <li><b>Jeden Abend eine Folge:</b> etwa anderthalb Minuten, mit Bildern, Erzählstimme und kleinen Geräuschen – genau richtig vor dem Schlafengehen.</li>
@@ -1983,6 +1999,7 @@ def history_page():
 <h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
 {ai_photo('wichtel3d-lupe', 'Plüsch-Wichtel betrachtet ein kleines Geschenk durch eine große Lupe')}
 <p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
+{video_block(VIDEO_ERKLAERT)}
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
 <p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>
