@@ -647,6 +647,11 @@ h2[id] { scroll-margin-top: 16px; }
 @media print { .ak-grid, .ak-player, .ak-msg { display: none; } }
 
 /* Geschenke-Generator + Rubbellos (06.11.) */
+.generator .g-sel { margin: 0 0 14px; }
+.generator .g-sel select, .generator .g-sel input { display: block; width: 100%; max-width: 520px; margin-top: 6px; font-size: 16px; min-height: 48px; }
+.g-bereiche { margin-top: 8px; }
+.g-bereiche summary { cursor: pointer; font-weight: 600; font-size: 15px; color: var(--primary); min-height: 44px; display: flex; align-items: center; }
+.g-bereiche .f-label { display: none; }
 .generator .g-start { margin: 18px 0 4px; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
 label.g-ohne { display: inline-flex; gap: 8px; align-items: center; margin: 0; min-height: 44px; font-size: 15px; font-weight: 600; width: auto; cursor: pointer; }
 label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-color: var(--primary); }

@@ -1964,20 +1964,37 @@ def gen_chips(label, key, options):
 
 def generator_page():
     """Geschenke-Generator fürs ganze Jahr (Toni 06.11.): 3 Fragen → 3 Geschenk-Lose zum Freirubbeln."""
-    from geschenke import ALLE_IDEEN, ANLAESSE, BUDGETS as G_BUDGETS, MAG, WER
-    data = json.dumps({'ideen': ALLE_IDEEN, 'anlaesse': ANLAESSE, 'mag': MAG}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    n = len(ALLE_IDEEN)
+    from geschenke import ALLE_IDEEN, ANLAESSE, ANL_HART, BUDGETS as G_BUDGETS, MAG, WER
+    from hobbys import HOBBYS, BAUSTEINE
+    data = json.dumps({'ideen': ALLE_IDEEN, 'anlaesse': ANLAESSE, 'mag': MAG, 'hart': ANL_HART, 'hobbys': HOBBYS, 'bausteine': BAUSTEINE},
+                      ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    # Zahl wie im Browser: handverlesene + Hobby × Baustein, doppelte Namen nur einmal
+    namen = {i['n'] for i in ALLE_IDEEN}
+    for h in HOBBYS:
+        for b in BAUSTEINE.get(h[3], BAUSTEINE['a']):
+            namen.add(b[0].replace('{L}', h[0]).replace('{K}', h[1]))
+    n = len(namen)
+    n_rund = f'über {n // 100 * 100:,}'.replace(',', '.')
     anl_links = ' · '.join(f'<a href="/geschenke-generator/?anlass={k}">{e} {esc(t)}</a>' for k, t, e in ANLAESSE)
+    anl_opts = ''.join(f'<option value="{k}">{e} {esc(t)}</option>' for k, t, e in ANLAESSE)
+    hobby_opts = ''.join(f'<option value="{esc(h[0])}">' for h in sorted(HOBBYS, key=lambda h: h[0].lower())) + ''.join(f'<option value="{esc(t)}">' for _, t in MAG)
+    hobby_bsp = ' · '.join(f'<a href="/geschenke-generator/?hobby={quote(h)}">{esc(h)}</a>' for h in
+                           ['Angeln', 'Kaffee', 'Harry Potter', 'Yoga', 'Grillen', 'Gaming', 'Katzen', 'Fußball', 'Stricken', 'Camping', 'Lego', 'Wein'])
     body = f'''<article>
 <h1>Geschenke-Generator: Geschenkidee in 3 Klicks – für jeden Anlass</h1>
 {ai_photo('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife')}
-<p class="lead"><b>Onni bringt dir Geschenkideen!</b> Keine Idee für Geburtstag, Muttertag, Hochzeit oder Weihnachten? Wähle Anlass, Person und Budget – und zieh drei <b>Geschenk-Lose zum Freirubbeln</b>. Aus {n} handverlesenen Ideen, ohne Anmeldung, ohne KI und ohne dass etwas gespeichert wird.</p>
+<p class="lead"><b>Onni bringt dir Geschenkideen!</b> Keine Idee für Geburtstag, Jahrestag, Taufe, Ruhestand oder Weihnachten? Wähle Anlass, Person, Budget und Hobby – und zieh drei <b>Geschenk-Lose zum Freirubbeln</b>. {n_rund.capitalize()} Geschenkideen zu {len(HOBBYS)} Hobbys und {len(ANLAESSE)} Anlässen – ohne Anmeldung, ohne KI und ohne dass etwas gespeichert wird.</p>
 <div class="card generator" data-generator>
 <script type="application/json">{data}</script>
-{gen_chips('Welcher Anlass?', 'anlass', [(k, f'{e} {t}') for k, t, e in ANLAESSE])}
+<div class="f-group g-sel"><label class="f-label" for="g-anlass">Welcher Anlass?</label>
+  <select id="g-anlass"><option value="">Egal / anderer Anlass</option>{anl_opts}</select></div>
 {gen_chips('Für wen?', 'fuer', WER)}
 {gen_chips('Budget', 'budget', [(str(b), f'bis {b} €') for b in G_BUDGETS])}
-{gen_chips('Was mag die Person?', 'mag', MAG)}
+<div class="f-group g-sel"><label class="f-label" for="g-hobby">Was mag die Person? <span class="hint">(Hobby tippen oder aus der Liste wählen)</span></label>
+  <input id="g-hobby" list="g-hobby-liste" maxlength="40" autocomplete="off" placeholder="z. B. Angeln, Kaffee, Harry Potter, Yoga …">
+  <datalist id="g-hobby-liste">{hobby_opts}</datalist>
+  <details class="g-bereiche"><summary>Oder einen Bereich wählen ({len(MAG)})</summary>
+  {gen_chips('Bereich', 'mag', MAG)}</details></div>
 <p class="g-start"><button type="button" id="g-los" class="btn-primary">🎟️ 3 Geschenk-Lose ziehen</button>
   <label class="g-ohne"><input type="checkbox" id="g-ohne"> ohne Rubbeln, gleich aufdecken</label></p>
 <section id="g-ergebnis" hidden>
@@ -1999,22 +2016,23 @@ def generator_page():
 
 <h2>So funktioniert der Geschenke-Generator</h2>
 <ol>
-  <li><b>Anlass, Person, Budget wählen</b> – alles freiwillig. Je weniger du wählst, desto bunter die Lose.</li>
+  <li><b>Anlass, Person, Budget und Hobby wählen</b> – alles freiwillig. Je weniger du wählst, desto bunter die Lose. Das Hobby kannst du auch frei eintippen – auch wenn es nicht in der Liste steht.</li>
   <li><b>3 Lose ziehen und freirubbeln</b> – mit dem Finger oder der Maus. Wer keine Lust aufs Rubbeln hat, setzt den Haken „ohne Rubbeln“.</li>
   <li><b>Nicht das Richtige?</b> 🎲 tauscht nur dieses eine Los. Gute Ideen kommen mit ♡ auf die Merkliste.</li>
   <li><b>Teilen:</b> Schick die Ideen per WhatsApp an alle, die mitschenken – oder verschenk eine Idee direkt als Rubbellos.</li>
 </ol>
 <h2>Was ist anders als bei anderen Geschenke-Generatoren?</h2>
 <ul>
-  <li><b>Kein Eintippen, keine KI:</b> Du musst niemanden beschreiben. Die Ideen sind von Hand ausgesucht – Dinge, die man gern bekommt und nicht gleich weiterverschenkt.</li>
+  <li><b>Keine KI, nichts erfunden:</b> Du musst niemanden beschreiben. Die Ideen stammen aus unserer Liste – passend zu Hobby, Person und Budget sortiert, das Budget wird nie überschritten.</li>
   <li><b>Nichts wird gespeichert:</b> Die Auswahl passiert in deinem Browser. Die Merkliste bleibt auf deinem Gerät.</li>
   <li><b>Für jeden Anlass:</b> {anl_links}</li>
+  <li><b>Für jedes Hobby:</b> {hobby_bsp} …</li>
 </ul>
 <p>Zum Wichteln gibt es außerdem den <a href="/geschenkfinder/">Wichtel-Geschenkfinder</a> mit Filtern nach Alter und Budget und die Seiten <a href="/geschenke-fuer-maenner/">Geschenke für Männer</a> und <a href="/geschenke-fuer-frauen/">Geschenke für Frauen</a>.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
     page('/geschenke-generator/', 'Geschenke-Generator: Geschenkidee in 3 Klicks für jeden Anlass',
-         f'Geschenkideen per Zufall: Anlass, Person und Budget wählen und 3 Geschenk-Lose freirubbeln – {n} Ideen für Geburtstag, Weihnachten, Muttertag, Hochzeit & mehr. Kostenlos, ohne Anmeldung.',
+         f'Geschenkideen per Zufall: Anlass, Person, Budget und Hobby wählen und 3 Geschenk-Lose freirubbeln – {n_rund} Ideen für Geburtstag, Weihnachten, Jahrestag, Taufe, Ruhestand & mehr. Kostenlos, ohne Anmeldung.',
          body, extra='\n<script src="/assets/rubbel.js" defer></script>\n<script src="/assets/generator.js" defer></script>',
          crumb='Geschenke-Generator')
 
