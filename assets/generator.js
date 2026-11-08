@@ -66,7 +66,7 @@
       <p class="los-kat">${esc(i.m.map((m) => MAGN[m]).join(' · '))} · bis ${i.b} €</p>
       <h3>${esc(i.n)}</h3>
       <p>${esc(i.t)}</p>
-      <p class="los-links"><a class="btn-primary" href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">Ansehen*</a></p>
+      <p class="los-links">${i.u ? `<a class="btn-primary" href="${esc(i.u)}">Im WichtelLos-Shop ansehen</a>` : `<a class="btn-primary" href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">Ansehen*</a>`}</p>
       <p class="los-knoepfe">
         <button type="button" class="g-btn g-merk" aria-pressed="${gemerkt}">${gemerkt ? '♥ Gemerkt' : '♡ Merken'}</button>
         <button type="button" class="g-btn g-neu">🎲 Neues Los</button>
@@ -109,6 +109,12 @@
     gezeigt = [];
     const aus = new Set();
     for (let s = 0; s < 3; s++) { const i = ziehe(p, aus); if (i) { gezeigt.push(i); aus.add(i.n); } }
+    // Eigener Shop (Toni 08.11.): passt eine Shop-Idee zu den Filtern, liegt sie öfter (ca. 40 %) in einem der 3 Lose – nie mehr als eine
+    const shop = p.filter((i) => i.s && !aus.has(i.n));
+    if (shop.length && gezeigt.length === 3 && !gezeigt.some((i) => i.s) && Math.random() < 0.4) {
+      const i = shop[Math.floor(Math.random() * shop.length)], s = Math.floor(Math.random() * 3);
+      aus.delete(gezeigt[s].n); gezeigt[s] = i; aus.add(i.n); gesehen.add(i.n);
+    }
     const ziel = $('#g-lose');
     ziel.innerHTML = '';
     offen.length = 0;
@@ -140,7 +146,7 @@
     const byName = Object.fromEntries(IDEEN.map((i) => [i.n, i]));
     $('#g-merk-liste').innerHTML = l.filter((n) => byName[n]).map((n) => {
       const i = byName[n];
-      return `<li><a href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">${esc(i.n)}*</a> <span class="hint">bis ${i.b} €</span> <button type="button" class="g-btn g-weg" data-weg="${esc(n)}" aria-label="${esc(n)} von der Merkliste nehmen">✕ entfernen</button></li>`;
+      return `<li>${i.u ? `<a href="${esc(i.u)}">${esc(i.n)}</a> <span class="hint">(WichtelLos-Shop)</span>` : `<a href="${esc(window.amazonUrl(i.q))}" rel="sponsored nofollow noopener" target="_blank">${esc(i.n)}*</a>`} <span class="hint">bis ${i.b} €</span> <button type="button" class="g-btn g-weg" data-weg="${esc(n)}" aria-label="${esc(n)} von der Merkliste nehmen">✕ entfernen</button></li>`;
     }).join('');
     const text = `🎁 Meine Geschenk-Merkliste:\n${l.map((n) => '• ' + n).join('\n')}\n\n${location.origin}/geschenke-generator/`;
     $('#g-merk-wa').href = `https://wa.me/?text=${encodeURIComponent(text)}`;

@@ -1517,6 +1517,11 @@ def shop_link(slug, mid, produkt):
     return f'{SHOP_URL}/{slug}?sellable={mid}-{produkt}'
 
 
+# Alle 8 Produkte je Motiv (Spreadshop-Produkttyp, Kurzname) – Toni 08.11.: „mehr Auswahl zeigen“
+MERCH_AUCH = [(1470, 'Große Tasse'), (1052, 'Panoramatasse'), (6, 'T-Shirt Herren'), (631, 'T-Shirt Damen'),
+              (635, 'Bio-Shirt Unisex'), (457, 'Kinder-Shirt'), (897, '🧸 Teddy')]
+
+
 def tassen_page():
     secs, n = [], 0
     for title, items in TASSEN:
@@ -1528,13 +1533,14 @@ def tassen_page():
   <h3>{esc(name)}</h3>
   <p>{esc(text)}</p>
   <a class="btn-primary merch-btn" href="{esc(shop_link(slug, mid, 31))}" target="_blank" rel="noopener">Tasse ansehen</a>
-  <a class="merch-alt" href="{esc(shop_link(slug, mid, 6))}" target="_blank" rel="noopener">auch als T-Shirt</a>
+  <p class="merch-auch-t">Auch als:</p>
+  <p class="merch-auch">{''.join(f'<a href="{esc(shop_link(slug, mid, pt))}" target="_blank" rel="noopener">{esc(lbl)}</a>' for pt, lbl in MERCH_AUCH)}</p>
 </div>''')
         secs.append(f'<h2>{esc(title)}</h2>\n<div class="merch-grid">\n' + '\n'.join(cards) + '\n</div>')
     body = f"""<article>
-<h1>Wichtel-Tassen mit Spruch: lustige Wichtelgeschenke</h1>
-<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Tassen mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld.</p>
-<p>Alle Motive gibt es in unserem eigenen Shop. Dort findest du sie auch als T-Shirt, als große Tasse, als Panoramatasse und als Weihnachtsteddy.</p>
+<h1>Wichtel-Tassen, T-Shirts &amp; Teddys mit Spruch</h1>
+<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Motive mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld.</p>
+<p class="merch-zahl"><b>{n} Motive · {n * (len(MERCH_AUCH) + 1)} Geschenke</b> – jedes Motiv als Tasse, große Tasse, Panoramatasse, T-Shirt für Herren, Damen und Kinder, Bio-Shirt und Weihnachtsteddy.</p>
 
 {''.join(s + chr(10) + chr(10) for s in secs)}<p class="merch-all"><a class="btn-secondary" href="{SHOP_URL}/" target="_blank" rel="noopener">Alle Produkte im WichtelLos-Shop</a></p>
 <p class="hint">Bestellung, Bezahlung und Versand laufen über Spreadshirt (sprd.net AG). Jedes Stück wird erst nach deiner Bestellung bedruckt. Preise, Lieferzeit und Rückgabe stehen im Shop. Mit jedem Kauf unterstützt du WichtelLos.</p>
@@ -1551,8 +1557,8 @@ def tassen_page():
 <p>Erst die Namen, dann die Tasse: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
 {CTA}
 </article>"""
-    page('/wichtel-tassen/', 'Wichtel-Tassen mit Spruch: lustige Wichtelgeschenke',
-         f'Wichtel-Tassen mit Spruch: {n} lustige Motive mit dem WichtelLos-Wichtel – Wichtel-Champion, Schrottwichtel-Geschenk, Bargeld-Wunsch. Auch als T-Shirt.',
+    page('/wichtel-tassen/', 'Wichtel-Tassen, T-Shirts & Teddys mit Spruch: lustige Wichtelgeschenke',
+         f'Wichtel-Tassen mit Spruch: {n} lustige Motive mit dem WichtelLos-Wichtel – Wichtel-Champion, Schrottwichtel-Geschenk, Bargeld-Wunsch. Auch als T-Shirt, Kinder-Shirt und Teddy.',
          body, crumb='Wichtel-Tassen', playful=True)
 
 

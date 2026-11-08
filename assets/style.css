@@ -740,6 +740,11 @@ label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-co
 .merch p { margin: 0 0 12px; font-size: 16px; color: var(--muted); flex: 1; }
 .merch-btn { min-height: 44px; }
 .merch-alt { display: inline-block; margin-top: 6px; padding: 10px 0; font-size: 15px; }
+.merch-auch-t { margin: 10px 0 4px !important; flex: 0 !important; font-size: 14px !important; }
+.merch-auch { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0 !important; flex: 0 !important; }
+.merch-auch a { display: inline-block; padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; background: #fff; font-size: 14px; line-height: 1.2; text-decoration: none; color: var(--text); }
+.merch-auch a:hover, .merch-auch a:focus-visible { border-color: var(--primary); color: var(--primary); }
+.merch-zahl { background: var(--soft); border-radius: var(--radius); padding: 10px 14px; }
 .merch-all { text-align: center; margin: 22px 0 8px; }
 @media (max-width: 500px) {
   .merch-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }

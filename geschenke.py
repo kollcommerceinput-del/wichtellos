@@ -200,3 +200,22 @@ for idee in [_neu(r) for r in _RAW] + [_wichtel(i) for i in WICHTEL_IDEEN]:
     if '(ab 18)' in idee['n']:  # Alkohol nie für Kinder/Teens/Kollegen
         idee['w'] = [x for x in idee['w'] if x not in ('kind', 'teen', 'kollege')]
     ALLE_IDEEN.append(idee)
+
+# Eigener Spreadshop (Toni 08.11.): Shop-Ideen mit Feld u (eigener Link statt Amazon-Suche, kein Werbe-Sternchen,
+# Knopf „Im WichtelLos-Shop ansehen“). generator.js legt bei passenden Filtern öfter eins davon in die 3 Lose.
+_SHOP = '/wichtel-tassen/'
+SHOP_IDEEN = [
+    dict(n='Wichtel-Tasse mit Spruch', t='Vom „Wichtel-Champion“ bis „Ich wollte eigentlich Bargeld“ – 14 Motive mit dem WichtelLos-Wichtel, aus unserem eigenen Shop.',
+         w=sorted(ALLE_ERW.split() + ['teen']), b=20, m=['lustig'], a=['wicht', 'weih', 'danke', 'absch']),
+    dict(n='Große Tasse mit Wichtel-Spruch', t='440 ml für alle, die morgens mehr Kaffee brauchen – mit lustigem Wichtel-Spruch aus unserem Shop.',
+         w=sorted(ALLE_ERW.split()), b=30, m=['lustig', 'genuss'], a=['wicht', 'weih', 'geb']),
+    dict(n='T-Shirt mit Wichtel-Spruch', t='Für Herren, Damen oder als Bio-Unisex-Shirt – mit dem Wichtel-Spruch, über den die ganze Runde lacht. Aus unserem Shop.',
+         w=['frau', 'mann', 'partner', 'freund', 'kollege', 'teen', 'papa', 'mama'], b=30, m=['lustig'], a=['wicht', 'weih', 'geb']),
+    dict(n='Kinder-T-Shirt mit Wichtel', t='Bio-T-Shirt für Kinder mit unserem Wichtel – passt zu Wichteltür, Adventskalender und Nikolaus. Aus unserem Shop.',
+         w=['kind'], b=30, m=['lustig', 'gemuetlich'], a=['weih', 'niko', 'geb']),
+    dict(n='Weihnachtsteddy mit Wichtel-Spruch', t='Kuscheliger Teddy mit Mütze und Shirt – mit einem Wichtel-Spruch bedruckt. Aus unserem Shop.',
+         w=['kind', 'frau', 'partner', 'oma', 'mama', 'freund'], b=30, m=['gemuetlich', 'lustig'], a=['weih', 'niko', 'wicht']),
+]
+for _i in SHOP_IDEEN:
+    _i.update(q='', u=_SHOP, s=1)
+    ALLE_IDEEN.append(_i)
