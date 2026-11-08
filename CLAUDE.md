@@ -230,9 +230,12 @@ Antworten auf Deutsch.
   Upload > 10 MB: Datei mit `split -b 9400000` teilen, je Teil eigenes `<input type=file>` per JS + file_upload (einzeln, nicht im Batch!),
   dann per JS `new File(teile)` → YouTube-Input; vorher Größe prüfen.
   Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.): 08.11. Instagram-Story (Business Suite) + Pinterest-Video-Pin
-  (Wichtelgeschenke für Kinder, Link /onni-adventskalender/, Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label). TikTok: Toni.
+  (Wichtelgeschenke für Kinder, Link /onni-adventskalender/, Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label). TikTok: Toni (08.11. gepostet).
   Toni 08.11.: Insta/TikTok nur kurze Fassungen (lange Videos schaut dort keiner) – `render-ausschnitte.js` schneidet `ausschnitte/julklapp.mp4` (30 s)
-  und `wichtel-nachts.mp4` (34 s) aus den langen Videos + Schlussbild „auf YouTube @WichtelLos“; noch nicht gepostet.
+  und `wichtel-nachts.mp4` (34 s) aus den langen Videos + Schlussbild „auf YouTube @WichtelLos“; noch nicht gepostet (Toni: später, immer nur eins).
+- Erklärvideos auf der Website (Toni 08.11.: nur selbst gehostet, kein YouTube-Link/-Einbettung – Besucher sollen auf der Seite bleiben): `video_block(v)`
+  mit `VIDEO_ERKLAERT` (/woher-kommt-wichteln/ unter dem Lead) und `VIDEO_KINDER` (/onni-adventskalender/#was-ist-ein-wichtel unter dem Kalender);
+  Dateien `fotos/video-*.mp4` (540×960, crf 28) + `-poster.webp`, laden erst beim Klick.
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
   Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
