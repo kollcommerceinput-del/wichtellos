@@ -218,6 +218,12 @@ Antworten auf Deutsch.
   oder E-Mail – ganz einfach, kostenlos und mit Spaß“. Ton und Bild werden getrennt gebaut (in einem ffmpeg-Durchgang hing es). 08.11.: YouTube-Short
   youtube.com/shorts/TQXJ610aEw0 (nicht für Kinder, KI „Ja“), Pinterest-Video-Pin (Ideen & Reels, Link Startseite, Themen Wichteln/Weihnachtsparty/
   Weihnachten, Alt-Text, KI-Label). TikTok: Toni. Achtung YouTube: Escape im Upload-Dialog schließt ihn (Video bleibt als Entwurf unter „Shorts“).
+- `marketing/reel/render-video-wichteln-erklaert.js` → `wichteln-erklaert/video-wichteln-erklaert.mp4` (1:56, Toni 08.11., Text von Toni): Was ist Wichteln,
+  Julklapp/Herkunft, Wichteln heute mit WichtelLos, Kommentare/Like. Stimme „puck“ mit Tonlage je Szene (`TON`), Geräusche aus `sounds-pixabay/`
+  (neu: `klopfen-tuer.mp3`, `handy-ton.mp3`), keine Musik. 08.11. YouTube youtube.com/shorts/-FtaIxCICVw (nicht für Kinder, KI „Ja“, öffentlich).
+  YouTube: anklickbare Links + eigenes Vorschaubild erst nach Identitätsbestätigung (youtube.com/verify, Toni) → Links ohne https:// schreiben.
+  Upload-Standard-Tags sind Kinder-Tags (Onni) → bei Nicht-Kinder-Videos entfernen. Videos > 10 MB lädt Toni per Drag & Drop hoch.
+  Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.) gerendert, noch nicht veröffentlicht.
 - `themen.py` `BLACKFRIDAY` + `/black-friday-wichtelgeschenke/` in `themen_pages()` (07.11., Toni): 36 Ideen in 6 Gruppen + Knopf zur
   Amazon-Angebotsseite (`/deals?tag=`). Hinweis `.bf-banner` (nur 16.11.–1.12., `data-zeit-von/-bis`, site.js) auf der Seite des geheimen
   Links und den Budgetseiten; Fuß „Geschenkideen“, Sitemap 32 URLs, og-Bild. Seite des geheimen Links: Ideen jetzt als Karte `.gift-card`
