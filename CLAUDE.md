@@ -430,10 +430,10 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       Fuß-Rechtslinks 44 px, Lupe/Farbkreise 44 px). Q6: ein einheitlicher Werbehinweis (Text aus dem Fuß, mit „Als Amazon-Partner …“) überall. Offen:
       **bis 20.11.: Wichtelgruß – „Als Bild teilen“ weiter nach oben** (heute y≈2000 px am Handy); `tests/auslosung-stress.js` veraltet
       – 08.11. angepasst (Ausschlüsse aufklappen, Rückfrage bestätigen), 300 Auslosungen 0 Fehler.
-- [ ] **Später (Toni 08.11.): Erklärungen auf unseren Seiten anpassen** – „Was ist Wichteln / was ist ein Wichtel“ je in einer Fassung
-      für große Kinder (Erwachsene/Jugendliche) und für kleine Kinder, jeweils mit Link auf das passende Video (lang: youtube.com/shorts/-FtaIxCICVw;
-      Kinderfassung A/B folgt). Kandidaten: /woher-kommt-wichteln/, Startseiten-FAQ, /wichteltuer/, /onni-adventskalender/, /wichteln-schule-kita/.
-      Erst Vorschlag zeigen, dann bauen.
+- [x] 08.11.: Erklärungen in zwei Fassungen (Toni freigegeben): `ERKL_GROSS` (Was ist Wichteln?) + `ERKL_KIND` (Was ist ein Wichtel?, zum
+      Vorlesen, nach dem Kindervideo – keine Sagen) mit Links auf eigene Video-Seiten (kein YouTube), Baustein `erkl_box(art, titel, link)`.
+      Eingebaut: Startseiten-FAQ „Was ist Wichteln?“, /woher-kommt-wichteln/ (Kinderkasten), /onni-adventskalender/ (unter dem Kindervideo +
+      „Für die Großen“), /wichteltuer/ (nach „Was ist eine Wichteltür?“), /wichteln-schule-kita/ (beide Kästen vor dem Ablauf).
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 

@@ -200,6 +200,29 @@ VIDEO_KINDER = {'src': '/fotos/video-wichtel-kinder.mp4', 'poster': '/fotos/vide
                 'label': 'Was ist ein Wichtel? Für Kinder erklärt', 'alt': 'Kleiner Plüsch-Wichtel Onni neben einem Tannenzapfen im Schnee',
                 'caption': 'Was ist ein Wichtel? Für Kinder erklärt (2:42) · Bilder und Stimme KI-generiert'}
 
+# Erklärungen in zwei Fassungen (Toni 08.11.): für Große (Wichteln) und für kleine Kinder (Wichtel, zum Vorlesen).
+# Kindertext folgt dem Kindervideo – keine Sagen/Heinzelmännchen. Video-Links nur auf eigene Seiten, kein YouTube.
+ERKL_GROSS = ('Wichteln ist ein Geschenke-Brauch in der Adventszeit: Jeder in der Gruppe zieht per Los einen Namen und beschenkt genau '
+              'diese Person – heimlich und meist mit einem kleinen Geschenk zu einem vorher vereinbarten Budget. Wer wen beschenkt, bleibt '
+              'bis zur Bescherung geheim. Den Namen hat der Brauch von den Wichteln: kleinen Hausgeistern, die heimlich Gutes tun und nie '
+              'gesehen werden wollen. Ein Vorläufer ist der Julklapp aus Schweden und Norddeutschland.')
+ERKL_KIND = ('Ein Wichtel ist ganz klein – nur so groß wie eine Kaffeetasse. Er trägt eine rote Zipfelmütze, die ihm fast über die Augen '
+             'rutscht, und mag es kuschelig warm. Wichtel wohnen heimlich bei uns Menschen, manche sogar hinter einer winzigen Tür. Nachts, '
+             'wenn alle schlafen, räumen sie auf, flicken Socken und bringen Glück – und manchmal machen sie ein bisschen Quatsch. Gesehen '
+             'hat noch nie jemand einen. Denn das ist das größte Geheimnis der Wichtel: Sie wollen nie gesehen werden!')
+LINK_GROSS = '<a href="/woher-kommt-wichteln/">▶ Das ganze Video: Was ist Wichteln? (2 Min.)</a>'
+LINK_KIND = '<a href="/onni-adventskalender/#was-ist-ein-wichtel">▶ Video für Kinder: Was ist ein Wichtel? (2:42)</a>'
+
+
+def erkl_box(art, titel=None, link=True):
+    """Kasten „Was ist Wichteln?“ (art='gross') bzw. „Was ist ein Wichtel?“ (art='kind', zum Vorlesen)."""
+    if art == 'gross':
+        t, x, l = titel or 'Was ist Wichteln?', ERKL_GROSS, LINK_GROSS
+    else:
+        t, x, l = titel or 'Was ist ein Wichtel? – zum Vorlesen', ERKL_KIND, LINK_KIND
+    return (f'<aside class="erkl erkl-{art}"><h3>{esc(t)}</h3>\n<p>{esc(x)}</p>'
+            + (f'\n<p class="erkl-link">{l}</p>' if link else '') + '</aside>')
+
 
 def video_ld():
     return {'@context': 'https://schema.org', '@type': 'VideoObject', 'name': 'Wichteln online auslosen – so geht’s in 25 Sekunden',
@@ -792,6 +815,12 @@ def school_page():
 <h1>Wichteln in der Schulklasse und Kita: so klappt's</h1>
 {ai_photo('wichtel3d-los', 'Plüsch-Wichtel zieht ein Los aus einer alten Holzkiste')}
 <p class="lead">Wichteln mit Kindern macht riesig Spaß – wenn das Auslosen fair ist und keiner leer ausgeht. Hier findest du den Ablauf für Klasse, Kita und Verein, ein faires Budget, einen Elternbrief zum Kopieren und Wichtel-Lose, für die kein Kind ein Handy braucht.</p>
+
+<h2>Wichteln erklären – für jedes Alter</h2>
+<div class="erkl-paar">
+{erkl_box('kind', 'Für Kita und Grundschule: Was ist ein Wichtel?')}
+{erkl_box('gross', 'Für ältere Schüler: Was ist Wichteln?')}
+</div>
 
 <h2>Ablauf in 5 Schritten</h2>
 <ol>
@@ -1601,6 +1630,8 @@ def onni_kalender_page():
 <h2 id="was-ist-ein-wichtel">Was ist eigentlich ein Wichtel?</h2>
 <p>Bis das erste Türchen aufgeht: Hier erfahren Kinder, wie ein Wichtel aussieht, wo er wohnt und was er nachts macht, wenn alle schlafen.</p>
 {video_block(VIDEO_KINDER)}
+{erkl_box('kind', link=False)}
+<p class="erkl-gross-link">Für die Großen: <a href="/woher-kommt-wichteln/">Was ist Wichteln? – Video und Geschichte (2 Min.)</a></p>
 
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
@@ -1650,6 +1681,7 @@ def door_page():
 
 <h2>Was ist eine Wichteltür?</h2>
 <p>Die Wichteltür ist ein Adventsbrauch aus Skandinavien, der bei uns seit einigen Jahren immer beliebter wird. Eine Miniatur-Tür wird an die Wand oder Fußleiste gestellt – dahinter wohnt im Advent ein Wichtel. Er bleibt unsichtbar, schreibt Briefe, stellt nachts kleinen Unfug an und verabschiedet sich an Heiligabend wieder. Mit dem <a href="/">Wichteln unter Erwachsenen</a> hat das wenig zu tun, aber beides lebt vom selben Zauber: Jemand tut heimlich etwas Schönes.</p>
+{erkl_box('kind')}
 
 <h2>So startest du</h2>
 <ol>
@@ -2109,6 +2141,7 @@ def history_page():
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
 <p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>
+{erkl_box('kind', 'Für Kinder erklärt: Was ist ein Wichtel?')}
 
 <h2>Der Vorläufer: Julklapp</h2>
 <p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen.</p>
@@ -2291,7 +2324,8 @@ BUDGET_LINKS = ', '.join(f'<a href="/wichtelgeschenke-unter-{b}-euro/">{b}</a>' 
 
 # Sichtbare FAQ und FAQPage-Daten kommen aus dieser einen Liste (Antworten dürfen Links enthalten)
 FAQ = [
-    ('Was ist Wichteln?', 'Beim Wichteln beschenkt jeder genau eine andere Person aus der Gruppe, die per Los bestimmt wird. Wer wen beschenkt, bleibt bis zur Bescherung geheim. Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule.'),
+    ('Was ist Wichteln?', ERKL_GROSS + ' Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule. ' + LINK_GROSS
+     + ' · Für Kinder: <a href="/onni-adventskalender/#was-ist-ein-wichtel">Was ist ein Wichtel? (Video, 2:42)</a>'),
     ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
     ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>'),
     ('Wie läuft Wichteln ab?', 'In 5 Schritten: 1. Gruppe zusammenstellen. 2. Budget und Termin für die Bescherung festlegen. 3. Auslosen, wer wen beschenkt – zum Beispiel hier online. 4. Geschenk besorgen, verpacken und mit dem Namen des Beschenkten beschriften. 5. Bescherung: Alle Geschenke werden gemeinsam übergeben und ausgepackt. Ob ihr danach verratet, wer wessen Wichtel war, entscheidet ihr.'),

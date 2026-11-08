@@ -745,3 +745,14 @@ label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-co
 .k-prev[disabled], .k-next[disabled] { opacity: .35; cursor: default; }
 .karussell figcaption { font-size: 15px; color: var(--muted); text-align: center; margin-top: 4px; }
 @media (max-width: 600px) { .k-prev, .k-next { display: none; } }
+
+/* Erklär-Kästen „Was ist Wichteln?“ / „Was ist ein Wichtel?“ (08.11.) */
+.erkl { background: var(--soft); border: 1px solid var(--border); border-left: 5px solid var(--primary); border-radius: var(--radius); padding: 14px 16px; margin: 14px 0 18px; clear: both; }
+.erkl-kind { border-left-color: #1f6f4a; }
+.erkl h3 { margin: 0 0 6px; font-size: 18px; }
+.erkl p { margin: 0 0 8px; }
+.erkl p:last-child { margin-bottom: 0; }
+.erkl-link a { font-weight: 700; }
+.erkl-paar { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.erkl-paar .erkl { margin: 0; }
+.erkl-gross-link { clear: both; }
