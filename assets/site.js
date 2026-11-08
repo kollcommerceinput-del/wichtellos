@@ -157,6 +157,25 @@
     upd();
   });
 
+  // Handy (Toni 09.11.): lange Ideen-Listen erst gekürzt (12 Stück), Knopf „Alle N Ideen zeigen“ + Hinweis auf Finder/Generator.
+  // Nur Darstellung – alle Ideen stehen im HTML (Google). Der Geschenkfinder (#f-results) blättert selbst (finder.js).
+  if (matchMedia('(max-width: 600px)').matches) {
+    document.querySelectorAll('.idea-grid:not(#f-results)').forEach((grid) => {
+      const karten = [...grid.children].filter((c) => c.classList.contains('idea'));
+      if (karten.length <= 14) return;
+      karten.slice(12).forEach((k) => k.classList.add('mehr-zu'));
+      const box = document.createElement('div');
+      box.className = 'mehr-box';
+      box.innerHTML = `<button type="button" class="btn-secondary">Alle ${karten.length} Ideen zeigen</button>` +
+        (location.pathname.startsWith('/geschenk') ? '' : '<p class="hint">Noch mehr Auswahl: <a href="/geschenkfinder/">🎁 Geschenkfinder</a> · <a href="/geschenke-generator/">🎲 Geschenke-Generator</a></p>');
+      box.querySelector('button').addEventListener('click', (e) => {
+        karten.forEach((k) => k.classList.remove('mehr-zu'));
+        e.currentTarget.remove();
+      });
+      grid.after(box);
+    });
+  }
+
   // Elemente nur in einem Zeitraum zeigen (z. B. Black Friday): data-zeit-von / data-zeit-bis = JJJJ-MM-TT, beide Tage einschließlich
   const heuteIso = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(new Date());
   document.querySelectorAll('[data-zeit-von]').forEach((el) => {

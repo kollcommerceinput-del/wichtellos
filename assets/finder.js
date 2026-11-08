@@ -38,9 +38,27 @@
     return words.every((w) => card.dataset.search.includes(w));
   }
 
+  // Handy (Toni 09.11.): nur 20 Treffer zeigen, Knopf „20 weitere Ideen zeigen“; jede Filteränderung fängt wieder bei 20 an
+  const HANDY = matchMedia('(max-width: 600px)').matches, SCHRITT = 20;
+  let grenze = SCHRITT;
+  const mehr = document.createElement('div');
+  mehr.className = 'mehr-box';
+  mehr.innerHTML = '<button type="button" class="btn-secondary"></button>';
+  $('#f-results').after(mehr);
+  mehr.querySelector('button').addEventListener('click', () => { grenze += SCHRITT; zeige(); });
+  function zeige() {
+    let n = 0;
+    cards.forEach((c) => { if (c.dataset.ok === '1') { n++; c.hidden = HANDY && n > grenze; } else c.hidden = true; });
+    const rest = n - grenze;
+    mehr.hidden = !HANDY || rest <= 0;
+    mehr.querySelector('button').textContent = rest > SCHRITT ? `${SCHRITT} weitere Ideen zeigen (noch ${rest})` : `Die letzten ${rest} Ideen zeigen`;
+  }
+
   function apply() {
     let count = 0;
-    cards.forEach((c) => { const ok = matches(c); c.hidden = !ok; if (ok) count++; });
+    cards.forEach((c) => { const ok = matches(c); c.dataset.ok = ok ? '1' : '0'; if (ok) count++; });
+    grenze = SCHRITT;
+    zeige();
     $('#f-count').textContent = count === 1 ? '1 Idee' : `${count} Ideen`;
     $('#f-show').textContent = count === 1 ? '1 Idee ansehen' : `${count} Ideen ansehen`;
 

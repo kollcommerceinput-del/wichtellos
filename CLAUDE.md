@@ -25,6 +25,7 @@ Antworten auf Deutsch.
 - `build.py`: `invite_page()` – `/wichteln-einladung-vorlage/`: Aushang „Wir wichteln!“ mit Teilnehmerliste (20 Zeilen) + QR zu
   wichtellos.de (`grafik/qr-wichtellos.svg`), druckt auf 1 Seite A4 (Body-Klasse `poster-page`). Teilen-Knöpfe „Kennst du noch eine
   Gruppe?“ in Ergebnis- und Aufdeck-Ansicht (`.share-wa`, Text ohne Namen/Links)
+- Handy (09.11., Toni): Menü bis 600 px als 2×3-Kacheln (Symbol über Wort, Kurzname `.nav-k`, Desktop `.nav-l`), kein Wischen mehr. `.idea-grid` am Handy 2 Spalten (Text 3 Zeilen, Alterszeile aus); Abschnitte mit >14 Ideen zeigen 12 + „Alle N Ideen zeigen“ + Finder/Generator-Link (site.js), Geschenkfinder blättert in 20ern (finder.js). Alles bleibt im HTML (Google).
 - Hauptmenü (`HEADER` in `build.py`, Toni 02.11. Variante A): roter Knopf „🎁 Geschenkideen“ (/geschenkfinder/), „🎲 Geschenke-Generator“ (06.11., Toni), Nach Budget (/unter-10/),
   Wichtel-Zubehör, Für Kinder, Spiele – Seiten mit Amazon-Links nach oben. Unter 900 px eigene Zeile zum Wischen.
 - Footer (03.11., Toni): 4 Gruppen als `<details class="fgroup">` (Handy aufklappbar, ab 700 px per JS in `site.js` offen),

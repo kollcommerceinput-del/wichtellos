@@ -793,3 +793,31 @@ h2[id] { scroll-margin-top: 16px; }
 .erkl-paar { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
 .erkl-paar .erkl { margin: 0; }
 .erkl-gross-link { clear: both; }
+
+/* Handy (Toni 09.11.): Menü in 2 Zeilen sichtbar statt Wischen (kurze Namen .nav-k), Ideen 2 nebeneinander + „alle zeigen“ (site.js) */
+.nav-k { display: none; }
+@media (max-width: 600px) {
+  .nav-l { display: none; }
+  .top nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; overflow: visible; padding: 2px 0 6px; }
+  .top nav a, .top nav a.nav-hi { justify-content: center; min-height: 54px; padding: 6px 2px; border-radius: 14px; background: var(--soft);
+    font-size: 13px; line-height: 1.15; text-align: center; white-space: nowrap; }
+  .top nav a.nav-hi { background: var(--primary); }
+  .nav-k { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .nav-k i { font-style: normal; font-size: 19px; line-height: 1; }
+
+  .idea-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .idea { padding: 10px 10px 8px; }
+  .verspielt .idea { padding-top: 14px; }
+  .idea h3 { font-size: 15px; line-height: 1.25; margin: 0 0 4px; hyphens: auto; overflow-wrap: break-word; }
+  .idea p { font-size: 14px; line-height: 1.35; margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .idea p.tags { display: none; }
+  .idea a { font-size: 13.5px; line-height: 1.25; }
+  .idea .alt-link { display: block; margin-top: 2px; font-size: 12.5px; }
+  .idea .alt-link a { font-size: 12.5px; font-weight: 600; }
+  .idea img { max-width: 100%; height: auto; }
+  .idea.mehr-zu { display: none; }
+  .mehr-box { text-align: center; margin: 12px 0 18px; }
+  .mehr-box .btn-secondary { width: 100%; min-height: 48px; }
+  .mehr-box .hint { margin: 8px 0 0; font-size: 14px; }
+}
+@media print { .idea.mehr-zu { display: flex !important; } .mehr-box { display: none; } }
