@@ -2,11 +2,18 @@
 // Alles im Browser; die Merkliste liegt nur im localStorage dieses Geräts.
 // 08.11. (Toni): Punkte statt harter Filter – das Hobby/Interesse fliegt nie raus, das Budget wird nie überschritten.
 // Ideen = handverlesene Liste (D.ideen) + Hobby × Baustein (D.hobbys, D.bausteine) + eingetipptes Hobby (gleiche Bausteine).
-(() => {
+(async () => {
   'use strict';
   const box = document.querySelector('[data-generator]');
   if (!box) return;
   const D = JSON.parse(box.querySelector('script[type="application/json"]').textContent);
+  // Ideen kommen aus /geschenke-daten.json (08.11.: zu groß fürs HTML); bis dahin ist der Los-Knopf gesperrt
+  const losKnopf = box.querySelector('#g-los'), losText = losKnopf.textContent;
+  losKnopf.disabled = true; losKnopf.textContent = '⏳ Ideen werden geladen …';
+  try { Object.assign(D, await (await fetch(D.src)).json()); } catch {
+    losKnopf.textContent = 'Ideen konnten nicht geladen werden – bitte Seite neu laden'; return;
+  }
+  losKnopf.disabled = false; losKnopf.textContent = losText;
   const ANL = Object.fromEntries(D.anlaesse.map((a) => [a[0], a])), MAGN = Object.fromEntries(D.mag);
   const HART = new Set(D.hart);
   const ERW = ['frau', 'mann', 'partner', 'mama', 'papa', 'oma', 'opa', 'freund', 'kollege'];
@@ -115,7 +122,7 @@
     // Topf = beste Stufe (bis 2 Punkte unter dem Besten); reicht das nicht für Abwechslung, die nächsten dazu
     const best = liste.length ? liste[0][0] : 0;
     let n = liste.filter((x) => x[0] >= best - 2).length;
-    if (n < 8) n = Math.min(liste.length, 8);
+    if (n < 6) n = Math.min(liste.length, 6);
     const p = liste.slice(0, n).map((x) => x[2]);
     let hinweis = '';
     if (p.length < 3) hinweis = st.budget && +st.budget < 100 ? 'Hier gibt es nur wenige passende Ideen – mit etwas mehr Budget findest du mehr.' : 'Hier gibt es nur wenige passende Ideen – lass ein Feld frei, dann findest du mehr.';

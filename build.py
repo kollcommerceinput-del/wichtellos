@@ -1966,8 +1966,13 @@ def generator_page():
     """Geschenke-Generator fürs ganze Jahr (Toni 06.11.): 3 Fragen → 3 Geschenk-Lose zum Freirubbeln."""
     from geschenke import ALLE_IDEEN, ANLAESSE, ANL_HART, BUDGETS as G_BUDGETS, MAG, WER
     from hobbys import HOBBYS, BAUSTEINE
-    data = json.dumps({'ideen': ALLE_IDEEN, 'anlaesse': ANLAESSE, 'mag': MAG, 'hart': ANL_HART, 'hobbys': HOBBYS, 'bausteine': BAUSTEINE},
-                      ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    # Ideen als eigene Datei (08.11.: mit ~1.900 handgeschriebenen Ideen wäre das HTML 440 KB) – generator.js lädt sie nach.
+    # Im HTML bleiben nur Anlässe/Interessen (für die Auswahl). ?v= = Prüfsumme, damit Browser nach Änderungen neu laden.
+    import hashlib
+    daten = json.dumps({'ideen': ALLE_IDEEN, 'hart': ANL_HART, 'hobbys': HOBBYS, 'bausteine': BAUSTEINE}, ensure_ascii=False, separators=(',', ':'))
+    (OUT / 'geschenke-daten.json').write_text(daten, encoding='utf-8')
+    daten_url = '/geschenke-daten.json?v=' + hashlib.md5(daten.encode('utf-8')).hexdigest()[:8]
+    data = json.dumps({'anlaesse': ANLAESSE, 'mag': MAG, 'src': daten_url}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     # Zahl wie im Browser: handverlesene + Hobby × Baustein, doppelte Namen nur einmal
     namen = {i['n'] for i in ALLE_IDEEN}
     for h in HOBBYS:

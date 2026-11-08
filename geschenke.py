@@ -268,9 +268,26 @@ def _neu(r):
     return dict(n=n, t=t, q=q, w=sorted(set(w.split())), b=b, m=m.split(), a=sorted(set(a.split())))
 
 
+def _ideen_dateien():
+    """Handgeschriebene Ideen aus ideen/teil*.py (08.11., Etappe 2): je Datei IDEEN = [(Name, Text, Suche, wer, bis €, mag, anlass), …].
+    Ungültige Einträge (unbekannte Schlüssel, falsches Budget) werden still übersprungen – prüfen mit `python ideen/pruefen.py`."""
+    import ast
+    from pathlib import Path
+    gueltig_w = {k for k, _ in WER}
+    gueltig_m = {k for k, _ in MAG}
+    gueltig_a = {k for k, _, _ in ANLAESSE}
+    out = []
+    for f in sorted((Path(__file__).parent / 'ideen').glob('teil*.py')):
+        for r in ast.literal_eval(f.read_text(encoding='utf-8').split('=', 1)[1]):
+            if (len(r) == 7 and set(r[3].split()) <= gueltig_w and set(r[5].split()) <= gueltig_m and set(r[6].split()) <= gueltig_a
+                    and r[4] in BUDGETS + [5, 15] and r[3].split() and r[5].split()):
+                out.append(r)
+    return out
+
+
 _namen = set()
 ALLE_IDEEN = []
-for idee in [_neu(r) for r in _RAW] + [_wichtel(i) for i in WICHTEL_IDEEN]:
+for idee in [_neu(r) for r in _RAW] + [_wichtel(i) for i in WICHTEL_IDEEN] + [_neu(r) for r in _ideen_dateien()]:
     if idee['n'] in _namen:
         continue
     _namen.add(idee['n'])
