@@ -385,8 +385,8 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [x] 01.11. ~22 Uhr: Reel „Wichteln per WhatsApp – in 8 Schritten“ (Folien-Video `marketing/social/whatsapp8/reel-folien.mp4`,
       10 Folien à 2,5 s = 25 s, Set `whatsapp8` in render-social.js) auf Instagram, Musik von Toni gewählt. Grund für 8 statt 10
       Schritte: Business Suite erlaubt max. 10 Bilder pro Beitrag/Karussell; Tipp steckt jetzt in Schritt 4
-- [ ] Später (Toni 01.11.): 10-Schritte-Karussell `marketing/social/whatsapp/` auch auf `/wichteln-per-whatsapp/` einbinden
-      bzw. von dort auf den Instagram-Beitrag verlinken
+- [x] 08.11.: 10-Schritte-Karussell auf `/wichteln-per-whatsapp/` („Alle 10 Schritte zum Durchwischen“): `WA_SCHRITTE` + `wa_karussell()`
+      in `build.py`, Bilder `fotos/whatsapp/schritt-NN.webp` (Folien 2–11, 480×600), CSS `.karussell` (Scroll-Snap), Pfeile in `site.js`
 - [ ] Rechtstexte 03.11. geprüft: beide gut. Erledigt 03.11.: Datenschutz um Aufsichtsbehörde (BlnBDI), Speicherdauer GitHub,
       Social-Links, Wichtelgruß/Wunschzettel/Kalender ergänzt. Telefon kurz entfernt, dann wieder eingetragen (Toni 03.11.:
       zweiter Kontaktweg Pflicht; Kontaktformular verworfen – n8n-Server des Shops nicht für öffentliche Formulare nutzen).
@@ -429,7 +429,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       (Felder 16 px, „Los geht’s“ → `#wer` + Fokus Namensfeld, Fokus auf Ergebnis/Geheimnis, Feldrand `--field` #998479, Fokus 3 px Grün,
       Fuß-Rechtslinks 44 px, Lupe/Farbkreise 44 px). Q6: ein einheitlicher Werbehinweis (Text aus dem Fuß, mit „Als Amazon-Partner …“) überall. Offen:
       **bis 20.11.: Wichtelgruß – „Als Bild teilen“ weiter nach oben** (heute y≈2000 px am Handy); `tests/auslosung-stress.js` veraltet
-      (Ausschlüsse zugeklappt + „Neu auslosen“ fragt nach → prüft nur 1 Auslosung) – bei Gelegenheit anpassen.
+      – 08.11. angepasst (Ausschlüsse aufklappen, Rückfrage bestätigen), 300 Auslosungen 0 Fehler.
 - [ ] **Später (Toni 08.11.): Erklärungen auf unseren Seiten anpassen** – „Was ist Wichteln / was ist ein Wichtel“ je in einer Fassung
       für große Kinder (Erwachsene/Jugendliche) und für kleine Kinder, jeweils mit Link auf das passende Video (lang: youtube.com/shorts/-FtaIxCICVw;
       Kinderfassung A/B folgt). Kandidaten: /woher-kommt-wichteln/, Startseiten-FAQ, /wichteltuer/, /onni-adventskalender/, /wichteln-schule-kita/.

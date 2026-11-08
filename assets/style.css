@@ -733,3 +733,15 @@ label.g-ohne input { width: 22px; height: 22px; margin: 0; flex: none; accent-co
   .merch h3 { font-size: 15px; }
   .merch p { font-size: 15px; }
 }
+
+/* Karussell 10 Schritte (/wichteln-per-whatsapp/, 08.11.) – reines Scroll-Snap, Pfeile per site.js */
+.karussell { margin: 14px 0 22px; clear: both; }
+.k-wrap { position: relative; }
+.k-list { list-style: none; margin: 0; padding: 4px 2px 10px; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+.k-list li { flex: 0 0 min(62%, 240px); scroll-snap-align: start; }
+.k-list img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 14px rgba(43,27,23,.14); }
+.k-prev, .k-next { position: absolute; top: 42%; z-index: 1; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 26px; line-height: 1; cursor: pointer; box-shadow: 0 3px 10px rgba(43,27,23,.18); }
+.k-prev { left: -8px; } .k-next { right: -8px; }
+.k-prev[disabled], .k-next[disabled] { opacity: .35; cursor: default; }
+.karussell figcaption { font-size: 15px; color: var(--muted); text-align: center; margin-top: 4px; }
+@media (max-width: 600px) { .k-prev, .k-next { display: none; } }

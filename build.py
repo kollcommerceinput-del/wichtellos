@@ -847,6 +847,35 @@ WA_FAQ = [
 ]
 
 
+# 10 Schritte als Bilder (Toni 01.11.: Karussell auch auf der Seite) – Folien 2–11 aus marketing/social/whatsapp/ (render-social.js, Set „whatsapp“),
+# fürs Web 480x600 nach fotos/whatsapp/schritt-NN.webp. Texte = Alt-Texte, gleich wie auf den Folien.
+WA_SCHRITTE = [
+    ('wichtellos.de öffnen', 'Am Handy oder Computer – ohne App, ohne Anmeldung.'),
+    ('Gruppe benennen', 'Zum Beispiel „Familie 2026“ oder „Büro-Weihnachten“.'),
+    ('Budget & Datum', 'Wie viel darf das Geschenk kosten, wann ist Bescherung?'),
+    ('Namen eintragen', 'Alle, die mitmachen – ab 3 Personen.'),
+    ('Tipp hinterlegen', 'Optional: „mag Tee“ – nur der Wichtel sieht es.'),
+    ('Paare ausschließen', 'Optional: Wer sich nicht gegenseitig ziehen soll.'),
+    ('Jetzt auslosen', 'Ein Tipp – jeder bekommt seinen eigenen geheimen Link.'),
+    ('Per WhatsApp senden', 'Neben jedem Namen auf „WhatsApp“ tippen, Kontakt wählen – fertig.'),
+    ('Nur privat schicken', 'Nicht alle Links in den Gruppenchat – sonst ist die Überraschung weg.'),
+    ('Geheimnis lüften', 'Link antippen, sehen, wen man beschenkt – mit Geschenkideen.'),
+]
+
+
+def wa_karussell():
+    folien = '\n'.join(f'<li><img src="/fotos/whatsapp/schritt-{i:02d}.webp" width="480" height="600" loading="lazy" decoding="async" '
+                       f'alt="Schritt {i}: {esc(t)} – {esc(x)}"></li>' for i, (t, x) in enumerate(WA_SCHRITTE, 1))
+    return f'''<figure class="karussell" aria-label="Wichteln per WhatsApp in 10 Schritten">
+<div class="k-wrap"><button type="button" class="k-prev" aria-label="Vorheriger Schritt">‹</button>
+<ul class="k-list" tabindex="0">
+{folien}
+</ul>
+<button type="button" class="k-next" aria-label="Nächster Schritt">›</button></div>
+<figcaption>Wischen oder Pfeile: alle 10 Schritte als Bilder</figcaption>
+</figure>'''
+
+
 def whatsapp_page():
     faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in WA_FAQ)
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
@@ -865,6 +894,10 @@ def whatsapp_page():
   <li><b>Per WhatsApp verschicken:</b> Neben jedem Namen auf „WhatsApp“ tippen und den passenden Kontakt wählen. Die Nachricht ist schon fertig: „Hallo …! Hier ist dein geheimer Wichtel-Link …“.</li>
 </ol>
 {CTA}
+
+<h2>Alle 10 Schritte zum Durchwischen</h2>
+<p>Vom Öffnen der Seite bis zum Geheimnis-Lüften – zum Nachmachen oder zum Weiterschicken an alle, die die Wichtelrunde organisieren.</p>
+{wa_karussell()}
 
 <h2>Wichtig: Links nicht in die Gruppe posten</h2>
 <p>Jeder Link verrät, wen <b>diese</b> Person beschenkt. Postest du alle Links in den Gruppenchat, kann jeder jeden öffnen – und die Überraschung ist dahin. So klappt es:</p>

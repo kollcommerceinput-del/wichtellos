@@ -139,6 +139,24 @@
     v.focus();
   }));
 
+  // Karussell (10 Schritte WhatsApp): Pfeile scrollen um eine Folie, an den Enden ausgegraut
+  document.querySelectorAll('.karussell').forEach((k) => {
+    const list = k.querySelector('.k-list'), prev = k.querySelector('.k-prev'), next = k.querySelector('.k-next');
+    const step = () => (list.querySelector('li')?.offsetWidth || 240) + 12;
+    const upd = () => { prev.disabled = list.scrollLeft < 5; next.disabled = list.scrollLeft + list.clientWidth > list.scrollWidth - 5; };
+    // Ziel über die Foliennummer, damit schnelle Klicks nicht im laufenden Scrollen hängen bleiben
+    let ziel = 0;
+    const geh = (d) => { const s = step(), max = list.scrollWidth - list.clientWidth;
+      ziel = Math.max(0, Math.min(max, (Math.round(Math.max(ziel, 0) / s) + d) * s)); list.scrollTo({ left: ziel }); };
+    prev.addEventListener('click', () => geh(-1));
+    next.addEventListener('click', () => geh(1));
+    list.addEventListener('scrollend', () => { ziel = list.scrollLeft; });
+    list.addEventListener('touchstart', () => { ziel = list.scrollLeft; }, { passive: true });
+    list.addEventListener('scroll', upd, { passive: true });
+    list.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); } if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); } });
+    upd();
+  });
+
   // Elemente nur in einem Zeitraum zeigen (z. B. Black Friday): data-zeit-von / data-zeit-bis = JJJJ-MM-TT, beide Tage einschließlich
   const heuteIso = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Berlin' }).format(new Date());
   document.querySelectorAll('[data-zeit-von]').forEach((el) => {
