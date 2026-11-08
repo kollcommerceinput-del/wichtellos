@@ -236,7 +236,9 @@ Antworten auf Deutsch.
   Kurzfassung `render-reel-was-ist-ein-wichtel.js` (22,9 s, Hinweis Onni-Kalender ab 1.12.): 08.11. Instagram-Story (Business Suite) + Pinterest-Video-Pin
   (Wichtelgeschenke für Kinder, Link /onni-adventskalender/, Themen Wichteln/Weihnachtsbräuche/Advent, Alt-Text, KI-Label). TikTok: Toni (08.11. gepostet).
   Toni 08.11.: Insta/TikTok nur kurze Fassungen (lange Videos schaut dort keiner) – `render-ausschnitte.js` schneidet `ausschnitte/julklapp.mp4` (30 s)
-  und `wichtel-nachts.mp4` (34 s) aus den langen Videos + Schlussbild „auf YouTube @WichtelLos“; noch nicht gepostet (Toni: später, immer nur eins).
+  und `wichtel-nachts.mp4` (34 s) aus den langen Videos + Schlussbild „auf YouTube @WichtelLos“. 08.11. julklapp: Instagram-Reel (ohne Musik) +
+  Pinterest-Video-Pin (Ideen & Reels, Link /woher-kommt-wichteln/, Themen Wichteln/Weihnachten/Weihnachtswichtel – „Weihnachtsbräuche“ gab es nicht, Alt-Text, KI-Label);
+  TikTok: Toni. wichtel-nachts noch offen (Toni: immer nur eins).
 - Erklärvideos auf der Website (Toni 08.11.: nur selbst gehostet, kein YouTube-Link/-Einbettung – Besucher sollen auf der Seite bleiben): `video_block(v)`
   mit `VIDEO_ERKLAERT` (/woher-kommt-wichteln/ unter dem Lead) und `VIDEO_KINDER` (/onni-adventskalender/#was-ist-ein-wichtel unter dem Kalender);
   Dateien `fotos/video-*.mp4` (540×960, crf 28) + `-poster.webp`, laden erst beim Klick.
@@ -311,7 +313,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
       wichtelgeschenke-fuer-kinder waren bereits indexiert. 04.11. ~18 Uhr alle 29 Sitemap-URLs geprüft: 27 indexiert;
       impressum + adventskalender-befuellen beantragt; Startseite neu beantragt (FAQ geändert). Ende 04.11.: nichts mehr offen.
       06.11. ~17 Uhr: geschenke-generator beantragt (Ergebnis nicht bestätigt, Tab geschlossen), rubbellos → „Kontingent überschritten“ →
-      06.11. abends: rubbellos + geschenke-generator beantragt (beide „Indexierung wurde beantragt“, waren noch „nicht bekannt“) → in ein paar Tagen prüfen. 07.11.: black-friday-wichtelgeschenke beantragt („Indexierung wurde beantragt“).
+      06.11. abends: rubbellos + geschenke-generator beantragt (beide „Indexierung wurde beantragt“, waren noch „nicht bekannt“) → in ein paar Tagen prüfen. 07.11.: black-friday-wichtelgeschenke beantragt („Indexierung wurde beantragt“). 08.11. ~17:40: wichtel-tassen beantragt (erster Versuch kurz nach dem Deploy „abgelehnt“ – Live-Test neu gestartet, dann ok).
       Bing nicht von Hand (Toni 03.11.): IndexNow-Job meldet Sitemap-URLs bei jedem Push – nur prüfen, dass neue Seiten in der Sitemap stehen. Direktlink /search-console/inspect?…&id= gibt 404 → Prüffeld nutzen
 - [ ] Awin: Publisher-ID 3140404 (KOLL Commerce UG), freigeschaltet 30.10.2026. Bewerbungen gesendet 30.10.: Jochen Schweizer,
       Thalia, mydays (Carrera Toys: Toni schickt selbst ab). myToys gibt es bei Awin nicht. Awin-Profil noch unvollständig.
