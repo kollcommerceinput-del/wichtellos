@@ -154,7 +154,7 @@ dl.info dd { margin: 0; font-weight: 600; }
 .idea { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; }
 .idea p { margin: 0 0 10px; color: var(--muted); font-size: 16px; flex: 1; }
 .idea a { font-weight: 700; text-decoration: none; font-size: 15px; }
-.cta-box { background: var(--soft); border-radius: var(--radius); padding: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; }
+.cta-box { background: var(--soft); border-radius: var(--radius); padding: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; clear: both; }
 .cta-box p { margin: 0; font-weight: 600; }
 table.rules { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 table.rules td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 17px; }
