@@ -236,6 +236,9 @@ SEARCH = []  # Suchindex: (Pfad, Titel, Beschreibung, Stichworte) – schreibt e
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
     if not noindex:
         SEARCH.append({'u': path, 't': title.split(' | ')[0], 'd': desc, 'k': ' '.join(re.sub(r'<[^>]+>', '', h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', body, re.S))})
+    # Bild + Einleitung als Einheit (09.11., Toni: „Onni und daneben leerer Raum“): am Desktop Text mittig neben dem Bild,
+    # am Handy bleibt das Bild rechts im Text (CSS .intro)
+    body = re.sub(r'(<figure class="photo photo-ai">.*?</figure>)\s*(<p class="lead">.*?</p>)', r'<div class="intro">\1\2</div>', body, count=1, flags=re.S)
     if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if crumb:
@@ -1608,8 +1611,6 @@ def tassen_page():
             f'<img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
             f'width="400" height="400" loading="lazy" decoding="async"><span class="ms-name">{esc(name)}</span>'
             f'<span class="ms-preis">{preis}</span></a>' for k, slug, idea, name in items)
-        cards += (f'<a class="ms-card ms-mehr" href="{SHOP_URL}/" target="_blank" rel="noopener"><span class="ms-mehr-i" aria-hidden="true">🎁</span>'
-                  f'<span class="ms-name">Und noch viel mehr</span><span class="ms-preis">Pullis, Taschen, Kappen … im Shop →</span></a>')
         grids.append(f'<div class="ms-grid" id="ms-{pt}" role="tabpanel"{"" if i == 0 else " hidden"}>'
                      f'<p class="ms-info">{esc(lbl)} mit Wichtel-Spruch · <b>{preis}</b></p>{cards}</div>')
     body = f"""<article>
@@ -1618,7 +1619,7 @@ def tassen_page():
 
 <div class="ms-tabs" role="tablist" aria-label="Produkt wählen">{''.join(tabs)}</div>
 {''.join(grids)}
-<p class="merch-all"><a class="btn-secondary" href="{SHOP_URL}/" target="_blank" rel="noopener">Alle Produkte im WichtelLos-Shop</a></p>
+<a class="ms-alle" href="{SHOP_URL}/" target="_blank" rel="noopener"><span class="ms-mehr-i" aria-hidden="true">🎁</span><span><b>Und noch viel mehr im WichtelLos-Shop</b><br>Pullis, Taschen, Kappen, Kinder-Shirts … alle Produkte ansehen →</span></a>
 <p class="hint">Bestellung, Bezahlung und Versand laufen über Spreadshirt (sprd.net AG). Jedes Stück wird erst nach deiner Bestellung bedruckt. Preise, Lieferzeit und Rückgabe stehen im Shop. Mit jedem Kauf unterstützt du WichtelLos.</p>
 
 <h2>Welche Tasse passt zu wem?</h2>

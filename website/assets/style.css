@@ -154,7 +154,7 @@ dl.info dd { margin: 0; font-weight: 600; }
 .idea { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; }
 .idea p { margin: 0 0 10px; color: var(--muted); font-size: 16px; flex: 1; }
 .idea a { font-weight: 700; text-decoration: none; font-size: 15px; }
-.cta-box { background: var(--soft); border-radius: var(--radius); padding: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; clear: both; }
+.cta-box { background: var(--soft); border-radius: var(--radius); padding: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; }
 .cta-box p { margin: 0; font-weight: 600; }
 table.rules { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 table.rules td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 17px; }
@@ -363,7 +363,7 @@ a.soc .ico, .share-row .ico { flex: none; }
 .photo-tall { max-width: 360px; margin-left: auto; margin-right: auto; }
 .photo-ai { float: right; width: 220px; margin: 4px 0 14px 22px; }
 .photo-ai figcaption { text-align: center; }
-@media (max-width: 600px) { .photo-ai { width: 150px; margin-left: 14px; } }
+@media (max-width: 600px) { .photo-ai { width: 150px; margin-left: 14px; } .cta-box { clear: both; } }
 @media print { .photo { display: none; } }
 .how { display: flow-root; }
 .video-wichtel { float: right; width: 230px; margin: 4px 0 14px 22px; }
@@ -884,3 +884,16 @@ h2[id] { scroll-margin-top: 16px; }
   body.print-karte .dice-card { border: 2px solid #000; font-size: 15px; }
   body.print-karte table.rules td { padding: 6px 10px; font-size: 15px; }
 }
+
+/* Bild + Einleitung (09.11.): am Desktop kein leerer Raum unter dem Text – Text mittig neben dem Bild; Video mittig statt rechts */
+@media (min-width: 601px) {
+  .intro { display: flex; align-items: center; gap: 24px; margin-bottom: 14px; }
+  .intro .lead { flex: 1; order: 1; margin: 0; }
+  .intro .photo-ai { order: 2; float: none; flex: none; margin: 0; }
+}
+.video-wichtel { float: none; margin: 10px auto 20px; }
+/* Shop: ein breiter Knopf statt Kachel + zweitem Knopf (09.11., Toni) */
+.ms-alle { display: flex; align-items: center; gap: 16px; margin: 18px 0 8px; padding: 16px 20px; min-height: 64px; border-radius: var(--radius); background: #1D3B2C; color: #fff; text-decoration: none; line-height: 1.35; box-shadow: 0 6px 18px rgba(0,0,0,.12); transition: transform .15s; }
+.ms-alle:hover, .ms-alle:focus-visible { transform: translateY(-2px); color: #fff; }
+.ms-alle b { font-size: 1.1rem; }
+@media (min-width: 601px) { .intro .photo-ai { width: 280px; } .intro .photo-ai img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 40%; } }
