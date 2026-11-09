@@ -851,3 +851,36 @@ h2[id] { scroll-margin-top: 16px; }
 @media (max-width: 600px) { .ak-folgen-knoepfe a { width: 100%; justify-content: center; } }
 .idea-shop p.shop-badge { display: block; -webkit-line-clamp: unset; overflow: visible; }
 .briefe-onni h3 { margin: 0 0 8px; }
+
+/* Würfel-Seite (09.11.): Spielplan als Karte (druckt allein auf 1 Seite), Würfel & Timer */
+.dice-jump { display: flex; flex-wrap: wrap; gap: 10px; }
+.dice-card { background: var(--card); border: 2px solid var(--primary); border-radius: var(--radius); padding: 16px 18px; margin: 22px 0 10px; }
+.dice-card h2 { margin-top: 0; }
+.dice-card h3 { margin: 16px 0 6px; }
+.dice-card .face { display: block; font-size: 34px; line-height: 1; color: var(--text); }
+.dice-card-fuss { margin: 12px 0 0; font-size: 14px; color: var(--muted); text-align: right; }
+.dice-tool { background: var(--soft); border-radius: var(--radius); padding: 16px; margin: 22px 0; text-align: center; scroll-margin-top: 80px; }
+.dice-tool h2 { margin-top: 0; }
+.dt-runde, .dt-min { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.dt-runde button, .dt-min button { min-height: 44px; padding: 8px 14px; border: 2px solid var(--border); border-radius: 999px; background: var(--card); color: var(--text); font: inherit; font-weight: 700; cursor: pointer; }
+.dt-runde button[aria-pressed="true"], .dt-min button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+.dt-wuerfel { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; margin: 8px auto; padding: 10px 26px 12px; border: 0; border-radius: 24px; background: var(--card); box-shadow: 0 6px 18px rgba(0,0,0,.12); cursor: pointer; color: var(--text); font: inherit; }
+.dt-face { font-size: 120px; line-height: 1; }
+.dt-wuerfel.rollt .dt-face { animation: dt-wackel .12s linear infinite; }
+@keyframes dt-wackel { 0% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } 100% { transform: rotate(-12deg); } }
+.dt-tipp { font-size: 14px; color: var(--muted); }
+.dt-regel { min-height: 3em; font-size: 19px; margin: 8px auto 14px; max-width: 30em; }
+.dt-zahl { display: inline-block; min-width: 1.6em; padding: 0 6px; margin-right: 4px; border-radius: 8px; background: var(--primary); color: #fff; }
+.dt-timer { border-top: 1px solid var(--border); padding-top: 12px; }
+.dt-zeit { font-size: 56px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.dt-zeit.aus { color: var(--primary); }
+.dt-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 6px 0; }
+.dt-ende { font-size: 20px; font-weight: 700; color: var(--primary); }
+@media (prefers-reduced-motion: reduce) { .dt-wuerfel.rollt .dt-face { animation: none; } }
+@media print {
+  .dice-card { border: 1px solid #999; padding: 10px 14px; margin: 0; }
+  .dice-tool { display: none !important; }
+  body.print-karte article > *:not(.dice-card), body.print-karte .crumbs { display: none !important; }
+  body.print-karte .dice-card { border: 2px solid #000; font-size: 15px; }
+  body.print-karte table.rules td { padding: 6px 10px; font-size: 15px; }
+}

@@ -15,6 +15,7 @@ Antworten auf Deutsch.
 - `assets/finder.js` – Filter des Geschenkfinders (`/geschenkfinder/`, Filter auch per Adresse `?fuer=&budget=&mag=&q=`)
 - `build.py`: `office_page()` – `/wichteln-im-buero/` (Büro-Wichteln, verlinkt Geschenkfinder `?fuer=office`); Suchbegriffe
   Wichtelgenerator/Julklapp/Secret Santa stehen in Startseiten-Titel, Lead und FAQ (31.10.)
+- `build.py`: `dice_page()` – `/wichteln-wuerfeln-regeln/` (09.11. Umbau, Google Platz 1,5 ohne Klicks): Titel „Regeln 1–6 + Spielplan zum Ausdrucken“, Spielplan-Karte `.dice-card` (Regeln aus `DICE_RULES`, Knopf `data-print="karte"` druckt nur die Karte auf 1 A4-Seite), Würfel & Timer `#wuerfeln` (site.js: Runde 1/2, Regel zur Zahl, Timer 5/10/15 Min mit WebAudio-Klingeln + Wake Lock), `WUERFEL_FAQ` (7 Fragen aus Google/Bing-Suchbegriffen, FAQPage), Varianten +4 (2 Würfel, Kinder, Aktionskarten, Video-Call).
 - `build.py`: `whatsapp_page()` – `/wichteln-per-whatsapp/` (Anleitung + `WA_FAQ` mit FAQPage-Schema; Grund: Google Trends
   „wichteln whatsapp“ und „wichteln namen ziehen online“ steigend, 01.11.); Sitemap jetzt 19 URLs
 - `build.py`: `school_page()` – `/wichteln-schule-kita/` (Ablauf Klasse/Kita, Budget, Elternbrief, Lose ohne Handy; 01.11.)

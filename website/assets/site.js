@@ -29,7 +29,104 @@
     a.rel = 'sponsored nofollow noopener';
   });
 
-  document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+  // data-print="karte": nur den Spielplan drucken (Würfel-Seite), sonst die ganze Seite
+  document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => {
+    const nurKarte = b.dataset.print === 'karte';
+    if (nurKarte) document.body.classList.add('print-karte');
+    window.print();
+    if (nurKarte) setTimeout(() => document.body.classList.remove('print-karte'), 500);
+  }));
+
+  // Würfel & Timer (/wichteln-wuerfeln-regeln/, 09.11.): Regeln kommen aus der Spielplan-Tabelle
+  const dt = document.getElementById('wuerfeln');
+  if (dt) {
+    dt.hidden = false;
+    const FACES = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+    const regeln = [...document.querySelectorAll('#dice-rules tr td:last-child')].map((td) => td.innerHTML);
+    const face = document.getElementById('dt-face'), regel = document.getElementById('dt-regel');
+    const wBtn = document.getElementById('dt-wuerfel');
+    let runde = 1, rollt = false;
+    const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    dt.querySelectorAll('.dt-r').forEach((b) => b.addEventListener('click', () => {
+      runde = +b.dataset.runde;
+      dt.querySelectorAll('.dt-r').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      regel.innerHTML = runde === 1 ? 'Runde 1: Wer eine 6 würfelt, nimmt sich ein Geschenk aus der Mitte.'
+        : 'Runde 2: Timer starten und reihum würfeln – hier erscheint die Regel zur Zahl.';
+    }));
+    const zufall = () => { const a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % 6; };
+    wBtn.addEventListener('click', () => {
+      if (rollt) return;
+      rollt = true;
+      const n = zufall();
+      let i = 0;
+      const schritte = ruhig ? 0 : 8;
+      wBtn.classList.add('rollt');
+      const tick = () => {
+        if (i < schritte) { face.textContent = FACES[(n + i * 5 + 3) % 6]; i++; setTimeout(tick, 60 + i * 12); return; }
+        face.textContent = FACES[n];
+        wBtn.classList.remove('rollt');
+        wBtn.setAttribute('aria-label', `Gewürfelt: ${n + 1}. Nochmal würfeln`);
+        const z = `<b class="dt-zahl">${n + 1}</b> `;
+        regel.innerHTML = runde === 1
+          ? z + (n === 5 ? '🎁 Nimm dir ein Geschenk aus der Mitte!' : 'Kein Glück – der Würfel geht weiter.')
+          : z + (regeln[n] || '');
+        if (navigator.vibrate) navigator.vibrate(30);
+        rollt = false;
+      };
+      tick();
+    });
+
+    // Timer mit Ton (WebAudio, keine Datei) und Wake Lock, damit das Handy nicht ausgeht
+    const zeitEl = document.getElementById('dt-zeit'), start = document.getElementById('dt-start');
+    const ende = document.getElementById('dt-ende');
+    let dauer = 600, rest = 600, laeuft = null, ziel = 0, lock = null, ctx = null;
+    const zeig = () => { const s = Math.max(0, Math.ceil(rest)); zeitEl.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
+    const halten = async (an) => {
+      try {
+        if (an && 'wakeLock' in navigator) lock = await navigator.wakeLock.request('screen');
+        else if (!an && lock) { await lock.release(); lock = null; }
+      } catch (e) { /* nicht schlimm */ }
+    };
+    const klingeln = () => {
+      try {
+        ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+        [0, 0.35, 0.7, 1.4, 1.75, 2.1].forEach((t) => {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.frequency.value = 880; o.type = 'triangle';
+          g.gain.setValueAtTime(0.0001, ctx.currentTime + t);
+          g.gain.exponentialRampToValueAtTime(0.4, ctx.currentTime + t + 0.02);
+          g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + t + 0.3);
+          o.connect(g).connect(ctx.destination); o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.32);
+        });
+      } catch (e) { /* ohne Ton */ }
+      if (navigator.vibrate) navigator.vibrate([300, 150, 300, 150, 600]);
+    };
+    const stopp = () => { clearInterval(laeuft); laeuft = null; start.textContent = '▶ Weiter'; halten(false); };
+    start.addEventListener('click', () => {
+      if (laeuft) { stopp(); return; }
+      if (rest <= 0) rest = dauer;
+      // Ton schon beim Antippen freischalten (iPhone spielt sonst später nichts ab)
+      try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume(); } catch (e) { /* egal */ }
+      ende.hidden = true; zeitEl.classList.remove('aus');
+      ziel = Date.now() + rest * 1000;
+      start.textContent = '⏸ Pause';
+      halten(true);
+      laeuft = setInterval(() => {
+        rest = (ziel - Date.now()) / 1000;
+        zeig();
+        if (rest <= 0) { stopp(); start.textContent = '▶ Timer starten'; ende.hidden = false; zeitEl.classList.add('aus'); klingeln(); }
+      }, 250);
+    });
+    document.getElementById('dt-reset').addEventListener('click', () => {
+      stopp(); start.textContent = '▶ Timer starten'; rest = dauer; ende.hidden = true; zeitEl.classList.remove('aus'); zeig();
+    });
+    dt.querySelectorAll('.dt-min button').forEach((b) => b.addEventListener('click', () => {
+      dauer = +b.dataset.min * 60;
+      dt.querySelectorAll('.dt-min button').forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      if (!laeuft) { rest = dauer; ende.hidden = true; zeitEl.classList.remove('aus'); start.textContent = '▶ Timer starten'; zeig(); }
+    }));
+    document.addEventListener('visibilitychange', () => { if (laeuft && document.visibilityState === 'visible') halten(true); });
+  }
   // Zugeklappte Bereiche (z. B. 24-Tage-Plan) beim Drucken aufklappen
   window.addEventListener('beforeprint', () => document.querySelectorAll('details.print-open').forEach((d) => { d.open = true; }));
 

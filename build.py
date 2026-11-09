@@ -659,45 +659,95 @@ def diy_page():
 
 # ---------- Spiele ----------
 
+# Fragen zur Würfel-Seite (09.11., aus den Suchbegriffen bei Google/Bing) – sichtbar + FAQPage, wortgleich
+WUERFEL_FAQ = [
+    ('Wie funktioniert Wichteln mit Würfeln?', 'Jeder bringt ein verpacktes Geschenk mit. In Runde 1 wird reihum gewürfelt: Wer eine 6 hat, nimmt sich ein Geschenk aus der Mitte. In Runde 2 läuft ein Timer, und jede Zahl bedeutet etwas anderes – weitergeben, tauschen oder klauen. Wenn der Timer klingelt, behält jeder, was er gerade hat.'),
+    ('Muss man beim Würfelwichteln vorher Partner auslosen?', 'Nein. Beim Wichteln mit Würfeln braucht niemand einen Partner: Jeder kauft ein Geschenk für das vereinbarte Budget, und der Würfel entscheidet, wer es am Ende bekommt. Wer lieber gezielt eine bestimmte Person beschenken will, lost vorher online aus.'),
+    ('Wie lange dauert Wichteln mit Würfeln?', 'Meist 20 bis 30 Minuten: Runde 1 dauert je nach Gruppe 5 bis 10 Minuten, für Runde 2 stellt ihr den Timer auf 10 bis 15 Minuten. Mit Kindern reichen 5 Minuten.'),
+    ('Ab wie vielen Personen macht Würfelwichteln Spaß?', 'Ab etwa 4 Personen, am schönsten mit 6 bis 20. Bei mehr als 12 Personen spielt ihr mit zwei Würfeln, die auf gegenüberliegenden Seiten starten.'),
+    ('Was passiert, wenn jemand am Ende kein Geschenk hat?', 'Das kann vorkommen, weil in Runde 2 geklaut wird. Damit niemand leer ausgeht: Wer beim Klingeln mehrere Geschenke hat, gibt die übrigen an alle ohne Geschenk ab – welches, entscheidet er selbst oder der Würfel.'),
+    ('Was tun, wenn kein Würfel da ist?', 'Ihr könnt direkt auf dieser Seite würfeln: Der Würfel zeigt die Zahl und die passende Regel an, und der Timer klingelt, wenn die Zeit um ist. Ein Handy für die ganze Runde reicht.'),
+    ('Welches Budget passt zum Würfelwichteln?', 'Meist 5 bis 15 Euro. Wichtig ist, dass alle Geschenke ungefähr gleich viel wert sind – sonst ist der Frust groß, wenn das teure Päckchen geklaut wird.'),
+]
+
+DICE_FACES = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
+DICE_RULES = [
+    'Gib ein Geschenk an deinen <b>linken</b> Nachbarn.',
+    'Gib ein Geschenk an deinen <b>rechten</b> Nachbarn.',
+    '<b>Alle</b> geben ein Geschenk eine Person nach links weiter.',
+    '<b>Tausche</b> ein Geschenk mit einer Person deiner Wahl.',
+    '<b>Nimm dir</b> ein Geschenk von einer beliebigen Person.',
+    'Glück gehabt – du darfst <b>noch einmal</b> würfeln.',
+]
+
+
 def dice_page():
+    rows = '\n'.join(f'  <tr><td class="num"><span class="face" aria-hidden="true">{DICE_FACES[i]}</span>{i + 1}</td><td>{r}</td></tr>'
+                     for i, r in enumerate(DICE_RULES))
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in WUERFEL_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in WUERFEL_FAQ]}
     body = f'''<article>
 <h1>Wichteln mit Würfeln: Regeln, Ablauf und Varianten</h1>
 {ai_photo('wichtel3d-wuerfel', 'Plüsch-Wichtel mit roter Zipfelmütze hält einen großen Holzwürfel')}
 <p class="lead">Beim Würfelwichteln entscheidet der Würfel, wer am Ende welches Geschenk mit nach Hause nimmt. Das sorgt für Spannung, Gelächter und so manchen Tausch in letzter Sekunde – perfekt für Weihnachtsfeiern mit Kollegen, Freunden oder der Familie.</p>
-<p class="no-print"><button type="button" class="btn-secondary" data-print>🖨️ Regeln ausdrucken</button></p>
+<p class="no-print dice-jump"><a class="btn-primary" href="#wuerfeln">🎲 Würfel &amp; Timer öffnen</a> <button type="button" class="btn-secondary" data-print="karte">🖨️ Spielplan ausdrucken</button></p>
 
 <h2>Was ihr braucht</h2>
 <ul>
   <li>Ein verpacktes Geschenk pro Person – vorher ein Budget absprechen, z. B. 10 oder 15 Euro.</li>
-  <li>Einen Würfel (bei mehr als 12 Personen besser zwei).</li>
-  <li>Einen Timer, zum Beispiel am Handy.</li>
+  <li>Einen Würfel (bei mehr als 12 Personen besser zwei) – oder einfach <a href="#wuerfeln">hier auf der Seite würfeln</a>.</li>
+  <li>Einen Timer – der ist hier auch gleich dabei.</li>
   <li>Einen Tisch oder Stuhlkreis, an dem alle sitzen.</li>
 </ul>
 <p class="tip no-print">💡 <b>Ihr wollt lieber gezielt beschenken statt würfeln?</b> Dann lost vorher aus, wer wen beschenkt – <a href="/">Namen online auslosen</a>, kostenlos und ohne Anmeldung.</p>
 
-<h2>Runde 1: Geschenke verteilen</h2>
+<section class="dice-card" id="spielplan" aria-labelledby="sp-h">
+<h2 id="sp-h">Spielplan: Wichteln mit Würfeln</h2>
+<h3>Runde 1: Geschenke verteilen</h3>
 <p>Alle Geschenke liegen in der Mitte. Reihum wird gewürfelt. Wer eine <b>6</b> würfelt, nimmt sich ein Geschenk aus der Mitte. Es wird so lange weitergewürfelt, bis die Mitte leer ist. Manche haben dann zwei Geschenke, andere gar keins – das ist Absicht.</p>
-
-<h2>Runde 2: Tauschen mit Timer</h2>
-<p>Jetzt wird der Timer gestellt, zum Beispiel auf 10 bis 15 Minuten. Reihum wird weitergewürfelt, und jede Zahl hat eine eigene Regel:</p>
-<table class="rules">
-  <tr><td class="num">1</td><td>Gib ein Geschenk an deinen <b>linken</b> Nachbarn.</td></tr>
-  <tr><td class="num">2</td><td>Gib ein Geschenk an deinen <b>rechten</b> Nachbarn.</td></tr>
-  <tr><td class="num">3</td><td><b>Alle</b> geben ein Geschenk eine Person nach links weiter.</td></tr>
-  <tr><td class="num">4</td><td><b>Tausche</b> ein Geschenk mit einer Person deiner Wahl.</td></tr>
-  <tr><td class="num">5</td><td><b>Nimm dir</b> ein Geschenk von einer beliebigen Person.</td></tr>
-  <tr><td class="num">6</td><td>Glück gehabt – du darfst <b>noch einmal</b> würfeln.</td></tr>
+<h3>Runde 2: Tauschen mit Timer (10–15 Minuten)</h3>
+<table class="rules" id="dice-rules">
+{rows}
 </table>
 <p>Hast du gerade kein Geschenk und würfelst eine 1, 2 oder 4, passiert nichts – der Würfel geht weiter.</p>
+<h3>Ende</h3>
+<p>Wenn der Timer klingelt, ist Schluss: Jeder behält, was er gerade in der Hand hat. Wer mehrere Geschenke hat, gibt die übrigen an alle ohne Geschenk ab. Dann packen alle gleichzeitig aus.</p>
+<p class="dice-card-fuss">Würfel &amp; Timer online: wichtellos.de/wichteln-wuerfeln-regeln</p>
+</section>
+<p class="no-print"><button type="button" class="btn-secondary" data-print="karte">🖨️ Spielplan ausdrucken (1 Seite)</button></p>
 
-<h2>Ende des Spiels</h2>
-<p>Sobald der Timer klingelt, ist Schluss: Jeder behält die Geschenke, die er gerade in der Hand hat, und alle packen gleichzeitig aus.</p>
+<section class="dice-tool no-print" id="wuerfeln" aria-labelledby="dt-h" hidden>
+<h2 id="dt-h">🎲 Würfel &amp; Timer – kein Würfel nötig</h2>
+<p>Legt das Handy in die Mitte: Antippen würfelt, darunter steht die passende Regel.</p>
+<div class="dt-runde" role="group" aria-label="Runde wählen">
+  <button type="button" class="dt-r" data-runde="1" aria-pressed="true">Runde 1: Verteilen</button>
+  <button type="button" class="dt-r" data-runde="2" aria-pressed="false">Runde 2: Tauschen</button>
+</div>
+<button type="button" class="dt-wuerfel" id="dt-wuerfel" aria-label="Würfeln"><span class="dt-face" id="dt-face" aria-hidden="true">⚄</span><span class="dt-tipp">Tippen zum Würfeln</span></button>
+<p class="dt-regel" id="dt-regel" aria-live="polite">Runde 1: Wer eine 6 würfelt, nimmt sich ein Geschenk aus der Mitte.</p>
+<div class="dt-timer">
+  <div class="dt-zeit" id="dt-zeit">10:00</div>
+  <div class="dt-min" role="group" aria-label="Spielzeit">
+    <button type="button" data-min="5" aria-pressed="false">5 Min</button><button type="button" data-min="10" aria-pressed="true">10 Min</button><button type="button" data-min="15" aria-pressed="false">15 Min</button>
+  </div>
+  <div class="dt-btns">
+    <button type="button" class="btn-primary" id="dt-start">▶ Timer starten</button>
+    <button type="button" class="btn-secondary" id="dt-reset">↺ Zurück</button>
+  </div>
+  <p class="dt-ende" id="dt-ende" aria-live="assertive" hidden>⏰ Zeit ist um! Jeder behält, was er hat – auspacken!</p>
+</div>
+<p class="hint">Der Bildschirm bleibt an, solange der Timer läuft. Am Ende klingelt es – Ton am Handy anlassen.</p>
+</section>
 
 <h2>Varianten</h2>
 <ul>
   <li><b>Ohne Auspacken:</b> Die Geschenke bleiben bis zum Schluss verpackt. So weiß niemand, ob sich ein Tausch lohnt – das ist die beliebteste Variante.</li>
   <li><b>Mit Auspacken:</b> Wer in Runde 1 ein Geschenk bekommt, packt es sofort aus. In Runde 2 wird dann gezielt um die beliebtesten Geschenke gewürfelt.</li>
-  <li><b>Große Gruppen:</b> Mit zwei Würfeln gleichzeitig spielen, die auf gegenüberliegenden Seiten starten.</li>
+  <li><b>Mit zwei Würfeln:</b> Für große Gruppen ab etwa 12 Personen. Die Würfel starten auf gegenüberliegenden Seiten – so kommt jeder öfter dran.</li>
+  <li><b>Mit Kindern:</b> Timer auf 5 Minuten, und die 5 („Nimm dir ein Geschenk“) wird zu „Alle geben nach rechts“ – so gibt es keine Tränen.</li>
+  <li><b>Mit Aktionskarten:</b> Bei einer 6 zieht man zusätzlich eine Karte: „Tausche mit dem Jüngsten“, „Alle mit Brille geben weiter“, „Sing ein Weihnachtslied, dann darfst du tauschen“.</li>
+  <li><b>Online per Video-Call:</b> Jeder hat sein Päckchen vor der Kamera, eine Person würfelt hier auf der Seite für alle. Wer am Ende welches Päckchen bekommt, schickt ihr per Post – mehr dazu unter <a href="/wichteln-per-post/">Wichteln per Post</a>.</li>
   <li><b>Schrottwichteln:</b> Statt gekaufter Geschenke bringt jeder etwas Kurioses von zu Hause mit. Mehr dazu unter <a href="/schrottwichteln/">Schrottwichteln</a>.</li>
   <li><b>Im Büro:</b> Wie ihr das Wichteln im Team organisiert – Budget, Regeln, Homeoffice –, steht unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
 </ul>
@@ -705,9 +755,12 @@ def dice_page():
 <h2>Tipps für eine gelungene Runde</h2>
 <ul>
   <li>Unterschiedliche Verpackungsgrößen machen das Spiel spannender – ein kleines Päckchen kann das beste Geschenk sein.</li>
-  <li>Die Regeln vorher einmal laut vorlesen oder ausgedruckt auf den Tisch legen.</li>
-  <li>Bei Kindern den Timer kürzer stellen, etwa auf 5 Minuten.</li>
+  <li>Den Spielplan vorher einmal laut vorlesen oder ausgedruckt auf den Tisch legen.</li>
+  <li>Alle Geschenke sollten ungefähr gleich viel wert sein – sonst ist der Frust groß, wenn das teure Päckchen geklaut wird.</li>
 </ul>
+
+<h2>Häufige Fragen zum Würfelwichteln</h2>
+{faq}
 {supplies_block()}
 <div class="ad-slot">Anzeige (Platzhalter)</div>
 <div class="cta-box">
@@ -718,7 +771,7 @@ def dice_page():
     # Titel 09.11. neu (Google: Platz 1,5 für „wichteln würfeln“, aber 0 Klicks) – Nutzen + Ausdrucken nach vorn
     page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln 1–6 + Spielplan zum Ausdrucken',
          'Würfelwichteln einfach erklärt: Was bei jeder Zahl von 1 bis 6 passiert, Ablauf in 2 Runden mit Timer, 5 Varianten und Regelkarte zum Ausdrucken – kostenlos.', body,
-         crumb='Wichteln mit Würfeln', mascot='wuerfel')
+         crumb='Wichteln mit Würfeln', mascot='wuerfel', extra=ld(faq_ld))
 
 
 SCRAP_IDEAS = [
