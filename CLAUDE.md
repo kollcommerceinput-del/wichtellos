@@ -345,7 +345,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - [ ] Externe Links/Erwähnungen (06.11., Toni: Gemini behauptet, wichtellos.de existiere nicht; ChatGPT findet uns über Bing).
       AlternativeTo: Konto „WichtelLos“ (Google-Login kollcommerce.input@gmail.com) angelegt, aber **Eintrag nicht möglich – AlternativeTo
       nimmt nur Apps, die Englisch unterstützen** (FAQ). Erst mit englischer Fassung (frühestens 2027) eintragen; Screenshots + Text liegen in
-      marketing/alternativeto/. Kostenlose Warteschlange dort sehr lang, Vorziehen kostet einmalig. Nächster Schritt: Mails an Redaktionen
+      marketing/alternativeto/. Kostenlose Warteschlange dort sehr lang, Vorziehen kostet einmalig. 09.11.: Liste für Onnis Adventskalender (Familienblogs/Redaktionen, Prio A/B + Mailtext) in `marketing/presse/onni-kalender-blogs.md` – bis Mitte November verschicken (Toni). Nächster Schritt: Mails an Redaktionen
       (t3n Büro-Wichteln-Apps, Vodafone featured Digitales Wichteln, Karrierebibel Wichteln im Büro, appgefahren) – Toni schickt selbst.
 - [ ] Zielmarkt bis Weihnachten 2026: nur DACH (Toni 01.11.). FAQ „Österreich und Schweiz“ + Budget in CHF erkannt. Übersetzungen
       frühestens 2027: zuerst Englisch („Secret Santa“), Skandinavien höchstens danach (kleine Märkte, kaum Amazon/Awin).
