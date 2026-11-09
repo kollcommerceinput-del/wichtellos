@@ -1,0 +1,44 @@
+{
+ "video": "reel-ab-dezember.mp4",
+ "out": "reel-ab-dezember-stimme.mp4",
+ "tempo": 1.15,
+ "stil": "Leise und geheimnisvoll flüsternd am Anfang, dann warm und voller Vorfreude, wie beim Vorlesen für Familien, auf Deutsch.",
+ "saetze": [
+  [
+   0.2,
+   "Psst …"
+  ],
+  [
+   1.0,
+   "Ab dem ersten Dezember ist es so weit …"
+  ],
+  [
+   3.9,
+   "dann kommt der Wichtel aus dem Wichtelwald!"
+  ],
+  [
+   7.2,
+   "Vierundzwanzig Geschichten mit Onni!"
+  ]
+ ],
+ "geraeusche": [
+  [
+   "veo-ton.wav",
+   0,
+   7.1,
+   -8
+  ],
+  [
+   "eule",
+   5.4,
+   1.8,
+   -20
+  ],
+  [
+   "gloeckchen",
+   7.1,
+   1.6,
+   -20
+  ]
+ ]
+}
