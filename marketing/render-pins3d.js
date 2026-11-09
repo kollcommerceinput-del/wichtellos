@@ -20,6 +20,12 @@ const PINS = [
   ['geschenke-generator', 'onni-geschenk-tisch.jpg', '50% 45%', 'Geschenke-Generator', '3 Fragen – 3 Ideen zum Freirubbeln', 'Jetzt Lose ziehen →'],
   ['rubbellos', 'onni-handy.jpg', '50% 45%', 'Geschenk als Rubbellos', 'Per WhatsApp – zum Freirubbeln', 'Kostenlos erstellen →'],
   ['wunschzettel', 'lupe.jpg', '50% -380px', 'Wunschzettel fürs Wichteln', 'Als Link in die Wichtelgruppe schicken', 'Kostenlos erstellen →'],
+  // 10.11. (Toni: Pins für Seiten ohne Pin, Saison-Höhepunkt Mitte/Ende Nov.)
+  ['maenner', 'geschenk.jpg', '50% -420px', 'Geschenke für Männer', '23 Ideen, die wirklich benutzt werden', 'Alle Ideen ansehen →'],
+  ['frauen', 'geschenke/kerze.jpg', '50% 50%', 'Geschenke für Frauen', '21 Ideen, die wirklich ankommen', 'Alle Ideen ansehen →'],
+  ['adventskalender-befuellen', 'basteln.jpg', '50% 40%', 'Adventskalender befüllen', '24 Ideen für Groß &amp; Klein', 'Alle 24 Ideen ansehen →'],
+  ['wie-funktioniert-wichteln', 'feier.jpg', '50% 45%', 'Wie funktioniert Wichteln?', 'Regeln &amp; Anleitung in 6 Schritten', 'Anleitung ansehen →'],
+  ['was-ist-ein-wichtel', 'tuer.jpg', '60% 50%', 'Was ist ein Wichtel?', 'Aussehen, Herkunft &amp; Bedeutung – auch für Kinder', 'Mehr erfahren →'],
   ['wuerfeln', 'wuerfel.jpg', '50% -400px', 'Wichteln mit Würfeln', 'Regeln 1–6 + Würfel &amp; Timer am Handy', 'Spielplan gratis ausdrucken →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
