@@ -1601,21 +1601,35 @@ SHOP_REITER = [('31', '☕', 'Tasse', '19,99 €'), ('1470', '☕', 'Große Tass
 def tassen_page():
     from shop_daten import SHOP_PRODUKTE
     n = len({k for items in SHOP_PRODUKTE.values() for k, *_ in items})
+    # 09.11. Umbau 2 (Toni: „so billig“): grüner Einstieg mit 3 Produktfotos, Reiter mit Preis, Sprüche nach TASSEN-Gruppen,
+    # kein Preis je Kachel. Gruppen-Zuordnung über die Design-ID im TASSEN-Artikelpfad (-A<ID>); Rest = „Rund um den Wichtel“.
+    gruppen = [(titel.replace(' und fürs ', ' &amp; '), {re.search(r'-A([0-9a-f]{16})$', z[3]).group(1) for z in zeilen})
+               for titel, zeilen in TASSEN]
     tabs, grids = [], []
     for i, (pt, sym, lbl, preis) in enumerate(SHOP_REITER):
         items = SHOP_PRODUKTE.get(pt, [])
         tabs.append(f'<button type="button" class="ms-tab" role="tab" aria-selected="{"true" if i == 0 else "false"}" '
-                    f'aria-controls="ms-{pt}" data-ms="{pt}"><span aria-hidden="true">{sym}</span>{esc(lbl)}</button>')
-        cards = ''.join(
+                    f'aria-controls="ms-{pt}" data-ms="{pt}">{esc(lbl)}<small>{preis}</small></button>')
+        karte = lambda k, slug, idea, name: (
             f'<a class="ms-card" href="{esc(shop_link(slug, idea, pt))}" target="_blank" rel="noopener">'
-            f'<img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
-            f'width="400" height="400" loading="lazy" decoding="async"><span class="ms-name">{esc(name)}</span>'
-            f'<span class="ms-preis">{preis}</span></a>' for k, slug, idea, name in items)
-        grids.append(f'<div class="ms-grid" id="ms-{pt}" role="tabpanel"{"" if i == 0 else " hidden"}>'
-                     f'<p class="ms-info">{esc(lbl)} mit Wichtel-Spruch · <b>{preis}</b></p>{cards}</div>')
+            f'<span class="ms-bild"><img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
+            f'width="400" height="400" loading="lazy" decoding="async"></span><span class="ms-name">{esc(name)}</span>'
+            f'<span class="ms-an">Ansehen →</span></a>')
+        teile, gesehen = [], set()
+        for titel, ids in gruppen + [('Rund um den Wichtel', None)]:
+            ks = [x for x in items if (x[0] in ids if ids is not None else x[0] not in gesehen)]
+            gesehen |= {x[0] for x in ks}
+            if ks:
+                teile.append(f'<h3 class="ms-h">{titel}</h3><div class="ms-grid">{"".join(karte(*x) for x in ks)}</div>')
+        grids.append(f'<div class="ms-panel" id="ms-{pt}" role="tabpanel"{"" if i == 0 else " hidden"}>{"".join(teile)}</div>')
+    hero = ''.join(f'<img src="/fotos/merch/shop/{f}.webp" alt="" width="400" height="400">'
+                   for f in ('897-32834927e9882040', '31-3283492984258d6f', '6-3283492929305c32'))
     body = f"""<article>
-<h1>Wichtel-Tassen, T-Shirts &amp; Teddys mit Spruch</h1>
-<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Sprüche mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld. Wähle, was du verschenken willst:</p>
+<section class="ms-hero">
+<h1>Wichtelgeschenke mit Spruch</h1>
+<p>Tassen, Shirts, Hoodies und Teddys mit unserem Wichtel – {n} Sprüche vom „Wichtel-Champion“ bis „Nächstes Jahr bitte Bargeld“.</p>
+<div class="ms-hero-bilder">{hero}</div>
+</section>
 
 <div class="ms-tabs" role="tablist" aria-label="Produkt wählen">{''.join(tabs)}</div>
 {''.join(grids)}

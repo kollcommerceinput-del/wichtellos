@@ -239,7 +239,7 @@
   // Shop-Seite (/wichtel-tassen/): Reiter je Produktart, Adresse #tasse/#t-shirt … merkt die Wahl
   const msTabs = [...document.querySelectorAll('.ms-tab')];
   if (msTabs.length) {
-    const slug = (b) => b.textContent.trim().toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const slug = (b) => b.firstChild.textContent.trim().toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const waehle = (b, merken) => {
       msTabs.forEach((x) => {
         const an = x === b;
