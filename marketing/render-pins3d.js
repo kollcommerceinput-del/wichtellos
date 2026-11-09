@@ -20,7 +20,10 @@ const PINS = [
   ['geschenke-generator', 'onni-geschenk-tisch.jpg', '50% 45%', 'Geschenke-Generator', '3 Fragen – 3 Ideen zum Freirubbeln', 'Jetzt Lose ziehen →'],
   ['rubbellos', 'onni-handy.jpg', '50% 45%', 'Geschenk als Rubbellos', 'Per WhatsApp – zum Freirubbeln', 'Kostenlos erstellen →'],
   ['wunschzettel', 'lupe.jpg', '50% -380px', 'Wunschzettel fürs Wichteln', 'Als Link in die Wichtelgruppe schicken', 'Kostenlos erstellen →'],
+  ['wuerfeln', 'wuerfel.jpg', '50% -400px', 'Wichteln mit Würfeln', 'Regeln 1–6 + Würfel &amp; Timer am Handy', 'Spielplan gratis ausdrucken →'],
 ];
+// Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
+const NUR = process.argv.slice(2);
 
 const html = ([, file, pos, title, sub, cta]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
 @font-face{font-family:Fredoka;src:url(${font}) format('woff2');font-weight:600}
@@ -45,7 +48,7 @@ p{font-size:46px;line-height:1.3;margin:0;color:#6d5d57}
   fs.mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1000, height: 1500 } });
-  for (const pin of PINS) {
+  for (const pin of PINS.filter((x) => !NUR.length || NUR.includes(x[0]))) {
     await p.setContent(html(pin));
     await p.evaluate(() => document.fonts.ready);
     await p.screenshot({ path: path.join(OUT, `pin3d-${pin[0]}.png`) });

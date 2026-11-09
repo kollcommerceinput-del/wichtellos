@@ -148,6 +148,7 @@ Antworten auf Deutsch.
 - `marketing/render-gallery3d.js` → `marketing/social/wichtel3d/`: Erklär-Galerie mit 3D-Wichtel, 8 Folien (Werkstatt, Namen, Auslosen,
   Link schicken, Tipp, Lose, Geheimnis lüften, CTA) als `ig-NN` 1080×1350, `tt-NN` 1080×1920, `pin-NN` 1000×1500 + `galerie.mp4`
   (14,8 s, 1,8 s/Folie, ohne Ton – Toni: 3 s war zu lang gezogen). Bildausschnitt je Folie über `focus` (02.11.)
+- 09.11. Pins: `pin3d-wuerfeln.png` (`node marketing/render-pins3d.js wuerfeln` – Argument = nur diese Pins bauen; Pinnwand Schrottwichteln & Wichtelspiele, Themen Wichteln/Weihnachten/Spiele für Familientreffen, KI-Label) und `pin-shop.png` (`marketing/render-pin-shop.js`, echte Produktfotos, kein KI-Label; Pinnwand Wichtelgeschenke nach Budget, Themen Wichtelgeschenke/Geschenkideen für Weihnachten/Wichteln), beide mit Alt-Text veröffentlicht. Pinterest-Profil: ~940 monatliche Aufrufe.
 - `marketing/render-pins3d.js` – Foto-Pins mit 3D-Wichtel nach `marketing/pins3d/` (Standbilder `marketing/reel/wichtel3d/stills/`, 02.11.)
   02.11. alle 6 veröffentlicht (auslosen, whatsapp, wichtelgedichte, lose-drucken → „Ideen & Reels“; buero → „Ideen & Reels“; unter-10 →
   „nach Budget“), alle KI-markiert + Alt-Text. Themen-Tags nur bei buero + unter-10 (bei den ersten 4 vergessen, nachträglich nicht möglich).
