@@ -715,8 +715,9 @@ def dice_page():
   <a class="btn-primary" href="/">Wichteln auslosen</a>
 </div>
 </article>'''
-    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln, Ablauf & Varianten',
-         'Wichteln mit Würfeln: Die Regeln für jede Zahl, der Ablauf in zwei Runden und beliebte Varianten wie „ohne Auspacken“ – mit Druckversion.', body,
+    # Titel 09.11. neu (Google: Platz 1,5 für „wichteln würfeln“, aber 0 Klicks) – Nutzen + Ausdrucken nach vorn
+    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln 1–6 + Spielplan zum Ausdrucken',
+         'Würfelwichteln einfach erklärt: Was bei jeder Zahl von 1 bis 6 passiert, Ablauf in 2 Runden mit Timer, 5 Varianten und Regelkarte zum Ausdrucken – kostenlos.', body,
          crumb='Wichteln mit Würfeln', mascot='wuerfel')
 
 
