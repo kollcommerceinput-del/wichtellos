@@ -139,6 +139,23 @@
     v.focus();
   }));
 
+  // Shop-Seite (/wichtel-tassen/): Reiter je Produktart, Adresse #tasse/#t-shirt … merkt die Wahl
+  const msTabs = [...document.querySelectorAll('.ms-tab')];
+  if (msTabs.length) {
+    const slug = (b) => b.textContent.trim().toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const waehle = (b, merken) => {
+      msTabs.forEach((x) => {
+        const an = x === b;
+        x.setAttribute('aria-selected', an ? 'true' : 'false');
+        document.getElementById('ms-' + x.dataset.ms).hidden = !an;
+      });
+      if (merken) history.replaceState(null, '', '#' + slug(b));
+    };
+    msTabs.forEach((b) => b.addEventListener('click', () => waehle(b, true)));
+    const start = msTabs.find((b) => '#' + slug(b) === location.hash);
+    if (start) waehle(start, false);
+  }
+
   // Karussell (10 Schritte WhatsApp): Pfeile scrollen um eine Folie, an den Enden ausgegraut
   document.querySelectorAll('.karussell').forEach((k) => {
     const list = k.querySelector('.k-list'), prev = k.querySelector('.k-prev'), next = k.querySelector('.k-next');

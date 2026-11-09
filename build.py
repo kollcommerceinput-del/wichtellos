@@ -449,7 +449,7 @@ def shop_card(data=False):
              'data-search="wichtel tasse t-shirt shirt teddy spruch lustig shop buero kollegen"') if data else ''
     return f'''<div class="idea idea-shop"{attrs}>
   <p class="shop-badge">☕ Aus unserem Shop</p>
-  <img src="/fotos/merch/tasse-14.webp" alt="Wichtel-Tasse „Wichtel-Champion“ mit dem WichtelLos-Wichtel" width="440" height="440" loading="lazy" decoding="async">
+  <img src="/fotos/merch/shop/31-3283492984258d6f.webp" alt="Wichtel-Tasse „Wichtel-Champion“ mit dem WichtelLos-Wichtel" width="400" height="400" loading="lazy" decoding="async">
   <h3>Wichtel-Tasse mit Spruch</h3>
   <p>14 lustige Motive – auch als T-Shirt oder Teddy.</p>
   <a href="/wichtel-tassen/">Alle Motive ansehen</a>
@@ -1505,7 +1505,7 @@ def zubehoer_page():
 
 # Eigener Spreadshop (08.11., Toni): wichtellos.myspreadshop.de – Kunde kauft bei sprd.net AG, wir bekommen eine Gutschrift.
 # Link = /<Artikel-Pfad>?sellable=<Motiv-ID>-<Produkt>: 31 = Tasse, 6 = Männer T-Shirt (1470 = große Tasse 440 ml).
-# Bilder: fotos/merch/tasse-NN.webp aus marketing/merch/tassen/. Neues Motiv = Zeile hier + Bild.
+# Motiv-Bilder fotos/merch/tasse-NN.webp (alt); Produktfotos fotos/merch/shop/ über tools/shop_fotos.py.
 SHOP_URL = 'https://wichtellos.myspreadshop.de'
 TASSEN = [
     ('Für Gewinner und Glückspilze', [
@@ -1535,32 +1535,36 @@ def shop_link(slug, mid, produkt):
     return f'{SHOP_URL}/{slug}?sellable={mid}-{produkt}'
 
 
-# Alle 8 Produkte je Motiv (Spreadshop-Produkttyp, Kurzname) – Toni 08.11.: „mehr Auswahl zeigen“
-MERCH_AUCH = [(1470, 'Große Tasse'), (1052, 'Panoramatasse'), (6, 'T-Shirt Herren'), (631, 'T-Shirt Damen'),
-              (635, 'Bio-Shirt Unisex'), (457, 'Kinder-Shirt'), (897, '🧸 Teddy')]
+# Reiter der Shop-Seite (Toni 09.11.): je Produktart alle Sprüche als echtes Produktfoto (Daten: shop_daten.py,
+# erzeugt von tools/shop_fotos.py). Preise = Shop-Preise 09.11. – bei Preisänderung im Spreadshop hier anpassen.
+SHOP_REITER = [('31', '☕', 'Tasse', '19,99 €'), ('1470', '☕', 'Große Tasse', '24,99 €'), ('6', '👕', 'T-Shirt', '29,99 €'),
+               ('20', '🧥', 'Hoodie', '49,99 €'), ('897', '🧸', 'Teddy', '29,99 €')]
 
 
 def tassen_page():
-    secs, n = [], 0
-    for title, items in TASSEN:
-        cards = []
-        for nr, name, text, slug, mid in items:
-            n += 1
-            cards.append(f'''<div class="merch">
-  <div class="merch-img"><img src="/fotos/merch/tasse-{nr:02d}.webp" alt="Motiv „{esc(name)}“ mit dem WichtelLos-Wichtel" width="440" height="440" loading="lazy" decoding="async"></div>
-  <h3>{esc(name)}</h3>
-  <p>{esc(text)}</p>
-  <a class="btn-primary merch-btn" href="{esc(shop_link(slug, mid, 31))}" target="_blank" rel="noopener">Tasse ansehen</a>
-  <p class="merch-auch-t">Auch als:</p>
-  <p class="merch-auch">{''.join(f'<a href="{esc(shop_link(slug, mid, pt))}" target="_blank" rel="noopener">{esc(lbl)}</a>' for pt, lbl in MERCH_AUCH)}</p>
-</div>''')
-        secs.append(f'<h2>{esc(title)}</h2>\n<div class="merch-grid">\n' + '\n'.join(cards) + '\n</div>')
+    from shop_daten import SHOP_PRODUKTE
+    n = len({k for items in SHOP_PRODUKTE.values() for k, *_ in items})
+    tabs, grids = [], []
+    for i, (pt, sym, lbl, preis) in enumerate(SHOP_REITER):
+        items = SHOP_PRODUKTE.get(pt, [])
+        tabs.append(f'<button type="button" class="ms-tab" role="tab" aria-selected="{"true" if i == 0 else "false"}" '
+                    f'aria-controls="ms-{pt}" data-ms="{pt}"><span aria-hidden="true">{sym}</span>{esc(lbl)}</button>')
+        cards = ''.join(
+            f'<a class="ms-card" href="{esc(shop_link(slug, idea, pt))}" target="_blank" rel="noopener">'
+            f'<img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
+            f'width="400" height="400" loading="lazy" decoding="async"><span class="ms-name">{esc(name)}</span>'
+            f'<span class="ms-preis">{preis}</span></a>' for k, slug, idea, name in items)
+        cards += (f'<a class="ms-card ms-mehr" href="{SHOP_URL}/" target="_blank" rel="noopener"><span class="ms-mehr-i" aria-hidden="true">🎁</span>'
+                  f'<span class="ms-name">Und noch viel mehr</span><span class="ms-preis">Pullis, Taschen, Kappen … im Shop →</span></a>')
+        grids.append(f'<div class="ms-grid" id="ms-{pt}" role="tabpanel"{"" if i == 0 else " hidden"}>'
+                     f'<p class="ms-info">{esc(lbl)} mit Wichtel-Spruch · <b>{preis}</b></p>{cards}</div>')
     body = f"""<article>
 <h1>Wichtel-Tassen, T-Shirts &amp; Teddys mit Spruch</h1>
-<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Motive mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld.</p>
-<p class="merch-zahl"><b>{n} Motive · {n * (len(MERCH_AUCH) + 1)} Geschenke</b> – jedes Motiv als Tasse, große Tasse, Panoramatasse, T-Shirt für Herren, Damen und Kinder, Bio-Shirt und Weihnachtsteddy.</p>
+<p class="lead">Eine Tasse geht beim Wichteln immer: Sie wird jeden Tag benutzt, passt ins Büro und bringt beim Auspacken alle zum Lachen. Hier sind {n} Wichtel-Sprüche mit unserem WichtelLos-Wichtel – vom „Wichtel-Champion“ bis zur Bitte um Bargeld. Wähle, was du verschenken willst:</p>
 
-{''.join(s + chr(10) + chr(10) for s in secs)}<p class="merch-all"><a class="btn-secondary" href="{SHOP_URL}/" target="_blank" rel="noopener">Alle Produkte im WichtelLos-Shop</a></p>
+<div class="ms-tabs" role="tablist" aria-label="Produkt wählen">{''.join(tabs)}</div>
+{''.join(grids)}
+<p class="merch-all"><a class="btn-secondary" href="{SHOP_URL}/" target="_blank" rel="noopener">Alle Produkte im WichtelLos-Shop</a></p>
 <p class="hint">Bestellung, Bezahlung und Versand laufen über Spreadshirt (sprd.net AG). Jedes Stück wird erst nach deiner Bestellung bedruckt. Preise, Lieferzeit und Rückgabe stehen im Shop. Mit jedem Kauf unterstützt du WichtelLos.</p>
 
 <h2>Welche Tasse passt zu wem?</h2>
