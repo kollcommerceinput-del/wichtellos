@@ -821,3 +821,26 @@ h2[id] { scroll-margin-top: 16px; }
   .mehr-box .hint { margin: 8px 0 0; font-size: 14px; }
 }
 @media print { .idea.mehr-zu { display: flex !important; } .mehr-box { display: none; } }
+
+/* Eigener Shop (Toni 09.11.): grüner Menüpunkt, Shop-Karte zwischen den Ideen, Hinweis auf der Seite des geheimen Links */
+.top nav a.nav-shop { background: #1f6f4a; color: #fff; border-radius: 999px; padding: 7px 14px; }
+.top nav a.nav-shop:hover { background: #18573a; color: #fff; }
+@media (max-width: 600px) { .top nav a.nav-shop { background: #1f6f4a; border-radius: 14px; padding: 6px 2px; } }
+.idea-shop { border: 2px solid #1f6f4a; background: #f3faf5; }
+.idea-shop .shop-badge { flex: 0; margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #1f6f4a; }
+.idea-shop img { width: 96px; height: 96px; object-fit: contain; margin: 0 auto 6px; display: block; }
+.idea-shop a { color: #1f6f4a; }
+.shop-hint { display: flex; gap: 14px; align-items: center; text-decoration: none; color: var(--text); border: 2px solid #1f6f4a; background: #f3faf5; margin: 14px 0; }
+.shop-hint img { width: 84px; height: 84px; object-fit: contain; flex: none; }
+.shop-hint u { color: #1f6f4a; font-weight: 700; }
+@media (max-width: 600px) { .idea-shop img { width: 72px; height: 72px; } .idea-shop .shop-badge { font-size: 12px; } }
+/* „Keine Folge verpassen“ (Toni 09.11.: statt Kalender-Datei → folgen/abonnieren) */
+.ak-folgen { text-align: center; margin: 18px 0; }
+.ak-folgen > summary { display: inline-flex; list-style: none; cursor: pointer; }
+.ak-folgen > summary::-webkit-details-marker { display: none; }
+.ak-folgen > p { margin: 12px 0 6px; font-weight: 600; }
+.ak-folgen-knoepfe { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ak-folgen-knoepfe a { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; }
+.ak-folgen-knoepfe svg { width: 20px; height: 20px; }
+@media (max-width: 600px) { .ak-folgen-knoepfe a { width: 100%; justify-content: center; } }
+.idea-shop p.shop-badge { display: block; -webkit-line-clamp: unset; overflow: visible; }

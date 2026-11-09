@@ -87,8 +87,8 @@ HEADER = '''<header class="top"><div class="bar">
     <a href="/geschenke-generator/"><span class="nav-l">🎲 Geschenke-Generator</span><span class="nav-k"><i>🎲</i>Generator</span></a>
     <a href="/wichtelgeschenke-unter-10-euro/"><span class="nav-l">Nach Budget</span><span class="nav-k"><i>💶</i>Nach Budget</span></a>
     <a href="/wichtel-zubehoer/"><span class="nav-l">Wichtel-Zubehör</span><span class="nav-k"><i>✨</i>Zubehör</span></a>
-    <a href="/wichtelgeschenke-fuer-kinder/"><span class="nav-l">Geschenke für Kinder</span><span class="nav-k"><i>🧸</i>Für Kinder</span></a>
-    <a href="/wichteln-wuerfeln-regeln/"><span class="nav-l">Spiele</span><span class="nav-k"><i>🎯</i>Spiele</span></a>
+    <a href="/wichtelgeschenke-fuer-kinder/"><span class="nav-l">Für Kinder</span><span class="nav-k"><i>🧸</i>Für Kinder</span></a>
+    <a class="nav-shop" href="/wichtel-tassen/"><span class="nav-l">☕ Tassen &amp; Shirts</span><span class="nav-k"><i>☕</i>Tassen &amp; Shirts</span></a>
   </nav>
   <button type="button" class="search-btn" aria-label="Suche öffnen" aria-expanded="false" aria-controls="search-panel" title="Suchen">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
@@ -443,6 +443,19 @@ GIFTS = {
 }
 
 
+def shop_card(data=False):
+    """Karte „aus unserem Shop“ (Toni 09.11.: eigene Produkte = mehr Marge) – kein Werbe-Sternchen, Link auf /wichtel-tassen/."""
+    attrs = (' data-ages="teen adult" data-budget="20" data-cats="lustig" data-office="1" '
+             'data-search="wichtel tasse t-shirt shirt teddy spruch lustig shop buero kollegen"') if data else ''
+    return f'''<div class="idea idea-shop"{attrs}>
+  <p class="shop-badge">☕ Aus unserem Shop</p>
+  <img src="/fotos/merch/tasse-14.webp" alt="Wichtel-Tasse „Wichtel-Champion“ mit dem WichtelLos-Wichtel" width="440" height="440" loading="lazy" decoding="async">
+  <h3>Wichtel-Tasse mit Spruch</h3>
+  <p>14 lustige Motive – auch als T-Shirt oder Teddy.</p>
+  <a href="/wichtel-tassen/">Alle Motive ansehen</a>
+</div>'''
+
+
 def gift_page(budget):
     g = GIFTS[budget]
     path = f'/wichtelgeschenke-unter-{budget}-euro/'
@@ -456,6 +469,9 @@ def gift_page(budget):
   <p>{esc(text)}</p>
   {amazon_link(query)}
 </div>''' for title, text, query in ideas)
+        if budget >= 20 and not sections:  # eigener Shop (Toni 09.11.) – Tasse passt ab 20 €
+            teile = cards.split('\n<div class="idea">')
+            cards = '\n<div class="idea">'.join(teile[:2]) + '\n' + shop_card() + ''.join('\n<div class="idea">' + t for t in teile[2:])
         sections.append(f'<h2>{esc(name)}</h2>\n<div class="idea-grid">\n{cards}\n</div>')
     tips = '\n'.join(f'<li>{esc(t)}</li>' for t in g['tips'])
     body = f'''<article>
@@ -529,7 +545,9 @@ def chip_group(label, field, options, with_all=True):
 
 def finder_page():
     who = list(AGE_LABELS.items()) + [('office', 'Kollegen')]
-    cards = '\n'.join(idea_card(i, data=True) for i in IDEAS)
+    karten = [idea_card(i, data=True) for i in IDEAS]
+    karten.insert(2, shop_card(data=True))  # eigener Shop (Toni 09.11.)
+    cards = '\n'.join(karten)
     body = f'''<article>
 <h1>Geschenkfinder fürs Wichteln</h1>
 <p class="lead">{len(IDEAS)} Geschenkideen für Kinder, Teenager, Erwachsene und Kollegen – filtere nach Alter, Budget und dem, was die beschenkte Person mag.</p>
@@ -1612,8 +1630,12 @@ def onni_kalender_page():
 <p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember öffnet sich hier jeden Tag ein Türchen mit einer neuen Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
 <p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
 
-<p class="ak-erinnern"><a class="btn-primary" href="/onni-erinnerung.ics" download>🔔 Jeden Abend an Onni erinnern</a>
-<span class="hint">Trägt vom 1. bis 24. Dezember um 18:30 Uhr eine Erinnerung in deinen Kalender ein – ohne Anmeldung, wir erfahren davon nichts.</span></p>
+<details class="ak-folgen"><summary class="btn-primary">🔔 Keine Folge verpassen</summary>
+<p>Folge Onni – dann bekommst du jede neue Geschichte mit:</p>
+<p class="ak-folgen-knoepfe"><a class="btn-secondary" href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">{ICONS["instagram"]} Instagram folgen</a>
+<a class="btn-secondary" href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">{ICONS["tiktok"]} TikTok folgen</a>
+<a class="btn-secondary" href="https://www.youtube.com/@WichtelLos?sub_confirmation=1" rel="noopener" target="_blank">{ICONS["youtube"]} YouTube abonnieren</a></p>
+</details>
 
 <h2 id="kalender">Die 24 Türchen</h2>
 <p>Jedes Türchen öffnet sich um Mitternacht an seinem Tag. Tippe auf ein offenes Türchen, dann startet die Geschichte.</p>
