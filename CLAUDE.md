@@ -279,7 +279,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
   `/gibt-es-nicht/` muss die eigene 404-Seite zeigen, `/sitemap.xml`, `/robots.txt`, Vorschaubild beim Teilen in WhatsApp.
 - Google Search Console: Domain-Property `wichtellos.de`, bestätigt per DNS-TXT (`google-site-verification=…`, nicht löschen).
 - Bing Webmaster Tools: `https://wichtellos.de/`, bestätigt per DNS-CNAME `b6492afd…` → `verify.bing.com` und Meta-Tag
-  `msvalidate.01` (in `build.py`). Deckt Edge, DuckDuckGo, Yahoo, Ecosia, ChatGPT-Suche ab.
+  `msvalidate.01` (in `build.py`). Deckt Edge, DuckDuckGo, Yahoo, Ecosia, ChatGPT-Suche ab. Login: Konto mit KOLL-Logo als Profilbild (das Konto „KU“ hat keine Website – dort nichts anlegen). Stand 09.11.: Bing 1.–6.11. 54 Klicks/906 Aufrufe (mehr Klicks als Google: 26/1.210 in 28 Tagen), Platz 1–2 für „wichtel losen/auslosen“, „wichtelgenerator“; „wichtel-o-mat“ 158 Aufrufe Platz 8, 0 Klicks. AI Performance (Copilot): 156 Zitate in 6 Tagen, v. a. „wichteln auslosen“.
 - YouTube (05.11.): Kanal **@WichtelLos** https://www.youtube.com/@WichtelLos (ID UCBaoI654NB6hH052CYAT08Q, Google-Login
   kollcommerce.input@gmail.com, Dienste nicht verknüpft). Banner `marketing/youtube-banner.jpg` (`node marketing/render-youtube-banner.js`),
   Logo = `marketing/instagram-profilbild.png`. Zielgruppe „je Video prüfen“ (Folgen = „für Kinder“), Upload-Standards: Deutsch, Film & Animation,
