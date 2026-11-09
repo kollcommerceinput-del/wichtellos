@@ -1677,6 +1677,15 @@ def onni_kalender_page():
   <li><a href="/wichtel-ausmalbilder/">Ausmalbilder und Sticker mit Onni</a> – zum Ausmalen während der Folge</li>
   <li><a href="/wichteltuer/#wichtelname">Wichtelname-Generator</a> – falls euer eigener Wichtel einen Namen bekommen soll</li>
 </ul>
+<div class="briefe-box briefe-onni">
+  <a href="/wichteltuer/#briefe"><img src="/fotos/onni/onni-briefe-24-480.webp" width="480" height="679" alt="Titelseite „24 Briefe von Onni“ mit dem Wichtel Onni, der ein Geschenk hochhält" loading="lazy" decoding="async"></a>
+  <div>
+    <h3>📬 Noch mehr Geschichten von Onni – für euer Zuhause</h3>
+    <p><b>24 Briefe von Onni zum Ausdrucken:</b> Jeden Morgen liegt ein neuer Brief vor der Wichteltür – kleine Geschichten, die Onni selbst schreibt.</p>
+    <p>Und ab 1. Dezember erzählt Onni hier jeden Abend eine neue Geschichte als Video.</p>
+    <p><a class="btn-primary" href="/fotos/onni/onni-briefe-24.pdf" target="_blank" rel="noopener">🖨️ 24 Briefe kostenlos herunterladen (PDF)</a></p>
+  </div>
+</div>
 
 {supplies_block(ONNI_SHOP, 'Für die Großen: Du suchst noch Geschenke?')}
 <p class="hint">Hier geht's direkt zu den Ideen: <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
@@ -1743,6 +1752,7 @@ def door_page():
     </ul>
     <p><a class="btn-primary" href="/fotos/onni/onni-briefe-24.pdf" target="_blank" rel="noopener">🖨️ Alle 24 Briefe als PDF – kostenlos</a></p>
     <p class="hint">16 Seiten A4, für den privaten Gebrauch. Grafiken mit KI-Unterstützung erstellt.</p>
+    <p>Noch mehr von Onni: Ab 1. Dezember erzählt er jeden Abend eine neue Geschichte im <a href="/onni-adventskalender/">Onni-Adventskalender →</a></p>
   </div>
 </div>
 {KOFI_LINE}

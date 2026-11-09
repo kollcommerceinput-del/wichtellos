@@ -844,3 +844,4 @@ h2[id] { scroll-margin-top: 16px; }
 .ak-folgen-knoepfe svg { width: 20px; height: 20px; }
 @media (max-width: 600px) { .ak-folgen-knoepfe a { width: 100%; justify-content: center; } }
 .idea-shop p.shop-badge { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.briefe-onni h3 { margin: 0 0 8px; }
