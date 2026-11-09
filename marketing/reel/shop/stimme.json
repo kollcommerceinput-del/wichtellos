@@ -1,0 +1,52 @@
+{
+ "video": "reel-shop.mp4",
+ "out": "reel-shop-stimme.mp4",
+ "tempo": 1.15,
+ "stil": "Fröhlich, herzlich und ein bisschen verschmitzt, wie ein Geschenktipp für Freunde, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.2,
+   "Noch ein Wichtelgeschenk gesucht?"
+  ],
+  [
+   2.3,
+   "Tassen, T-Shirts, Hoodies und Teddys – alle mit lustigem Wichtel-Spruch."
+  ],
+  [
+   6.9,
+   "Alle Motive findest du auf wichtellos.de!"
+  ]
+ ],
+ "geraeusche": [
+  [
+   "plopp",
+   2.2,
+   0.5,
+   -22
+  ],
+  [
+   "plopp",
+   3.3,
+   0.5,
+   -22
+  ],
+  [
+   "plopp",
+   4.4,
+   0.5,
+   -22
+  ],
+  [
+   "plopp",
+   5.5,
+   0.5,
+   -22
+  ],
+  [
+   "glitzer",
+   6.8,
+   1.5,
+   -20
+  ]
+ ]
+}

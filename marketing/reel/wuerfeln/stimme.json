@@ -1,0 +1,72 @@
+{
+ "video": "reel-wuerfeln.mp4",
+ "out": "reel-wuerfeln-stimme.mp4",
+ "tempo": 1.15,
+ "stil": "Fröhlich, locker und freundlich wie ein guter Spiele-Tipp unter Freunden, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.2,
+   "Wichteln mit Würfeln – kennst du die Regeln?"
+  ],
+  [
+   2.0,
+   "Runde eins: Wer eine Sechs würfelt, nimmt sich ein Geschenk aus der Mitte."
+  ],
+  [
+   5.2,
+   "Runde zwei: Jetzt hat jede Zahl ihre eigene Regel."
+  ],
+  [
+   7.9,
+   "Dazu läuft ein Timer – und wenn die Zeit um ist, klingelt's."
+  ],
+  [
+   10.8,
+   "Den Spielplan gibt's gratis zum Ausdrucken – auf wichtellos.de!"
+  ]
+ ],
+ "geraeusche": [
+  [
+   "klick.wav",
+   1.4,
+   0.08,
+   -14
+  ],
+  [
+   "klick.wav",
+   4.5,
+   0.08,
+   -14
+  ],
+  [
+   "klick.wav",
+   5.1,
+   0.08,
+   -14
+  ],
+  [
+   "klick.wav",
+   7.7,
+   0.08,
+   -14
+  ],
+  [
+   "glitzer",
+   2.35,
+   1.3,
+   -20
+  ],
+  [
+   "klingel.wav",
+   9.5,
+   2.5,
+   -16
+  ],
+  [
+   "gloeckchen",
+   12.0,
+   1.6,
+   -18
+  ]
+ ]
+}
