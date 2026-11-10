@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:F;src:url(../../../assets/fonts/fredoka-latin-600-normal.woff2)}
+body{margin:0;width:794px;height:1123px;background:#fff;font-family:F,sans-serif;position:relative}
+h1{position:absolute;top:28px;left:0;right:0;text-align:center;color:#c62828;font-size:30px;margin:0}
+.hint{position:absolute;top:70px;left:0;right:0;text-align:center;font:14px 'Segoe UI';color:#6d5d57}
+.fuss{position:absolute;bottom:22px;left:0;right:0;text-align:center;font:12px 'Segoe UI';color:#998479}
+svg{position:absolute}
+</style></head><body>
+<h1>Wichteltür zum Ausschneiden</h1>
+<div class="hint">✂ durchgezogene Linie ausschneiden · - - - Linie falten · Tür nur an 3 Seiten aufschneiden, dann geht sie auf</div>
+<svg id="t1" x="0" style="left:40px;top:110px" width="340" height="560" viewBox="0 0 340 560"></svg>
+<svg id="t2" style="left:414px;top:110px" width="340" height="560" viewBox="0 0 340 560"></svg>
+<svg id="t3" style="left:40px;top:700px" width="714" height="390" viewBox="0 0 714 390"></svg>
+<div class="fuss">wichtellos.de · Wichteltür, Briefe & Ausmalbilder kostenlos</div>
+<script>
+function tuer(farbe, dunkel, kranz){
+ return `
+ <!-- Schnittkante -->
+ <path d="M20 540 V180 A150 150 0 0 1 320 180 V540 Z" fill="none" stroke="#2b1b17" stroke-width="1.5"/>
+ <!-- Steinbogen -->
+ <path d="M30 520 V185 A140 140 0 0 1 310 185 V520 Z" fill="#d9cbb8" stroke="#8a7a6a" stroke-width="2"/>
+ ${[...Array(9)].map((_,i)=>{const a=Math.PI*(i+0.5)/9;const x=170-140*Math.cos(a),y=185-140*Math.sin(a);return `<circle cx="${x}" cy="${y}" r="15" fill="#c9b9a4" stroke="#8a7a6a"/>`}).join('')}
+ ${[0,1,2,3,4,5].map(i=>`<rect x="32" y="${200+i*52}" width="26" height="46" rx="5" fill="#c9b9a4" stroke="#8a7a6a"/><rect x="282" y="${200+i*52}" width="26" height="46" rx="5" fill="#c9b9a4" stroke="#8a7a6a"/>`).join('')}
+ <!-- Tür (aufschneiden: oben+rechts+unten, links falten) -->
+ <path d="M70 500 V200 A100 100 0 0 1 270 200 V500 Z" fill="${farbe}" stroke="${dunkel}" stroke-width="3"/>
+ ${[110,150,190,230].map(x=>`<line x1="${x}" y1="${x<170?125-(x-110)*0.3:115}" x2="${x}" y2="500" stroke="${dunkel}" stroke-width="2" opacity=".55"/>`).join('')}
+ <rect x="70" y="250" width="200" height="14" fill="#5b3a29"/><rect x="70" y="430" width="200" height="14" fill="#5b3a29"/>
+ <circle cx="95" cy="257" r="4" fill="#d9b44a"/><circle cx="95" cy="437" r="4" fill="#d9b44a"/>
+ <circle cx="170" cy="185" r="34" fill="#fde7a8" stroke="#5b3a29" stroke-width="7"/>
+ <line x1="170" y1="151" x2="170" y2="219" stroke="#5b3a29" stroke-width="4"/><line x1="136" y1="185" x2="204" y2="185" stroke="#5b3a29" stroke-width="4"/>
+ ${kranz?`<circle cx="170" cy="330" r="34" fill="none" stroke="#1D6B3A" stroke-width="16"/>${[0,1,2,3,4,5,6,7].map(i=>{const a=i*Math.PI/4;return `<circle cx="${170+34*Math.cos(a)}" cy="${330+34*Math.sin(a)}" r="5" fill="#c62828"/>`}).join('')}<path d="M158 300 l12 10 l12 -10 l-6 18 h-12z" fill="#c62828"/>`:`<rect x="140" y="310" width="60" height="36" rx="6" fill="#fff8f0" stroke="#5b3a29" stroke-width="3"/><text x="170" y="334" text-anchor="middle" font-size="13" fill="#5b3a29" font-family="F">ONNI</text>`}
+ <circle cx="245" cy="360" r="9" fill="#d9b44a" stroke="#8a6a1a" stroke-width="2"/>
+ <!-- Aufschneide-Linie (gestrichelt rot für Erwachsene) -->
+ <path d="M70 500 H270 V200 A100 100 0 0 0 70 200" fill="none" stroke="#c62828" stroke-width="2" stroke-dasharray="2 0"/>
+ <line x1="70" y1="200" x2="70" y2="500" stroke="#2b1b17" stroke-width="1.5" stroke-dasharray="7 6"/>
+ <!-- Laterne -->
+ <rect x="282" y="300" width="22" height="30" rx="4" fill="#fde7a8" stroke="#2b1b17" stroke-width="2"/><path d="M280 300 h26 l-4 -8 h-18z" fill="#2b1b17"/>
+ <!-- Fußmatte + Stufe -->
+ <rect x="60" y="500" width="220" height="20" rx="4" fill="#a98563" stroke="#5b3a29" stroke-width="2"/>
+ <rect x="95" y="508" width="150" height="26" rx="6" fill="#c62828"/><text x="170" y="526" text-anchor="middle" font-size="13" fill="#fff" font-family="F">WILLKOMMEN</text>
+ <!-- Klebelasche unten -->
+ <path d="M20 540 h300" stroke="#2b1b17" stroke-width="1.5" stroke-dasharray="7 6"/>
+ <path d="M30 540 h280 l-14 18 h-252 z" fill="#f2ece4" stroke="#2b1b17" stroke-width="1.5"/>
+ <text x="170" y="553" text-anchor="middle" font-size="10" fill="#998479" font-family="Segoe UI">Klebelasche – umknicken, an die Fußleiste kleben</text>`;
+}
+document.getElementById('t1').innerHTML=tuer('#c62828','#7a1515',true);
+document.getElementById('t2').innerHTML=tuer('#2f6b45','#16402a',false);
+// Schilder
+const S=[['Psst!','Wichtel schläft'],['Willkommen','bei Onni'],['Bin gleich','zurück!'],['Briefkasten','für Wichtel'],['Geheim!','nur für Wichtel'],['Hier wohnt',''],['Frohe','Weihnachten'],['',''],];
+const F=['#c62828','#2f6b45','#a5672e','#c62828','#2f6b45','#a5672e','#c62828','#2f6b45'];
+document.getElementById('t3').innerHTML=`<text x="357" y="18" text-anchor="middle" font-size="18" fill="#2b1b17" font-family="F">Kleine Türschilder</text>`+S.map(([a,b],i)=>{const x=10+(i%4)*176,y=40+Math.floor(i/4)*170;return `
+ <g transform="translate(${x},${y})">
+ <path d="M50 30 L80 0 L110 30" fill="none" stroke="#5b3a29" stroke-width="3"/><circle cx="80" cy="2" r="4" fill="#5b3a29"/>
+ <rect x="8" y="30" width="144" height="96" rx="14" fill="${F[i]}" stroke="#2b1b17" stroke-width="1.5"/>
+ <rect x="16" y="38" width="128" height="80" rx="10" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4" opacity=".7"/>
+ <text x="80" y="${b?74:84}" text-anchor="middle" font-size="22" fill="#fff" font-family="F">${a}</text>
+ <text x="80" y="102" text-anchor="middle" font-size="16" fill="#fde7a8" font-family="F">${b}</text>
+ ${a===''&&b===''?'<line x1="30" y1="96" x2="130" y2="96" stroke="#fff" stroke-width="2"/>':''}
+ ${a==='Hier wohnt'?'<line x1="30" y1="102" x2="130" y2="102" stroke="#fde7a8" stroke-width="2"/>':''}
+ <path d="M140 28 l6 -8 l6 8 l-6 -3z" fill="#fde7a8"/></g>`}).join('');
+</script></body></html>

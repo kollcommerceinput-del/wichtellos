@@ -1,0 +1,40 @@
+{
+ "video": "bild.mp4",
+ "out": "video-wichteltuer-eltern.mp4",
+ "tempo": 1.1,
+ "stil": "Freundlich, warm und locker, wie ein guter Tipp unter Eltern, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.3,
+   "Ihr wollt dieses Jahr eine Wichteltür? So startet ihr am ersten Dezember."
+  ],
+  [
+   4.3,
+   "Erstens: Stellt die kleine Tür an die Fußleiste – am besten dort, wo die Kinder morgens vorbeikommen."
+  ],
+  [
+   9.3,
+   "Zweitens: Legt einen Begrüßungsbrief davor. Darin stellt sich euer Wichtel vor."
+  ],
+  [
+   13.7,
+   "Drittens: Gebt ihm einen Namen. Bei uns gibt's einen Wichtelnamen-Generator – mit Bedeutung."
+  ],
+  [
+   18.7,
+   "Viertens: Jeden Tag eine kleine Überraschung – ein Brief, ein Streich, ein Krümel."
+  ],
+  [
+   23.3,
+   "Briefe, Streichplan für vierundzwanzig Tage und Ausmalbilder: alles kostenlos zum Ausdrucken auf wichtellos.de."
+  ]
+ ],
+ "geraeusche": [
+  [
+   "gloeckchen",
+   29.5,
+   1.6,
+   -20
+  ]
+ ]
+}
