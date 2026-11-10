@@ -65,3 +65,40 @@ folien.push(`<div class="karte cta"><h2>Alle 24 als Plan zum Ausdrucken</h2><p>D
   await b.close();
   console.log(OUT, folien.length, 'Folien');
 })();
+
+// Zusatz: Pinterest-Pin (1000x1500, alle 24 Streiche als Liste) + Instagram-Story (1080x1920, Mitte frei für Link-Sticker)
+(async () => {
+  const b = await chromium.launch();
+  const liste = PLAN.map(([t], i) => `<li><b>${i + 1}.</b> ${t}</li>`).join('');
+  const pin = `<style>${CSS}
+  body{width:1000px;height:1500px;background:#f6efe6}
+  .oben{position:absolute;left:0;right:0;top:0;height:560px;width:100%;object-fit:cover;object-position:center 62%}
+  .ph{position:absolute;left:40px;right:40px;top:40px;text-align:center}
+  .ph span{display:inline-block;background:rgba(255,255,255,.95);color:#c62828;font-size:64px;line-height:1.05;padding:18px 40px;border-radius:34px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  ol{list-style:none;position:absolute;left:40px;right:40px;top:520px;margin:0;padding:34px 36px;background:#fff8f0;border-radius:36px;columns:2;column-gap:30px;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+  li{font:31px/1.62 'Segoe UI',sans-serif;color:#2b1b17;break-inside:avoid}
+  li b{font-family:F;color:#c62828;display:inline-block;width:52px}
+  .fuss{position:absolute;left:40px;right:40px;bottom:36px;text-align:center}
+  .fuss b{display:inline-block;background:#c62828;color:#fff;font-size:56px;border-radius:999px;padding:10px 50px}
+  .fuss p{margin:0 0 12px;font:30px 'Segoe UI';color:#4a3a34}</style>
+  <img class="oben" src="${F(6, 'b12-stiefel')}"><div class="ph"><span>24 Wichtel-Streiche<br>für den Advent</span></div>
+  <ol>${liste}</ol><div class="fuss"><p>Plan zum Ausdrucken + Briefe vom Wichtel – kostenlos</p><b>wichtellos.de</b></div><div class="ki">Bild: KI-generiert</div>`;
+  let p = await b.newPage({ viewport: { width: 1000, height: 1500 } });
+  await p.setContent(`<html><body>${pin}</body></html>`); await p.waitForTimeout(300);
+  await p.screenshot({ path: path.join(OUT, 'pin-streiche.jpg'), type: 'jpeg', quality: 90 });
+  const story = `<style>${CSS}
+  body{width:1080px;height:1920px}
+  .st{position:absolute;left:60px;right:60px;top:170px;text-align:center;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.7)}
+  .st h1{font-size:120px;line-height:1.02;margin:0 0 24px}
+  .st .pill{display:inline-block;background:#c62828;color:#fff;font-size:48px;padding:16px 40px;border-radius:999px;text-shadow:none}
+  .unten{position:absolute;left:60px;right:60px;bottom:200px;text-align:center;color:#fff;font-size:52px;text-shadow:0 4px 20px rgba(0,0,0,.8)}
+  .dunkel{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.05) 35%,rgba(0,0,0,.05) 65%,rgba(0,0,0,.6))}</style>
+  <img class="bg" src="${F(6, 'b03-schneespuren')}"><div class="dunkel"></div>
+  <div class="st"><h1>24 Wichtel-Streiche</h1><span class="pill">für jeden Tag im Advent</span></div>
+  <div class="unten">Ganzer Plan kostenlos 👇<br>Link antippen</div><div class="ki">Bild: KI-generiert</div>`;
+  p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  await p.setContent(`<html><body>${story}</body></html>`); await p.waitForTimeout(300);
+  await p.screenshot({ path: path.join(OUT, 'story-streiche.jpg'), type: 'jpeg', quality: 90 });
+  await b.close();
+  console.log('pin + story fertig');
+})();
