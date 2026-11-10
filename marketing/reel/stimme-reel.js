@@ -1,6 +1,6 @@
 // Stimme (Gemini „puck“) + leise Geräusche unter ein fertiges stummes Reel legen (Toni 09.11.: „wie immer mit Erklärung“).
 // Konfig-JSON: { "video": "...mp4", "out": "...mp4", "tempo": 1.15, "stil": "...",
-//   "saetze": [[Startsekunde, "Text"], …], "geraeusche": [["datei ohne .mp3", Sekunde, Dauer, dB], …] }
+//   "saetze": [[Startsekunde, "Text", Tempo?], …], "geraeusche": [["datei ohne .mp3", Sekunde, Dauer, dB], …] }
 // node marketing/reel/stimme-reel.js wuerfeln/stimme.json          -> Ton bauen + muxen (ton-N.wav werden gecacht, NEU=1 neu)
 // node marketing/reel/stimme-reel.js wuerfeln/stimme.json --laenge -> nur Stimme holen und Längen ausgeben
 const fs = require('fs');
@@ -50,7 +50,7 @@ async function tts(text, stil, stimme) {
     ton.push(f);
   }
   k.saetze.forEach(([s, text], i) => {
-    const d = wavDur(ton[i]) / tempo, next = k.saetze[i + 1] ? k.saetze[i + 1][0] : null;
+    const d = wavDur(ton[i]) / (k.saetze[i][2] || tempo), next = k.saetze[i + 1] ? k.saetze[i + 1][0] : null;
     console.log(`${i}: ${s.toFixed(2)}–${(s + d).toFixed(2)} s (${d.toFixed(2)} s)${next !== null && s + d > next - 0.1 ? '  ⚠ überlappt nächsten Satz' : ''}  ${text}`);
   });
   if (process.argv.includes('--laenge')) return;
@@ -61,7 +61,7 @@ async function tts(text, stil, stimme) {
     const m = /Duration: (\d+):(\d+):([\d.]+)/.exec(e.stderr.toString()); len = +m[1] * 3600 + +m[2] * 60 + +m[3];
   }
   const ai = [], af = [], mix = [];
-  ton.forEach((f, j) => { ai.push('-i', f); af.push(`[${j}:a]atempo=${tempo},adelay=${Math.round(k.saetze[j][0] * 1000)}:all=1[s${j}]`); mix.push(`[s${j}]`); });
+  ton.forEach((f, j) => { ai.push('-i', f); af.push(`[${j}:a]atempo=${k.saetze[j][2] || tempo},adelay=${Math.round(k.saetze[j][0] * 1000)}:all=1[s${j}]`); mix.push(`[s${j}]`); });
   (k.geraeusche || []).forEach(([datei, s, d, db], j) => {
     const n = ton.length + j, fd = Math.min(0.2, d / 3);
     ai.push('-i', datei.endsWith('.wav') ? path.resolve(dir, datei) : path.join(SND, datei + '.mp3'));
