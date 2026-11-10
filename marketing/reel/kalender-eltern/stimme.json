@@ -1,0 +1,60 @@
+{
+ "video": "bild.mp4",
+ "out": "video-kalender-eltern.mp4",
+ "tempo": 1.1,
+ "stil": "Freundlich, warm und locker, wie ein guter Tipp unter Eltern, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.3,
+   "Ein Adventskalender ohne Zucker, der nichts kostet? Das ist Onnis Adventskalender."
+  ],
+  [
+   5.2,
+   "Ab dem ersten Dezember öffnet sich jede Nacht ein Türchen – mit einer neuen Wichtel-Geschichte als kurzes Video."
+  ],
+  [
+   10.0,
+   "Onni zieht ein, nascht Kekse und bekommt ein Lied geschenkt."
+  ],
+  [
+   13.5,
+   "Jede Folge ist kurz und endet ruhig – perfekt als Gute-Nacht-Geschichte."
+  ],
+  [
+   17.2,
+   "Kostenlos, ohne Anmeldung und ohne App: Onnis Adventskalender auf wichtellos.de."
+  ]
+ ],
+ "geraeusche": [
+  [
+   "wind",
+   0.3,
+   2.5,
+   -22
+  ],
+  [
+   "gloeckchen",
+   5.3,
+   1.6,
+   -20
+  ],
+  [
+   "keks",
+   10.1,
+   1.5,
+   -18
+  ],
+  [
+   "schnarchen",
+   13.8,
+   2.5,
+   -24
+  ],
+  [
+   "plopp",
+   17.3,
+   0.8,
+   -20
+  ]
+ ]
+}
