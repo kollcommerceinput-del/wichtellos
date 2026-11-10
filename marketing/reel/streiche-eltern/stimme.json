@@ -1,0 +1,80 @@
+{
+ "video": "bild.mp4",
+ "out": "video-streiche-eltern.mp4",
+ "tempo": 1.1,
+ "stil": "Freundlich, warm und locker, wie ein guter Tipp unter Eltern, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.3,
+   "Euer Wichtel ist eingezogen – und jetzt? Fünf Streiche, die in zwei Minuten aufgebaut sind."
+  ],
+  [
+   4.9,
+   "Eins: Socken-Chaos. Alle Socken liegen quer durchs Wohnzimmer verteilt."
+  ],
+  [
+   8.4,
+   "Zwei: Kuscheltier-Picknick. Die Kuscheltiere sitzen im Kreis und teilen sich Kekskrümel."
+  ],
+  [
+   13.1,
+   "Drei: Waschtag. Eine Mini-Wäscheleine mit winzigen Kleidern vor der Tür."
+  ],
+  [
+   17.7,
+   "Vier: Schaumbad. Der Wichtel badet im Spülbecken – mit ganz viel Schaum."
+  ],
+  [
+   22.6,
+   "Fünf: Nikolaus. Die Stiefel sind geputzt – daneben liegt ein Mini-Brief vom Wichtel."
+  ],
+  [
+   27.7,
+   "Alle vierundzwanzig Streiche als Plan, dazu Briefe und Ausmalbilder: kostenlos auf wichtellos.de."
+  ]
+ ],
+ "geraeusche": [
+  [
+   "glitzer",
+   0.4,
+   1.5,
+   -18
+  ],
+  [
+   "wuehlen",
+   5.0,
+   2.0,
+   -18
+  ],
+  [
+   "keks",
+   8.9,
+   1.5,
+   -18
+  ],
+  [
+   "tropfen-leine",
+   13.4,
+   2.0,
+   -20
+  ],
+  [
+   "blubbern1",
+   17.9,
+   2.5,
+   -20
+  ],
+  [
+   "gloeckchen",
+   22.8,
+   1.6,
+   -20
+  ],
+  [
+   "papier",
+   27.8,
+   1.2,
+   -20
+  ]
+ ]
+}
