@@ -52,8 +52,9 @@ async function tts(text, stil, stimme) {
   const ende = t + 1.5, ai = [], af = [], mix = [];
   ton.forEach((f, j) => { ai.push('-i', f); af.push(`[${j}:a]atempo=${k.rollen[k.teile[j][0]].tempo || 1},adelay=${Math.round(start[j] * 1000)}:all=1[s${j}]`); mix.push(`[s${j}]`); });
   const PEGEL = JSON.parse(fs.readFileSync(path.join(__dirname, "pegel.json"), "utf8"));
-  (k.geraeusche || []).forEach(([nr, vers, datei, d, db0], j) => {
+  (k.geraeusche || []).forEach(([nr, vers, datei, d0, db0], j) => {
     const db = db0 ?? PEGEL[datei] ?? -6;
+    let d = d0; if (typeof d === 'string') d = start[+d.split(':')[1]] - start[nr] - vers; // "bis:N" = bis Teil N
     const n = ton.length + j, fd = Math.min(0.4, d / 3);
     ai.push('-i', path.join(SND, datei + '.mp3'));
     af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${d},asetpts=PTS-STARTPTS,volume=${db}dB,` +
