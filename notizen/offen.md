@@ -153,3 +153,5 @@ Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md
 - [ ] Später: AdSense (braucht zertifizierten Einwilligungs-Banner, Werbeflächen `.ad-slot` in `style.css` einblenden),
       Wunschliste (braucht Server), digitaler Adventskalender als zweites Tool
 
+
+- 11.11. Spreadshop: Rabatt-Aktionen umgestellt (Toni): nur Black-Friday-Wochen 20 % an (24.–26.11. + 27.–30.11.; Startfenster je Aktion fest, 23.11. ginge nur mit Lücke am 26.), 25 % (07.–20.11.) und 18.–22.11. sowie alle Dezember-Aktionen aus; laufende 20 % bis 15.11. gesperrt (läuft aus). Laufende Aktion stoppt nur der Hauptschalter „Rabatte aktivieren“. Teaser: Bild ohne Text `marketing/merch/shop/teaser-ausgleich.jpg` (gegen-schleier.py) + Spreadshop-Überschrift/Kurzbeschreibung an (Handy schnitt den Text im Bild ab) – Überschrift wird zweifarbig im Shop-Stil gesetzt, Bild wirkt nicht blass. Pins 11.11.: pin3d-wichteln-varianten (Schrottwichteln & Wichtelspiele; Wichteln/Weihnachten/Spiele für Familientreffen) + pin3d-nikolaus (Wichtelgeschenke für Kinder; St. Nikolaus/Advent/Geschenkideen für Weihnachten), KI-Label, Alt-Text.

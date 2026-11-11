@@ -27,6 +27,9 @@ const PINS = [
   ['wie-funktioniert-wichteln', 'feier.jpg', '50% 45%', 'Wie funktioniert Wichteln?', 'Regeln &amp; Anleitung in 6 Schritten', 'Anleitung ansehen →'],
   ['was-ist-ein-wichtel', 'tuer.jpg', '60% 50%', 'Was ist ein Wichtel?', 'Aussehen, Herkunft &amp; Bedeutung – auch für Kinder', 'Mehr erfahren →'],
   ['wuerfeln', 'wuerfel.jpg', '50% -400px', 'Wichteln mit Würfeln', 'Regeln 1–6 + Würfel &amp; Timer am Handy', 'Spielplan gratis ausdrucken →'],
+  // 11.11. (Toni: Pins für Seiten ohne Pin)
+  ['wichteln-varianten', 'schrott.jpg', '50% 45%', '12 Wichtel-Varianten', 'Schrottwichteln, Würfeln, Julklapp &amp; mehr', 'Alle Spielarten ansehen →'],
+  ['nikolaus', 'kinder.jpg', '50% 45%', 'Nikolaus-Geschenke', '21 Ideen für den Stiefel – Kinder &amp; Große', 'Alle Ideen ansehen →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
