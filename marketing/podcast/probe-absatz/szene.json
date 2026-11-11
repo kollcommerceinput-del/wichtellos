@@ -1,0 +1,101 @@
+{
+ "out": "probe-absatz.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein kleiner, neugieriger Wichtel. Lebhaft und freundlich, aber natürlich gesprochen wie ein junger Erwachsener, nicht kindlich, keine Babysprache, nicht übertrieben. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "An diesem Abend lag Onni noch in seinem Bett. Es stand gleich unter dem Fenster, und darauf lag eine bunte Flickendecke. Im Ofen knisterte leise das Feuer. Wichtel schlafen nämlich am Tag. Erst wenn es dunkel wird, wachen sie auf.",
+   0.8
+  ],
+  [
+   "E",
+   "Draußen pfiff der Wind um den Baum.",
+   1.6
+  ],
+  [
+   "E",
+   "Da kitzelte etwas in Onnis Nase. Er wachte auf, setzte sich hin und schnupperte.",
+   1.0
+  ],
+  [
+   "O",
+   "Nanu? Was riecht denn hier so gut?",
+   0.8
+  ],
+  [
+   "E",
+   "Onni schob seine Holztür auf und lief hinaus in die kalte Nacht. Unter seinen Schuhen knirschte der Schnee. Er hob die Nase hoch in den Wind.",
+   1.0
+  ],
+  [
+   "O",
+   "Kakao! Und frische Kekse, mit Butter und Zimt."
+  ],
+  [
+   "E",
+   "Onni wurde ganz warm ums Herz."
+  ],
+  [
+   "O",
+   "So riecht ein Zuhause. Da will ich hin!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   4.0,
+   "kamin",
+   16,
+   1
+  ],
+  [
+   1,
+   0.0,
+   "wind",
+   7.0,
+   -10
+  ],
+  [
+   2,
+   3.2,
+   "schnuppern",
+   1.6,
+   -6
+  ],
+  [
+   4,
+   0.0,
+   "tuer-knarren",
+   1.4,
+   -6
+  ],
+  [
+   4,
+   2.2,
+   "schnee-schritte",
+   5.0,
+   -6
+  ],
+  [
+   4,
+   4.5,
+   "wind",
+   9.0,
+   -18
+  ]
+ ]
+}
