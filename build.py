@@ -127,12 +127,14 @@ ICONS = {
     'youtube': _SV + '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3l5 2.7-5 2.7z" fill="currentColor"/></svg>',
     'whatsapp': _SV + '<path d="M4 20l1.3-3.8A8.5 8.5 0 1 1 8 19z"/></svg>',
     'mail': _SV + '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>',
+    'spotify': _SV + '<circle cx="12" cy="12" r="9.5"/><path d="M7 9.5c3.5-1 7-.6 10 1"/><path d="M7.8 12.6c2.8-.7 5.6-.4 8 .9"/><path d="M8.6 15.5c2-.5 4-.3 5.8.6"/></svg>',
     'link': _SV + '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
 }
 SOCIAL = [('instagram', 'Instagram', 'https://www.instagram.com/wichtellos/'),
           ('pinterest', 'Pinterest', 'https://www.pinterest.com/wichtellos/'),
           ('tiktok', 'TikTok', 'https://www.tiktok.com/@wichtellos'),
-          ('youtube', 'YouTube', 'https://www.youtube.com/@WichtelLos')]
+          ('youtube', 'YouTube', 'https://www.youtube.com/@WichtelLos'),
+          ('spotify', 'Spotify', 'https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE')]
 
 
 def social_links(nur=None):
@@ -1701,13 +1703,15 @@ def onni_kalender_page():
 <h1>Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder</h1>
 {ai_photo('wichtel3d-onni-kekse', 'Plüsch-Wichtel Onni steht unter dem Weihnachtsbaum neben einem Teddy vor einem Teller mit riesigen Keksen')}
 <p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember öffnet sich hier jeden Tag ein Türchen mit einer neuen Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
+<p class="tip">🎧 <b>Onni zum Hören:</b> Jede Geschichte gibt es zusätzlich als Gute-Nacht-Geschichte zum Hören (ca. 6 Minuten) – zum Einschlafen und für unterwegs, für Kleine und Große. <a href="https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE" rel="noopener" target="_blank">Onnis Adventskalender auf Spotify</a></p>
 <p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
 
 <details class="ak-folgen"><summary class="btn-primary">🔔 Keine Folge verpassen</summary>
 <p>Folge Onni – dann bekommst du jede neue Geschichte mit:</p>
 <p class="ak-folgen-knoepfe"><a class="btn-secondary" href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">{ICONS["instagram"]} Instagram folgen</a>
 <a class="btn-secondary" href="https://www.tiktok.com/@wichtellos" rel="noopener" target="_blank">{ICONS["tiktok"]} TikTok folgen</a>
-<a class="btn-secondary" href="https://www.youtube.com/@WichtelLos?sub_confirmation=1" rel="noopener" target="_blank">{ICONS["youtube"]} YouTube abonnieren</a></p>
+<a class="btn-secondary" href="https://www.youtube.com/@WichtelLos?sub_confirmation=1" rel="noopener" target="_blank">{ICONS["youtube"]} YouTube abonnieren</a>
+<a class="btn-secondary" href="https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE" rel="noopener" target="_blank">{ICONS["spotify"]} Auf Spotify folgen</a></p>
 </details>
 
 <h2 id="kalender">Die 24 Türchen</h2>
@@ -2474,8 +2478,8 @@ def legal_pages():
 <p>Der Knopf „WichtelLos unterstützen“ ist ein einfacher Link zu Ko-fi (Ko-fi Labs Limited, Vereinigtes Königreich). Auf unserer Website wird dabei nichts von Ko-fi geladen. Erst wenn du den Link anklickst und dort bezahlst, verarbeiten Ko-fi und der gewählte Zahlungsdienst (z. B. PayPal) deine Daten nach ihren eigenen Datenschutzerklärungen.</p>
 <p>Die Links auf der Seite „Wichtel-Tassen“ (/wichtel-tassen/) führen zu unserem Shop bei Spreadshirt (wichtellos.myspreadshop.de). Auch das sind einfache Links: Auf unserer Website wird nichts von Spreadshirt geladen. Erst wenn du einen Link anklickst, gilt die Datenschutzerklärung von Spreadshirt. Bestellst du dort, ist die sprd.net AG (Leipzig) dein Vertragspartner und verarbeitet deine Bestelldaten; wir erhalten keine Daten von dir.</p>
 
-<h2>7. Links zu Instagram, Pinterest, TikTok und YouTube</h2>
-<p>Im Fußbereich und auf der Seite „Onnis Adventskalender“ verlinken wir auf unsere Profile bei Instagram, Pinterest, TikTok und YouTube. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+<h2>7. Links zu Instagram, Pinterest, TikTok, YouTube und Spotify</h2>
+<p>Im Fußbereich und auf der Seite „Onnis Adventskalender“ verlinken wir auf unsere Profile bei Instagram, Pinterest, TikTok, YouTube und Spotify. Das sind einfache Links: Auf unserer Website werden keine Inhalte, Skripte oder Schaltflächen dieser Dienste geladen, und es werden keine Daten an sie übertragen. Erst wenn du einen Link anklickst, gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
 
 <h2>8. Kontakt per E-Mail</h2>
 <p>Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Daten werden gelöscht, sobald sie dafür nicht mehr benötigt werden.</p>
