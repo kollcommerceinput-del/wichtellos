@@ -1,0 +1,23 @@
+{
+ "stimme": "puck",
+ "tempo": 1.0,
+ "stil": "Freundlich, warm und ruhig, wie eine Erzählerin am Abend, die Familien begrüßt. Nicht schnell, auf Deutsch.",
+ "saetze": [
+  [
+   0.0,
+   "Onnis Adventskalender – jeden Tag ein Türchen."
+  ],
+  [
+   10.0,
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   20.0,
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Onnis Geschichte erzählt eine KI-Stimme."
+  ],
+  [
+   30.0,
+   "Und jetzt: Kuschelt euch ein. Es geht los."
+  ]
+ ]
+}
