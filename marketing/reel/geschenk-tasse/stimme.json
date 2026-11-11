@@ -1,0 +1,17 @@
+{
+ "video": "bild.mp4",
+ "out": "reel-tasse-stimme.mp4",
+ "tempo": 1.1,
+ "stil": "Freundlich, warm und locker, wie ein guter Tipp unter Freunden, zügig, auf Deutsch.",
+ "saetze": [
+  [0.3, "Wichtelgeschenk unter zehn Euro? Onni packt schon mal aus."],
+  [5.2, "Eine Tasse – passt immer und kostet fast nichts."],
+  [9.6, "Über hundert Ideen nach Budget findest du kostenlos auf wichtellos.de."]
+ ],
+ "geraeusche": [
+  ["wind", 0.0, 14.9, -30],
+  ["papier", 2.0, 2.2, -18],
+  ["rascheln-kurz", 4.6, 1.0, -20],
+  ["glitzer", 6.6, 1.5, -22]
+ ]
+}

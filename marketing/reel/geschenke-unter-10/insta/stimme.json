@@ -1,0 +1,57 @@
+{
+ "video": "bild.mp4",
+ "out": "reel-geschenke10-insta.mp4",
+ "tempo": 1.1,
+ "stil": "Freundlich, warm und locker, wie ein guter Tipp unter Freunden, zügig, auf Deutsch.",
+ "saetze": [
+  [
+   0.2,
+   "Sechs Wichtelgeschenke unter zehn Euro. Eine Tasse für heißen Kakao."
+  ],
+  [
+   4.2,
+   "Eine Duftkerze für gemütliche Abende."
+  ],
+  [
+   6.85,
+   "Schokolade geht immer."
+  ],
+  [
+   9.55,
+   "Handwärmer für kalte Finger."
+  ],
+  [
+   12.25,
+   "Eine kleine Pflanze fürs Fensterbrett."
+  ],
+  [
+   14.95,
+   "Und natürlich Kuschelsocken."
+  ],
+  [
+   18.1,
+   "Du suchst Geschenke? Tassen, Geschenkefinder und Ideen – alles bei uns auf wichtellos.de.",
+   1.25
+  ]
+ ],
+ "geraeusche": [
+  [
+   "wind",
+   0,
+   22.9,
+   -32
+  ],
+  [
+   "papier",
+   0.1,
+   1.8,
+   -22
+  ],
+  [
+   "glitzer",
+   18,
+   1.5,
+   -24
+  ]
+ ]
+}
