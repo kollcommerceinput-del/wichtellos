@@ -19,7 +19,7 @@ const SZ = [
   ['flur-onni-hinten.jpg', 1.9, true, null, 7, 'KAMERA 2 · FLUR'],
   ['flur-onni-vorn.jpg', 3.0, true, [0.68, 0.58], 9, 'KAMERA 2 · FLUR'],
   ['Wohnzimmer_Weihnachtsbaum_9d6b7a94.jpg', 1.8, true, null, 2071, 'KAMERA 1 · WOHNZIMMER'],
-  ['onni-wach.jpg', 2.6, true, [0.60, 0.62], 2074, 'KAMERA 1 · WOHNZIMMER'],
+  ['onni-schlaeft.jpg', 2.6, true, [0.52, 0.62], 2074, 'KAMERA 1 · WOHNZIMMER'],
   ['onni-streichelt.jpg', 3.4, false, null, 0, ''],
 ];
 const TEXTE = [
@@ -27,7 +27,7 @@ const TEXTE = [
   '<h1>Moment … was war <em>DAS?!</em> 😳</h1>',
   '<h1>Er glaubt, wir sehen ihn <em>nicht</em> 😂</h1>',
   '<h1>35 Minuten später …</h1>',
-  '<h1 style="font-size:68px">… sitzt er beim Teddy.</h1><p>Als wär nichts gewesen. 🧸</p>',
+  '<h1 style="font-size:68px">… schläft er beim Teddy. 😴</h1><p>Als wär nichts gewesen.</p>',
   `<h1>Noch <em>${TAGE} Tage</em> –</h1><p>dann zieht er bei euch ein!</p><div class="url">Folgt uns! 🔔</div>`,
 ];
 const START = SZ.map((_, i) => SZ.slice(0, i).reduce((a, s) => a + s[1], 0));
