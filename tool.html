@@ -21,9 +21,9 @@
     </div>
 
     <ul class="usp">
-      <li><img src="/fotos/onni/sticker-lupe.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Tipp für den Wichtel</b> – verrate heimlich, was jemand mag</span></li>
-      <li><img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Lose zum Ausdrucken</b> – mit QR-Code für die Weihnachtsfeier</span></li>
-      <li><img src="/fotos/onni/sticker-psst.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Eure Namen bleiben bei euch</b> – nichts landet auf einem Server</span></li>
+      <li><img src="/fotos/onni/sticker-lupe-128.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Tipp für den Wichtel</b> – verrate heimlich, was jemand mag</span></li>
+      <li><img src="/fotos/onni/sticker-geschenk-128.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Lose zum Ausdrucken</b> – mit QR-Code für die Weihnachtsfeier</span></li>
+      <li><img src="/fotos/onni/sticker-psst-128.webp" alt="" width="512" height="512" loading="lazy"> <span><b>Eure Namen bleiben bei euch</b> – nichts landet auf einem Server</span></li>
     </ul>
 
     <!-- Onnis Adventskalender (Toni 07.11.): Zahl/Türchen setzt site.js, nach dem 24.12. ausgeblendet -->
@@ -35,7 +35,7 @@
 
     <form id="form" novalidate>
       <div class="card">
-        <img class="step-onni" src="/fotos/onni/sticker-herz.webp" alt="" width="512" height="512" loading="lazy"><h2>1. Eure Gruppe</h2>
+        <img class="step-onni" src="/fotos/onni/sticker-herz-128.webp" alt="" width="512" height="512" loading="lazy"><h2>1. Eure Gruppe</h2>
         <label>Name der Gruppe <span class="opt">(optional)</span>
           <input id="group" maxlength="60" placeholder="z. B. Büro-Weihnachten 2026">
         </label>
@@ -53,7 +53,7 @@
       </div>
 
       <div class="card" id="wer">
-        <img class="step-onni" src="/fotos/onni/sticker-jubel.webp" alt="" width="512" height="512" loading="lazy"><h2>2. Wer macht mit?</h2>
+        <img class="step-onni" src="/fotos/onni/sticker-jubel-128.webp" alt="" width="512" height="512" loading="lazy"><h2>2. Wer macht mit?</h2>
         <p class="hint">Mindestens 3 Personen, jeder Name nur einmal. Mit <b>💡 Tipp</b> kannst du pro Person einen Hinweis hinterlegen (z. B. „mag Tee, liebt Katzen“) – den sieht nur, wer diese Person zieht.</p>
         <p class="hint">📋 Ganze Liste? Einfach in ein Namensfeld einfügen – z. B. aus Excel, Outlook, Teams oder WhatsApp.</p>
         <div id="people"></div>
@@ -80,7 +80,7 @@
     </form>
 
     <div class="gift-teaser">
-      <img src="/fotos/onni/sticker-geschenk.webp" alt="" width="512" height="512" loading="lazy">
+      <img src="/fotos/onni/sticker-geschenk-128.webp" alt="" width="512" height="512" loading="lazy">
       <div>
         <p class="gt-title">Schon alle Weihnachtsgeschenke zusammen? 🎄</p>
         <p>Für Mama, Kollegen oder das Patenkind: über 100 Ideen nach Alter und Budget – mit einem Klick bei Amazon.</p>
@@ -96,7 +96,7 @@
   <!-- Ansicht 2: Ergebnis mit Links -->
   <section id="view-result" hidden>
     <h2 class="h1" id="result-title" tabindex="-1">Ausgelost! 🎉</h2>
-    <p class="onni-says"><img src="/fotos/onni/sticker-jubel.webp" width="64" height="64" alt=""><span><b>Onni</b> hat für euch ausgelost – niemand hat sich selbst gezogen. Jetzt jedem seinen eigenen Link schicken!</span></p>
+    <p class="onni-says"><img src="/fotos/onni/sticker-jubel-128.webp" width="64" height="64" alt=""><span><b>Onni</b> hat für euch ausgelost – niemand hat sich selbst gezogen. Jetzt jedem seinen eigenen Link schicken!</span></p>
     <p class="lead">Schicke jeder Person <b>nur ihren eigenen</b> Link. Wer wen beschenkt, steht codiert darin.</p>
     <ul id="links" class="links"></ul>
     <div class="tip">💡 Machst du selbst mit? Öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.</div>
@@ -105,7 +105,7 @@
       <p class="hint">Die Links sind nur hier in diesem Browser gespeichert – auf einem anderen Gerät, im privaten Modus oder nach dem Löschen des Verlaufs sind sie weg. Schick dir am besten alle Links selbst, dann kannst du sie jederzeit erneut verschicken.</p>
       <div class="actions">
         <span class="save-wa-box"></span>
-        <a class="btn-secondary save-mail">E-Mail an mich</a>
+        <a class="btn-secondary save-mail" href="#">E-Mail an mich</a>
         <button type="button" class="btn-secondary save-copy">Alle Links kopieren</button>
       </div>
     </div>
@@ -148,7 +148,7 @@
         <p>Du beschenkst:</p>
         <p class="target" id="r-target"></p>
         <p id="r-tip" class="r-tip" hidden></p>
-        <p class="onni-says"><img src="/fotos/onni/sticker-psst.webp" width="64" height="64" alt=""><span><b>Onni</b> flüstert: Psst – nicht verraten! Viel Spaß beim Aussuchen.</span></p>
+        <p class="onni-says"><img src="/fotos/onni/sticker-psst-128.webp" width="64" height="64" alt=""><span><b>Onni</b> flüstert: Psst – nicht verraten! Viel Spaß beim Aussuchen.</span></p>
       </div>
       <dl id="r-info" class="info"></dl>
       <p id="r-cal-wrap" class="r-actions" hidden><button type="button" id="r-cal" class="btn-secondary">📅 Bescherung in den Kalender</button></p>

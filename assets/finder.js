@@ -59,7 +59,7 @@
     cards.forEach((c) => { const ok = matches(c); c.dataset.ok = ok ? '1' : '0'; if (ok) count++; });
     grenze = SCHRITT;
     zeige();
-    $('#f-count').textContent = count === 1 ? '1 Idee' : `${count} Ideen`;
+    $('#f-count').textContent = count === 0 ? 'Keine Idee passt – lockere einen Filter oder such unten bei Amazon' : count === 1 ? '1 Idee' : `${count} Ideen`; // UX-Analyse Nr. 19
     $('#f-show').textContent = count === 1 ? '1 Idee ansehen' : `${count} Ideen ansehen`;
 
     const query = `${state.q.trim() || 'Wichtelgeschenk'} ${AGE_QUERY[state.fuer] || ''}`.trim();

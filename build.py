@@ -149,7 +149,7 @@ KOFI_LINE = ('<p class="kofi-line">Gefällt dir das? <a class="kofi-btn" href="h
              '💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>')
 
 CTA = '''<div class="cta-box">
-  <div class="cta-text"><img class="mascot-small" src="/fotos/onni/sticker-winkt.webp" alt="" width="512" height="512" loading="lazy"><p>Noch nicht ausgelost? Wichtelgruppe in 1 Minute erstellen – kostenlos und ohne Anmeldung.</p></div>
+  <div class="cta-text"><img class="mascot-small" src="/fotos/onni/sticker-winkt-128.webp" alt="" width="512" height="512" loading="lazy"><p>Noch nicht ausgelost? Wichtelgruppe in 1 Minute erstellen – kostenlos und ohne Anmeldung.</p></div>
   <a class="btn-primary" href="/">Jetzt auslosen</a>
 </div>'''
 
@@ -1160,7 +1160,9 @@ DRUCK_TUER = [('tuer-begruessung', 'Begrüßungsbrief (30. November)'), ('tuer-a
 
 
 def onni_img(name, alt='', size=96, cls='onni-img'):
-    return f'<img class="{cls}" src="/fotos/onni/sticker-{name}.webp" width="{size}" height="{size}" alt="{esc(alt)}" loading="lazy" decoding="async">'
+    # bis 128 px Anzeige die kleine Datei (UX-Analyse Nr. 9: 512er Sticker wurden in 46–72 px gezeigt)
+    datei = f'sticker-{name}-128.webp' if size <= 128 else f'sticker-{name}.webp'
+    return f'<img class="{cls}" src="/fotos/onni/{datei}" width="{size}" height="{size}" alt="{esc(alt)}" loading="lazy" decoding="async">'
 
 
 def druck_card(n, t, h, alt):
@@ -2169,7 +2171,7 @@ def rubbellos_page():
 <div data-rubbellos>
 <script type="application/json">{data}</script>
 <section id="rl-empfang" hidden>
-  <h1 class="sr-only">Ein Rubbellos für dich</h1>
+  <h2 class="sr-only">Ein Rubbellos für dich</h2>
   <p class="tip">🎟️ <b>Jemand hat dir ein Rubbellos geschickt!</b> Rubbel das goldene Feld mit dem Finger frei.</p>
   <div id="rl-gross"></div>
   <div id="rl-danach" hidden>
@@ -2235,7 +2237,7 @@ def wunsch_page():
   <ol id="wz-s-list" class="wz-s-list"></ol>
   <p id="wz-s-x" class="tip" hidden></p>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
-  <p class="onni-says"><img src="/fotos/onni/sticker-lupe.webp" width="64" height="64" alt=""><span><b>Onni</b> meint: Ein Wunsch ist eine Idee, kein Muss – eine kleine Überraschung darf es immer sein.</span></p>
+  <p class="onni-says"><img src="/fotos/onni/sticker-lupe-128.webp" width="64" height="64" alt=""><span><b>Onni</b> meint: Ein Wunsch ist eine Idee, kein Muss – eine kleine Überraschung darf es immer sein.</span></p>
   <p><a class="btn-secondary" href="/wunschzettel/">✍️ Eigenen Wunschzettel schreiben</a></p>
 </div>
 <p class="lead">Du weißt nicht, was du dir wünschen sollst – und dein Wichtel erst recht nicht? Schreib bis zu 5 Wünsche auf und schick den Wunschzettel als Link in eure Wichtelgruppe. Dein Wichtel liest heimlich mit, und keiner muss raten. Kostenlos, ohne Anmeldung.</p>

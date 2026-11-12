@@ -103,7 +103,7 @@
   OCC.forEach((oc, i) => {
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'gr-occ';
-    b.innerHTML = `<img src="/fotos/onni/sticker-${oc.s}.webp" alt="" width="64" height="64" loading="lazy"><span></span>`;
+    b.innerHTML = `<img src="/fotos/onni/sticker-${oc.s}-128.webp" alt="" width="64" height="64" loading="lazy"><span></span>`;
     b.querySelector('span').textContent = oc.h;
     b.addEventListener('click', () => {
       st.o = i; st.t = oc.t; st.v = oc.v; $('#gr-t').value = st.t; $('#gr-v').value = st.v; sync();
