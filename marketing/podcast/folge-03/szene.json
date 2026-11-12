@@ -83,7 +83,8 @@
   ],
   [
    "E",
-   "Onni freute sich so sehr, dass er seinen Hunger für einen Augenblick vergaß. Vorsichtig trug er das Bild in sein Stübchen und lehnte es an die Wand. Da knurrte sein Bauch schon wieder."
+   "Onni freute sich so sehr, dass er seinen Hunger für einen Augenblick vergaß. Vorsichtig trug er das Bild in sein Stübchen und lehnte es an die Wand. Da knurrte sein Bauch schon wieder.",
+   1.2
   ],
   [
    "O",
@@ -211,16 +212,23 @@
   ],
   [
    5,
-   0,
-   "uhr",
-   "bis:31",
-   null
+   4.85,
+   "bauch3",
+   2.4,
+   -6
   ],
   [
    6,
-   -1.1,
+   -1.2,
    "bauch2",
-   1.2,
+   1.3,
+   0
+  ],
+  [
+   7,
+   0,
+   "uhr",
+   "bis:31",
    null
   ],
   [
@@ -229,6 +237,13 @@
    "tuer-knarren",
    1.4,
    null
+  ],
+  [
+   13,
+   -1.1,
+   "bauch3",
+   1.2,
+   -6
   ],
   [
    14,
