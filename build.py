@@ -1028,7 +1028,7 @@ def whatsapp_page():
 <h2>Und jetzt: das passende Geschenk</h2>
 <p>Ideen nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a> – oder im <a href="/geschenkfinder/">Geschenkfinder</a> nach Alter und Interessen filtern.</p>
 </article>'''
-    page('/wichteln-per-whatsapp/', 'Wichteln per WhatsApp: Namen online ziehen & Links verschicken',
+    page('/wichteln-per-whatsapp/', 'Wichteln per WhatsApp: online auslosen & Links verschicken',
          'Wichteln per WhatsApp: Gruppe online auslosen, jedem seinen geheimen Link schicken – ohne Zettel, ohne Anmeldung. So geht\'s in 4 Schritten, kostenlos.', body,
          extra=ld(faq_ld), crumb='Wichteln per WhatsApp', mascot='winkt')
 
@@ -1218,7 +1218,7 @@ Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wi
 <p class="hint">Ausmalbilder und Sticker sind für zu Hause, Kita und Schule kostenlos. Sie wurden mit KI erstellt (Google Gemini/Flow).</p>
 </article>"""
     page('/wichtel-ausmalbilder/', 'Wichtel-Ausmalbilder zum Ausdrucken – kostenlos (PDF)',
-         '6 Wichtel-Ausmalbilder mit Onni kostenlos als PDF: Wichtel mit Geschenk, am Tannenbaum, an der Wichteltür, beim Plätzchenbacken – plus Wichtel-Sticker für WhatsApp.', body,
+         '6 Wichtel-Ausmalbilder mit Onni kostenlos als PDF: Wichtel mit Geschenk, am Tannenbaum, an der Wichteltür, beim Backen – plus Wichtel-Sticker für WhatsApp.', body,
          crumb='Wichtel-Ausmalbilder', playful=True)
 
 
@@ -1368,8 +1368,8 @@ def advent_page():
 {CTA}
 <p>Mehr Ideen: <a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke unter 10 €</a> · <a href="/wichtelgeschenke-selber-machen/">Geschenke selber machen</a> · <a href="/wichteltuer/">Wichteltür für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder</a></p>
 </article>"""
-    page('/adventskalender-ideen/', f'Adventskalender-Ideen: {n} Kalender für Kollegen, Erwachsene & Kinder',
-         f'Adventskalender-Ideen 2026: {n} Kalender für Kollegen, Genießer, Erwachsene und Kinder – plus Adventskalender zum Selbstbefüllen und Tipps fürs Adventskalender-Wichteln.',
+    page('/adventskalender-ideen/', f'Adventskalender-Ideen: {n} Kalender für Kollegen & Kinder',
+         f'Adventskalender-Ideen 2026: {n} Kalender für Kollegen, Genießer, Erwachsene und Kinder – plus Kalender zum Selbstbefüllen und Tipps fürs Wichteln.',
          body, crumb='Adventskalender-Ideen', playful=True)
 
 
@@ -1438,7 +1438,7 @@ def themen_pages():
 <p>Im Team oder in der Familie: Beim <a href="/adventskalender-ideen/#adventskalender-wichteln">Adventskalender-Wichteln</a> lost ihr aus, wer für wen einen Kalender füllt.</p>
 {CTA}
 </article>"""
-    page('/adventskalender-befuellen/', f'Adventskalender befüllen: {n} Ideen für Kinder, Erwachsene & Kollegen',
+    page('/adventskalender-befuellen/', f'Adventskalender befüllen: {n} Ideen für Kinder & Erwachsene',
          f'Adventskalender befüllen: {n} Füllideen für Kinder, Erwachsene und Kollegen, {len(AK_GUTSCHEINE)} Gutschein-Ideen, die nichts kosten, und {len(AK_BASTELN)} Anleitungen zum Selberbasteln.',
          body, crumb='Adventskalender befüllen', playful=True)
 
@@ -1531,7 +1531,7 @@ def themen_pages():
 {CTA}
 </article>"""
     page('/black-friday-wichtelgeschenke/', 'Black Friday 2026: Wichtelgeschenke im Angebot',
-         f'Black Friday 2026 (27.11.) und Cyber Monday (30.11.): {n} Wichtelgeschenke, die jetzt oft reduziert sind – Kleinigkeiten unter 10 €, Gemütliches, Technik, Spiele und Ideen für Kinder.',
+         f'Black Friday 2026 (27.11.) & Cyber Monday: {n} Wichtelgeschenke, die jetzt oft reduziert sind – Kleinigkeiten unter 10 €, Gemütliches, Technik, Spiele.',
          body, crumb='Black Friday', playful=True)
 
 
@@ -1697,8 +1697,8 @@ def tassen_page():
 <p>Erst die Namen, dann die Tasse: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
 {CTA}
 </article>"""
-    page('/wichtel-tassen/', 'Wichtel-Tassen, T-Shirts & Teddys mit Spruch: lustige Wichtelgeschenke',
-         f'Wichtel-Tassen mit Spruch: {n} lustige Motive mit dem WichtelLos-Wichtel – Wichtel-Champion, Schrottwichtel-Geschenk, Bargeld-Wunsch. Auch als T-Shirt, Kinder-Shirt und Teddy.',
+    page('/wichtel-tassen/', 'Wichtel-Tassen mit Spruch: lustige Wichtelgeschenke & Shirts',
+         f'Wichtel-Tassen mit Spruch: {n} lustige Motive – Wichtel-Champion, Schrottwichtel-Geschenk, Bargeld-Wunsch. Auch als T-Shirt, Hoodie und Teddy.',
          body, crumb='Wichtel-Tassen', playful=True)
 
 
@@ -1816,8 +1816,8 @@ def onni_kalender_page():
 <p class="hint">Hier geht's direkt zu den Ideen: <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
 <p class="hint">Bilder und Erzählstimme der Geschichten sind mit KI-Unterstützung entstanden, die Geschichten haben wir selbst geschrieben.</p>
 </article>'''
-    page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder',
-         'Onnis Adventskalender: Ab 1. Dezember öffnet sich jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür.',
+    page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder',
+         'Onnis Adventskalender: Ab 1. Dezember jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür.',
          body, crumb='Onnis Adventskalender', playful=True)
 
 
@@ -2063,7 +2063,8 @@ def gruss_page():
 
 <div class="card gruss" data-gruss>
   <script type="application/json">{data}</script>
-  <div class="gr-preview"><canvas id="gr-canvas" width="1080" height="1350" role="img" aria-label="Vorschau der Wichtel-Karte"></canvas></div>
+  <div class="gr-preview"><canvas id="gr-canvas" width="1080" height="1350" role="img" aria-label="Vorschau der Wichtel-Karte"></canvas>
+    <button type="button" id="gr-share-top" class="btn-primary gr-share-top">📤 Als Bild teilen</button></div>
   <div class="gr-form">
     <h2>1. Anlass wählen</h2>
     <div id="gr-occ" class="gr-occs"></div>
@@ -2136,7 +2137,7 @@ def generator_page():
             namen.add(b[0].replace('{L}', h[0]).replace('{K}', h[1]))
     n = len(namen)
     n_rund = f'über {n // 100 * 100:,}'.replace(',', '.')
-    anl_links = ' · '.join(f'<a href="/geschenke-generator/?anlass={k}">{e} {esc(t)}</a>' for k, t, e in ANLAESSE)
+    anl_links = ''.join(f'<a href="/geschenke-generator/?anlass={k}">{e} {esc(t)}</a>' for k, t, e in ANLAESSE)  # als Chips (UX Nr. 15, 12.11.)
     anl_opts = ''.join(f'<option value="{k}">{e} {esc(t)}</option>' for k, t, e in ANLAESSE)
     hobby_opts = ''.join(f'<option value="{esc(h[0])}">' for h in sorted(HOBBYS, key=lambda h: h[0].lower())) + ''.join(f'<option value="{esc(t)}">' for _, t in MAG)
     hobby_bsp = ' · '.join(f'<a href="/geschenke-generator/?hobby={quote(h)}">{esc(h)}</a>' for h in
@@ -2188,14 +2189,14 @@ def generator_page():
 <ul>
   <li><b>Keine KI, nichts erfunden:</b> Du musst niemanden beschreiben. Die Ideen stammen aus unserer Liste – passend zu Hobby, Person und Budget sortiert, das Budget wird nie überschritten.</li>
   <li><b>Nichts wird gespeichert:</b> Die Auswahl passiert in deinem Browser. Die Merkliste bleibt auf deinem Gerät.</li>
-  <li><b>Für jeden Anlass:</b> {anl_links}</li>
+  <li><b>Für jeden Anlass:</b><div class="chips">{anl_links}</div></li>
   <li><b>Für jedes Hobby:</b> {hobby_bsp} …</li>
 </ul>
 <p>Zum Wichteln gibt es außerdem den <a href="/geschenkfinder/">Wichtel-Geschenkfinder</a> mit Filtern nach Alter und Budget und die Seiten <a href="/geschenke-fuer-maenner/">Geschenke für Männer</a> und <a href="/geschenke-fuer-frauen/">Geschenke für Frauen</a>.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 </article>'''
-    page('/geschenke-generator/', 'Geschenke-Generator: Geschenkidee in 3 Klicks für jeden Anlass',
-         f'Geschenkideen per Zufall: Anlass, Person, Budget und Hobby wählen und 3 Geschenk-Lose freirubbeln – {n_rund} Ideen für Geburtstag, Weihnachten, Jahrestag, Taufe, Ruhestand & mehr. Kostenlos, ohne Anmeldung.',
+    page('/geschenke-generator/', 'Geschenke-Generator: Idee in 3 Klicks für jeden Anlass',
+         f'Geschenkideen per Zufall: Anlass, Person, Budget und Hobby wählen, 3 Lose freirubbeln – {n_rund} Ideen für Geburtstag, Weihnachten & mehr. Kostenlos.',
          body, extra='\n<script src="/assets/rubbel.js" defer></script>\n<script src="/assets/generator.js" defer></script>',
          crumb='Geschenke-Generator')
 
@@ -2268,7 +2269,7 @@ def rubbellos_page():
 </div>
 </article>'''
     page('/rubbellos/', 'Rubbellos verschicken: Geschenk zum Freirubbeln per WhatsApp',
-         'Digitales Rubbellos erstellen: Geschenk, Gutschein oder Überraschung eintragen und per WhatsApp verschicken – die beschenkte Person rubbelt am Handy frei. Kostenlos, ohne Anmeldung.',
+         'Digitales Rubbellos erstellen: Geschenk oder Gutschein eintragen, per WhatsApp verschicken – die beschenkte Person rubbelt am Handy frei. Kostenlos.',
          body, extra='\n<script src="/assets/rubbel.js" defer></script>\n<script src="/assets/rubbellos.js" defer></script>',
          crumb='Rubbellos')
 
@@ -2318,8 +2319,8 @@ def wunsch_page():
 <p>Passend dazu: <a href="/wichtelgruss/">Wichtelgruß mit Onni verschicken</a> · <a href="/wichtelgedichte/">Wichtelgedichte</a> · <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
 </article>
 <script src="/assets/wunsch.js" defer></script>'''
-    page('/wunschzettel/', 'Wunschzettel fürs Wichteln online erstellen – per WhatsApp teilen',
-         'Wichtel-Wunschzettel online schreiben: bis zu 5 Wünsche plus „Bitte nicht“, als Link per WhatsApp in die Wichtelgruppe schicken – kostenlos, ohne Anmeldung, nichts gespeichert.', body,
+    page('/wunschzettel/', 'Wichtel-Wunschzettel online erstellen & per WhatsApp teilen',
+         'Wichtel-Wunschzettel online schreiben: bis zu 5 Wünsche plus „Bitte nicht“, als Link in die WhatsApp-Gruppe – kostenlos, ohne Anmeldung, nichts gespeichert.', body,
          crumb='Wunschzettel', playful=True)
 
 

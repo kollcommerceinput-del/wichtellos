@@ -143,6 +143,9 @@
     window.open('https://wa.me/?text=' + encodeURIComponent('🎁 Ein Wichtelgruß für dich: ' + link()), '_blank', 'noopener');
   };
   $('#gr-share').addEventListener('click', () => shareImg($('#gr-share')));
+  // PC: Teilen-Knopf direkt unter der Vorschau (UX Nr. 6, 12.11.; am Handy übernimmt die Leiste unten)
+  const top = $('#gr-share-top');
+  if (top) top.addEventListener('click', () => shareImg(top));
   $('#gr-save').addEventListener('click', download);
   $('#gr-wa').addEventListener('click', shareWa);
 

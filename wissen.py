@@ -6,8 +6,8 @@ Neue Seite = Eintrag hier + Sitemap-Liste + og-Bild (marketing/render-og.js)."""
 WISSEN = [
     dict(
         path='/wie-funktioniert-wichteln/',
-        title='Wie funktioniert Wichteln? Regeln & Anleitung Schritt für Schritt',
-        desc='Wie funktioniert Wichteln? Die Regeln einfach erklärt: Gruppe, Budget, Auslosen, Geheimhaltung und Bescherung – mit Anleitung in 6 Schritten, Tipps und häufigen Fehlern.',
+        title='Wie funktioniert Wichteln? Regeln & Anleitung in 6 Schritten',
+        desc='Wie funktioniert Wichteln? Regeln einfach erklärt: Gruppe, Budget, Auslosen, Geheimhaltung und Bescherung – Anleitung in 6 Schritten mit Tipps und Fehlern.',
         crumb='Wie funktioniert Wichteln?', mascot='winkt',
         photo=('wichtel3d-los', 'Plüsch-Wichtel zieht ein Los aus einer alten Holzkiste'),
         h1='Wie funktioniert Wichteln? Regeln und Anleitung',
@@ -72,7 +72,7 @@ WISSEN = [
     dict(
         path='/was-ist-ein-wichtel/',
         title='Was ist ein Wichtel? Aussehen, Herkunft & Bedeutung',
-        desc='Was ist ein Wichtel? Woher der Name kommt, wie Wichtel aussehen, was sie tun – und der Unterschied zu Heinzelmännchen, Tomte, Nisse und Elfen. Mit Vorlesetext und Video für Kinder.',
+        desc='Was ist ein Wichtel? Woher der Name kommt, wie Wichtel aussehen und was sie tun – und der Unterschied zu Heinzelmännchen, Tomte und Elfen. Mit Video für Kinder.',
         crumb='Was ist ein Wichtel?', mascot='lupe',
         photo=('wichtel3d-tuer', 'Plüsch-Wichtel mit roter Mütze steht vor einer kleinen Holztür'),
         h1='Was ist ein Wichtel? Aussehen, Herkunft und Bedeutung',
@@ -119,7 +119,7 @@ WISSEN = [
     dict(
         path='/wichteln-varianten/',
         title='Wichteln-Varianten: 12 Spielarten & Ideen für mehr Spaß',
-        desc='Wichteln mal anders: 12 Varianten von Schrottwichteln über Würfeln und Themen-Wichteln bis Fern-Wichteln per Post – kurz erklärt, mit Regeln und Tipps für Büro, Familie und Freunde.',
+        desc='Wichteln mal anders: 12 Varianten von Schrottwichteln über Würfeln bis Fern-Wichteln per Post – kurz erklärt, mit Regeln und Tipps für Büro und Familie.',
         crumb='Wichteln-Varianten', mascot='wuerfel',
         photo=('wichtel3d-wuerfel', 'Plüsch-Wichtel sitzt neben großen Würfeln und Geschenken'),
         h1='Wichteln-Varianten: 12 Spielarten für mehr Spaß',
@@ -222,7 +222,7 @@ WISSEN = [
     dict(
         path='/wichteln-per-post/',
         title='Wichteln per Post: Fern-Wichteln ohne Treffen – so geht’s',
-        desc='Wichteln per Post und ohne Treffen: online auslosen, Adressen sammeln, rechtzeitig verschicken und gemeinsam per Videocall auspacken. Mit Zeitplan, Versandtipps und Ideen, die gut ins Paket passen.',
+        desc='Wichteln per Post, ohne Treffen: online auslosen, Adressen sammeln, rechtzeitig verschicken und per Videocall auspacken. Mit Zeitplan und Versandtipps.',
         crumb='Wichteln per Post', mascot='winkt',
         photo=('wichtel3d-umschlag', 'Plüsch-Wichtel hält einen großen Briefumschlag'),
         h1='Wichteln per Post: Fern-Wichteln ohne Treffen',

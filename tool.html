@@ -355,6 +355,13 @@
         row.append(del);
       }
       box.append(row);
+      // Hinweis, sobald die 30 Zeichen erreicht sind – vorher wurde stumm gekürzt (UX Nr. 17, 12.11.)
+      const maxHint = document.createElement('p');
+      maxHint.className = 'name-max'; maxHint.textContent = 'Max. 30 Zeichen – kürze den Namen z. B. auf Vorname + Initial.';
+      maxHint.setAttribute('role', 'status');
+      maxHint.hidden = p.name.length < 30;
+      input.addEventListener('input', () => { maxHint.hidden = input.value.length < 30; });
+      box.append(maxHint);
       const tip = document.createElement('input');
       tip.className = 'tip-input'; tip.value = p.tip || ''; tip.maxLength = 80;
       tip.placeholder = 'Tipp, z. B. mag Tee, liebt Katzen, keine Süßigkeiten';
