@@ -236,6 +236,36 @@
     v.focus();
   }));
 
+  // Shop-Seite (/wichtel-tassen/) Umbau 4 (12.11.): Spruch wählen → Produkte wechseln; Themen filtern; „+N weitere“; Adresse #spruch merkt die Wahl
+  const msWahl = document.querySelector('.ms-wahl');
+  if (msWahl) {
+    const kacheln = [...msWahl.querySelectorAll('.ms-kachel[data-spruch]')];
+    const mehrK = msWahl.querySelector('.ms-mehr-k');
+    const themen = [...msWahl.querySelectorAll('.ms-thema')];
+    let thema = 'alle', offen = false;
+    const zeigeKacheln = () => {
+      kacheln.forEach((k) => {
+        k.hidden = thema === 'alle' ? (!offen && k.classList.contains('ms-rest') && k.getAttribute('aria-pressed') !== 'true') : k.dataset.thema !== thema;
+      });
+      mehrK.hidden = thema !== 'alle' || offen;
+    };
+    const waehle = (k, merken) => {
+      kacheln.forEach((x) => x.setAttribute('aria-pressed', x === k ? 'true' : 'false'));
+      msWahl.querySelectorAll('.ms-panel').forEach((p) => { p.hidden = p.dataset.spruch !== k.dataset.spruch; });
+      if (merken) history.replaceState(null, '', '#' + k.dataset.spruch);
+    };
+    kacheln.forEach((k) => k.addEventListener('click', () => waehle(k, true)));
+    mehrK.addEventListener('click', () => { offen = true; mehrK.setAttribute('aria-expanded', 'true'); zeigeKacheln(); });
+    themen.forEach((b) => b.addEventListener('click', () => {
+      thema = b.dataset.thema;
+      themen.forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      zeigeKacheln();
+    }));
+    const start = kacheln.find((k) => '#' + k.dataset.spruch === location.hash);
+    if (start) { offen = start.classList.contains('ms-rest'); waehle(start, false); }
+    zeigeKacheln();
+  }
+
   // Shop-Seite (/wichtel-tassen/): Reiter je Produktart, Adresse #tasse/#t-shirt … merkt die Wahl
   const msTabs = [...document.querySelectorAll('.ms-tab')];
   if (msTabs.length) {

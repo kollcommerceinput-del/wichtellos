@@ -1627,26 +1627,57 @@ def tassen_page():
             if any(e[3] in ids for e in eintraege):
                 return titel
         return 'Rund um den Wichtel'
-    karte = lambda name, eintraege: (
-        f'<div class="ms-card"><a class="ms-bild" href="{esc(shop_link(eintraege[0][4], eintraege[0][5], eintraege[0][0], eintraege[0][3]))}" '
-        f'target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/fotos/merch/shop/{eintraege[0][0]}-{eintraege[0][3]}.webp" '
-        f'alt="{esc(eintraege[0][1])} „{esc(name)}“ mit dem WichtelLos-Wichtel" width="400" height="400" loading="lazy" decoding="async"></a>'
-        f'<span class="ms-name">{esc(name)}</span><span class="ms-btns">'
-        + ''.join(f'<a class="ms-btn" href="{esc(shop_link(pfad, sid, pt, did))}" target="_blank" rel="noopener">{esc(lbl)}<small>{preis}</small></a>'
-                  for pt, lbl, preis, did, pfad, sid in eintraege)
-        + '</span></div>')
-    teile = []
-    for titel in [g[0] for g in gruppen] + ['Rund um den Wichtel']:
-        ks = [karte(name, e) for name, e in sprueche.items() if thema(name, e) == titel]
-        if ks:
-            teile.append(f'<h3 class="ms-h">{titel}</h3><div class="ms-grid">{"".join(ks)}</div>')
-    produkte_html = ''.join(teile)
+    # 12.11. Umbau 4 (Toni): Auswahl in 2 Schritten. Alles steht im HTML (SEO), JS schaltet nur um (assets/site.js „ms-wahl“).
+    # Schritt 1: Themen-Knöpfe + Spruch-Kacheln (Bild = Tasse, sonst Shirt); bei „Alle“ erst die 8 Favoriten, Rest per „+N weitere“.
+    # Schritt 2: je Spruch ein Bereich mit allen Produkten (Bild, Name, Preis, „Ansehen →“); nur der gewählte ist sichtbar.
+    FAVORITEN = ['Wichtel-Champion', 'Wichtel-Gewinner', 'Lieber Wichtel, nächstes Jahr bitte Bargeld',
+                 'Ich hab dich lieb – weil ich dich gezogen hab', 'Bester Wichtel der Abteilung', 'Achtung: Schrottwichtel-Geschenk',
+                 'Ich habe einen Wichtel zu Hause', 'Ich liebe Wichtel – mit Herz']
+    START = 'Wichtel-Champion'
+    themen = [g[0] for g in gruppen] + ['Rund um den Wichtel']
+    sid_slug = lambda t: re.sub(r'[^a-z0-9]+', '-', t.lower().replace('ä', 'ae').replace('ö', 'oe').replace('ü', 'ue').replace('ß', 'ss')).strip('-')
+    reihe = [n_ for t in themen for n_, e in sprueche.items() if thema(n_, e) == t]
+    reihe = [x for x in FAVORITEN if x in reihe] + [x for x in reihe if x not in FAVORITEN]
+    themen_kn = ''.join(f'<button type="button" class="ms-thema" data-thema="{"alle" if t is None else sid_slug(t)}" aria-pressed="{"true" if t is None else "false"}">'
+                        f'{"Alle" if t is None else t}</button>' for t in [None] + themen)
+    kacheln = []
+    for name in reihe:
+        e = sprueche[name]
+        pt, lbl, preis, did, pfad, sid = e[0]
+        kacheln.append(f'<button type="button" class="ms-kachel{"" if name in FAVORITEN else " ms-rest"}" data-spruch="{sid_slug(name)}" '
+                       f'data-thema="{sid_slug(thema(name, e))}" aria-pressed="{"true" if name == START else "false"}" aria-controls="msp-{sid_slug(name)}">'
+                       f'<img src="/fotos/merch/shop/{pt}-{did}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" width="400" height="400" loading="lazy" decoding="async">'
+                       f'<span>{esc(name)}</span></button>')
+    rest = len(reihe) - len([x for x in FAVORITEN if x in reihe])
+    kacheln.append(f'<button type="button" class="ms-kachel ms-mehr-k" aria-expanded="false"><b>+{rest}</b><span>weitere Sprüche</span></button>')
+    panels = []
+    for name in reihe:
+        e = sprueche[name]
+        karten = ''.join(
+            f'<a class="ms-pcard" href="{esc(shop_link(pfad, sid, pt, did))}" target="_blank" rel="noopener">'
+            + f'<span class="ms-bild"><img src="/fotos/merch/shop/{pt}-{did}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
+            f'width="400" height="400" loading="lazy" decoding="async"></span><span class="ms-name">{esc(lbl)}</span>'
+            f'<span class="ms-preis">{preis}</span>'
+            + ('<span class="ms-etikett">Passt ins 20-€-Budget</span>' if pt == '31' else '')
+            + '<span class="ms-an">Ansehen →</span></a>'
+            for pt, lbl, preis, did, pfad, sid in e)
+        panels.append(f'<div class="ms-panel" id="msp-{sid_slug(name)}" data-spruch="{sid_slug(name)}" role="region" aria-label="{esc(name)}"'
+                      f'{"" if name == START else " hidden"}><p class="ms-gewaehlt">„{esc(name)}“ gibt es als:</p><div class="ms-pgrid">{karten}</div></div>')
+    produkte_html = (f'<section class="ms-wahl" id="ms-wahl" aria-label="Wichtelgeschenk mit Spruch auswählen">'
+                     f'<h3 class="ms-schritt">1. Spruch aussuchen</h3><div class="ms-themen" role="group" aria-label="Thema">{themen_kn}</div>'
+                     f'<div class="ms-sprueche">{"".join(kacheln)}</div>'
+                     f'<h3 class="ms-schritt">2. Produkt wählen</h3>{"".join(panels)}</section>')
+    n = len(sprueche)  # 21 Sprüche (rot-grün und normal = ein Spruch)
     hero = ''.join(f'<img src="/fotos/merch/shop/{f}.webp" alt="" width="400" height="400">'
                    for f in ('897-32834927e9882040', '31-3283492984258d6f', '6-3283492929305c32'))
     body = f"""<article>
 <section class="ms-hero">
+<div class="ms-hero-text">
 <h1>Wichtelgeschenke mit Spruch</h1>
-<p>Tassen, Shirts, Hoodies und Teddys mit unserem Wichtel – {n} Sprüche vom „Wichtel-Champion“ bis „Nächstes Jahr bitte Bargeld“.</p>
+<p>Tassen, Shirts, Hoodies und Teddys mit unserem Wichtel. {n} Sprüche vom „Wichtel-Champion“ bis „Nächstes Jahr bitte Bargeld“.</p>
+<p class="ms-hero-kn"><a class="ms-hk-rot" href="#ms-wahl">{n} Sprüche ansehen ↓</a> <a class="ms-hk-rand" href="{SHOP_URL}/" target="_blank" rel="noopener">Direkt zum Shop →</a></p>
+<p class="ms-hero-klein">Im Shop auch Pullis, Taschen, Kappen und Kinder-Shirts</p>
+</div>
 <div class="ms-hero-bilder">{hero}</div>
 </section>
 

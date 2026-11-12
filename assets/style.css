@@ -758,6 +758,25 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .ms-hero-bilder { display: flex; justify-content: center; gap: 14px; margin-top: 24px; transform: translateY(18px); }
 .ms-hero-bilder img { width: 30%; max-width: 210px; height: auto; aspect-ratio: 1; border-radius: 22px; background: #f2f2f2; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
 .ms-hero-bilder img:nth-child(2) { transform: translateY(-14px); }
+/* 12.11. Hero (Toni-Entwurf): Text links mit 2 Knöpfen, rechts 3 Produktfotos; Handy untereinander */
+.ms-hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 22px; align-items: center; text-align: left; padding: 30px 28px; }
+.ms-hero h1, article .ms-hero h1 { font-size: clamp(26px, 3vw, 34px); }
+.ms-hero p { margin-left: 0; }
+.ms-hero .ms-hero-bilder { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 0; transform: none; gap: 8px; }
+.ms-hero .ms-hero-bilder img { width: 100%; max-width: none; border-radius: 14px; box-shadow: none; }
+.ms-hero .ms-hero-bilder img:nth-child(2) { transform: none; }
+.ms-hero-kn { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0 !important; }
+.ms-hk-rot, .ms-hk-rand { display: inline-flex; align-items: center; min-height: 46px; padding: 8px 16px; font-size: 15px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.ms-hk-rot { background: #c62828; color: #fff; }
+.ms-hk-rand { border: 1.5px solid rgba(255,255,255,.7); color: #fff; }
+.ms-hk-rot:hover, .ms-hk-rot:focus-visible { background: #a91f1f; color: #fff; }
+.ms-hk-rand:hover, .ms-hk-rand:focus-visible { background: rgba(255,255,255,.12); color: #fff; }
+.ms-hero .ms-hero-klein { font-size: 14px; color: #cfe0d2; margin-top: 12px; }
+@media (min-width: 1100px) { .ms-hero { margin-left: -110px; margin-right: -110px; padding: 34px 36px; } }
+@media (max-width: 760px) {
+  .ms-hero { grid-template-columns: 1fr; padding: 24px 18px; text-align: left; }
+  .ms-hero-kn a { flex: 1 1 auto; justify-content: center; }
+}
 .ms-tabs { display: flex; gap: 4px; background: var(--card); border-radius: 999px; padding: 5px; box-shadow: 0 4px 16px rgba(0,0,0,.08); margin: 0 0 6px; }
 .ms-tab { flex: 1 1 0; min-width: 0; min-height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 0; background: none;
   border-radius: 999px; padding: 6px 8px; font: inherit; font-weight: 700; font-size: 15px; line-height: 1.15; color: var(--text); cursor: pointer; }
@@ -777,6 +796,38 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .ms-name { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.2; margin: 12px 6px 0; }
 .ms-an { margin: auto 6px 0; padding-top: 8px; font-size: 14px; font-weight: 700; color: #1D3B2C; }
 .ms-mehr-i { font-size: 44px; line-height: 1; }
+/* 12.11. Umbau 4: Auswahl in 2 Schritten – Spruch-Kacheln (Schritt 1), Produkte des gewählten Spruchs (Schritt 2) */
+.ms-wahl { margin: 8px 0 18px; }
+.ms-schritt { margin: 26px 0 12px; }
+.ms-themen { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.ms-thema { min-height: 44px; padding: 8px 16px; border-radius: 999px; border: 2px solid transparent; background: var(--card); color: var(--text);
+  font: inherit; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.ms-thema[aria-pressed="true"] { background: #1D3B2C; color: #fff; }
+.ms-thema:hover { border-color: #1D3B2C; }
+.ms-sprueche { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.ms-kachel { display: flex; flex-direction: column; align-items: stretch; gap: 6px; padding: 6px 6px 8px; border-radius: 16px; border: 3px solid transparent;
+  background: var(--card); color: var(--text); font: inherit; font-size: 13px; font-weight: 600; line-height: 1.2; text-align: center; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06); transition: transform .15s, border-color .15s; }
+.ms-kachel img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 11px; background: #f2f2f2; display: block; }
+.ms-kachel:hover { transform: translateY(-2px); }
+.ms-kachel[aria-pressed="true"] { border-color: #c62828; box-shadow: 0 6px 16px rgba(198,40,40,.18); }
+.ms-kachel[hidden], .ms-panel[hidden] { display: none; }
+.ms-mehr-k { justify-content: center; background: var(--soft); color: #1D3B2C; }
+.ms-mehr-k b { font-family: 'Fredoka', sans-serif; font-size: 28px; line-height: 1; }
+.ms-gewaehlt { margin: 0 0 10px; font-weight: 700; }
+.ms-pgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.ms-pcard { position: relative; display: flex; flex-direction: column; background: var(--card); border-radius: 20px; padding: 8px 8px 14px; text-decoration: none; color: var(--text);
+  box-shadow: 0 4px 16px rgba(43,27,23,.08); transition: transform .2s, box-shadow .2s; }
+.ms-pcard:hover, .ms-pcard:focus-visible { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(43,27,23,.14); }
+.ms-pcard img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.ms-preis { margin: 2px 6px 0; color: var(--muted); font-size: 14px; }
+.ms-etikett { align-self: flex-start; margin: 6px 6px 0; background: #c62828; color: #fff; font-size: 11.5px; font-weight: 700; line-height: 1.2; padding: 4px 9px; border-radius: 999px; }
+@media (max-width: 900px) { .ms-sprueche { grid-template-columns: repeat(4, 1fr); } .ms-pgrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) {
+  .ms-sprueche { gap: 6px; } .ms-kachel { font-size: 11.5px; padding: 4px 4px 6px; border-radius: 12px; } .ms-kachel img { border-radius: 8px; }
+  .ms-thema { font-size: 13px; padding: 6px 12px; } .ms-pgrid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .ms-etikett { font-size: 11px; padding: 3px 7px; }
+}
+@media (prefers-reduced-motion: reduce) { .ms-kachel, .ms-pcard { transition: none; } .ms-kachel:hover, .ms-pcard:hover { transform: none; } }
 /* 12.11.: je Spruch eine Karte, darunter ein Knopf je Produkt (Tasse, Große Tasse, T-Shirt, Hoodie, Teddy) */
 .ms-btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 4px 0; }
 .ms-btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; min-height: 44px; padding: 4px 10px; border-radius: 12px;
