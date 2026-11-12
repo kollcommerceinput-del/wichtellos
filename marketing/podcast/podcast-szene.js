@@ -170,9 +170,17 @@ async function buendeln(k, dir, fehlend) {
   });
   // Musik (nur auf Wunsch, Toni 12.11. Trailer): "musik": ["datei ohne .mp3 (sounds-pixabay/…)", dB] – läuft in Schleife unter allem, ein-/ausgeblendet
   if (k.musik) {
-    const [datei, db = -24] = k.musik, n = ai.filter((a) => a === '-i').length;
+    // optional 3. Wert: Lautstärke-Verlauf [[TeilNr, dB], …] – linear zwischen den Teil-Anfängen (Toni 12.11.: zur Mitte lauter, Höhepunkt bei „Folgt uns“)
+    const [datei, db = -24, verlauf = []] = k.musik, n = ai.filter((a) => a === '-i').length;
+    const pkt = [[0, db], ...verlauf.map(([nr, d]) => [start[nr], d])];
+    const lin = (d) => Math.pow(10, d / 20).toFixed(4);
+    let ausdruck = lin(pkt.at(-1)[1]);
+    for (let i = pkt.length - 2; i >= 0; i--) {
+      const [t0, d0] = pkt[i], [t1, d1] = pkt[i + 1];
+      ausdruck = `if(lt(t,${t1.toFixed(2)}),pow(10,(${d0}+(${d1 - d0})*(t-${t0.toFixed(2)})/${Math.max(t1 - t0, 0.01).toFixed(2)})/20),${ausdruck})`;
+    }
     ai.push('-stream_loop', '-1', '-i', path.join(SND, datei + '.mp3'));
-    af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${ende.toFixed(2)},asetpts=PTS-STARTPTS,volume=${db}dB,afade=t=in:d=1.5,afade=t=out:st=${(ende - 3).toFixed(2)}:d=3[mus]`);
+    af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${ende.toFixed(2)},asetpts=PTS-STARTPTS,volume='${ausdruck}':eval=frame,afade=t=in:d=1.5,afade=t=out:st=${(ende - 3).toFixed(2)}:d=3[mus]`);
     mix.push('[mus]');
   }
   af.push(`${mix.join('')}amix=inputs=${mix.length}:normalize=0:duration=longest,apad=whole_dur=${ende.toFixed(2)},loudnorm=I=-18:TP=-1.5:LRA=11[a]`);
