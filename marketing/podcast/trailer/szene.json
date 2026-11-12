@@ -1,0 +1,77 @@
+{
+ "out": "onni-trailer.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein kleiner, neugieriger Wichtel. Lebhaft und freundlich, aber natürlich gesprochen wie ein junger Erwachsener, nicht kindlich, keine Babysprache, nicht übertrieben. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Tief im Norden, im verschneiten Wichtelwald, wohnt ein kleiner Wichtel. So groß wie ein Daumen, mit einer roten Mütze, die ihm immer über die Augen rutscht."
+  ],
+  [
+   "O",
+   "Das bin ich! Ich heiße Onni.",
+   0.8
+  ],
+  [
+   "E",
+   "Onni sieht nicht viel. Aber seine Nase riecht alles. Und dieses Jahr riecht sie etwas ganz Besonderes: Kakao, frische Kekse … und ein Zuhause."
+  ],
+  [
+   "U",
+   "Steig auf, Onni. Ich fliege dich hin."
+  ],
+  [
+   "O",
+   "Danke, Ulla!",
+   1
+  ],
+  [
+   "E",
+   "Ab dem ersten Dezember erzählen wir jeden Abend eine neue Geschichte von Onni. Vierundzwanzig Türchen, bis Heiligabend. Zum Einkuscheln und Einschlafen."
+  ],
+  [
+   "O",
+   "Ich freu mich schon auf euch. Bis zum ersten Dezember!",
+   1.2
+  ],
+  [
+   "E",
+   "Liebe Eltern: Folgt Onnis Adventskalender, dann verpasst ihr keine Folge. Mehr zu Onni gibt es auf wichtellos Punkt de. Erzählt wird mit KI-Stimmen."
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   3,
+   0,
+   "wind",
+   "bis:5",
+   -18
+  ],
+  [
+   5,
+   0,
+   "kamin",
+   "bis:7",
+   null
+  ]
+ ]
+}
