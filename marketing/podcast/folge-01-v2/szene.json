@@ -1,0 +1,428 @@
+{
+ "out": "onni-folge-01.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   1
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
+   0.6
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen eins. Onni zieht ein.",
+   1.6
+  ],
+  [
+   "E",
+   "Tief im Norden, in Richtung des Nordsterns, da liegt der Wichtelwald. Dort stehen hohe Tannen, dick verschneit. Und wer genau hinschaut, entdeckt unten an den Stämmen kleine Türen und kleine Fenster. Hinter jedem Fenster leuchtet ein warmes, goldenes Licht."
+  ],
+  [
+   "E",
+   "Denn in den Bäumen wohnen die Wichtel. Und in einem dieser Häuschen wohnt Onni."
+  ],
+  [
+   "E",
+   "Onni ist so groß wie ein Daumen. Er hat einen weißen Bart, eine graue Strickjacke und eine rote Mütze. Die Mütze rutscht ihm immer über die Augen. Darum sieht Onni nicht viel. Aber seine Nase, die riecht alles."
+  ],
+  [
+   "E",
+   "An diesem Abend lag Onni noch in seinem Bett. Es stand gleich unter dem Fenster, und darauf lag eine bunte Flickendecke. Im Ofen knisterte leise das Feuer. Wichtel schlafen nämlich am Tag. Erst wenn es dunkel wird, wachen sie auf."
+  ],
+  [
+   "E",
+   "Draußen pfiff der Wind um den Baum. Da kitzelte etwas in Onnis Nase. Er wachte auf und schnupperte.",
+   0.8
+  ],
+  [
+   "O",
+   "Nanu? Was riecht denn hier so gut?",
+   0.8
+  ],
+  [
+   "E",
+   "Onni schob seine Holztür auf und lief hinaus. Unter seinen Schuhen knirschte der Schnee. Er hob die Nase hoch in den Wind und atmete tief ein.",
+   0.6
+  ],
+  [
+   "O",
+   "Kakao. Warm und süß."
+  ],
+  [
+   "O",
+   "Und frische Kekse, mit Butter und Zimt."
+  ],
+  [
+   "O",
+   "Und eine warme Kuscheldecke."
+  ],
+  [
+   "E",
+   "Onni wurde ganz warm ums Herz."
+  ],
+  [
+   "O",
+   "So riecht ein Zuhause. Da will ich hin!"
+  ],
+  [
+   "E",
+   "Doch der Duft kam von weit her. Hinter dem Wald, hinter den Hügeln. Viel zu weit für die kleinen Wichtelbeine. Onni ließ den Kopf hängen.",
+   0.5
+  ],
+  [
+   "O",
+   "Wie soll ich da nur hinkommen?",
+   1.2
+  ],
+  [
+   "E",
+   "Da raschelte es über ihm im Baum. Ein bisschen Schnee rieselte herunter, genau auf Onnis Mütze. Auf einem Ast saß Ulla, die alte Schneeeule. Ihre Federn waren so weiß wie der Schnee."
+  ],
+  [
+   "U",
+   "Na, Onni? Wohin zeigt denn deine Nase?"
+  ],
+  [
+   "O",
+   "Dorthin. Wo es nach Zuhause riecht."
+  ],
+  [
+   "U",
+   "Heute Nacht fliege ich genau dorthin. In die Stadt.",
+   0.8
+  ],
+  [
+   "E",
+   "Onni machte vor Freude einen kleinen Sprung. Schnell lief er zurück ins Haus und packte ein: ein weißes Tuch als Decke, einen Fingerhut als Becher und ein winziges Notizbuch. Alles zusammen knotete er zu einem kleinen Bündel. Mehr braucht ein Wichtel nicht.",
+   0.6
+  ],
+  [
+   "U",
+   "Komm, steig auf!"
+  ],
+  [
+   "E",
+   "Onni kletterte auf Ullas Rücken. Der war weich wie ein Federkissen. Er hielt sich gut an ihren Federn fest."
+  ],
+  [
+   "U",
+   "Bereit?"
+  ],
+  [
+   "O",
+   "Bereit!",
+   0.5
+  ],
+  [
+   "E",
+   "Ulla schlug mit den Flügeln, und los ging es: hoch über den dunklen Wald. Der Wind sauste um Onnis Nase.",
+   0.6
+  ],
+  [
+   "E",
+   "Onni schob seine Mütze ein Stück hoch und schaute hinunter. Die Wichtelhäuschen wurden kleiner und kleiner. Bald sahen ihre Fenster aus wie winzige goldene Punkte im Schnee. Über ihm leuchtete der Mond, und daneben funkelten die Sterne."
+  ],
+  [
+   "E",
+   "Lange flogen sie so durch die stille Nacht. Dann sah Onni etwas Wunderschönes: viele, viele Lichter. Gelb und warm, wie tausend Laternen.",
+   0.5
+  ],
+  [
+   "O",
+   "Die Stadt!",
+   0.6
+  ],
+  [
+   "E",
+   "Mit jedem Flügelschlag wurde der Duft stärker. Kakao. Kekse. Kuscheldecke."
+  ],
+  [
+   "E",
+   "Vor einem Haus setzte Ulla ihn sanft im Schnee ab. Onni schnupperte. Hier roch es genau richtig.",
+   0.5
+  ],
+  [
+   "O",
+   "Danke, Ulla."
+  ],
+  [
+   "U",
+   "Gern, Onni. Mach es gut."
+  ],
+  [
+   "E",
+   "Dann flog Ulla davon und verschwand am Himmel.",
+   1.5
+  ],
+  [
+   "E",
+   "Leise schlüpfte Onni unter der Haustür hindurch. Drinnen war es warm und still. Nur eine Uhr tickte. Alle schliefen schon."
+  ],
+  [
+   "E",
+   "Onni lief über den glatten Holzboden, immer der Nase nach. An seinen Schuhen klebte noch ein bisschen Schnee. Und da stand sie, ganz unten an der Wand: eine kleine rote Tür. Genau so groß wie er."
+  ],
+  [
+   "O",
+   "Eine Wichteltür! Hier wohne ich ab jetzt."
+  ],
+  [
+   "E",
+   "Ganz leise ging sie auf. Dahinter lag ein kleines Stübchen, ganz aus Holz. Auf dem Nachttisch leuchtete eine Laterne, warm und golden. Daneben stand ein Bett, genau in Onnis Größe. Es gab einen kleinen Tisch, einen Hocker mit einem roten Kissen und einen runden Teppich."
+  ],
+  [
+   "O",
+   "Das sieht ja aus, als hätte jemand auf mich gewartet."
+  ],
+  [
+   "E",
+   "Onni knotete sein Bündel auf und stellte den Fingerhut auf den Tisch. Dann setzte er sich auf den Hocker, schlug sein Notizbuch auf und schrieb seinen ersten Brief."
+  ],
+  [
+   "O",
+   "Hallo, ich bin Onni. Bis Heiligabend bleibe ich bei euch."
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.5
+  ],
+  [
+   "E",
+   "Jetzt war Onni müde. So müde. So ein langer Flug, so viel Neues. Er gähnte und gähnte.",
+   0.8
+  ],
+  [
+   "E",
+   "Er legte sich in sein neues Bett und deckte sich mit seinem weißen Tuch zu. Das Tuch roch noch ein bisschen nach Wichtelwald. Und rundherum roch es nach Kakao, nach Keksen und nach Zuhause.",
+   0.8
+  ],
+  [
+   "E",
+   "Es war so warm und ganz still. Draußen fiel leise der Schnee. Die Mütze rutschte ihm über die Augen, und er ließ sie einfach so.",
+   1
+  ],
+  [
+   "O",
+   "Was ich hier wohl morgen alles entdecke?",
+   0.8
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "EA",
+   "Morgen öffnet sich ein neues Türchen. Schlaf gut … träum was Schönes.",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   5,
+   0,
+   "wind",
+   "bis:8",
+   -18
+  ],
+  [
+   8,
+   0,
+   "kamin",
+   "bis:11",
+   null
+  ],
+  [
+   9,
+   0,
+   "wind",
+   5,
+   -14
+  ],
+  [
+   9,
+   4.5,
+   "schnuppern",
+   1.6,
+   null
+  ],
+  [
+   11,
+   0,
+   "tuer-knarren",
+   1.4,
+   null
+  ],
+  [
+   11,
+   1.8,
+   "schnee-schritte",
+   5,
+   null
+  ],
+  [
+   11,
+   1,
+   "wind",
+   "bis:19",
+   -18
+  ],
+  [
+   19,
+   0,
+   "rascheln-kurz",
+   1.8,
+   null
+  ],
+  [
+   19,
+   4.5,
+   "eule",
+   2,
+   null
+  ],
+  [
+   23,
+   5,
+   "schnee-schritte",
+   3,
+   null
+  ],
+  [
+   28,
+   0,
+   "fluegel",
+   3,
+   null
+  ],
+  [
+   28,
+   1,
+   "wind",
+   "bis:33",
+   -12
+  ],
+  [
+   33,
+   0,
+   "fluegel",
+   2.5,
+   null
+  ],
+  [
+   33,
+   0.5,
+   "wind",
+   "bis:37",
+   -20
+  ],
+  [
+   36,
+   0.5,
+   "fluegel",
+   2,
+   -8
+  ],
+  [
+   37,
+   0,
+   "uhr",
+   "bis:45",
+   null
+  ],
+  [
+   38,
+   0,
+   "laufen-holz",
+   3,
+   null
+  ],
+  [
+   40,
+   0,
+   "tuer-knarren",
+   1.4,
+   null
+  ],
+  [
+   42,
+   7,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   44,
+   3,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   45,
+   4,
+   "gaehnen",
+   2.2,
+   null
+  ],
+  [
+   52,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
