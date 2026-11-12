@@ -3,15 +3,15 @@
  "rollen": {
   "E": {
    "stimme": "Charon",
-   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+   "stil": "Erzähler eines spannenden Kinderhörspiels für Kinder ab 4: lebendig, mit Spannung und Staunen in der Stimme, abwechslungsreich in Tempo und Betonung, wie die Ankündigung eines Abenteuers. Nicht verniedlichend. Auf Deutsch."
   },
   "O": {
    "stimme": "Fenrir",
-   "stil": "Onni, ein kleiner, neugieriger Wichtel. Lebhaft und freundlich, aber natürlich gesprochen wie ein junger Erwachsener, nicht kindlich, keine Babysprache, nicht übertrieben. Auf Deutsch."
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
   },
   "U": {
    "stimme": "Gacrux",
-   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, tiefe, geheimnisvolle Frauenstimme mit leiser Spannung. Auf Deutsch."
   }
  },
  "teile": [
@@ -73,5 +73,9 @@
    "bis:7",
    null
   ]
+ ],
+ "musik": [
+  "musik-probe/4-kids-christmas",
+  -22
  ]
 }

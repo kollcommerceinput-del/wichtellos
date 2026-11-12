@@ -168,6 +168,13 @@ async function buendeln(k, dir, fehlend) {
       `afade=t=in:d=0.05,afade=t=out:st=${(d - fd).toFixed(2)}:d=${fd},adelay=${Math.round((start[nr] + vers) * 1000)}:all=1[g${j}]`);
     mix.push(`[g${j}]`);
   });
+  // Musik (nur auf Wunsch, Toni 12.11. Trailer): "musik": ["datei ohne .mp3 (sounds-pixabay/…)", dB] – läuft in Schleife unter allem, ein-/ausgeblendet
+  if (k.musik) {
+    const [datei, db = -24] = k.musik, n = ai.filter((a) => a === '-i').length;
+    ai.push('-stream_loop', '-1', '-i', path.join(SND, datei + '.mp3'));
+    af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${ende.toFixed(2)},asetpts=PTS-STARTPTS,volume=${db}dB,afade=t=in:d=1.5,afade=t=out:st=${(ende - 3).toFixed(2)}:d=3[mus]`);
+    mix.push('[mus]');
+  }
   af.push(`${mix.join('')}amix=inputs=${mix.length}:normalize=0:duration=longest,apad=whole_dur=${ende.toFixed(2)},loudnorm=I=-18:TP=-1.5:LRA=11[a]`);
   const out = path.join(dir, k.out || 'probe.mp3');
   execFileSync(FFMPEG, ['-y', '-loglevel', 'error', ...ai, '-filter_complex', af.join(';'), '-map', '[a]', '-ar', '44100', '-t', ende.toFixed(2), '-c:a', 'libmp3lame', '-b:a', '128k', out]);
