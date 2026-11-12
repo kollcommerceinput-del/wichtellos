@@ -24,7 +24,7 @@ const SZ = [
   [25.7, V12 + '8d8af412-eb58-4e15-8412-290a2825208c.jpg', '<h1>„Steig auf, <em>Onni!</em>“ 🦉</h1>'],
   [31.2, F3 + 'eingefuegt-20261112160143.jpg', '<h1>Ab <em>1. Dezember</em></h1><p>jeden Abend eine Geschichte</p>'],
   [36.2, V12 + '816cc703-a500-452a-9531-c0908ebf079f.jpg', '<h1><em>24 Türchen</em> bis Heiligabend 🌙</h1><p>zum Einkuscheln &amp; Einschlafen</p>'],
-  [41.2, F3 + 'eingefuegt-20261112172409.jpg', '<h1>Bis zum <em>1. Dezember!</em> 👋</h1>'],
+  [41.2, F3 + 'onni-winkt-tuer.jpg', '<h1>Bis zum <em>1. Dezember!</em> 👋</h1>'],
   [44.9, V12 + '2fe72207-a0cc-4149-b44f-4dd5c5da7526.jpg', '<h1 style="font-size:74px">🎧 Onnis <em>Adventskalender</em></h1><p>Spotify · Amazon Music · YouTube</p><div class="url">wichtellos.de</div><p class="folgt">Folgt uns 🔔</p>'],
 ];
 const LEN = SZ.map(([s], i) => (i < SZ.length - 1 ? SZ[i + 1][0] : ENDE) - s);
