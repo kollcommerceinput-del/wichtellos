@@ -1,0 +1,27 @@
+{
+ "out": "stimme-probe.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines kurzen Teasers für einen Kinder-Adventskalender: warm, geheimnisvoll, lebendig und zügig, aber gut verständlich. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Tief im Norden wohnt Onni."
+  ],
+  [
+   "E",
+   "Bald reist er los – zu euch!"
+  ],
+  [
+   "E",
+   "Er bleibt bis Heiligabend, macht Streiche und schreibt Briefe."
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – ab 1. Dezember!"
+  ]
+ ]
+}
