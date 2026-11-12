@@ -1,0 +1,13 @@
+{
+ "video": "G:/Video bauen Projekte/Video 2026-11-12/ausgabe/video-2026-11-12.mp4",
+ "out": "G:/Video bauen Projekte/Video 2026-11-12/ausgabe/video-2026-11-12-text.mp4",
+ "texte": [
+  [0.2, 3.9, "<h1>Tief im <em>Norden</em>,</h1><p>in Richtung Nordstern …</p>"],
+  [4.0, 5.9, "<h1>… im <em>Wichtelwald</em></h1><p>wohnt Onni.</p>"],
+  [6.0, 9.9, "<h1>Bald macht er sich auf</h1><p>die <b style=\"color:#c62828\">lange Reise</b> …</p>"],
+  [10.0, 13.9, "<h1>… und findet ein <em>Zuhause</em>.</h1>"],
+  [14.0, 17.9, "<h1>Er <em>bleibt</em> bis Heiligabend,</h1>"],
+  [18.0, 21.9, "<h1>macht <em>Streiche</em></h1><p>und schreibt Briefe ✉️</p>"],
+  [22.0, 25.7, "<h1>Kommt mit! 🎄</h1><p>Onnis Adventskalender<br>ab 1. Dezember</p><div class=\"url\">wichtellos.de</div>"]
+ ]
+}
