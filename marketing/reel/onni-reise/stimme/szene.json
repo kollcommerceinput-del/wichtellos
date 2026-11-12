@@ -1,0 +1,39 @@
+{
+ "out": "stimme-probe.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Teasers für einen Kinder-Adventskalender: warm, geheimnisvoll und lebendig, etwas spannend, ruhiges Hörbuch-Tempo. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Tief im Norden, in Richtung Nordstern,"
+  ],
+  [
+   "E",
+   "im Wichtelwald, wohnt Onni."
+  ],
+  [
+   "E",
+   "Bald macht er sich auf die lange Reise …"
+  ],
+  [
+   "E",
+   "… und findet ein Zuhause."
+  ],
+  [
+   "E",
+   "Er bleibt bis Heiligabend,"
+  ],
+  [
+   "E",
+   "macht Streiche und schreibt Briefe."
+  ],
+  [
+   "E",
+   "Kommt mit! Onnis Adventskalender – ab 1. Dezember."
+  ]
+ ]
+}
