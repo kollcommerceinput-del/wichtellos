@@ -1,0 +1,12 @@
+{
+ "video": "G:/wichtellos/marketing/reel/onni-reise/mittel-roh.mp4",
+ "out": "G:/wichtellos/marketing/reel/onni-reise/insta-text.mp4",
+ "texte": [
+  [0.1, 3.2, "<h1>Tief im <em>Norden</em>,</h1><p>in Richtung Nordstern …</p>"],
+  [3.2, 5.3, "<h1>… im <em>Wichtelwald</em></h1><p>wohnt Onni.</p>"],
+  [5.3, 7.4, "<h1>Bald reist er los –</h1><p><b style=\"color:#c62828\">zu euch!</b> 🦉</p>"],
+  [7.4, 9.5, "<h1>… und findet ein <em>Zuhause</em>.</h1>"],
+  [9.5, 13.5, "<h1>Er <em>bleibt</em> bis Heiligabend,</h1><p>macht Streiche &amp; schreibt Briefe ✉️</p>"],
+  [13.5, 17.2, "<h1>Kommt mit! 🎄</h1><p>Onnis Adventskalender<br>ab 1. Dezember</p><div class=\"url\">wichtellos.de</div>"]
+ ]
+}
