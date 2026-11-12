@@ -1612,23 +1612,35 @@ def tassen_page():
     # kein Preis je Kachel. Gruppen-Zuordnung über die Design-ID im TASSEN-Artikelpfad (-A<ID>); Rest = „Rund um den Wichtel“.
     gruppen = [(titel.replace(' und fürs ', ' &amp; '), {re.search(r'-A([0-9a-f]{16})$', z[3]).group(1) for z in zeilen})
                for titel, zeilen in TASSEN]
-    tabs, grids = [], []
-    for i, (pt, sym, lbl, preis) in enumerate(SHOP_REITER):
-        items = SHOP_PRODUKTE.get(pt, [])
-        tabs.append(f'<button type="button" class="ms-tab" role="tab" aria-selected="{"true" if i == 0 else "false"}" '
-                    f'aria-controls="ms-{pt}" data-ms="{pt}">{esc(lbl)}<small>{preis}</small></button>')
-        karte = lambda k, slug, idea, name: (
-            f'<a class="ms-card" href="{esc(shop_link(slug, idea, pt, k))}" target="_blank" rel="noopener">'
-            f'<span class="ms-bild"><img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
-            f'width="400" height="400" loading="lazy" decoding="async"></span><span class="ms-name">{esc(name)}</span>'
-            f'<span class="ms-an">Ansehen →</span></a>')
-        teile, gesehen = [], set()
-        for titel, ids in gruppen + [('Rund um den Wichtel', None)]:
-            ks = [x for x in items if (x[0] in ids if ids is not None else x[0] not in gesehen)]
-            gesehen |= {x[0] for x in ks}
-            if ks:
-                teile.append(f'<h3 class="ms-h">{titel}</h3><div class="ms-grid">{"".join(karte(*x) for x in ks)}</div>')
-        grids.append(f'<div class="ms-panel" id="ms-{pt}" role="tabpanel"{"" if i == 0 else " hidden"}>{"".join(teile)}</div>')
+    # 12.11. Umbau 3 (Toni): nach Spruch statt nach Produkt – je Spruch EINE Karte (Bild = Tasse, sonst erstes Produkt),
+    # darunter ein Knopf je vorhandenem Produkt mit seinem eigenen Shop-Link. Themen-Überschriften je nur einmal.
+    # Gleicher Spruch mit zwei Design-Fassungen (rot-grün auf Tasse/Teddy, normal auf Shirt/Hoodie) = eine Karte.
+    ZU_GEWINNERN = {'Wichtel-Gewinner', 'Offizieller Wichtel-Gewinner'}  # Toni 12.11.: ins Thema „Für Gewinner und Glückspilze“
+    sprueche = {}
+    for pt, sym, lbl, preis in SHOP_REITER:
+        for did, pfad, sid, name in SHOP_PRODUKTE.get(pt, []):
+            sprueche.setdefault(name, []).append((pt, lbl, preis, did, pfad, sid))
+    def thema(name, eintraege):
+        if name in ZU_GEWINNERN:
+            return gruppen[0][0]
+        for titel, ids in gruppen:
+            if any(e[3] in ids for e in eintraege):
+                return titel
+        return 'Rund um den Wichtel'
+    karte = lambda name, eintraege: (
+        f'<div class="ms-card"><a class="ms-bild" href="{esc(shop_link(eintraege[0][4], eintraege[0][5], eintraege[0][0], eintraege[0][3]))}" '
+        f'target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/fotos/merch/shop/{eintraege[0][0]}-{eintraege[0][3]}.webp" '
+        f'alt="{esc(eintraege[0][1])} „{esc(name)}“ mit dem WichtelLos-Wichtel" width="400" height="400" loading="lazy" decoding="async"></a>'
+        f'<span class="ms-name">{esc(name)}</span><span class="ms-btns">'
+        + ''.join(f'<a class="ms-btn" href="{esc(shop_link(pfad, sid, pt, did))}" target="_blank" rel="noopener">{esc(lbl)}<small>{preis}</small></a>'
+                  for pt, lbl, preis, did, pfad, sid in eintraege)
+        + '</span></div>')
+    teile = []
+    for titel in [g[0] for g in gruppen] + ['Rund um den Wichtel']:
+        ks = [karte(name, e) for name, e in sprueche.items() if thema(name, e) == titel]
+        if ks:
+            teile.append(f'<h3 class="ms-h">{titel}</h3><div class="ms-grid">{"".join(ks)}</div>')
+    produkte_html = ''.join(teile)
     hero = ''.join(f'<img src="/fotos/merch/shop/{f}.webp" alt="" width="400" height="400">'
                    for f in ('897-32834927e9882040', '31-3283492984258d6f', '6-3283492929305c32'))
     body = f"""<article>
@@ -1638,8 +1650,7 @@ def tassen_page():
 <div class="ms-hero-bilder">{hero}</div>
 </section>
 
-<div class="ms-tabs" role="tablist" aria-label="Produkt wählen">{''.join(tabs)}</div>
-{''.join(grids)}
+{produkte_html}
 <a class="ms-alle" href="{SHOP_URL}/" target="_blank" rel="noopener"><span class="ms-mehr-i" aria-hidden="true">🎁</span><span><b>Und noch viel mehr im WichtelLos-Shop</b><br>Pullis, Taschen, Kappen, Kinder-Shirts … alle Produkte ansehen →</span></a>
 <p class="hint">Bestellung, Bezahlung und Versand laufen über Spreadshirt (sprd.net AG). Jedes Stück wird erst nach deiner Bestellung bedruckt. Preise, Lieferzeit und Rückgabe stehen im Shop. Mit jedem Kauf unterstützt du WichtelLos.</p>
 

@@ -777,6 +777,13 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .ms-name { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; line-height: 1.2; margin: 12px 6px 0; }
 .ms-an { margin: auto 6px 0; padding-top: 8px; font-size: 14px; font-weight: 700; color: #1D3B2C; }
 .ms-mehr-i { font-size: 44px; line-height: 1; }
+/* 12.11.: je Spruch eine Karte, darunter ein Knopf je Produkt (Tasse, Große Tasse, T-Shirt, Hoodie, Teddy) */
+.ms-btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 4px 0; }
+.ms-btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; min-height: 44px; padding: 4px 10px; border-radius: 12px;
+  background: var(--soft); color: #1D3B2C; font-weight: 700; font-size: 13px; line-height: 1.15; text-decoration: none; border: 1px solid transparent; }
+.ms-btn small { font-weight: 400; font-size: 11.5px; color: var(--muted); }
+.ms-btn:hover, .ms-btn:focus-visible { background: #1D3B2C; color: #fff; }
+.ms-btn:hover small, .ms-btn:focus-visible small { color: #cfe0d2; }
 @media (max-width: 600px) {
   .ms-hero { padding: 26px 16px 0; border-radius: 22px; }
   .ms-hero p { font-size: 16px; }
@@ -785,6 +792,8 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
   .ms-tab small { font-size: 11.5px; }
   .ms-name { font-size: 15px; margin: 10px 4px 0; }
   .ms-an { margin-left: 4px; font-size: 13px; }
+  .ms-btns { gap: 5px; margin: 8px 2px 0; }
+  .ms-btn { padding: 4px 7px; font-size: 12px; flex: 1 1 calc(50% - 5px); }
 }
 @media (prefers-reduced-motion: reduce) { .ms-card, .ms-card img { transition: none; } .ms-card:hover, .ms-card:hover img { transform: none; } }
 
