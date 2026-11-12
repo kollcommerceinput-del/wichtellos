@@ -20,22 +20,26 @@
   "EA": {
    "stimme": "Charon",
    "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
   }
  },
  "teile": [
   [
    "E",
-   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
    1
   ],
   [
    "E",
-   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
   ],
   [
    "E",
-   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
-   0.6
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
   ],
   [
    "O",
@@ -257,8 +261,8 @@
    3
   ],
   [
-   "EA",
-   "Morgen öffnet sich ein neues Türchen. Schlaf gut … träum was Schönes.",
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
    2.5
   ]
  ],
