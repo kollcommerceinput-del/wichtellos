@@ -172,7 +172,7 @@ async function buendeln(k, dir, fehlend) {
   if (k.musik) {
     // optional 3. Wert: Lautstärke-Verlauf [[TeilNr, dB], …] – linear zwischen den Teil-Anfängen (Toni 12.11.: zur Mitte lauter, Höhepunkt bei „Folgt uns“)
     const [datei, db = -24, verlauf = []] = k.musik, n = ai.filter((a) => a === '-i').length;
-    const pkt = [[0, db], ...verlauf.map(([nr, d]) => [start[nr], d])];
+    const pkt = [[0, db], ...verlauf.map(([nr, d, vers = 0]) => [start[nr] + vers, d])];  // [TeilNr, dB, Versatz s]
     const lin = (d) => Math.pow(10, d / 20).toFixed(4);
     let ausdruck = lin(pkt.at(-1)[1]);
     for (let i = pkt.length - 2; i >= 0; i--) {
