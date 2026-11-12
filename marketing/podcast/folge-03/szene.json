@@ -1,0 +1,290 @@
+{
+ "out": "onni-folge-03.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen drei. Onni und der Keks.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf, und diesmal wusste er sofort, warum. Sein Bauch knurrte. Er knurrte so laut, dass Onni beide Hände darauflegte.",
+   1.2
+  ],
+  [
+   "O",
+   "Sei still, Bauch. Du weckst ja das ganze Haus."
+  ],
+  [
+   "E",
+   "Aber der Bauch hatte recht. Gestern hatte Onni vor lauter Teddy das Essen vergessen. Und ein Wichtel mit leerem Bauch kann an nichts anderes denken."
+  ],
+  [
+   "O",
+   "Ich habe Hunger. Großen Hunger."
+  ],
+  [
+   "E",
+   "Er schlug sein weißes Tuch zurück, schob die Mütze zurecht und öffnete seine Tür.",
+   1.2
+  ],
+  [
+   "E",
+   "Der Brief von gestern war fort. Dafür lag dort ein kleiner Zettel, kaum größer als Onni selbst. Jemand hatte etwas darauf gemalt. Onni schob seine Mütze hoch und sah genau hin. Runde Ohren. Ein dicker Bauch. Zwei Knopfaugen."
+  ],
+  [
+   "O",
+   "Das ist ja der Teddy! Jemand hat ihn für mich gemalt."
+  ],
+  [
+   "E",
+   "Onni freute sich so sehr, dass er seinen Hunger für einen Augenblick vergaß. Vorsichtig trug er das Bild in sein Stübchen und lehnte es an die Wand. Da knurrte sein Bauch schon wieder."
+  ],
+  [
+   "O",
+   "Ja, ja. Ich gehe ja schon."
+  ],
+  [
+   "E",
+   "Onni hob die Nase und schnupperte. Es roch nach Tannennadeln. Und darunter lag noch ein anderer Duft. Butter. Zucker. Zimt."
+  ],
+  [
+   "O",
+   "Kekse. Das kommt vom Weihnachtsbaum.",
+   1.2
+  ],
+  [
+   "E",
+   "Er lief durch den Flur und ins Wohnzimmer, immer der Nase nach. Den Weg kannte er ja schon. Unter dem Weihnachtsbaum saß der Teddy und schlief."
+  ],
+  [
+   "O",
+   "Guten Abend, Teddy. Ich bin gleich wieder weg. Ich muss nur etwas essen.",
+   1.2
+  ],
+  [
+   "E",
+   "Neben den Päckchen stand der Teller mit den Süßigkeiten. Sein Rand reichte Onni bis zum Bauch. Er stützte sich darauf und schaute hinüber. Da lagen sie. Kekse, einer neben dem anderen. Jeder war so groß wie ein Wagenrad."
+  ],
+  [
+   "E",
+   "Onni tastete über den nächsten Keks. Er war fest und ein wenig rau, und obenauf klebten Zuckerkörner, so groß wie Kieselsteine. Dann beugte er sich vor und biss ein winziges Stück ab.",
+   1.2
+  ],
+  [
+   "O",
+   "Der schmeckt nach Butter. Und nach Zimt. So gute Kekse gibt es im ganzen Wichtelwald nicht."
+  ],
+  [
+   "E",
+   "Er kaute langsam und genoss jeden Krümel. Und schon nach diesem einen Bissen war sein Bauch kugelrund. Wichtel essen nämlich nur Krümel. Mehr passt in sie gar nicht hinein."
+  ],
+  [
+   "E",
+   "Zufrieden wollte Onni wieder gehen. Da sah er den Keks noch einmal an. Am Rand fehlte jetzt ein Stück. Ein kleines Stück nur, aber man sah es genau."
+  ],
+  [
+   "O",
+   "Das geht nicht. Einen angeknabberten Keks kann ich doch nicht einfach zurücklassen. Morgen will ihn jemand essen, und dann fehlt eine Ecke. Und keiner weiß, warum."
+  ],
+  [
+   "E",
+   "Onni bekam ein schlechtes Gewissen. Er überlegte hin und her. Verstecken wollte er den Keks nicht. Das wäre nicht ehrlich gewesen. Also gab es nur einen Weg."
+  ],
+  [
+   "O",
+   "Ich sage es ihnen. Ich nehme den Keks mit und schreibe dazu, was passiert ist."
+  ],
+  [
+   "E",
+   "Er lief zurück und holte sein weißes Tuch. Neben dem Teller breitete er es auf dem Teppich aus. Dann stemmte er sich mit beiden Händen gegen den Keks und schob ihn über den Tellerrand. Der Keks rutschte hinunter und landete mitten auf dem Tuch.",
+   1.2
+  ],
+  [
+   "E",
+   "Onni packte zwei Zipfel und zog. Wie einen Schlitten zog er das Tuch über den Teppich und durch den Flur, Stück für Stück. Das war schwere Arbeit für einen Wichtel. Zweimal musste er stehen bleiben und verschnaufen. Aber er gab nicht auf, bis der Keks vor seiner roten Tür lag.",
+   1.2
+  ],
+  [
+   "E",
+   "Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.2
+  ],
+  [
+   "O",
+   "Ich habe von eurem Keks probiert. Hoffentlich ist das nicht schlimm. Legst du mir heute Abend einen Krümel hin?"
+  ],
+  [
+   "E",
+   "Den Brief legte er neben den Keks. Jetzt, wo alles aufgeschrieben war, wurde ihm leichter ums Herz. Er zog sein Tuch unter dem Keks hervor und machte die Tür leise zu.",
+   1.2
+  ],
+  [
+   "E",
+   "Dann sah er sich das Tuch an. Überall hingen Krümel und Zuckerkörner."
+  ],
+  [
+   "O",
+   "Na so was. Jetzt ist mein Tuch voller Krümel. Darum kümmere ich mich morgen."
+  ],
+  [
+   "E",
+   "Er schüttelte es aus, so gut es ging, und legte sich in sein Bett. Das Tuch roch jetzt nach Butter und Zimt. Onni fand, es gab Schlimmeres."
+  ],
+  [
+   "E",
+   "Sein Bauch war rund und still. An der Wand lehnte das Bild vom Teddy. Und draußen vor der Tür lag der Keks und wartete auf den Morgen."
+  ],
+  [
+   "E",
+   "Onni gähnte. Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   5,
+   0,
+   "uhr",
+   "bis:31",
+   null
+  ],
+  [
+   6,
+   -1.1,
+   "bauch2",
+   1.2,
+   null
+  ],
+  [
+   10,
+   -1.1,
+   "tuer-knarren",
+   1.4,
+   null
+  ],
+  [
+   14,
+   1.5,
+   "schnuppern",
+   1.6,
+   null
+  ],
+  [
+   16,
+   -1.1,
+   "laufen-holz",
+   4,
+   -12
+  ],
+  [
+   20,
+   -1.1,
+   "keks",
+   1.5,
+   null
+  ],
+  [
+   27,
+   -1,
+   "wuehlen",
+   "bis:28",
+   null
+  ],
+  [
+   29,
+   -1.1,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   31,
+   -1.1,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   35,
+   0,
+   "gaehnen",
+   2.2,
+   null
+  ],
+  [
+   38,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
