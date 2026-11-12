@@ -1565,7 +1565,7 @@ def zubehoer_page():
 
 
 # Eigener Spreadshop (08.11., Toni): wichtellos.myspreadshop.de – Kunde kauft bei sprd.net AG, wir bekommen eine Gutschrift.
-# Link = /<Artikel-Pfad>?sellable=<Motiv-ID>-<Produkt>: 31 = Tasse, 6 = Männer T-Shirt (1470 = große Tasse 440 ml).
+# Link = /<Artikel-Pfad>-A<Design-ID>?sellable=<Motiv-ID>-<Produkt>: 31 = Tasse, 6 = Männer T-Shirt (1470 = große Tasse 440 ml).
 # Motiv-Bilder fotos/merch/tasse-NN.webp (alt); Produktfotos fotos/merch/shop/ über tools/shop_fotos.py.
 SHOP_URL = 'https://wichtellos.myspreadshop.de'
 TASSEN = [
@@ -1592,7 +1592,10 @@ TASSEN = [
 ]
 
 
-def shop_link(slug, mid, produkt):
+def shop_link(slug, mid, produkt, design=None):
+    # 12.11.: Spreadshop braucht die Design-ID im Pfad (/<name>-A<Design-ID>?sellable=…), ohne sie kommt 404
+    if design and not slug.endswith(f'-A{design}'):
+        slug = f'{slug}-A{design}'
     return f'{SHOP_URL}/{slug}?sellable={mid}-{produkt}'
 
 
@@ -1615,7 +1618,7 @@ def tassen_page():
         tabs.append(f'<button type="button" class="ms-tab" role="tab" aria-selected="{"true" if i == 0 else "false"}" '
                     f'aria-controls="ms-{pt}" data-ms="{pt}">{esc(lbl)}<small>{preis}</small></button>')
         karte = lambda k, slug, idea, name: (
-            f'<a class="ms-card" href="{esc(shop_link(slug, idea, pt))}" target="_blank" rel="noopener">'
+            f'<a class="ms-card" href="{esc(shop_link(slug, idea, pt, k))}" target="_blank" rel="noopener">'
             f'<span class="ms-bild"><img src="/fotos/merch/shop/{pt}-{k}.webp" alt="{esc(lbl)} „{esc(name)}“ mit dem WichtelLos-Wichtel" '
             f'width="400" height="400" loading="lazy" decoding="async"></span><span class="ms-name">{esc(name)}</span>'
             f'<span class="ms-an">Ansehen →</span></a>')
