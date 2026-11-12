@@ -1,0 +1,59 @@
+{
+ "out": "stimme-probe.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Sprecher eines schnellen TikTok-Videos: zügiges, flottes Tempo, lebendig, spannend und mit einem Augenzwinkern, kurze Pausen. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Hast du schon mal was vom Wichtel gehört?"
+  ],
+  [
+   "E",
+   "Ein Wichtel ist so groß wie ein Daumen."
+  ],
+  [
+   "E",
+   "Die Mütze rutscht ihm immer über die Augen."
+  ],
+  [
+   "E",
+   "Aber seine Nase riecht alles!"
+  ],
+  [
+   "E",
+   "Er reist auf einer Schneeeule,"
+  ],
+  [
+   "E",
+   "schlüpft unter der Tür durch"
+  ],
+  [
+   "E",
+   "und wohnt hinter einer winzigen Tür."
+  ],
+  [
+   "E",
+   "Er nascht Kekskrümel,"
+  ],
+  [
+   "E",
+   "macht Streiche"
+  ],
+  [
+   "E",
+   "und schreibt euch Briefe."
+  ],
+  [
+   "E",
+   "Aber niemand darf ihn sehen!"
+  ],
+  [
+   "E",
+   "Am ersten Dezember geht es los. Folgt uns!"
+  ]
+ ]
+}
