@@ -30,37 +30,45 @@ const PINS = [
   // 11.11. (Toni: Pins für Seiten ohne Pin)
   ['wichteln-varianten', 'schrott.jpg', '50% 45%', '12 Wichtel-Varianten', 'Schrottwichteln, Würfeln, Julklapp &amp; mehr', 'Alle Spielarten ansehen →'],
   ['nikolaus', 'kinder.jpg', '50% 45%', 'Nikolaus-Geschenke', '21 Ideen für den Stiefel – Kinder &amp; Große', 'Alle Ideen ansehen →'],
+  // 13.11. Black-Friday-Woche 19.–30.11. (7. Feld = Badge oben)
+  ['bf-start', 'geschenk-muetze.jpg', '50% -500px', 'Wichtel&shy;geschenke im Angebot', 'Black-Friday-Woche: Ideen unter 10 €', 'Alle Angebote ansehen →', 'BLACK FRIDAY · 19.–30.11.', '50% -620px'],
+  ['bf-15', 'geschenke/socken.jpg', '50% 50%', 'Wichtel-Budget 15&nbsp;€?', 'Diese Ideen sind jetzt oft reduziert', 'Ideen ansehen →', 'BLACK FRIDAY'],
+  ['bf-heute', 'geschenke/kerze.jpg', '50% 50%', 'Heute: Black&nbsp;Friday', 'Wichtelgeschenke jetzt günstiger', 'Zu den Angeboten →', 'NUR HEUTE · 27.11.'],
+  ['bf-cyber', 'onni-geschenk-tisch.jpg', '50% 45%', 'Cyber Monday: letzte Chance', 'Wichtelgeschenke im Angebot', 'Jetzt ansehen →', 'CYBER MONDAY · 30.11.', '50% 75%'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
+const INSTA = !!process.env.INSTA; // 13.11.: 4:5 für Instagram (1000×1250), Foto 760 px hoch
+const H = INSTA ? 1250 : 1500, FOTO = INSTA ? 760 : 1000;
 
-const html = ([, file, pos, title, sub, cta]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
+const html = ([, file, pos0, title, sub, cta, badge, posInsta]) => { const pos = INSTA && posInsta ? posInsta : pos0; return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
 @font-face{font-family:Fredoka;src:url(${font}) format('woff2');font-weight:600}
 *{box-sizing:border-box}
-body{margin:0;width:1000px;height:1500px;background:#fff8f0;color:#2b1b17;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden;position:relative;text-align:center}
-.photo{position:absolute;top:0;left:0;width:1000px;height:1000px;object-fit:cover;object-position:${pos}}
-.fade{position:absolute;top:860px;left:0;right:0;height:140px;background:linear-gradient(rgba(255,248,240,0),#fff8f0)}
-.text{position:absolute;top:975px;left:60px;right:60px}
+body{margin:0;width:1000px;height:${H}px;background:#fff8f0;color:#2b1b17;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden;position:relative;text-align:center}
+.photo{position:absolute;top:0;left:0;width:1000px;height:${FOTO}px;object-fit:cover;object-position:${pos}}
+.fade{position:absolute;top:${FOTO - 140}px;left:0;right:0;height:140px;background:linear-gradient(rgba(255,248,240,0),#fff8f0)}
+.text{position:absolute;top:${FOTO - 25}px;left:60px;right:60px}
 h1{font-family:Fredoka,sans-serif;font-weight:600;font-size:90px;line-height:1.04;margin:0;hyphens:manual}
 .line{width:160px;height:8px;border-radius:4px;background:#f2b705;margin:24px auto}
 p{font-size:46px;line-height:1.3;margin:0;color:#6d5d57}
 .foot{position:absolute;bottom:0;left:0;right:0;background:#c62828;color:#fff;padding:40px 40px 46px}
 .url{font-family:Fredoka,sans-serif;font-size:62px}
 .tag{font-size:32px;opacity:.9;margin-top:6px}
+.badge{position:absolute;top:40px;left:50%;transform:translateX(-50%);background:#111;color:#f2b705;font-family:Fredoka,sans-serif;font-size:48px;padding:14px 40px;border-radius:999px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 </style></head><body>
-<img class="photo" src="${img(file)}"><div class="fade"></div>
+<img class="photo" src="${img(file)}"><div class="fade"></div>${badge ? `<div class="badge">${badge}</div>` : ''}
 <div class="text"><h1>${title}</h1><div class="line"></div><p>${sub}</p></div>
 <div class="foot"><div class="url">wichtellos.de</div><div class="tag">${cta}</div></div>
-</body></html>`;
+</body></html>`; };
 
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch();
-  const p = await b.newPage({ viewport: { width: 1000, height: 1500 } });
+  const p = await b.newPage({ viewport: { width: 1000, height: H } });
   for (const pin of PINS.filter((x) => !NUR.length || NUR.includes(x[0]))) {
     await p.setContent(html(pin));
     await p.evaluate(() => document.fonts.ready);
-    await p.screenshot({ path: path.join(OUT, `pin3d-${pin[0]}.png`) });
+    await p.screenshot({ path: path.join(OUT, `${INSTA ? 'insta' : 'pin3d'}-${pin[0]}.png`) });
   }
   await b.close();
   console.log(PINS.length + ' Pins in ' + OUT);
