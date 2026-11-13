@@ -1,0 +1,286 @@
+{
+ "out": "onni-folge-07.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen sieben. Ein Lied für Onni.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf. Aber heute wollte er nicht gleich aufstehen. Er drehte sich unter seiner Ringelsocke nach links. Dann nach rechts. Dann wieder nach links."
+  ],
+  [
+   "E",
+   "Im Haus war es still. So still, dass Onni nur die Uhr hörte."
+  ],
+  [
+   "O",
+   "Im Wichtelwald ist es jetzt nicht so still."
+  ],
+  [
+   "E",
+   "Im Wichtelwald saßen die Wichtel um diese Zeit zusammen und sangen. Jeden Abend, gleich nach dem Aufwachen, die Großen und die Kleinen, unter den verschneiten Tannen. Sie sangen vom Schnee und vom Nordstern, von den langen Nächten und vom warmen Licht in den Fenstern. Und Ulla, die Schneeeule, saß oben auf einem Ast und sang mit."
+  ],
+  [
+   "O",
+   "Ulla singt immer die tiefsten Töne. So tief, dass der Schnee von den Zweigen rieselt."
+  ],
+  [
+   "E",
+   "Onni dachte an die Häuschen mit den goldenen Fenstern. An sein Bett mit der bunten Flickendecke. Und an den Ofen, in dem leise das Feuer brannte. Er zog die Ringelsocke ein Stück höher. Ein bisschen Heimweh hatte er. Nur ein kleines bisschen."
+  ],
+  [
+   "O",
+   "Hier singt niemand mit mir."
+  ],
+  [
+   "E",
+   "Er wollte sich gerade wieder umdrehen, da hörte er genauer hin. Die Wanduhr im Flur tickte immer im gleichen Takt. Ganz ruhig und gleichmäßig, wie ein kleiner Trommler."
+  ],
+  [
+   "O",
+   "Wie ein Trommler. Die Uhr gibt ja den Takt an."
+  ],
+  [
+   "E",
+   "Das wollte Onni genauer hören. Er schlug die Ringelsocke zurück, stand auf und öffnete seine Tür.",
+   1.4
+  ],
+  [
+   "E",
+   "Im Flur war das Ticken lauter. Onni lief ein paar Schritte und blieb wieder stehen. Da war noch etwas. Aus der Küche kam ein feines Tropfen. Immer ein Tropfen, dann eine kleine Pause, dann wieder ein Tropfen.",
+   1.4
+  ],
+  [
+   "O",
+   "Der Wasserhahn. Der tropft ja immer noch, wie an meinem Waschtag."
+  ],
+  [
+   "E",
+   "Dann fing in der Küche ein großer Schrank an zu brummen. Tief und gleichmäßig, wie jemand, der summt, ohne den Mund aufzumachen.",
+   1.4
+  ],
+  [
+   "O",
+   "Und der große Schrank brummt die tiefen Töne. Fast so tief wie Ulla."
+  ],
+  [
+   "E",
+   "Onni musste lächeln. Er lief weiter durch den Flur, immer den Tönen nach. Am Schlafzimmer blieb er stehen. Hinter der Tür war noch ein Geräusch. Ein tiefes, langsames Schnarchen. Ein und aus. Ein und aus.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni hielt sich beide Hände vor den Mund, damit sein Kichern niemanden weckte. Dabei rutschte ihm die Mütze über die Augen. Aber das machte nichts. Zum Zuhören brauchte er keine Augen."
+  ],
+  [
+   "E",
+   "Er setzte sich mitten in den Flur und hörte zu. Die Uhr tickte den Takt. Der Wasserhahn tropfte dazwischen. Der große Schrank brummte, und aus dem Schlafzimmer kam das Schnarchen. Alles zusammen klang wie ein kleines Orchester. Ein Orchester, das nur nachts spielt, wenn alle schlafen.",
+   1.0
+  ],
+  [
+   "E",
+   "Onni hob die Hände und schwang sie langsam hin und her, so wie es der alte Wichtel im Wald beim Singen immer tat. Die Uhr hörte natürlich nicht auf ihn, sie tickte einfach weiter. Aber es fühlte sich trotzdem so an, als würde Onni sein eigenes Orchester leiten."
+  ],
+  [
+   "O",
+   "Das Haus macht ja Musik. Und ich dachte, hier ist es still."
+  ],
+  [
+   "E",
+   "Da summte Onni leise mit. Eine Melodie aus dem Wichtelwald, die er schon als ganz kleiner Wichtel gekannt hatte. Er summte ganz leise, damit niemand aufwachte. Und mit jedem Ton wurde ihm wärmer ums Herz. Es war fast so, als säße er wieder unter den Tannen."
+  ],
+  [
+   "E",
+   "Das Heimweh war nicht ganz weg. Aber es war jetzt viel kleiner. So klein, dass es in eine Erbse gepasst hätte."
+  ],
+  [
+   "E",
+   "Als die Melodie zu Ende war, stand Onni auf und lief zurück zu seiner roten Tür.",
+   1.6
+  ],
+  [
+   "E",
+   "Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.2
+  ],
+  [
+   "O",
+   "Im Wichtelwald singen wir jeden Abend. Singst du mir heute ein Weihnachtslied vor? Ich sitze hinter meiner Tür und höre ganz genau zu.",
+   1.2
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.4
+  ],
+  [
+   "E",
+   "Onni kuschelte sich unter seine Ringelsocke. Draußen tickte die Uhr, ganz ruhig, immer im gleichen Takt. Onni hörte ihr zu, und dabei wurden seine Augen schwer.",
+   1.5
+  ],
+  [
+   "O",
+   "Vielleicht singt morgen jemand für mich."
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   5,
+   0,
+   "uhr",
+   "bis:15",
+   -30
+  ],
+  [
+   15,
+   -1.2,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   15,
+   0,
+   "uhr",
+   "bis:27",
+   -22
+  ],
+  [
+   16,
+   -1.0,
+   "tropfen-hahn",
+   "bis:27",
+   -20
+  ],
+  [
+   18,
+   -1.0,
+   "brummen",
+   "bis:27",
+   -20
+  ],
+  [
+   20,
+   -1.2,
+   "schnarchen",
+   "bis:27",
+   -10
+  ],
+  [
+   27,
+   -1.4,
+   "laufen-holz",
+   3,
+   -16
+  ],
+  [
+   27,
+   0,
+   "uhr",
+   "bis:30",
+   -30
+  ],
+  [
+   28,
+   -1.1,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   30,
+   -1.2,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   30,
+   0,
+   "uhr",
+   "bis:32",
+   -32
+  ],
+  [
+   35,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}

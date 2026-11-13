@@ -163,7 +163,7 @@ async function buendeln(k, dir, fehlend) {
     const db = db0 ?? PEGEL[datei] ?? -6;
     let d = d0; if (typeof d === 'string') d = start[+d.split(':')[1]] - start[nr] - vers; // "bis:N" = bis Teil N
     const n = ton.length + j, fd = Math.min(0.4, d / 3);
-    ai.push('-i', path.join(SND, datei + '.mp3'));
+    ai.push('-stream_loop', '-1', '-i', path.join(SND, datei + '.mp3')); // Schleife: „läuft weiter“-Geräusche (Uhr, Tropfen) länger als die Datei (13.11.)
     af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${d},asetpts=PTS-STARTPTS,volume=${db}dB,` +
       `afade=t=in:d=0.05,afade=t=out:st=${(d - fd).toFixed(2)}:d=${fd},adelay=${Math.round((start[nr] + vers) * 1000)}:all=1[g${j}]`);
     mix.push(`[g${j}]`);
