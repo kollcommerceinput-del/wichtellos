@@ -1287,6 +1287,17 @@ ZUBEHOER = [
         ('Mini-Schlitten', 'Für die Ausfahrt am Nikolaustag.', 'Miniatur Schlitten Holz'),
         ('Deko-Moos & Tannenzweige', 'Damit der Vorgarten lebendig aussieht.', 'Deko Moos Tannenzweige künstlich'),
     ]),
+    # 13.11. (Toni, Begriffe bei Amazon geprüft)
+    ('Themen-Sets: Baustelle, Backstube & Co.', 'Fertige Sets für eine ganze Szene – oder ein Bausatz für lange Bastelabende.', [
+        ('Wichtel-Baustelle', 'Mini-Werkzeug, Pylonen und Schubkarre – der Wichtel baut gerade an seiner Tür.', 'Wichteltür Zubehör Baustelle'),
+        ('Wichtel-Backstube', 'Nudelholz, Mehlsack und Ausstechformen – für den Tag, an dem der Wichtel Plätzchen backt.', 'Wichtel Backstube Zubehör'),
+        ('Miniatur-Ziegelsteine', 'Echte kleine Backsteine für Mauer, Weg oder Kamin vor der Tür.', 'Miniatur Ziegelsteine Modellbau'),
+        ('Wichtel-Adventskalender mit Zubehör', '24 kleine Teile – die Wichtelwelt wächst jeden Tag.', 'Wichteltür Adventskalender Zubehör'),
+        ('Puppenhaus-Möbel aus Holz', 'Schränke, Betten und Tische im großen Set – für eine richtige Wichtelwohnung.', 'Puppenhaus Möbel Set Holz'),
+        ('3D-Holzpuzzle Miniaturhaus', 'Ein Book Nook zum Zusammenstecken – leuchtet im Bücherregal.', 'Book Nook 3D Holzpuzzle'),
+        ('Miniaturhaus-Bausatz', 'Detailreiche Mini-Zimmer zum Selbstbauen, z. B. von Rolife – stundenlanger Bastelspaß.', 'Rolife DIY Miniature House'),
+        ('Feenhaus für den Garten', 'Wetterfest und mit Solarlicht – der Wichtel wohnt im Beet.', 'Feenhaus Garten Solar'),
+    ]),
     ('Post & Briefe', 'Für die Wichtel-Post zwischen Kindern und Wichtel.', [
         ('Wichtel-Briefkasten', 'Ein Mini-Briefkasten an der Tür.', 'Wichtel Briefkasten Miniatur'),
         ('Wichtel-Briefpapier', 'Winzige Briefe und Umschläge.', 'Wichtel Briefpapier Mini'),
