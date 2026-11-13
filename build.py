@@ -731,6 +731,7 @@ def dice_page():
   <li>Ein verpacktes Geschenk pro Person – vorher ein Budget absprechen, z. B. 10 oder 15 Euro.</li>
   <li>Einen Würfel (bei mehr als 12 Personen besser zwei) – oder einfach <a href="#wuerfeln">hier auf der Seite würfeln</a>.</li>
   <li>Einen Timer – der ist hier auch gleich dabei.</li>
+  <li>Lieber ganz ohne Vorbereitung? Es gibt auch <a href="#idee-fertiges-wichtel-wuerfelspiel">fertige Wichtel-Würfelspiele</a> mit Karten.</li>
   <li>Einen Tisch oder Stuhlkreis, an dem alle sitzen.</li>
 </ul>
 <p class="tip no-print">💡 <b>Ihr wollt lieber gezielt beschenken statt würfeln?</b> Dann lost vorher aus, wer wen beschenkt – <a href="/">Namen online auslosen</a>, kostenlos und ohne Anmeldung.</p>
@@ -794,7 +795,7 @@ def dice_page():
 
 <h2>Häufige Fragen zum Würfelwichteln</h2>
 {faq}
-{supplies_block()}
+{supplies_block([('Fertiges Wichtel-Würfelspiel', 'Mit Karten und Würfel – auspacken und loslegen, ohne Vorbereitung.', 'Wichtel Würfelspiel')] + SUPPLIES)}
 <div class="ad-slot">Anzeige (Platzhalter)</div>
 <div class="cta-box">
   <p>Lieber klassisch wichteln, ohne Würfel? Die Namen lassen sich online in einer Minute auslosen.</p>
