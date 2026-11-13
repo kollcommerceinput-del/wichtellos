@@ -1632,7 +1632,7 @@ def selberbau_page():
     schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in SELBERBAU_SCHRITTE)
     body = f"""<article>
 <h1>Wichteltür selber bauen: Werkzeug, Material &amp; Anleitung</h1>
-{ai_photo('wichtel3d-tuer', 'Selbst gebaute rote Wichteltür an der Fußleiste mit Tannengirlande und Fußmatte, ein Plüsch-Wichtel schaut heraus')}
+{ai_photo('wichtel-tuer-selbstgebaut', 'Selbst gebaute weiße Wichteltür aus Holz mit Rahmen, Scharnieren und kleinem Knauf an der Fußleiste')}
 <p class="lead">Eine eigene Wichteltür ist schneller gebaut, als man denkt: ein Nachmittag, ein paar Holzleisten, Farbe – fertig. Hier findest du die Anleitung in 6 Schritten und {n} Ideen für Werkzeug und Material, sortiert für Einsteiger und Profis.</p>
 <p>Lieber fertig kaufen? Komplette Türen, Möbel und Deko gibt es beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>. Was der Wichtel dann 24 Tage lang anstellt, steht bei der <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a>.</p>
 
