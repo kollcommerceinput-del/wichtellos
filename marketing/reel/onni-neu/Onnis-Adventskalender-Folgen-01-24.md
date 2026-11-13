@@ -573,7 +573,7 @@ Am Weihnachtsbaum glitzerten Kugeln, im Flur hing ein Stern. Nur seine kleine ro
 
 „Arme Tür“, sagte Onni. „Du bekommst jetzt auch etwas Schönes!“
 
-Im Badezimmer stand eine Rolle Klopapier auf dem Boden. Weiß und weich wie frischer Schnee.
+In der Abstellkammer, gleich neben den Kulleraugen-Kästen, stand ein Stapel Klopapier. Eine Rolle stand ganz allein auf dem Boden. Weiß und weich wie frischer Schnee.
 
 Onni zupfte am Papier. Da kippte die Rolle um. Kuller, kuller, kuller!
 
