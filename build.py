@@ -1718,7 +1718,7 @@ def decken_page():
     sections = '\n\n'.join(secs)
     body = f"""<article>
 <h1>Kuscheldecke verschenken: die gemütlichsten Decken für Winterabende</h1>
-{ai_photo('wichtel3d-kuschelsocken', 'Plüsch-Wichtel neben dicken Kuschelsocken mit Weihnachtsmuster', cls='photo photo-ai hochkant')}
+{ai_photo('wichtel3d-kuscheldecke', 'Plüsch-Wichtel in eine rot-grüne Strickdecke mit Rentiermuster gekuschelt, im Sessel vor dem Kaminfeuer', cls='photo photo-ai hochkant')}
 <p class="lead">Eine Kuscheldecke ist eines der Geschenke, die wirklich benutzt werden – jeden Abend, den ganzen Winter. Hier findest du {n} Ideen: vom flauschigen Klassiker übers Sofa bis zur Decke mit Ärmeln, dazu Tipps zu Material und Größe.</p>
 <p>Auch unser Wichtel Onni liebt zwei Dinge: Kekse und eine warme Decke. Das passende Rezept gibt es beim <a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen mit Kindern</a> – zusammen mit einer Decke ein perfektes Wichtelgeschenk.</p>
 
