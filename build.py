@@ -1634,10 +1634,10 @@ def plaetzchen_page():
                  'recipeCategory': 'Plätzchen', 'recipeCuisine': 'Deutsch', 'keywords': 'Plätzchen, Ausstechplätzchen, Backen mit Kindern, Weihnachten',
                  'recipeIngredient': BACK_ZUTATEN,
                  'recipeInstructions': [{'@type': 'HowToStep', 'name': t, 'text': x} for t, x in BACK_SCHRITTE],
-                 'image': f'{DOMAIN}/fotos/wichtel3d-onni-kekse-800.webp'}
+                 'image': f'{DOMAIN}/fotos/wichtel3d-backstube-800.webp'}
     body = f"""<article>
 <h1>Plätzchen backen mit Kindern: einfaches Rezept &amp; Wichtel-Kekse</h1>
-{ai_photo('wichtel3d-onni-kekse', 'Teller mit Butterplätzchen und Zimtstern vor dem Weihnachtsbaum, daneben ein Plüsch-Wichtel und ein Teddy', cls='photo photo-ai hochkant')}
+{ai_photo('wichtel3d-backstube', 'Plüsch-Wichtel mit Nudelholz am Backtisch, davor ein Blech mit ausgestochenen Plätzchen, Ausstechformen und Streuseln', cls='photo photo-ai hochkant')}
 <p class="lead">Butter, Zucker und Zimt – so duftet die Weihnachtsbäckerei. Dieses Rezept für einfache Butterplätzchen gelingt auch mit kleinen Bäckern: kneten, ausstechen, verzieren. Dazu gibt es Wichtel-Kekse mit Zipfelmütze und Tipps, was Kinder schon selbst machen können.</p>
 
 <h2>Rezept: einfache Butterplätzchen mit Zimt</h2>
