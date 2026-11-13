@@ -70,7 +70,7 @@ wer Analyse, AdSense o. Ä. einbaut, muss Datenschutzerklärung, FAQ-Texte und E
 - Indexierung Google/Bing: neue Seiten in der Search Console beantragen; Bing über IndexNow automatisch.
 - Awin: Thalia/Tchibo abgelehnt, Werbefläche validiert – neu bewerben erst mit mehr Reichweite.
 - Externe Erwähnungen: Mails an Familienblogs 09.11. verschickt, Antworten abwarten.
-- Spreadshop wichtellos.myspreadshop.de: `logo-wichtel-heisst-frei-fuer-dunkle-stoffe.png` hochladen; Werbung „Mit eurem Wichtelnamen“.
+- Spreadshop wichtellos.myspreadshop.de: Werbung „Mit eurem Wichtelnamen“; Antwort Spreadshirt-Support abwarten; Shop-Seiten in der Search Console 1–2 pro Tag beantragen.
 - Podcast „Onnis Adventskalender“ (Spotify-Show steht): Folge 1 bauen, Toni abnehmen lassen; danach Branch
   `podcast-vorbereitung` mergen (erst wenn Folge 1 online ist), Apple/Amazon, Werbe-Pins/-Video.
 - UX-Analyse 08.11. teils offen; Türschilder-Entwurf (später); AdSense/Wunschliste später.
