@@ -262,7 +262,7 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
         SEARCH.append({'u': path, 't': title.split(' | ')[0], 'd': desc, 'k': ' '.join(re.sub(r'<[^>]+>', '', h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', body, re.S))})
     # Bild + Einleitung als Einheit (09.11., Toni: „Onni und daneben leerer Raum“): am Desktop Text mittig neben dem Bild,
     # am Handy bleibt das Bild rechts im Text (CSS .intro)
-    body = re.sub(r'(<figure class="photo photo-ai">.*?</figure>)\s*(<p class="lead">.*?</p>)', r'<div class="intro">\1\2</div>', body, count=1, flags=re.S)
+    body = re.sub(r'(<figure class="photo photo-ai(?: hochkant)?">.*?</figure>)\s*(<p class="lead">.*?</p>)', r'<div class="intro">\1\2</div>', body, count=1, flags=re.S)
     if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
     if path in PRAEMIE_SEITEN:
@@ -1613,7 +1613,7 @@ WERKZEUG = [
     ]),
 ]
 SELBERBAU_SCHRITTE = [
-    ('Zuschneiden', 'Tür etwa 12 × 20 cm aus 2–4 mm Holz sägen, dazu Leisten für den Rahmen.'),
+    ('Zuschneiden', 'Die Tür etwa 8 cm breit und 12 cm hoch aus 2–3 mm dünnem Holz sägen, dazu schmale Leisten für den Rahmen.'),
     ('Schleifen', 'Alle Kanten glätten – wichtig, wenn Kinder die Tür anfassen.'),
     ('Bemalen', 'Grundfarbe auftragen, trocknen lassen, dann Fenster, Maserung und Name aufmalen.'),
     ('Beschläge', 'Mini-Scharniere und Türknauf mit Handbohrer und Leim anbringen.'),
@@ -1632,7 +1632,7 @@ def selberbau_page():
     schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in SELBERBAU_SCHRITTE)
     body = f"""<article>
 <h1>Wichteltür selber bauen: Werkzeug, Material &amp; Anleitung</h1>
-{ai_photo('wichtel-tuer-selbstgebaut', 'Selbst gebaute weiße Wichteltür aus Holz mit Rahmen, Scharnieren und kleinem Knauf an der Fußleiste')}
+{ai_photo('wichtel-tuer-selbstgebaut', 'Selbst gebaute weiße Wichteltür aus Holz mit Rahmen, Scharnieren und kleinem Knauf an der Fußleiste', cls='photo photo-ai hochkant')}
 <p class="lead">Eine eigene Wichteltür ist schneller gebaut, als man denkt: ein Nachmittag, ein paar Holzleisten, Farbe – fertig. Hier findest du die Anleitung in 6 Schritten und {n} Ideen für Werkzeug und Material, sortiert für Einsteiger und Profis.</p>
 <p>Lieber fertig kaufen? Komplette Türen, Möbel und Deko gibt es beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>. Was der Wichtel dann 24 Tage lang anstellt, steht bei der <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a>.</p>
 

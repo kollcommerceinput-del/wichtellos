@@ -984,3 +984,6 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .praemie p { margin: 0 0 8px; }
 .praemie p:last-child { margin: 0; }
 .praemie .praemie-k { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 4px; }
+
+/* Hochkant-Bild oben (13.11., Toni: „halbe Tür sieht schlecht aus“) – nicht auf 4:3 zuschneiden */
+@media (min-width: 601px) { .intro .photo-ai.hochkant { width: 220px; } .intro .photo-ai.hochkant img { aspect-ratio: auto; object-fit: contain; } }
