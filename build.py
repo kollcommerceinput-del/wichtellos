@@ -111,7 +111,7 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <!--SOCIAL--></p>
@@ -1583,6 +1583,104 @@ def themen_pages():
          body, crumb='Black Friday', playful=True)
 
 
+# /plaetzchen-backen-mit-kindern/ (Toni 13.11.: Keks-Rezept + Amazon-Küchenzubehör; Seite für Eltern, Begriffe bei Amazon geprüft)
+BACK_ZUTATEN = ['250 g Mehl', '125 g kalte Butter', '100 g Zucker', '1 Ei', '1 Päckchen Vanillezucker', '1 TL Zimt', '1 Prise Salz']
+BACK_SCHRITTE = [
+    ('Kneten', 'Alle Zutaten in eine Schüssel geben und zu einem glatten Teig verkneten – erst mit den Knethaken, dann kurz mit den Händen.'),
+    ('Kühlen', 'Den Teig zur Kugel formen, in Folie wickeln und 30 Minuten in den Kühlschrank legen. Dann klebt er nicht.'),
+    ('Ausrollen', 'Auf etwas Mehl etwa 4 mm dick ausrollen. Mit Abstandsringen am Teigroller wird er überall gleich dick.'),
+    ('Ausstechen', 'Sterne, Herzen, Tannen oder Wichtel ausstechen und mit Abstand aufs Blech mit Backpapier legen. Reste wieder zusammenkneten.'),
+    ('Backen', 'Bei 180 °C Ober-/Unterhitze (160 °C Umluft) 8–10 Minuten backen, bis die Ränder leicht goldbraun sind.'),
+    ('Verzieren', 'Auf dem Gitter ganz abkühlen lassen, dann mit Zuckerguss und Streuseln verzieren.'),
+]
+BACK_ZUBEHOER = [
+    ('Ausstechen & Ausrollen', 'Damit die Plätzchen gleichmäßig werden – und Kinder gut mithelfen können.', [
+        ('Ausstecher-Set Weihnachten', 'Sterne, Tannen, Herzen und Schneemänner in einem Set.', 'Ausstecher Set Weihnachten'),
+        ('Wichtel-Ausstecher', 'Zipfelmütze und Bart – daraus werden Wichtel-Kekse.', 'Wichtel Ausstecher'),
+        ('Teigroller mit Abstandsringen', 'Der Teig wird überall gleich dick, die Plätzchen backen gleichmäßig.', 'Teigroller mit Abstandsringen'),
+        ('Plätzchenstempel', 'Muster in den Teig drücken – geht auch mit kleinen Händen.', 'Plätzchenstempel'),
+    ]),
+    ('Backen & Abkühlen', 'Für sauberes Backen ohne Ankleben.', [
+        ('Silikon-Backmatte', 'Wiederverwendbar statt Backpapier – nichts klebt an.', 'Silikon Backmatte'),
+        ('Abkühlgitter', 'Damit die Plätzchen von unten nicht weich werden.', 'Abkühlgitter Kuchengitter'),
+        ('Digitale Küchenwaage', 'Für genaue Mengen – Kinder lesen gern selbst ab.', 'Küchenwaage digital'),
+        ('Handrührgerät', 'Mit Knethaken ist der Teig in zwei Minuten fertig.', 'Handrührgerät'),
+    ]),
+    ('Verzieren', 'Der schönste Teil für Kinder.', [
+        ('Zuckerguss-Stifte', 'Wie Filzstifte – zum Malen direkt auf den Keks.', 'Zuckerguss Stifte'),
+        ('Bunte Streusel', 'Weihnachtliche Streusel für Sterne und Tannen.', 'Zuckerstreusel bunt Weihnachten'),
+        ('Spritzbeutel mit Tüllen', 'Für feine Linien, Bärte und Mützen-Bommel.', 'Spritzbeutel Set Tüllen'),
+        ('Kokosraspeln', 'Werden zum weißen Wichtelbart.', 'Kokosraspeln'),
+    ]),
+    ('Für kleine Bäcker & zum Verschenken', 'Damit es richtig nach Weihnachtsbäckerei aussieht.', [
+        ('Kinder-Backset mit Schürze', 'Schürze und Kochmütze in Kindergröße.', 'Kinder Backset Schürze'),
+        ('Plätzchendosen', 'Zum Aufbewahren – oder gefüllt als Geschenk.', 'Plätzchendose Weihnachten'),
+    ]),
+]
+
+
+def plaetzchen_page():
+    secs, n = [], 0
+    for title, intro, items in BACK_ZUBEHOER:
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>' for t, x, *r in items)
+        secs.append(f'<h3>{esc(title)}</h3>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    sections = '\n\n'.join(secs)
+    zutaten = '\n'.join(f'  <li>{esc(z)}</li>' for z in BACK_ZUTATEN)
+    schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in BACK_SCHRITTE)
+    rezept_ld = {'@context': 'https://schema.org', '@type': 'Recipe', 'name': 'Einfache Butterplätzchen mit Zimt',
+                 'description': 'Einfaches Plätzchen-Rezept zum Backen mit Kindern: Butterplätzchen mit Zimt zum Ausstechen und Verzieren.',
+                 'recipeYield': 'ca. 40 Plätzchen', 'prepTime': 'PT20M', 'cookTime': 'PT10M', 'totalTime': 'PT60M',
+                 'recipeCategory': 'Plätzchen', 'recipeCuisine': 'Deutsch', 'keywords': 'Plätzchen, Ausstechplätzchen, Backen mit Kindern, Weihnachten',
+                 'recipeIngredient': BACK_ZUTATEN,
+                 'recipeInstructions': [{'@type': 'HowToStep', 'name': t, 'text': x} for t, x in BACK_SCHRITTE],
+                 'image': f'{DOMAIN}/fotos/wichtel3d-onni-kekse-800.webp'}
+    body = f"""<article>
+<h1>Plätzchen backen mit Kindern: einfaches Rezept &amp; Wichtel-Kekse</h1>
+{ai_photo('wichtel3d-onni-kekse', 'Teller mit Butterplätzchen und Zimtstern vor dem Weihnachtsbaum, daneben ein Plüsch-Wichtel und ein Teddy', cls='photo photo-ai hochkant')}
+<p class="lead">Butter, Zucker und Zimt – so duftet die Weihnachtsbäckerei. Dieses Rezept für einfache Butterplätzchen gelingt auch mit kleinen Bäckern: kneten, ausstechen, verzieren. Dazu gibt es Wichtel-Kekse mit Zipfelmütze und Tipps, was Kinder schon selbst machen können.</p>
+
+<h2>Rezept: einfache Butterplätzchen mit Zimt</h2>
+<p><b>Für etwa 40 Plätzchen · Zubereitung 20 Minuten · Kühlen 30 Minuten · Backen 8–10 Minuten</b></p>
+<h3>Zutaten</h3>
+<ul>
+{zutaten}
+</ul>
+<h3>So geht's</h3>
+<ol>
+{schritte}
+</ol>
+<p class="tip">💡 Der Teig lässt sich gut am Vortag vorbereiten – eingewickelt hält er im Kühlschrank 2 Tage.</p>
+
+<h2>Wichtel-Kekse: so wird aus dem Plätzchen ein Wichtel</h2>
+<ol>
+  <li>Dreiecke oder Wichtel-Formen ausstechen und wie oben backen.</li>
+  <li>Die Spitze mit rotem Zuckerguss bestreichen – das ist die Zipfelmütze.</li>
+  <li>Darunter einen Streifen weißen Zuckerguss und Kokosraspeln aufstreuen – das ist der Bart.</li>
+  <li>Dazwischen einen kleinen Punkt als Nase setzen. Fertig ist der Wichtel.</li>
+</ol>
+<p>Wohnt bei euch ein Wichtel? Dann legt ihm abends einen kleinen Krümel vor die <a href="/wichteltuer/">Wichteltür</a> – Wichtel essen nämlich nur Krümel. Wie das bei Onni aussieht, hört ihr in <a href="/onni-adventskalender/">Onnis Adventskalender</a>.</p>
+
+<h2>Backen mit Kindern: 5 Tipps</h2>
+<ul>
+  <li><b>Kinder können:</b> Zutaten abwiegen, kneten, ausstechen, verzieren – und natürlich probieren.</li>
+  <li><b>Das machen die Großen:</b> Ofen, heißes Blech und Messer.</li>
+  <li><b>Kühler Teig</b> klebt weniger – zwischendurch ruhig wieder kurz kalt stellen.</li>
+  <li><b>Einfache Formen</b> wie Sterne und Herzen klappen besser als feine Figuren.</li>
+  <li><b>Zum Verschenken:</b> Plätzchen in einer Dose sind ein schönes <a href="/wichtelgeschenke-selber-machen/">selbst gemachtes Wichtelgeschenk</a>.</li>
+</ul>
+
+<h2>Zubehör für die Weihnachtsbäckerei</h2>
+{sections}
+
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+{CTA}
+</article>"""
+    page('/plaetzchen-backen-mit-kindern/', 'Plätzchen backen mit Kindern: einfaches Rezept & Wichtel-Kekse',
+         'Einfaches Plätzchen-Rezept zum Backen mit Kindern: Butterplätzchen mit Zimt, Wichtel-Kekse mit Zipfelmütze, Tipps und Zubehör für die Weihnachtsbäckerei.',
+         body, extra=ld(rezept_ld), crumb='Plätzchen backen mit Kindern', playful=True)
+
+
 # /wichteltuer-selber-bauen/ (Toni 13.11.: Werkzeug & Material, Einsteiger/Profi; Begriffe bei Amazon geprüft)
 WERKZEUG = [
     ('Für Einsteiger: das reicht für die erste Tür', 'Mit diesen Werkzeugen klappt die erste Wichteltür an einem Nachmittag.', [
@@ -2766,7 +2864,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2867,6 +2965,7 @@ def main():
     ausmal_page()
     zubehoer_page()
     selberbau_page()
+    plaetzchen_page()
     tassen_page()
     advent_page()
     themen_pages()
