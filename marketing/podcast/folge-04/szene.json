@@ -100,7 +100,15 @@
   ],
   [
    "E",
-   "Dann lief er los, durch den Flur. Am Schlafzimmer stand die Tür einen Spalt offen, und es roch nach frischer Wäsche. Onni schob seine Mütze hoch und schaute hinein. Vor der Kommode stand ein großer Korb. Über seinen Rand hing eine Socke, rot und weiß geringelt."
+   "Dann lief er los, durch den Flur. Eine kleine Tür stand einen Spalt offen, und dahinter roch es nach frischer Wäsche. Onni schob seine Mütze hoch und schaute hinein. Es war eine Abstellkammer. Darin standen zwei große weiße Kästen. Jeder hatte vorne ein riesiges rundes Auge aus Glas, und eins davon schimmerte ein bisschen im Dunkeln."
+  ],
+  [
+   "O",
+   "Hui. Ihr guckt aber groß. Ihr seid bestimmt Kulleraugen-Kästen."
+  ],
+  [
+   "E",
+   "Die Kästen sagten nichts. Daneben stand ein großer Korb voller Socken. Über seinen Rand hing eine Socke, rot und weiß geringelt."
   ],
   [
    "O",
@@ -180,7 +188,7 @@
   ],
   [
    "E",
-   "Schnell lief er noch einmal los, durch den Flur bis ins Schlafzimmer. Die Ringelsocke hing noch immer über dem Rand. Onni packte ihr Ende und zog. Langsam rutschte sie herunter und fiel weich auf ihn drauf.",
+   "Schnell lief er noch einmal los, durch den Flur bis in die Abstellkammer. Die Kulleraugen-Kästen guckten ihn an, und die Ringelsocke hing noch immer über dem Rand. Onni packte ihr Ende und zog. Langsam rutschte sie herunter und fiel weich auf ihn drauf.",
    1.2
   ],
   [
@@ -211,7 +219,7 @@
   ],
   [
    "E",
-   "Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm in seiner Ringelsocke und dachte an den großen Korb im Schlafzimmer."
+   "Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm in seiner Ringelsocke und dachte an den großen Korb in der Abstellkammer."
   ],
   [
    "O",
@@ -268,70 +276,70 @@
    -12
   ],
   [
-   19,
+   21,
    -1,
    "tropfen-hahn",
    "bis:28",
    null
   ],
   [
-   23,
+   25,
    -1.1,
    "blubbern2",
    2,
    null
   ],
   [
-   25,
+   27,
    -0.4,
    "plopp",
    0.8,
    null
   ],
   [
-   26,
+   28,
    0.3,
    "kichern",
    1.5,
    null
   ],
   [
-   28,
+   30,
    -1.1,
    "laufen-holz",
    4,
    -14
   ],
   [
-   30,
+   32,
    -1.1,
    "tropfen-leine",
    "bis:40",
    null
   ],
   [
-   36,
+   38,
    -1.1,
    "plumps",
    1,
    null
   ],
   [
-   38,
+   40,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   40,
+   42,
    -1.1,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   47,
+   49,
    6,
    "gloeckchen",
    1.6,

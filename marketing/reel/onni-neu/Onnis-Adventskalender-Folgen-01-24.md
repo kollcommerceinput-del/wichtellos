@@ -124,7 +124,7 @@ Vor seiner Tür spannte er einen Faden und hängte alles mit winzigen Klammern a
 
 Da wurde ihm kühl. „Und womit decke ich mich jetzt zu?“
 
-Plötzlich fiel ihm die weiche Ringelsocke aus dem Wäschekorb ein. Er holte sie und schlüpfte hinein. Wie warm sie war! Ein richtiger Schlafsack.
+Plötzlich fiel ihm die weiche Ringelsocke aus dem Wäschekorb ein. Der stand in der Abstellkammer, neben zwei großen Kästen mit riesigen runden Glasaugen – den Kulleraugen-Kästen. Onni holte die Socke und schlüpfte hinein. Wie warm sie war! Ein richtiger Schlafsack.
 
 Dann schrieb er noch schnell einen Brief: „Heute war Waschtag! Bitte nicht anfassen, meine Wäsche ist noch nass.“
 
@@ -137,9 +137,9 @@ In der fünften Nacht wachte Onni kuschelig warm in seiner Ringelsocke auf.
 
 „Gestern habe ich einen Korb voller Socken gesehen“, murmelte er. „Den schaue ich mir genauer an!“
 
-Er schnupperte. Da! Ein Duft nach frischer Wäsche, aus dem Schlafzimmer.
+Er schnupperte. Da! Ein Duft nach frischer Wäsche, aus der Abstellkammer.
 
-Vor der Kommode stand der große Weidenkorb. Die geflochtenen Stäbe waren wie eine Leiter. Onni kletterte hinauf.
+Neben den Kulleraugen-Kästen stand der große Weidenkorb. Die geflochtenen Stäbe waren wie eine Leiter. Onni kletterte hinauf.
 
 Der Korb war voller Socken! Rote, blaue, gestreifte und welche mit Sternchen.
 
@@ -157,7 +157,7 @@ Dann kletterte er hinunter. Oje! Überall lagen Socken. Welche gehörte bloß zu
 
 Schnell lief er zurück zu seiner Tür und schrieb einen Brief: „Ich habe mit euren Socken gespielt. Hilfst du mir, die Paare wiederzufinden?“
 
-Im Schlafzimmer lagen die Socken noch kreuz und quer. Onni aber kuschelte sich tief in seine Ringelsocke.
+In der Abstellkammer lagen die Socken noch kreuz und quer. Onni aber kuschelte sich tief in seine Ringelsocke.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -612,9 +612,9 @@ Er hatte der anderen Ringelsocke versprochen: Bevor ich nach Hause fliege, bring
 
 Onni seufzte. Er hätte sie so gern behalten. Aber versprochen ist versprochen.
 
-Er krabbelte heraus und rollte die Socke zusammen. Die Rolle war so dick wie er! Hau ruck, hau ruck, schob er sie zur Kommode.
+Er krabbelte heraus und rollte die Socke zusammen. Die Rolle war so dick wie er! Hau ruck, hau ruck, schob er sie bis in die Abstellkammer.
 
-Daneben stand der Weidenkorb. Er kletterte zuerst hinauf. Dann zog er die Socke hinterher, wie an einem Seil.
+Neben den Kulleraugen-Kästen stand der Weidenkorb. Er kletterte zuerst hinauf. Dann zog er die Socke hinterher, wie an einem Seil.
 
 Oben lag die andere Ringelsocke. Ganz allein.
 
@@ -775,7 +775,7 @@ Im Flur winkte er in den Spiegel. Der Wichtel im Spiegel winkte zurück.
 
 In der Küche klopfte er an den Brummschrank. „Gute Nacht, Lichtwichtel!“ Brumm, brumm.
 
-An der Kommode schaute er zum Weidenkorb hinauf. „Gute Nacht, ihr zwei Ringelsocken!“
+In der Abstellkammer schaute er zum Weidenkorb hinauf. „Gute Nacht, ihr zwei Ringelsocken!“
 
 Zum Schluss kuschelte er sich unter dem Weihnachtsbaum an den Teddy.
 

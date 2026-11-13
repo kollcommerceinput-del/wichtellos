@@ -38,7 +38,11 @@ E: Onni aß ihn gleich auf, Bissen für Bissen. Er schmeckte nach Butter. Und da
 
 [Geräusch: leise Schritte auf Holzboden]
 
-E: Dann lief er los, durch den Flur. Am Schlafzimmer stand die Tür einen Spalt offen, und es roch nach frischer Wäsche. Onni schob seine Mütze hoch und schaute hinein. Vor der Kommode stand ein großer Korb. Über seinen Rand hing eine Socke, rot und weiß geringelt.
+E: Dann lief er los, durch den Flur. Eine kleine Tür stand einen Spalt offen, und dahinter roch es nach frischer Wäsche. Onni schob seine Mütze hoch und schaute hinein. Es war eine Abstellkammer. Darin standen zwei große weiße Kästen. Jeder hatte vorne ein riesiges rundes Auge aus Glas, und eins davon schimmerte ein bisschen im Dunkeln.
+
+O: Hui. Ihr guckt aber groß. Ihr seid bestimmt Kulleraugen-Kästen.
+
+E: Die Kästen sagten nichts. Daneben stand ein großer Korb voller Socken. Über seinen Rand hing eine Socke, rot und weiß geringelt.
 
 O: Was für eine schöne Socke.
 
@@ -84,7 +88,7 @@ E: Onni setzte sich auf die Bettkante und dachte nach. Da fiel ihm etwas ein. Et
 
 O: Die Socke am Wäschekorb!
 
-E: Schnell lief er noch einmal los, durch den Flur bis ins Schlafzimmer. Die Ringelsocke hing noch immer über dem Rand. Onni packte ihr Ende und zog. Langsam rutschte sie herunter und fiel weich auf ihn drauf.
+E: Schnell lief er noch einmal los, durch den Flur bis in die Abstellkammer. Die Kulleraugen-Kästen guckten ihn an, und die Ringelsocke hing noch immer über dem Rand. Onni packte ihr Ende und zog. Langsam rutschte sie herunter und fiel weich auf ihn drauf.
 
 [Geräusch: weicher Stoff fällt leise auf den Boden]
 
@@ -104,7 +108,7 @@ E: Onni schlüpfte in die Socke, mit den Füßen zuerst. Sie war so lang, dass e
 
 O: Das ist ja ein richtiger Schlafsack.
 
-E: Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm in seiner Ringelsocke und dachte an den großen Korb im Schlafzimmer.
+E: Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm in seiner Ringelsocke und dachte an den großen Korb in der Abstellkammer.
 
 O: Ob da wohl noch mehr Socken drin sind?
 

@@ -28,19 +28,19 @@ E: Er sah sie sich genauer an. Rot und weiß geringelt war sie, aus weicher Woll
 
 O: Socken gibt es doch immer zu zweit. Wo ist denn deine andere?
 
-E: Die Ringelsocke stammte aus dem großen Wäschekorb im Schlafzimmer. Gestern Abend hatte Onni sich noch gefragt, ob dort wohl noch mehr Socken sind.
+E: Die Ringelsocke stammte aus dem großen Wäschekorb in der Abstellkammer. Gestern Abend hatte Onni sich noch gefragt, ob dort wohl noch mehr Socken sind.
 
 O: Das schaue ich mir an.
 
 [Geräusch: leise Schritte auf Holzboden]
 
-E: Onni lief los, durch den Flur, immer der Nase nach. Die Mütze rutschte ihm wieder über die Augen, aber das machte nichts. Aus dem Schlafzimmer kam ein Duft nach frischer Wäsche. Den hätte er auch mit geschlossenen Augen gefunden.
+E: Onni lief los, durch den Flur, immer der Nase nach. Die Mütze rutschte ihm wieder über die Augen, aber das machte nichts. Aus der Abstellkammer kam ein Duft nach frischer Wäsche. Den hätte er auch mit geschlossenen Augen gefunden.
 
-E: Im Schlafzimmer war es dunkel. Im großen Bett schlief jemand und atmete tief und ruhig. Onni lief ganz leise weiter.
+E: In der Abstellkammer war es dunkel. Nur das runde Auge des einen Kulleraugen-Kastens schimmerte ein wenig.
 
-[Geräusch: ruhiges Atmen eines Schlafenden, sehr leise, läuft weiter]
+O: Guten Abend, ihr zwei. Ich will nur kurz zu den Socken.
 
-E: Vor der Kommode stand der Wäschekorb. Er war aus Weidenruten geflochten und für Onni so hoch wie ein Haus. Onni schob seine Mütze hoch und legte den Kopf in den Nacken.
+E: Neben den Kästen stand der Wäschekorb. Er war aus Weidenruten geflochten und für Onni so hoch wie ein Haus. Onni schob seine Mütze hoch und legte den Kopf in den Nacken.
 
 O: Der ist aber hoch. Da muss ich wohl klettern.
 
@@ -90,7 +90,7 @@ O: Ach herrje. Jede Socke hat doch eine zweite. Aber welche gehört zu welcher?
 
 E: Er zog eine Socke neben eine andere und verglich sie. Im Dunkeln sahen sie alle gleich aus. Und die Mütze rutschte ihm immer wieder über die Augen. Allein schaffte er das nicht.
 
-[Geräusch: Atmen endet, leise Schritte auf Holzboden]
+[Geräusch: leise Schritte auf Holzboden]
 
 E: Leise lief er zurück durch den Flur bis zu seiner roten Tür. Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.
 
@@ -102,7 +102,7 @@ E: Den Brief legte er vor seine Tür. Dann machte er sie leise zu.
 
 [Geräusch: Uhr endet, Stille]
 
-E: Onni schlüpfte in seine Ringelsocke, bis nur noch die Nase herausschaute. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. Im Schlafzimmer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke.
+E: Onni schlüpfte in seine Ringelsocke, bis nur noch die Nase herausschaute. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. In der Abstellkammer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke.
 
 E: Onni dachte an sein Versprechen. Und ganz leise flüsterte er:
 

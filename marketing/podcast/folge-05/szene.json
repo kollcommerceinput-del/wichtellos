@@ -86,7 +86,7 @@
   ],
   [
    "E",
-   "Die Ringelsocke stammte aus dem großen Wäschekorb im Schlafzimmer. Gestern Abend hatte Onni sich noch gefragt, ob dort wohl noch mehr Socken sind."
+   "Die Ringelsocke stammte aus dem großen Wäschekorb in der Abstellkammer. Gestern Abend hatte Onni sich noch gefragt, ob dort wohl noch mehr Socken sind."
   ],
   [
    "O",
@@ -95,16 +95,20 @@
   ],
   [
    "E",
-   "Onni lief los, durch den Flur, immer der Nase nach. Die Mütze rutschte ihm wieder über die Augen, aber das machte nichts. Aus dem Schlafzimmer kam ein Duft nach frischer Wäsche. Den hätte er auch mit geschlossenen Augen gefunden."
+   "Onni lief los, durch den Flur, immer der Nase nach. Die Mütze rutschte ihm wieder über die Augen, aber das machte nichts. Aus der Abstellkammer kam ein Duft nach frischer Wäsche. Den hätte er auch mit geschlossenen Augen gefunden."
   ],
   [
    "E",
-   "Im Schlafzimmer war es dunkel. Im großen Bett schlief jemand und atmete tief und ruhig. Onni lief ganz leise weiter.",
+   "In der Abstellkammer war es dunkel. Nur das runde Auge des einen Kulleraugen-Kastens schimmerte ein wenig.",
    1.2
   ],
   [
+   "O",
+   "Guten Abend, ihr zwei. Ich will nur kurz zu den Socken."
+  ],
+  [
    "E",
-   "Vor der Kommode stand der Wäschekorb. Er war aus Weidenruten geflochten und für Onni so hoch wie ein Haus. Onni schob seine Mütze hoch und legte den Kopf in den Nacken."
+   "Neben den Kästen stand der Wäschekorb. Er war aus Weidenruten geflochten und für Onni so hoch wie ein Haus. Onni schob seine Mütze hoch und legte den Kopf in den Nacken."
   ],
   [
    "O",
@@ -213,7 +217,7 @@
   ],
   [
    "E",
-   "Onni schlüpfte in seine Ringelsocke, bis nur noch die Nase herausschaute. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. Im Schlafzimmer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke."
+   "Onni schlüpfte in seine Ringelsocke, bis nur noch die Nase herausschaute. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. In der Abstellkammer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke."
   ],
   [
    "E",
@@ -259,70 +263,63 @@
    -12
   ],
   [
-   17,
-   -1,
-   "schnarchen",
-   "bis:40",
-   -4
-  ],
-  [
-   20,
+   21,
    -1.1,
    "rascheln-diele",
    1.5,
    null
   ],
   [
-   25,
+   26,
    2.2,
    "plumps",
    0.8,
    -8
   ],
   [
-   27,
+   28,
    0.4,
    "plumps",
    0.8,
    -8
   ],
   [
-   29,
+   30,
    -1.1,
    "plumps",
    0.7,
    null
   ],
   [
-   29,
+   30,
    -0.5,
    "plumps",
    0.7,
    null
   ],
   [
-   40,
+   41,
    -1.1,
    "laufen-holz",
    4,
    -14
   ],
   [
-   41,
+   42,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   43,
+   44,
    -1.1,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   47,
+   48,
    6,
    "gloeckchen",
    1.6,
