@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -1681,6 +1681,66 @@ def plaetzchen_page():
          body, extra=ld(rezept_ld), crumb='Plätzchen backen mit Kindern', playful=True)
 
 
+# /kuscheldecke-verschenken/ (Toni 13.11.: „Kekse und Kuscheldecke sind Onnis Liebling“; Begriffe bei Amazon geprüft)
+DECKEN = [
+    ('Die Klassiker fürs Sofa', 'Weich, warm und groß genug zum Einkuscheln.', [
+        ('Flanell-Kuscheldecke', 'Leicht, flauschig und günstig – der Allrounder fürs Sofa.', 'Kuscheldecke Flanell'),
+        ('Sherpa-Decke', 'Innen wie ein Teddyfell, außen glatt – besonders warm.', 'Sherpa Decke'),
+        ('Grobstrick-Decke', 'Dicke Maschen, sieht auf dem Sofa toll aus.', 'Strickdecke grob'),
+        ('Kuscheldecke mit Weihnachtsmotiv', 'Sterne, Tannen oder Rentiere – passt genau in den Advent.', 'Kuscheldecke Weihnachten'),
+    ]),
+    ('Zum Anziehen', 'Für alle, die beim Fernsehen nicht ständig die Decke hochziehen wollen.', [
+        ('Decke mit Ärmeln', 'Die Hände bleiben frei für Tee, Buch und Fernbedienung.', 'Decke mit Ärmeln'),
+        ('Tragbare Decke als Hoodie', 'Ein riesiger, weicher Kapuzenpulli – der Lacher bei jeder Bescherung.', 'Tragbare Decke Hoodie'),
+    ]),
+    ('Für Kinder', 'Kuschelig für Vorlesestunde und Mittagsschlaf.', [
+        ('Kinder-Kuscheldecke', 'Kleiner, leicht und in fröhlichen Farben.', 'Kinder Kuscheldecke'),
+        ('Kapuzendecke', 'Mit Kapuze und Ärmeln – Kinder lieben es, sich darin einzumummeln.', 'Kapuzendecke Kinder Tier'),
+        ('Kuscheldecke mit Namen', 'Personalisiert mit dem Namen – ein Geschenk, das bleibt.', 'Kuscheldecke personalisiert Name'),
+    ]),
+    ('Wenn es etwas mehr sein darf', 'Für Frostbeulen und alle, die richtig gut schlafen wollen.', [
+        ('Heizdecke', 'Wärmt auf Knopfdruck – mit Abschaltautomatik.', 'Heizdecke'),
+        ('Gewichtsdecke', 'Schwer und beruhigend – viele schlafen damit besser.', 'Gewichtsdecke'),
+    ]),
+    ('Fürs ganze Kuschel-Set', 'Zusammen mit der Decke wird daraus ein ganzer gemütlicher Abend.', [
+        ('Kuschelsocken', 'Warme Füße gehören dazu.', 'Kuschelsocken'),
+        ('Wärmflasche mit Strickbezug', 'Sieht schön aus und wärmt von innen.', 'Wärmflasche Strickbezug'),
+    ]),
+]
+
+
+def decken_page():
+    secs, n = [], 0
+    for title, intro, items in DECKEN:
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>' for t, x, *r in items)
+        secs.append(f'<h2>{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    sections = '\n\n'.join(secs)
+    body = f"""<article>
+<h1>Kuscheldecke verschenken: die gemütlichsten Decken für Winterabende</h1>
+{ai_photo('wichtel3d-kuschelsocken', 'Plüsch-Wichtel neben dicken Kuschelsocken mit Weihnachtsmuster', cls='photo photo-ai hochkant')}
+<p class="lead">Eine Kuscheldecke ist eines der Geschenke, die wirklich benutzt werden – jeden Abend, den ganzen Winter. Hier findest du {n} Ideen: vom flauschigen Klassiker übers Sofa bis zur Decke mit Ärmeln, dazu Tipps zu Material und Größe.</p>
+<p>Auch unser Wichtel Onni liebt zwei Dinge: Kekse und eine warme Decke. Das passende Rezept gibt es beim <a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen mit Kindern</a> – zusammen mit einer Decke ein perfektes Wichtelgeschenk.</p>
+
+<h2>Worauf achten? Kurz erklärt</h2>
+<ul>
+  <li><b>Material:</b> Flanell und Fleece sind leicht, günstig und schnell trocken. Sherpa ist dicker und wärmer. Baumwolle und Strick sind atmungsaktiver, aber schwerer.</li>
+  <li><b>Größe:</b> Für eine Person auf dem Sofa reichen etwa 150 × 200 cm. Für zwei lieber 220 × 240 cm.</li>
+  <li><b>Pflege:</b> Am praktischsten sind Decken, die in die Waschmaschine dürfen – das Etikett verrät die Temperatur.</li>
+  <li><b>Als Wichtelgeschenk:</b> Einfache Flanelldecken passen oft schon ins Budget von 15–20 €. Schön verpackt mit Schleife – oder zusammengerollt mit Kuschelsocken.</li>
+</ul>
+
+{sections}
+
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<p>Mehr gemütliche Ideen: <a href="/wichtelgeschenke-unter-20-euro/">Wichtelgeschenke unter 20 €</a> · <a href="/geschenke-fuer-frauen/">Geschenke für Frauen</a> · <a href="/geschenke-fuer-maenner/">Geschenke für Männer</a></p>
+{CTA}
+</article>"""
+    page('/kuscheldecke-verschenken/', 'Kuscheldecke verschenken: die gemütlichsten Decken für Winterabende',
+         f'Kuscheldecke als Geschenk: {n} Ideen von Flanell und Sherpa bis Decke mit Ärmeln, Kinder-Kuscheldecke und Heizdecke – mit Tipps zu Material und Größe.',
+         body, crumb='Kuscheldecke verschenken', playful=True)
+
+
 # /wichteltuer-selber-bauen/ (Toni 13.11.: Werkzeug & Material, Einsteiger/Profi; Begriffe bei Amazon geprüft)
 WERKZEUG = [
     ('Für Einsteiger: das reicht für die erste Tür', 'Mit diesen Werkzeugen klappt die erste Wichteltür an einem Nachmittag.', [
@@ -2864,7 +2924,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2966,6 +3026,7 @@ def main():
     zubehoer_page()
     selberbau_page()
     plaetzchen_page()
+    decken_page()
     tassen_page()
     advent_page()
     themen_pages()

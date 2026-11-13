@@ -48,6 +48,7 @@ const PAGES = [
   ['wichtel-tassen', 'merch/tassen/tasse-14.png', 'Wichtel-Tassen', 'Lustige Sprüche für die Bescherung'],
   ['wichteltuer-selber-bauen', 'onni/sticker-daumen.png', 'Wichteltür selber bauen', 'Werkzeug, Material & Anleitung – 28 Ideen'],
   ['plaetzchen-backen-mit-kindern', 'onni/sticker-herz.png', 'Plätzchen backen mit Kindern', 'Einfaches Rezept, Wichtel-Kekse & Zubehör'],
+  ['kuscheldecke-verschenken', 'onni/sticker-schlaeft.png', 'Kuscheldecke verschenken', 'Die gemütlichsten Decken – 13 Ideen'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
