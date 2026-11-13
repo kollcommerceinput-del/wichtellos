@@ -1613,7 +1613,7 @@ WERKZEUG = [
     ]),
 ]
 SELBERBAU_SCHRITTE = [
-    ('Zuschneiden', 'Die Tür etwa 8 cm breit und 12 cm hoch aus 2–3 mm dünnem Holz sägen, dazu schmale Leisten für den Rahmen.'),
+    ('Zuschneiden', 'Die Tür etwa 7,5 cm breit und 15 cm hoch – ungefähr so groß wie ein Handy – aus 2–3 mm dünnem Holz sägen, dazu schmale Leisten für den Rahmen.'),
     ('Schleifen', 'Alle Kanten glätten – wichtig, wenn Kinder die Tür anfassen.'),
     ('Bemalen', 'Grundfarbe auftragen, trocknen lassen, dann Fenster, Maserung und Name aufmalen.'),
     ('Beschläge', 'Mini-Scharniere und Türknauf mit Handbohrer und Leim anbringen.'),
