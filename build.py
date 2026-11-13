@@ -292,7 +292,17 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
 '''
     target = OUT / path.strip('/') / 'index.html' if path != '/' else OUT / 'index.html'
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(html, encoding='utf-8')
+    target.write_text(asset_v(html), encoding='utf-8')
+
+
+def asset_v(html):
+    """Versionsnummer an /assets/*.css|js (13.11.: Browser hielt alte style.css bis zu 10 Min.) – Hash des Quelltexts."""
+    import hashlib
+    def rep(m):
+        f = SRC / 'assets' / m.group(1)
+        v = hashlib.md5(f.read_bytes()).hexdigest()[:8] if f.exists() else ''
+        return f'/assets/{m.group(1)}?v={v}"' if v else m.group(0)
+    return re.sub(r'/assets/([\w.-]+\.(?:css|js))"', rep, html)
 
 
 def amazon_url(query):
@@ -2747,7 +2757,7 @@ def tool_page():
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
     html = html.replace('<!--VERPACKEN-->', supplies_block(WRAP, 'Schön verpacken – und geheim bleiben 🎀', note=False))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
-    (OUT / 'index.html').write_text(html, encoding='utf-8')
+    (OUT / 'index.html').write_text(asset_v(html), encoding='utf-8')
 
 
 def extras():
