@@ -10,11 +10,11 @@ E: Türchen fünf. Onni im Sockenkorb.
 
 [Geräusch: Wanduhr tickt leise, läuft weiter]
 
-E: Onni wachte auf. Um ihn herum war es warm und weich, von den Zehen bis zum Bart. Er lag in seiner Ringelsocke, seinem neuen Schlafsack. Nur die Nase und die rote Mütze schauten oben heraus.
+E: Onni wachte auf. Um ihn herum war es warm und weich, von den Zehen bis zum Bart. Er lag unter seiner Ringelsocke, seiner neuen Decke. Nur die Nase und die rote Mütze schauten oben heraus.
 
 O: So gut habe ich lange nicht geschlafen.
 
-E: Er streckte sich, so weit es in der Socke ging. Dann krabbelte er heraus und öffnete seine Tür.
+E: Er streckte sich unter der Socke. Dann krabbelte er hervor und öffnete seine Tür.
 
 [Geräusch: kleine Holztür öffnet sich leise]
 
@@ -22,7 +22,7 @@ E: Draußen hing noch seine Wäsche am Faden, das weiße Tuch und seine kleinen 
 
 O: Danke, dass ihr gewartet habt.
 
-E: Er nahm alles ab und trug es hinein. Das Tuch faltete er ordentlich zusammen und legte es ans Fußende seines Bettes. Schlafen wollte er lieber weiter in der Ringelsocke.
+E: Er nahm alles ab und trug es hinein. Das Tuch faltete er ordentlich zusammen und legte es ans Fußende seines Bettes. Zudecken wollte er sich lieber weiter mit der Ringelsocke.
 
 E: Er sah sie sich genauer an. Rot und weiß geringelt war sie, aus weicher Wolle. Da fiel ihm etwas ein.
 
@@ -50,19 +50,19 @@ E: Zum Glück waren die geflochtenen Ruten wie eine Leiter. Onni stellte einen F
 
 E: Onni staunte. Der Korb war voller Socken. Rote und blaue, gestreifte und karierte, und sogar welche mit kleinen Sternen darauf. Alle zusammen rochen nach Seife, genau wie sein Tuch.
 
-O: So viele Socken. Und jede ist so groß wie ein Schlafsack.
+O: So viele Socken. Und jede ist so groß wie eine Decke.
 
 E: Da wollte Onni es genau wissen. Welche war wohl die gemütlichste?
 
-E: Die erste war aus dicker grauer Wolle. Onni kroch hinein, aber sie kratzte am Bart und kitzelte in der Nase.
+E: Die erste war aus dicker grauer Wolle. Onni zog sie sich über, aber sie kratzte am Bart und kitzelte in der Nase.
 
 O: Zu kratzig.
 
-E: Er krabbelte wieder heraus und warf sie über den Rand. Die zweite war riesig. Onni verschwand darin ganz und gar und musste eine Weile suchen, bis er wieder herausfand.
+E: Er krabbelte wieder hervor und warf sie über den Rand. Die zweite war riesig. Onni verschwand darunter ganz und gar und musste eine Weile suchen, bis er wieder herausfand.
 
 O: Viel zu groß.
 
-E: Auch die flog über den Rand. Die dritte war dünn und glatt. Kaum lag Onni darin, rutschte er schon wieder heraus.
+E: Auch die flog über den Rand. Die dritte war dünn und glatt. Kaum lag sie auf Onni, rutschte sie schon wieder herunter.
 
 O: Zu rutschig.
 
@@ -74,7 +74,7 @@ E: Da entdeckte er zwischen den übrigen Socken etwas, das er kannte. Rot und we
 
 O: Das gibt es doch nicht. Du siehst ja genauso aus wie meine.
 
-E: Er kuschelte sich hinein. Sie war genauso weich und genauso warm. Da wusste Onni: Die beiden gehörten zusammen.
+E: Er kuschelte sich darunter. Sie war genauso weich und genauso warm. Da wusste Onni: Die beiden gehörten zusammen.
 
 O: Du gehörst zu meiner Socke. Ihr seid ein Paar. Und jetzt liegst du hier allein, weil ich die andere mitgenommen habe.
 
@@ -102,7 +102,7 @@ E: Den Brief legte er vor seine Tür. Dann machte er sie leise zu.
 
 [Geräusch: Uhr endet, Stille]
 
-E: Onni schlüpfte in seine Ringelsocke, bis nur noch die Nase herausschaute. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. In der Abstellkammer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke.
+E: Onni zog seine Ringelsocke bis zur Nase hoch. Am Fußende lag das frische Tuch. An der Wand lehnte das Bild vom Teddy. In der Abstellkammer lagen die Socken noch kreuz und quer. Und oben im Korb wartete die andere Ringelsocke.
 
 E: Onni dachte an sein Versprechen. Und ganz leise flüsterte er:
 

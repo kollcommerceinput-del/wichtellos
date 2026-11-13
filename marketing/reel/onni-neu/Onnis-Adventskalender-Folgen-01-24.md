@@ -116,7 +116,7 @@ Onni schnupperte. Sein weißes Tuch roch nach der langen Reise, nach Schmutz und
 
 „Heute ist Waschtag!“, beschloss er.
 
-In der Küche tropfte der Wasserhahn. Plitsch. Platsch. Onni stellte eine Teetasse darunter und wartete, bis sie voll war. Für ihn war sie so groß wie ein Badesee.
+In der Küche tropfte der Wasserhahn. Plitsch. Platsch. Onni stellte eine Teetasse darunter und wartete, bis sie voll war. Für ihn war sie so groß wie eine große Badewanne.
 
 Dazu holte er sich einen Krümel Seife. Dann rubbelte und schrubbte er, bis es überall schäumte. Eine Seifenblase schwebte hoch und landete genau auf seiner Nase. Plopp! Onni kicherte.
 
@@ -124,7 +124,7 @@ Vor seiner Tür spannte er einen Faden und hängte alles mit winzigen Klammern a
 
 Da wurde ihm kühl. „Und womit decke ich mich jetzt zu?“
 
-Plötzlich fiel ihm die weiche Ringelsocke aus dem Wäschekorb ein. Der stand in der Abstellkammer, neben zwei großen Kästen mit riesigen runden Glasaugen – den Kulleraugen-Kästen. Onni holte die Socke und schlüpfte hinein. Wie warm sie war! Ein richtiger Schlafsack.
+Plötzlich fiel ihm die weiche Ringelsocke aus dem Wäschekorb ein. Der stand in der Abstellkammer, neben zwei großen Kästen mit riesigen runden Glasaugen – den Kulleraugen-Kästen. Onni holte die Socke und deckte sich damit zu. Wie warm sie war! Eine richtige Decke.
 
 Dann schrieb er noch schnell einen Brief: „Heute war Waschtag! Bitte nicht anfassen, meine Wäsche ist noch nass.“
 
@@ -133,7 +133,7 @@ Dann schrieb er noch schnell einen Brief: „Heute war Waschtag! Bitte nicht anf
 
 ## Folge 05 – Onni im Sockenkorb
 
-In der fünften Nacht wachte Onni kuschelig warm in seiner Ringelsocke auf.
+In der fünften Nacht wachte Onni kuschelig warm unter seiner Ringelsocke auf.
 
 „Gestern habe ich einen Korb voller Socken gesehen“, murmelte er. „Den schaue ich mir genauer an!“
 
@@ -143,13 +143,13 @@ Neben den Kulleraugen-Kästen stand der große Weidenkorb. Die geflochtenen Stä
 
 Der Korb war voller Socken! Rote, blaue, gestreifte und welche mit Sternchen.
 
-„Socken sind ja wie riesige Schlafsäcke!“, staunte Onni.
+„Socken sind ja wie riesige Decken!“, staunte Onni.
 
 Er probierte eine aus. Zu kratzig. Weg damit! Die nächste. Zu groß. Weg! Die dritte. Zu rutschig. Weg!
 
 Hui, flogen die Socken!
 
-Oben auf dem Sockenberg lag eine rote Ringelsocke. Genau so eine wie seine! Onni kuschelte sich hinein.
+Oben auf dem Sockenberg lag eine rote Ringelsocke. Genau so eine wie seine! Onni kuschelte sich darunter.
 
 „Du gehörst ja zu meiner Socke“, flüsterte er. „Ihr seid ein Paar. Bevor ich nach Hause fliege, bringe ich sie dir zurück. Versprochen!“
 
@@ -157,7 +157,7 @@ Dann kletterte er hinunter. Oje! Überall lagen Socken. Welche gehörte bloß zu
 
 Schnell lief er zurück zu seiner Tür und schrieb einen Brief: „Ich habe mit euren Socken gespielt. Hilfst du mir, die Paare wiederzufinden?“
 
-In der Abstellkammer lagen die Socken noch kreuz und quer. Onni aber kuschelte sich tief in seine Ringelsocke.
+In der Abstellkammer lagen die Socken noch kreuz und quer. Onni aber kuschelte sich tief unter seine Ringelsocke.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -174,7 +174,7 @@ Onni schnupperte. Mandarinen! Nüsse! Und kalter Schnee.
 
 „Das riecht nach … Nikolaus!“, flüsterte er.
 
-Schnell krabbelte er aus seinem Socken-Schlafsack und schlich zu seiner kleinen Tür. Ganz vorsichtig machte er sie einen Spalt auf.
+Schnell krabbelte er unter seiner Ringelsocke hervor und schlich zu seiner kleinen Tür. Ganz vorsichtig machte er sie einen Spalt auf.
 
 Ist das der Nikolaus?
 
@@ -196,14 +196,14 @@ Onni knabberte daran. Knusper! Ganz aufgeregt lief er zurück und schrieb einen 
 
 „Hey, wisst ihr was? Heute Nacht war der Nikolaus bei euch! Gesehen habe ich ihn leider nicht. Aber ich habe ihn gehört und gerochen! Schaut mal in eure Stiefel!“
 
-Dann kuschelte er sich in seinen Socken-Schlafsack.
+Dann kuschelte er sich unter seine Ringelsocke.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
 
 ## Folge 07 – Ein Lied für Onni
 
-In der siebten Nacht lag Onni wach in seinem Socken-Schlafsack. Er drehte sich nach links. Dann nach rechts.
+In der siebten Nacht lag Onni wach unter seiner Ringelsocke. Er drehte sich nach links. Dann nach rechts.
 
 Es war so still im Haus.
 
@@ -229,7 +229,7 @@ Mit jedem Ton wurde ihm wärmer ums Herz.
 
 Dann schrieb er einen Brief: „Im Wichtelwald singen wir jeden Abend. Singst du mir heute ein Weihnachtslied vor? Ich sitze hinter meiner Tür und höre ganz genau zu.“
 
-Er kuschelte sich tief in seinen Socken-Schlafsack.
+Er kuschelte sich tief unter seine Ringelsocke.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -266,7 +266,7 @@ Im Spiegel stand: INNO!
 
 Onni legte den Brief vor seine Tür und kicherte noch einmal leise.
 
-Dann kuschelte er sich in seinen Socken-Schlafsack.
+Dann kuschelte er sich unter seine Ringelsocke.
 
 „Oh, das war toll!“, seufzte er glücklich.
 
@@ -307,7 +307,7 @@ Onni staunte. „Der ist ja größer als ich! So hoch fliegt sonst nur Ulla!“
 
 Dann schrieb er einen Brief: „Heute Nacht war ich Baumeister! Ob du einen noch höheren Turm schaffst?“
 
-Müde kuschelte er sich in seinen Socken-Schlafsack.
+Müde kuschelte er sich unter seine Ringelsocke.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -346,7 +346,7 @@ Er rubbelte und rubbelte. Aber die Farbe blieb dran.
 
 Dann schrieb er einen Brief: „Heute Nacht habe ich den Mandarinen Gesichter gemalt. Welches gefällt dir am besten?“
 
-Im Socken-Schlafsack fühlte er noch einmal nach seiner Nase. Ob die Farbe bis morgen weg ist?
+Unter der Ringelsocke fühlte er noch einmal nach seiner Nase. Ob die Farbe bis morgen weg ist?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -383,7 +383,7 @@ Die Hausschuhe schlurften davon.
 
 Dann schrieb er einen Brief: „Im Kühlschrank wohnt ein Licht! Weißt du, wer es anknipst?“
 
-Im Socken-Schlafsack grübelte er noch lange. Ob der Lichtwichtel da drin wohl friert?
+Unter der Ringelsocke grübelte er noch lange. Ob der Lichtwichtel da drin wohl friert?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -422,7 +422,7 @@ Neben dem Stern entdeckte er einen kleinen blauen Nasenabdruck. Hihi! Die Farbe 
 
 Dann schrieb er einen Brief: „Siehst du heute den Nordstern? Dort, ganz weit weg, ist mein Zuhause.“
 
-Im Socken-Schlafsack dachte er noch lange an den Stern. Ob Ulla schon angekommen ist?
+Unter der Ringelsocke dachte er noch lange an den Stern. Ob Ulla schon angekommen ist?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -457,7 +457,7 @@ Den Brief schrieb er ganz im Dunkeln. Die Buchstaben wurden krumm und schief.
 
 „Heute ist Luciafest, das Fest der Lichter. Mein Licht habe ich deinem Teddy geliehen. Schau mal nach!“
 
-Dann tastete er nach seinem Bett. Hoppla! Er stolperte über die Ringelsocke und plumpste mitten hinein.
+Dann tastete er nach seinem Bett. Hoppla! Er stolperte über die Ringelsocke und plumpste mitten drauf.
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -490,7 +490,7 @@ Doch beim Hin und Her hatte er die Schuhe immer wieder umgeschubst. Jetzt lagen 
 
 Dann schrieb er einen Brief: „Eure Schuhe duften jetzt nach Mandarinen! Nur weiß ich nicht mehr, welcher zu welchem gehört. Hilfst du mir?“
 
-Im Socken-Schlafsack schnupperte er an seiner Ringelsocke. Ob die auch schon nach Käsefüßen riecht?
+Unter seiner Decke schnupperte er an der Ringelsocke. Ob die auch schon nach Käsefüßen riecht?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -525,7 +525,7 @@ Und was wünschst du dir?
 
 Dann schrieb er einen Brief: „Hast du schon deinen Wunschzettel geschrieben? Ich habe auch einen!“
 
-Seinen eigenen Wunschzettel schob er ganz tief in den Socken-Schlafsack. Ob wohl einer seiner Wünsche in Erfüllung geht?
+Seinen eigenen Wunschzettel schob er ganz tief in die Ringelsocke. Ob wohl einer seiner Wünsche in Erfüllung geht?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -560,7 +560,7 @@ Da war der Teddy! Onni kuschelte sich in sein warmes Fell und ruhte sich ein bis
 
 Dann schrieb er einen Brief: „Hatschi! Ich habe Schnupfen. Packst du dich schön kuschelig warm ein? So wie ein Wichtel in seiner Socke!“
 
-Müde kroch er in seinen Socken-Schlafsack. Ob er morgen wieder alles riechen kann?
+Müde kroch er unter seine Ringelsocke. Ob er morgen wieder alles riechen kann?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
@@ -595,16 +595,16 @@ Nur der weiße Weg lag noch im Flur.
 
 Dann schrieb er einen Brief: „Schau mal, meine Tür hat jetzt auch Weihnachtsschmuck! Der Papierweg ist mir aus Versehen passiert. Räumst du mit mir auf?“
 
-Im Socken-Schlafsack dachte er: Ob sich die Kinder über seine Girlande freuen?
+Unter der Ringelsocke dachte er: Ob sich die Kinder über seine Girlande freuen?
 
 „Gute Nacht“, flüsterte er. „Bis morgen.“
 
 
 ## Folge 18 – Onni hält sein Versprechen
 
-In der achtzehnten Nacht wachte Onni in seiner Ringelsocke auf. Über seiner Tür hing noch die Girlande.
+In der achtzehnten Nacht wachte Onni unter seiner Ringelsocke auf. Über seiner Tür hing noch die Girlande.
 
-So warm. So weich. Sein allerbester Schlafsack!
+So warm. So weich. Seine allerbeste Decke!
 
 Doch dann: „Oje! Mein Versprechen!“
 

@@ -54,7 +54,7 @@ E: In der Küche tropfte der Wasserhahn. Oben in der Spüle stand eine Teetasse,
 
 O: Da ist ja schon Wasser für mich.
 
-E: Von der Spüle hing ein Geschirrtuch herunter, fast bis auf den Boden. Onni band seine Wäsche zu einem kleinen Bündel und nahm es auf den Rücken. Dann kletterte er am Geschirrtuch hinauf wie an einem Seil. Oben stand er vor der Tasse. Für ihn war sie so groß wie ein Badesee.
+E: Von der Spüle hing ein Geschirrtuch herunter, fast bis auf den Boden. Onni band seine Wäsche zu einem kleinen Bündel und nahm es auf den Rücken. Dann kletterte er am Geschirrtuch hinauf wie an einem Seil. Oben stand er vor der Tasse. Für ihn war sie so groß wie eine große Badewanne.
 
 E: Neben dem Wasserhahn lag ein Stück Seife. Onni brach sich einen Krümel davon ab. Dann tauchte er das Tuch ins Wasser.
 
@@ -104,11 +104,11 @@ E: Den Brief legte er vor die Tür, gleich unter die Wäsche. Dann machte er die
 
 [Geräusch: Tropfen und Uhr enden, Stille]
 
-E: Onni schlüpfte in die Socke, mit den Füßen zuerst. Sie war so lang, dass er ganz darin verschwand. Nur die Nase und die Mütze schauten oben heraus. Sie war warm und weich und roch nach frischer Wäsche.
+E: Onni legte sich ins Bett und zog die Socke über sich wie eine Decke, bis zur Nasenspitze. Nur die Mütze schaute oben heraus. Sie war warm und weich und roch nach frischer Wäsche.
 
-O: Das ist ja ein richtiger Schlafsack.
+O: Das ist ja eine richtige Decke.
 
-E: Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm in seiner Ringelsocke und dachte an den großen Korb in der Abstellkammer.
+E: Draußen vor der Tür trocknete die Wäsche. Drinnen lag Onni warm unter seiner Ringelsocke und dachte an den großen Korb in der Abstellkammer.
 
 O: Ob da wohl noch mehr Socken drin sind?
 
