@@ -1,0 +1,278 @@
+{
+ "out": "onni-folge-06.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und für groß gebliebene Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen sechs. Onni und der Nikolaus.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni lag unter seiner Ringelsocke und schlief tief und fest. Da weckte ihn etwas. Ein feines Klingen, ganz leise, wie von einem kleinen Glöckchen.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni öffnete die Augen und lauschte. Im Haus war es still. Hatte er das nur geträumt?"
+  ],
+  [
+   "E",
+   "Doch dann hörte er es wieder. Und noch etwas anderes: schwere Schritte, langsam und vorsichtig. Und ein Rascheln, als würde jemand einen großen Sack absetzen.",
+   1.8
+  ],
+  [
+   "E",
+   "Onni hob die Nase und schnupperte. Durch den Spalt unter seiner Tür kam ein Duft herein. Er roch nach Mandarinen. Nach Nüssen. Und nach kaltem Schnee, so als wäre gerade jemand von draußen hereingekommen."
+  ],
+  [
+   "O",
+   "Mandarinen, Nüsse und Schnee. Heute ist ja Nikolausnacht. Das riecht nach dem Nikolaus."
+  ],
+  [
+   "E",
+   "Onnis Herz klopfte ganz schnell. Den Nikolaus hatte im Wichtelwald noch niemand gesehen. Nicht ein einziger Wichtel. Man erzählte sich nur, er habe einen langen weißen Bart, noch viel länger als der von Onni, und einen großen roten Mantel. Wenn Onni ihn jetzt sehen könnte, nur ein kleines bisschen, dann könnte er zu Hause davon erzählen."
+  ],
+  [
+   "E",
+   "Schnell schlug er die Ringelsocke zurück und stand auf. Auf Zehenspitzen ging er zu seiner Tür. Ganz vorsichtig drückte er sie auf, nur einen Spalt breit.",
+   1.4
+  ],
+  [
+   "E",
+   "Draußen im Flur war es dunkel. Aber dort hinten bewegte sich etwas. Etwas Großes. Es war rot, das konnte Onni gerade noch erkennen."
+  ],
+  [
+   "O",
+   "Ist er das? Ist das wirklich der Nikolaus?"
+  ],
+  [
+   "E",
+   "Onni beugte sich vor, um besser zu sehen. Und genau in diesem Augenblick rutschte ihm die Mütze über die Augen."
+  ],
+  [
+   "O",
+   "Nein, nein, nicht jetzt."
+  ],
+  [
+   "E",
+   "Onni zog an der Mütze. Er zupfte und schob. Aber sie saß fest, wie immer, wenn es darauf ankam. Als er sie endlich wieder oben hatte, war es zu spät.",
+   2.2
+  ],
+  [
+   "E",
+   "Der Flur war leer. Der Nikolaus war fort, genauso leise, wie er gekommen war. Nur in der Luft schwebte noch etwas. Winzige glitzernde Pünktchen, wie feiner Schnee im Mondlicht. Langsam sanken sie zu Boden."
+  ],
+  [
+   "O",
+   "Glitzerstaub. Er war wirklich hier."
+  ],
+  [
+   "E",
+   "Ein Pünktchen landete genau auf Onnis Nase. Es kitzelte ein bisschen und funkelte noch einen Augenblick, dann war es verschwunden."
+  ],
+  [
+   "E",
+   "Onni war ein bisschen traurig. So nah war er dem Nikolaus gewesen. Aber dann siegte die Neugier, und er lief hinaus in den Flur.",
+   1.4
+  ],
+  [
+   "E",
+   "An der Wand standen die Stiefel der Kinder, ordentlich nebeneinander, immer zwei und zwei. Gestern waren sie noch leer gewesen. Jetzt waren sie voll. Oben schauten Mandarinen heraus, Nüsse und etwas, das in glänzendes Papier gewickelt war. In einem kleinen roten Stiefel steckte ein Nikolaus aus Schokolade. Er hatte sogar einen Bart, fast wie Onni."
+  ],
+  [
+   "O",
+   "Er hat allen etwas gebracht. Jedem Stiefel."
+  ],
+  [
+   "E",
+   "Onni lief an den Stiefeln entlang und staunte. Jeder war viel höher als er. Da entdeckte er unten auf dem Boden, gleich neben dem letzten Stiefel, etwas Kleines, Braunes. Er schnupperte daran. Es roch nach Honig, nach Zimt und nach Nelken."
+  ],
+  [
+   "O",
+   "Ein Krümel Lebkuchen. Der ist bestimmt für mich."
+  ],
+  [
+   "E",
+   "Ob der Nikolaus ihn extra für ihn verloren hatte? Onni war sich ganz sicher. Er setzte sich auf den Boden und knabberte daran. Der Lebkuchen war weich und würzig und ein bisschen klebrig."
+  ],
+  [
+   "O",
+   "So schmeckt also die Nikolausnacht.",
+   1.2
+  ],
+  [
+   "E",
+   "Als der letzte Krümel aufgegessen war, lief Onni schnell zurück zu seiner roten Tür. Er war so aufgeregt, dass er kaum stillsitzen konnte. Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.2
+  ],
+  [
+   "O",
+   "Wisst ihr was? Heute Nacht war der Nikolaus bei euch. Gesehen habe ich ihn leider nicht. Aber ich habe ihn gehört und gerochen. Schaut mal in eure Stiefel.",
+   1.2
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.2
+  ],
+  [
+   "E",
+   "Onni kroch unter seine Ringelsocke und zog sie bis zur Nasenspitze. Draußen im Flur lag noch ein bisschen Glitzerstaub. Und Onni dachte an das Glöckchen, an die schweren Schritte und an den Duft nach Mandarinen. Vielleicht, ganz vielleicht, hatte der Nikolaus ja auch ihn gesehen."
+  ],
+  [
+   "O",
+   "Nächstes Mal bleibt meine Mütze oben. Ganz bestimmt."
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   6,
+   -1.4,
+   "gloeckchen",
+   1.4,
+   -24
+  ],
+  [
+   8,
+   -1.7,
+   "laufen-holz",
+   1.4,
+   -14
+  ],
+  [
+   8,
+   -0.5,
+   "rascheln-kurz",
+   0.6,
+   -12
+  ],
+  [
+   12,
+   -1.2,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   17,
+   -2.0,
+   "laufen-holz",
+   1.6,
+   -18
+  ],
+  [
+   18,
+   -0.6,
+   "glitzer",
+   1.4,
+   -14
+  ],
+  [
+   21,
+   -1.2,
+   "laufen-holz",
+   3,
+   -14
+  ],
+  [
+   25,
+   3.5,
+   "keks",
+   1.5,
+   -16
+  ],
+  [
+   28,
+   -1.1,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   30,
+   -1.1,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   35,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
