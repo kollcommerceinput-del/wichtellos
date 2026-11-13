@@ -970,3 +970,17 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .ms-alle:hover, .ms-alle:focus-visible { transform: translateY(-2px); color: #fff; }
 .ms-alle b { font-size: 1.1rem; }
 @media (min-width: 601px) { .intro .photo-ai { width: 280px; } .intro .photo-ai img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 40%; } }
+
+/* Geschenkidee einzeln teilen (13.11.) – Knopf oben rechts, über der klickbaren Kachel */
+.idea .idee-teilen { position: absolute; top: 4px; right: 4px; z-index: 2; font: inherit; font-size: 13px; font-weight: 700; line-height: 1; min-height: 40px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--muted); cursor: pointer; }
+.idea .idee-teilen:hover, .idea .idee-teilen:focus-visible { color: inherit; border-color: currentColor; }
+.idea:has(.idee-teilen) h3 { padding-right: 88px; }
+.idea.idee-ziel { animation: idee-ziel 2.4s ease-out 1; }
+@keyframes idee-ziel { 0%, 40% { box-shadow: 0 0 0 4px #c62828; } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+/* Prämien-Kästen Prime/Audible (13.11.) – klar als Anzeige erkennbar */
+.praemie { border: 1px dashed var(--border); border-radius: var(--radius); padding: 12px 14px; margin: 18px 0; background: var(--card); font-size: 15px; }
+.praemie[hidden] { display: none; }
+.praemie p { margin: 0 0 8px; }
+.praemie p:last-child { margin: 0; }
+.praemie .praemie-k { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 4px; }

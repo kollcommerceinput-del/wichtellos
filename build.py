@@ -154,6 +154,28 @@ CTA = '''<div class="cta-box">
 </div>'''
 
 
+# Amazon-Prämien (Toni 13.11.): feste Prämie pro Anmeldung – nur auf Seiten für Erwachsene, nie auf Onni-/Kinderseiten (Amazon-Regel + UWG)
+_TAGQ = f'?tag={AMAZON_TAG}' if AMAZON_TAG else ''
+PRIME_BOX = (f'<aside class="praemie praemie-prime"><p class="praemie-k">Anzeige</p><p><b>📦 Viele Black-Friday-Angebote gibt es nur mit Prime</b> – '
+             f'dazu bei vielen Artikeln kostenloser Versand, oft schon bis morgen. Praktisch, wenn das Wichtelgeschenk schnell da sein muss.</p>'
+             f'<p><a class="btn-secondary" href="https://www.amazon.de/prime{_TAGQ}" rel="sponsored nofollow noopener" target="_blank">Prime 30 Tage kostenlos testen*</a></p></aside>')
+AUDIBLE_BOX = (f'<aside class="praemie praemie-audible" data-zeit-von="2026-11-01" data-zeit-bis="2026-12-17"><p class="praemie-k">Für Eltern · Anzeige</p>'
+               f'<p><b>🎧 Eure Kinder haben nicht genug von Geschichten?</b> Bei Audible gibt es tausende Kinderhörbücher zum Einschlafen. '
+               f'Aktion bis 17.12.: 3 Monate für 0,99 €, danach 8,99 €/Monat, jederzeit kündbar.</p>'
+               f'<p><a class="btn-secondary" href="https://www.amazon.de/hz/audible/arya/mlp{_TAGQ}" rel="sponsored nofollow noopener" target="_blank">Audible-Angebot ansehen*</a></p></aside>')
+# Kästen je Seite (vor dem Seitenende eingefügt)
+PRAEMIE_SEITEN = {
+    '/wichtelgeschenke-unter-5-euro/': PRIME_BOX, '/wichtelgeschenke-unter-10-euro/': PRIME_BOX, '/wichtelgeschenke-unter-15-euro/': PRIME_BOX,
+    '/wichtelgeschenke-unter-20-euro/': PRIME_BOX, '/wichtelgeschenke-unter-30-euro/': PRIME_BOX,
+    '/geschenke-fuer-maenner/': PRIME_BOX, '/geschenke-fuer-frauen/': PRIME_BOX, '/geschenkfinder/': PRIME_BOX,
+    '/wichtelgeschenke-fuer-kinder/': AUDIBLE_BOX, '/nikolaus-geschenke/': AUDIBLE_BOX, '/adventskalender-befuellen/': AUDIBLE_BOX,
+    '/adventskalender-ideen/': AUDIBLE_BOX, '/wichteltuer/': AUDIBLE_BOX,
+}
+# Black-Friday-Woche bei Amazon 19.–30.11.2026 (offiziell); Banner ab 16.11. auf allen Seiten außer Onni-/Kinderseiten und Rechtlichem
+BF_BANNER = ('<a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-11-30" hidden>'
+             '🏷️ <b>Black-Friday-Woche 19.–30.11.:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>')
+BF_OHNE = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
+
 # Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
 POSES = {'winkt': (132, 152), 'geschenk': (120, 152), 'lupe': (132, 152), 'wuerfel': (132, 152), 'schlaeft': (152, 162)}
 
@@ -243,6 +265,12 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
     body = re.sub(r'(<figure class="photo photo-ai">.*?</figure>)\s*(<p class="lead">.*?</p>)', r'<div class="intro">\1\2</div>', body, count=1, flags=re.S)
     if mascot and 'photo-ai' not in body:  # 3D-Bild ersetzt den gezeichneten Wichtel
         body = body.replace('<article>\n<h1>', f'<article>\n{pose_img(mascot)}\n<h1>', 1)
+    if path in PRAEMIE_SEITEN:
+        i = body.rfind('<div class="cta-box">')  # vor dem Auslosen-Kasten, sonst vor dem Seitenende
+        i = i if i >= 0 else body.rfind('</article>')
+        body = body[:i] + PRAEMIE_SEITEN[path] + body[i:] if i >= 0 else body + PRAEMIE_SEITEN[path]
+    if not noindex and path not in BF_OHNE and 'bf-banner' not in body:
+        body = body.replace('<h1>', BF_BANNER + '<h1>', 1)
     if crumb:
         nav, trail = crumbs(path, crumb)
         body = nav + '\n' + body
@@ -486,7 +514,7 @@ def gift_page(budget):
 <div class="chips">
 {chips}
 </div>
-<a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-12-01" hidden>🏷️ <b>Black Friday:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>
+{BF_BANNER}
 <p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a> · Lieber 24 kleine Freuden? <a href="/adventskalender-ideen/">Adventskalender-Ideen →</a></p>
 {CTA}
 {chr(10).join(sections)}
@@ -1205,11 +1233,7 @@ Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wi
 <p class="hint">Klappt „Sticker erstellen“ bei dir noch nicht, schick Onni einfach als Bild – der Hintergrund ist durchsichtig.</p>
 
 <h2>Für die Mal-Ecke</h2>
-<p>Damit Onni schön bunt wird – und die Vorlagen für die Wichteltür lange halten:</p>
-<div class="idea-grid">
-{mal_shop}
-</div>
-<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<p>Damit Onni schön bunt wird: Dicke Buntstifte oder Wachsmalstifte für die Kleinen, Glitzerstifte für Sterne und Mütze. Für die Wichteltür die Bilder laminieren – dann halten sie bis Weihnachten. (Bewusst keine Werbelinks auf dieser Kinderseite.)</p>
 
 <h2>Und jetzt: wichteln!</h2>
 <p>Für Familie, Klasse oder Kita: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link. Für Kinder ohne Handy gibt es Lose zum Ausdrucken, bei denen der Name innen steht.</p>
@@ -1512,14 +1536,16 @@ def themen_pages():
 <h1>Black Friday 2026: Wichtelgeschenke im Angebot</h1>
 {ai_photo('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife')}
 <p class="lead">Wer ohnehin Wichtelgeschenke kaufen muss, kann am Black Friday sparen: Viele Kleinigkeiten, Spiele, Decken und Technik sind in diesen Tagen reduziert. Hier findest du {n} Ideen, die zum Wichteln passen – mit einem Klick zu den aktuellen Angeboten bei Amazon.</p>
-<p class="tip">📅 <b>Black Friday 2026 ist am Freitag, 27. November</b>, der Cyber Monday am <b>30. November</b>. Amazon startet seine Black-Friday-Angebote meist schon einige Tage vorher.</p>
+<p class="tip">📅 <b>Die Black-Friday-Woche bei Amazon läuft vom 19. bis 30. November 2026.</b> Der Black Friday selbst ist am Freitag, 27. November, der Cyber Monday am 30. November.</p>
 <p class="bf-cta"><a class="btn-primary big" href="{esc(deals)}" rel="sponsored nofollow noopener" target="_blank">🏷️ Alle aktuellen Angebote bei Amazon*</a></p>
+{PRIME_BOX}
 <p class="chips-line">Direkt zu: {jump}</p>
 
 {secs}
 
 {DISC_SEARCH}
 
+{AUDIBLE_BOX}
 <h2>So sparst du am Black Friday wirklich</h2>
 <ul>
   <li><b>Erst das Budget, dann das Angebot:</b> Ein Schnäppchen über dem Wichtel-Budget ist kein Schnäppchen. Legt das Budget vorher fest – beim <a href="/">Auslosen</a> könnt ihr es gleich mit eintragen.</li>
@@ -1812,8 +1838,8 @@ def onni_kalender_page():
   </div>
 </div>
 
-{supplies_block(ONNI_SHOP, 'Für die Großen: Du suchst noch Geschenke?')}
-<p class="hint">Hier geht's direkt zu den Ideen: <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
+<h2>Für die Großen: Du suchst noch Geschenke?</h2>
+<p class="hint">Hier geht's direkt zu den Ideen (bewusst keine Werbelinks auf dieser Kinderseite): <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
 <p class="hint">Bilder und Erzählstimme der Geschichten sind mit KI-Unterstützung entstanden, die Geschichten haben wir selbst geschrieben.</p>
 </article>'''
     page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder',

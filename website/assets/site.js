@@ -408,4 +408,33 @@
     const ziel = m && document.getElementById(`tag-${m[1]}`);
     if (ziel && ziel.classList.contains('auf')) zeige(ziel, true);
   }
+  // Geschenkidee einzeln teilen (Toni 13.11.): Knopf oben rechts in jeder Ideen-Karte mit Amazon-Link.
+  // Geteilt wird unsere Seite mit Sprungmarke #idee-…, nicht der Amazon-Link; Ziel-Karte leuchtet beim Öffnen kurz auf.
+  const slug = (t) => 'idee-' + t.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
+  const ideeKnoepfe = (wurzel) => wurzel.querySelectorAll('.idea').forEach((k) => {
+    const h = k.querySelector('h3');
+    if (!h || k.querySelector('.idee-teilen') || !k.querySelector('a[rel~="sponsored"]')) return;
+    if (!k.id) { let id = slug(h.textContent), n = 2; while (document.getElementById(id)) id = slug(h.textContent) + '-' + n++; k.id = id; }
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'idee-teilen'; b.textContent = '📤 Teilen';
+    b.setAttribute('aria-label', `Geschenkidee „${h.textContent.trim()}“ teilen`);
+    k.appendChild(b);
+  });
+  ideeKnoepfe(document);
+  document.querySelectorAll('.idea-grid').forEach((g) => new MutationObserver(() => ideeKnoepfe(g)).observe(g, { childList: true }));
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.idee-teilen');
+    if (!b) return;
+    e.preventDefault(); e.stopPropagation();
+    const k = b.closest('.idea'), titel = k.querySelector('h3').textContent.trim(), p = k.querySelector('p');
+    const url = location.origin + location.pathname + '#' + k.id;
+    const text = `🎁 Geschenkidee: ${titel}${p ? ' – ' + p.textContent.trim() : ''}\n${url}`;
+    if (navigator.share) { navigator.share({ text }).catch(() => {}); return; }
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => {
+      b.textContent = '✓ Kopiert'; setTimeout(() => { b.textContent = '📤 Teilen'; }, 2000);
+    }).catch(() => { location.hash = k.id; b.textContent = 'Link oben kopieren'; });
+  }, true);
+  const ideeZiel = location.hash.startsWith('#idee-') && document.getElementById(location.hash.slice(1));
+  if (ideeZiel) { ideeZiel.scrollIntoView({ block: 'center' }); ideeZiel.classList.add('idee-ziel'); }
 })();

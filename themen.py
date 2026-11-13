@@ -194,13 +194,13 @@ BLACKFRIDAY = [
         ('Tee-Geschenkset', 'Verschiedene Sorten zum Probieren.', 'Tee Geschenkset'),
         ('Plüsch-Hausschuhe', 'Warme Füße vom Aufstehen bis zum Schlafengehen.', 'Hausschuhe Plüsch'),
     ]),
-    ('Technik-Kleinigkeiten', 'lupe', 'Kleine Technik ist am Black Friday besonders oft im Angebot.', [
-        ('Kleine Powerbank', 'Passt in jede Tasche – rettet den Tag, wenn der Akku leer ist.', 'Powerbank klein'),
-        ('Bluetooth-Lautsprecher', 'Klein, aber laut genug für Küche und Bad.', 'Bluetooth Lautsprecher klein'),
-        ('Bluetooth-Kopfhörer', 'Für Sport, Bahn und Büro.', 'In Ear Kopfhörer Bluetooth'),
-        ('LED-Leselampe', 'Zum Anklemmen ans Buch – für Leseratten.', 'Leselampe Buch LED'),
-        ('Ladekabel-Set', 'Unspektakulär, aber jeder braucht eins mehr.', 'Ladekabel Set USB C'),
-        ('Handy-Stativ mit Fernauslöser', 'Für Gruppenfotos bei der Weihnachtsfeier.', 'Handy Stativ Bluetooth Fernauslöser'),
+    ('Küche & Wohlfühlen', 'herz', 'Für alle, die gern kochen, backen oder sich etwas Gutes tun – rund um den Black Friday oft reduziert.', [
+        ('Plätzchen-Ausstecher-Set', 'Sterne, Herzen und Tannen – für die Weihnachtsbäckerei.', 'Ausstecher Set Weihnachten'),
+        ('Gewürz-Geschenkset', 'Zum Ausprobieren für alle, die gern kochen.', 'Gewürze Geschenkset'),
+        ('Mini-Waffeleisen', 'Kleine Waffeln für gemütliche Nachmittage.', 'Mini Waffeleisen'),
+        ('Wellness-Set', 'Badezusatz, Creme und Peeling – Auszeit zum Verschenken.', 'Wellness Geschenkset Damen'),
+        ('Mütze und Schal im Set', 'Warm und schön – passt fast jedem.', 'Mütze Schal Set Winter'),
+        ('Kuschel-Bademantel', 'Flauschig für kalte Wintermorgen.', 'Bademantel Flausch'),
     ]),
     ('Spiele für den Abend', 'jubel', 'Spiele sind ein Geschenk für alle – und oft deutlich reduziert.', [
         ('Brettspiel für die Familie', 'Für Abende mit Groß und Klein.', 'Brettspiel Familie'),
@@ -209,6 +209,14 @@ BLACKFRIDAY = [
         ('Puzzle mit 1000 Teilen', 'Für ruhige Winterabende.', 'Puzzle 1000 Teile'),
         ('Quizspiel', 'Wer weiß am meisten? Gut für Familie und Team.', 'Quizspiel'),
         ('Krimidinner', 'Ein ganzer Abend als Geschenk.', 'Krimidinner Spiel'),
+    ]),
+    ('Technik-Kleinigkeiten', 'lupe', 'Kleine Technik ist am Black Friday besonders oft im Angebot.', [
+        ('Kleine Powerbank', 'Passt in jede Tasche – rettet den Tag, wenn der Akku leer ist.', 'Powerbank klein'),
+        ('Bluetooth-Lautsprecher', 'Klein, aber laut genug für Küche und Bad.', 'Bluetooth Lautsprecher klein'),
+        ('Bluetooth-Kopfhörer', 'Für Sport, Bahn und Büro.', 'In Ear Kopfhörer Bluetooth'),
+        ('LED-Leselampe', 'Zum Anklemmen ans Buch – für Leseratten.', 'Leselampe Buch LED'),
+        ('Ladekabel-Set', 'Unspektakulär, aber jeder braucht eins mehr.', 'Ladekabel Set USB C'),
+        ('Handy-Stativ mit Fernauslöser', 'Für Gruppenfotos bei der Weihnachtsfeier.', 'Handy Stativ Bluetooth Fernauslöser'),
     ]),
     ('Für Kinder', 'winkt', 'Für Wichteln in Kita, Schule und Familie.', [
         ('Bausteine-Set', 'Zum Bauen und Weiterbauen.', 'Bausteine Set Kinder'),
