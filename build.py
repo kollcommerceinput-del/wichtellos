@@ -111,7 +111,7 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <!--SOCIAL--></p>
@@ -1573,6 +1573,86 @@ def themen_pages():
          body, crumb='Black Friday', playful=True)
 
 
+# /wichteltuer-selber-bauen/ (Toni 13.11.: Werkzeug & Material, Einsteiger/Profi; Begriffe bei Amazon geprüft)
+WERKZEUG = [
+    ('Für Einsteiger: das reicht für die erste Tür', 'Mit diesen Werkzeugen klappt die erste Wichteltür an einem Nachmittag.', [
+        ('Japansäge', 'Zieht statt zu drücken – schneidet dünne Leisten sauber und gerade.', 'Japansäge Feinschnitt'),
+        ('Gehrungslade mit Säge', 'Für gerade und 45-Grad-Schnitte, z. B. am Türrahmen.', 'Gehrungslade mit Säge'),
+        ('Cutter mit Schneidematte', 'Für Pappe, Balsaholz und Filz – die Matte schont den Tisch.', 'Cuttermesser Schneidematte Set'),
+        ('Schleifschwämme', 'Kanten brechen und glätten, damit sich niemand einen Splitter holt.', 'Schleifschwamm Set'),
+        ('Nadelfeilen', 'Feine Feilen für Fenster, Rundungen und kleine Kerben.', 'Nadelfeilen Set'),
+        ('Holzleim', 'Hält Leisten und Eisstiele dauerhaft zusammen.', 'Holzleim schnell'),
+        ('Mini-Schraubzwingen', 'Halten die Teile fest, bis der Leim trocken ist.', 'Mini Schraubzwingen Set'),
+        ('Handbohrer', 'Kleine Löcher für Türknauf und Scharniere – ganz ohne Strom.', 'Drillbohrer Handbohrer'),
+    ]),
+    ('Malen & Gestalten', 'Damit aus Holz eine richtige Wichteltür wird.', [
+        ('Feines Pinsel-Set', 'Dünne Spitzen für Fenstersprossen, Holzmaserung und Schrift.', 'Pinsel Set fein Acryl'),
+        ('Acrylfarben', 'Deckend, schnell trocken, gut abwaschbar vom Pinsel.', 'Acrylfarben Set'),
+        ('Acryl-Klarlack', 'Schützt die bemalte Tür – sie hält viele Jahre.', 'Acryl Klarlack'),
+        ('Modellier-Werkzeug', 'Kleine Spachtel und Formhölzer für Masse und Ton.', 'Modellierwerkzeug Set'),
+        ('Modelliermasse', 'Lufttrocknend – für Mini-Brote, Pilze oder Wichtelschuhe.', 'Modelliermasse lufttrocknend'),
+        ('Nadelfilz-Set', 'Filzwolle und Nadeln für Teppich, Kissen oder einen eigenen Wichtel.', 'Nadelfilz Set Einsteiger'),
+    ]),
+    ('Material', 'Holz, Beschläge und Deko im Puppenhaus-Format.', [
+        ('Dünne Holzplatten', 'Sperrholz oder Balsa in 2 mm – für Tür, Rahmen und Möbel.', 'Balsaholz Platten'),
+        ('Holzleisten', 'Für Türrahmen, Zaun und Treppenstufen.', 'Holzleisten Modellbau'),
+        ('Eisstiele aus Holz', 'Günstig und vielseitig: Bretter, Zaun, Leiter, Schlitten.', 'Eisstiele Holz'),
+        ('Mini-Scharniere', 'Damit die Tür wirklich aufgeht.', 'Miniatur Scharniere'),
+        ('Mini-Türknauf', 'Der kleine Knauf macht die Tür erst echt.', 'Miniatur Türknauf Puppenhaus'),
+        ('Miniatur-Ziegelsteine', 'Für Mauer, Weg oder Kamin neben der Tür.', 'Miniatur Ziegelsteine Modellbau'),
+        ('Gras, Moos & Streu', 'Aus dem Modellbau – für einen echten kleinen Vorgarten.', 'Diorama Zubehör Grasstreu Moos'),
+        ('Ablösbare Klebestreifen', 'Die Tür hält an der Fußleiste – ohne Bohren, ohne Spuren.', 'tesa Powerstrips'),
+    ]),
+    ('Für Profis: wenn es genauer werden soll', 'Für alle, die nach der ersten Tür ein ganzes Wichtelhaus bauen wollen.', [
+        ('Pinzetten-Set', 'Winzige Teile greifen und genau platzieren.', 'Pinzetten Set Modellbau'),
+        ('Modellbau-Werkzeugset', 'Seitenschneider, Feilen und Messer in einem Set.', 'Modellbau Werkzeug Set'),
+        ('Akku-Heißklebestift', 'Klebt in Sekunden, z. B. der Bosch Gluey – handlich wie ein Stift.', 'Bosch Gluey Heißklebestift'),
+        ('Brandmal-Set', 'Holzschilder beschriften und Muster in die Tür brennen.', 'Brandmalerei Set'),
+        ('Multifunktionswerkzeug', 'Fräsen, schleifen, bohren, polieren – etwa ein Dremel.', 'Dremel Multifunktionswerkzeug'),
+        ('Mini-Tischkreissäge', 'Schneidet Leisten millimetergenau, z. B. von Proxxon.', 'Proxxon Tischkreissäge'),
+    ]),
+]
+SELBERBAU_SCHRITTE = [
+    ('Zuschneiden', 'Tür etwa 12 × 20 cm aus 2–4 mm Holz sägen, dazu Leisten für den Rahmen.'),
+    ('Schleifen', 'Alle Kanten glätten – wichtig, wenn Kinder die Tür anfassen.'),
+    ('Bemalen', 'Grundfarbe auftragen, trocknen lassen, dann Fenster, Maserung und Name aufmalen.'),
+    ('Beschläge', 'Mini-Scharniere und Türknauf mit Handbohrer und Leim anbringen.'),
+    ('Dekorieren', 'Fußmatte, Laterne, Moos oder Ziegelweg davor – fertig ist der Eingang.'),
+    ('Befestigen', 'Mit ablösbaren Klebestreifen an die Fußleiste – ohne Bohren und ohne Spuren.'),
+]
+
+
+def selberbau_page():
+    secs, n = [], 0
+    for title, intro, items in WERKZEUG:
+        n += len(items)
+        cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>' for t, x, *r in items)
+        secs.append(f'<h2>{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+    sections = '\n\n'.join(secs)
+    schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in SELBERBAU_SCHRITTE)
+    body = f"""<article>
+<h1>Wichteltür selber bauen: Werkzeug, Material &amp; Anleitung</h1>
+{ai_photo('wichtel3d-basteln', 'Plüsch-Wichtel sitzt an einem Basteltisch mit Holz, Pinseln und Farbe')}
+<p class="lead">Eine eigene Wichteltür ist schneller gebaut, als man denkt: ein Nachmittag, ein paar Holzleisten, Farbe – fertig. Hier findest du die Anleitung in 6 Schritten und {n} Ideen für Werkzeug und Material, sortiert für Einsteiger und Profis.</p>
+<p>Lieber fertig kaufen? Komplette Türen, Möbel und Deko gibt es beim <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a>. Was der Wichtel dann 24 Tage lang anstellt, steht bei der <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a>.</p>
+
+<h2>Anleitung: Wichteltür in 6 Schritten</h2>
+<ol>
+{schritte}
+</ol>
+<p class="tip">💡 <b>Mit Kindern bauen:</b> Sägen und Bohren übernehmen die Großen – Schleifen, Bemalen und Dekorieren schaffen schon Kindergartenkinder.</p>
+
+{sections}
+
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<p class="hint">Sicherheit: Säge, Cutter und Heißkleber gehören in Erwachsenenhand. Miniaturen sind oft verschluckbar – bei Kindern unter 3 Jahren außer Reichweite aufstellen.</p>
+{CTA}
+</article>"""
+    page('/wichteltuer-selber-bauen/', 'Wichteltür selber bauen: Werkzeug, Material & Anleitung',
+         f'Wichteltür selber bauen in 6 Schritten: {n} Ideen für Werkzeug und Material – Japansäge, Pinsel, Mini-Scharniere, Holz – für Einsteiger und Profis.',
+         body, crumb='Wichteltür selber bauen', playful=True)
+
+
 def zubehoer_page():
     secs = []
     n = 0
@@ -1586,7 +1666,7 @@ def zubehoer_page():
 <h1>Wichtel-Zubehör: alles für die Wichteltür</h1>
 {ai_photo('wichtel3d-tuer', 'Kleine rote Wichteltür in der Fußleiste, aus der ein Plüsch-Wichtel herausschaut')}
 <p class="lead">Von der kleinen Tür bis zum leuchtenden Wichteldorf: Hier findest du {n} Ideen für Wichtel-Zubehör – Möbel, Licht, Wichtel-Post, Figuren, Bücher und Bastelmaterial. Alles im Puppenhaus-Format, vieles unter 10 €, manches für die ganz große Wichtelwelt.</p>
-<p>Noch keinen Plan für die 24 Tage? Den gibt es mit Begrüßungsbrief und Wichtelnamen-Generator auf der Seite <a href="/wichteltuer/">Wichteltür: 24 Streiche</a>. Ausmalbilder und Türschilder zum Ausdrucken findest du bei den <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbildern</a>.</p>
+<p>Noch keinen Plan für die 24 Tage? Den gibt es mit Begrüßungsbrief und Wichtelnamen-Generator auf der Seite <a href="/wichteltuer/">Wichteltür: 24 Streiche</a>. Ausmalbilder und Türschilder zum Ausdrucken findest du bei den <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbildern</a>. Lieber selbst bauen? Werkzeug, Material und Anleitung gibt es unter <a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a>.</p>
 
 {sections}
 
@@ -2676,7 +2756,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -2776,6 +2856,7 @@ def main():
     onni_kalender_page()
     ausmal_page()
     zubehoer_page()
+    selberbau_page()
     tassen_page()
     advent_page()
     themen_pages()
