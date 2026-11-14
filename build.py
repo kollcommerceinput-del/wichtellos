@@ -528,7 +528,6 @@ def gift_page(budget):
 <p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a> · Lieber 24 kleine Freuden? <a href="/adventskalender-ideen/">Adventskalender-Ideen →</a></p>
 {CTA}
 {chr(10).join(sections)}
-<div class="ad-slot">Anzeige (Platzhalter)</div>
 <h2>Tipps für Wichtelgeschenke unter {budget} Euro</h2>
 <ul>
 {tips}
@@ -806,7 +805,6 @@ def dice_page():
 <h2>Häufige Fragen zum Würfelwichteln</h2>
 {faq}
 {supplies_block([('Fertiges Wichtel-Würfelspiel', 'Mit Karten und Würfel – auspacken und loslegen, ohne Vorbereitung.', 'Wichtel Würfelspiel')] + SUPPLIES)}
-<div class="ad-slot">Anzeige (Platzhalter)</div>
 <div class="cta-box">
   <p>Lieber klassisch wichteln, ohne Würfel? Die Namen lassen sich online in einer Minute auslosen.</p>
   <a class="btn-primary" href="/">Wichteln auslosen</a>
@@ -861,7 +859,6 @@ def scrap_page():
 <h2>24 Ideen fürs Schrottwichteln</h2>
 {lists}
 
-<div class="ad-slot">Anzeige (Platzhalter)</div>
 
 <h2>Nichts Passendes zu Hause?</h2>
 <p>Dann tut es auch ein günstiger Scherzartikel – Hauptsache, alle lachen.</p>
@@ -2868,7 +2865,7 @@ FAQ = [
     ('Welche Regeln gelten beim Wichteln?', 'Die wichtigsten: Jeder beschenkt genau eine Person. Niemand verrät vorher, wen er gezogen hat. Alle halten sich an das vereinbarte Budget. Und das Geschenk sollte zur Person passen – im Zweifel lieber etwas Kleines zum Naschen oder Wohlfühlen als einen Scherzartikel. Lustige Spiel-Varianten sind <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> und <a href="/schrottwichteln/">Schrottwichteln</a>.'),
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
-    ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 60 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
+    ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 100 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
     ('Sieht der Organisator, wer wen zieht?', 'Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
     ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.'),
     ('Kann ich Wünsche oder Tipps für den Wichtel hinterlegen?', 'Ja. Tippe neben einem Namen auf „💡 Tipp“ und notiere z. B. „mag Tee, liebt Katzen“. Den Tipp sieht nur, wer diese Person zieht – zusammen mit passenden Geschenkideen. Auch Tipps stecken nur im Link und landen nicht auf unserem Server.'),

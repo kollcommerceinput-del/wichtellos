@@ -62,7 +62,7 @@
         <div id="people"></div>
         <p id="paste-note" class="paste-note" role="status" hidden></p>
         <button type="button" id="add-person" class="btn-secondary">+ Person hinzufügen</button>
-        <p id="max-note" class="hint" hidden>Maximal 60 Personen.</p>
+        <p id="max-note" class="hint" hidden>Maximal 100 Personen.</p>
       </div>
 
       <details class="card excl-card" id="excl-card">
@@ -90,7 +90,6 @@
         <a class="btn-primary" href="/geschenkfinder/">Jetzt Ideen entdecken →</a>
       </div>
     </div>
-    <div class="ad-slot">Anzeige (Platzhalter)</div>
 
 <!--FAQ-->
 
@@ -137,7 +136,6 @@
         <button type="button" id="redraw-no" class="btn-secondary">Abbrechen</button>
       </div>
     </div>
-    <div class="ad-slot">Anzeige (Platzhalter)</div>
   </section>
 
   <!-- Ansicht 3: geheimer Link -->
@@ -180,7 +178,6 @@
     <a class="more-link" href="/wichtelgruss/">💌 Deinem Wichtel-Partner einen Gruß schicken →</a>
     <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 
-    <div class="ad-slot">Anzeige (Platzhalter)</div>
 
     <div class="card" style="text-align:center">
       <h2>Selbst eine Wichtelgruppe auslosen?</h2>
@@ -222,7 +219,7 @@
 (() => {
   'use strict';
   const $ = (s) => document.querySelector(s);
-  const MAX_PEOPLE = 60;
+  const MAX_PEOPLE = 100;
   const DRAFT_KEY = 'wichtellos-draft';
   const RESULT_KEY = 'wichtellos-result';
 
