@@ -2128,7 +2128,7 @@ def onni_kalender_page():
 
 <h2>Für die Großen: Du suchst noch Geschenke?</h2>
 <p class="hint">Hier geht's direkt zu den Ideen (bewusst keine Werbelinks auf dieser Kinderseite): <a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a> · <a href="/adventskalender-befuellen/">Adventskalender befüllen</a> · <a href="/wichtelgeschenke-fuer-kinder/">Geschenke für Kinder</a> · <a href="/geschenkfinder/">Geschenkfinder mit über 100 Ideen</a></p>
-<p class="hint">Bilder und Erzählstimme der Geschichten sind mit KI-Unterstützung entstanden, die Geschichten haben wir selbst geschrieben.</p>
+<p class="hint">Geschichten, Bilder und Erzählstimme sind mit Hilfe von KI entstanden.</p>
 </article>'''
     page('/onni-adventskalender/', 'Onnis Adventskalender: 24 Wichtel-Geschichten für Kinder',
          'Onnis Adventskalender: Ab 1. Dezember jeden Tag ein Türchen mit einer kurzen Wichtel-Geschichte als Video – kostenlos, ohne Anmeldung, passend zur Wichteltür.',
