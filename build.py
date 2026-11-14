@@ -1617,6 +1617,25 @@ BACK_ZUBEHOER = [
         ('Plätzchendosen', 'Zum Aufbewahren – oder gefüllt als Geschenk.', 'Plätzchendose Weihnachten'),
     ]),
 ]
+# 14.11. Toni: weitere einfache Rezepte (recherchiert, Mengen/Zeiten an den Originalseiten geprüft; Schritte in eigenen Worten, Quelle verlinkt)
+MEHR_REZEPTE = [
+    ('Kekse aus nur 3 Zutaten', 'ohne Ei', 'ca. 60 Kekse · 175 °C Ober-/Unterhitze · 10–12 Min. · 30 Min. kühlen',
+     ['220 g Weizenmehl', '110 g Zucker', '150 g kalte Butter in kleinen Stücken'],
+     'Alles zu einem Teig verkneten (ist er zu krümelig, hilft 1 TL eiskaltes Wasser), zu zwei Kugeln formen und kalt stellen. Dann ausrollen, ausstechen und backen.',
+     'Backen macht glücklich (Kathrin Runge)', 'https://www.backenmachtgluecklich.de/rezepte/einfache-kekse-aus-3-zutaten.html'),
+    ('Haferflockenkekse', 'ohne Ausrollen', 'ca. 50 Kekse · 200 °C Ober-/Unterhitze · 10–12 Min.',
+     ['200 g weiche Butter', '200 g Zucker', '1 Päckchen Vanillezucker', '1 Ei', '250 g Haferflocken', '100 g Mehl', '1 Päckchen Backpulver'],
+     'Butter und Zucker verrühren, Vanillezucker und Ei dazu, dann Haferflocken, Mehl und Backpulver unterrühren. Mit zwei Teelöffeln kleine Häufchen mit Abstand aufs Blech setzen – ideal für Kinder, die noch nicht ausstechen mögen.',
+     'Chefkoch (ines_m)', 'https://www.chefkoch.de/rezepte/928771198155245/Haferflockenkekse.html'),
+    ('Klassische Butterkekse', 'zum Ausstechen', 'ca. 60 Stück · 180 °C (Umluft 160 °C) · 8–10 Min. · 1–2 Std. kühlen',
+     ['150 g kalte Butter', '70 g Puderzucker', '1 Päckchen Bourbon-Vanillezucker', '1 Prise Salz', '1 Eigelb (Größe M)', '240 g Mehl'],
+     'Butter mit Puderzucker, Vanillezucker, Salz und Eigelb kurz verkneten, dann das Mehl einarbeiten. Gut kühlen, 4 mm dick ausrollen, ausstechen und backen, bis sie zartbraun sind.',
+     'essen & trinken', 'https://www.essen-und-trinken.de/rezepte/butterkekse-12094788.html'),
+    ('Einfache Lebkuchen-Plätzchen', 'mit Honig', 'ca. 60 Stück · 180 °C Ober-/Unterhitze · 10–15 Min. · 1 Std. kühlen',
+     ['110 g Butter', '80 g brauner Zucker', '170 g Honig', '400 g Weizenmehl', '½ TL Natron', '1½ TL Backpulver', '1 EL Lebkuchengewürz', '1 mittelgroßes Ei'],
+     'Butter, Zucker und Honig im Topf erwärmen, bis sich der Zucker löst (das macht ein Erwachsener), etwas abkühlen lassen. Mit den trockenen Zutaten und dem Ei verkneten, kühlen, dünn ausrollen und ausstechen.',
+     'Backen macht glücklich (Kathrin Runge)', 'https://www.backenmachtgluecklich.de/rezepte/einfache-lebkuchen-plaetzchen-zum-ausstechen.html'),
+]
 
 
 def plaetzchen_page():
@@ -1628,6 +1647,11 @@ def plaetzchen_page():
     sections = '\n\n'.join(secs)
     zutaten = '\n'.join(f'  <li>{esc(z)}</li>' for z in BACK_ZUTATEN)
     schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in BACK_SCHRITTE)
+    mehr = '\n'.join(
+        f'<h3>{esc(n)} <small>({esc(art)})</small></h3>\n<p><b>{esc(fakt)}</b></p>\n<ul>\n'
+        + '\n'.join(f'  <li>{esc(z)}</li>' for z in zut)
+        + f'\n</ul>\n<p>{esc(kurz)}</p>\n<p class="tip">Originalrezept mit allen Schritten: <a href="{url}" rel="noopener" target="_blank">{esc(quelle)}</a></p>'
+        for n, art, fakt, zut, kurz, quelle, url in MEHR_REZEPTE)
     rezept_ld = {'@context': 'https://schema.org', '@type': 'Recipe', 'name': 'Einfache Butterplätzchen mit Zimt',
                  'description': 'Einfaches Plätzchen-Rezept zum Backen mit Kindern: Butterplätzchen mit Zimt zum Ausstechen und Verzieren.',
                  'recipeYield': 'ca. 40 Plätzchen', 'prepTime': 'PT20M', 'cookTime': 'PT10M', 'totalTime': 'PT60M',
@@ -1651,6 +1675,10 @@ def plaetzchen_page():
 {schritte}
 </ol>
 <p class="tip">💡 Der Teig lässt sich gut am Vortag vorbereiten – eingewickelt hält er im Kühlschrank 2 Tage.</p>
+
+<h2>Noch mehr einfache Keksrezepte</h2>
+<p>Vier bewährte Rezepte mit wenigen Zutaten – Mengen, Temperatur und Zeiten wie im Original, dort stehen auch alle Schritte ausführlich.</p>
+{mehr}
 
 <h2>Wichtel-Kekse: so wird aus dem Plätzchen ein Wichtel</h2>
 <ol>

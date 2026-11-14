@@ -35,6 +35,9 @@ const PINS = [
   ['bf-15', 'geschenke/socken.jpg', '50% 50%', 'Wichtel-Budget 15&nbsp;€?', 'Diese Ideen sind jetzt oft reduziert', 'Ideen ansehen →', 'BLACK FRIDAY'],
   ['bf-heute', 'geschenke/kerze.jpg', '50% 50%', 'Heute: Black&nbsp;Friday', 'Wichtelgeschenke jetzt günstiger', 'Zu den Angeboten →', 'NUR HEUTE · 27.11.'],
   ['bf-cyber', 'onni-geschenk-tisch.jpg', '50% 45%', 'Cyber Monday: letzte Chance', 'Wichtelgeschenke im Angebot', 'Jetzt ansehen →', 'CYBER MONDAY · 30.11.', '50% 75%'],
+  // 14.11. neue Seiten (Toni: Kekse + Kuscheldecke = Onnis Liebling), Bilder von Toni
+  ['plaetzchen', '../../../kuscheldecke/onni-backstube-2k.jpg', '50% 58%', 'Plätzchen backen mit Kindern', 'Einfaches Rezept + Wichtel-Kekse', 'Zum Rezept →'],
+  ['kuscheldecke', '../../../kuscheldecke/onni-kuscheldecke-2k.jpg', '50% 56%', 'Kuschel&shy;decke verschenken', '13 Ideen für gemütliche Winterabende', 'Alle Ideen ansehen →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
