@@ -1,0 +1,280 @@
+{
+ "out": "onni-folge-09.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und große Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen neun. Onni, der Baumeister.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf und dachte als Erstes an den Spiegel-Wichtel. Ob schon jemand sein Rätsel gelöst hatte? Er schlug die Ringelsocke zurück, stand auf und öffnete seine Tür.",
+   1.4
+  ],
+  [
+   "E",
+   "Der Brief war fort. Onni lächelte und lief los, durch den Flur und ins Wohnzimmer. Dort war es dunkel. Die Mütze war ihm wieder über die Augen gerutscht, aber den Weg zum Weihnachtsbaum kannte er ja. Heute lief er aber weiter, hinüber zum Sofa. Davor lag ein großer, dicker Teppich.",
+   1.4
+  ],
+  [
+   "E",
+   "Mitten auf dem Teppich stieß er mit dem Fuß gegen etwas Hartes."
+  ],
+  [
+   "O",
+   "Au. Mein Zeh."
+  ],
+  [
+   "E",
+   "Onni hüpfte auf einem Bein und rieb sich den Fuß. Dann tastete er nach dem, was ihm im Weg gelegen hatte. Es war hart und glatt und hatte Ecken und Kanten. Und daneben lag noch so ein Ding. Und noch eins. Und noch eins."
+  ],
+  [
+   "E",
+   "Onni schob seine Mütze hoch. Im Mondlicht lagen auf dem Teppich bunte Holzklötze. Rote, gelbe, blaue und grüne, große und kleine. Die großen waren für Onni so groß wie ein Koffer, die kleinen wie ein Hocker."
+  ],
+  [
+   "O",
+   "Bauklötze. Daraus kann man etwas bauen."
+  ],
+  [
+   "E",
+   "Onni wusste sofort, was. Im Wichtelwald bauten die Wichtel ihre Häuschen in die Wurzeln der Tannen. Aber einen Turm hatte dort noch keiner gebaut. Jedenfalls keinen richtig hohen."
+  ],
+  [
+   "O",
+   "Ich baue den höchsten Turm, den ein Wichtel je gebaut hat."
+  ],
+  [
+   "E",
+   "Er krempelte die Ärmel seiner Strickjacke hoch und fing an. Klotz für Klotz schob er heran, mit beiden Händen und mit der Schulter. Dann stemmte er den nächsten hoch und setzte ihn auf den ersten.",
+   1.2
+  ],
+  [
+   "O",
+   "Eins. Zwei. Fünf."
+  ],
+  [
+   "E",
+   "Onni stutzte und kratzte sich unter der Mütze."
+  ],
+  [
+   "O",
+   "Nein. Nach zwei kommt drei. Also noch mal. Drei. Vier."
+  ],
+  [
+   "E",
+   "Der Turm wurde höher und höher. Bald war er größer als Onni. Für den nächsten Klotz musste Onni am Turm hinaufklettern, den Klotz unter dem Arm. Doch da fing der Turm an zu wackeln. Erst ein bisschen. Dann immer mehr."
+  ],
+  [
+   "O",
+   "Oh, oh. Halt still."
+  ],
+  [
+   "E",
+   "Aber der Turm hielt nicht still. Onni sprang gerade noch rechtzeitig hinunter. Und dann kippte der ganze Turm um.",
+   2.2
+  ],
+  [
+   "E",
+   "Zum Glück lag dort ein dicker Teppich. Die Klötze purzelten weich und fast ohne Lärm durcheinander. Im Haus blieb alles still. Onni lag auf dem Rücken zwischen roten, gelben und blauen Klötzen und lachte leise."
+  ],
+  [
+   "O",
+   "Noch mal. Aber diesmal klüger."
+  ],
+  [
+   "E",
+   "Onni setzte sich auf und dachte nach. Warum war der Turm umgefallen? Er schaute sich die Klötze genau an. Unten hatte ein kleiner gelegen und oben ein großer. Und geklettert war er am Turm selbst."
+  ],
+  [
+   "O",
+   "Die großen nach unten, die kleinen nach oben. Und zum Hinaufsteigen baue ich mir eine Treppe."
+  ],
+  [
+   "E",
+   "Diesmal ging Onni ganz langsam vor. Ganz unten kam der größte Klotz hin. Darauf ein etwas kleinerer. Und darauf ein noch kleinerer. Daneben baute er aus den übrigen Klötzen eine Treppe, Stufe für Stufe. Über die Treppe trug er die kleinen Klötze nach oben, einen nach dem anderen.",
+   1.8
+  ],
+  [
+   "E",
+   "Den letzten Klotz schob er auf Zehenspitzen ganz nach oben. Dann stieg er die Treppe hinunter, trat einen Schritt zurück und hielt die Luft an. Der Turm wackelte nicht. Kein bisschen. Er stand."
+  ],
+  [
+   "O",
+   "Er steht. Er steht wirklich. Das sind bestimmt hundert Klötze."
+  ],
+  [
+   "E",
+   "Es waren sechs. Aber für einen Wichtel, der so groß ist wie ein Daumen, sind sechs Klötze übereinander sehr, sehr hoch. Onni legte den Kopf in den Nacken und schaute hinauf, bis ihm die Mütze nach hinten rutschte."
+  ],
+  [
+   "O",
+   "Der ist ja viermal so groß wie ich. Wenn das die Wichtel im Wald sehen könnten."
+  ],
+  [
+   "E",
+   "Eine Weile stand Onni noch da und bewunderte seinen Turm. Dann lief er zurück zu seiner roten Tür. Seine Arme waren schwer vom vielen Tragen, und seine Beine auch.",
+   1.6
+  ],
+  [
+   "E",
+   "Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.6
+  ],
+  [
+   "O",
+   "Heute Nacht war ich Baumeister. Ob du einen noch höheren Turm schaffst?",
+   1.2
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.8
+  ],
+  [
+   "E",
+   "Onni kroch unter seine Ringelsocke. Draußen im Wohnzimmer, vor dem Sofa, stand sein Turm im Mondlicht, und daneben die kleine Treppe. Ob er morgen noch steht? Onni hoffte es sehr."
+  ],
+  [
+   "O",
+   "Mein erster Turm."
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   6,
+   -1.2,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   7,
+   -1.3,
+   "laufen-holz",
+   1.2,
+   -14
+  ],
+  [
+   15,
+   -1,
+   "klopfen-kurz",
+   0.8,
+   -14
+  ],
+  [
+   26,
+   -1.6,
+   "klopfen-kurz",
+   1.5,
+   -14
+  ],
+  [
+   21,
+   -2,
+   "plumps",
+   1.8,
+   -8
+  ],
+  [
+   31,
+   -1.5,
+   "laufen-holz",
+   1.4,
+   -10
+  ],
+  [
+   32,
+   -1.5,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   34,
+   -1.7,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   39,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
