@@ -116,7 +116,7 @@ Onni schnupperte. Sein weißes Tuch roch nach der langen Reise, nach Schmutz und
 
 „Heute ist Waschtag!“, beschloss er.
 
-In der Küche tropfte der Wasserhahn. Plitsch. Platsch. Onni stellte eine Teetasse darunter und wartete, bis sie voll war. Für ihn war sie so groß wie eine große Badewanne.
+In der Küche stand ein großer weißer Kasten und brummte tief vor sich hin. „Der Brummkasten brummt, und der Wasserhahn tropft“, staunte Onni. Plitsch. Platsch. Onni stellte eine Teetasse darunter und wartete, bis sie voll war. Für ihn war sie so groß wie eine große Badewanne.
 
 Dazu holte er sich einen Krümel Seife. Dann rubbelte und schrubbte er, bis es überall schäumte. Eine Seifenblase schwebte hoch und landete genau auf seiner Nase. Plopp! Onni kicherte.
 
@@ -359,7 +359,7 @@ In der elften Nacht schaute Onni zuerst in den Spiegel. Seine Nase war immer noc
 
 Und sie roch etwas: Käse! Milch! Und Marmelade!
 
-Der Duft kam aus der Küche, aus dem großen Brummschrank. Brumm, brumm. Er war so hoch wie ein Hochhaus.
+Der Duft kam aus der Küche, aus dem großen Brummkasten. Brumm, brumm. Er war so hoch wie ein Hochhaus.
 
 Onni zog an der Tür. Nichts. Viel zu schwer!
 

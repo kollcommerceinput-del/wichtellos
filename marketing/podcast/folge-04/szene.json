@@ -121,7 +121,15 @@
   ],
   [
    "E",
-   "In der Küche tropfte der Wasserhahn. Oben in der Spüle stand eine Teetasse, genau darunter. Tropfen für Tropfen hatte sie sich gefüllt, bis zum Rand."
+   "In der Küche stand ein großer weißer Kasten, viel höher als ein Haus für Onni. Er brummte tief und gleichmäßig vor sich hin. Und in der Spüle tropfte der Wasserhahn."
+  ],
+  [
+   "O",
+   "Der Brummkasten brummt, und der Wasserhahn tropft. Hier ist ja ganz schön was los."
+  ],
+  [
+   "E",
+   "Genau unter dem Hahn stand eine Teetasse. Tropfen für Tropfen hatte sie sich gefüllt, bis zum Rand."
   ],
   [
    "O",
@@ -279,67 +287,74 @@
    21,
    -1,
    "tropfen-hahn",
-   "bis:28",
+   "bis:30",
    null
   ],
   [
-   25,
+   21,
+   0.3,
+   "brummen",
+   "bis:25",
+   -6
+  ],
+  [
+   27,
    -1.1,
    "blubbern2",
    2,
    null
   ],
   [
-   27,
+   29,
    -0.4,
    "plopp",
    0.8,
    null
   ],
   [
-   28,
+   30,
    0.3,
    "kichern",
    1.5,
    null
   ],
   [
-   30,
+   32,
    -1.1,
    "laufen-holz",
    4,
    -14
   ],
   [
-   32,
+   34,
    -1.1,
    "tropfen-leine",
-   "bis:40",
+   "bis:42",
    null
   ],
   [
-   38,
+   40,
    -1.1,
    "plumps",
    1,
    null
   ],
   [
-   40,
+   42,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   42,
+   44,
    -1.1,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   49,
+   51,
    6,
    "gloeckchen",
    1.6,
