@@ -183,8 +183,14 @@ async function buendeln(k, dir, fehlend) {
     af.push(`[${n}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:${ende.toFixed(2)},asetpts=PTS-STARTPTS,volume='${ausdruck}':eval=frame,afade=t=in:d=1.5,afade=t=out:st=${(ende - 3).toFixed(2)}:d=3[mus]`);
     mix.push('[mus]');
   }
-  af.push(`${mix.join('')}amix=inputs=${mix.length}:normalize=0:duration=longest,apad=whole_dur=${ende.toFixed(2)},loudnorm=I=-18:TP=-1.5:LRA=11[a]`);
+  // 14.11. (Toni: Uhr „mit Satzende unterbrochen“): loudnorm im Einfach-Modus regelt dynamisch (Pausen lauter) → Hintergrund pumpt.
+  // Jetzt 2 Durchgänge: erst messen, dann linear = eine feste Verstärkung für die ganze Folge.
+  const LN = 'I=-18:TP=-1.5:LRA=20';
+  const graph = (ln) => [...af, `${mix.join('')}amix=inputs=${mix.length}:normalize=0:duration=longest,apad=whole_dur=${ende.toFixed(2)},loudnorm=${ln}[a]`].join(';');
+  const mess = require('child_process').spawnSync(FFMPEG, ['-hide_banner', '-nostats', ...ai, '-filter_complex', graph(LN + ':print_format=json'), '-map', '[a]', '-t', ende.toFixed(2), '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 64 << 20 });
+  const m = JSON.parse(mess.stderr.slice(mess.stderr.lastIndexOf('{'), mess.stderr.lastIndexOf('}') + 1));
+  const ln2 = `${LN}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;
   const out = path.join(dir, k.out || 'probe.mp3');
-  execFileSync(FFMPEG, ['-y', '-loglevel', 'error', ...ai, '-filter_complex', af.join(';'), '-map', '[a]', '-ar', '44100', '-t', ende.toFixed(2), '-c:a', 'libmp3lame', '-b:a', '128k', out]);
+  execFileSync(FFMPEG, ['-y', '-loglevel', 'error', ...ai, '-filter_complex', graph(ln2), '-map', '[a]', '-ar', '44100', '-t', ende.toFixed(2), '-c:a', 'libmp3lame', '-b:a', '128k', out]);
   console.log(`fertig: ${out} (${ende.toFixed(1)} s)`);
 })().catch((e) => { console.error(e.message); process.exit(1); });
