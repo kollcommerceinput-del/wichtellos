@@ -1,0 +1,26 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Geheimnisvoller, spannender Erzähler eines Kinder-Teasers: leise, neugierig machend, mit einem Augenzwinkern, als würde er ein Geheimnis verraten. Normales Tempo. Auf Deutsch.",
+   "tempo": 1.35
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Was macht dein Wichtel, wenn du schläfst?",
+   0.25
+  ],
+  [
+   "E",
+   "Er steht auf und macht Streiche … und ganz leise zieht er seine Kreise.",
+   0.3
+  ],
+  [
+   "E",
+   "Ab dem ersten Dezember. Folgt uns!"
+  ]
+ ]
+}
