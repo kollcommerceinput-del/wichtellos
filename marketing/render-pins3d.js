@@ -38,6 +38,8 @@ const PINS = [
   // 14.11. neue Seiten (Toni: Kekse + Kuscheldecke = Onnis Liebling), Bilder von Toni
   ['plaetzchen', '../../../kuscheldecke/onni-backstube-2k.jpg', '50% 58%', 'Plätzchen backen mit Kindern', 'Einfaches Rezept + Wichtel-Kekse', 'Zum Rezept →'],
   ['kuscheldecke', '../../../kuscheldecke/onni-kuscheldecke-2k.jpg', '50% 56%', 'Kuschel&shy;decke verschenken', '13 Ideen für gemütliche Winterabende', 'Alle Ideen ansehen →'],
+  ['selber-bauen', '../../../selberbau/tuer-selbstgebaut-flow-2k.jpg', '50% 55%', 'Wichteltür selber bauen', 'Werkzeug, Material &amp; Anleitung', 'Zur Anleitung →'],
+  ['zubehoer', 'tuer.jpg', '40% 50%', 'Wichtel-Zubehör', '46 Ideen: Möbel, Licht, Briefkasten &amp; mehr', 'Alle Ideen ansehen →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
