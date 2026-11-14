@@ -983,7 +983,7 @@ def school_page():
 WA_FAQ = [
     ('Kann ich die Links einfach in unsere WhatsApp-Gruppe posten?', 'Bitte nicht: Jeder Link verrät, wen die jeweilige Person beschenkt. In die Gruppe gehört nur die Ankündigung – die Links schickst du einzeln im privaten Chat.'),
     ('Brauchen alle WhatsApp?', 'Nein. Für jede Person gibt es auch „E-Mail“ und „Link kopieren“, etwa für Signal, Telegram, Teams oder SMS. Für Kinder ohne Handy kannst du Lose ausdrucken.'),
-    ('Sieht der Organisator, wer wen gezogen hat?', 'Nur, wenn er fremde Links öffnet. Machst du selbst mit, öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.'),
+    ('Sieht der Organisator, wer wen gezogen hat?', 'Nein. Nach dem Auslosen siehst du nur die Links, nicht wer wen gezogen hat – das zeigt erst der jeweilige Link. Machst du selbst mit, öffne nur deinen eigenen Link – dann bleibt es auch für dich eine Überraschung.'),
     ('Was mache ich, wenn jemand seinen Link verliert?', 'Öffne WichtelLos auf dem Gerät, auf dem du ausgelost hast, und tippe auf „Letzte Auslosung wieder anzeigen“. Dort schickst du den Link einfach noch einmal.'),
     ('Kostet das etwas oder braucht man ein Konto?', 'Nein. WichtelLos ist kostenlos, niemand muss sich anmelden oder eine Nummer hinterlegen.'),
 ]
@@ -2866,7 +2866,7 @@ FAQ = [
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
     ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 100 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
-    ('Sieht der Organisator, wer wen zieht?', 'Nur, wenn er fremde Links öffnet. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
+    ('Sieht der Organisator, wer wen zieht?', 'Nein. Nach dem Auslosen siehst du nur die Links, nicht wer wen gezogen hat – das zeigt erst der jeweilige Link. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
     ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.'),
     ('Kann ich Wünsche oder Tipps für den Wichtel hinterlegen?', 'Ja. Tippe neben einem Namen auf „💡 Tipp“ und notiere z. B. „mag Tee, liebt Katzen“. Den Tipp sieht nur, wer diese Person zieht – zusammen mit passenden Geschenkideen. Auch Tipps stecken nur im Link und landen nicht auf unserem Server.'),
     ('Kann ich die Wichtel-Lose ausdrucken?', 'Ja. Nach dem Auslosen auf „Lose anzeigen und drucken“ tippen: Jede Person bekommt ein Los mit ihrem Namen außen und einem QR-Code innen. Ausschneiden, falten, verteilen – wer seinen Code scannt, sieht, wen er beschenkt. Die QR-Codes entstehen direkt in deinem Browser. Für Kinder ohne Handy gibt es Lose mit dem Namen innen, mehr unter <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a>.'),
