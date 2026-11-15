@@ -1,0 +1,29 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "G": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines lustigen TikTok-Clips, am Anfang gespielt gestresst und leicht dramatisch, als wäre das Wichteln-Organisieren eine Katastrophe – mit Augenzwinkern. Flott. Auf Deutsch.",
+   "tempo": 1.25
+  },
+  "E": {
+   "stimme": "Charon",
+   "stil": "Derselbe Erzähler, jetzt erleichtert, lässig und verschmitzt, als würde er einen genialen Trick verraten. Flott, mit Spannung. Auf Deutsch.",
+   "tempo": 1.3
+  },
+  "J": {
+   "stimme": "Charon",
+   "stil": "Derselbe Erzähler zum Schluss: energisch, motivierend, auffordernd, mit einem Lächeln. Auf Deutsch.",
+   "tempo": 1.2
+  }
+ },
+ "teile": [
+  ["G", "Du wurdest gezwungen, dieses Jahr das Wichteln zu organisieren?", 0.35],
+  ["E", "Kein Problem: keine Zettel, einfach Namen eintippen.", 0.25],
+  ["E", "Klick. Ausgelost. Zurücklehnen.", 0.3],
+  ["E", "Jeder kriegt seinen geheimen Wichtel-Link – per WhatsApp oder Mail.", 0.25],
+  ["E", "Hundert Prozent geheim, nicht mal du kannst schummeln!", 0.35],
+  ["E", "Checkt wichtellos Punkt de – gratis und ohne Anmeldung!", 0.45],
+  ["J", "Jetzt bist du dran!"]
+ ]
+}
