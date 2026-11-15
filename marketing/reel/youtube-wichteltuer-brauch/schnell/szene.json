@@ -1,0 +1,19 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Lebendiger, verschmitzter TikTok-Erzähler für Familien: flott, geheimnisvoll, mit Augenzwinkern, als würde er ein Geheimnis verraten. Auf Deutsch.",
+   "tempo": 1.35
+  }
+ },
+ "teile": [
+  ["E", "Psst … kennst du die Wichteltür?", 0.2],
+  ["E", "Dahinter wohnt ein Wichtel!", 0.2],
+  ["E", "In Dänemark heißt er Nisse – und seine Tür: Nissedør.", 0.2],
+  ["E", "Abends legen Kinder Kekse davor …", 0.1],
+  ["E", "… und morgens? Angebissen!", 0.25],
+  ["E", "Gesehen hat ihn noch nie jemand.", 0.25],
+  ["E", "Ab dem ersten Dezember zieht Onni bei uns ein. Folgt uns!"]
+ ]
+}
