@@ -1,4 +1,4 @@
-// TikTok „POV: winziger Mitbewohner“ – Wichteltür geht auf, Onni winkt, Bett, Brief, Tür zu (Toni 15.11., max. 12 s)
+// TikTok „POV: winziger Mitbewohner“ – Wichteltür geht auf, Onni winkt, Bett, Brief, Tür zu (Toni 15.11., Schluss langsamer + Folgt uns, ~13 s)
 // Bilder: „G:\Video bauen Projekte\TikTok Wichteltür“, Stimme stimme.mp3 (podcast-szene.js szene.json, tempo 1.4)
 // node render.js  → tiktok-wichteltuer.mp4 (1080×1920)
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
@@ -7,7 +7,7 @@ const P = 'G:/Video bauen Projekte/TikTok Wichteltür/';
 const AUDIO_AB = 0.3;             // Stimme 0,3 s früher beginnen lassen
 const B = [ // [Bild, bis Sekunde]
   ['A-tuer-zu.jpg', 1.7], ['C-geht-auf.jpg', 2.6], ['E-winkt.jpg', 3.15], ['D-arme-auf.jpg', 3.7], ['F-steht.jpg', 4.15],
-  ['G-glitzer.jpg', 4.6], ['J-bett.jpg', 5.65], ['I-brief-schreiben.jpg', 7.8], ['K-tuer-brief-licht.jpg', 9.6], ['B-tuer-brief.jpg', 11.8],
+  ['G-glitzer.jpg', 4.6], ['J-bett.jpg', 5.65], ['M-mandarinen-chaos.jpg', 6.85], ['I-brief-schreiben.jpg', 7.9], ['K-tuer-brief-licht.jpg', 10.9], ['B-tuer-brief.jpg', 13.2],
 ];
 const TEXTE = [ // [Text, von, bis] – immer oben, nie mittig
   ['POV:<br>Plötzlich hast du einen<br>winzigen Mitbewohner 🤏', 0, 2.75],
@@ -15,8 +15,9 @@ const TEXTE = [ // [Text, von, bis] – immer oben, nie mittig
   ['Komm rein! 🚪', 3.7, 4.55],
   ['Schlafplatz: Socke 🧦', 4.55, 5.65],
   ['Hobby: Chaos stiften … 😈', 5.65, 6.85],
-  ['… und Briefe schreiben 📝', 6.85, 7.8],
-  ['24 Wichtel-Streiche 🎄<br>Ab 1. Dezember!', 7.8, 11.8],
+  ['… und Briefe schreiben 📝', 6.85, 7.9],
+  ['Macht euch bereit! 🎄<br>Folgt uns und seid dabei!', 7.9, 11.1],
+  ['Ab 1. Dezember! ✨', 11.1, 13.2],
 ];
 const FPS = 30, W = 1080, H = 1920, tmp = path.join(__dirname, 'tmp'); fs.mkdirSync(tmp, { recursive: true });
 const ROOT = path.join(__dirname, '../../..');
