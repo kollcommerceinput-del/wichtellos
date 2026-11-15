@@ -4,14 +4,17 @@
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const { chromium } = require(path.join(__dirname, '../../../node_modules/playwright'));
 const H_ = (f) => path.join(__dirname, f), AUDIO_AB = 0.3;
+// SCHNELL=1 → TikTok-Fassung (Toni 15.11.: schneller, damit man es nochmal schaut): szene-schnell.json → stimme-schnell.mp3
+const S = process.env.SCHNELL === '1';
+const Z = S ? [2.8, 3.8, 5.15, 6.85, 9.15, 10.9, 13.35, 14.6] : [3.3, 4.5, 6.1, 8.1, 10.9, 13.1, 16.0, 17.7];
 const B = [ // [Bild, bis Sekunde, Ausrichtung, Zoom-Stärke]
-  ['zettelchaos.jpg', 3.3, 'center', 0.14], ['shots/1-formular.png', 4.5, 'top', 0.03], ['shots/2-namen.png', 6.1, 'top', 0.03],
-  ['shots/3-ergebnis.png', 8.1, 'top', 0.03], ['handy-gross.jpg', 10.9, 'center', 0.08], ['shots/5-aufgedeckt.png', 13.1, 'top', 0.03],
-  ['tmp/ende-1.png', 16.0, 'center', 0.02], ['tmp/ende-2.png', 17.7, 'center', 0.02],
+  ['zettelchaos.jpg', Z[0], 'center', 0.14], ['shots/1-formular.png', Z[1], 'top', 0.03], ['shots/2-namen.png', Z[2], 'top', 0.03],
+  ['shots/3-ergebnis.png', Z[3], 'top', 0.03], ['handy-gross.jpg', Z[4], 'center', 0.08], ['shots/5-aufgedeckt.png', Z[5], 'top', 0.03],
+  ['tmp/ende-1.png', Z[6], 'center', 0.02], ['tmp/ende-2.png', Z[7], 'center', 0.02],
 ];
 const TEXTE = [
-  ['POV: Du sollst das<br>Wichteln organisieren 😩', 0, 3.3, 'frei'], ['Keine Zettel –<br>nur Namen rein ✍️', 3.3, 6.1], ['1 Klick: ausgelost 🎲', 6.1, 8.1],
-  ['Geheimer Link per<br>WhatsApp & Mail 📲', 8.1, 10.9, 'frei'], ['100 % geheim –<br>auch für dich 👀', 10.9, 13.1],
+  ['POV: Du sollst das<br>Wichteln organisieren 😩', 0, Z[0]], ['Keine Zettel –<br>nur Namen rein ✍️', Z[0], Z[2]], ['1 Klick: ausgelost 🎲', Z[2], Z[3]],
+  ['Geheimer Link per<br>WhatsApp & Mail 📲', Z[3], Z[4]], ['100 % geheim –<br>auch für dich 👀', Z[4], Z[5]],
 ];
 const FPS = 30, W = 1080, H = 1920, tmp = H_('tmp'); fs.mkdirSync(tmp, { recursive: true });
 const ROOT = path.join(__dirname, '../../..');
@@ -54,10 +57,10 @@ const PUNKTE = ['Per WhatsApp & E-Mail', 'Bis 100 Personen', 'In 1 Minute ausgel
     fl.push(`[${n}:v]format=rgba,${fi}fade=t=out:st=${(e - 0.12).toFixed(2)}:d=0.12:alpha=1[t${i}]`, `[${last}][t${i}]overlay=0:0:enable='between(t,${a},${e})'[v${i + 1}]`);
     last = `v${i + 1}`; n++;
   });
-  ai.push('-ss', String(AUDIO_AB), '-i', H_('stimme.mp3'));
+  ai.push('-ss', String(AUDIO_AB), '-i', H_(S ? 'stimme-schnell.mp3' : 'stimme.mp3'));
   const dauer = B[B.length - 1][1];
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...ai, '-filter_complex', fl.join(';'), '-map', `[${last}]`, '-map', `${n}:a`,
     '-t', dauer.toFixed(2), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart',
-    H_('tiktok-whatsapp-100.mp4')], { stdio: 'inherit' });
+    H_(S ? 'tiktok-whatsapp-100-schnell.mp4' : 'tiktok-whatsapp-100.mp4')], { stdio: 'inherit' });
   console.log('fertig', dauer.toFixed(1), 's');
 })();
