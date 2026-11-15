@@ -30,6 +30,21 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
+  # Löscht das 66-MB-Website-Paket nach dem Veröffentlichen (sonst läuft der Actions-Speicher voll; das Original liegt in Git)
+  aufraeumen:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Website-Paket dieses Laufs löschen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for id in $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --jq '.artifacts[].id'); do
+            gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" && echo "gelöscht: $id"
+          done
+
   # Meldet geänderte Seiten per IndexNow an Bing, Yandex & Co. (Schlüssel: INDEXNOW_KEY in build.py)
   indexnow:
     needs: deploy

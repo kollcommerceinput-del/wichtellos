@@ -202,7 +202,7 @@ def ai_photo(name, alt, sizes=((480, 720), (800, 1200)), cls='photo photo-ai'):
 
 
 # Erklärvideo mit 3D-Wichtel (marketing/reel/reel-wichtel3d.mp4, fürs Web 540x960 ~2 MB): lädt erst nach Klick (site.js, data-video)
-VIDEO = {'src': '/fotos/wichtel3d-video.mp4', 'poster': '/fotos/wichtel3d-video-poster.webp', 'dauer': 'PT26S', 'datum': '2026-11-02'}
+VIDEO = {'src': '/fotos/wichtel3d-video.mp4', 'poster': '/fotos/wichtel3d-video-poster.webp', 'dauer': 'PT26S', 'datum': '2026-11-02T08:00:00+01:00'}
 
 
 def video_block(v=None):
@@ -1643,7 +1643,7 @@ def plaetzchen_page():
         secs.append(f'<h3>{esc(title)}</h3>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
     sections = '\n\n'.join(secs)
     zutaten = '\n'.join(f'  <li>{esc(z)}</li>' for z in BACK_ZUTATEN)
-    schritte = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in BACK_SCHRITTE)
+    schritte = '\n'.join(f'  <li id="schritt-{i}"><b>{esc(t)}:</b> {esc(x)}</li>' for i, (t, x) in enumerate(BACK_SCHRITTE, 1))
     mehr = '\n'.join(
         f'<h3>{esc(n)} <small>({esc(art)})</small></h3>\n<p><b>{esc(fakt)}</b></p>\n<ul>\n'
         + '\n'.join(f'  <li>{esc(z)}</li>' for z in zut)
@@ -1654,7 +1654,9 @@ def plaetzchen_page():
                  'recipeYield': 'ca. 40 Plätzchen', 'prepTime': 'PT20M', 'cookTime': 'PT10M', 'totalTime': 'PT60M',
                  'recipeCategory': 'Plätzchen', 'recipeCuisine': 'Deutsch', 'keywords': 'Plätzchen, Ausstechplätzchen, Backen mit Kindern, Weihnachten',
                  'recipeIngredient': BACK_ZUTATEN,
-                 'recipeInstructions': [{'@type': 'HowToStep', 'name': t, 'text': x} for t, x in BACK_SCHRITTE],
+                 'author': ORG,
+                 'recipeInstructions': [{'@type': 'HowToStep', 'name': t, 'text': x, 'url': f'{DOMAIN}/plaetzchen-backen-mit-kindern/#schritt-{i}'}
+                                        for i, (t, x) in enumerate(BACK_SCHRITTE, 1)],
                  'image': f'{DOMAIN}/fotos/wichtel3d-backstube-800.webp'}
     body = f"""<article>
 <h1>Plätzchen backen mit Kindern: einfaches Rezept &amp; Wichtel-Kekse</h1>
