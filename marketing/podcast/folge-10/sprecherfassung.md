@@ -26,7 +26,7 @@ E: Dann hob er die Nase und schnupperte. Im Wohnzimmer roch es süß und frisch 
 
 O: Mandarinen.
 
-E: Neben dem Sofa stand ein Korb auf dem Boden. Er war randvoll mit Mandarinen, und ein paar waren herausgekullert und lagen auf dem Teppich. Bestimmt hatte der Nikolaus sie gebracht. Onni lief hin. Jede Mandarine war fast so groß wie er selbst.
+E: Neben dem Sofa stand ein Korb auf dem Boden. Er war randvoll mit Mandarinen, und ein paar waren herausgekullert und lagen auf dem Teppich. Bestimmt hatte der Nikolaus sie gebracht. Onni lief hin.
 
 E: Onni strich über die Schale. Sie war rund und ein bisschen uneben, mit lauter winzigen Grübchen. Er ging einmal um die erste Mandarine herum. Dann um die zweite. Dann um die dritte.
 
@@ -88,7 +88,7 @@ E: Den Brief legte er vor seine Tür. Dann machte er sie leise zu.
 
 [Geräusch: Uhr endet, Stille]
 
-E: Onni kuschelte sich unter seine Ringelsocke. Da fiel ihm seine Nase wieder ein. Vorsichtig tastete er danach. Sie fühlte sich ganz normal an. Aber blau war sie bestimmt noch.
+E: Drinnen fiel ihm seine Nase wieder ein. Vorsichtig tastete er danach. Sie fühlte sich ganz normal an. Aber blau war sie bestimmt noch.
 
 O: Ob die Farbe bis morgen weg ist?
 
