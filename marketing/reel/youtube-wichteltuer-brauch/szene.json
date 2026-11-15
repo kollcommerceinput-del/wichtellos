@@ -1,0 +1,22 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Warmer, ruhiger Erzähler eines schönen Erklär-Films für Familien mit Kindern: leise staunend, geheimnisvoll, liebevoll, nicht verniedlichend. Natürliches Erzähltempo. Auf Deutsch.",
+   "tempo": 1.05
+  }
+ },
+ "teile": [
+  ["E", "Psst … hast du schon mal eine winzige Tür gesehen? Ganz unten an der Wand, gleich über der Fußleiste?", 0.5],
+  ["E", "Dahinter wohnt – so erzählt man sich – ein Wichtel.", 0.7],
+  ["E", "Das Wort „Wichtel“ ist uralt. Es kommt von „Wicht“ – und das hieß früher einfach: ein kleines Wesen.", 0.6],
+  ["E", "In Dänemark nennt man ihn Nisse, in Schweden Tomte. Ein kleiner Hausgeist mit roter Zipfelmütze, der heimlich im Haus wohnt.", 0.6],
+  ["E", "Und seine Tür hat sogar einen eigenen Namen: Nissedør – die Wichteltür.", 0.7],
+  ["E", "Abends legen die Kinder etwas Kleines davor. Einen Keks vielleicht. Oder einen Brief.", 0.6],
+  ["E", "Und am Morgen? Liegt da plötzlich eine kleine Überraschung.", 0.7],
+  ["E", "Gesehen hat den Wichtel aber noch nie jemand. Denn Wichtel sind scheu – und sehr, sehr schnell.", 0.6],
+  ["E", "Heute ziehen Wichtel auch bei uns in Deutschland ein, in der Adventszeit.", 0.6],
+  ["E", "Und bei uns? Zieht ab dem ersten Dezember Onni ein. Jeden Abend gibt es eine neue Geschichte von ihm."]
+ ]
+}
