@@ -1,0 +1,290 @@
+{
+ "out": "onni-folge-10.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und große Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen zehn. Onni und die Mandarinen-Gesichter.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf, und sein erster Gedanke war der Turm. Stand er noch? Schnell schlug er die Ringelsocke zurück, öffnete seine Tür und lief los, durch den Flur bis ins Wohnzimmer.",
+   2.2
+  ],
+  [
+   "E",
+   "Da stand er. Im Mondlicht, genau wie gestern. Sechs Klötze übereinander, und daneben die kleine Treppe. Onni klopfte stolz dagegen. Ganz vorsichtig natürlich."
+  ],
+  [
+   "O",
+   "Guter Turm."
+  ],
+  [
+   "E",
+   "Dann hob er die Nase und schnupperte. Im Wohnzimmer roch es süß und frisch zugleich. Genau so hatte es in der Nikolausnacht im Flur gerochen."
+  ],
+  [
+   "O",
+   "Mandarinen."
+  ],
+  [
+   "E",
+   "Neben dem Sofa stand ein Korb auf dem Boden. Er war randvoll mit Mandarinen, und ein paar waren herausgekullert und lagen auf dem Teppich. Bestimmt hatte der Nikolaus sie gebracht. Onni lief hin. Jede Mandarine war fast so groß wie er selbst."
+  ],
+  [
+   "E",
+   "Onni strich über die Schale. Sie war rund und ein bisschen uneben, mit lauter winzigen Grübchen. Er ging einmal um die erste Mandarine herum. Dann um die zweite. Dann um die dritte."
+  ],
+  [
+   "O",
+   "Ihr seht ja alle gleich aus. Rund und orange. Ganz schön langweilig."
+  ],
+  [
+   "E",
+   "Onni schaute sich um. Unter dem Sofa lag etwas Langes. Es war ein blauer Filzstift mit einer Kappe obendrauf, doppelt so lang wie Onni."
+  ],
+  [
+   "O",
+   "Damit bekommt ihr Gesichter."
+  ],
+  [
+   "E",
+   "Zuerst musste die Kappe ab. Onni stemmte die Füße gegen den Stift und zog mit beiden Händen. Er zog und zog, bis die Kappe auf einmal nachgab. Onni plumpste nach hinten auf den Teppich, die Kappe im Arm.",
+   1.8
+  ],
+  [
+   "E",
+   "Er rappelte sich wieder auf, klemmte den Stift unter den Arm wie einen langen Balken und stellte sich vor die erste Mandarine. Mit so einem großen Stift war Malen gar nicht leicht. Onni musste dabei um die Mandarine herumlaufen, ganz langsam, Schritt für Schritt.",
+   1.2
+  ],
+  [
+   "E",
+   "Auf die erste Mandarine malte er zwei runde Augen und einen großen, lachenden Mund."
+  ],
+  [
+   "O",
+   "Du bist die Fröhliche."
+  ],
+  [
+   "E",
+   "Auf die zweite malte er Augen, die halb zu waren, und einen Mund, so rund wie ein O, als würde sie gerade gähnen."
+  ],
+  [
+   "O",
+   "Du bist die Müde. Du gehörst eigentlich ins Bett."
+  ],
+  [
+   "E",
+   "Und auf die dritte malte er eine Nase, zwei Augen und darunter einen langen, langen Bart aus vielen kleinen Strichen."
+  ],
+  [
+   "O",
+   "Und du bist ich. Na ja, fast. Ich bin nicht so rund."
+  ],
+  [
+   "E",
+   "Onni trat ein paar Schritte zurück und betrachtete seine Mandarinen. Die Fröhliche, die Müde und die mit dem Bart. Jetzt sahen sie gar nicht mehr gleich aus."
+  ],
+  [
+   "E",
+   "Zufrieden drehte er sich um, den Stift noch unter dem Arm. Doch dabei schwang die Spitze herum und stupste ihn mitten auf die Nase."
+  ],
+  [
+   "O",
+   "Oh nein."
+  ],
+  [
+   "E",
+   "Onni legte den Stift ab und rieb sich die Nase. Sie fühlte sich ein bisschen feucht an. So schnell er konnte, lief er in den Flur zum großen Spiegel, seinem Zwillingsfenster. Das kannte er ja jetzt.",
+   1.6
+  ],
+  [
+   "E",
+   "Im Mondlicht schaute ihn der Spiegel-Wichtel an. Er hatte eine rote Mütze, einen weißen Bart und mitten im Gesicht eine leuchtend blaue Nase."
+  ],
+  [
+   "O",
+   "Meine Nase. Sie ist blau."
+  ],
+  [
+   "E",
+   "Onni rubbelte mit der Hand. Dann mit beiden Händen. Aber die Farbe blieb, wo sie war. Der Spiegel-Wichtel rubbelte genauso und hatte genauso wenig Glück."
+  ],
+  [
+   "O",
+   "Na gut. Dann bin ich jetzt eben ein Wichtel mit blauer Nase."
+  ],
+  [
+   "E",
+   "Bevor er schlafen ging, lief Onni noch einmal ins Wohnzimmer. Er setzte dem Filzstift die Kappe wieder auf, damit er nicht austrocknete. Das ging viel leichter als das Abziehen. Dann lief er zurück zu seiner roten Tür.",
+   1.6
+  ],
+  [
+   "E",
+   "Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.6
+  ],
+  [
+   "O",
+   "Heute Nacht habe ich den Mandarinen Gesichter gemalt. Welches gefällt dir am besten?",
+   1.2
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.8
+  ],
+  [
+   "E",
+   "Onni kuschelte sich unter seine Ringelsocke. Da fiel ihm seine Nase wieder ein. Vorsichtig tastete er danach. Sie fühlte sich ganz normal an. Aber blau war sie bestimmt noch."
+  ],
+  [
+   "O",
+   "Ob die Farbe bis morgen weg ist?"
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   6,
+   -2.1,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   6,
+   -1,
+   "laufen-holz",
+   0.9,
+   -14
+  ],
+  [
+   8,
+   2.2,
+   "schnuppern",
+   1,
+   -18
+  ],
+  [
+   16,
+   -1.7,
+   "plopp",
+   0.6,
+   -12
+  ],
+  [
+   16,
+   -1.1,
+   "plumps",
+   1,
+   -8
+  ],
+  [
+   27,
+   -1.5,
+   "rennen-holz",
+   1.3,
+   -12
+  ],
+  [
+   32,
+   -1.5,
+   "laufen-holz",
+   1.4,
+   -10
+  ],
+  [
+   33,
+   -1.5,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   35,
+   -1.7,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   40,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
