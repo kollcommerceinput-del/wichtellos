@@ -10,8 +10,8 @@ const B = [ // [Bild, bis Sekunde, Ausrichtung, Zoom-Stärke]
   ['tmp/ende-1.png', 16.0, 'center', 0.02], ['tmp/ende-2.png', 17.7, 'center', 0.02],
 ];
 const TEXTE = [
-  ['POV: Du sollst das<br>Wichteln organisieren 😩', 0, 3.3], ['Keine Zettel –<br>nur Namen rein ✍️', 3.3, 6.1], ['1 Klick: ausgelost 🎲', 6.1, 8.1],
-  ['Geheimer Link per<br>WhatsApp & Mail 📲', 8.1, 10.9], ['100 % geheim –<br>auch für dich 👀', 10.9, 13.1],
+  ['POV: Du sollst das<br>Wichteln organisieren 😩', 0, 3.3, 'frei'], ['Keine Zettel –<br>nur Namen rein ✍️', 3.3, 6.1], ['1 Klick: ausgelost 🎲', 6.1, 8.1],
+  ['Geheimer Link per<br>WhatsApp & Mail 📲', 8.1, 10.9, 'frei'], ['100 % geheim –<br>auch für dich 👀', 10.9, 13.1],
 ];
 const FPS = 30, W = 1080, H = 1920, tmp = H_('tmp'); fs.mkdirSync(tmp, { recursive: true });
 const ROOT = path.join(__dirname, '../../..');
@@ -20,10 +20,10 @@ const hg = 'data:image/jpeg;base64,' + fs.readFileSync(H_('zettelchaos.jpg')).to
 const PUNKTE = ['Per WhatsApp & E-Mail', 'Bis 100 Personen', 'In 1 Minute ausgelost', 'Geschenkefinder', 'Wichtelnamen-Generator'];
 (async () => {
   const br = await chromium.launch(), pg = await br.newPage({ viewport: { width: W, height: H } });
-  for (const [i, [t]] of TEXTE.entries()) {
+  for (const [i, [t, , , art]] of TEXTE.entries()) {  // alle Texte ohne Kasten (Toni 15.11.: Kasten liegt sonst über allem), kräftiger Schatten statt Kasten
     await pg.setContent(`<style>@font-face{font-family:F;src:url(${font})}body{margin:0;background:transparent}
       div{position:absolute;top:170px;left:60px;right:60px;text-align:center;font:600 76px/1.2 F,'Segoe UI Emoji';color:#fff;
-      text-shadow:0 0 18px #000c,0 4px 10px #000c;padding:28px 20px;border-radius:36px;background:#000b}</style><div>${t}</div>`);
+      text-shadow:0 0 6px #000,0 0 16px #000,0 0 28px #000c,0 4px 10px #000;padding:28px 20px;border-radius:36px;background:none}</style><div>${t}</div>`);
     await pg.screenshot({ path: path.join(tmp, `text-${i}.png`), omitBackground: true });
   }
   for (const n of [1, 2]) {
