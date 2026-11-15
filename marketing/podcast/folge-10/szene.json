@@ -1,5 +1,5 @@
 {
- "out": "onni-folge-10.mp3",
+ "out": "onni-folge-10-v2.mp3",
  "rollen": {
   "E": {
    "stimme": "Charon",
@@ -236,13 +236,6 @@
    "schnuppern",
    1,
    -18
-  ],
-  [
-   16,
-   -1.7,
-   "plopp",
-   0.6,
-   -12
   ],
   [
    16,
