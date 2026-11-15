@@ -305,14 +305,16 @@ def asset_v(html):
     return re.sub(r'/assets/([\w.-]+\.(?:css|js))"', rep, html)
 
 
-def amazon_url(query):
-    params = {'k': query, **({'tag': AMAZON_TAG} if AMAZON_TAG else {})}
+def amazon_url(query, max_eur=None):
+    # max_eur (16.11.): Amazon-Preisfilter „bis X €“ (rh=p_36:-Cent) – nur Filter, auf unserer Seite steht kein Preis
+    params = {'k': query, **({'rh': f'p_36:-{max_eur * 100}'} if max_eur else {}), **({'tag': AMAZON_TAG} if AMAZON_TAG else {})}
     return 'https://www.amazon.de/s?' + urlencode(params)
 
 
-def amazon_link(query, label='Ideen bei Amazon ansehen*'):
-    href = amazon_url(query)
-    return f'<a href="{esc(href)}" data-amazon="{esc(query)}" rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
+def amazon_link(query, label='Ideen bei Amazon ansehen*', max_eur=None):
+    href = amazon_url(query, max_eur)
+    mx = f' data-max="{max_eur}"' if max_eur else ''
+    return f'<a href="{esc(href)}" data-amazon="{esc(query)}"{mx} rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
 
 
 
@@ -499,9 +501,88 @@ def shop_card(data=False):
 </div>'''
 
 
+# Ausbau der Budget-Seiten (16.11., Search Console + Konkurrenz-Check: vorne stehen Listen mit 25–30 Ideen, Zahl im Titel,
+# keine Jahreszahl, kein FAQ). Zu den handverlesenen 12 kommen alle passenden Ideen aus gifts.py (Preisstufe, ohne „ab 18“,
+# ohne Dubletten), nach Kategorie gegliedert, + Inhaltsverzeichnis + FAQ (sichtbar + FAQPage). Erst 10 €, Rest nach Toni-OK.
+GIFT_AUSBAU = {5, 10, 15, 20, 30}  # 16.11. Toni: „ja super“ → alle fünf
+# Preisstufe der Zusatz-Ideen: „unter 10“ schließt alles darunter ein; ab 15 € nur die obere Hälfte, sonst wiederholen sich die Seiten
+GIFT_BAND = {5: (0, 5), 10: (0, 10), 15: (6, 15), 20: (11, 20), 30: (16, 30)}
+GIFT_JAHR = 2026
+GIFT_AUSBAU_TEXT = {
+    5: dict(
+        title='{n} Wichtelgeschenke unter 5 Euro ({j}): kleine Ideen mit Wirkung',
+        desc='{n} Wichtelgeschenke unter 5 Euro: Naschereien, Gemütliches und kleine Spaßmacher – ideal für Büro, Schule und kleine Budgets.',
+        faq=[
+            ('Was kann man zum Wichteln für 5 Euro verschenken?', 'Kakao am Stiel, Glückskekse, Duft-Teelichter, Handcreme oder ein witziger Notizblock – kleine Dinge, die trotzdem Freude machen. Oben findest du alle Ideen nach Themen sortiert.'),
+            ('Ist ein Budget von 5 Euro nicht zu wenig?', 'Nein. Gerade in Schulklassen, Vereinen oder großen Teams ist 5 Euro beliebt, weil es für alle machbar ist. Bei kleinem Budget zählt die Idee mehr als der Preis.'),
+            ('Wie wirkt ein 5-Euro-Geschenk wertvoller?', 'Kombiniere zwei Kleinigkeiten zu einem kleinen Set und verpacke sie liebevoll – mit Packpapier, Schleife und einem Tannenzweig wirkt auch ein kleines Geschenk besonders.'),
+            ('Kann man für 5 Euro auch etwas selber machen?', 'Ja, selbst Gemachtes kommt oft am besten an: Plätzchen oder gebrannte Mandeln im Glas, Badesalz oder eine bemalte Tasse. Anleitungen findest du bei den selbst gemachten Wichtelgeschenken.'),
+            ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+        ],
+    ),
+    15: dict(
+        title='{n} Wichtelgeschenke unter 15 Euro ({j}): Ideen mit Spielraum',
+        desc='{n} Wichtelgeschenke unter 15 Euro: Gemütliches, Spiele, Genuss und Praktisches – Geschenke, die auch nach Weihnachten noch Freude machen.',
+        faq=[
+            ('Was kann man zum Wichteln für 15 Euro verschenken?', 'Für 15 Euro passen ein Thermobecher, eine Lichterkette, ein Puzzle, ein Tee-Set oder ein kleines Partyspiel. Oben findest du alle Ideen nach Themen sortiert.'),
+            ('Ist 15 Euro ein gutes Wichtel-Budget?', 'Ja, 15 Euro sind ein guter Mittelweg: genug für ein Geschenk, das man wirklich benutzt, und trotzdem für alle bezahlbar – im Freundeskreis genauso wie im Team.'),
+            ('Was schenkt man Kollegen für 15 Euro?', 'Etwas, das man im Alltag nutzt: einen Thermobecher für den Arbeitsweg, eine Handyhalterung für den Schreibtisch oder ein Tee-Set für die Pause. Persönliches wie Parfüm lieber weglassen.'),
+            ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+        ],
+    ),
+    20: dict(
+        title='{n} Wichtelgeschenke unter 20 Euro ({j}): für Familie & Freunde',
+        desc='{n} Wichtelgeschenke unter 20 Euro: von Kuscheldecke bis Escape-Spiel – für Familie, Freunde und alle, die etwas Besonderes suchen.',
+        faq=[
+            ('Was kann man zum Wichteln für 20 Euro verschenken?', 'Für 20 Euro passen eine Kuscheldecke, ein Escape-Spiel für zu Hause, ein Quizspiel, eine Feinkost-Box oder eine kleine Powerbank. Oben findest du alle Ideen nach Themen sortiert.'),
+            ('Für wen passt ein Budget von 20 Euro?', 'Vor allem für Familie und Freundeskreis. Wer sich gut kennt, kann bei 20 Euro schon gezielt auf Hobbys und Lieblingsthemen eingehen.'),
+            ('Welche Wichtelgeschenke für 20 Euro machen am meisten Spaß?', 'Spiele, wenn ihr euch über die Feiertage seht – dann wird das Geschenk gleich gemeinsam ausprobiert. Gemütliches wie eine Kuscheldecke ist der sichere Klassiker.'),
+            ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+        ],
+    ),
+    30: dict(
+        title='{n} Wichtelgeschenke unter 30 Euro ({j}): Ideen mit Wow-Effekt',
+        desc='{n} Wichtelgeschenke unter 30 Euro: vom Krimidinner über den Bluetooth-Lautsprecher bis zum Pizzastein – für Familie und gute Freunde.',
+        faq=[
+            ('Was kann man zum Wichteln für 30 Euro verschenken?', 'Für 30 Euro passen ein Brettspiel, ein Krimidinner für zu Hause, ein kleiner Bluetooth-Lautsprecher, ein Pizzastein oder ein Wellness-Set. Oben findest du alle Ideen nach Themen sortiert.'),
+            ('Für wen passt ein Wichtel-Budget von 30 Euro?', 'Für die Familie und gute Freunde, bei denen du weißt, was ihnen gefällt. Bei 30 Euro lohnt sich ein Blick auf Hobbys – das macht das Geschenk persönlich.'),
+            ('Darf man beim Wichteln für 30 Euro Alkohol verschenken?', 'Nur, wenn du sicher weißt, dass die Person Alkohol trinkt und volljährig ist. Für alle anderen ist ein Kaffee-Probierset oder Feinkost die bessere Wahl.'),
+            ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+        ],
+    ),
+    10: dict(
+        title='{n} Wichtelgeschenke unter 10 Euro ({j}): auch für Kollegen',
+        desc='{n} Wichtelgeschenke unter 10 Euro: vom Naschen über Gemütliches bis zu kleinen Spielen – sortiert nach Thema, mit Tipps fürs Büro-Wichteln.',
+        faq=[
+            ('Was kann man zum Wichteln für 10 Euro verschenken?', 'Für 10 Euro passen besondere Schokolade oder Tee, Kuschelsocken, eine Duftkerze, ein Notizbuch oder ein kleines Spiel. Oben findest du alle Ideen nach Themen sortiert – vom Naschen bis zum Basteln.'),
+            ('Was schenkt man Kollegen zum Wichteln für 10 Euro?', 'Etwas Neutrales, das fast jedem gefällt: Leckereien, Tee, eine Tasse mit Spruch, eine Mini-Pflanze oder etwas für den Schreibtisch. Besser nicht: Parfüm, Kleidung in bestimmten Größen oder sehr persönliche Dinge.'),
+            ('Sind 10 Euro ein gutes Budget fürs Wichteln?', 'Ja, im Büro sind 10 Euro das häufigste Budget. Es ist für alle machbar und reicht für ein Geschenk, das wirklich Freude macht. Wichtig ist nur, dass sich alle vorher auf denselben Betrag einigen.'),
+            ('Wie verpacke ich ein Wichtelgeschenk für 10 Euro schön?', 'Packpapier, eine Schleife und ein Tannenzweig genügen. Auf das Päckchen kommt nur der Name der beschenkten Person – so bleibt geheim, wer der Wichtel war.'),
+            ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+        ],
+    ),
+}
+GIFT_KAT_REIHE = ['naschen', 'gemuetlich', 'spiele', 'lustig', 'kreativ', 'technik']
+
+
+def gift_extra_ideas(budget, schon):
+    """Ideen aus gifts.py in der Preisstufe der Seite, ohne Alkohol und ohne Dubletten zu den handverlesenen."""
+    lo, hi = GIFT_BAND[budget]
+    gesehen = {norm(n) for n in schon}
+    out = []
+    for i in IDEAS:
+        if not (lo <= i['budget'] <= hi) or '(ab 18)' in i['name'] or norm(i['name']) in gesehen:
+            continue
+        gesehen.add(norm(i['name']))
+        out.append(i)
+    return out
+
+
 def gift_page(budget):
     g = GIFTS[budget]
     path = f'/wichtelgeschenke-unter-{budget}-euro/'
+    if budget in GIFT_AUSBAU:
+        return gift_page_ausbau(budget)
     chips = '\n'.join(
         f'<a href="/wichtelgeschenke-unter-{b}-euro/"{" aria-current=\"page\"" if b == budget else ""}>unter {b} €</a>'
         for b in GIFT_BUDGETS)
@@ -539,6 +620,85 @@ def gift_page(budget):
     page(path, g['title'], g['desc'], body, crumb=f'Wichtelgeschenke unter {budget} Euro')
 
 
+def gift_page_ausbau(budget):
+    """Budget-Seite mit allen passenden Ideen (siehe GIFT_AUSBAU)."""
+    g, t = GIFTS[budget], GIFT_AUSBAU_TEXT[budget]
+    path = f'/wichtelgeschenke-unter-{budget}-euro/'
+    hand = [i for _, ideas in g['groups'] for i in ideas]
+    extra = gift_extra_ideas(budget, [n for n, _, _ in hand])
+    n = len(hand) + len(extra)
+    chips = '\n'.join(
+        f'<a href="/wichtelgeschenke-unter-{b}-euro/"{" aria-current=\"page\"" if b == budget else ""}>unter {b} €</a>'
+        for b in GIFT_BUDGETS)
+    abschnitte = []  # (id, Überschrift, Karten-HTML)
+    for k, (name, ideas) in enumerate(g['groups']):
+        cards = '\n'.join(f'''<div class="idea">
+  <h3>{esc(ti)}</h3>
+  <p>{esc(tx)}</p>
+  {amazon_link(q, max_eur=budget)}
+</div>''' for ti, tx, q in ideas)
+        if budget >= 20 and k == 0:  # eigener Shop (Toni 09.11.) – Tasse passt ab 20 €
+            teile = cards.split('\n<div class="idea">')
+            cards = '\n<div class="idea">'.join(teile[:2]) + '\n' + shop_card() + ''.join('\n<div class="idea">' + x for x in teile[2:])
+        abschnitte.append((f'tipp-{k + 1}', name, cards, name.replace(f' bis {budget} Euro', '')))
+    nur_kind = lambda i: set(i['ages']) <= {'k1', 'k2'}  # reine Kinder-Ideen bekommen einen eigenen Abschnitt
+    rest = []  # Kategorien (und Kinder-Ideen) mit weniger als 3 Ideen landen gesammelt unter „Weitere Ideen“
+    kinder = [i for i in extra if nur_kind(i)]
+    if len(kinder) < 3:
+        rest, kinder = list(kinder), []
+    for cat in GIFT_KAT_REIHE:
+        ideen = [i for i in extra if i['cats'][0] == cat and not nur_kind(i)]
+        if len(ideen) >= 3:
+            abschnitte.append((f'mehr-{cat}', f'Mehr Ideen bis {budget} €: {CAT_LABELS[cat]}', '\n'.join(idea_card(i, max_eur=budget) for i in ideen), CAT_LABELS[cat]))
+        else:
+            rest += ideen
+    if rest:
+        abschnitte.append(('mehr-weitere', f'Weitere Ideen bis {budget} €', '\n'.join(idea_card(i, max_eur=budget) for i in rest), 'Weitere Ideen'))
+    if kinder:
+        abschnitte.append(('fuer-kinder', f'Wichtelgeschenke für Kinder bis {budget} €',
+                           '\n'.join(idea_card(i, max_eur=budget) for i in kinder), 'Für Kinder'))
+    # (id, Überschrift, Karten, kurzer Name fürs Inhaltsverzeichnis) – doppelte Kurznamen bekommen „Mehr: “
+    gesehen = set()
+    for n_, (a, h, c, kurz) in enumerate(abschnitte):
+        if kurz in gesehen:
+            abschnitte[n_] = (a, h, c, f'Mehr: {kurz}')
+        gesehen.add(kurz)
+    inhalt = '\n'.join(f'  <li><a href="#{a}">{esc(kurz)}</a></li>' for a, _, _, kurz in abschnitte)
+    sections = '\n'.join(f'<h2 id="{a}">{esc(h)}</h2>\n<div class="idea-grid">\n{c}\n</div>' for a, h, c, _ in abschnitte)
+    tips = '\n'.join(f'<li>{esc(x)}</li>' for x in g['tips'])
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in t['faq'])
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in t['faq']]}
+    body = f'''<article>
+<h1>{n} Wichtelgeschenke unter {budget} Euro</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
+<p class="lead">{esc(g['intro'])} Insgesamt {n} Ideen – zuerst unsere Lieblinge, darunter alles weitere nach Themen sortiert.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<div class="chips">
+{chips}
+</div>
+{BF_BANNER}
+<nav class="toc" aria-label="Inhalt"><p><b>Inhalt</b></p><ul>
+{inhalt}
+  <li><a href="#tipps">Tipps</a> · <a href="#fragen">Häufige Fragen</a></li>
+</ul></nav>
+<p class="hint">Lieber nach Alter und Interessen filtern? <a href="/geschenkfinder/?budget={budget}">Zum Geschenkfinder →</a> · Lieber 24 kleine Freuden? <a href="/adventskalender-ideen/">Adventskalender-Ideen →</a></p>
+{CTA}
+{sections}
+<h2 id="tipps">Tipps für Wichtelgeschenke unter {budget} Euro</h2>
+<ul>
+{tips}
+</ul>
+{'<p>Wichtelt ihr im Team? Budget, Regeln und Ablauf findest du unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</p>' if budget <= 15 else ''}
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+{CTA}
+</article>'''
+    page(path, t['title'].format(n=n, j=GIFT_JAHR), t['desc'].format(n=n), body,
+         crumb=f'Wichtelgeschenke unter {budget} Euro', extra=ld(faq_ld))
+
+
 # ---------- Geschenkfinder, Kinder, Selbst gemacht ----------
 
 def norm(text):
@@ -555,7 +715,7 @@ def tag_line(idea):
     return f"{ages} · bis {idea['budget']} €{office}"
 
 
-def idea_card(idea, data=False):
+def idea_card(idea, data=False, max_eur=None):
     attrs = ''
     if data:
         # Alter bewusst nicht im Suchtext: „tee“ fände sonst alle Teenager-Ideen; Alter filtern die Chips
@@ -566,7 +726,7 @@ def idea_card(idea, data=False):
   <h3>{esc(idea['name'])}</h3>
   <p>{esc(idea['text'])}</p>
   <p class="tags">{esc(tag_line(idea))}</p>
-  {amazon_link(idea['query'])}
+  {amazon_link(idea['query'], max_eur=max_eur)}
 </div>'''
 
 

@@ -987,3 +987,10 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 
 /* Hochkant-Bild oben (13.11., Toni: „halbe Tür sieht schlecht aus“) – nicht auf 4:3 zuschneiden */
 @media (min-width: 601px) { .intro .photo-ai.hochkant { width: 220px; } .intro .photo-ai.hochkant img { aspect-ratio: auto; object-fit: contain; } }
+/* Inhaltsverzeichnis Budget-Seiten (16.11.) */
+.toc { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 12px 18px; margin: 14px 0 18px; }
+.toc p { margin: 0 0 6px; }
+.toc ul { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; }
+.toc li { margin: 4px 0; break-inside: avoid; }
+.toc a { line-height: 1.6; }
+@media (max-width: 640px) { .toc ul { columns: 1; } }

@@ -16,15 +16,16 @@
     }).catch(() => { label.textContent = text.split(' ').pop(); });
   });
 
-  window.amazonUrl = (query) => {
+  window.amazonUrl = (query, max) => {
     const url = new URL('https://www.amazon.de/s');
     url.searchParams.set('k', query);
+    if (max) url.searchParams.set('rh', `p_36:-${max * 100}`); // Preisfilter „bis X €“ (Budget-Seiten, 16.11.)
     if (AMAZON_TAG) url.searchParams.set('tag', AMAZON_TAG);
     return url.toString();
   };
 
   document.querySelectorAll('a[data-amazon]').forEach((a) => {
-    a.href = window.amazonUrl(a.dataset.amazon);
+    a.href = window.amazonUrl(a.dataset.amazon, +a.dataset.max || 0);
     a.target = '_blank';
     a.rel = 'sponsored nofollow noopener';
   });
