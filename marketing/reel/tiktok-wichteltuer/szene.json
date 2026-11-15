@@ -1,0 +1,19 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Lebendiger, verschmitzter TikTok-Erzähler für Familien: flott, frech, mit Augenzwinkern, als würde er eine witzige Neuigkeit verraten. Auf Deutsch.",
+   "tempo": 1.4
+  }
+ },
+ "teile": [
+  ["E", "Und plötzlich hast du einen winzigen Mitbewohner.", 0.35],
+  ["E", "Der Wichtel ist da!", 0.3],
+  ["E", "Komm rein!", 0.35],
+  ["E", "Schlafplatz: Socke.", 0.2],
+  ["E", "Hobby: Chaos stiften …", 0.1],
+  ["E", "… und Briefe schreiben.", 0.35],
+  ["E", "Macht euch bereit für vierundzwanzig Wichtel-Streiche! Ab dem ersten Dezember geht's los!"]
+ ]
+}
