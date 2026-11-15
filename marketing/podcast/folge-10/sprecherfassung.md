@@ -66,7 +66,7 @@ E: Onni legte den Stift ab und rieb sich die Nase. Sie fühlte sich ein bisschen
 
 [Geräusch: schnelle, leise Schritte auf Holzboden]
 
-E: Im Mondlicht schaute ihn der Spiegel-Wichtel an. Er hatte eine rote Mütze, einen weißen Bart und mitten im Gesicht eine leuchtend blaue Nase.
+E: Im Licht der Nacht schaute ihn der Spiegel-Wichtel an. Er hatte eine rote Mütze, einen weißen Bart und mitten im Gesicht eine leuchtend blaue Nase.
 
 O: Meine Nase. Sie ist blau.
 
