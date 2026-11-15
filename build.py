@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -257,7 +257,88 @@ def video_ld():
 SEARCH = []  # Suchindex: (Pfad, Titel, Beschreibung, Stichworte) – schreibt extras() nach /suche.json
 
 
+# Zusatzinhalt für dünne Seiten (16.11., Seiten-Check: 330–500 Wörter) – Abschnitt + sichtbare Fragen + FAQPage, vor </article>
+MEHR_INHALT = {
+    '/schrottwichteln/': ('''<h2>Tipps für gelungenes Schrottwichteln</h2>
+<ul>
+  <li><b>Regel vorher klären:</b> Nur Dinge, die man schon zu Hause hat – oder darf auch etwas vom Flohmarkt für höchstens 2–3 Euro dabei sein?</li>
+  <li><b>Lustig ja, eklig nein:</b> Nichts Kaputtes, Verdorbenes oder Benutztes wie alte Socken. Kitsch, Werbegeschenke und Fehlkäufe sind perfekt.</li>
+  <li><b>Verpackung gehört zum Witz:</b> Je schöner das Päckchen, desto größer das Lachen beim Auspacken.</li>
+  <li><b>Eine Geschichte dazu erzählen:</b> „Diese Vase hat meine Tante 2009 im Urlaub gekauft …“ – das macht aus Schrott einen Schatz.</li>
+  <li><b>Was übrig bleibt:</b> Nicht wegwerfen, sondern in eine Tauschkiste legen oder spenden.</li>
+</ul>
+<h2>Schrottwichteln oder normales Wichteln?</h2>
+<p>Beim normalen Wichteln kauft jeder ein neues Geschenk für eine bestimmte Person, die vorher ausgelost wird. Beim Schrottwichteln bringt jeder etwas mit, das er loswerden möchte, und erst der Würfel entscheidet, wer am Ende was bekommt. Es kostet also nichts, sorgt für viel Gelächter und ist nebenbei nachhaltig – ideal für Teams, in denen nicht jeder Geld ausgeben möchte.</p>
+''', [
+        ('Was ist Schrottwichteln?', 'Eine lustige Wichtel-Variante: Jeder bringt ein verpacktes Geschenk mit, das er zu Hause nicht mehr braucht – Kitsch, Fehlkäufe oder Werbegeschenke. Reihum wird gewürfelt und getauscht, bis jeder ein Päckchen hat.'),
+        ('Was darf man beim Schrottwichteln verschenken?', 'Alles, was noch funktioniert und sauber ist, aber zu Hause nur herumsteht: alte Deko, doppelte Bücher, Werbegeschenke, ungeliebte Tassen. Tabu sind kaputte, verdorbene oder benutzte Dinge.'),
+        ('Wie viel darf ein Schrottwichtel-Geschenk kosten?', 'Am besten gar nichts – das ist ja der Witz. Manche Gruppen erlauben einen Flohmarkt-Fund für 2 bis 3 Euro. Sprecht das vorher ab.'),
+        ('Wie läuft Schrottwichteln mit Würfeln ab?', 'Alle Päckchen liegen in der Mitte. In Runde 1 darf sich jeder, der eine 6 würfelt, ein Geschenk nehmen. In Runde 2 läuft ein Timer, und je nach Zahl wird weitergegeben, getauscht oder geklaut. Die genauen Regeln findest du bei Wichteln mit Würfeln.'),
+        ('Wie heißt Schrottwichteln noch?', 'Je nach Region auch Ramschwichteln oder Schrottgeschenke-Tausch. Im Englischen ist das Spiel als White Elephant bekannt.'),
+    ]),
+    '/wichteln-einladung-vorlage/': ('''<h2>Was in eine Wichtel-Einladung gehört</h2>
+<ul>
+  <li><b>Datum und Ort der Bescherung</b> – zum Beispiel bei der Weihnachtsfeier.</li>
+  <li><b>Budget</b> – im Büro sind 10 Euro üblich, in der Familie oft 20 bis 30 Euro.</li>
+  <li><b>Anmeldeschluss</b> – etwa eine Woche vor dem Auslosen.</li>
+  <li><b>Wie ausgelost wird</b> – zum Beispiel online mit geheimem Link für jeden.</li>
+  <li><b>Besondere Regeln</b> – etwa Schrottwichteln, Würfeln oder Buchstaben-Wichteln.</li>
+</ul>
+<h2>Einladung per WhatsApp oder E-Mail – Text zum Kopieren</h2>
+<blockquote><p>🎁 <b>Wir wichteln!</b> Bescherung am [Datum] bei [Ort], Budget [Betrag] Euro. Wer mitmachen will, meldet sich bis [Datum] bei mir. Danach lose ich online aus – jeder bekommt einen geheimen Link aufs Handy und sieht nur, wen er selbst beschenkt. 🤫</p></blockquote>
+<p>Wenn alle Namen da sind: <a href="/">Wichtelgruppe auslosen</a> und die Links verschicken. Wie das per WhatsApp geht, steht unter <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a>.</p>
+''', [
+        ('Wann sollte man zum Wichteln einladen?', 'Etwa 3 bis 5 Wochen vor der Bescherung. Dann bleibt Zeit für die Anmeldung, und nach dem Auslosen haben alle noch 2 bis 4 Wochen, um ein Geschenk zu besorgen.'),
+        ('Wie formuliere ich eine Einladung zum Wichteln im Büro?', 'Kurz und locker: Datum der Bescherung, Budget, Anmeldeschluss und wie ausgelost wird. Ein Satz mit Augenzwinkern hilft – und der Hinweis, dass Mitmachen freiwillig ist.'),
+        ('Kann ich die Einladung per WhatsApp verschicken?', 'Ja. Oben steht ein Text zum Kopieren. Für das Schwarze Brett oder die Kaffeeküche gibt es die Vorlage zum Ausdrucken mit Teilnehmerliste.'),
+        ('Muss jeder beim Wichteln mitmachen?', 'Nein, Wichteln sollte immer freiwillig sein – gerade im Büro. Wer nicht mitmachen möchte, ist bei der Bescherung trotzdem herzlich willkommen.'),
+    ]),
+    '/wunschzettel/': ('''<h2>Was auf einen guten Wunschzettel gehört</h2>
+<ul>
+  <li><b>Hobbys und Vorlieben:</b> „liest gern Krimis“, „trinkt viel Tee“, „mag alles mit Katzen“.</li>
+  <li><b>Lieblingsfarbe oder Stil</b> – praktisch bei Tassen, Schals oder Deko.</li>
+  <li><b>Größen</b> bei Socken, Mützen oder Handschuhen.</li>
+  <li><b>No-Gos</b> im Feld „Bitte nicht …“: Allergien, kein Alkohol, keine Deko.</li>
+</ul>
+<h2>Wunschzettel oder Tipp beim Auslosen?</h2>
+<p>Beides geht: Beim <a href="/">Auslosen</a> kann der Organisator zu jeder Person einen kurzen <b>💡 Tipp</b> eintragen – den sieht nur, wer diese Person zieht. Der Wunschzettel hier ist für alle, die lieber selbst aufschreiben, was sie sich wünschen, und ihn in die Gruppe schicken.</p>
+''', [
+        ('Wie funktioniert der Wichtel-Wunschzettel?', 'Du trägst deinen Namen und bis zu 5 Wünsche ein und schickst den Wunschzettel als Link, zum Beispiel per WhatsApp in eure Wichtelgruppe. Wer dich gezogen hat, öffnet den Link und weiß Bescheid.'),
+        ('Werden meine Wünsche gespeichert?', 'Nein. Die Wünsche stecken nur im Link selbst, im Teil nach dem #-Zeichen – der wird nie an unseren Server geschickt und nirgends gespeichert.'),
+        ('Ist ein Wunschzettel beim Wichteln nicht unfair?', 'Im Gegenteil: Er verhindert Fehlkäufe. Am besten schreibst du Ideen statt konkreter Produkte, dann bleibt trotzdem eine Überraschung.'),
+        ('Kostet der Wunschzettel etwas?', 'Nein, er ist kostenlos und braucht keine Anmeldung – weder für dich noch für deinen Wichtel.'),
+    ]),
+    '/rubbellos/': ('''<h2>Wann ein Rubbellos besonders gut passt</h2>
+<ul>
+  <li><b>Erlebnisse verschenken:</b> Kino, Konzert oder Ausflug lassen sich schlecht einpacken – als Rubbellos werden sie zur Überraschung.</li>
+  <li><b>Aus der Ferne:</b> Für Familie oder Freunde, die weit weg wohnen – der Link kommt sofort an.</li>
+  <li><b>Last Minute:</b> In zwei Minuten erstellt, auch wenn das eigentliche Geschenk erst später kommt.</li>
+  <li><b>Zum Wichteln:</b> Als Gutschein für ein gemeinsames Frühstück oder „Ich übernehme deinen Abwasch“.</li>
+</ul>
+''', [
+        ('Wie funktioniert ein Rubbellos per WhatsApp?', 'Du trägst ein, was unter der Rubbelschicht stehen soll, erstellst den Link und schickst ihn per WhatsApp, E-Mail oder einer anderen App. Die beschenkte Person öffnet den Link und rubbelt das Geschenk mit dem Finger frei.'),
+        ('Sieht man das Geschenk schon in der Nachricht?', 'Nein. Der Text, den du verschickst, verrät das Geschenk nicht – erst beim Freirubbeln wird es sichtbar.'),
+        ('Kostet das Rubbellos etwas?', 'Nein, das Rubbellos ist kostenlos und braucht keine Anmeldung.'),
+        ('Wird mein Geschenk gespeichert?', 'Nein. Der Inhalt steckt nur im Link selbst und wird nirgends gespeichert.'),
+    ]),
+}
+
+
+def mehr_inhalt(path, body, extra):
+    if path not in MEHR_INHALT:
+        return body, extra
+    blk, fq = MEHR_INHALT[path]
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in fq)
+    ld_ = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in fq]}
+    i = body.rfind('</article>')
+    block = f'{blk}<h2 id="fragen">Häufige Fragen</h2>\n{faq}\n'
+    body = body[:i] + block + body[i:] if i >= 0 else body + block
+    return body, extra + ld(ld_)
+
+
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
+    body, extra = mehr_inhalt(path, body, extra)
     if not noindex:
         SEARCH.append({'u': path, 't': title.split(' | ')[0], 'd': desc, 'k': ' '.join(re.sub(r'<[^>]+>', '', h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', body, re.S))})
     # Bild + Einleitung als Einheit (09.11., Toni: „Onni und daneben leerer Raum“): am Desktop Text mittig neben dem Bild,
@@ -699,6 +780,106 @@ def gift_page_ausbau(budget):
          crumb=f'Wichtelgeschenke unter {budget} Euro', extra=ld(faq_ld))
 
 
+# ---------- Buchstaben-Wichteln A–Z (16.11., Search Console: „wichtelgeschenk mit h für 5 euro“, „mit m“, „mit f für 15 euro“
+# – 71 Impr., 4 Klicks bei Platz 9 ohne eigene Seite) ----------
+# je Buchstabe (Name, bis €) – Name ist zugleich die Amazon-Suche; nichts mit Alkohol, keine Markennamen
+BUCHSTABEN = {
+    'A': [('Anti-Stress-Ball', 5), ('Apfelchips', 5), ('Aquarellkasten', 10), ('Armband aus Perlen', 10), ('Adventskalender', 15)],
+    'B': [('Badekugel', 5), ('Bilderbuch', 10), ('Bienenwachstücher', 15), ('Backmischung im Glas', 15), ('Brettspiel', 30)],
+    'C': [('Chili-Schokolade', 5), ('Cappuccino-Pulver mit Geschmack', 5), ('Comic', 10), ('Chips in besonderen Sorten', 5), ('Cocktail-Set alkoholfrei', 20)],
+    'D': [('Duftkerze', 10), ('Duschgel-Set', 10), ('Diamond Painting', 10), ('Dominospiel', 10), ('Decke mit Ärmeln', 30)],
+    'E': [('Edelsteine zum Sammeln', 10), ('Eiskratzer mit Handschuh', 10), ('Espressotassen', 15), ('Experimentierkasten', 15), ('Escape-Spiel für zu Hause', 20)],
+    'F': [('Flaschenöffner mit Spruch', 5), ('Fleecesocken', 5), ('Fingerpuppen', 10), ('Fotoalbum', 15), ('Feinkost-Box', 20)],
+    'G': [('Glückskekse', 5), ('Glühweingewürz', 5), ('Gummibärchen-Großpackung', 5), ('Gewürzmischung', 10), ('Gesellschaftsspiel', 20)],
+    'H': [('Handcreme', 5), ('Haargummis aus Samt', 5), ('Honig aus der Region', 10), ('Handwärmer', 10), ('Häkelset für Anfänger', 15)],
+    'I': [('Ingwertee', 5), ('Igel-Kuscheltier', 10), ('Ideenbuch zum Ausfüllen', 10), ('Insektenhotel', 15), ('Isolierbecher', 15)],
+    'J': [('Jo-Jo', 5), ('Jasmintee', 5), ('Jonglierbälle', 10), ('Jutebeutel mit Spruch', 10), ('Jahreskalender', 15)],
+    'K': [('Kakao am Stiel', 5), ('Kuschelsocken', 10), ('Kartenspiel', 10), ('Knobelspiel', 10), ('Kräuter-Anzuchtset', 15)],
+    'L': [('Lakritz-Mischung', 5), ('Lebkuchen', 5), ('Lippenpflege', 5), ('Lustige Socken', 10), ('Lichterkette mit Batterie', 15)],
+    'M': [('Marmelade', 5), ('Magnete mit Spruch', 5), ('Mini-Pflanze', 10), ('Malbuch für Erwachsene', 10), ('Mütze', 15)],
+    'N': [('Nagellack', 5), ('Nudeln in lustiger Form', 5), ('Notizbuch', 10), ('Nussmischung', 10), ('Nackenkissen', 20)],
+    'O': [('Origami-Papier', 5), ('Orangen-Schokolade', 5), ('Ohrenwärmer', 10), ('Ofenhandschuh', 10), ('Olivenöl', 15)],
+    'P': [('Pfefferminztee', 5), ('Pflanzensamen', 5), ('Popcorn-Set', 10), ('Puzzle', 15), ('Partyspiel', 15)],
+    'Q': [('Quietsche-Gummihuhn', 5), ('Quittengelee', 5), ('Quartett-Kartenspiel', 5), ('Quizbuch', 10), ('Quizspiel', 20)],
+    'R': [('Retro-Süßigkeiten', 5), ('Radiergummis in lustigen Formen', 5), ('Raclette-Gewürz', 5), ('Rätselbuch', 10), ('Raumduft', 10)],
+    'S': [('Socken', 5), ('Seifenblasen', 5), ('Schokolade', 5), ('Sukkulente', 10), ('Schlafmaske', 15)],
+    'T': [('Teelichter mit Duft', 5), ('Tasse mit Spruch', 10), ('Trinkschokolade', 10), ('Thermobecher', 15), ('Tee-Geschenkset', 15)],
+    'U': [('Untersetzer aus Holz', 10), ('USB-Stick', 10), ('USB-Lichterkette', 10), ('Uhr für den Schreibtisch', 15), ('Umhängetasche', 20)],
+    'V': [('Vintage-Postkarten', 5), ('Vanille-Duftkerze', 10), ('Vase klein', 10), ('Vorratsdose', 10), ('Vogelfutterhaus', 15)],
+    'W': [('Washi-Tape', 5), ('Wollsocken', 10), ('Wintertee', 10), ('Würfelspiel', 10), ('Wärmflasche mit Bezug', 15)],
+    'X': [('X-Mas-Socken', 10), ('XXL-Socken', 10), ('XXL-Schokolade', 10), ('XXL-Tasse', 15), ('Xylophon für Kinder', 15)],
+    'Y': [('Yoga-Tee', 5), ('Yo-Yo', 5), ('Yoga-Block', 10), ('Yogamatte', 20), ('Yeti-Mütze', 15)],
+    'Z': [('Zuckerstangen', 5), ('Zimtsterne', 5), ('Zauberwürfel', 10), ('Zettelbox', 10), ('Zirbenkissen', 20)],
+}
+BUCHSTABEN_FAQ = [
+    ('Was ist Buchstaben-Wichteln?', 'Eine Wichtel-Variante mit Zusatzregel: Das Geschenk muss mit einem bestimmten Buchstaben anfangen – meist mit dem Anfangsbuchstaben des Vornamens der beschenkten Person, oder jeder bekommt einen Buchstaben ausgelost. Wer Anna zieht, sucht also etwas mit A.'),
+    ('Was schenkt man mit H für 5 Euro?', 'Zum Beispiel Handcreme, Haargummis aus Samt oder ein kleines Glas Honig. Etwas mehr Budget? Dann Handwärmer oder ein Häkelset für Anfänger.'),
+    ('Was schenkt man mit M für 5 Euro?', 'Marmelade, Magnete mit Spruch oder ein kleines Malheft. Mit 10 Euro passen auch eine Mini-Pflanze oder ein Malbuch für Erwachsene.'),
+    ('Welche Buchstaben sind schwierig?', 'Q, X und Y. Hier helfen Quizspiel oder Quittengelee, X-Mas- und XXL-Ideen sowie Yoga-Tee oder Yo-Yo. Viele Gruppen lassen schwierige Buchstaben auch einfach weg.'),
+    ('Darf man beim Buchstaben-Wichteln ein Wortspiel nutzen?', 'Ja, das macht oft den meisten Spaß: „Kuschelsocken“ statt „Socken“ für K oder „XXL-Tasse“ für X. Hauptsache, die Gruppe hat vorher abgesprochen, dass das zählt.'),
+    ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
+]
+
+
+def buchstaben_page():
+    path = '/wichtelgeschenke-mit-buchstaben/'
+    n = sum(len(v) for v in BUCHSTABEN.values())
+    nav = ' '.join(f'<a href="#buchstabe-{L.lower()}">{L}</a>' for L in BUCHSTABEN)
+    teile = []
+    for L, ideen in BUCHSTABEN.items():
+        karten = '\n'.join(f'''<div class="idea">
+  <h3>{esc(name)}</h3>
+  <p class="tags">bis {b} €</p>
+  {amazon_link(name, max_eur=b)}
+</div>''' for name, b in ideen)
+        teile.append(f'<h2 id="buchstabe-{L.lower()}">Wichtelgeschenke mit {L}</h2>\n<div class="idea-grid">\n{karten}\n</div>')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in BUCHSTABEN_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in BUCHSTABEN_FAQ]}
+    buchst = ''.join(BUCHSTABEN)
+    body = f'''<article>
+<h1>Wichtelgeschenke mit Buchstaben: {n} Ideen von A bis Z</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Zipfelmütze hält ein Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
+<p class="lead">Beim Buchstaben-Wichteln muss das Geschenk mit einem bestimmten Buchstaben anfangen – meist mit dem Anfangsbuchstaben der beschenkten Person. Hier findest du zu jedem Buchstaben von A bis Z fünf Ideen, mit Budget von 5 bis 30 Euro – auch für Q, X und Y.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<div class="chips buchstaben-nav">
+{nav}
+</div>
+<div class="buchstabe-los no-print">
+  <button type="button" class="btn-secondary" id="buchstabe-ziehen">🎲 Zufälligen Buchstaben ziehen</button>
+  <span id="buchstabe-ergebnis" aria-live="polite"></span>
+</div>
+{BF_BANNER}
+<h2>So funktioniert Buchstaben-Wichteln</h2>
+<ol>
+  <li><b>Auslosen, wer wen beschenkt</b> – online geht das in einer Minute, jeder bekommt seinen geheimen Link.</li>
+  <li><b>Buchstaben festlegen:</b> entweder der Anfangsbuchstabe des Vornamens der beschenkten Person – oder jeder zieht einen Buchstaben (Knopf oben).</li>
+  <li><b>Budget absprechen</b>, zum Beispiel 5 oder 10 Euro.</li>
+  <li><b>Geschenk suchen,</b> das mit dem Buchstaben anfängt – Wortspiele sind ausdrücklich erlaubt.</li>
+  <li><b>Bei der Bescherung</b> darf jeder raten, warum das Geschenk zum Buchstaben passt.</li>
+</ol>
+{CTA}
+{chr(10).join(teile)}
+<p>Mehr Ideen nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · weitere Spielarten unter <a href="/wichteln-varianten/">Wichteln-Varianten</a>.</p>
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+{CTA}
+</article>
+<script>
+(() => {{
+  const b = document.getElementById('buchstabe-ziehen'), out = document.getElementById('buchstabe-ergebnis'), L = '{buchst}';
+  b.addEventListener('click', () => {{
+    const x = L[Math.floor(Math.random() * L.length)];
+    out.innerHTML = 'Dein Buchstabe: <b>' + x + '</b> – <a href="#buchstabe-' + x.toLowerCase() + '">Ideen ansehen</a>';
+  }});
+}})();
+</script>'''
+    page(path, f'Wichtelgeschenke mit Buchstaben: {n} Ideen von A bis Z ({GIFT_JAHR})',
+         'Buchstaben-Wichteln: Zu jedem Buchstaben von A bis Z fünf Wichtelgeschenke für 5 bis 30 Euro – auch für Q, X und Y. Mit Regeln und Buchstaben-Los.',
+         body, crumb='Wichtelgeschenke mit Buchstaben', extra=ld(faq_ld))
+
+
 # ---------- Geschenkfinder, Kinder, Selbst gemacht ----------
 
 def norm(text):
@@ -971,8 +1152,9 @@ def dice_page():
 </div>
 </article>'''
     # Titel 09.11. neu (Google: Platz 1,5 für „wichteln würfeln“, aber 0 Klicks) – Nutzen + Ausdrucken nach vorn
-    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln 1–6 + Spielplan zum Ausdrucken',
-         'Würfelwichteln einfach erklärt: Was bei jeder Zahl von 1 bis 6 passiert, Ablauf in 2 Runden mit Timer, 5 Varianten und Regelkarte zum Ausdrucken – kostenlos.', body,
+    # 16.11.: trotz Titel 09.11. weiter Platz 1,5 und 0 Klicks (Snippet beantwortet die Frage) → Klickgrund, den kein Snippet ersetzt
+    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln + Online-Würfel & Timer (gratis)',
+         'Würfelwichteln ohne Würfel? Hier würfeln, Timer starten, Regel 1–6 wird angezeigt – plus Ablauf in 2 Runden, 5 Varianten und Spielplan zum Ausdrucken.', body,
          crumb='Wichteln mit Würfeln', mascot='wuerfel', extra=ld(faq_ld))
 
 
@@ -1224,8 +1406,9 @@ def whatsapp_page():
 <h2>Und jetzt: das passende Geschenk</h2>
 <p>Ideen nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a> – oder im <a href="/geschenkfinder/">Geschenkfinder</a> nach Alter und Interessen filtern.</p>
 </article>'''
-    page('/wichteln-per-whatsapp/', 'Wichteln per WhatsApp: online auslosen & Links verschicken',
-         'Wichteln per WhatsApp: Gruppe online auslosen, jedem seinen geheimen Link schicken – ohne Zettel, ohne Anmeldung. So geht\'s in 4 Schritten, kostenlos.', body,
+    # 16.11.: Platz 8 (Google) bei 0 Klicks → konkreter Nutzen + „ohne App“ in den Titel
+    page('/wichteln-per-whatsapp/', 'Wichteln per WhatsApp: in 1 Minute auslosen – ohne App, gratis',
+         'Namen eintragen, auslosen, jedem seinen geheimen Link per WhatsApp schicken – bis 100 Personen, ohne App und ohne Anmeldung. Anleitung mit Bildern in 4 Schritten.', body,
          extra=ld(faq_ld), crumb='Wichteln per WhatsApp', mascot='winkt')
 
 
@@ -3021,6 +3204,7 @@ FAQ = [
     ('Was ist Wichteln?', ERKL_GROSS + ' Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule. ' + LINK_GROSS
      + ' · Für Kinder: <a href="/onni-adventskalender/#was-ist-ein-wichtel">Was ist ein Wichtel? (Video, 2:42)</a>'
      + ' · Regeln Schritt für Schritt: <a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a>'),
+    ('Woher kommt das Wichteln?', 'Das Wort kommt von „Wicht“ – im Altdeutschen einfach ein kleines Wesen. Wichtel sind Hausgeister aus Sagen und Märchen, die heimlich Gutes tun und nie gesehen werden wollen; in Dänemark heißen sie Nisse, in Schweden Tomte. Daraus entstand der Brauch, sich in der Adventszeit gegenseitig heimlich zu beschenken. Mehr dazu: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a> · <a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a>'),
     ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
     ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>'),
     ('Wie läuft Wichteln ab?', 'In 5 Schritten: 1. Gruppe zusammenstellen. 2. Budget und Termin für die Bescherung festlegen. 3. Auslosen, wer wen beschenkt – zum Beispiel hier online. 4. Geschenk besorgen, verpacken und mit dem Namen des Beschenkten beschriften. 5. Bescherung: Alle Geschenke werden gemeinsam übergeben und ausgepackt. Ob ihr danach verratet, wer wessen Wichtel war, entscheidet ihr.'),
@@ -3094,7 +3278,8 @@ def tool_page():
             'inLanguage': 'de-DE', 'publisher': ORG}
     extra = ld(app, faq, site, video_ld())
     html = (SRC / 'tool.html').read_text(encoding='utf-8')
-    html = html.replace('<!--HEAD-->', head('Wichteln online auslosen – kostenloser Wichtelgenerator',
+    # 16.11.: Startseite bei Google Ø Platz 49 – „Wichtelgenerator“ nach vorn (Bing: Platz 1–2 mit demselben Inhalt)
+    html = html.replace('<!--HEAD-->', head('Wichtelgenerator: Wichteln online auslosen – kostenlos',
                                              'Kostenloser Wichtelgenerator: in 1 Minute auslosen, geheime Links per WhatsApp, Tipps für den Wichtel und Lose mit QR-Code zum Ausdrucken. Ohne Anmeldung.',
                                              '/', extra))
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
@@ -3111,7 +3296,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3191,6 +3376,7 @@ def main():
     tool_page()
     for b in GIFT_BUDGETS:
         gift_page(b)
+    buchstaben_page()
     finder_page()
     kids_page()
     diy_page()

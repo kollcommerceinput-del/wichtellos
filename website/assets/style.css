@@ -994,3 +994,6 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .toc li { margin: 4px 0; break-inside: avoid; }
 .toc a { line-height: 1.6; }
 @media (max-width: 640px) { .toc ul { columns: 1; } }
+/* Buchstaben-Wichteln (16.11.) */
+.buchstabe-los { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 12px 0 16px; }
+.buchstabe-los #buchstabe-ergebnis { font-size: 17px; }

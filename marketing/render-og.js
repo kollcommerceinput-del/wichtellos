@@ -9,11 +9,12 @@ const font = 'data:font/woff2;base64,' + fs.readFileSync(path.join(ROOT, 'assets
 
 // [Slug = Pfad ohne Schrägstriche, Pose, Titel, Untertitel]
 const PAGES = [
-  ['wichtelgeschenke-unter-5-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 5 €', '12 kleine Ideen mit großer Wirkung'],
-  ['wichtelgeschenke-unter-10-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 10 €', '12 Ideen – auch für Kollegen'],
-  ['wichtelgeschenke-unter-15-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 15 €', '12 Ideen mit etwas mehr Spielraum'],
-  ['wichtelgeschenke-unter-20-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 20 €', '12 Ideen für Familie & Freunde'],
-  ['wichtelgeschenke-unter-30-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 30 €', '12 Ideen mit Wow-Effekt'],
+  ['wichtelgeschenke-unter-5-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 5 €', '23 kleine Ideen mit großer Wirkung'],
+  ['wichtelgeschenke-unter-10-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 10 €', '59 Ideen – auch für Kollegen'],
+  ['wichtelgeschenke-unter-15-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 15 €', '58 Ideen mit etwas mehr Spielraum'],
+  ['wichtelgeschenke-unter-20-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 20 €', '40 Ideen für Familie & Freunde'],
+  ['wichtelgeschenke-unter-30-euro', 'wichtel-geschenk.svg', 'Wichtelgeschenke unter 30 €', '33 Ideen mit Wow-Effekt'],
+  ['wichtelgeschenke-mit-buchstaben', 'wichtel-geschenk.svg', 'Wichtelgeschenke von A bis Z', 'Buchstaben-Wichteln: 130 Ideen, auch für Q, X & Y'],
   ['geschenkfinder', 'wichtel-lupe.svg', 'Geschenkfinder fürs Wichteln', 'Über 100 Ideen nach Alter, Budget & Interessen'],
   ['wichtelgeschenke-fuer-kinder', 'wichtel-winkt.svg', 'Wichtelgeschenke für Kinder', 'Ideen von 3 bis 12 Jahren und für Teens'],
   ['wichtelgeschenke-selber-machen', 'wichtel-geschenk.svg', 'Wichtelgeschenke selber machen', 'Einfache DIY-Ideen mit Anleitung'],
