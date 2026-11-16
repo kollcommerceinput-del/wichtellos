@@ -1,0 +1,311 @@
+{
+ "out": "onni-folge-11.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "FS": {
+   "stimme": "Sulafat",
+   "stil": "Warme, liebevolle Frauenstimme verabschiedet sich am Ende einer Gute-Nacht-Geschichte von kleinen Kindern: ruhig, sanft, leise und herzlich, wie eine Mama beim Zudecken. Nicht verniedlichend. Auf Deutsch."
+  }
+ },
+ "teile": [
+  [
+   "E",
+   "Liebe Eltern: Onni und wir von WichtelLos freuen uns, wenn ihr auf wichtellos Punkt de vorbeischaut. Dort gibt es viel zu entdecken, für kleine und große Kinder. Erzählt wird mit KI-Stimmen.",
+   1
+  ],
+  [
+   "E",
+   "Onnis Adventskalender – jeden Tag ein Türchen.",
+   0.8
+  ],
+  [
+   "E",
+   "Schön, dass ihr dabei seid – danke fürs Einschalten! Bis Heiligabend erzählen wir euch 24 Geschichten von Onni. Abonniert und folgt uns, dann verpasst ihr keine Folge."
+  ],
+  [
+   "O",
+   "Kuschelt euch ein. Es geht los.",
+   2
+  ],
+  [
+   "E",
+   "Türchen elf. Onni und das Licht im Kühlschrank.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf und dachte als Erstes an seine Nase. Er schob die Ringelsocke ein Stück zur Seite und schielte nach unten auf seine Nasenspitze. Im Licht der Laterne konnte er sie gerade so erkennen. Leuchtend blau war sie nicht mehr. Aber ein bisschen blau war sie immer noch."
+  ],
+  [
+   "O",
+   "Na ja. Riechen kann sie trotzdem."
+  ],
+  [
+   "E",
+   "Und wie sie riechen konnte. Onni hob die Nase und schnupperte. Unter seiner Tür hindurch kam ein Duft herein. Er roch nach Käse. Nach Milch. Und nach süßer Marmelade."
+  ],
+  [
+   "O",
+   "Das riecht nach Frühstück. Mitten in der Nacht."
+  ],
+  [
+   "E",
+   "Onni schlug die Ringelsocke zurück, stand auf und öffnete seine Tür.",
+   1.6
+  ],
+  [
+   "E",
+   "Der Brief von gestern war fort. Ob sich die Kinder schon ein Mandarinen-Gesicht ausgesucht hatten? Onni lächelte und lief los. Im Flur war es dunkel, und die Mütze rutschte ihm wieder über die Augen. Aber seine Nase kannte den Weg. Sie führte ihn in die Küche.",
+   1.6
+  ],
+  [
+   "E",
+   "In der Küche fiel Mondlicht durchs Fenster. Und da stand er: der große Schrank, der neulich so tief gebrummt hatte. Er war weiß und glatt und riesig. Für Onni war er so hoch wie ein Hochhaus. Und der Duft kam genau aus seiner Tür."
+  ],
+  [
+   "O",
+   "Du bist also der Brummkasten, der so brummt! Von nahem bist du ja noch viel größer."
+  ],
+  [
+   "E",
+   "Die Menschen nennen so einen Schrank Kühlschrank. Aber Onni fand, Brummkasten passte viel besser."
+  ],
+  [
+   "E",
+   "Onni lief hin und legte die Hände an die Tür. Sie war kühl. Ganz unten fand er eine schmale Kante. Er stemmte die Füße auf den Boden und zog, so fest er konnte. Aber die Tür bewegte sich kein bisschen."
+  ],
+  [
+   "O",
+   "Viel zu schwer für einen Wichtel."
+  ],
+  [
+   "E",
+   "Onni setzte sich auf den Boden und verschnaufte. Da hörte er etwas. Schritte. Langsame, schlurfende Schritte, die aus dem Flur näher kamen.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni sprang auf. Jemand kam in die Küche. Und ein Wichtel darf von Menschen niemals gesehen werden. Schnell lief er zum Küchentisch und versteckte sich hinter einem Tischbein. Er machte sich ganz klein und hielt die Luft an."
+  ],
+  [
+   "E",
+   "Vorsichtig schob er seine Mütze hoch und schaute um das Tischbein herum. Von dem Menschen sah er nur die Füße. Zwei riesige Hausschuhe, weich und flauschig, jeder so groß wie ein Boot. Sie schlurften genau zum Brummkasten.",
+   1.6
+  ],
+  [
+   "E",
+   "Dann ging die große Tür auf. Und auf einmal war die ganze Küche hell. Aus dem Brummkasten kam ein Licht, weiß und kühl wie an einem Wintermorgen. Onni kniff die Augen zusammen. Dann schaute er hinein."
+  ],
+  [
+   "E",
+   "Drinnen gab es lauter Fächer, eins über dem anderen. Darin stand eine Milchflasche, so hoch wie ein Haus. Daneben ein Glas Marmelade, dick und rund und viel größer als Onni. Und ein Stück Käse, so groß wie ein Kleiderschrank. Alles leuchtete im hellen Licht."
+  ],
+  [
+   "O",
+   "Da drin ist es ja wie in einem Haus mit vielen Stockwerken. Und es hat sogar Licht."
+  ],
+  [
+   "E",
+   "Eine große Hand nahm die Milchflasche heraus. Dann goss jemand Milch in ein Glas und trank ein paar Schlucke.",
+   1.6
+  ],
+  [
+   "E",
+   "Die Flasche kam zurück ins Fach. Die Tür ging wieder zu. Und das Licht war weg.",
+   1.6
+  ],
+  [
+   "E",
+   "Die Hausschuhe schlurften aus der Küche hinaus und durch den Flur, bis man sie nicht mehr hörte.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wartete noch ein bisschen. Dann kam er hinter dem Tischbein hervor. Vor dem Brummkasten glänzte im Mondlicht etwas auf dem Boden. Ein Tropfen Milch. Onni tauchte einen Finger hinein und probierte. Die Milch war kalt und ein bisschen süß."
+  ],
+  [
+   "O",
+   "Danke, Brummkasten. Das war ein guter Tropfen."
+  ],
+  [
+   "E",
+   "Dann stand er vor der großen Tür und dachte nach. Eben war es da drin ganz hell gewesen. Und jetzt war es dunkel. Wer machte da drin das Licht an? Und wer machte es wieder aus?"
+  ],
+  [
+   "O",
+   "Vielleicht wohnt da drin jemand. Ein Lichtwichtel. Einer, der aufpasst, dass die Milch und der Käse nicht im Dunkeln stehen."
+  ],
+  [
+   "E",
+   "Ganz leise klopfte Onni an die Tür.",
+   1.6
+  ],
+  [
+   "O",
+   "Hallo? Lichtwichtel? Bist du da?"
+  ],
+  [
+   "E",
+   "Keine Antwort. Nur der Brummkasten brummte, tief und gleichmäßig."
+  ],
+  [
+   "O",
+   "Er schläft bestimmt. Dann frage ich jemand anderen.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni lief zurück durch den dunklen Flur bis zu seiner roten Tür. Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief.",
+   1.6
+  ],
+  [
+   "O",
+   "Im Brummkasten in der Küche wohnt ein Licht. Weißt du, wer es anknipst?"
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu.",
+   1.8
+  ],
+  [
+   "E",
+   "Onni kuschelte sich unter seine Ringelsocke, bis nur noch die Nase herausschaute. Er dachte an das helle Licht und an die vielen kalten Fächer. Und an den kalten Milchtropfen."
+  ],
+  [
+   "O",
+   "Ob der Lichtwichtel da drin wohl friert? Hoffentlich hat er eine warme Mütze. So eine wie meine."
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ],
+  [
+   "FS",
+   "Morgen öffnet sich ein neues Türchen. Gute Nacht und schöne Träume!",
+   2.5
+  ]
+ ],
+ "geraeusche": [
+  [
+   0,
+   0,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   10,
+   -1.4,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   11,
+   -1.5,
+   "laufen-holz",
+   1.2,
+   -14
+  ],
+  [
+   11,
+   0.3,
+   "brummen",
+   "bis:13",
+   -10
+  ],
+  [
+   18,
+   -1.6,
+   "laufen-holz",
+   1.5,
+   -18
+  ],
+  [
+   19,
+   0.2,
+   "brummen",
+   "bis:21",
+   -6
+  ],
+  [
+   25,
+   -1.5,
+   "laufen-holz",
+   1.4,
+   -18
+  ],
+  [
+   30,
+   -1.4,
+   "klopfen-kurz",
+   0.8,
+   -14
+  ],
+  [
+   31,
+   0.3,
+   "brummen",
+   "bis:32",
+   -10
+  ],
+  [
+   33,
+   -1.5,
+   "laufen-holz",
+   1.4,
+   -10
+  ],
+  [
+   34,
+   -1.5,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   36,
+   -1.7,
+   "tuer-knarren",
+   1.2,
+   -10
+  ],
+  [
+   41,
+   6,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
