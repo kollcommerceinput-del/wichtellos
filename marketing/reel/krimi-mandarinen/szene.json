@@ -1,0 +1,29 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "K": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines lustigen Mini-Krimis für Familien: geheimnisvoll, gespielt dramatisch, leise und spannend wie ein Detektiv, mit Augenzwinkern. Auf Deutsch.",
+   "tempo": 1.3
+  },
+  "E": {
+   "stimme": "Charon",
+   "stil": "Derselbe Detektiv-Erzähler, jetzt flott und triumphierend, als würde er den Fall lösen. Auf Deutsch.",
+   "tempo": 1.35
+  },
+  "J": {
+   "stimme": "Charon",
+   "stil": "Derselbe Erzähler zum Schluss: freundlich, energisch und einladend, mit einem Lächeln, klar betont – wie ein Aufruf am Ende eines Clips. Auf Deutsch.",
+   "tempo": 1.25
+  }
+ },
+ "teile": [
+  ["K", "Heute Morgen in unserem Wohnzimmer …", 0.25],
+  ["K", "Wer war das?!", 0.35],
+  ["E", "Spur eins: ein Filzstift unterm Sofa.", 0.25],
+  ["E", "Spur zwei: jemand mit einer blauen Nase …", 0.35],
+  ["E", "Ertappt!", 0.4],
+  ["E", "Ab dem ersten Dezember: jede Nacht ein neuer Streich.", 0.3],
+  ["J", "Folgt uns, damit ihr nichts verpasst!"]
+ ]
+}
