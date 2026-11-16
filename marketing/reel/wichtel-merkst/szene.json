@@ -1,0 +1,56 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "H": {
+   "stimme": "Charon",
+   "stil": "Geheimnisvoller, spannender Erzähler eines kurzen TikTok-Clips für Familien: neugierig machend, mit Augenzwinkern, als würde er ein Geheimnis verraten. Auf Deutsch.",
+   "tempo": 1.45
+  },
+  "E": {
+   "stimme": "Charon",
+   "stil": "Derselbe Erzähler, jetzt flott und schwungvoll aufzählend, mit einem Schmunzeln. Auf Deutsch.",
+   "tempo": 1.5
+  },
+  "J": {
+   "stimme": "Charon",
+   "stil": "Derselbe Erzähler zum Schluss: freundlich, energisch und einladend, mit einem Lächeln, klar betont – wie ein Aufruf am Ende eines Clips. Auf Deutsch.",
+   "tempo": 1.25
+  }
+ },
+ "teile": [
+  [
+   "H",
+   "Woran merkst du, dass ein Wichtel bei dir wohnt?",
+   0.25
+  ],
+  [
+   "E",
+   "Eine winzige Tür an der Wand.",
+   0.15
+  ],
+  [
+   "E",
+   "Kekskrümel vor der Tür.",
+   0.15
+  ],
+  [
+   "E",
+   "Mandarinen mit Gesichtern.",
+   0.15
+  ],
+  [
+   "E",
+   "Ein Brief in winziger Schrift.",
+   0.2
+  ],
+  [
+   "H",
+   "Und nachts … klopft es leise.",
+   0.35
+  ],
+  [
+   "J",
+   "Folgt uns, damit ihr nichts verpasst!"
+  ]
+ ]
+}
