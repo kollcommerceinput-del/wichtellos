@@ -224,6 +224,15 @@
   }
 
   // Erklärvideo: erst nach Klick laden (kein Datenverbrauch vorher)
+  // 16.11.: echtes <video preload="none"> + eigener Play-Knopf (Google erkennt das Video, Daten erst beim Abspielen)
+  document.querySelectorAll('.video-wichtel [data-play]').forEach((b) => b.addEventListener('click', () => {
+    const v = b.parentNode.querySelector('video');
+    v.controls = true;
+    b.remove();
+    v.play().catch(() => {});
+    v.focus();
+  }));
+
   document.querySelectorAll('[data-video]').forEach((b) => b.addEventListener('click', () => {
     const v = document.createElement('video');
     v.src = b.dataset.video;

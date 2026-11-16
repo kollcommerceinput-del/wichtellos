@@ -209,20 +209,52 @@ def video_block(v=None):
     # v: dict mit src/poster/label/alt/caption; ohne v = Erklärvideo der Startseite. Video lädt erst beim Klick (data-video, site.js), kein YouTube.
     v = v or {**VIDEO, 'label': 'Wichteln in 25 Sekunden erklärt', 'alt': 'Plüsch-Wichtel hält einen Umschlag – Wichteln? Ganz simpel.',
               'caption': 'So geht’s in 25 Sekunden · KI-generiert'}
-    return (f'<figure class="video-wichtel"><button type="button" data-video="{v['src']}" '
-            f'aria-label="Video abspielen: {v['label']}">'
-            f'<img src="{v['poster']}" width="540" height="960" alt="{v['alt']}" loading="lazy" decoding="async">'
-            f'<span class="play" aria-hidden="true">▶</span></button>'
+    # 16.11.: echtes <video preload="none"> statt Bild + Nachladen – Google fand sonst kein Video („Kein Video indexiert“);
+    # preload="none" lädt weiterhin erst beim Abspielen (keine Daten vorher), eigener Play-Knopf darüber (site.js [data-play])
+    return (f'<figure class="video-wichtel"><div class="vw">'
+            f'<video src="{v['src']}" poster="{v['poster']}" preload="none" playsinline width="540" height="960" title="{esc(v['label'])}"></video>'
+            f'<button type="button" class="play" data-play aria-label="Video abspielen: {v['label']}">▶</button></div>'
             f'<figcaption>{v['caption']}</figcaption></figure>')
 
 
 # Erklärvideos (Toni 08.11.): direkt bei uns statt YouTube-Einbettung – Besucher bleiben auf der Seite, keine Daten an Google
 VIDEO_ERKLAERT = {'src': '/fotos/video-wichteln-erklaert.mp4', 'poster': '/fotos/video-wichteln-erklaert-poster.webp',
+                  'dauer': 'PT1M55S', 'datum': '2026-11-08T12:00:00+01:00',
+                  'beschreibung': 'Was ist Wichteln, woher kommt der Brauch und wie funktioniert die Auslosung? Einfach erklärt in 2 Minuten.',
                   'label': 'Was ist Wichteln? Woher kommt der Brauch?', 'alt': 'Plüsch-Wichtel in einer Werkstatt, darüber die Frage „Was ist Wichteln?“',
                   'caption': 'Was ist Wichteln? Einfach erklärt in 2 Minuten · Bilder und Stimme KI-generiert'}
 VIDEO_KINDER = {'src': '/fotos/video-wichtel-kinder.mp4', 'poster': '/fotos/video-wichtel-kinder-poster.webp',
+                'dauer': 'PT2M41S', 'datum': '2026-11-08T12:00:00+01:00',
+                'beschreibung': 'Wer sind die Wichtel, wie sehen sie aus und warum sieht man sie nie? Für Kinder erklärt mit Onni.',
                 'label': 'Was ist ein Wichtel? Für Kinder erklärt', 'alt': 'Kleiner Plüsch-Wichtel Onni neben einem Tannenzapfen im Schnee',
                 'caption': 'Was ist ein Wichtel? Für Kinder erklärt (2:42) · Bilder und Stimme KI-generiert'}
+
+# 16.11. (SEO Punkt 5): Kurzvideos direkt auf den passenden Seiten, mit VideoObject (page() ergänzt das Schema automatisch)
+VIDEO_TUER = {'src': '/fotos/video-wichteltuer-brauch.mp4', 'poster': '/fotos/video-wichteltuer-brauch-poster.webp',
+              'dauer': 'PT1M6S', 'datum': '2026-11-16T00:30:00+01:00',
+              'label': 'Was ist eine Wichteltür? Der Brauch aus Dänemark erklärt',
+              'beschreibung': 'Eine winzige Tür über der Fußleiste – dahinter wohnt ein Wichtel. Nisse, Tomte und Nissedør: der Wichteltür-Brauch in einer Minute erklärt.',
+              'alt': 'Kleine rote Wichteltür mit Kranz an einer weißen Wand, davor ein Brief',
+              'caption': 'Der Wichteltür-Brauch in 1 Minute · Bilder und Stimme KI-generiert'}
+VIDEO_ORGA = {'src': '/fotos/video-wichteln-organisieren.mp4', 'poster': '/fotos/video-wichteln-organisieren-poster.webp',
+              'dauer': 'PT18S', 'datum': '2026-11-16T00:30:00+01:00',
+              'label': 'Wichteln per WhatsApp organisieren – in 1 Minute ausgelost',
+              'beschreibung': 'Namen eintragen, mit einem Klick auslosen, jeder bekommt seinen geheimen Wichtel-Link per WhatsApp oder E-Mail – kostenlos und ohne Anmeldung.',
+              'alt': 'Handy mit WhatsApp-Nachricht „Hier ist dein geheimer Wichtel-Link“',
+              'caption': 'So geht’s in 18 Sekunden · Bilder und Stimme KI-generiert'}
+VIDEOS = [VIDEO_ERKLAERT, VIDEO_KINDER, VIDEO_TUER, VIDEO_ORGA]
+VIDEO_EINBAU = {'/wichteltuer/': VIDEO_TUER}  # WhatsApp-Seite: VIDEO_ORGA direkt in whatsapp_page() (ersetzt dort das 3D-Video)
+
+
+def video_schema(body, extra):
+    """VideoObject für jedes bekannte Video, das im Seiteninhalt steckt (nicht doppelt, wenn schon vorhanden)."""
+    for v in VIDEOS:
+        if f'src="{v["src"]}"' in body and DOMAIN + v['src'] not in extra:
+            extra += ld({'@context': 'https://schema.org', '@type': 'VideoObject', 'name': v['label'], 'description': v['beschreibung'],
+                         'thumbnailUrl': DOMAIN + v['poster'], 'contentUrl': DOMAIN + v['src'], 'uploadDate': v['datum'],
+                         'duration': v['dauer']})
+    return extra
+
 
 # Erklärungen in zwei Fassungen (Toni 08.11.): für Große (Wichteln) und für kleine Kinder (Wichtel, zum Vorlesen).
 # Kindertext folgt dem Kindervideo – keine Sagen/Heinzelmännchen. Video-Links nur auf eigene Seiten, kein YouTube.
@@ -339,6 +371,11 @@ def mehr_inhalt(path, body, extra):
 
 def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=None, playful=False, body_class=''):
     body, extra = mehr_inhalt(path, body, extra)
+    if path in VIDEO_EINBAU and VIDEO_EINBAU[path]['src'] not in body:  # Video direkt unter die Einleitung
+        m = re.search(r'<p class="lead">.*?</p>', body, re.S)
+        if m:
+            body = body[:m.end()] + '\n' + video_block(VIDEO_EINBAU[path]) + body[m.end():]
+    extra = video_schema(body, extra)
     if not noindex:
         SEARCH.append({'u': path, 't': title.split(' | ')[0], 'd': desc, 'k': ' '.join(re.sub(r'<[^>]+>', '', h) for h in re.findall(r'<h[23][^>]*>(.*?)</h[23]>', body, re.S))})
     # Bild + Einleitung als Einheit (09.11., Toni: „Onni und daneben leerer Raum“): am Desktop Text mittig neben dem Bild,
@@ -1370,7 +1407,7 @@ def whatsapp_page():
 <p class="lead">Keine Zettel, kein Treffen: Mit WichtelLos lost du eure Wichtelgruppe online aus und schickst jedem seinen geheimen Link per WhatsApp. Jeder sieht nur, wen er selbst beschenkt – auch der Organisator nicht, wenn er mitmacht.</p>
 
 <h2>So geht's in 4 Schritten</h2>
-{video_block()}
+{video_block(VIDEO_ORGA)}
 <ol>
   <li><b>Gruppe anlegen:</b> <a href="/">Auf der Startseite</a> Gruppennamen, Budget und auf Wunsch das Datum der Bescherung eintragen.</li>
   <li><b>Namen eintragen:</b> Alle Teilnehmer eintragen. Paare, die sich nicht gegenseitig ziehen sollen, schließt du unter „Ausschlüsse“ aus.</li>
@@ -3204,7 +3241,7 @@ FAQ = [
     ('Was ist Wichteln?', ERKL_GROSS + ' Beliebt im Büro, in der Familie, im Freundeskreis und in der Schule. ' + LINK_GROSS
      + ' · Für Kinder: <a href="/onni-adventskalender/#was-ist-ein-wichtel">Was ist ein Wichtel? (Video, 2:42)</a>'
      + ' · Regeln Schritt für Schritt: <a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a>'),
-    ('Woher kommt das Wichteln?', 'Das Wort kommt von „Wicht“ – im Altdeutschen einfach ein kleines Wesen. Wichtel sind Hausgeister aus Sagen und Märchen, die heimlich Gutes tun und nie gesehen werden wollen; in Dänemark heißen sie Nisse, in Schweden Tomte. Daraus entstand der Brauch, sich in der Adventszeit gegenseitig heimlich zu beschenken. Mehr dazu: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a> · <a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a>'),
+    ('Woher kommt das Wichteln?', 'Das Wort kommt von „Wicht“ – im Altdeutschen einfach ein kleines Wesen. Wichtel sind Hausgeister aus Sagen und Märchen, die heimlich Gutes tun und nie gesehen werden wollen; in Dänemark heißen sie Nisse – nach Niels, der dänischen Form von Nikolaus –, in Schweden Tomte. Daraus entstand der Brauch, sich in der Adventszeit gegenseitig heimlich zu beschenken. Mehr dazu: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a> · <a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a>'),
     ('Was ist ein Wichtelgenerator?', 'Ein Wichtelgenerator (auch Wichtel-Generator oder Losgenerator) lost automatisch aus, wer wen beschenkt – zufällig, fair und ohne Zettelziehen. WichtelLos ist so ein Wichtelgenerator: kostenlos, ohne Anmeldung und mit geheimem Link für jede Person.'),
     ('Wichteln, Julklapp, Secret Santa – was ist der Unterschied?', 'Keiner: Es sind verschiedene Namen für dasselbe Spiel. Julklapp sagt man vor allem in Norddeutschland und Skandinavien, Secret Santa ist der englische Name. Auslosen könnt ihr alle Varianten hier. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a>'),
     ('Wie läuft Wichteln ab?', 'In 5 Schritten: 1. Gruppe zusammenstellen. 2. Budget und Termin für die Bescherung festlegen. 3. Auslosen, wer wen beschenkt – zum Beispiel hier online. 4. Geschenk besorgen, verpacken und mit dem Namen des Beschenkten beschriften. 5. Bescherung: Alle Geschenke werden gemeinsam übergeben und ausgepackt. Ob ihr danach verratet, wer wessen Wichtel war, entscheidet ihr.'),

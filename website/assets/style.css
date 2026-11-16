@@ -997,3 +997,8 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 /* Buchstaben-Wichteln (16.11.) */
 .buchstabe-los { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 12px 0 16px; }
 .buchstabe-los #buchstabe-ergebnis { font-size: 17px; }
+/* Video-Baustein mit echtem <video> (16.11.) */
+.video-wichtel .vw { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(43,27,23,.18); background: #2b1b17; }
+.video-wichtel button.play { border: 0; cursor: pointer; font-family: inherit; }
+.video-wichtel button.play:hover, .video-wichtel button.play:focus-visible { transform: translate(-50%,-50%) scale(1.08); }
+.video-wichtel button.play:focus-visible { outline: 3px solid #f2b705; outline-offset: 3px; }
