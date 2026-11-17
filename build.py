@@ -88,7 +88,7 @@ HEADER = '''<header class="top"><div class="bar">
     <a href="/wichtelgeschenke-unter-10-euro/"><span class="nav-l">Nach Budget</span><span class="nav-k"><i>💶</i>Nach Budget</span></a>
     <a href="/wichtel-zubehoer/"><span class="nav-l">Wichtel-Zubehör</span><span class="nav-k"><i>✨</i>Zubehör</span></a>
     <a href="/wichtelgeschenke-fuer-kinder/"><span class="nav-l">Für Kinder</span><span class="nav-k"><i>🧸</i>Für Kinder</span></a>
-    <a class="nav-shop" href="/wichtel-tassen/"><span class="nav-l">☕ Tassen &amp; Shirts</span><span class="nav-k"><i>☕</i>Tassen &amp; Shirts</span></a>
+    <button type="button" class="nav-shop shop-dd-btn" aria-expanded="false" aria-controls="shop-panel"><span class="nav-l">🛒 Direkt shoppen</span><span class="nav-k"><i>🛒</i>Shoppen</span></button>
   </nav>
   <button type="button" class="search-btn" aria-label="Suche öffnen" aria-expanded="false" aria-controls="search-panel" title="Suchen">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
@@ -399,7 +399,7 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
 {head(title, desc, path, extra, noindex)}
 </head>
 <body{(' class="' + ' '.join(c for c in ('verspielt' if playful else '', body_class) if c) + '"') if (playful or body_class) else ''}>
-{HEADER}
+{HEADER_KIND if path in KINDER_OHNE_AMAZON else HEADER}
 <main>
 {body}
 </main>
@@ -435,6 +435,39 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*', max_eur=None):
     return f'<a href="{esc(href)}" data-amazon="{esc(query)}"{mx} rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
 
 
+
+# „Direkt shoppen“ (Toni 17.11.: „man muss zu viel klicken“): Knopf im Kopf öffnet Feld mit Direktsprüngen –
+# Amazon-Suche mit Partner-ID (Werbung) + eigene Spreadshop-Produkte. Auf Kinderseiten (KINDER_OHNE_AMAZON) nur der eigene Shop.
+KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/'}
+_SHOP_EIGEN = [  # Spreadshop-Neuheiten 17.11. (Produkttyp 4914 Weihnachtspulli, 5058 Schürze, 5060 Kissen) – Motiv mit Wunschnamen
+    ('🎄', 'Weihnachtspulli mit Namen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+wunschname+weiss-A3286f96983df2110?sellable=rnth9dlkuya8-4914'),
+    ('🍪', 'Weihnachts-Schürze', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5058'),
+    ('🛋️', 'Weihnachts-Kissen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5060'),
+]
+
+
+def shop_panel(mit_amazon=True):
+    a = lambda href, txt, extra='': (f'<a class="sp-btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank"{extra}>{txt}* →</a>')
+    amz = ''
+    if mit_amazon:
+        deals = 'https://www.amazon.de/deals' + (f'?tag={AMAZON_TAG}' if AMAZON_TAG else '')
+        amz = ('<div class="sp-gruppe"><p class="sp-k">Bei Amazon <span>· Werbung*</span></p>'
+               + a(amazon_url('wichtelgeschenk', 10), '🎁 Wichtelgeschenke bis 10 €')
+               + a(amazon_url('wichtelgeschenk', 20), '🎁 Wichtelgeschenke bis 20 €')
+               + a(amazon_url('lustige wichtelgeschenke'), '😂 Lustige Wichtelgeschenke')
+               + a(deals, '🔥 Black-Friday-Angebote', ' data-zeit-von="2026-11-17" data-zeit-bis="2026-11-30"')
+               + '</div>')
+    eigen = ('<div class="sp-gruppe"><p class="sp-k">Unser Wichtel-Shop</p>'
+             + ''.join(f'<a class="sp-btn sp-eigen" href="{esc(h)}" rel="noopener" target="_blank">{i} {t} →</a>' for i, t, h in _SHOP_EIGEN)
+             + '<a class="sp-btn sp-eigen" href="/wichtel-tassen/">☕ Tassen, Shirts &amp; Teddys →</a></div>')
+    fuss = ('<p class="sp-fuss">* Amazon-Partnerlinks: Kaufst du dort, bekommen wir eine kleine Provision – für dich ändert sich nichts. '
+            '<a href="/geschenkfinder/">Lieber erst stöbern? Zum Geschenkfinder</a></p>' if mit_amazon else '')
+    return (f'<div id="shop-panel" class="shop-panel" hidden><div class="shop-inner">{amz}{eigen}{fuss}'
+            '<button type="button" class="shop-close" aria-label="Schließen">✕</button></div></div>')
+
+
+HEADER_KIND = HEADER.replace('</div></header>', '</div>' + shop_panel(False) + '</header>')
+HEADER = HEADER.replace('</div></header>', '</div>' + shop_panel(True) + '</header>')
 
 def product_links(q, asin=None):
     # Direktlink aufs Produkt + Suchlink als Rückfallebene, falls es mal ausverkauft ist

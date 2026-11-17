@@ -1002,3 +1002,25 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .video-wichtel button.play { border: 0; cursor: pointer; font-family: inherit; }
 .video-wichtel button.play:hover, .video-wichtel button.play:focus-visible { transform: translate(-50%,-50%) scale(1.08); }
 .video-wichtel button.play:focus-visible { outline: 3px solid #f2b705; outline-offset: 3px; }
+
+/* „Direkt shoppen“ (Toni 17.11.): Knopf im Menü öffnet Feld mit Direktsprüngen (Amazon = Werbung, eigener Shop) */
+.top nav button.nav-shop { font: inherit; font-weight: 600; font-size: 15px; border: 0; cursor: pointer; background: #c8302c; color: #fff; margin-left: -4px;
+  border-radius: 999px; padding: 7px 14px; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; }
+.top nav button.nav-shop:hover, .top nav button.nav-shop[aria-expanded="true"] { background: #a52521; }
+@media (max-width: 600px) { .top nav button.nav-shop { justify-content: center; min-height: 54px; padding: 6px 2px; border-radius: 14px; font-size: 13px; line-height: 1.15; } }
+.shop-panel { position: absolute; left: 0; right: 0; top: 100%; z-index: 51; padding: 0 12px; }
+.shop-inner { position: relative; max-width: 720px; margin: 6px auto 0; background: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(43,27,23,.25);
+  padding: 16px 16px 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
+.sp-gruppe { display: flex; flex-direction: column; gap: 8px; }
+.sp-k { margin: 0 0 2px; font-weight: 700; font-size: 15px; }
+.sp-k span { font-weight: 400; font-size: 12.5px; color: var(--muted); }
+.sp-btn { display: block; padding: 11px 14px; border-radius: 12px; background: var(--soft); color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px; }
+.sp-btn:hover { background: #fde7e5; color: var(--text); }
+.sp-btn[hidden] { display: none; }
+.sp-eigen { background: #f3faf5; border: 1px solid #cfe7d8; }
+.sp-eigen:hover { background: #e3f3e8; }
+.sp-fuss { grid-column: 1 / -1; margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+.shop-close { position: absolute; top: 6px; right: 8px; width: 36px; height: 36px; border: 0; background: none; font-size: 18px; cursor: pointer; color: var(--muted); }
+.shop-inner > .sp-gruppe:only-of-type { grid-column: 1 / -1; }
+@media (max-width: 600px) { .shop-inner { grid-template-columns: 1fr; padding-top: 14px; } }
+@media print { .shop-panel, .top nav button.nav-shop { display: none !important; } }

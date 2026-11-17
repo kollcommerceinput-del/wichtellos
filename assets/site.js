@@ -154,6 +154,22 @@
   if (fq.addEventListener) fq.addEventListener('change', fsync);
 
   // Suche: Index /suche.json wird erst beim Öffnen geladen, alles läuft im Browser
+  // „Direkt shoppen“-Feld (17.11.): öffnen/schließen, Klick daneben oder Esc schließt
+  const shBtn = document.querySelector('.shop-dd-btn');
+  const shPanel = document.getElementById('shop-panel');
+  if (shBtn && shPanel) {
+    const shZu = () => { shPanel.hidden = true; shBtn.setAttribute('aria-expanded', 'false'); };
+    shBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const auf = shPanel.hidden;
+      const sp = document.getElementById('search-panel');
+      if (sp && !sp.hidden) { sp.hidden = true; const sb = document.querySelector('.search-btn'); if (sb) sb.setAttribute('aria-expanded', 'false'); }
+      shPanel.hidden = !auf; shBtn.setAttribute('aria-expanded', String(auf));
+    });
+    shPanel.querySelector('.shop-close').addEventListener('click', () => { shZu(); shBtn.focus(); });
+    document.addEventListener('click', (e) => { if (!shPanel.hidden && !shPanel.contains(e.target)) shZu(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !shPanel.hidden) { shZu(); shBtn.focus(); } });
+  }
   const sBtn = document.querySelector('.search-btn');
   const sPanel = document.getElementById('search-panel');
   if (sBtn && sPanel) {
