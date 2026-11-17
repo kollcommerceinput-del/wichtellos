@@ -56,7 +56,7 @@ E: Ulla legte den Kopf schief. Durch die dicke Scheibe konnte sie ihn nicht hör
 
 [Geräusch: Eulenruf, gedämpft durch die Scheibe]
 
-E: Onni schaute mit. Ulla schaute nicht zum Vollmond und auch nicht zu den vielen anderen Sternen. Sie schaute nur zu einem. Er war klein, aber ganz hell.
+E: Onni schaute mit. Ulla schaute nicht zum Vollmond und auch nicht zu den vielen anderen Sternen. Sie schaute nur zu einem. Und auf einmal sah Onni ihn leuchten, klein, aber heller als alle anderen. Vorher war er ihm gar nicht aufgefallen.
 
 O: Das ist er. Der Nordstern.
 
