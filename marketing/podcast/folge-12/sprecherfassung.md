@@ -24,11 +24,11 @@ E: Onni schlug die Ringelsocke zurück, stand auf und öffnete seine Tür.
 
 [Geräusch: kleine Holztür öffnet sich leise]
 
-E: Der Brief von gestern war fort. Onni lief durch den dunklen Flur bis ins Wohnzimmer. Dort war es hell. Heute Nacht war Vollmond, und sein Licht schien durch die große Glastür neben dem Sofa herein, genau dorthin, wo neulich der Korb mit den Mandarinen gestanden hatte.
+E: Der Brief von gestern war fort. Onni lief durch den dunklen Flur bis ins Wohnzimmer. Dort war es hell. Heute Nacht war Vollmond, und sein Licht schien durch das große Fenster neben dem Sofa herein, genau dorthin, wo neulich der Korb mit den Mandarinen gestanden hatte.
 
 [Geräusch: leise Schritte auf Holzboden]
 
-E: Die Glastür hatte einen Rahmen aus Holz und reichte bis hinunter zum Boden. Onni lief hin und setzte sich davor. Die Scheibe ging von seinen Füßen bis weit über seinen Kopf. Für ihn war sie wie eine Wand aus Eis, nur ganz durchsichtig.
+E: Das große Fenster hatte einen Rahmen aus Holz und eine breite Fensterbank. Onni lief hin und kletterte hinauf. Dort setzte er sich ganz dicht vor die Scheibe. Sie ging von seinen Füßen bis weit über seinen Kopf. Für ihn war sie wie eine Wand aus Eis, nur ganz durchsichtig.
 
 E: Onni drückte die Nase an die Scheibe. Sie war eiskalt. Er zuckte zurück, und dann musste er lachen.
 
@@ -42,7 +42,7 @@ E: Onni suchte und suchte. Aber ein Stern funkelte wie der andere. Er stützte d
 
 [Geräusch: Flügelschläge draußen, gedämpft hinter Glas]
 
-E: Da huschte draußen etwas vorbei. Etwas Großes, Weißes. Es drehte eine Runde vor dem Haus und landete im Schnee, genau vor der Glastür.
+E: Da huschte draußen etwas vorbei. Etwas Großes, Weißes. Es drehte eine Runde vor dem Haus und landete im Schnee, genau vor dem Fenster.
 
 E: Onni sprang auf.
 
