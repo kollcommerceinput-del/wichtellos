@@ -18,7 +18,8 @@ const font = 'data:font/woff2;base64,' + fs.readFileSync(path.join(__dirname, '.
   for (const [i, [, txt]] of BILDER.entries()) {
     await pg.setContent(`<style>@font-face{font-family:F;src:url(${font})}body{margin:0;background:transparent}
       div{position:absolute;top:170px;left:60px;right:60px;text-align:center;font:600 80px/1.2 F,'Segoe UI Emoji';color:#fff;
-      text-shadow:0 0 6px #000,0 0 16px #000,0 0 28px #000c,0 4px 10px #000;padding:28px 20px}</style><div>${txt}</div>`);
+      text-shadow:0 0 6px #000,0 0 16px #000,0 0 28px #000c,0 4px 10px #000;padding:28px 20px}
+      i{position:absolute;right:36px;bottom:150px;font:600 30px F;color:#fffd;text-shadow:0 0 6px #000}</style><div>${txt}</div><i>Mit KI erstellt</i>`);
     await pg.screenshot({ path: path.join(tmp, `text-${i}.png`), omitBackground: true });
   }
   await br.close();

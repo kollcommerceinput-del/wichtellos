@@ -1,0 +1,17 @@
+{
+ "out": "stimme.mp3",
+ "rollen": {
+  "H": {"stimme": "Puck", "stil": "Frecher, total lustiger Comedy-Erzähler eines TikTok-Clips für Familien: verschwörerisch, als würde er streng geheime Regeln verraten, mit viel Witz und Timing. Auf Deutsch.", "tempo": 1.3},
+  "R": {"stimme": "Puck", "stil": "Derselbe freche Comedy-Erzähler, jetzt flott und übertrieben ernst, als wären es wichtige Gesetze – mit Augenzwinkern und Pointe am Satzende. Auf Deutsch.", "tempo": 1.35},
+  "J": {"stimme": "Puck", "stil": "Derselbe Erzähler zum Schluss: erst geheimnisvoll und spannend, dann freundlich und energisch einladend, klar betont. Auf Deutsch.", "tempo": 1.2}
+ },
+ "teile": [
+  ["H", "Fünf Wichtel-Regeln, die dir keiner verrät.", 0.25],
+  ["R", "Regel eins: Niemals gesehen werden!", 0.15],
+  ["R", "Regel zwei: Kekse zählen als Miete.", 0.15],
+  ["R", "Regel drei: Die schönste Socke ist die Bettdecke.", 0.15],
+  ["R", "Regel vier: Wenn dich ein Wichtel nachmacht … ist es ein Spiegel.", 0.15],
+  ["R", "Regel fünf: Immer einen Brief dalassen.", 0.3],
+  ["J", "Und Regel sechs? Die verrät Onni ab dem ersten Dezember. Folgt uns!"]
+ ]
+}
