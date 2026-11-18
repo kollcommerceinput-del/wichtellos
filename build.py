@@ -3544,7 +3544,7 @@ def links_page():
 {onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 128, 'links-onni')}
 <div class="lb-blase">
 <h1>Hallo, ich bin Onni! 👋</h1>
-<p>Schön, dass du aus unseren Videos hergefunden hast. Wohin darf ich dich bringen?</p>
+<p>Schön, dass du hier bist!</p>
 </div>
 </div>
 <h2>👉 Hier geht's zu …</h2>
