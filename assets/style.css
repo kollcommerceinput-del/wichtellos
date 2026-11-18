@@ -1024,14 +1024,29 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .shop-inner > .sp-gruppe:only-of-type { grid-column: 1 / -1; }
 @media (max-width: 600px) { .shop-inner { grid-template-columns: 1fr; padding-top: 14px; } }
 @media print { .shop-panel, .top nav button.nav-shop { display: none !important; } }
-/* /links/ – „Link in Bio“ (18.11.) */
-.links-seite { max-width: 520px; margin: 0 auto; text-align: center; }
-.links-seite .links-onni { display: block; margin: 8px auto 0; }
-.links-seite h2 { font-size: 1.05rem; margin: 22px 0 10px; color: var(--muted); }
+/* /links/ – „Link in Bio“ (18.11., 19.11. neu: Onni mit Sprechblase, Knöpfe als Karten mit Pfeil) */
+.links-seite { max-width: 520px; margin: 0 auto; }
+.lb-kopf { display: flex; align-items: center; gap: 14px; margin: 6px 0 22px; }
+.lb-kopf .links-onni { flex: none; width: 104px; height: 104px; }
+.lb-blase { position: relative; background: #fff; border-radius: 18px; padding: 14px 16px; box-shadow: 0 4px 14px rgba(43,27,23,.10); }
+.lb-blase::before { content: ''; position: absolute; left: -9px; top: 50%; margin-top: -9px; border: 9px solid transparent; border-left: 0; border-right-color: #fff; }
+.links-seite .lb-blase h1 { font-size: 24px; margin: 0 0 4px; }
+.links-seite .lb-blase h1::after { display: none; }
+.links-seite .lb-blase p { margin: 0; font-size: 15.5px; color: var(--muted); }
+.links-seite h2 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; margin: 22px 4px 8px; color: var(--muted); }
 .lb-liste { display: grid; gap: 10px; }
-.lb-btn { display: block; padding: 14px 16px; border-radius: 14px; background: var(--primary); color: #fff; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
-.lb-btn:hover, .lb-btn:focus-visible { background: var(--primary-dark); }
-.lb-liste + h2 + .lb-liste .lb-btn { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
+.lb-btn { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; background: var(--primary); color: #fff;
+  font-weight: 600; text-decoration: none; box-shadow: 0 3px 10px rgba(198,40,40,.22); transition: transform .12s; }
+.lb-btn:hover, .lb-btn:focus-visible { background: var(--primary-dark); transform: translateY(-1px); }
+.lb-ico { flex: none; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.22); display: grid; place-items: center; font-size: 18px; }
+.lb-txt { flex: 1; }
+.lb-btn::after { content: '›'; font-size: 26px; line-height: 1; opacity: .8; }
+.lb-liste.lb-hell .lb-btn { background: #fff; color: var(--text); box-shadow: 0 2px 8px rgba(43,27,23,.08); }
+.lb-liste.lb-hell .lb-btn:hover { background: #fff5f3; }
+.lb-liste.lb-hell .lb-ico { background: var(--soft); }
+.lb-liste.lb-hell .lb-btn::after { color: var(--primary); }
+.links-seite .social { text-align: center; margin-top: 22px; }
+@media (max-width: 400px) { .lb-kopf .links-onni { width: 80px; height: 80px; } .links-seite .lb-blase h1 { font-size: 21px; } }
 .shop-eigen-links { display: flex; flex-wrap: wrap; gap: 8px; }
 /* Aufklapp-Menüs im Kopf (19.11.): Knöpfe wie die bisherigen Links, Felder wie „Direkt shoppen“ */
 .top nav button.nav-dd { font: inherit; font-weight: 600; font-size: 15px; border: 0; background: none; color: var(--text); cursor: pointer;

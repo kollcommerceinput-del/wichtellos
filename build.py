@@ -3536,19 +3536,23 @@ LINKS_FEST = [
 
 
 def links_page():
-    btn = lambda i, t, h: f'<a class="lb-btn" href="{esc(h)}">{i} {esc(t)}</a>'
+    btn = lambda i, t, h: f'<a class="lb-btn" href="{esc(h)}"><span class="lb-ico" aria-hidden="true">{i}</span><span class="lb-txt">{esc(t)}</span></a>'
     akt = '\n'.join(btn(*x) for x in LINKS_AKTUELL)
     fest = '\n'.join(btn(*x) for x in LINKS_FEST)
     body = f"""<article class="links-seite">
-{onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 96, 'links-onni')}
+<div class="lb-kopf">
+{onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 128, 'links-onni')}
+<div class="lb-blase">
 <h1>Hallo, ich bin Onni! 👋</h1>
-<p class="lead">Schön, dass du aus unseren Videos hergefunden hast. Wohin darf ich dich bringen?</p>
+<p>Schön, dass du aus unseren Videos hergefunden hast. Wohin darf ich dich bringen?</p>
+</div>
+</div>
 <h2>👉 Hier geht's zu …</h2>
 <div class="lb-liste">
 {akt}
 </div>
 <h2>Außerdem beliebt</h2>
-<div class="lb-liste">
+<div class="lb-liste lb-hell">
 {fest}
 </div>
 <p class="social">Folge uns: {social_links()}</p>
