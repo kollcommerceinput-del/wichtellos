@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -3366,7 +3366,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3423,6 +3423,101 @@ def extras():
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
+# /lustige-wichtelgeschenke/ (Toni 18.11.: mehr Amazon-Klicks; Suchbegriffe am 18.11. bei Amazon geprüft)
+LUSTIG_FAQ = [
+    ('Was ist ein gutes lustiges Wichtelgeschenk?', 'Eines, über das alle lachen – auch die beschenkte Person. Am besten funktionieren Dinge, die man danach wirklich benutzt: ein Spiel, Socken mit Spruch oder ein Gadget für den Schreibtisch.'),
+    ('Was ist ein lustiges Wichtelgeschenk für Kollegen?', 'Bürotaugliches wie ein Mini-Basketball für den Monitor, ein Bullshit-Buzzer oder ein Notizblock mit frechem Spruch. Peinliches oder Anzügliches lieber weglassen – im Team weiß man nie, wer was zieht.'),
+    ('Wo ist die Grenze beim lustigen Wichteln?', 'Lustig ja, verletzend nein: keine Witze über Aussehen, Gewicht oder Alter, nichts Ekliges oder Kaputtes. Alkohol und Trinkspiele nur, wenn alle erwachsen sind und das passt.'),
+    ('Was ist der Unterschied zum Schrottwichteln?', 'Beim Schrottwichteln verschenkt man Dinge, die man zu Hause nicht mehr braucht – meist ohne Geld auszugeben. Lustige Wichtelgeschenke sind neu gekauft und sollen Freude machen.'),
+]
+
+
+def lustig_page():
+    from themen import LUSTIG
+    path = '/lustige-wichtelgeschenke/'
+    secs, jump, n = idea_sections(LUSTIG, 'lus')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in LUSTIG_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in LUSTIG_FAQ]}
+    eigen = ''.join(f'<a class="btn-secondary" href="{esc(h)}" rel="noopener" target="_blank">{i} {t} →</a> ' for i, t, h in _SHOP_EIGEN)
+    body = f"""<article>
+<h1>Lustige Wichtelgeschenke: {n} Ideen zum Lachen</h1>
+{ai_photo('wichtel3d-schrott', 'Plüsch-Wichtel sitzt grinsend auf einem Berg kurioser Geschenke mit Teekanne, Quietscheente und Lavalampe')}
+<p class="lead">Ein Wichtelgeschenk, über das die ganze Runde lacht, bleibt am längsten in Erinnerung. Hier findest du {n} lustige Wichtelgeschenke – fürs Büro, für kleines Budget bis 10 €, für etwas mehr bis 20 €, Spiele für den Abend und einen Extra-Teil nur für Erwachsene.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+{PRIME_BOX}
+<p class="chips-line">Direkt zu: {jump} · <a href="#lus-shop">Aus unserem Shop</a> · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+<h2 id="lus-shop">Aus unserem Wichtel-Shop</h2>
+<p>Lustige Sprüche mit Onni, unserem Wichtel – auf Tasse, Pulli, Schürze und Kissen. Beim Pulli und bei der Schürze steht euer Wichtelname drauf.</p>
+<div class="idea-grid">
+{shop_card()}
+</div>
+<p class="shop-eigen-links">{eigen}</p>
+
+{DISC_SEARCH}
+
+<h2>Lustig ja, peinlich nein: 4 Regeln</h2>
+<ul>
+  <li><b>Für alle lustig:</b> Das Geschenk sollte auch die beschenkte Person zum Lachen bringen – nicht nur den Rest der Runde.</li>
+  <li><b>Benutzbar schlägt Staubfänger:</b> Ein Spiel oder Socken mit Spruch werden benutzt, ein reiner Gag landet oft im Müll.</li>
+  <li><b>Budget einhalten:</b> Legt es vorher fest – beim <a href="/">Auslosen</a> könnt ihr es gleich mit eintragen.</li>
+  <li><b>Ab 18 nur unter Erwachsenen:</b> Trinkspiele und Alkohol nie bei Wichtelrunden mit Kindern oder Jugendlichen.</li>
+</ul>
+<p>Noch mehr Ideen: <a href="/schrottwichteln/">Schrottwichteln</a> · <a href="/wichtelgeschenke-unter-5-euro/">unter 5 €</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/wichtelgeschenke-mit-buchstaben/">von A bis Z</a> · <a href="/wichteln-im-buero/">Wichteln im Büro</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Lustige Wichtelgeschenke: {n} Ideen zum Lachen (bis 10 & 20 €)',
+         f'{n} lustige Wichtelgeschenke: fürs Büro, bis 10 € und bis 20 €, Spiele zum Lachen und Ideen ab 18 – mit Regeln, damit es für alle lustig bleibt.',
+         body, crumb='Lustige Wichtelgeschenke', playful=True, extra=ld(faq_ld))
+
+
+# /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
+# noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
+LINKS_AKTUELL = [
+    ('🏷️', 'Black Friday: Wichtelgeschenke im Angebot', '/black-friday-wichtelgeschenke/'),
+    ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'),
+    ('🔤', 'Wichteln mit Buchstaben', '/wichtelgeschenke-mit-buchstaben/'),
+    ('🗑️', 'Schrottwichteln: Regeln & Ideen', '/schrottwichteln/'),
+]
+LINKS_FEST = [
+    ('🎲', 'Wichteln auslosen – kostenlos', '/'),
+    ('💶', 'Wichtelgeschenke unter 10 €', '/wichtelgeschenke-unter-10-euro/'),
+    ('🎁', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
+    ('💼', 'Wichteln im Büro', '/wichteln-im-buero/'),
+    ('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'),
+    ('🌙', 'Onnis Adventskalender (für Kinder)', '/onni-adventskalender/'),
+    ('☕', 'Unser Shop: Tassen, Pullis & mehr', '/wichtel-tassen/'),
+]
+
+
+def links_page():
+    btn = lambda i, t, h: f'<a class="lb-btn" href="{esc(h)}">{i} {esc(t)}</a>'
+    akt = '\n'.join(btn(*x) for x in LINKS_AKTUELL)
+    fest = '\n'.join(btn(*x) for x in LINKS_FEST)
+    body = f"""<article class="links-seite">
+{onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 96, 'links-onni')}
+<h1>Hallo! Hier geht's weiter 👋</h1>
+<p class="lead">Alles aus unseren Videos – Geschenkideen, Wichtel-Spiele und das kostenlose Auslosen.</p>
+<h2>Aus den Videos</h2>
+<div class="lb-liste">
+{akt}
+</div>
+<h2>Beliebt</h2>
+<div class="lb-liste">
+{fest}
+</div>
+<p class="social">Folge uns: {social_links()}</p>
+</article>"""
+    page('/links/', 'WichtelLos – alle Links', 'Alle Links von WichtelLos: Geschenkideen aus den Videos, Wichteln auslosen, Wichteltür und Shop.',
+         body, noindex=True)
+
+
 def main():
     # Nur den Inhalt löschen, nicht den Ordner selbst: Läuft ein Testserver in website/, ist der Ordner gesperrt –
     # rmtree brach dann mittendrin ab und ein halb leerer Stand wurde gepusht (03.11.)
@@ -3473,6 +3568,8 @@ def main():
     tassen_page()
     advent_page()
     themen_pages()
+    lustig_page()
+    links_page()
     invite_page()
     share_page()
     legal_pages()

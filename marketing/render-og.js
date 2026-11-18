@@ -50,6 +50,7 @@ const PAGES = [
   ['wichteltuer-selber-bauen', 'onni/sticker-daumen.png', 'Wichteltür selber bauen', 'Werkzeug, Material & Anleitung – 28 Ideen'],
   ['plaetzchen-backen-mit-kindern', 'onni/sticker-herz.png', 'Plätzchen backen mit Kindern', 'Einfaches Rezept, Wichtel-Kekse & Zubehör'],
   ['kuscheldecke-verschenken', 'onni/sticker-schlaeft.png', 'Kuscheldecke verschenken', 'Die gemütlichsten Decken – 13 Ideen'],
+  ['lustige-wichtelgeschenke', 'onni/sticker-jubel.png', 'Lustige Wichtelgeschenke', '30 Ideen zum Lachen – auch fürs Büro'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
@@ -78,7 +79,8 @@ p{font-size:38px;line-height:1.25;margin:0;color:#6d5d57}
   fs.mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1200, height: 630 } });
-  for (const pg of PAGES) {
+  const nur = process.argv.slice(2);
+  for (const pg of PAGES.filter((x) => !nur.length || nur.includes(x[0]))) {
     await p.setContent(html(pg));
     await p.evaluate(() => document.fonts.ready);
     const fits = await p.evaluate(() => { const t = document.querySelector('.txt'); return t.scrollHeight <= t.clientHeight + 1; });

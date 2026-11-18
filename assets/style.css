@@ -1024,3 +1024,12 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .shop-inner > .sp-gruppe:only-of-type { grid-column: 1 / -1; }
 @media (max-width: 600px) { .shop-inner { grid-template-columns: 1fr; padding-top: 14px; } }
 @media print { .shop-panel, .top nav button.nav-shop { display: none !important; } }
+/* /links/ – „Link in Bio“ (18.11.) */
+.links-seite { max-width: 520px; margin: 0 auto; text-align: center; }
+.links-seite .links-onni { display: block; margin: 8px auto 0; }
+.links-seite h2 { font-size: 1.05rem; margin: 22px 0 10px; color: var(--muted); }
+.lb-liste { display: grid; gap: 10px; }
+.lb-btn { display: block; padding: 14px 16px; border-radius: 14px; background: var(--primary); color: #fff; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.lb-btn:hover, .lb-btn:focus-visible { background: var(--primary-dark); }
+.lb-liste + h2 + .lb-liste .lb-btn { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
+.shop-eigen-links { display: flex; flex-wrap: wrap; gap: 8px; }

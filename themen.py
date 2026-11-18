@@ -235,3 +235,48 @@ BLACKFRIDAY = [
         ('Weihnachtskarten', 'Für den Gruß zum Geschenk.', 'Weihnachtskarten Set'),
     ]),
 ]
+
+# /lustige-wichtelgeschenke/ (Toni 18.11.: „so mehr zu Amazon klicken, desto besser“) – nur Amazon-Suchen, keine Preise/Fotos.
+# Abschnitt „Ab 18“ nur hier (Seite für Erwachsene), nie auf Kinder-/Schulseiten.
+LUSTIG = [
+    ('Fürs Büro', 'daumen', 'Klein, schreibtischtauglich und garantiert ein Lacher bei der Bescherung im Team.', [
+        ('Mini-Basketball für den Schreibtisch', 'Korb an den Monitor, Papierkugel rein – die Mittagspause ist gerettet.', 'Mini Basketball Büro Schreibtisch'),
+        ('Bullshit-Buzzer', 'Ein Druck auf den Knopf sagt im Meeting mehr als tausend Worte.', 'Bullshit Buzzer'),
+        ('Notizblock mit frechem Spruch', 'Für To-do-Listen, die sowieso niemand abarbeitet.', 'Notizblock lustig Spruch Büro'),
+        ('Mini-Boxsack für den Schreibtisch', 'Mit Saugnapf – für Montage, Mails und Meetings.', 'Mini Boxsack Schreibtisch'),
+        ('Gummihuhn mit Quietschen', 'Sinnlos, laut und genau deshalb heiß begehrt.', 'Gummihuhn Quietsch'),
+        ('Anti-Stress-Würfel', 'Klicken, drehen, schieben – beschäftigt die Finger in jedem Meeting.', 'Anti Stress Würfel'),
+        ('Mini-Zen-Garten', 'Sand, Rechen, Steine – Ruhe auf 15 Zentimetern.', 'Mini Zen Garten Schreibtisch'),
+    ]),
+    ('Kleine Lacher bis 10 €', 'jubel', 'Günstig, schnell verpackt und perfekt fürs Wichteln mit kleinem Budget.', [
+        ('Furzkissen', 'Der Klassiker – funktioniert seit Jahrzehnten.', 'Furzkissen'),
+        ('Glückskekse mit frechen Sprüchen', 'Zum Vorlesen in der Runde – sorgt für Gelächter.', 'Glückskekse lustige Sprüche'),
+        ('Klopapier mit Sudoku', 'Damit auch die stille Minute sinnvoll genutzt wird.', 'Toilettenpapier Sudoku'),
+        ('Pflaster mit lustigen Motiven', 'Heilt nicht besser, sieht aber besser aus.', 'Pflaster lustige Motive'),
+        ('Socken mit Spruch', 'Unter der Sohle steht, was man wirklich denkt.', 'Socken mit Spruch lustig'),
+        ('Wackeldackel', 'Nickt auf dem Armaturenbrett zu allem Ja.', 'Wackeldackel'),
+        ('Klebebärte', 'Für spontane Verkleidungen auf der Weihnachtsfeier.', 'Klebebart Set'),
+    ]),
+    ('Großer Spaß bis 20 €', 'geschenk', 'Etwas mehr Budget, noch mehr Wirkung beim Auspacken.', [
+        ('Elfenmütze mit Ohren', 'Gestreift, mit spitzen Ohren – der Hingucker auf jeder Feier.', 'Elfenmütze mit Ohren'),
+        ('Socken in der Pizza-Schachtel', 'Sieht aus wie Pizza – ist aber Socken.', 'Socken Pizza Box'),
+        ('Klo-Golf', 'Putten, während man ohnehin sitzt.', 'Toiletten Golf'),
+        ('Klo-Nachtlicht', 'Leuchtet bunt, sobald nachts jemand kommt.', 'Toilettenlicht Bewegungsmelder'),
+        ('Leuchtendes Rentier-Geweih', 'Für die Weihnachtsfeier – mit Glöckchen.', 'Rentier Haarreif leuchtend'),
+        ('Kerze mit frechem Spruch', 'Duftet gut, sagt die Wahrheit.', 'Kerze mit Spruch lustig'),
+        ('Süßigkeiten aus den USA', 'Snacks, die es hier im Supermarkt nicht gibt.', 'Süßigkeiten Box USA'),
+    ]),
+    ('Spiele zum Lachen', 'herz', 'Wird direkt nach der Bescherung ausgepackt und gespielt.', [
+        ('Halt mal kurz', 'Schnelles Kartenspiel, bei dem Freundschaften kurz pausieren.', 'Halt mal kurz Kartenspiel'),
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('Wer bin ich? mit Stirnband', 'Karte an die Stirn, raten – Gelächter garantiert.', 'Wer bin ich Spiel Stirnband'),
+        ('Tabu', 'Erklären, ohne die verbotenen Wörter zu sagen.', 'Tabu Spiel'),
+        ('Activity', 'Zeichnen, erklären, pantomimisch darstellen.', 'Activity Spiel Piatnik'),
+    ]),
+    ('Ab 18: für Erwachsene', 'psst', 'Nur für Wichtelrunden unter Erwachsenen – nicht für Schule, Kita oder Familie mit Kindern.', [
+        ('Trinkspiel-Roulette (ab 18)', 'Roulette mit Gläsern – Kugel entscheidet.', 'Trinkspiel Roulette'),
+        ('Bier-Pong-Set (ab 18)', 'Becher, Bälle, Regeln – die Party kann kommen.', 'Bier Pong Set'),
+        ('Socken „Bring mir Wein“ (ab 18)', 'Die Botschaft steht unter der Sohle.', 'Socken wenn du das lesen kannst Wein'),
+        ('Partyspiel für Erwachsene (ab 18)', 'Kartenspiel mit schwarzem Humor für den Abend.', 'Partyspiel Erwachsene Karten'),
+    ]),
+]
