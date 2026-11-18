@@ -154,22 +154,28 @@
   if (fq.addEventListener) fq.addEventListener('change', fsync);
 
   // Suche: Index /suche.json wird erst beim Öffnen geladen, alles läuft im Browser
-  // „Direkt shoppen“-Feld (17.11.): öffnen/schließen, Klick daneben oder Esc schließt
-  const shBtn = document.querySelector('.shop-dd-btn');
-  const shPanel = document.getElementById('shop-panel');
-  if (shBtn && shPanel) {
-    const shZu = () => { shPanel.hidden = true; shBtn.setAttribute('aria-expanded', 'false'); };
-    shBtn.addEventListener('click', (e) => {
+  // Aufklapp-Felder im Kopf (17.11. „Direkt shoppen“, 19.11. alle Menüpunkte): immer nur eins offen,
+  // Klick daneben oder Esc schließt, Öffnen schließt auch die Suche
+  const ddBtns = [...document.querySelectorAll('.top nav button[aria-controls]')]
+    .map((b) => [b, document.getElementById(b.getAttribute('aria-controls'))]).filter(([, p]) => p);
+  const ddZu = () => ddBtns.forEach(([b, p]) => { p.hidden = true; b.setAttribute('aria-expanded', 'false'); });
+  ddBtns.forEach(([btn, pan]) => {
+    btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const auf = shPanel.hidden;
+      const auf = pan.hidden;
+      ddZu();
       const sp = document.getElementById('search-panel');
       if (sp && !sp.hidden) { sp.hidden = true; const sb = document.querySelector('.search-btn'); if (sb) sb.setAttribute('aria-expanded', 'false'); }
-      shPanel.hidden = !auf; shBtn.setAttribute('aria-expanded', String(auf));
+      pan.hidden = !auf; btn.setAttribute('aria-expanded', String(auf));
     });
-    shPanel.querySelector('.shop-close').addEventListener('click', () => { shZu(); shBtn.focus(); });
-    document.addEventListener('click', (e) => { if (!shPanel.hidden && !shPanel.contains(e.target)) shZu(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !shPanel.hidden) { shZu(); shBtn.focus(); } });
-  }
+    const x = pan.querySelector('.shop-close');
+    if (x) x.addEventListener('click', () => { ddZu(); btn.focus(); });
+  });
+  document.addEventListener('click', (e) => { if (!ddBtns.some(([, p]) => !p.hidden && p.contains(e.target))) ddZu(); });
+  document.addEventListener('keydown', (e) => {
+    const offen = ddBtns.find(([, p]) => !p.hidden);
+    if (e.key === 'Escape' && offen) { ddZu(); offen[0].focus(); }
+  });
   const sBtn = document.querySelector('.search-btn');
   const sPanel = document.getElementById('search-panel');
   if (sBtn && sPanel) {

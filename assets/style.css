@@ -1033,3 +1033,17 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .lb-btn:hover, .lb-btn:focus-visible { background: var(--primary-dark); }
 .lb-liste + h2 + .lb-liste .lb-btn { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
 .shop-eigen-links { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Aufklapp-Menüs im Kopf (19.11.): Knöpfe wie die bisherigen Links, Felder wie „Direkt shoppen“ */
+.top nav button.nav-dd { font: inherit; font-weight: 600; font-size: 15px; border: 0; background: none; color: var(--text); cursor: pointer;
+  min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; padding: 11px 4px; }
+.top nav button.nav-dd:hover, .top nav button.nav-dd[aria-expanded="true"] { color: var(--primary); }
+.top nav button.nav-dd.nav-hi { background: var(--primary); color: #fff; border-radius: 999px; padding: 7px 14px; }
+.top nav button.nav-dd.nav-hi:hover, .top nav button.nav-dd.nav-hi[aria-expanded="true"] { background: var(--primary-dark); color: #fff; }
+.dd-panel .sp-btn { font-size: 14.5px; padding: 10px 14px; }
+@media (max-width: 600px) {
+  .top nav button.nav-dd, .top nav button.nav-dd.nav-hi { justify-content: center; min-height: 54px; padding: 6px 2px; border-radius: 14px; background: var(--soft);
+    font-size: 13px; line-height: 1.15; text-align: center; }
+  .top nav button.nav-dd.nav-hi { background: var(--primary); }
+  .top nav button.nav-dd[aria-expanded="true"]:not(.nav-hi) { background: #fde7e5; }
+  .top nav button.nav-shop { grid-column: span 2; }
+}

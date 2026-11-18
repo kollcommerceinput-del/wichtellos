@@ -83,11 +83,10 @@ def head(title, desc, path, extra='', noindex=False):
 HEADER = '''<header class="top"><div class="bar">
   <a class="logo" href="/"><img src="/favicon.svg" alt="" width="26" height="26"><span>Wichtel<b>Los</b></span></a>
   <nav aria-label="Hauptmenü">
-    <a class="nav-hi" href="/geschenkfinder/"><span class="nav-l">🎁 Geschenkideen</span><span class="nav-k"><i>🎁</i>Geschenkideen</span></a>
-    <a href="/geschenke-generator/"><span class="nav-l">🎲 Geschenke-Generator</span><span class="nav-k"><i>🎲</i>Generator</span></a>
-    <a href="/wichtelgeschenke-unter-10-euro/"><span class="nav-l">Nach Budget</span><span class="nav-k"><i>💶</i>Nach Budget</span></a>
-    <a href="/wichtel-zubehoer/"><span class="nav-l">Wichtel-Zubehör</span><span class="nav-k"><i>✨</i>Zubehör</span></a>
-    <a href="/wichtelgeschenke-fuer-kinder/"><span class="nav-l">Für Kinder</span><span class="nav-k"><i>🧸</i>Für Kinder</span></a>
+    <button type="button" class="nav-dd nav-hi" aria-expanded="false" aria-controls="dd-ideen"><span class="nav-l">🎁 Geschenkideen ▾</span><span class="nav-k"><i>🎁</i>Ideen</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-budget"><span class="nav-l">💶 Nach Budget ▾</span><span class="nav-k"><i>💶</i>Budget</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-wichteln"><span class="nav-l">🎲 Wichteln ▾</span><span class="nav-k"><i>🎲</i>Wichteln</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-advent"><span class="nav-l">🚪 Advent &amp; Kinder ▾</span><span class="nav-k"><i>🚪</i>Advent</span></button>
     <button type="button" class="nav-shop shop-dd-btn" aria-expanded="false" aria-controls="shop-panel"><span class="nav-l">🛒 Direkt shoppen</span><span class="nav-k"><i>🛒</i>Shoppen</span></button>
   </nav>
   <button type="button" class="search-btn" aria-label="Suche öffnen" aria-expanded="false" aria-controls="search-panel" title="Suchen">
@@ -466,8 +465,48 @@ def shop_panel(mit_amazon=True):
             '<button type="button" class="shop-close" aria-label="Schließen">✕</button></div></div>')
 
 
-HEADER_KIND = HEADER.replace('</div></header>', '</div>' + shop_panel(False) + '</header>')
-HEADER = HEADER.replace('</div></header>', '</div>' + shop_panel(True) + '</header>')
+
+# Aufklapp-Menüs im Kopf (Toni 19.11.: „wie Direkt shoppen, bei allen“) – je Feld zwei Spalten, nur eigene Seiten (keine Werbung)
+MENUE = [
+    ('dd-ideen', [
+        [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
+         ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
+         ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
+        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'),
+         ('🧸', 'Wichtelgeschenke für Kinder', '/wichtelgeschenke-fuer-kinder/'), ('🛋️', 'Kuscheldecken', '/kuscheldecke-verschenken/'),
+         ('☕', 'Wichtel-Tassen aus unserem Shop', '/wichtel-tassen/')]]),
+    ('dd-budget', [
+        [('💶', 'Wichtelgeschenke unter 5 €', '/wichtelgeschenke-unter-5-euro/'), ('💶', 'Wichtelgeschenke unter 10 €', '/wichtelgeschenke-unter-10-euro/'),
+         ('💶', 'Wichtelgeschenke unter 15 €', '/wichtelgeschenke-unter-15-euro/')],
+        [('💶', 'Wichtelgeschenke unter 20 €', '/wichtelgeschenke-unter-20-euro/'), ('💶', 'Wichtelgeschenke unter 30 €', '/wichtelgeschenke-unter-30-euro/'),
+         ('🏷️', 'Black Friday: im Angebot', '/black-friday-wichtelgeschenke/')]]),
+    ('dd-wichteln', [
+        [('🎁', 'Jetzt kostenlos auslosen', '/'), ('❓', 'Wie funktioniert Wichteln?', '/wie-funktioniert-wichteln/'),
+         ('🎲', 'Wichteln mit Würfeln', '/wichteln-wuerfeln-regeln/'), ('🗑️', 'Schrottwichteln', '/schrottwichteln/'),
+         ('🃏', 'Wichtel-Varianten', '/wichteln-varianten/')],
+        [('💼', 'Wichteln im Büro', '/wichteln-im-buero/'), ('🏫', 'Schule & Kita', '/wichteln-schule-kita/'),
+         ('💬', 'Wichteln per WhatsApp', '/wichteln-per-whatsapp/'), ('📝', 'Wunschzettel', '/wunschzettel/'),
+         ('🎄', 'Weihnachtsfeier-Ideen', '/weihnachtsfeier-ideen/')]]),
+    ('dd-advent', [
+        [('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'), ('🔨', 'Wichteltür selber bauen', '/wichteltuer-selber-bauen/'),
+         ('✨', 'Wichtel-Zubehör', '/wichtel-zubehoer/'), ('🌙', 'Onnis Adventskalender', '/onni-adventskalender/'),
+         ('🖍️', 'Wichtel-Ausmalbilder', '/wichtel-ausmalbilder/')],
+        [('📅', 'Adventskalender-Ideen', '/adventskalender-ideen/'), ('🎒', 'Adventskalender befüllen', '/adventskalender-befuellen/'),
+         ('🥾', 'Nikolaus-Geschenke', '/nikolaus-geschenke/'), ('🍪', 'Plätzchen backen mit Kindern', '/plaetzchen-backen-mit-kindern/')]]),
+]
+
+
+def menue_panels():
+    out = []
+    for pid, spalten in MENUE:
+        grp = ''.join('<div class="sp-gruppe">' + ''.join(f'<a class="sp-btn" href="{h}">{i} {esc(t)}</a>' for i, t, h in sp) + '</div>' for sp in spalten)
+        out.append(f'<div id="{pid}" class="shop-panel dd-panel" hidden><div class="shop-inner">{grp}'
+                   '<button type="button" class="shop-close" aria-label="Schließen">✕</button></div></div>')
+    return ''.join(out)
+
+
+HEADER_KIND = HEADER.replace('</div></header>', '</div>' + menue_panels() + shop_panel(False) + '</header>')
+HEADER = HEADER.replace('</div></header>', '</div>' + menue_panels() + shop_panel(True) + '</header>')
 
 def product_links(q, asin=None):
     # Direktlink aufs Produkt + Suchlink als Rückfallebene, falls es mal ausverkauft ist
@@ -3502,13 +3541,13 @@ def links_page():
     fest = '\n'.join(btn(*x) for x in LINKS_FEST)
     body = f"""<article class="links-seite">
 {onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 96, 'links-onni')}
-<h1>Hallo! Hier geht's weiter 👋</h1>
-<p class="lead">Alles aus unseren Videos – Geschenkideen, Wichtel-Spiele und das kostenlose Auslosen.</p>
-<h2>Aus den Videos</h2>
+<h1>Hallo, ich bin Onni! 👋</h1>
+<p class="lead">Schön, dass du aus unseren Videos hergefunden hast. Wohin darf ich dich bringen?</p>
+<h2>👉 Hier geht's zu …</h2>
 <div class="lb-liste">
 {akt}
 </div>
-<h2>Beliebt</h2>
+<h2>Außerdem beliebt</h2>
 <div class="lb-liste">
 {fest}
 </div>
