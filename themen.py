@@ -444,3 +444,47 @@ TEENS = [
         ('Trinkflasche aus Edelstahl', 'Für Schule, Sport und unterwegs.', 'Trinkflasche Edelstahl'),
     ]),
 ]
+
+# /gesellschaftsspiele-verschenken/ (Toni 19.11.: „top ten recherche … die nehmen wir dann“, nach Alter: Kinder/Jugendliche/Erwachsene)
+# Top 10 = Familienspiele aus den Amazon-Bestsellern „Spiele“ (19.11.2026, gefiltert: keine Elektronik/Sammelkarten/„Adult“-Titel)
+# + Spiel des Jahres 2026 (Dito!). Preisträger: SdJ 2026 Dito!, Kinderspiel 2026 Die Insel der Mookies; SdJ 2025 Bomb Busters,
+# Kinderspiel 2025 Topp die Torte! (spiel-des-jahres.de). Suchbegriffe 19.11. geprüft (gestrichen: EXIT Erwachsene, Rebirth, Quickstop – Suche trifft anderes).
+SPIELE = [
+    ('Unsere Top 10 für den Spieleabend', 'jubel', 'Ausgewählt aus den aktuellen Amazon-Bestsellern bei Spielen und dem Spiel des Jahres – schnell erklärt und für die ganze Familie.', [
+        ('Dito!', 'Spiel des Jahres 2026: Alle schreiben ein Wort zum Begriff – Punkte gibt es, wenn ihr dasselbe denkt.', 'Dito Spiel des Jahres'),
+        ('Flip 7', 'Karten aufdecken, bis man aufhört oder es kracht – in fünf Minuten erklärt.', 'Flip 7 Kartenspiel'),
+        ('UNO', 'Der Klassiker, den jeder kennt – passt in jede Tasche.', 'UNO Kartenspiel'),
+        ('Geistesblitz', 'Wer greift am schnellsten den richtigen Gegenstand? Lautes Reaktionsspiel.', 'Geistesblitz Zoch'),
+        ('Skip-Bo', 'Karten in der richtigen Reihenfolge ablegen – einfach und spannend.', 'Mattel Skip-Bo'),
+        ('Noch mal!', 'Würfeln und Felder ankreuzen – alle spielen gleichzeitig.', 'Noch mal Schmidt Spiel'),
+        ('Phase 10', 'Zehn Phasen nacheinander schaffen – für lange Abende.', 'Mattel Phase 10'),
+        ('Dobble', 'Finde das Symbol, das auf beiden Karten ist – Kinder schlagen oft die Großen.', 'Dobble'),
+        ('Rummikub', 'Zahlensteine legen und clever umbauen – bei Großeltern sehr beliebt.', 'Rummikub'),
+        ('Kniffel', 'Fünf Würfel, drei Würfe – ein Spiel für Generationen.', 'Kniffel'),
+    ]),
+    ('Für Kinder', 'herz', 'Kurze Runden, einfache Regeln – und viel Gelächter.', [
+        ('Die Insel der Mookies', 'Kinderspiel des Jahres 2026.', 'Die Insel der Mookies'),
+        ('Topp die Torte!', 'Kinderspiel des Jahres 2025.', 'Topp die Torte'),
+        ('Lotti Karotti', 'Hasen-Wettrennen mit der drehenden Karotte – Löcher inklusive.', 'Lotti Karotti'),
+        ('Halli Galli Junior', 'Wer zuerst klingelt, gewinnt – schnell und laut.', 'Halli Galli Junior'),
+        ('Looping Louie', 'Das Flugzeug schubsen, die eigenen Hühner schützen.', 'Looping Louie'),
+        ('Taco Katze Ziege Käse Pizza', 'Karten ablegen, mitzählen, zuschlagen – Lachen garantiert.', 'Taco Katze Ziege Käse Pizza'),
+        ('EXIT Kids', 'Rätsel lösen wie im Escape-Room – für junge Detektive.', 'Kosmos EXIT Kids'),
+    ]),
+    ('Für Jugendliche', 'daumen', 'Für den Spieleabend mit Freunden – ganz ohne Bildschirm.', [
+        ('Bomb Busters', 'Spiel des Jahres 2025: Gemeinsam eine Bombe entschärfen.', 'Bomb Busters'),
+        ('Codenames', 'Zwei Teams, ein Hinweis – wer findet seine Agenten zuerst?', 'Codenames'),
+        ('Just One', 'Gemeinsam Begriffe erraten – doppelte Hinweise fliegen raus.', 'Just One Spiel'),
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('UNO Flip', 'UNO mit Wende – jede Runde wird anders.', 'UNO Flip'),
+        ('Monopoly Deal', 'Monopoly als schnelles Kartenspiel – in 15 Minuten durch.', 'Monopoly Deal'),
+        ('Speed Cube', 'Der Zauberwürfel für Tüftler.', 'Speed Cube'),
+    ]),
+    ('Für Erwachsene', 'geschenk', 'Für Spieleabende, Weihnachtsfeiern und lange Nächte.', [
+        ('Hitster', 'Musik-Quiz: Songs anhören und in die richtige Zeit einordnen.', 'Hitster'),
+        ('Activity', 'Zeichnen, erklären, pantomimisch darstellen – der Partyklassiker.', 'Activity Piatnik'),
+        ('Tabu', 'Begriffe erklären, ohne die verbotenen Wörter zu sagen.', 'Tabu Hasbro'),
+        ('Wizard', 'Stiche richtig vorhersagen – einfach zu lernen, schwer zu meistern.', 'Wizard Kartenspiel'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel, bei dem Freundschaften kurz pausieren.', 'Halt mal kurz Kartenspiel'),
+    ]),
+]

@@ -108,7 +108,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -173,6 +173,12 @@ PRAEMIE_SEITEN = {
 # Black-Friday-Woche bei Amazon 19.–30.11.2026 (offiziell); Banner ab 16.11. auf allen Seiten außer Onni-/Kinderseiten und Rechtlichem
 BF_BANNER = ('<a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-11-30" hidden>'
              '🏷️ <b>Black-Friday-Woche 19.–30.11.:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>')
+# Hinweis-Kasten auf die Spiele-Seite (Toni 19.11.) – eigene Seite, keine Werbung; nie auf KINDER_OHNE_AMAZON-Seiten
+SPIELE_HINWEIS = ('<aside class="praemie spiele-hinweis"><p><b>🎲 Auf der Suche nach Gesellschaftsspielen?</b> '
+                  'Unsere Top 10 für den Spieleabend – dazu Spiele für Kinder, Jugendliche und Erwachsene.</p>'
+                  '<p><a class="btn-secondary" href="/gesellschaftsspiele-verschenken/">Zu den Top 10 →</a></p></aside>\n')
+SPIELE_HINWEIS_SEITEN = {'/wichtelgeschenke-fuer-kinder/', '/nikolaus-geschenke/', '/adventskalender-befuellen/', '/geschenke-fuer-oma-und-opa/',
+                         '/wichtelgeschenke-fuer-teenager/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/weihnachtsfeier-ideen/'}
 BF_OHNE = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
 
 # Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
@@ -386,6 +392,11 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
         i = body.rfind('<div class="cta-box">')  # vor dem Auslosen-Kasten, sonst vor dem Seitenende
         i = i if i >= 0 else body.rfind('</article>')
         body = body[:i] + PRAEMIE_SEITEN[path] + body[i:] if i >= 0 else body + PRAEMIE_SEITEN[path]
+    if path in SPIELE_HINWEIS_SEITEN:  # Toni 19.11.: „Auf der Suche nach Gesellschaftsspielen?“ → Top 10
+        i = body.find('<h2 id="fragen">')
+        i = i if i >= 0 else body.rfind('<div class="cta-box">')
+        i = i if i >= 0 else body.rfind('</article>')
+        body = body[:i] + SPIELE_HINWEIS + body[i:] if i >= 0 else body + SPIELE_HINWEIS
     if not noindex and path not in BF_OHNE and 'bf-banner' not in body:
         body = body.replace('<h1>', BF_BANNER + '<h1>', 1)
     if crumb:
@@ -469,7 +480,7 @@ def shop_panel(mit_amazon=True):
 # Aufklapp-Menüs im Kopf (Toni 19.11.: „wie Direkt shoppen, bei allen“) – je Feld zwei Spalten, nur eigene Seiten (keine Werbung)
 MENUE = [
     ('dd-ideen', [
-        [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
+        [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🎯', 'Gesellschaftsspiele: Top 10', '/gesellschaftsspiele-verschenken/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
          ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
          ('⏰', 'Last-Minute-Wichtelgeschenke', '/last-minute-wichtelgeschenke/'), ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
         [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'), ('🎧', 'Wichtelgeschenke für Teenager', '/wichtelgeschenke-fuer-teenager/'),
@@ -3406,7 +3417,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3703,6 +3714,47 @@ def teens_page():
          body, crumb='Wichtelgeschenke für Teenager', playful=True, extra=ld(faq_ld))
 
 
+# /gesellschaftsspiele-verschenken/ (Toni 19.11.: recherchierte Top 10 + nach Alter; Hinweis-Kasten SPIELE_HINWEIS auf Familien-/Kinderseiten)
+SPIELE_FAQ = [
+    ('Welche Gesellschaftsspiele sind gerade beliebt?', 'Bei Amazon gehören derzeit Kartenspiele wie Flip 7, UNO, Skip-Bo und Phase 10 zu den meistverkauften Spielen, dazu Dito! – das Spiel des Jahres 2026. Unsere Top 10 oben stammt aus diesen Bestsellern (Stand: 19. November 2026).'),
+    ('Welches Spiel eignet sich für die ganze Familie?', 'Spiele mit kurzen Regeln und schnellen Runden: Dobble, UNO, Kniffel oder Geistesblitz. Dabei haben Kinder oft genauso gute Chancen wie die Großen.'),
+    ('Welches Gesellschaftsspiel passt als Wichtelgeschenk?', 'Kartenspiele sind ideal: klein, günstig und sofort spielbar – zum Beispiel Flip 7, Skip-Bo oder Halt mal kurz. Dann kann die Runde direkt nach der Bescherung losspielen.'),
+    ('Was ist das Spiel des Jahres 2026?', '„Dito!“ von Martin Ang. Kinderspiel des Jahres 2026 wurde „Die Insel der Mookies“. 2025 gewannen „Bomb Busters“ und „Topp die Torte!“ (Kinderspiel).'),
+]
+
+
+def spiele_page():
+    from themen import SPIELE
+    path = '/gesellschaftsspiele-verschenken/'
+    top_t, top_st, top_i, top_items = SPIELE[0]
+    groups = [(top_t, top_st, top_i, [(f'{k}. {t}', *r) for k, (t, *r) in enumerate(top_items, 1)])] + SPIELE[1:]
+    secs, jump, n = idea_sections(groups, 'sp')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in SPIELE_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in SPIELE_FAQ]}
+    body = f"""<article>
+<h1>Gesellschaftsspiele verschenken: Top 10 für den Spieleabend</h1>
+{ai_photo('wichtel3d-wuerfel', 'Plüsch-Wichtel mit roter Zipfelmütze hält einen großen Holzwürfel')}
+<p class="lead">Ein Spiel ist das perfekte Wichtelgeschenk: Es wird ausgepackt und sofort gemeinsam gespielt. Hier sind unsere Top 10 für den Spieleabend – ausgewählt aus den aktuellen Bestsellern und dem Spiel des Jahres –, dazu {n - 10} weitere Ideen für Kinder, Jugendliche und Erwachsene.</p>
+<p class="hint">Stand: 19. November {GIFT_JAHR} · Quellen: Amazon-Bestseller „Spiele“, Spiel des Jahres e.&nbsp;V.</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Spiele für den Wichtelabend</h2>
+<p>Wer nicht nur Spiele verschenken, sondern auch beim Wichteln spielen will: <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> (mit Online-Würfel und Timer), <a href="/schrottwichteln/">Schrottwichteln</a> und <a href="/wichteln-varianten/">12 weitere Wichtel-Varianten</a>.</p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Gesellschaftsspiele verschenken: Top 10 für den Spieleabend ({GIFT_JAHR})',
+         f'Gesellschaftsspiele verschenken: Unsere Top 10 aus den Bestsellern und dem Spiel des Jahres – plus Spiele für Kinder, Jugendliche und Erwachsene.',
+         body, crumb='Gesellschaftsspiele verschenken', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3803,6 +3855,7 @@ def main():
     kollegen_page()
     omaopa_page()
     teens_page()
+    spiele_page()
     links_page()
     invite_page()
     share_page()

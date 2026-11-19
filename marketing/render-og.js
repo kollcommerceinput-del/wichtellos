@@ -55,6 +55,7 @@ const PAGES = [
   ['wichtelgeschenke-fuer-kollegen', 'onni/sticker-daumen.png', 'Wichtelgeschenke für Kollegen', '28 Ideen fürs Büro – nützlich & lustig'],
   ['geschenke-fuer-oma-und-opa', 'onni/sticker-herz.png', 'Geschenke für Oma & Opa', '28 Ideen – gemütlich & mit Familienfotos'],
   ['wichtelgeschenke-fuer-teenager', 'onni/sticker-jubel.png', 'Wichtelgeschenke für Teenager', '26 Ideen für 13- bis 17-Jährige'],
+  ['gesellschaftsspiele-verschenken', 'onni/sticker-jubel.png', 'Gesellschaftsspiele verschenken', 'Top 10 für den Spieleabend + Ideen nach Alter'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
