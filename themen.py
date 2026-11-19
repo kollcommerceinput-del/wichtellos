@@ -488,3 +488,33 @@ SPIELE = [
         ('Halt mal kurz', 'Schnelles Kartenspiel, bei dem Freundschaften kurz pausieren.', 'Halt mal kurz Kartenspiel'),
     ]),
 ]
+
+# /geschenke-fuer-erzieherin/ (Toni 19.11.: „ja“) – richtet sich an Eltern; ganzjährig (Weihnachten, Abschied, Dankeschön).
+# Suchbegriffe 19.11. geprüft (gestrichen: Schlüsselanhänger = Einkaufswagenchips, Fingerabdruck-Leinwand = nur Hochzeit).
+ERZIEHER = [
+    ('Kleines Dankeschön', 'herz', 'Zu Weihnachten, zum Geburtstag oder einfach so – kleine Gesten kommen von Herzen an.', [
+        ('Tasse für die Erzieherin', 'Mit lieben Worten – jeden Morgen beim ersten Kaffee.', 'Tasse Erzieherin'),
+        ('Tasse für die Lehrerin', 'Ein Danke, das im Lehrerzimmer jeden Tag benutzt wird.', 'Tasse Lehrerin Danke'),
+        ('Handcreme-Set', 'Basteln, Händewaschen, Kreide – Hände brauchen Pflege.', 'Handcreme Geschenkset'),
+        ('Duftkerze im Glas', 'Für den ruhigen Feierabend nach einem lauten Tag.', 'Duftkerze im Glas'),
+        ('Tee-Probierset', 'Mehrere Sorten für die Pause.', 'Tee Probierset'),
+        ('Schokoladen-Probierset', 'Zum Genießen oder Teilen im Team.', 'Schokoladen Probierset'),
+        ('Kuschelsocken', 'Für kalte Füße beim Morgenkreis.', 'Kuschelsocken Damen Herren'),
+    ]),
+    ('Für den Alltag in Kita & Schule', 'daumen', 'Nützliches, das wirklich gebraucht wird.', [
+        ('Lehrerkalender 2026/27', 'Planer fürs Schuljahr mit Platz für Stunden und Notizen.', 'Lehrerkalender 2026 2027'),
+        ('Lehrerstempel', '„Super gemacht!“ – Lob, das Kinder lieben.', 'Lehrerstempel'),
+        ('Belohnungssticker', 'Hunderte Sticker für fleißige Kinder.', 'Belohnungssticker'),
+        ('Thermobecher', 'Hält den Tee warm auf dem Pausenhof.', 'Thermobecher to go'),
+        ('Trinkflasche aus Edelstahl', 'Für lange Tage ohne Pause.', 'Trinkflasche Edelstahl'),
+        ('Lunchbox aus Edelstahl', 'Für das Mittagessen zwischendurch.', 'Lunchbox Edelstahl'),
+        ('Fineliner-Set', 'Für Plakate, Elternbriefe und Notizen.', 'Fineliner Set'),
+        ('Notizbuch A5', 'Für Beobachtungen, Ideen und To-dos.', 'Notizbuch A5 Hardcover'),
+    ]),
+    ('Zum Abschied & von der ganzen Gruppe', 'winkt', 'Wenn die Kita-Zeit endet oder das Schuljahr vorbei ist – gemeinsam schenkt es sich schöner.', [
+        ('Abschiedsbuch zum Ausfüllen', 'Jedes Kind gestaltet eine Seite – eine Erinnerung für immer.', 'Abschiedsbuch Erzieherin'),
+        ('Erinnerungsbuch Kita', 'Mit Fotos und Sprüchen der Kinder füllen.', 'Erinnerungsbuch Kita Abschied'),
+        ('Saatgut-Set', 'Für Gartenfreundinnen – wächst weiter, wenn die Kinder schon groß sind.', 'Blumensamen Set'),
+        ('Gartenhandschuhe', 'Passend zum Saatgut, robust und bequem.', 'Gartenhandschuhe'),
+    ]),
+]

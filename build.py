@@ -108,7 +108,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -483,7 +483,7 @@ MENUE = [
         [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🎯', 'Gesellschaftsspiele: Top 10', '/gesellschaftsspiele-verschenken/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
          ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
          ('⏰', 'Last-Minute-Wichtelgeschenke', '/last-minute-wichtelgeschenke/'), ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
-        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'), ('🎧', 'Wichtelgeschenke für Teenager', '/wichtelgeschenke-fuer-teenager/'),
+        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'), ('🎧', 'Wichtelgeschenke für Teenager', '/wichtelgeschenke-fuer-teenager/'), ('🍎', 'Geschenke für Erzieherinnen', '/geschenke-fuer-erzieherin/'),
          ('🧸', 'Wichtelgeschenke für Kinder', '/wichtelgeschenke-fuer-kinder/'), ('🛋️', 'Kuscheldecken', '/kuscheldecke-verschenken/'),
          ('☕', 'Wichtel-Tassen aus unserem Shop', '/wichtel-tassen/')]]),
     ('dd-budget', [
@@ -3417,7 +3417,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3755,6 +3755,50 @@ def spiele_page():
          body, crumb='Gesellschaftsspiele verschenken', playful=True, extra=ld(faq_ld))
 
 
+# /geschenke-fuer-erzieherin/ (Toni 19.11.: „ja“ – für Eltern, ganzjährig: Weihnachten, Abschied, Dankeschön; Suchbegriffe 19.11. geprüft)
+ERZIEHER_FAQ = [
+    ('Was schenkt man einer Erzieherin zu Weihnachten?', 'Am besten etwas Kleines mit persönlichem Gruß: eine Tasse, eine Duftkerze oder Tee. Noch schöner wird es mit einem selbst gemalten Bild des Kindes dazu.'),
+    ('Was schenkt man zum Abschied aus der Kita?', 'Ein Abschiedsbuch, in dem jedes Kind eine Seite gestaltet, ist der Klassiker. Viele Gruppen legen zusammen und schenken dazu einen Gutschein oder etwas für den Garten.'),
+    ('Wie viel gibt man für ein Geschenk an Erzieher oder Lehrer aus?', 'Einzeln meist nur wenige Euro – wichtiger ist die Geste. Als Gruppe legen viele Eltern 2 bis 5 Euro pro Kind zusammen. An öffentlichen Schulen und Kitas gelten teils Regeln für Geschenke; im Zweifel kurz bei der Leitung nachfragen.'),
+    ('Was schenken Kinder ihrer Lehrerin zum Schuljahresende?', 'Etwas Selbstgemachtes kommt am besten an: ein Bild, eine Karte mit Danke oder gebackene Plätzchen. Dazu passt eine Kleinigkeit wie Belohnungssticker oder ein Notizbuch.'),
+]
+
+
+def erzieher_page():
+    from themen import ERZIEHER
+    path = '/geschenke-fuer-erzieherin/'
+    secs, jump, n = idea_sections(ERZIEHER, 'erz')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in ERZIEHER_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in ERZIEHER_FAQ]}
+    body = f"""<article>
+<h1>Geschenke für Erzieherinnen &amp; Lehrerinnen: {n} Ideen</h1>
+{ai_photo('wichtel3d-kinder', 'Plüsch-Wichtel zwischen Holzspielzeug: Schaukelpferd, Bauklötze, Eisenbahn und Teddy')}
+<p class="lead">Danke sagen an die Menschen, die jeden Tag mit unseren Kindern lernen, spielen und trösten: Hier findest du {n} Geschenkideen für Erzieherinnen, Erzieher und Lehrkräfte – zu Weihnachten, zum Abschied aus der Kita oder zum Ende des Schuljahres.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Das Schönste machen die Kinder selbst</h2>
+<ul>
+  <li><b>Ein Bild oder eine Karte:</b> Selbst gemalt und mit ein paar Worten – darüber freut sich jede Erzieherin am meisten.</li>
+  <li><b>Plätzchen in der Dose:</b> Gemeinsam gebacken und hübsch verpackt – <a href="/plaetzchen-backen-mit-kindern/">einfaches Rezept</a>.</li>
+  <li><b>Ein kleiner Reim:</b> Für die Karte gibt es <a href="/wichtelgedichte/">kurze Gedichte</a>.</li>
+</ul>
+<p>Wichtelt ihr in der Kita oder Klasse? <a href="/wichteln-schule-kita/">Wichteln in Schule &amp; Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a> · <a href="/wichtelgeschenke-selber-machen/">selbst gemacht</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Geschenke für Erzieherinnen & Lehrerinnen: {n} Ideen für Weihnachten & Abschied',
+         f'Geschenke für Erzieherinnen, Erzieher und Lehrkräfte: {n} Ideen zu Weihnachten, zum Kita-Abschied und Schuljahresende – plus Selbstgemachtes von den Kindern.',
+         body, crumb='Geschenke für Erzieherinnen', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3856,6 +3900,7 @@ def main():
     omaopa_page()
     teens_page()
     spiele_page()
+    erzieher_page()
     links_page()
     invite_page()
     share_page()
