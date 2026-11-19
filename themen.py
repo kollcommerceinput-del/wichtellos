@@ -361,3 +361,45 @@ KOLLEGEN = [
         ('Rätselbuch', 'Für die Bahnfahrt oder das Sofa.', 'Rätselbuch Erwachsene'),
     ]),
 ]
+
+# /geschenke-fuer-oma-und-opa/ (Toni 19.11.: „mach“) – Suchbegriffe 19.11. bei Amazon geprüft (gestrichen: Teelicht-Laterne = nur Teelichter).
+OMAOPA = [
+    ('Warm & gemütlich', 'schlaeft', 'Für lange Winterabende auf dem Sofa.', [
+        ('Decke mit Ärmeln', 'Warm eingepackt – und die Hände bleiben frei für Buch oder Tasse.', 'Decke mit Ärmeln'),
+        ('Filz-Hausschuhe', 'Warm, leise und rutschfest.', 'Hausschuhe Filz warm'),
+        ('Warme Hausschuhe für Opa', 'Mit Fleece gefüttert – nie mehr kalte Füße.', 'Hausschuhe Herren warm'),
+        ('Wärmflasche mit Bezug', 'Der Klassiker für kalte Nächte.', 'Wärmflasche mit Bezug'),
+        ('Winterschal', 'Weich und warm für den Spaziergang.', 'Schal Damen Winter'),
+        ('Kuschelige Fleecedecke', 'Für Sessel, Sofa oder Auto.', 'Fleecedecke kuschelig'),
+        ('Duftkerze im Glas', 'Zimt, Vanille oder Tanne – sofort Weihnachtsstimmung.', 'Duftkerze im Glas'),
+    ]),
+    ('Erinnerungen & Familie', 'herz', 'Was Großeltern am meisten freut: Zeit, Fotos und Geschichten der Familie.', [
+        ('„Oma, erzähl mal“', 'Ein Buch mit Fragen zum Ausfüllen – später ein Schatz für die ganze Familie.', 'Oma erzähl mal'),
+        ('„Opa, erzähl mal“', 'Dasselbe für Opa – Kindheit, Liebe, Lieblingsgeschichten.', 'Opa erzähl mal'),
+        ('Fotoalbum zum Einkleben', 'Mit Bildern der Enkel gefüllt wird es zum Lieblingsgeschenk.', 'Fotoalbum zum Einkleben'),
+        ('Bilderrahmen-Collage', 'Viele Familienfotos in einem Rahmen.', 'Bilderrahmen Collage'),
+        ('Digitaler Bilderrahmen', 'Für größeres Budget: Die Familie schickt neue Fotos direkt aufs Gerät.', 'Digitaler Bilderrahmen'),
+        ('Familienplaner 2027', 'Mit Spalten für alle – Geburtstage nie mehr vergessen.', 'Familienplaner 2027'),
+    ]),
+    ('Garten & Natur', 'winkt', 'Für alle, die gern draußen sind – auch im Winter.', [
+        ('Vogelfutterhaus', 'Für Gäste am Fenster den ganzen Winter lang.', 'Vogelfutterhaus'),
+        ('Meisenknödel-Halter', 'Klein, günstig und sofort im Einsatz.', 'Meisenknödelhalter'),
+        ('Insektenhotel', 'Ein Zuhause für Wildbienen im Garten oder auf dem Balkon.', 'Insektenhotel'),
+        ('Saatgut-Set', 'Kräuter und Gemüse für die neue Saison.', 'Blumensamen Set'),
+        ('Gartenhandschuhe', 'Robust und bequem – werden im Frühjahr sofort gebraucht.', 'Gartenhandschuhe'),
+    ]),
+    ('Rätseln & Spielen', 'lupe', 'Hält den Kopf fit – und macht mit den Enkeln zusammen Spaß.', [
+        ('Rätselbuch mit großer Schrift', 'Gut lesbar, auch ohne Brille.', 'Rätselbuch große Schrift'),
+        ('Kreuzworträtsel-Buch', 'Für die ruhige Stunde am Nachmittag.', 'Kreuzworträtsel Senioren'),
+        ('Puzzle mit 1000 Teilen', 'Für viele gemütliche Abende am Esstisch.', 'Puzzle 1000 Teile'),
+        ('Rommé-Karten', 'Der Spieleabend mit der Familie ist gerettet.', 'Rommé Karten'),
+        ('Leselupe mit Licht', 'Macht kleine Schrift wieder gut lesbar.', 'Leselupe mit Licht'),
+    ]),
+    ('Genuss', 'geschenk', 'Naschen und genießen – geht immer.', [
+        ('Tee-Geschenkset', 'Mehrere Sorten zum Probieren.', 'Tee Geschenkset'),
+        ('Honig-Geschenkset', 'Verschiedene Sorten vom Imker.', 'Honig Geschenkset'),
+        ('Pralinen', 'Die Schachtel, über die sich jeder freut.', 'Pralinen'),
+        ('Lebkuchen-Geschenkbox', 'Weihnachtlich und hübsch verpackt.', 'Lebkuchen Geschenk'),
+        ('Kaffee-Geschenkset', 'Für den Nachmittagskaffee mit Kuchen.', 'Kaffee Geschenkset'),
+    ]),
+]

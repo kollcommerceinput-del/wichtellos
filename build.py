@@ -108,7 +108,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -472,7 +472,7 @@ MENUE = [
         [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
          ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
          ('⏰', 'Last-Minute-Wichtelgeschenke', '/last-minute-wichtelgeschenke/'), ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
-        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'),
+        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'),
          ('🧸', 'Wichtelgeschenke für Kinder', '/wichtelgeschenke-fuer-kinder/'), ('🛋️', 'Kuscheldecken', '/kuscheldecke-verschenken/'),
          ('☕', 'Wichtel-Tassen aus unserem Shop', '/wichtel-tassen/')]]),
     ('dd-budget', [
@@ -3406,7 +3406,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3615,6 +3615,50 @@ def kollegen_page():
          body, crumb='Wichtelgeschenke für Kollegen', playful=True, extra=ld(faq_ld))
 
 
+# /geschenke-fuer-oma-und-opa/ (Toni 19.11.: „mach“ – Familienwichteln; Suchbegriffe 19.11. bei Amazon geprüft)
+OMAOPA_FAQ = [
+    ('Was schenkt man Oma und Opa beim Wichteln?', 'Am meisten freuen sich Großeltern über Dinge mit Familienbezug: ein Fotoalbum mit Bildern der Enkel, ein „Oma, erzähl mal“-Buch oder ein Familienplaner. Dazu passen Gemütliches wie eine Decke mit Ärmeln oder warme Hausschuhe.'),
+    ('Was schenkt man Großeltern, die schon alles haben?', 'Zeit und Erinnerungen: einen Gutschein für einen gemeinsamen Ausflug, ein Fotoalbum oder ein Rätselbuch mit großer Schrift. Auch Verbrauchbares wie Tee, Honig oder Pralinen kommt immer gut an.'),
+    ('Können Kinder für Oma und Opa wichteln?', 'Ja, mit unserem Umschalter „Ohne Handy – für Kinder“ druckt ihr Lose aus, auf denen der Name steht. Ein selbst gemaltes Bild oder Plätzchen sind dann das schönste Geschenk.'),
+    ('Wie lost man in der Familie aus, wenn Oma kein Smartphone hat?', 'Druckt die Lose aus: Name außen, Partner innen – ganz ohne Handy. Alle anderen bekommen ihren geheimen Link per WhatsApp.'),
+]
+
+
+def omaopa_page():
+    from themen import OMAOPA
+    path = '/geschenke-fuer-oma-und-opa/'
+    secs, jump, n = idea_sections(OMAOPA, 'oo')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in OMAOPA_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in OMAOPA_FAQ]}
+    body = f"""<article>
+<h1>Geschenke für Oma &amp; Opa: {n} Ideen zum Wichteln</h1>
+{ai_photo('wichtel3d-kuscheldecke', 'Plüsch-Wichtel liegt gemütlich unter einer Kuscheldecke')}
+<p class="lead">Beim Familienwichteln Oma oder Opa gezogen? Hier findest du {n} Geschenke für Großeltern: zum Aufwärmen, für Erinnerungen an die Familie, für Garten und Vogelfreunde, zum Rätseln und zum Genießen.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Das Persönlichste kostet nichts</h2>
+<ul>
+  <li><b>Zeit schenken:</b> Ein Gutschein für einen Ausflug, ein Kinonachmittag oder gemeinsames Plätzchenbacken.</li>
+  <li><b>Von den Enkeln:</b> Ein selbst gemaltes Bild, gebastelte Sterne oder <a href="/plaetzchen-backen-mit-kindern/">Plätzchen</a> in einer schönen Dose.</li>
+  <li><b>Mit Reim:</b> Ein paar Zeilen auf der Karte machen jedes Geschenk persönlich – <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</li>
+</ul>
+<p>Mehr Ideen: <a href="/wichtelgeschenke-selber-machen/">selbst gemacht</a> · <a href="/kuscheldecke-verschenken/">Kuscheldecken</a> · <a href="/geschenke-fuer-frauen/">für Frauen</a> · <a href="/geschenke-fuer-maenner/">für Männer</a> · <a href="/last-minute-wichtelgeschenke/">Last-Minute-Ideen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Geschenke für Oma & Opa: {n} Ideen zum Wichteln & zu Weihnachten',
+         f'Geschenke für Oma & Opa: {n} Ideen zum Wichteln – gemütlich, mit Familienfotos, für Garten und Rätselfreunde. Plus Tipps für Großeltern, die schon alles haben.',
+         body, crumb='Geschenke für Oma & Opa', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3713,6 +3757,7 @@ def main():
     lustig_page()
     lastminute_page()
     kollegen_page()
+    omaopa_page()
     links_page()
     invite_page()
     share_page()
