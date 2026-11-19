@@ -108,7 +108,7 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
@@ -472,7 +472,7 @@ MENUE = [
         [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
          ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
          ('⏰', 'Last-Minute-Wichtelgeschenke', '/last-minute-wichtelgeschenke/'), ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
-        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'),
+        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'), ('🎧', 'Wichtelgeschenke für Teenager', '/wichtelgeschenke-fuer-teenager/'),
          ('🧸', 'Wichtelgeschenke für Kinder', '/wichtelgeschenke-fuer-kinder/'), ('🛋️', 'Kuscheldecken', '/kuscheldecke-verschenken/'),
          ('☕', 'Wichtel-Tassen aus unserem Shop', '/wichtel-tassen/')]]),
     ('dd-budget', [
@@ -3406,7 +3406,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3659,6 +3659,50 @@ def omaopa_page():
          body, crumb='Geschenke für Oma & Opa', playful=True, extra=ld(faq_ld))
 
 
+# /wichtelgeschenke-fuer-teenager/ (Toni 19.11.: „mach“ – für Eltern/Verwandte, nie „ab 18“; Suchbegriffe 19.11. bei Amazon geprüft)
+TEENS_FAQ = [
+    ('Was schenkt man Teenagern beim Wichteln?', 'Dinge, die zum Alltag passen: ein Mini-Lautsprecher, LED-Streifen fürs Zimmer, ein Kartenspiel für den Spieleabend oder Sticker für Laptop und Trinkflasche. Im Zweifel lieber etwas Nützliches als etwas „Süßes“ – Teenager wollen ernst genommen werden.'),
+    ('Wie viel gibt man beim Wichteln für Jugendliche aus?', 'In der Klasse meist 5 bis 10 Euro, in der Familie oft 15 bis 25 Euro. Legt das Budget vorher fest – beim Auslosen könnt ihr es gleich eintragen.'),
+    ('Was schenkt man, wenn man den Teenager kaum kennt?', 'Neutrale Ideen kommen fast immer an: Kuschelsocken, eine Powerbank, ein Kartenspiel oder eine Fleecedecke. Noch besser: Beim Auslosen einen kurzen Tipp abfragen.'),
+    ('Wie lost eine Schulklasse online aus?', 'Namen eintragen, auslosen, jedem seinen geheimen Link schicken – kostenlos, ohne Anmeldung und ohne App. Ohne Handys geht es mit ausgedruckten Losen.'),
+]
+
+
+def teens_page():
+    from themen import TEENS
+    path = '/wichtelgeschenke-fuer-teenager/'
+    secs, jump, n = idea_sections(TEENS, 'tn')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in TEENS_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in TEENS_FAQ]}
+    body = f"""<article>
+<h1>Wichtelgeschenke für Teenager: {n} Ideen für 13- bis 17-Jährige</h1>
+{ai_photo('wichtel3d-handy', 'Plüsch-Wichtel schaut auf ein Smartphone')}
+<p class="lead">Beim Familienwichteln den Neffen gezogen oder in der Klasse die Banknachbarin? Hier findest du {n} Wichtelgeschenke für Teenager: Technik, Gemütliches fürs Zimmer, Spiele mit Freunden, Style und Kreatives.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>3 Tipps für Geschenke an Jugendliche</h2>
+<ul>
+  <li><b>Nicht zu kindlich:</b> Lieber Lautsprecher als Plüschtier – Teenager wollen ernst genommen werden.</li>
+  <li><b>Tipp abfragen:</b> Beim <a href="/">Auslosen</a> kann jeder einen kurzen Wunsch angeben, oder ihr nutzt einen <a href="/wunschzettel/">Wunschzettel</a>.</li>
+  <li><b>In der Klasse:</b> Budget klein halten und für alle gleich – mehr dazu unter <a href="/wichteln-schule-kita/">Wichteln in Schule &amp; Kita</a>.</li>
+</ul>
+<p>Mehr Ideen: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/lustige-wichtelgeschenke/">lustige Wichtelgeschenke</a> · <a href="/last-minute-wichtelgeschenke/">Last-Minute-Ideen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Wichtelgeschenke für Teenager: {n} Ideen für 13- bis 17-Jährige',
+         f'Wichtelgeschenke für Teenager: {n} Ideen von Technik über Zimmer-Deko bis Spiele und Kreatives – für Familie und Schulklasse, mit Tipps fürs Budget.',
+         body, crumb='Wichtelgeschenke für Teenager', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3758,6 +3802,7 @@ def main():
     lastminute_page()
     kollegen_page()
     omaopa_page()
+    teens_page()
     links_page()
     invite_page()
     share_page()

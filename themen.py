@@ -403,3 +403,44 @@ OMAOPA = [
         ('Kaffee-Geschenkset', 'Für den Nachmittagskaffee mit Kuchen.', 'Kaffee Geschenkset'),
     ]),
 ]
+
+# /wichtelgeschenke-fuer-teenager/ (Toni 19.11.: „mach“) – richtet sich an Erwachsene/Eltern, die für 13–17-Jährige kaufen.
+# Nie „ab 18“/Alkohol. Suchbegriffe 19.11. bei Amazon geprüft (gestrichen: Hitster + „Wer bin ich“ – Suchtreffer zeigen Erwachsenen-Partyspiele).
+TEENS = [
+    ('Technik & Gadgets', 'daumen', 'Für alle, die das Handy sowieso nie aus der Hand legen.', [
+        ('Mini-Bluetooth-Lautsprecher', 'Musik im Zimmer, beim Duschen oder unterwegs.', 'Mini Bluetooth Lautsprecher'),
+        ('Bluetooth-Kopfhörer', 'Für größeres Budget – kabellos in Bus und Bahn.', 'Bluetooth Kopfhörer In Ear'),
+        ('Handyhalterung mit Schwanenhals', 'Fürs Serienschauen im Bett.', 'Handyhalterung Schwanenhals'),
+        ('Kleine Powerbank', 'Damit der Akku den Schultag übersteht.', 'Powerbank klein'),
+        ('Ringlicht fürs Handy', 'Gutes Licht für Fotos und Videos.', 'Ringlicht Handy'),
+        ('Instax-Mini-Film', 'Für alle mit Sofortbildkamera – Fotos zum Anfassen.', 'Instax Mini Film'),
+    ]),
+    ('Zimmer & Chillen', 'schlaeft', 'Macht das eigene Zimmer gemütlicher.', [
+        ('LED-Streifen', 'Farbiges Licht hinterm Bett oder Schreibtisch.', 'LED Strip Zimmer'),
+        ('Sternenhimmel-Projektor', 'Zaubert Sterne und Galaxien an die Decke.', 'Sternenhimmel Projektor'),
+        ('Lichterkette mit Fotoklammern', 'Für die Fotowand mit Freunden.', 'Lichterkette mit Klammern für Fotos'),
+        ('Kuschelige Fleecedecke', 'Für Sofa, Bett und Filmabend.', 'Fleecedecke kuschelig'),
+        ('Kuschelsocken', 'Weich, warm und passt jedem.', 'Kuschelsocken Damen Herren'),
+    ]),
+    ('Spiele mit Freunden', 'jubel', 'Für den nächsten Spieleabend – ganz ohne Bildschirm.', [
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('UNO Flip', 'UNO mit Wende – jede Runde wird anders.', 'UNO Flip'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel mit vielen Lachern.', 'Halt mal kurz Kartenspiel'),
+        ('Speed Cube', 'Der Zauberwürfel für Tüftler – wer schafft ihn am schnellsten?', 'Speed Cube'),
+    ]),
+    ('Style & Pflege', 'herz', 'Kleine Dinge, die jeden Tag benutzt werden.', [
+        ('Scrunchies', 'Samt-Haargummis in vielen Farben.', 'Scrunchies'),
+        ('Beanie-Mütze', 'Warm und passt zu jeder Jacke.', 'Beanie Mütze'),
+        ('Socken mit Motiv', 'Pizza, Avocado oder Tiere – lustig und warm.', 'Socken mit Motiv'),
+        ('Kosmetiktasche', 'Für Sporttasche, Rucksack oder Klassenfahrt.', 'Kosmetiktasche'),
+        ('Badekugeln-Set', 'Sprudeln, duften, entspannen.', 'Badekugeln Set'),
+    ]),
+    ('Kreativ & Schule', 'geschenk', 'Für alle, die gern zeichnen, schreiben und gestalten.', [
+        ('Bullet Journal', 'Gepunktetes Notizbuch zum Planen und Gestalten.', 'Bullet Journal gepunktet'),
+        ('Sticker-Set', 'Für Laptop, Trinkflasche und Hefte.', 'Sticker Set aesthetic'),
+        ('Skizzenbuch A5', 'Für Zeichnungen und Ideen.', 'Skizzenbuch A5'),
+        ('Washi-Tape-Set', 'Bunte Klebebänder zum Verzieren.', 'Washi Tape Set'),
+        ('Fineliner-Set', 'Viele Farben für Notizen und Zeichnungen.', 'Fineliner Set'),
+        ('Trinkflasche aus Edelstahl', 'Für Schule, Sport und unterwegs.', 'Trinkflasche Edelstahl'),
+    ]),
+]
