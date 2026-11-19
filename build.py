@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
-    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
+    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
@@ -494,7 +494,7 @@ MENUE = [
     ('dd-wichteln', [
         [('🎁', 'Jetzt kostenlos auslosen', '/'), ('❓', 'Wie funktioniert Wichteln?', '/wie-funktioniert-wichteln/'),
          ('🎲', 'Wichteln mit Würfeln', '/wichteln-wuerfeln-regeln/'), ('🗑️', 'Schrottwichteln', '/schrottwichteln/'),
-         ('🃏', 'Wichtel-Varianten', '/wichteln-varianten/')],
+         ('🃏', 'Wichtel-Varianten', '/wichteln-varianten/'), ('🚪', 'Julklapp: Brauch & Regeln', '/julklapp/')],
         [('💼', 'Wichteln im Büro', '/wichteln-im-buero/'), ('🏫', 'Schule & Kita', '/wichteln-schule-kita/'),
          ('💬', 'Wichteln per WhatsApp', '/wichteln-per-whatsapp/'), ('📝', 'Wunschzettel', '/wunschzettel/'),
          ('🎄', 'Weihnachtsfeier-Ideen', '/weihnachtsfeier-ideen/')]]),
@@ -3144,7 +3144,7 @@ def history_page():
 {erkl_box('kind', 'Für Kinder erklärt: Was ist ein Wichtel?')}
 
 <h2>Der Vorläufer: Julklapp</h2>
-<p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen.</p>
+<p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen. Mehr dazu: <a href="/julklapp/">Julklapp – Brauch, Regeln &amp; Ablauf</a>.</p>
 
 <h2>Wichteln in anderen Ländern</h2>
 <ul>
@@ -3441,7 +3441,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3823,6 +3823,70 @@ def erzieher_page():
          body, crumb='Geschenke für Erzieherinnen', playful=True, extra=ld(faq_ld))
 
 
+# /julklapp/ (Toni 19.11.: „danach suchen Leute auch“) – Fakten 19.11. geprüft: Wort = „Weihnachtsklopfen“, schwedisch seit 1741 belegt,
+# im 19. Jh. in bürgerlichen Haushalten verbreitet (Nordiska museet), „Julklapp-Werfen“ in Anklam/Pommern (Adler 1930 via Pommerscher Greif).
+JULKLAPP_FAQ = [
+    ('Was ist Julklapp?', 'Ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland: Ein Geschenk wird heimlich an die Tür gebracht, man klopft, wirft es hinein und verschwindet. Der Beschenkte soll raten, von wem es kommt. Heute sagen viele im Norden „Julklapp“, wenn sie Wichteln meinen.'),
+    ('Was bedeutet das Wort Julklapp?', '„Jul“ ist das skandinavische Wort für Weihnachten, „klapp“ steht für das Klopfen an der Tür – zusammen also etwa „Weihnachtsklopfen“. Im Schwedischen ist das Wort seit 1741 belegt.'),
+    ('Was ist der Unterschied zwischen Julklapp und Wichteln?', 'Im Grunde keiner mehr: Bei beiden beschenkt man eine ausgeloste Person, ohne sich zu verraten. Beim klassischen Julklapp gehört das Rätseln dazu – das Geschenk ist oft mehrfach verpackt und mit einem Vers versehen.'),
+    ('Wie lost man Julklapp aus?', 'Wie beim Wichteln: Namen eintragen, auslosen und jedem seinen geheimen Link schicken – kostenlos und ohne Anmeldung. Ohne Handy geht es mit ausgedruckten Losen.'),
+]
+
+
+def julklapp_page():
+    path = '/julklapp/'
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in JULKLAPP_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in JULKLAPP_FAQ]}
+    body = f"""<article>
+<h1>Julklapp: Was ist das? Brauch, Regeln &amp; Ablauf</h1>
+{ai_photo('wichtel3d-tuer', 'Plüsch-Wichtel vor einer kleinen Holztür mit Weihnachtskranz')}
+<p class="lead">Klopf, klopf – und schon liegt ein Päckchen vor der Tür, aber niemand ist zu sehen: Das ist Julklapp. Der alte Brauch aus Skandinavien und Norddeutschland ist der Vorläufer des heutigen Wichtelns. Hier erfährst du, woher er kommt, wie er früher ablief und wie ihr Julklapp heute spielt.</p>
+<p class="chips-line">Direkt zu: <a href="#herkunft">Herkunft</a> · <a href="#regeln">So geht Julklapp heute</a> · <a href="#unterschied">Julklapp oder Wichteln?</a> · <a href="#fragen">Fragen</a></p>
+
+<h2 id="herkunft">Woher kommt Julklapp?</h2>
+<p>„Jul“ ist das skandinavische Wort für Weihnachten, „klapp“ steht für das Klopfen an der Tür – Julklapp heißt also etwa <b>Weihnachtsklopfen</b>. Im Schwedischen ist das Wort seit 1741 belegt.</p>
+<p>Der Brauch ging so: Am Heiligabend schlich man zum Haus von Freunden oder Nachbarn, klopfte an die Tür, warf ein Päckchen hinein – und lief davon, bevor jemand öffnete. Oft war das Geschenk ein Scherz: ein Holzscheit oder eine geschnitzte Puppe, mehrfach eingewickelt. Im 19. Jahrhundert wurde Julklapp in bürgerlichen Familien beliebt.</p>
+<p>Auch an der deutschen Ostseeküste, etwa in Pommern, war das „Julklapp-Werfen“ verbreitet. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></p>
+
+<h2 id="regeln">So geht Julklapp heute</h2>
+<ol>
+  <li><b>Auslosen:</b> Jede Person zieht heimlich einen Namen – online in einer Minute, <a href="/">kostenlos und ohne Anmeldung</a>.</li>
+  <li><b>Budget festlegen:</b> Meist 5 bis 20 Euro – damit sich niemand über- oder unterbeschenkt fühlt.</li>
+  <li><b>Mehrfach verpacken:</b> Typisch für Julklapp: Päckchen im Päckchen im Päckchen. Je mehr Lagen, desto größer der Spaß beim Auspacken.</li>
+  <li><b>Einen Vers dazulegen:</b> Ein kleiner Reim mit Hinweis auf das Geschenk – ohne den eigenen Namen. Ideen: <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</li>
+  <li><b>Klopfen und verschwinden:</b> Wer mag, macht es wie früher: anklopfen, Päckchen vor die Tür legen, weglaufen. Bei der Feier landen alle Geschenke einfach in der Mitte.</li>
+  <li><b>Raten:</b> Beim Auspacken rät der Beschenkte, wer sein Julklapp war. Erst dann wird aufgelöst – oder nie.</li>
+</ol>
+
+<h2 id="unterschied">Julklapp oder Wichteln – was ist der Unterschied?</h2>
+<table class="rules">
+<thead><tr><th></th><th>Julklapp</th><th>Wichteln</th></tr></thead>
+<tbody>
+<tr><td>Herkunft</td><td>Skandinavien, Norddeutschland</td><td>Ganz Deutschland, Österreich, Schweiz</td></tr>
+<tr><td>Wer schenkt wem?</td><td>Ausgelost, geheim</td><td>Ausgelost, geheim</td></tr>
+<tr><td>Typisch</td><td>Klopfen, mehrfach verpacken, Vers</td><td>Budget, Wunschzettel, Bescherung in der Runde</td></tr>
+<tr><td>Heute</td><td colspan="2">Praktisch dasselbe – im Norden heißt es oft Julklapp</td></tr>
+</tbody>
+</table>
+<p>Weitere Spielarten wie Schrottwichteln oder Wichteln mit Würfeln: <a href="/wichteln-varianten/">12 Wichtel-Varianten</a>.</p>
+
+{supplies_block(WRAP, 'Zum Verpacken: Päckchen im Päckchen 🎀', note=False)}
+
+<h2>Geschenkideen für den Julklapp</h2>
+{personen_chips()}
+
+{DISC_SEARCH}
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, 'Julklapp: Was ist das? Brauch, Regeln & Ablauf – online auslosen',
+         'Was ist Julklapp? Der Weihnachtsbrauch aus Skandinavien und Norddeutschland erklärt: Herkunft, Regeln für heute, Unterschied zum Wichteln – und kostenlos online auslosen.',
+         body, crumb='Julklapp', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3925,6 +3989,7 @@ def main():
     teens_page()
     spiele_page()
     erzieher_page()
+    julklapp_page()
     links_page()
     invite_page()
     share_page()
