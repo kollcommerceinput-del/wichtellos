@@ -51,6 +51,7 @@ const PAGES = [
   ['plaetzchen-backen-mit-kindern', 'onni/sticker-herz.png', 'Plätzchen backen mit Kindern', 'Einfaches Rezept, Wichtel-Kekse & Zubehör'],
   ['kuscheldecke-verschenken', 'onni/sticker-schlaeft.png', 'Kuscheldecke verschenken', 'Die gemütlichsten Decken – 13 Ideen'],
   ['lustige-wichtelgeschenke', 'onni/sticker-jubel.png', 'Lustige Wichtelgeschenke', '30 Ideen zum Lachen – auch fürs Büro'],
+  ['last-minute-wichtelgeschenke', 'onni/sticker-geschenk.png', 'Last-Minute-Wichtelgeschenke', '27 Ideen für heute & morgen'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

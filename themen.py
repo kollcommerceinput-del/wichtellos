@@ -280,3 +280,43 @@ LUSTIG = [
         ('Partyspiel für Erwachsene (ab 18)', 'Kartenspiel mit schwarzem Humor für den Abend.', 'Partyspiel Erwachsene Karten'),
     ]),
 ]
+
+# /last-minute-wichtelgeschenke/ (Toni 19.11.: „mach“) – Suchbegriffe am 19.11. bei Amazon geprüft
+# (gestrichen: Spotify-Geschenkkarte gibt es nicht, „Hörbuch/eBook Geschenk“ liefert Geräte bzw. Einzeltitel).
+LASTMINUTE = [
+    ('Heute noch: zum Ausdrucken', 'psst', 'Kein Versand, kein Warten – heute kaufen, ausdrucken, verpacken.', [
+        ('Amazon-Gutschein zum Ausdrucken', 'Betrag wählen, Motiv aussuchen, ausdrucken – fertig in fünf Minuten.', 'Amazon Gutschein zum Ausdrucken'),
+    ]),
+    ('Morgen da: mit Prime bestellen', 'geschenk', 'Viele Artikel kommen mit Prime schon am nächsten Tag – achtet beim Bestellen auf das Lieferdatum.', [
+        ('Kuschelsocken', 'Weich, warm und passt jedem – der sichere Klassiker.', 'Kuschelsocken Damen Herren'),
+        ('Thermobecher', 'Hält den Kaffee auf dem Weg ins Büro heiß.', 'Thermobecher to go'),
+        ('Duftkerze im Glas', 'Zimt, Orange oder Tanne – sofort Winterstimmung.', 'Duftkerze im Glas'),
+        ('Handwärmer', 'Für kalte Finger an der Bushaltestelle oder beim Spaziergang.', 'Handwärmer'),
+        ('Tee-Geschenkset', 'Mehrere Sorten zum Probieren – schön verpackt.', 'Tee Geschenkset'),
+        ('Kaffee-Geschenkset', 'Verschiedene Röstungen für alle, die morgens nicht ohne können.', 'Kaffee Geschenkset'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel – wird direkt nach der Bescherung gespielt.', 'Halt mal kurz Kartenspiel'),
+        ('Rätselbuch', 'Für ruhige Abende auf dem Sofa.', 'Rätselbuch Erwachsene'),
+        ('Notizbuch A5', 'Fester Einband, schönes Papier – wird immer gebraucht.', 'Notizbuch A5 Hardcover'),
+        ('Kuschelige Fleecedecke', 'Für Sofa, Büro oder Auto – gemütlich geht immer.', 'Fleecedecke kuschelig'),
+        ('Weihnachtstasse', 'Mit winterlichem Motiv – gleich mit Kakao befüllen.', 'Weihnachtstasse'),
+        ('Kleine Powerbank', 'Rettet den Akku unterwegs – passt in jede Jackentasche.', 'Powerbank klein'),
+        ('Mini-Taschenlampe', 'Hell, klein, aufladbar – für Schlüsselbund oder Handschuhfach.', 'Mini Taschenlampe LED'),
+        ('Handyhalterung fürs Auto', 'Praktisch für alle, die viel unterwegs sind.', 'Handyhalterung Auto'),
+    ]),
+    ('Genuss & Wohlfühlen', 'herz', 'Naschen, schnuppern, entspannen – kommt bei fast allen gut an.', [
+        ('Pralinen', 'Die Schachtel, über die sich jeder freut.', 'Pralinen'),
+        ('Schokoladen-Probierset', 'Mehrere Sorten zum Durchprobieren.', 'Schokoladen Probierset'),
+        ('Heiße Schokolade im Set', 'Kakao zum Anrühren – perfekt für kalte Abende.', 'Heißer Kakao Geschenk'),
+        ('Lebkuchen-Geschenkbox', 'Weihnachtlich und hübsch verpackt.', 'Lebkuchen Geschenk'),
+        ('Gewürz-Geschenkset', 'Für alle, die gern kochen.', 'Gewürze Geschenkset'),
+        ('Popcorn-Set', 'Mais plus Gewürze – der Filmabend ist gerettet.', 'Popcorn Mais Gewürz Set'),
+        ('Handcreme-Set', 'Gegen trockene Winterhände.', 'Handcreme Geschenkset'),
+        ('Tuchmasken-Set', 'Zehn Minuten Wellness am Abend.', 'Tuchmasken Gesicht Set'),
+        ('Badekugeln-Set', 'Sprudeln, duften, entspannen.', 'Badekugeln Set'),
+    ]),
+    ('In 10 Minuten selbst gemacht', 'jubel', 'Zutaten aus dem Schrank – sieht nach viel Mühe aus.', [
+        ('Backmischung im Glas', 'Mehl, Zucker, Schokodrops schichten, Rezept dran – fertig.', 'Einmachglas mit Deckel'),
+        ('Gutscheinheft', 'Einmal Kaffee holen, einmal Spieleabend – kostet nur Zeit.', 'Gutscheinkarten blanko'),
+        ('Geschenkanhänger', 'Mit einem Reim drauf wird jedes Geschenk persönlich.', 'Geschenkanhänger Weihnachten'),
+    ]),
+]
