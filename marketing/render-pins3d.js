@@ -40,6 +40,10 @@ const PINS = [
   ['kuscheldecke', '../../../kuscheldecke/onni-kuscheldecke-2k.jpg', '50% 56%', 'Kuschel&shy;decke verschenken', '13 Ideen für gemütliche Winterabende', 'Alle Ideen ansehen →'],
   ['selber-bauen', '../../../selberbau/tuer-selbstgebaut-flow-2k.jpg', '50% 55%', 'Wichteltür selber bauen', 'Werkzeug, Material &amp; Anleitung', 'Zur Anleitung →'],
   ['zubehoer', 'tuer.jpg', '40% 50%', 'Wichtel-Zubehör', '46 Ideen: Möbel, Licht, Briefkasten &amp; mehr', 'Alle Ideen ansehen →'],
+  // 19.11. /lustige-wichtelgeschenke/ (Toni: 3 Pins, je einer pro Tag)
+  ['lustig', 'schrott.jpg', '50% 45%', 'Lustige Wichtel&shy;geschenke', '30 Ideen zum Lachen', 'Alle Ideen ansehen →'],
+  ['lustig-buero', 'feier.jpg', '50% 45%', 'Lustige Wichtel&shy;geschenke fürs Büro', 'Bullshit-Buzzer, Mini-Boxsack &amp; Co.', 'Ideen fürs Team →'],
+  ['lustig-10', 'geschenk.jpg', '50% -420px', 'Lustige Wichtel&shy;geschenke bis 10&nbsp;€', 'Furzkissen, Glückskekse &amp; Co.', 'Alle Ideen ansehen →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
