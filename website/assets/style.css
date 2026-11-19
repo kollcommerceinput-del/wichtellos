@@ -1062,3 +1062,10 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
   .top nav button.nav-dd[aria-expanded="true"]:not(.nav-hi) { background: #fde7e5; }
   .top nav button.nav-shop { grid-column: span 2; }
 }
+
+/* Geschenkideen nach Person (Toni 19.11.: Startseite, geheimer Link, Geschenkfinder) */
+.personen { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.personen a.chip { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.personen a.chip:hover { border-color: var(--primary); color: var(--primary); }
+.personen-box { margin: 24px 0; }
+.r-more { margin: 14px 0 0; font-size: 15px; }

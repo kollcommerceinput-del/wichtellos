@@ -1074,6 +1074,10 @@ def finder_page():
 </div>
 <p class="hint">Bei Geschenken für Kinder bitte die Altersangabe auf der Verpackung beachten, zum Beispiel wegen verschluckbarer Kleinteile.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<section class="personen-box">
+<h2>Ausführliche Ratgeber nach Person</h2>
+{personen_chips()}
+</section>
 {CTA}
 </article>'''
     page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter & Budget',
@@ -3363,6 +3367,19 @@ HOW_TO = [
 ]
 
 
+# Geschenkideen nach Person (Toni 19.11.: Reichweite – Startseite, geheimer Link, Geschenkfinder verlinken die Ratgeber)
+PERSONEN = [('👔', 'Männer', '/geschenke-fuer-maenner/'), ('💐', 'Frauen', '/geschenke-fuer-frauen/'),
+            ('💼', 'Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Oma & Opa', '/geschenke-fuer-oma-und-opa/'),
+            ('🎧', 'Teenager', '/wichtelgeschenke-fuer-teenager/'), ('🧸', 'Kinder', '/wichtelgeschenke-fuer-kinder/'),
+            ('🍎', 'Erzieherin', '/geschenke-fuer-erzieherin/'), ('🎯', 'Spiele', '/gesellschaftsspiele-verschenken/'),
+            ('😂', 'Lustig', '/lustige-wichtelgeschenke/'), ('⏰', 'Last Minute', '/last-minute-wichtelgeschenke/')]
+
+
+def personen_chips():
+    return '<nav class="personen" aria-label="Geschenkideen nach Person">' + ''.join(
+        f'<a class="chip" href="{h}">{i} {esc(t)}</a>' for i, t, h in PERSONEN) + '</nav>'
+
+
 def faq_html():
     steps = '\n'.join(f'      <li data-i="{i}"><b>{esc(h)}</b> – {esc(x)}</li>' for i, h, x in HOW_TO)
     assert all(any(q == t for q, _ in FAQ) for t in FAQ_TOP), 'FAQ_TOP passt nicht zu FAQ'
@@ -3378,6 +3395,12 @@ def faq_html():
       <ol>
 {steps}
       </ol>
+    </section>
+
+    <section class="personen-box">
+      <h2>🎁 Geschenkideen für jeden</h2>
+      <p class="hint">Ausgelost – und jetzt? Ideen für jede Person in eurer Wichtelrunde:</p>
+      {personen_chips()}
     </section>
 
     <section class="faq">
@@ -3406,6 +3429,7 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
+    html = html.replace('<!--PERSONEN-->', '<p class="f-label" style="margin-top:14px">Ideen nach Person:</p>' + personen_chips())
     html = html.replace('<!--VERPACKEN-->', supplies_block(WRAP, 'Schön verpacken – und geheim bleiben 🎀', note=False))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(asset_v(html), encoding='utf-8')
