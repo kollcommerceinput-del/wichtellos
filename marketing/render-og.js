@@ -52,6 +52,7 @@ const PAGES = [
   ['kuscheldecke-verschenken', 'onni/sticker-schlaeft.png', 'Kuscheldecke verschenken', 'Die gemütlichsten Decken – 13 Ideen'],
   ['lustige-wichtelgeschenke', 'onni/sticker-jubel.png', 'Lustige Wichtelgeschenke', '30 Ideen zum Lachen – auch fürs Büro'],
   ['last-minute-wichtelgeschenke', 'onni/sticker-geschenk.png', 'Last-Minute-Wichtelgeschenke', '27 Ideen für heute & morgen'],
+  ['wichtelgeschenke-fuer-kollegen', 'onni/sticker-daumen.png', 'Wichtelgeschenke für Kollegen', '28 Ideen fürs Büro – nützlich & lustig'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>

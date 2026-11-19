@@ -320,3 +320,44 @@ LASTMINUTE = [
         ('Geschenkanhänger', 'Mit einem Reim drauf wird jedes Geschenk persönlich.', 'Geschenkanhänger Weihnachten'),
     ]),
 ]
+
+# /wichtelgeschenke-fuer-kollegen/ (Toni 19.11.: „mach“) – Suchbegriffe 19.11. bei Amazon geprüft
+# (gestrichen: Bambus-To-go-Becher = Wegwerfbecher, Party-Kartenspiel teils nicht bürotauglich, Mauspad unpassend).
+KOLLEGEN = [
+    ('Für den Schreibtisch', 'daumen', 'Wird jeden Tag benutzt – und erinnert an die nette Wichtelrunde.', [
+        ('Tassenwärmer mit USB', 'Hält den Kaffee warm, auch wenn das Telefon wieder länger dauert.', 'Tassenwärmer USB'),
+        ('Schreibtisch-Organizer', 'Stifte, Zettel, Handy – endlich alles an seinem Platz.', 'Schreibtisch Organizer'),
+        ('Kabelhalter', 'Klein, günstig und gegen den Kabelsalat unterm Monitor.', 'Kabelhalter Schreibtisch'),
+        ('Kleine Kunstpflanzen', 'Grün auf dem Tisch – ganz ohne Gießen.', 'Kunstpflanze klein Schreibtisch'),
+        ('Fineliner-Set', 'Für Notizen, To-do-Listen und Kritzeleien im Meeting.', 'Fineliner Set'),
+        ('Schreibtischuhr', 'Damit der Feierabend nicht verpasst wird.', 'Schreibtischuhr'),
+        ('Kleine LED-Schreibtischlampe', 'Helles Licht für dunkle Wintermorgen.', 'Schreibtischlampe LED klein'),
+        ('Notizbuch A5', 'Fester Einband, schönes Papier – wird immer gebraucht.', 'Notizbuch A5 Hardcover'),
+    ]),
+    ('Kaffee, Tee & Pause', 'herz', 'Für die schönste Zeit im Büroalltag: die Pause.', [
+        ('Tasse mit Bürospruch', 'Sagt, was alle denken – jeden Morgen aufs Neue.', 'Tasse mit Spruch Büro'),
+        ('Kaffee-Probierset', 'Verschiedene Bohnen für alle, die ohne Kaffee nicht starten.', 'Kaffee Probierset Bohnen'),
+        ('Tee-Probierset', 'Mehrere Sorten für die Teetrinker im Team.', 'Tee Probierset'),
+        ('Trinkflasche aus Edelstahl', 'Für mehr Wasser am Schreibtisch.', 'Trinkflasche Edelstahl'),
+        ('Lunchbox aus Edelstahl', 'Für das Mittagessen von zu Hause.', 'Lunchbox Edelstahl'),
+        ('Honig-Geschenkset', 'Verschiedene Sorten – passt zu Tee und Frühstück.', 'Honig Geschenkset'),
+        ('Schokoladen-Probierset', 'Zum Teilen in der Kaffeeküche – oder auch nicht.', 'Schokoladen Probierset'),
+    ]),
+    ('Lustig fürs Team', 'jubel', 'Sorgt bei der Bescherung für Lacher – ohne jemanden bloßzustellen.', [
+        ('Bullshit-Buzzer', 'Ein Druck auf den Knopf sagt im Meeting mehr als tausend Worte.', 'Bullshit Buzzer'),
+        ('Meeting-Bingo', 'Synergie, Deadline, kurz mal abstimmen – wer hat zuerst eine Reihe?', 'Meeting Bingo'),
+        ('Lustiger Bürokalender 2027', 'Ein Spruch pro Tag fürs neue Jahr.', 'Büro Kalender 2027 lustig'),
+        ('Mini-Basketball für den Schreibtisch', 'Korb an den Papierkorb, Papierkugel rein.', 'Mini Basketball Büro Schreibtisch'),
+        ('Anti-Stress-Würfel', 'Klicken, drehen, schieben – für lange Telefonate.', 'Anti Stress Würfel'),
+        ('Mini-Zen-Garten', 'Sand, Rechen, Steine – Ruhe auf 15 Zentimetern.', 'Mini Zen Garten Schreibtisch'),
+        ('Haftnotizen mit Sprüchen', 'Für Botschaften, die man lieber nicht laut sagt.', 'Haftnotizen lustig'),
+        ('Notizblock mit frechem Spruch', 'Für To-do-Listen, die sowieso niemand abarbeitet.', 'Notizblock lustig Spruch Büro'),
+    ]),
+    ('Passt immer: neutral & sicher', 'geschenk', 'Wenn du die Person kaum kennst – damit liegst du nie daneben.', [
+        ('Kuschelsocken', 'Weich, warm und passt jedem.', 'Kuschelsocken Damen Herren'),
+        ('Handcreme-Set', 'Gegen trockene Hände von Heizungsluft.', 'Handcreme Geschenkset'),
+        ('Kleine Powerbank', 'Rettet den Akku auf dem Heimweg.', 'Powerbank klein'),
+        ('Duftkerze im Glas', 'Für gemütliche Abende nach Feierabend.', 'Duftkerze im Glas'),
+        ('Rätselbuch', 'Für die Bahnfahrt oder das Sofa.', 'Rätselbuch Erwachsene'),
+    ]),
+]
