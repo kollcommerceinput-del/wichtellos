@@ -3890,6 +3890,7 @@ def julklapp_page():
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
+    ('🌙', 'Onnis Adventskalender: 24 Türchen ab 1.12.', '/onni-adventskalender/'),
     ('🏷️', 'Black Friday: Wichtelgeschenke im Angebot', '/black-friday-wichtelgeschenke/'),
     ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'),
     ('🔤', 'Wichteln mit Buchstaben', '/wichtelgeschenke-mit-buchstaben/'),
@@ -3901,7 +3902,6 @@ LINKS_FEST = [
     ('🎁', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
     ('💼', 'Wichteln im Büro', '/wichteln-im-buero/'),
     ('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'),
-    ('🌙', 'Onnis Adventskalender (für Kinder)', '/onni-adventskalender/'),
     ('☕', 'Unser Shop: Tassen, Pullis & mehr', '/wichtel-tassen/'),
 ]
 
