@@ -18,6 +18,7 @@ Vollständige Notizen zu Seiten, Skripten, Marketing-Dateien und Abläufen. Kurz
   im Browser, nichts gespeichert), `history_page()` `/woher-kommt-wichteln/` (01.11.); Sitemap jetzt 17 URLs
 - `build.py`: `door_page()` `/wichteltuer/` (24-Tage-Streichplan `DOOR_PLAN`, Begrüßungsbrief, Zubehör `DOOR_SHOP` als Amazon-Suchen);
   `supplies_block()` „Das brauchst du noch für die Bescherung“ (Anhänger, Würfel, Mützen, Tüten) auf Würfeln/Büro/Weihnachtsfeier (01.11.)
+- `build.py`: `abschied_page()` `/wichtel-abschied/` (20.11.): Abschiedsbrief (Text wie `tuer-abschied.pdf`), Druckkarten Abschiedsbrief + Urkunde aus `DRUCK_TUER`, `ABSCHIED_IDEEN` (8), Tipps, Tür nach Weihnachten, `ABSCHIED_FAQ`. In `KINDER_OHNE_AMAZON` + `BF_OHNE` (keine Werbung). Video „Onni sagt Tschüss“ später nach Abnahme einbauen.
 - `build.py`: `invite_page()` – `/wichteln-einladung-vorlage/`: Aushang „Wir wichteln!“ mit Teilnehmerliste (20 Zeilen) + QR zu
   wichtellos.de (`grafik/qr-wichtellos.svg`), druckt auf 1 Seite A4 (Body-Klasse `poster-page`). Teilen-Knöpfe „Kennst du noch eine
   Gruppe?“ in Ergebnis- und Aufdeck-Ansicht (`.share-wa`, Text ohne Namen/Links)
