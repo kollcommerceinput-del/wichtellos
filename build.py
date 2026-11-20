@@ -2729,49 +2729,113 @@ def door_page():
          crumb='Wichteltür', mascot='geschenk', playful=True)
 
 
+# Weihnachtsfeier (20.11. ausgebaut, Toni „DAS WAS GESUCHT WIRD MÜSSEN WIR abdecken“): Google 28 Tage ~230 Aufrufe für
+# „ideen für weihnachtsfeier“, „weihnachtsparty ideen“, „teamevent“, „organisieren“, „gestalten“ – Platz 24–55 mit nur 10 Ideen.
+# (id, Überschrift, Einleitung, [(Titel, Text-HTML)])
+PARTY_IDEEN = [
+    ('unterwegs', 'Unterwegs: raus aus dem Büro', 'Ein bisschen frische Luft, dann gemeinsam essen – der Klassiker, der fast immer funktioniert.', [
+        ('Weihnachtsmarkt mit Wichtel-Twist', 'Ihr lost vorher aus, wer wen „bewichtelt“ – auf dem Markt spendiert jeder seinem Wichtel einen Punsch, eine Bratwurst oder gebrannte Mandeln. Kostet wenig, bringt alle ins Gespräch.'),
+        ('Fackel- oder Laternenwanderung', 'Eine kurze Runde durch Park oder Wald, unterwegs heißer Punsch aus der Thermoskanne. Ideal für Teams, die sonst nur am Schreibtisch sitzen.'),
+        ('Stadtführung im Advent', 'Viele Städte bieten Nachtwächter-, Laternen- oder Weihnachtsführungen an – oft mit Abschluss auf dem Weihnachtsmarkt.'),
+        ('Eisstockschießen oder Schlittschuhlaufen', 'Wintersport light, den auch Ungeübte schaffen. Danach geht es zum Aufwärmen ins Restaurant.'),
+        ('Weihnachtsbaum selbst schlagen', 'Auf einer Weihnachtsbaum-Plantage sucht das Team gemeinsam einen Baum fürs Büro aus – oft mit Feuerschale und Punsch vor Ort.'),
+    ]),
+    ('teamevent', 'Teamevents: zusammen etwas schaffen', 'Hier steht das Miteinander im Mittelpunkt – gut für Teams, die sich besser kennenlernen sollen.', [
+        ('Escape-Room', 'Rätseln im Team, meist 4 bis 6 Personen pro Raum. Größere Gruppen spielen in mehreren Räumen gegeneinander.'),
+        ('Krimidinner', 'Essen und Mitraten – jeder bekommt eine Rolle. Gibt es als Event im Restaurant oder als Spiel-Set für zu Hause und das Büro.'),
+        ('Kochkurs oder Weihnachtsmenü kochen', 'Gemeinsam ein Menü kochen und danach an einer langen Tafel essen. Viele Kochschulen bieten Kurse speziell für Firmen an.'),
+        ('Plätzchen backen', 'Teig vorbereiten, ausstechen, verzieren – in der Büroküche oder einer gemieteten Küche. Die Plätzchen nimmt jeder mit nach Hause. Rezepte: <a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a>.'),
+        ('Workshop: Kränze, Kerzen oder Glas', 'Adventskränze binden, Kerzen ziehen oder Christbaumkugeln bemalen. Am Ende hat jeder ein selbst gemachtes Andenken.'),
+        ('Bowling, Kegeln oder Minigolf', 'Unkompliziert, für jedes Alter, und die Bahn lässt sich oft auch kurzfristig reservieren.'),
+        ('Lasertag oder Bubble-Soccer', 'Für sportliche Teams, die sich austoben wollen. Danach gemeinsam essen gehen.'),
+    ]),
+    ('buero', 'Im Büro: wenig Aufwand, viel Stimmung', 'Kein Restaurant nötig: Mit Essen, Musik und einem guten Programmpunkt wird auch das Büro zur Weihnachtsfeier.', [
+        ('Wichteln mit Würfeln', 'Alle bringen ein verpacktes Geschenk mit, dann wird gewürfelt, getauscht und geklaut. Regeln, Online-Würfel und Timer: <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>.'),
+        ('Klassisch wichteln', 'Ein paar Wochen vorher <a href="/">online auslosen</a>, auf der Feier packen alle aus. Budget und Regeln fürs Team: <a href="/wichteln-im-buero/">Wichteln im Büro</a>.'),
+        ('Schrottwichteln', 'Jeder bringt etwas mit, das zu Hause nur herumsteht – das sorgt garantiert für Lacher. Ideen: <a href="/schrottwichteln/">Schrottwichteln</a>.'),
+        ('Weihnachts-Quiz', 'Fragen zu Weihnachtsbräuchen, Filmen und Liedern – und ein paar über die Firma. In Teams spielen, kleiner Preis für die Sieger.'),
+        ('Ugly-Christmas-Sweater-Tag', 'Alle kommen im schrägsten Weihnachtspulli, am Ende wird der schönste gekürt. Kostet nichts und ergibt die besten Fotos.'),
+        ('Buffet zum Mitbringen', 'Jeder bringt etwas mit – am besten mit einer Liste, damit es nicht nur Nudelsalat gibt. Dazu Kinderpunsch und Glühwein.'),
+        ('Fotoecke', 'Eine Ecke mit Weihnachtsdeko, Mützen und Rentier-Haarreifen: Die Bilder hängen danach noch lange in der Teeküche.'),
+    ]),
+    ('online', 'Online: für Teams im Homeoffice', 'Auch wenn nicht alle an einem Ort sind, kann es eine richtige Feier werden.', [
+        ('Wichteln per Post', 'Online auslosen, Geschenke per Post verschicken und gemeinsam im Videocall auspacken. So geht\'s: <a href="/wichteln-per-post/">Wichteln per Post</a>.'),
+        ('Online-Quiz oder Bingo', 'Ein Weihnachts-Quiz oder Bingo im Videocall, Fragen per geteiltem Bildschirm.'),
+        ('Gemeinsam backen oder kochen per Video', 'Alle bekommen vorher die Zutatenliste und backen oder kochen gleichzeitig vor der Kamera.'),
+        ('Virtuelles Krimidinner oder Escape-Game', 'Viele Anbieter haben Fassungen für den Videocall – mit Rollen und Rätseln für alle.'),
+    ]),
+    ('klein', 'Kleines Budget: schöne Ideen für wenig Geld', 'Eine gute Feier muss nicht teuer sein.', [
+        ('Wichteln mit 5-Euro-Grenze', 'Kleine Geschenke, großer Spaß. Ideen: <a href="/wichtelgeschenke-unter-5-euro/">Wichtelgeschenke unter 5 Euro</a>.'),
+        ('Spieleabend im Büro', 'Gesellschaftsspiele mitbringen, Snacks dazu – fertig. Tipps: <a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a>.'),
+        ('Punsch und Plätzchen am Nachmittag', 'Statt Abendessen eine Stunde früher Schluss, Kinderpunsch, Plätzchen und Weihnachtsmusik.'),
+    ]),
+]
+
+PARTY_ABLAUF = [
+    ('6–8 Wochen vorher', 'Budget klären, Termin per Umfrage finden, Ort oder Event buchen – im Dezember sind Restaurants und Escape-Rooms schnell voll.'),
+    ('4 Wochen vorher', 'Einladung verschicken, Anmeldungen sammeln, nach Essenswünschen und Allergien fragen. Vorlage: <a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a>.'),
+    ('2–3 Wochen vorher', 'Wichteln <a href="/">online auslosen</a>, damit alle genug Zeit für ein Geschenk haben.'),
+    ('1 Woche vorher', 'Programm festlegen, Deko und Musik besorgen, Anfahrt und Heimweg klären.'),
+    ('Am Tag selbst', 'Zeitplan locker halten: ankommen, essen, ein Programmpunkt, dann Zeit zum Reden.'),
+]
+
+PARTY_FAQ = [
+    ('Was kann man auf einer Weihnachtsfeier machen?', 'Beliebt sind gemeinsames Essen mit einem Programmpunkt: Wichteln, ein Weihnachts-Quiz, Escape-Room, Krimidinner, Kochkurs oder ein Besuch auf dem Weihnachtsmarkt. Wichtig ist, dass die Idee zum Team passt und auch Zeit zum Reden bleibt.'),
+    ('Wie organisiert man eine Weihnachtsfeier?', 'Etwa 6 bis 8 Wochen vorher Budget und Termin klären und den Ort buchen, 4 Wochen vorher einladen, 2 bis 3 Wochen vorher das Wichteln auslosen und in der letzten Woche Programm, Deko und Musik festlegen.'),
+    ('Wann sollte man eine Weihnachtsfeier planen?', 'Am besten schon im Oktober oder Anfang November. Im Dezember sind Restaurants, Kochschulen und Escape-Rooms an den Wochenenden und Freitagen oft ausgebucht.'),
+    ('Was ist ein gutes Teamevent zu Weihnachten?', 'Gut funktionieren Aktivitäten, bei denen alle mitmachen können: Escape-Room, Kochkurs, Plätzchen backen, ein Kranz-Workshop oder Eisstockschießen. Für Teams im Homeoffice eignen sich ein Online-Quiz oder Wichteln per Post mit gemeinsamem Auspacken im Videocall.'),
+    ('Wie gestaltet man eine Weihnachtsfeier im Büro?', 'Mit wenig Aufwand: Essen bestellen oder ein Buffet zum Mitbringen, Weihnachtsmusik, etwas Deko und ein Höhepunkt wie Wichteln mit Würfeln, Schrottwichteln oder ein Weihnachts-Quiz.'),
+    ('Wie viel darf eine Weihnachtsfeier pro Mitarbeiter kosten?', 'Für Betriebsveranstaltungen gilt in Deutschland ein steuerlicher Freibetrag von 110 Euro pro Person und Veranstaltung, für bis zu zwei Veranstaltungen im Jahr. Was darüber hinausgeht, kann lohnsteuerpflichtig werden – im Zweifel fragt die Firma ihre Steuerberatung.'),
+]
+
+
 def party_page():
+    n = sum(len(x[3]) for x in PARTY_IDEEN)
+    secs, nr = [], 0
+    for a, h, intro, items in PARTY_IDEEN:
+        lis = '\n'.join(f'  <li><b>{esc(t)}:</b> {x}</li>' for t, x in items)
+        secs.append(f'<h2 id="{a}">{esc(h)}</h2>\n<p>{esc(intro)}</p>\n<ol start="{nr + 1}">\n{lis}\n</ol>')
+        nr += len(items)
+    sections = '\n\n'.join(secs)
+    inhalt = '\n'.join(f'  <li><a href="#{a}">{esc(h.split(":")[0])}</a></li>' for a, h, _, _ in PARTY_IDEEN)
+    ablauf = '\n'.join(f'  <li><b>{esc(t)}:</b> {x}</li>' for t, x in PARTY_ABLAUF)
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in PARTY_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in PARTY_FAQ]}
     body = f'''<article>
-<h1>Weihnachtsfeier-Ideen fürs Team: 10 Ideen, die gut ankommen</h1>
+<h1>Weihnachtsfeier-Ideen: {n} Ideen fürs Team – vom Teamevent bis zur Büro-Feier</h1>
 {ai_photo('wichtel3d-feier', 'Drei Plüsch-Wichtel feiern an einem festlichen Tisch mit Kerzen, Keksen und Kakao')}
-<p class="lead">Ob kleines Team oder ganze Abteilung: Eine gute Weihnachtsfeier braucht keinen großen Aufwand – aber einen Plan, der zu euch passt. Hier sind 10 Ideen vom Weihnachtsmarkt bis zur Online-Feier, plus Tipps zu Planung und Budget.</p>
+<p class="lead">Ob kleines Team oder ganze Abteilung: Eine gute Weihnachtsfeier braucht keinen großen Aufwand – aber eine Idee, die zu euch passt. Hier sind {n} Ideen für draußen, drinnen, im Büro und online, dazu ein Zeitplan zum Organisieren und Tipps für kleines Budget.</p>
+<nav class="toc" aria-label="Inhalt"><p><b>Inhalt</b></p><ul>
+{inhalt}
+  <li><a href="#organisieren">Weihnachtsfeier organisieren</a> · <a href="#fragen">Häufige Fragen</a></li>
+</ul></nav>
 
-<h2>Unterwegs</h2>
-<ol>
-  <li><b>Weihnachtsmarkt mit Wichtel-Twist:</b> Ihr lost vorher aus, wer wen „bewichtelt“ – und auf dem Markt zahlt jeder seinem Wichtel einen Glühwein, eine Bratwurst oder gebrannte Mandeln. Kostet wenig, bringt alle ins Gespräch.</li>
-  <li><b>Glühwein- oder Fackelwanderung:</b> Eine kurze Runde durch Park oder Wald, unterwegs Punsch aus der Thermoskanne. Ideal für Teams, die sonst nur am Schreibtisch sitzen.</li>
-  <li><b>Stadtführung im Advent:</b> Viele Städte bieten Nachtwächter-, Laternen- oder Weihnachtsführungen an – oft mit Abschluss auf dem Weihnachtsmarkt.</li>
-  <li><b>Eisstockschießen oder Schlittschuhlaufen:</b> Wintersport light, den auch Ungeübte schaffen. Im Anschluss geht es zum Essen.</li>
-</ol>
-
-<h2>Drinnen</h2>
-<ol start="5">
-  <li><b>Escape-Room:</b> Rätseln im Team, meist 4 bis 6 Personen pro Raum. Größere Gruppen spielen parallel gegeneinander.</li>
-  <li><b>Krimidinner:</b> Essen und Mitraten – jeder bekommt eine Rolle. Gibt es als Event im Restaurant oder als Spiel für zu Hause.</li>
-  <li><b>Gemeinsam kochen oder Plätzchen backen:</b> Kochkurs buchen oder einfach die Büroküche nutzen. Was entsteht, wird gleich gegessen.</li>
-  <li><b>Bowling oder Kegeln:</b> Unkompliziert, für jedes Alter, und die Bahn lässt sich meist kurzfristig reservieren.</li>
-</ol>
-
-<h2>Im Büro oder online</h2>
-<ol start="9">
-  <li><b>Büro-Feier mit Wichtel-Spiel:</b> Essen bestellen, Musik an und als Höhepunkt <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> oder <a href="/schrottwichteln/">Schrottwichteln</a>. Das Auslosen erledigt ihr vorher <a href="/">online in 1 Minute</a>.</li>
-  <li><b>Online-Feier fürs Homeoffice:</b> Wichtelgeschenke per Post verschicken und gemeinsam im Videocall auspacken, dazu ein Weihnachts-Quiz. Mehr dazu unter <a href="/wichteln-im-buero/">Wichteln im Büro</a>.</li>
-</ol>
+{sections}
 {CTA}
 {supplies_block()}
 
-<h2>Tipps für die Planung</h2>
+<h2 id="organisieren">Weihnachtsfeier organisieren: der Zeitplan</h2>
+<ol>
+{ablauf}
+</ol>
+
+<h2>Tipps, damit sich alle wohlfühlen</h2>
 <ul>
-  <li><b>Früh buchen:</b> Im Dezember sind Restaurants, Escape-Rooms und Führungen schnell ausgebucht – am besten schon im November reservieren.</li>
-  <li><b>Termin per Umfrage finden:</b> Zwei, drei Termine zur Wahl stellen und die Mehrheit entscheiden lassen.</li>
   <li><b>Für alle passend:</b> Alkoholfreie Getränke und vegetarisches Essen einplanen, auf Barrierefreiheit achten.</li>
   <li><b>Budget klären:</b> Vorher sagen, was die Firma übernimmt und was jeder selbst zahlt – zum Beispiel das Wichtelgeschenk.</li>
+  <li><b>Nicht zu viel Programm:</b> Ein Höhepunkt reicht, der Rest ist Zeit zum Reden.</li>
+  <li><b>Heimweg mitdenken:</b> Bahnverbindungen oder Taxi-Gutscheine einplanen, wenn es spät wird.</li>
   <li><b>Freiwillig bleibt freiwillig:</b> Wer nicht mitkommen kann oder will, muss sich nicht rechtfertigen.</li>
 </ul>
-<p>Für die Anmeldung im Büro: <a href="/wichteln-einladung-vorlage/">Einladung mit Teilnehmerliste zum Aushängen</a>. Für die Geschenk-Karte: <a href="/wichtelgedichte/">Wichtelgedichte</a>.</p>
+<p>Für die Geschenk-Karte: <a href="/wichtelgedichte/">Wichtelgedichte</a> · Geschenkideen fürs Team: <a href="/wichtelgeschenke-fuer-kollegen/">Wichtelgeschenke für Kollegen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
 </article>'''
-    page('/weihnachtsfeier-ideen/', 'Weihnachtsfeier-Ideen fürs Team: 10 Ideen & Tipps',
-         'Weihnachtsfeier im Team planen: 10 Ideen vom Weihnachtsmarkt mit Wichtel-Twist über Escape-Room bis zur Online-Feier – plus Tipps zu Termin und Budget.', body,
-         crumb='Weihnachtsfeier-Ideen', mascot='winkt')
+    page('/weihnachtsfeier-ideen/', f'Weihnachtsfeier-Ideen: {n} Ideen & Teamevents fürs Team (2026)',
+         f'{n} Ideen für die Weihnachtsfeier: Teamevents wie Escape-Room und Kochkurs, Büro-Feier mit Wichteln, Online-Feier fürs Homeoffice – plus Zeitplan zum Organisieren.', body,
+         crumb='Weihnachtsfeier-Ideen', mascot='winkt', extra=ld(faq_ld))
 
 
 POEMS = [
