@@ -747,6 +747,10 @@ GIFT_AUSBAU_TEXT = {
         faq=[
             ('Was kann man zum Wichteln für 30 Euro verschenken?', 'Für 30 Euro passen ein Brettspiel, ein Krimidinner für zu Hause, ein kleiner Bluetooth-Lautsprecher, ein Pizzastein oder ein Wellness-Set. Oben findest du alle Ideen nach Themen sortiert.'),
             ('Für wen passt ein Wichtel-Budget von 30 Euro?', 'Für die Familie und gute Freunde, bei denen du weißt, was ihnen gefällt. Bei 30 Euro lohnt sich ein Blick auf Hobbys – das macht das Geschenk persönlich.'),
+            # 20.11.: Google „wichtelgeschenk 30 euro frauen“ (Platz 17), „30 euro unisex“ (12)
+            ('Was schenkt man einer Frau zum Wichteln für 30 Euro?', 'Zum Beispiel ein Wellness-Set, ein Duftkerzen-Set, eine Schlafmaske aus Seide, eine Decke mit Ärmeln oder ein Makramee-Set zum Selbermachen. Noch mehr Ideen stehen bei den Geschenken für Frauen.'),
+            ('Was schenkt man einem Mann zum Wichteln für 30 Euro?', 'Zum Beispiel einen Pizzastein, einen kleinen Bluetooth-Lautsprecher, ein Kaffee-Probierset oder eine LED-Tischlampe. Noch mehr Ideen stehen bei den Geschenken für Männer.'),
+            ('Welches Wichtelgeschenk für 30 Euro passt für alle (unisex)?', 'Wenn du nicht weißt, wen du ziehst: ein Brettspiel, ein Krimidinner oder eine Escape-Room-Box für zu Hause, ein Kaffee-Probierset oder eine Kuscheldecke. Das passt für Frauen und Männer gleichermaßen.'),
             ('Darf man beim Wichteln für 30 Euro Alkohol verschenken?', 'Nur, wenn du sicher weißt, dass die Person Alkohol trinkt und volljährig ist. Für alle anderen ist ein Kaffee-Probierset oder Feinkost die bessere Wahl.'),
             ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
         ],
@@ -1913,6 +1917,18 @@ def idea_sections(groups, prefix):
 DISC_SEARCH = '<p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>'
 
 
+# Kleine Geschenke für Männer (20.11.) – Namen aus gifts.py (Text, Amazon-Suche und Budget kommen von dort)
+MAENNER_KLEIN = ['Retro-Süßigkeiten', 'Lustiger Kugelschreiber', 'Stirnlampe', 'Gewürzmischung', 'Lustige Socken',
+                 'Bierglas mit Spruch', 'Knobelspiel', 'Gourmet-Schokolade', 'Handyhalterung', 'Trüffelsalz',
+                 'Whisky-Steine mit Glas', 'Zauberwürfel']
+MAENNER_FAQ = [
+    ('Was sind gute kleine Geschenke für Männer?', 'Dinge, die im Alltag benutzt werden: eine Stirnlampe, eine Handyhalterung fürs Auto, Trüffelsalz oder eine besondere Gewürzmischung, gute Schokolade oder ein kniffliges Knobelspiel. Oben findest du 12 kleine Geschenke bis 15 Euro.'),
+    ('Welche günstigen Geschenke für Männer gibt es unter 10 Euro?', 'Zum Beispiel Retro-Süßigkeiten, ein lustiger Kugelschreiber, lustige Socken, ein Bierglas mit Spruch, eine Gewürzmischung oder eine Stirnlampe. Mehr Ideen nach Budget gibt es bei den Wichtelgeschenken unter 10 Euro.'),
+    ('Was schenkt man einem Mann, der alles hat?', 'Etwas zum Verbrauchen oder Erleben: ein Kaffee- oder Hot-Sauce-Probierset, Feinkost, ein Escape-Spiel für zu Hause oder ein gemeinsamer Ausflug als Gutschein. Verbrauchsgeschenke stehen nicht herum, und Erlebnisse bleiben in Erinnerung.'),
+    ('Was schenkt man einem Mann zum Wichteln?', 'Beim Wichteln passt etwas Kleines mit Witz oder Nutzen: Gewürze, besondere Schokolade, lustige Socken oder ein kleines Technik-Helferlein. Wichtig ist, dass alle vorher dasselbe Budget vereinbaren.'),
+]
+
+
 def themen_pages():
     from themen import AK_FUELLEN, AK_GUTSCHEINE, AK_BASTELN, MAENNER, FRAUEN
     # Adventskalender befüllen (Google Trends: Höhepunkt Mitte–Ende November)
@@ -1977,12 +1993,27 @@ def themen_pages():
          'Mehr als Parfum und Pralinen: Hier findest du {n} Geschenkideen für Frauen – zum Entspannen, Genießen, Kreativsein und Kuscheln. Für Partnerin, Mutter, Schwester, Freundin oder Kollegin, vieles schon unter 20 €.')):
         slug = path.strip('/')
         secs, jump, n = idea_sections(data, slug[:3] + slug[-3:])
+        # 20.11.: Google „kleine geschenke für männer“ (Platz 47), „günstige geschenke für männer“ (20) → eigener Abschnitt + Fragen
+        klein, extra_ld, faq_m = '', '', ''
+        if who == 'Männer':
+            from gifts import IDEAS
+            by = {i['name']: i for i in IDEAS}
+            kl = [by[x] for x in MAENNER_KLEIN]
+            n += len(kl)
+            cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(i["name"])}</h3>\n  <p class="tags">bis {i["budget"]} €</p>\n  <p>{esc(i["text"])}</p>\n  {amazon_link(i["query"], max_eur=i["budget"])}\n</div>' for i in kl)
+            klein = f'<h2 id="klein">Kleine Geschenke für Männer: günstig, bis 15 Euro</h2>\n<p>Zum Wichteln, für den Adventskalender oder als Mitbringsel – kleine Geschenke, die Männer wirklich benutzen:</p>\n<div class="idea-grid">\n{cards}\n</div>'
+            jump = '<a href="#klein">Kleine Geschenke</a> · ' + jump
+            faq_m = '<h2 id="fragen">Häufige Fragen</h2>\n' + '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in MAENNER_FAQ)
+            extra_ld = ld({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+                {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in MAENNER_FAQ]})
         body = f"""<article>
 <h1>Geschenke für {who}: {n} Ideen, die wirklich ankommen</h1>
 {ai_photo(photo, alt)}
 <p class="lead">{esc(lead.format(n=n))}</p>
 <p class="chips-line">Direkt zu: {jump}</p>
 <p class="hint">Lieber nach Budget und Alter filtern? <a href="/geschenkfinder/">Zum Geschenkfinder mit über 100 Ideen →</a></p>
+
+{klein}
 
 {secs}
 
@@ -1995,11 +2026,12 @@ def themen_pages():
   <li><b>Nachfragen erlaubt:</b> Mit unserem <a href="/wunschzettel/">Wunschzettel als Link</a> sammelt ihr Wünsche, ohne dass die Überraschung verloren geht.</li>
 </ul>
 <p>Wichtelt ihr? Dann helfen die Budgetseiten: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/wichtelgeschenke-unter-30-euro/">unter 30 €</a></p>
+{faq_m}
 {CTA}
 </article>"""
         page(path, f'Geschenke für {who}: {n} Ideen, die wirklich ankommen',
              f'Geschenke für {who}: {n} Ideen zu Weihnachten und Geburtstag – Genuss, Wellness, Technik, Kreatives und Gemütliches. Für Partner, Familie, Freunde und Kollegen.',
-             body, crumb=f'Geschenke für {who}', playful=True)
+             body, crumb=f'Geschenke für {who}', playful=True, extra=extra_ld)
 
     # Nikolaus (05.11.): Werbung aus Onnis Adventskalender (Posts 1.–5.12. verlinken hierher)
     from themen import NIKOLAUS
