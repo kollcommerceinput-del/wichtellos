@@ -109,7 +109,7 @@ FOOTER = '''<footer>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
-    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
+    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/wichtel-generator-vergleich/">Wichtel-Generatoren im Vergleich</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
     <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/wichtel-abschied/">Wichtel-Abschied</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
@@ -2729,6 +2729,76 @@ def door_page():
          crumb='Wichteltür', mascot='geschenk', playful=True)
 
 
+# Vergleichsseite (20.11., Toni „2–6“): Bing 3 Monate „wichtel-o-mat“ 1.200 Aufrufe Platz 7, 0 Klicks; dazu „wichtelator“,
+# „wichtel omat“, „wichtelomat alternative“. Nur Fakten von den Seiten der Anbieter (abgerufen 20.11.2026:
+# wichtel-o-mat.de Startseite, /pages/howto, /pages/faq, /pages/privacy; wichtelator.de Startseite (FAQ), /privacy, /imprint).
+# Sachlich bleiben (vergleichende Werbung § 6 UWG): nichts abwerten, nichts raten; vor jeder Saison neu prüfen.
+VERGLEICH_STAND = '20. November 2026'
+VERGLEICH = [  # (Merkmal, WichtelLos, Wichtel-o-mat, Wichtelator)
+    ('Konto für den Organisator', 'Nein', 'Ja – Name und E-Mail-Adresse, Login mit Kennwort', 'Zum Erstellen einer Gruppe führt die Seite zur Registrierung'),
+    ('E-Mail-Adressen der Teilnehmer', 'Nicht nötig', 'Ja, jeder mit eigener E-Mail-Adresse', 'Nicht nötig für Gäste'),
+    ('So kommt das Los an', 'Eigener geheimer Link – per WhatsApp, E-Mail oder als QR-Code auf Papier', 'Per E-Mail mit persönlichem Link', 'Persönlicher Login-Link, z. B. per WhatsApp, E-Mail oder Telegram'),
+    ('Ausschlüsse (z. B. Paare)', 'Ja', 'Ja, eine Ausnahme pro Person', 'Ja, jeder kann „Sperren“ setzen'),
+    ('Wünsche', 'Tipp pro Person beim Auslosen + Wunschzettel als Link', 'Wunschzettel', 'Wunschlisten in der Gruppe'),
+    ('Lose zum Ausdrucken', 'Ja, mit QR-Code oder Namen (für Kinder ohne Handy)', 'Nicht angegeben', 'Nicht angegeben'),
+    ('Wo die Daten liegen', 'Nur im Link und im eigenen Browser, kein Server-Speicher', 'Beim Anbieter, Löschung laut FAQ nach Ablauf der Aktion', 'Beim Anbieter (Gruppe mit Login)'),
+    ('Kosten', 'Kostenlos', 'Kostenlos', 'Kostenlos'),
+    ('Werbung / Messung laut Datenschutzerklärung', 'Amazon-Partnerlinks, keine Cookies, kein Tracking', 'Google-Werbung, Google Analytics', 'Amazon-Partnerlinks, Reichweitenmessung mit Matomo ohne Cookies'),
+]
+VERGLEICH_FAQ = [
+    ('Gibt es eine Alternative zum Wichtel-o-mat ohne Anmeldung?', 'Ja. Bei WichtelLos braucht weder der Organisator noch die Teilnehmer ein Konto oder eine E-Mail-Adresse. Namen eintragen, auslosen, jeder bekommt seinen eigenen geheimen Link.'),
+    ('Welcher Wichtel-Generator braucht keine E-Mail-Adressen?', 'WichtelLos braucht gar keine E-Mail-Adressen, beim Wichtelator brauchen Gäste laut Anbieter keine. Beim Wichtel-o-mat gibt jeder Teilnehmer eine E-Mail-Adresse an, weil das Los per E-Mail verschickt wird.'),
+    ('Ist der Wichtel-o-mat kostenlos?', 'Laut Anbieter ja, er ist kostenlos. Er finanziert sich nach eigenen Angaben über Werbung. Dasselbe gilt für WichtelLos und den Wichtelator: alle drei kosten nichts.'),
+    ('Wann passt ein Dienst mit Konto besser?', 'Wenn ihr alles an einem Ort verwalten wollt – etwa Wunschlisten, die alle in der Gruppe pflegen, oder Lose per E-Mail. Wer dagegen schnell und ohne Daten auslosen möchte, ist mit einem Link-Generator wie WichtelLos schneller.'),
+    ('Kann ich mit WichtelLos auch ohne Handy wichteln?', 'Ja. Nach dem Auslosen druckt ihr Wichtel-Lose aus: außen der Name, innen ein QR-Code oder – für Kinder ohne Handy – direkt der Name der Person, die beschenkt wird.'),
+]
+
+
+def vergleich_page():
+    kopf = '<tr><th>Merkmal</th><th>WichtelLos</th><th>Wichtel-o-mat</th><th>Wichtelator</th></tr>'
+    zeilen = '\n'.join(f'<tr><th scope="row">{esc(m)}</th><td>{esc(a)}</td><td>{esc(b)}</td><td>{esc(c)}</td></tr>' for m, a, b, c in VERGLEICH)
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in VERGLEICH_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in VERGLEICH_FAQ]}
+    body = f'''<article>
+<h1>Wichtel-Generatoren im Vergleich: Wichtel-o-mat, Wichtelator &amp; WichtelLos</h1>
+<p class="lead">Ihr sucht den Wichtel-o-mat oder eine Alternative? Alle drei bekannten deutschen Wichtel-Generatoren sind kostenlos – sie unterscheiden sich aber darin, ob ihr euch anmelden müsst, ob E-Mail-Adressen nötig sind und wie das Los bei jedem ankommt. Hier der Vergleich auf einen Blick.</p>
+<p class="hint">Angaben laut den Websites der Anbieter, Stand: {VERGLEICH_STAND}. WichtelLos ist unser eigenes Angebot – wir haben keine Verbindung zu den anderen Diensten. Die Namen sind Marken ihrer Inhaber.</p>
+
+<h2 id="tabelle">Der Vergleich</h2>
+<p class="hint">Auf dem Handy die Tabelle zur Seite wischen.</p>
+<div class="vergleich-wrap"><table class="vergleich">
+<thead>{kopf}</thead>
+<tbody>
+{zeilen}
+</tbody>
+</table></div>
+
+<h2>Welcher Wichtel-Generator passt zu euch?</h2>
+<ul>
+  <li><b>Schnell und ohne Daten:</b> Ihr wollt in einer Minute auslosen, ohne Konto und ohne E-Mail-Adressen zu sammeln – zum Beispiel in einer WhatsApp-Gruppe. Dann passt <a href="/">WichtelLos</a>.</li>
+  <li><b>Alles per E-Mail:</b> Alle in der Gruppe nutzen E-Mail, und der Organisator möchte ein Konto mit Übersicht. Dann passt ein Dienst wie der Wichtel-o-mat.</li>
+  <li><b>Gruppe mit Wunschlisten:</b> Ihr wollt Wunschlisten gemeinsam in einer Gruppe pflegen. Das bietet der Wichtelator.</li>
+  <li><b>Schule, Kita, Verein:</b> Nicht jeder hat ein Handy? Bei WichtelLos gibt es <a href="/wichteln-schule-kita/">Lose zum Ausdrucken</a> – auch mit dem Namen im Klartext für Kinder.</li>
+</ul>
+
+<h2>So funktioniert WichtelLos</h2>
+<ol>
+  <li>Namen eintragen, auf Wunsch Budget, Datum, Ausschlüsse und einen 💡 Tipp pro Person.</li>
+  <li>Auslosen – jede Person bekommt einen eigenen geheimen Link.</li>
+  <li>Links per WhatsApp, E-Mail oder als QR-Code-Los verschicken. Jeder sieht nur, wen er selbst beschenkt – auch der Organisator nicht.</li>
+</ol>
+<p>Die Zuteilung steckt codiert im Link selbst und wird nicht auf einem Server gespeichert. Mehr dazu in den <a href="/#so-gehts">Fragen auf der Startseite</a>.</p>
+{CTA}
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+</article>'''
+    page('/wichtel-generator-vergleich/', 'Wichtel-o-mat Alternative: Wichtel-Generatoren im Vergleich (2026)',
+         'Wichtel-o-mat, Wichtelator oder WichtelLos? Alle kostenlos – aber mit oder ohne Anmeldung, E-Mail oder Link? Der Vergleich der Wichtel-Generatoren auf einen Blick.',
+         body, crumb='Wichtel-Generatoren im Vergleich', mascot='lupe', extra=ld(faq_ld))
+
+
 # Weihnachtsfeier (20.11. ausgebaut, Toni „DAS WAS GESUCHT WIRD MÜSSEN WIR abdecken“): Google 28 Tage ~230 Aufrufe für
 # „ideen für weihnachtsfeier“, „weihnachtsparty ideen“, „teamevent“, „organisieren“, „gestalten“ – Platz 24–55 mit nur 10 Ideen.
 # (id, Überschrift, Einleitung, [(Titel, Text-HTML)])
@@ -3433,6 +3503,7 @@ FAQ = [
     ('Welche Regeln gelten beim Wichteln?', 'Die wichtigsten: Jeder beschenkt genau eine Person. Niemand verrät vorher, wen er gezogen hat. Alle halten sich an das vereinbarte Budget. Und das Geschenk sollte zur Person passen – im Zweifel lieber etwas Kleines zum Naschen oder Wohlfühlen als einen Scherzartikel. Lustige Spiel-Varianten sind <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> und <a href="/schrottwichteln/">Schrottwichteln</a>.'),
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
+    ('Was unterscheidet WichtelLos von Wichtel-o-mat oder Wichtelator?', 'Alle drei sind kostenlos. Bei WichtelLos braucht aber niemand ein Konto oder eine E-Mail-Adresse: Jeder bekommt einfach seinen eigenen geheimen Link, und nichts wird auf einem Server gespeichert. Den ausführlichen Vergleich findest du unter <a href="/wichtel-generator-vergleich/">Wichtel-Generatoren im Vergleich</a>.'),
     ('Gibt es eine Wichtel-App?', 'Ihr braucht keine App: WichtelLos läuft direkt im Browser, auf jedem Handy, Tablet und Computer. Wer möchte, legt sich die Seite als Lesezeichen oder auf den Startbildschirm.'),
     ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 100 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
     ('Sieht der Organisator, wer wen zieht?', 'Nein. Nach dem Auslosen siehst du nur die Links, nicht wer wen gezogen hat – das zeigt erst der jeweilige Link. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
@@ -3551,7 +3622,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/', '/wichtel-generator-vergleich/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -4159,6 +4230,7 @@ def main():
     whatsapp_page()
     school_page()
     party_page()
+    vergleich_page()
     poems_page()
     gruss_page()
     wunsch_page()

@@ -24,6 +24,7 @@ const PAGES = [
   ['wichteln-im-buero', 'wichtel-winkt.svg', 'Wichteln im Büro', 'Regeln, Budget & Ablauf fürs Team'],
   ['wichteln-per-whatsapp', 'wichtel-winkt.svg', 'Wichteln per WhatsApp', 'Namen online ziehen, Links privat verschicken'],
   ['wichteln-schule-kita', 'wichtel-geschenk.svg', 'Wichteln in Schule & Kita', 'Ablauf, Elternbrief & Lose ohne Handy'],
+  ['wichtel-generator-vergleich', 'wichtel-lupe.svg', 'Wichtel-Generatoren im Vergleich', 'Wichtel-o-mat, Wichtelator & WichtelLos'],
   ['weihnachtsfeier-ideen', 'wichtel-winkt.svg', 'Weihnachtsfeier-Ideen', '26 Ideen fürs Team – vom Teamevent bis online'],
   ['wichtelgedichte', 'wichtel-geschenk.svg', 'Wichtelgedichte', 'Kurze Reime für die Geschenk-Karte'],
   ['woher-kommt-wichteln', 'wichtel-lupe.svg', 'Woher kommt Wichteln?', 'Wichtel, Julklapp & Secret Santa'],
