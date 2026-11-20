@@ -179,8 +179,9 @@ WISSEN = [
     ),
     dict(
         path='/wichteln-zu-dritt/',
-        title='Wichteln zu dritt oder zu zweit: So bleibt es spannend',
-        desc='Wichteln zu dritt, zu zweit oder in kleiner Gruppe: Was anders ist, wie es trotzdem geheim bleibt und 6 Ideen, damit kleine Runden genauso viel Spaß machen.',
+        # 20.11.: „kann man zu dritt wichteln“ Google Platz 2,6, 0 Klicks → Frage als Titel
+        title='Kann man zu dritt wichteln? Ja – so geht’s (auch zu zweit)',
+        desc='Ja, Wichteln zu dritt geht – es gibt nur zwei mögliche Verteilungen. So bleibt es trotzdem geheim, was zu zweit anders ist und 6 Ideen für kleine Runden.',
         crumb='Wichteln zu dritt', mascot='geschenk',
         photo=('wichtel3d-geschenk', 'Plüsch-Wichtel hält ein kleines Geschenk mit roter Schleife'),
         h1='Wichteln zu dritt oder zu zweit: so bleibt es spannend',

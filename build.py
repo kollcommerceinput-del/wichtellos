@@ -1277,7 +1277,8 @@ def dice_page():
 </article>'''
     # Titel 09.11. neu (Google: Platz 1,5 für „wichteln würfeln“, aber 0 Klicks) – Nutzen + Ausdrucken nach vorn
     # 16.11.: trotz Titel 09.11. weiter Platz 1,5 und 0 Klicks (Snippet beantwortet die Frage) → Klickgrund, den kein Snippet ersetzt
-    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Regeln + Online-Würfel & Timer (gratis)',
+    # 20.11.: „wichteln mit würfeln anleitung“ Google Platz 3,1, 0 Klicks → „Anleitung“ in den Titel
+    page('/wichteln-wuerfeln-regeln/', 'Wichteln mit Würfeln: Anleitung & Regeln + Online-Würfel',
          'Würfelwichteln ohne Würfel? Hier würfeln, Timer starten, Regel 1–6 wird angezeigt – plus Ablauf in 2 Runden, 5 Varianten und Spielplan zum Ausdrucken.', body,
          crumb='Wichteln mit Würfeln', mascot='wuerfel', extra=ld(faq_ld))
 
@@ -1717,8 +1718,9 @@ Noch keinen Namen für euren Wichtel? Der <a href="/wichteltuer/#wichtelname">Wi
 <p>Mehr für Kinder: <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a> · <a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> · <a href="/wichteln-schule-kita/">Wichteln in Schule und Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a></p>
 <p class="hint">Ausmalbilder und Sticker sind für zu Hause, Kita und Schule kostenlos. Sie wurden mit KI erstellt (Google Gemini/Flow).</p>
 </article>"""
-    page('/wichtel-ausmalbilder/', 'Wichtel-Ausmalbilder zum Ausdrucken – kostenlos (PDF)',
-         '6 Wichtel-Ausmalbilder mit Onni kostenlos als PDF: Wichtel mit Geschenk, am Tannenbaum, an der Wichteltür, beim Backen – plus Wichtel-Sticker für WhatsApp.', body,
+    # 20.11.: Bing 233 Aufrufe/Woche, Platz 6, 1 Klick → „kostenlos“ + „sofort ausdrucken“ nach vorn
+    page('/wichtel-ausmalbilder/', 'Wichtel-Ausmalbilder kostenlos: 6 Vorlagen als PDF zum Ausdrucken',
+         'Sofort ausdrucken, ohne Anmeldung: 6 Wichtel-Ausmalbilder mit Onni als PDF – mit Geschenk, am Tannenbaum, an der Wichteltür, beim Backen. Plus WhatsApp-Sticker.', body,
          crumb='Wichtel-Ausmalbilder', playful=True)
 
 
@@ -2316,6 +2318,23 @@ def selberbau_page():
          body, crumb='Wichteltür selber bauen', playful=True)
 
 
+# 20.11.: Google Platz 12,6 für „wichtel zubehör“ (75 Aufrufe/Woche, 0 Klicks) → Inhaltsverzeichnis + Fragen (sichtbar + FAQPage)
+ZUBEHOER_FAQ = [
+    ('Was braucht man für eine Wichteltür?', 'Eine kleine Tür für die Fußleiste reicht für den Anfang. Schön wird es mit ein paar Extras: Fußmatte, Laterne oder Lichterkette, ein Briefkasten für die Wichtel-Post und ein kleines Möbelstück wie Bank oder Bett.'),
+    ('Wann stellt man die Wichteltür auf?', 'Meist am Abend vor dem 1. Dezember, damit die Kinder sie morgens entdecken. Manche Familien lassen den Wichtel schon zum 1. Advent einziehen.'),
+    ('Welche Größe hat Wichtel-Zubehör?', 'Das meiste Zubehör ist im Puppenhaus-Format, oft im Maßstab 1:12. Eine Wichteltür ist etwa so groß wie ein Handy. Achte beim Kauf darauf, dass Tür und Möbel zueinander passen.'),
+    ('Wo bringt man die Wichteltür an?', 'An der Fußleiste oder unten an der Wand, zum Beispiel in Flur, Wohnzimmer oder Kinderzimmer. Mit ablösbaren Klebestreifen hält sie ohne Bohren und lässt sich nach Weihnachten spurlos abnehmen.'),
+    ('Ist Wichtel-Zubehör für kleine Kinder geeignet?', 'Miniaturen sind oft verschluckbar. Bei Kindern unter 3 Jahren gehört das Zubehör deshalb außer Reichweite, zum Beispiel auf ein Regal statt auf den Boden.'),
+]
+
+
+def zubehoer_anker(title):
+    t = title.split(':')[0].lower()
+    for a, b in (('ä', 'ae'), ('ö', 'oe'), ('ü', 'ue'), ('ß', 'ss')):
+        t = t.replace(a, b)
+    return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+
 def zubehoer_page():
     secs = []
     n = 0
@@ -2323,18 +2342,29 @@ def zubehoer_page():
         n += len(items)
         cards = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>'
                           for t, x, *r in items)
-        secs.append(f'<h2>{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
+        secs.append(f'<h2 id="{zubehoer_anker(title)}">{esc(title)}</h2>\n<p>{esc(intro)}</p>\n<div class="idea-grid">\n{cards}\n</div>')
     sections = '\n\n'.join(secs)
+    inhalt = '\n'.join(f'  <li><a href="#{zubehoer_anker(t)}">{esc(t.split(":")[0])}</a></li>' for t, *_ in ZUBEHOER)
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in ZUBEHOER_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in ZUBEHOER_FAQ]}
     body = f"""<article>
 <h1>Wichtel-Zubehör: alles für die Wichteltür</h1>
 {ai_photo('wichtel3d-tuer', 'Kleine rote Wichteltür in der Fußleiste, aus der ein Plüsch-Wichtel herausschaut')}
 <p class="lead">Von der kleinen Tür bis zum leuchtenden Wichteldorf: Hier findest du {n} Ideen für Wichtel-Zubehör – Möbel, Licht, Wichtel-Post, Figuren, Bücher und Bastelmaterial. Alles im Puppenhaus-Format, vieles unter 10 €, manches für die ganz große Wichtelwelt.</p>
 <p>Noch keinen Plan für die 24 Tage? Den gibt es mit Begrüßungsbrief und Wichtelnamen-Generator auf der Seite <a href="/wichteltuer/">Wichteltür: 24 Streiche</a>. Ausmalbilder und Türschilder zum Ausdrucken findest du bei den <a href="/wichtel-ausmalbilder/">Wichtel-Ausmalbildern</a>. Lieber selbst bauen? Werkzeug, Material und Anleitung gibt es unter <a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a>.</p>
+<nav class="toc" aria-label="Inhalt"><p><b>Inhalt</b></p><ul>
+{inhalt}
+  <li><a href="#fragen">Häufige Fragen</a></li>
+</ul></nav>
 
 {sections}
 
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
 <p class="hint">Sicherheit geht vor: Miniaturen sind oft verschluckbar – bei Kindern unter 3 Jahren außer Reichweite aufstellen.</p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
 
 <h2>Und für die Großen: wichteln!</h2>
 <p>Während der Wichtel bei den Kindern Quatsch macht, können die Erwachsenen selbst wichteln: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
@@ -2342,7 +2372,7 @@ def zubehoer_page():
 </article>"""
     page('/wichtel-zubehoer/', 'Wichtel-Zubehör: Wichteltür, Möbel, Licht & mehr',
          f'Wichtel-Zubehör für die Wichteltür: {n} Ideen von Mini-Möbeln, Licht und Wichtel-Post bis zum leuchtenden Wichteldorf – mit Links zu Amazon.',
-         body, crumb='Wichtel-Zubehör', playful=True)
+         body, crumb='Wichtel-Zubehör', playful=True, extra=ld(faq_ld))
 
 
 # Eigener Spreadshop (08.11., Toni): wichtellos.myspreadshop.de – Kunde kauft bei sprd.net AG, wir bekommen eine Gutschrift.
@@ -3101,7 +3131,8 @@ def wunsch_page():
 <p>Passend dazu: <a href="/wichtelgruss/">Wichtelgruß mit Onni verschicken</a> · <a href="/wichtelgedichte/">Wichtelgedichte</a> · <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></p>
 </article>
 <script src="/assets/wunsch.js" defer></script>'''
-    page('/wunschzettel/', 'Wichtel-Wunschzettel online erstellen & per WhatsApp teilen',
+    # 20.11.: „wunschzettel whatsapp“ Google Platz 3,8, 0 Klicks → Suchwörter nach vorn
+    page('/wunschzettel/', 'Wunschzettel per WhatsApp schicken – Wichtel-Wunschzettel online',
          'Wichtel-Wunschzettel online schreiben: bis zu 5 Wünsche plus „Bitte nicht“, als Link in die WhatsApp-Gruppe – kostenlos, ohne Anmeldung, nichts gespeichert.', body,
          crumb='Wunschzettel', playful=True)
 
