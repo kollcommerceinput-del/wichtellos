@@ -1069,3 +1069,4 @@ article .ms-hero h1, .ms-hero h1 { color: #fff; margin: 0; font-size: clamp(30px
 .personen a.chip:hover { border-color: var(--primary); color: var(--primary); }
 .personen-box { margin: 24px 0; }
 .r-more { margin: 14px 0 0; font-size: 15px; }
+.zufall ul { padding-left: 20px; } .zufall li { margin-bottom: 6px; }

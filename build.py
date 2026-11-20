@@ -2958,6 +2958,7 @@ def generator_page():
 <h1>Geschenke-Generator: Geschenkidee in 3 Klicks – für jeden Anlass</h1>
 {ai_photo('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife')}
 <p class="lead"><b>Onni bringt dir Geschenkideen!</b> Keine Idee für Geburtstag, Jahrestag, Taufe, Ruhestand oder Weihnachten? Wähle Anlass, Person, Budget und Hobby – und zieh drei <b>Geschenk-Lose zum Freirubbeln</b>. {n_rund.capitalize()} Geschenkideen zu {len(HOBBYS)} Hobbys und {len(ANLAESSE)} Anlässen – ohne Anmeldung, ohne KI und ohne dass etwas gespeichert wird.</p>
+<p class="tip">🎲 <b>Suchst du den Wichtel-Generator zum Auslosen?</b> Der ist hier: <a href="/">Wichteln online auslosen – wer beschenkt wen?</a></p>
 <div class="card generator" data-generator>
 <script type="application/json">{data}</script>
 <div class="f-group g-sel"><label class="f-label" for="g-anlass">Welcher Anlass?</label>
@@ -3368,6 +3369,7 @@ FAQ = [
     ('Welche Regeln gelten beim Wichteln?', 'Die wichtigsten: Jeder beschenkt genau eine Person. Niemand verrät vorher, wen er gezogen hat. Alle halten sich an das vereinbarte Budget. Und das Geschenk sollte zur Person passen – im Zweifel lieber etwas Kleines zum Naschen oder Wohlfühlen als einen Scherzartikel. Lustige Spiel-Varianten sind <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> und <a href="/schrottwichteln/">Schrottwichteln</a>.'),
     ('Wie funktioniert Wichteln online?', 'Namen eintragen, auslosen, fertig. Jede Person bekommt einen eigenen Link. Wer ihn öffnet, sieht nur, wen er selbst beschenkt.'),
     ('Muss ich mich anmelden?', 'Nein. Weder du noch die anderen brauchen ein Konto oder eine E-Mail-Adresse.'),
+    ('Gibt es eine Wichtel-App?', 'Ihr braucht keine App: WichtelLos läuft direkt im Browser, auf jedem Handy, Tablet und Computer. Wer möchte, legt sich die Seite als Lesezeichen oder auf den Startbildschirm.'),
     ('Wie viele Personen können mitmachen?', 'Ab 3 und bis zu 100 Personen – vom kleinen Freundeskreis bis zum großen Team oder Verein.'),
     ('Sieht der Organisator, wer wen zieht?', 'Nein. Nach dem Auslosen siehst du nur die Links, nicht wer wen gezogen hat – das zeigt erst der jeweilige Link. Tipp: Wer selbst mitmacht, öffnet einfach nur den eigenen Link – dann bleibt es auch für ihn eine Überraschung.'),
     ('Werden unsere Namen gespeichert?', 'Nicht auf unserem Server. Die Zuteilung steckt codiert im Link selbst, im Teil nach dem #-Zeichen – den schickt der Browser nicht an den Server. Damit nichts verloren geht, merkt sich nur dein eigener Browser deinen Entwurf und die zuletzt erzeugten Links.'),
@@ -3427,6 +3429,18 @@ def faq_html():
       <ol>
 {steps}
       </ol>
+    </section>
+
+    <section class="zufall" id="zufallsgenerator">
+      <h2>Wichtel-Zufallsgenerator: Namen online ziehen</h2>
+      <p>WichtelLos ersetzt Zettel und Mütze: Ihr tragt die Namen ein, der Zufallsgenerator lost aus, wer wen beschenkt – fair und in einer Sekunde. Niemand zieht sich selbst, Paare könnt ihr ausschließen, und jede Person bekommt ihr Los als eigenen Link.</p>
+      <ul>
+        <li><b>Wichteln online auslosen</b> – ohne Anmeldung und ohne die E-Mail-Adressen der anderen.</li>
+        <li><b>Lose online ziehen</b> – jeder öffnet seinen Link und sieht nur, wen er selbst beschenkt.</li>
+        <li><b>Keine App nötig</b> – läuft im Browser auf jedem Handy, Tablet und Computer.</li>
+        <li><b>Für die WhatsApp-Gruppe</b> – Links einzeln verschicken, so geht's: <a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a>.</li>
+        <li><b>Ohne Handy</b> – Wichtel-Lose mit QR-Code oder mit Namen zum Ausdrucken, ideal für <a href="/wichteln-schule-kita/">Schule und Kita</a>.</li>
+      </ul>
     </section>
 
     <section class="personen-box">
