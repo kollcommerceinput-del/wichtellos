@@ -235,3 +235,286 @@ BLACKFRIDAY = [
         ('Weihnachtskarten', 'Für den Gruß zum Geschenk.', 'Weihnachtskarten Set'),
     ]),
 ]
+
+# /lustige-wichtelgeschenke/ (Toni 18.11.: „so mehr zu Amazon klicken, desto besser“) – nur Amazon-Suchen, keine Preise/Fotos.
+# Abschnitt „Ab 18“ nur hier (Seite für Erwachsene), nie auf Kinder-/Schulseiten.
+LUSTIG = [
+    ('Fürs Büro', 'daumen', 'Klein, schreibtischtauglich und garantiert ein Lacher bei der Bescherung im Team.', [
+        ('Mini-Basketball für den Schreibtisch', 'Korb an den Monitor, Papierkugel rein – die Mittagspause ist gerettet.', 'Mini Basketball Büro Schreibtisch'),
+        ('Bullshit-Buzzer', 'Ein Druck auf den Knopf sagt im Meeting mehr als tausend Worte.', 'Bullshit Buzzer'),
+        ('Notizblock mit frechem Spruch', 'Für To-do-Listen, die sowieso niemand abarbeitet.', 'Notizblock lustig Spruch Büro'),
+        ('Mini-Boxsack für den Schreibtisch', 'Mit Saugnapf – für Montage, Mails und Meetings.', 'Mini Boxsack Schreibtisch'),
+        ('Gummihuhn mit Quietschen', 'Sinnlos, laut und genau deshalb heiß begehrt.', 'Gummihuhn Quietsch'),
+        ('Anti-Stress-Würfel', 'Klicken, drehen, schieben – beschäftigt die Finger in jedem Meeting.', 'Anti Stress Würfel'),
+        ('Mini-Zen-Garten', 'Sand, Rechen, Steine – Ruhe auf 15 Zentimetern.', 'Mini Zen Garten Schreibtisch'),
+    ]),
+    ('Kleine Lacher bis 10 €', 'jubel', 'Günstig, schnell verpackt und perfekt fürs Wichteln mit kleinem Budget.', [
+        ('Furzkissen', 'Der Klassiker – funktioniert seit Jahrzehnten.', 'Furzkissen'),
+        ('Glückskekse mit frechen Sprüchen', 'Zum Vorlesen in der Runde – sorgt für Gelächter.', 'Glückskekse lustige Sprüche'),
+        ('Klopapier mit Sudoku', 'Damit auch die stille Minute sinnvoll genutzt wird.', 'Toilettenpapier Sudoku'),
+        ('Pflaster mit lustigen Motiven', 'Heilt nicht besser, sieht aber besser aus.', 'Pflaster lustige Motive'),
+        ('Socken mit Spruch', 'Unter der Sohle steht, was man wirklich denkt.', 'Socken mit Spruch lustig'),
+        ('Wackeldackel', 'Nickt auf dem Armaturenbrett zu allem Ja.', 'Wackeldackel'),
+        ('Klebebärte', 'Für spontane Verkleidungen auf der Weihnachtsfeier.', 'Klebebart Set'),
+    ]),
+    ('Großer Spaß bis 20 €', 'geschenk', 'Etwas mehr Budget, noch mehr Wirkung beim Auspacken.', [
+        ('Elfenmütze mit Ohren', 'Gestreift, mit spitzen Ohren – der Hingucker auf jeder Feier.', 'Elfenmütze mit Ohren'),
+        ('Socken in der Pizza-Schachtel', 'Sieht aus wie Pizza – ist aber Socken.', 'Socken Pizza Box'),
+        ('Klo-Golf', 'Putten, während man ohnehin sitzt.', 'Toiletten Golf'),
+        ('Klo-Nachtlicht', 'Leuchtet bunt, sobald nachts jemand kommt.', 'Toilettenlicht Bewegungsmelder'),
+        ('Leuchtendes Rentier-Geweih', 'Für die Weihnachtsfeier – mit Glöckchen.', 'Rentier Haarreif leuchtend'),
+        ('Kerze mit frechem Spruch', 'Duftet gut, sagt die Wahrheit.', 'Kerze mit Spruch lustig'),
+        ('Süßigkeiten aus den USA', 'Snacks, die es hier im Supermarkt nicht gibt.', 'Süßigkeiten Box USA'),
+    ]),
+    ('Spiele zum Lachen', 'herz', 'Wird direkt nach der Bescherung ausgepackt und gespielt.', [
+        ('Halt mal kurz', 'Schnelles Kartenspiel, bei dem Freundschaften kurz pausieren.', 'Halt mal kurz Kartenspiel'),
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('Wer bin ich? mit Stirnband', 'Karte an die Stirn, raten – Gelächter garantiert.', 'Wer bin ich Spiel Stirnband'),
+        ('Tabu', 'Erklären, ohne die verbotenen Wörter zu sagen.', 'Tabu Spiel'),
+        ('Activity', 'Zeichnen, erklären, pantomimisch darstellen.', 'Activity Spiel Piatnik'),
+    ]),
+    ('Ab 18: für Erwachsene', 'psst', 'Nur für Wichtelrunden unter Erwachsenen – nicht für Schule, Kita oder Familie mit Kindern.', [
+        ('Trinkspiel-Roulette (ab 18)', 'Roulette mit Gläsern – Kugel entscheidet.', 'Trinkspiel Roulette'),
+        ('Bier-Pong-Set (ab 18)', 'Becher, Bälle, Regeln – die Party kann kommen.', 'Bier Pong Set'),
+        ('Socken „Bring mir Wein“ (ab 18)', 'Die Botschaft steht unter der Sohle.', 'Socken wenn du das lesen kannst Wein'),
+        ('Partyspiel für Erwachsene (ab 18)', 'Kartenspiel mit schwarzem Humor für den Abend.', 'Partyspiel Erwachsene Karten'),
+    ]),
+]
+
+# /last-minute-wichtelgeschenke/ (Toni 19.11.: „mach“) – Suchbegriffe am 19.11. bei Amazon geprüft
+# (gestrichen: Spotify-Geschenkkarte gibt es nicht, „Hörbuch/eBook Geschenk“ liefert Geräte bzw. Einzeltitel).
+LASTMINUTE = [
+    ('Heute noch: zum Ausdrucken', 'psst', 'Kein Versand, kein Warten – heute kaufen, ausdrucken, verpacken.', [
+        ('Amazon-Gutschein zum Ausdrucken', 'Betrag wählen, Motiv aussuchen, ausdrucken – fertig in fünf Minuten.', 'Amazon Gutschein zum Ausdrucken'),
+    ]),
+    ('Morgen da: mit Prime bestellen', 'geschenk', 'Viele Artikel kommen mit Prime schon am nächsten Tag – achtet beim Bestellen auf das Lieferdatum.', [
+        ('Kuschelsocken', 'Weich, warm und passt jedem – der sichere Klassiker.', 'Kuschelsocken Damen Herren'),
+        ('Thermobecher', 'Hält den Kaffee auf dem Weg ins Büro heiß.', 'Thermobecher to go'),
+        ('Duftkerze im Glas', 'Zimt, Orange oder Tanne – sofort Winterstimmung.', 'Duftkerze im Glas'),
+        ('Handwärmer', 'Für kalte Finger an der Bushaltestelle oder beim Spaziergang.', 'Handwärmer'),
+        ('Tee-Geschenkset', 'Mehrere Sorten zum Probieren – schön verpackt.', 'Tee Geschenkset'),
+        ('Kaffee-Geschenkset', 'Verschiedene Röstungen für alle, die morgens nicht ohne können.', 'Kaffee Geschenkset'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel – wird direkt nach der Bescherung gespielt.', 'Halt mal kurz Kartenspiel'),
+        ('Rätselbuch', 'Für ruhige Abende auf dem Sofa.', 'Rätselbuch Erwachsene'),
+        ('Notizbuch A5', 'Fester Einband, schönes Papier – wird immer gebraucht.', 'Notizbuch A5 Hardcover'),
+        ('Kuschelige Fleecedecke', 'Für Sofa, Büro oder Auto – gemütlich geht immer.', 'Fleecedecke kuschelig'),
+        ('Weihnachtstasse', 'Mit winterlichem Motiv – gleich mit Kakao befüllen.', 'Weihnachtstasse'),
+        ('Kleine Powerbank', 'Rettet den Akku unterwegs – passt in jede Jackentasche.', 'Powerbank klein'),
+        ('Mini-Taschenlampe', 'Hell, klein, aufladbar – für Schlüsselbund oder Handschuhfach.', 'Mini Taschenlampe LED'),
+        ('Handyhalterung fürs Auto', 'Praktisch für alle, die viel unterwegs sind.', 'Handyhalterung Auto'),
+    ]),
+    ('Genuss & Wohlfühlen', 'herz', 'Naschen, schnuppern, entspannen – kommt bei fast allen gut an.', [
+        ('Pralinen', 'Die Schachtel, über die sich jeder freut.', 'Pralinen'),
+        ('Schokoladen-Probierset', 'Mehrere Sorten zum Durchprobieren.', 'Schokoladen Probierset'),
+        ('Heiße Schokolade im Set', 'Kakao zum Anrühren – perfekt für kalte Abende.', 'Heißer Kakao Geschenk'),
+        ('Lebkuchen-Geschenkbox', 'Weihnachtlich und hübsch verpackt.', 'Lebkuchen Geschenk'),
+        ('Gewürz-Geschenkset', 'Für alle, die gern kochen.', 'Gewürze Geschenkset'),
+        ('Popcorn-Set', 'Mais plus Gewürze – der Filmabend ist gerettet.', 'Popcorn Mais Gewürz Set'),
+        ('Handcreme-Set', 'Gegen trockene Winterhände.', 'Handcreme Geschenkset'),
+        ('Tuchmasken-Set', 'Zehn Minuten Wellness am Abend.', 'Tuchmasken Gesicht Set'),
+        ('Badekugeln-Set', 'Sprudeln, duften, entspannen.', 'Badekugeln Set'),
+    ]),
+    ('In 10 Minuten selbst gemacht', 'jubel', 'Zutaten aus dem Schrank – sieht nach viel Mühe aus.', [
+        ('Backmischung im Glas', 'Mehl, Zucker, Schokodrops schichten, Rezept dran – fertig.', 'Einmachglas mit Deckel'),
+        ('Gutscheinheft', 'Einmal Kaffee holen, einmal Spieleabend – kostet nur Zeit.', 'Gutscheinkarten blanko'),
+        ('Geschenkanhänger', 'Mit einem Reim drauf wird jedes Geschenk persönlich.', 'Geschenkanhänger Weihnachten'),
+    ]),
+]
+
+# /wichtelgeschenke-fuer-kollegen/ (Toni 19.11.: „mach“) – Suchbegriffe 19.11. bei Amazon geprüft
+# (gestrichen: Bambus-To-go-Becher = Wegwerfbecher, Party-Kartenspiel teils nicht bürotauglich, Mauspad unpassend).
+KOLLEGEN = [
+    ('Für den Schreibtisch', 'daumen', 'Wird jeden Tag benutzt – und erinnert an die nette Wichtelrunde.', [
+        ('Tassenwärmer mit USB', 'Hält den Kaffee warm, auch wenn das Telefon wieder länger dauert.', 'Tassenwärmer USB'),
+        ('Schreibtisch-Organizer', 'Stifte, Zettel, Handy – endlich alles an seinem Platz.', 'Schreibtisch Organizer'),
+        ('Kabelhalter', 'Klein, günstig und gegen den Kabelsalat unterm Monitor.', 'Kabelhalter Schreibtisch'),
+        ('Kleine Kunstpflanzen', 'Grün auf dem Tisch – ganz ohne Gießen.', 'Kunstpflanze klein Schreibtisch'),
+        ('Fineliner-Set', 'Für Notizen, To-do-Listen und Kritzeleien im Meeting.', 'Fineliner Set'),
+        ('Schreibtischuhr', 'Damit der Feierabend nicht verpasst wird.', 'Schreibtischuhr'),
+        ('Kleine LED-Schreibtischlampe', 'Helles Licht für dunkle Wintermorgen.', 'Schreibtischlampe LED klein'),
+        ('Notizbuch A5', 'Fester Einband, schönes Papier – wird immer gebraucht.', 'Notizbuch A5 Hardcover'),
+    ]),
+    ('Kaffee, Tee & Pause', 'herz', 'Für die schönste Zeit im Büroalltag: die Pause.', [
+        ('Tasse mit Bürospruch', 'Sagt, was alle denken – jeden Morgen aufs Neue.', 'Tasse mit Spruch Büro'),
+        ('Kaffee-Probierset', 'Verschiedene Bohnen für alle, die ohne Kaffee nicht starten.', 'Kaffee Probierset Bohnen'),
+        ('Tee-Probierset', 'Mehrere Sorten für die Teetrinker im Team.', 'Tee Probierset'),
+        ('Trinkflasche aus Edelstahl', 'Für mehr Wasser am Schreibtisch.', 'Trinkflasche Edelstahl'),
+        ('Lunchbox aus Edelstahl', 'Für das Mittagessen von zu Hause.', 'Lunchbox Edelstahl'),
+        ('Honig-Geschenkset', 'Verschiedene Sorten – passt zu Tee und Frühstück.', 'Honig Geschenkset'),
+        ('Schokoladen-Probierset', 'Zum Teilen in der Kaffeeküche – oder auch nicht.', 'Schokoladen Probierset'),
+    ]),
+    ('Lustig fürs Team', 'jubel', 'Sorgt bei der Bescherung für Lacher – ohne jemanden bloßzustellen.', [
+        ('Bullshit-Buzzer', 'Ein Druck auf den Knopf sagt im Meeting mehr als tausend Worte.', 'Bullshit Buzzer'),
+        ('Meeting-Bingo', 'Synergie, Deadline, kurz mal abstimmen – wer hat zuerst eine Reihe?', 'Meeting Bingo'),
+        ('Lustiger Bürokalender 2027', 'Ein Spruch pro Tag fürs neue Jahr.', 'Büro Kalender 2027 lustig'),
+        ('Mini-Basketball für den Schreibtisch', 'Korb an den Papierkorb, Papierkugel rein.', 'Mini Basketball Büro Schreibtisch'),
+        ('Anti-Stress-Würfel', 'Klicken, drehen, schieben – für lange Telefonate.', 'Anti Stress Würfel'),
+        ('Mini-Zen-Garten', 'Sand, Rechen, Steine – Ruhe auf 15 Zentimetern.', 'Mini Zen Garten Schreibtisch'),
+        ('Haftnotizen mit Sprüchen', 'Für Botschaften, die man lieber nicht laut sagt.', 'Haftnotizen lustig'),
+        ('Notizblock mit frechem Spruch', 'Für To-do-Listen, die sowieso niemand abarbeitet.', 'Notizblock lustig Spruch Büro'),
+    ]),
+    ('Passt immer: neutral & sicher', 'geschenk', 'Wenn du die Person kaum kennst – damit liegst du nie daneben.', [
+        ('Kuschelsocken', 'Weich, warm und passt jedem.', 'Kuschelsocken Damen Herren'),
+        ('Handcreme-Set', 'Gegen trockene Hände von Heizungsluft.', 'Handcreme Geschenkset'),
+        ('Kleine Powerbank', 'Rettet den Akku auf dem Heimweg.', 'Powerbank klein'),
+        ('Duftkerze im Glas', 'Für gemütliche Abende nach Feierabend.', 'Duftkerze im Glas'),
+        ('Rätselbuch', 'Für die Bahnfahrt oder das Sofa.', 'Rätselbuch Erwachsene'),
+    ]),
+]
+
+# /geschenke-fuer-oma-und-opa/ (Toni 19.11.: „mach“) – Suchbegriffe 19.11. bei Amazon geprüft (gestrichen: Teelicht-Laterne = nur Teelichter).
+OMAOPA = [
+    ('Warm & gemütlich', 'schlaeft', 'Für lange Winterabende auf dem Sofa.', [
+        ('Decke mit Ärmeln', 'Warm eingepackt – und die Hände bleiben frei für Buch oder Tasse.', 'Decke mit Ärmeln'),
+        ('Filz-Hausschuhe', 'Warm, leise und rutschfest.', 'Hausschuhe Filz warm'),
+        ('Warme Hausschuhe für Opa', 'Mit Fleece gefüttert – nie mehr kalte Füße.', 'Hausschuhe Herren warm'),
+        ('Wärmflasche mit Bezug', 'Der Klassiker für kalte Nächte.', 'Wärmflasche mit Bezug'),
+        ('Winterschal', 'Weich und warm für den Spaziergang.', 'Schal Damen Winter'),
+        ('Kuschelige Fleecedecke', 'Für Sessel, Sofa oder Auto.', 'Fleecedecke kuschelig'),
+        ('Duftkerze im Glas', 'Zimt, Vanille oder Tanne – sofort Weihnachtsstimmung.', 'Duftkerze im Glas'),
+    ]),
+    ('Erinnerungen & Familie', 'herz', 'Was Großeltern am meisten freut: Zeit, Fotos und Geschichten der Familie.', [
+        ('„Oma, erzähl mal“', 'Ein Buch mit Fragen zum Ausfüllen – später ein Schatz für die ganze Familie.', 'Oma erzähl mal'),
+        ('„Opa, erzähl mal“', 'Dasselbe für Opa – Kindheit, Liebe, Lieblingsgeschichten.', 'Opa erzähl mal'),
+        ('Fotoalbum zum Einkleben', 'Mit Bildern der Enkel gefüllt wird es zum Lieblingsgeschenk.', 'Fotoalbum zum Einkleben'),
+        ('Bilderrahmen-Collage', 'Viele Familienfotos in einem Rahmen.', 'Bilderrahmen Collage'),
+        ('Digitaler Bilderrahmen', 'Für größeres Budget: Die Familie schickt neue Fotos direkt aufs Gerät.', 'Digitaler Bilderrahmen'),
+        ('Familienplaner 2027', 'Mit Spalten für alle – Geburtstage nie mehr vergessen.', 'Familienplaner 2027'),
+    ]),
+    ('Garten & Natur', 'winkt', 'Für alle, die gern draußen sind – auch im Winter.', [
+        ('Vogelfutterhaus', 'Für Gäste am Fenster den ganzen Winter lang.', 'Vogelfutterhaus'),
+        ('Meisenknödel-Halter', 'Klein, günstig und sofort im Einsatz.', 'Meisenknödelhalter'),
+        ('Insektenhotel', 'Ein Zuhause für Wildbienen im Garten oder auf dem Balkon.', 'Insektenhotel'),
+        ('Saatgut-Set', 'Kräuter und Gemüse für die neue Saison.', 'Blumensamen Set'),
+        ('Gartenhandschuhe', 'Robust und bequem – werden im Frühjahr sofort gebraucht.', 'Gartenhandschuhe'),
+    ]),
+    ('Rätseln & Spielen', 'lupe', 'Hält den Kopf fit – und macht mit den Enkeln zusammen Spaß.', [
+        ('Rätselbuch mit großer Schrift', 'Gut lesbar, auch ohne Brille.', 'Rätselbuch große Schrift'),
+        ('Kreuzworträtsel-Buch', 'Für die ruhige Stunde am Nachmittag.', 'Kreuzworträtsel Senioren'),
+        ('Puzzle mit 1000 Teilen', 'Für viele gemütliche Abende am Esstisch.', 'Puzzle 1000 Teile'),
+        ('Rommé-Karten', 'Der Spieleabend mit der Familie ist gerettet.', 'Rommé Karten'),
+        ('Leselupe mit Licht', 'Macht kleine Schrift wieder gut lesbar.', 'Leselupe mit Licht'),
+    ]),
+    ('Genuss', 'geschenk', 'Naschen und genießen – geht immer.', [
+        ('Tee-Geschenkset', 'Mehrere Sorten zum Probieren.', 'Tee Geschenkset'),
+        ('Honig-Geschenkset', 'Verschiedene Sorten vom Imker.', 'Honig Geschenkset'),
+        ('Pralinen', 'Die Schachtel, über die sich jeder freut.', 'Pralinen'),
+        ('Lebkuchen-Geschenkbox', 'Weihnachtlich und hübsch verpackt.', 'Lebkuchen Geschenk'),
+        ('Kaffee-Geschenkset', 'Für den Nachmittagskaffee mit Kuchen.', 'Kaffee Geschenkset'),
+    ]),
+]
+
+# /wichtelgeschenke-fuer-teenager/ (Toni 19.11.: „mach“) – richtet sich an Erwachsene/Eltern, die für 13–17-Jährige kaufen.
+# Nie „ab 18“/Alkohol. Suchbegriffe 19.11. bei Amazon geprüft (gestrichen: Hitster + „Wer bin ich“ – Suchtreffer zeigen Erwachsenen-Partyspiele).
+TEENS = [
+    ('Technik & Gadgets', 'daumen', 'Für alle, die das Handy sowieso nie aus der Hand legen.', [
+        ('Mini-Bluetooth-Lautsprecher', 'Musik im Zimmer, beim Duschen oder unterwegs.', 'Mini Bluetooth Lautsprecher'),
+        ('Bluetooth-Kopfhörer', 'Für größeres Budget – kabellos in Bus und Bahn.', 'Bluetooth Kopfhörer In Ear'),
+        ('Handyhalterung mit Schwanenhals', 'Fürs Serienschauen im Bett.', 'Handyhalterung Schwanenhals'),
+        ('Kleine Powerbank', 'Damit der Akku den Schultag übersteht.', 'Powerbank klein'),
+        ('Ringlicht fürs Handy', 'Gutes Licht für Fotos und Videos.', 'Ringlicht Handy'),
+        ('Instax-Mini-Film', 'Für alle mit Sofortbildkamera – Fotos zum Anfassen.', 'Instax Mini Film'),
+    ]),
+    ('Zimmer & Chillen', 'schlaeft', 'Macht das eigene Zimmer gemütlicher.', [
+        ('LED-Streifen', 'Farbiges Licht hinterm Bett oder Schreibtisch.', 'LED Strip Zimmer'),
+        ('Sternenhimmel-Projektor', 'Zaubert Sterne und Galaxien an die Decke.', 'Sternenhimmel Projektor'),
+        ('Lichterkette mit Fotoklammern', 'Für die Fotowand mit Freunden.', 'Lichterkette mit Klammern für Fotos'),
+        ('Kuschelige Fleecedecke', 'Für Sofa, Bett und Filmabend.', 'Fleecedecke kuschelig'),
+        ('Kuschelsocken', 'Weich, warm und passt jedem.', 'Kuschelsocken Damen Herren'),
+    ]),
+    ('Spiele mit Freunden', 'jubel', 'Für den nächsten Spieleabend – ganz ohne Bildschirm.', [
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('UNO Flip', 'UNO mit Wende – jede Runde wird anders.', 'UNO Flip'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel mit vielen Lachern.', 'Halt mal kurz Kartenspiel'),
+        ('Speed Cube', 'Der Zauberwürfel für Tüftler – wer schafft ihn am schnellsten?', 'Speed Cube'),
+    ]),
+    ('Style & Pflege', 'herz', 'Kleine Dinge, die jeden Tag benutzt werden.', [
+        ('Scrunchies', 'Samt-Haargummis in vielen Farben.', 'Scrunchies'),
+        ('Beanie-Mütze', 'Warm und passt zu jeder Jacke.', 'Beanie Mütze'),
+        ('Socken mit Motiv', 'Pizza, Avocado oder Tiere – lustig und warm.', 'Socken mit Motiv'),
+        ('Kosmetiktasche', 'Für Sporttasche, Rucksack oder Klassenfahrt.', 'Kosmetiktasche'),
+        ('Badekugeln-Set', 'Sprudeln, duften, entspannen.', 'Badekugeln Set'),
+    ]),
+    ('Kreativ & Schule', 'geschenk', 'Für alle, die gern zeichnen, schreiben und gestalten.', [
+        ('Bullet Journal', 'Gepunktetes Notizbuch zum Planen und Gestalten.', 'Bullet Journal gepunktet'),
+        ('Sticker-Set', 'Für Laptop, Trinkflasche und Hefte.', 'Sticker Set aesthetic'),
+        ('Skizzenbuch A5', 'Für Zeichnungen und Ideen.', 'Skizzenbuch A5'),
+        ('Washi-Tape-Set', 'Bunte Klebebänder zum Verzieren.', 'Washi Tape Set'),
+        ('Fineliner-Set', 'Viele Farben für Notizen und Zeichnungen.', 'Fineliner Set'),
+        ('Trinkflasche aus Edelstahl', 'Für Schule, Sport und unterwegs.', 'Trinkflasche Edelstahl'),
+    ]),
+]
+
+# /gesellschaftsspiele-verschenken/ (Toni 19.11.: „top ten recherche … die nehmen wir dann“, nach Alter: Kinder/Jugendliche/Erwachsene)
+# Top 10 = Familienspiele aus den Amazon-Bestsellern „Spiele“ (19.11.2026, gefiltert: keine Elektronik/Sammelkarten/„Adult“-Titel)
+# + Spiel des Jahres 2026 (Dito!). Preisträger: SdJ 2026 Dito!, Kinderspiel 2026 Die Insel der Mookies; SdJ 2025 Bomb Busters,
+# Kinderspiel 2025 Topp die Torte! (spiel-des-jahres.de). Suchbegriffe 19.11. geprüft (gestrichen: EXIT Erwachsene, Rebirth, Quickstop – Suche trifft anderes).
+SPIELE = [
+    ('Unsere Top 10 für den Spieleabend', 'jubel', 'Ausgewählt aus den aktuellen Amazon-Bestsellern bei Spielen und dem Spiel des Jahres – schnell erklärt und für die ganze Familie.', [
+        ('Dito!', 'Spiel des Jahres 2026: Alle schreiben ein Wort zum Begriff – Punkte gibt es, wenn ihr dasselbe denkt.', 'Dito Spiel des Jahres'),
+        ('Flip 7', 'Karten aufdecken, bis man aufhört oder es kracht – in fünf Minuten erklärt.', 'Flip 7 Kartenspiel'),
+        ('UNO', 'Der Klassiker, den jeder kennt – passt in jede Tasche.', 'UNO Kartenspiel'),
+        ('Geistesblitz', 'Wer greift am schnellsten den richtigen Gegenstand? Lautes Reaktionsspiel.', 'Geistesblitz Zoch'),
+        ('Skip-Bo', 'Karten in der richtigen Reihenfolge ablegen – einfach und spannend.', 'Mattel Skip-Bo'),
+        ('Noch mal!', 'Würfeln und Felder ankreuzen – alle spielen gleichzeitig.', 'Noch mal Schmidt Spiel'),
+        ('Phase 10', 'Zehn Phasen nacheinander schaffen – für lange Abende.', 'Mattel Phase 10'),
+        ('Dobble', 'Finde das Symbol, das auf beiden Karten ist – Kinder schlagen oft die Großen.', 'Dobble'),
+        ('Rummikub', 'Zahlensteine legen und clever umbauen – bei Großeltern sehr beliebt.', 'Rummikub'),
+        ('Kniffel', 'Fünf Würfel, drei Würfe – ein Spiel für Generationen.', 'Kniffel'),
+    ]),
+    ('Für Kinder', 'herz', 'Kurze Runden, einfache Regeln – und viel Gelächter.', [
+        ('Die Insel der Mookies', 'Kinderspiel des Jahres 2026.', 'Die Insel der Mookies'),
+        ('Topp die Torte!', 'Kinderspiel des Jahres 2025.', 'Topp die Torte'),
+        ('Lotti Karotti', 'Hasen-Wettrennen mit der drehenden Karotte – Löcher inklusive.', 'Lotti Karotti'),
+        ('Halli Galli Junior', 'Wer zuerst klingelt, gewinnt – schnell und laut.', 'Halli Galli Junior'),
+        ('Looping Louie', 'Das Flugzeug schubsen, die eigenen Hühner schützen.', 'Looping Louie'),
+        ('Taco Katze Ziege Käse Pizza', 'Karten ablegen, mitzählen, zuschlagen – Lachen garantiert.', 'Taco Katze Ziege Käse Pizza'),
+        ('EXIT Kids', 'Rätsel lösen wie im Escape-Room – für junge Detektive.', 'Kosmos EXIT Kids'),
+    ]),
+    ('Für Jugendliche', 'daumen', 'Für den Spieleabend mit Freunden – ganz ohne Bildschirm.', [
+        ('Bomb Busters', 'Spiel des Jahres 2025: Gemeinsam eine Bombe entschärfen.', 'Bomb Busters'),
+        ('Codenames', 'Zwei Teams, ein Hinweis – wer findet seine Agenten zuerst?', 'Codenames'),
+        ('Just One', 'Gemeinsam Begriffe erraten – doppelte Hinweise fliegen raus.', 'Just One Spiel'),
+        ('Exploding Kittens', 'Katzen, Explosionen und viel Geschrei.', 'Exploding Kittens'),
+        ('UNO Flip', 'UNO mit Wende – jede Runde wird anders.', 'UNO Flip'),
+        ('Monopoly Deal', 'Monopoly als schnelles Kartenspiel – in 15 Minuten durch.', 'Monopoly Deal'),
+        ('Speed Cube', 'Der Zauberwürfel für Tüftler.', 'Speed Cube'),
+    ]),
+    ('Für Erwachsene', 'geschenk', 'Für Spieleabende, Weihnachtsfeiern und lange Nächte.', [
+        ('Hitster', 'Musik-Quiz: Songs anhören und in die richtige Zeit einordnen.', 'Hitster'),
+        ('Activity', 'Zeichnen, erklären, pantomimisch darstellen – der Partyklassiker.', 'Activity Piatnik'),
+        ('Tabu', 'Begriffe erklären, ohne die verbotenen Wörter zu sagen.', 'Tabu Hasbro'),
+        ('Wizard', 'Stiche richtig vorhersagen – einfach zu lernen, schwer zu meistern.', 'Wizard Kartenspiel'),
+        ('Halt mal kurz', 'Schnelles Kartenspiel, bei dem Freundschaften kurz pausieren.', 'Halt mal kurz Kartenspiel'),
+    ]),
+]
+
+# /geschenke-fuer-erzieherin/ (Toni 19.11.: „ja“) – richtet sich an Eltern; ganzjährig (Weihnachten, Abschied, Dankeschön).
+# Suchbegriffe 19.11. geprüft (gestrichen: Schlüsselanhänger = Einkaufswagenchips, Fingerabdruck-Leinwand = nur Hochzeit).
+ERZIEHER = [
+    ('Kleines Dankeschön', 'herz', 'Zu Weihnachten, zum Geburtstag oder einfach so – kleine Gesten kommen von Herzen an.', [
+        ('Tasse für die Erzieherin', 'Mit lieben Worten – jeden Morgen beim ersten Kaffee.', 'Tasse Erzieherin'),
+        ('Tasse für die Lehrerin', 'Ein Danke, das im Lehrerzimmer jeden Tag benutzt wird.', 'Tasse Lehrerin Danke'),
+        ('Handcreme-Set', 'Basteln, Händewaschen, Kreide – Hände brauchen Pflege.', 'Handcreme Geschenkset'),
+        ('Duftkerze im Glas', 'Für den ruhigen Feierabend nach einem lauten Tag.', 'Duftkerze im Glas'),
+        ('Tee-Probierset', 'Mehrere Sorten für die Pause.', 'Tee Probierset'),
+        ('Schokoladen-Probierset', 'Zum Genießen oder Teilen im Team.', 'Schokoladen Probierset'),
+        ('Kuschelsocken', 'Für kalte Füße beim Morgenkreis.', 'Kuschelsocken Damen Herren'),
+    ]),
+    ('Für den Alltag in Kita & Schule', 'daumen', 'Nützliches, das wirklich gebraucht wird.', [
+        ('Lehrerkalender 2026/27', 'Planer fürs Schuljahr mit Platz für Stunden und Notizen.', 'Lehrerkalender 2026 2027'),
+        ('Lehrerstempel', '„Super gemacht!“ – Lob, das Kinder lieben.', 'Lehrerstempel'),
+        ('Belohnungssticker', 'Hunderte Sticker für fleißige Kinder.', 'Belohnungssticker'),
+        ('Thermobecher', 'Hält den Tee warm auf dem Pausenhof.', 'Thermobecher to go'),
+        ('Trinkflasche aus Edelstahl', 'Für lange Tage ohne Pause.', 'Trinkflasche Edelstahl'),
+        ('Lunchbox aus Edelstahl', 'Für das Mittagessen zwischendurch.', 'Lunchbox Edelstahl'),
+        ('Fineliner-Set', 'Für Plakate, Elternbriefe und Notizen.', 'Fineliner Set'),
+        ('Notizbuch A5', 'Für Beobachtungen, Ideen und To-dos.', 'Notizbuch A5 Hardcover'),
+    ]),
+    ('Zum Abschied & von der ganzen Gruppe', 'winkt', 'Wenn die Kita-Zeit endet oder das Schuljahr vorbei ist – gemeinsam schenkt es sich schöner.', [
+        ('Abschiedsbuch zum Ausfüllen', 'Jedes Kind gestaltet eine Seite – eine Erinnerung für immer.', 'Abschiedsbuch Erzieherin'),
+        ('Erinnerungsbuch Kita', 'Mit Fotos und Sprüchen der Kinder füllen.', 'Erinnerungsbuch Kita Abschied'),
+        ('Saatgut-Set', 'Für Gartenfreundinnen – wächst weiter, wenn die Kinder schon groß sind.', 'Blumensamen Set'),
+        ('Gartenhandschuhe', 'Passend zum Saatgut, robust und bequem.', 'Gartenhandschuhe'),
+    ]),
+]

@@ -83,12 +83,11 @@ def head(title, desc, path, extra='', noindex=False):
 HEADER = '''<header class="top"><div class="bar">
   <a class="logo" href="/"><img src="/favicon.svg" alt="" width="26" height="26"><span>Wichtel<b>Los</b></span></a>
   <nav aria-label="Hauptmenü">
-    <a class="nav-hi" href="/geschenkfinder/"><span class="nav-l">🎁 Geschenkideen</span><span class="nav-k"><i>🎁</i>Geschenkideen</span></a>
-    <a href="/geschenke-generator/"><span class="nav-l">🎲 Geschenke-Generator</span><span class="nav-k"><i>🎲</i>Generator</span></a>
-    <a href="/wichtelgeschenke-unter-10-euro/"><span class="nav-l">Nach Budget</span><span class="nav-k"><i>💶</i>Nach Budget</span></a>
-    <a href="/wichtel-zubehoer/"><span class="nav-l">Wichtel-Zubehör</span><span class="nav-k"><i>✨</i>Zubehör</span></a>
-    <a href="/wichtelgeschenke-fuer-kinder/"><span class="nav-l">Für Kinder</span><span class="nav-k"><i>🧸</i>Für Kinder</span></a>
-    <a class="nav-shop" href="/wichtel-tassen/"><span class="nav-l">☕ Tassen &amp; Shirts</span><span class="nav-k"><i>☕</i>Tassen &amp; Shirts</span></a>
+    <button type="button" class="nav-dd nav-hi" aria-expanded="false" aria-controls="dd-ideen"><span class="nav-l">🎁 Geschenkideen ▾</span><span class="nav-k"><i>🎁</i>Ideen</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-budget"><span class="nav-l">💶 Nach Budget ▾</span><span class="nav-k"><i>💶</i>Budget</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-wichteln"><span class="nav-l">🎲 Wichteln ▾</span><span class="nav-k"><i>🎲</i>Wichteln</span></button>
+    <button type="button" class="nav-dd" aria-expanded="false" aria-controls="dd-advent"><span class="nav-l">🚪 Advent &amp; Kinder ▾</span><span class="nav-k"><i>🚪</i>Advent</span></button>
+    <button type="button" class="nav-shop shop-dd-btn" aria-expanded="false" aria-controls="shop-panel"><span class="nav-l">🛒 Direkt shoppen</span><span class="nav-k"><i>🛒</i>Shoppen</span></button>
   </nav>
   <button type="button" class="search-btn" aria-label="Suche öffnen" aria-expanded="false" aria-controls="search-panel" title="Suchen">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
@@ -109,9 +108,9 @@ FOOTER = '''<footer>
   <p class="kofi"><a class="kofi-btn" href="https://ko-fi.com/wichtellos" rel="noopener" target="_blank">💛 WichtelLos unterstützen</a><br><span class="kofi-sub">Freiwillig – hilft, WichtelLos kostenlos zu halten.</span></p>
   <nav class="footer-groups" aria-label="Alle Seiten">
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
-    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
-    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
+    <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
+    <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/wichtel-abschied/">Wichtel-Abschied</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <!--SOCIAL--></p>
@@ -174,7 +173,13 @@ PRAEMIE_SEITEN = {
 # Black-Friday-Woche bei Amazon 19.–30.11.2026 (offiziell); Banner ab 16.11. auf allen Seiten außer Onni-/Kinderseiten und Rechtlichem
 BF_BANNER = ('<a class="bf-banner" href="/black-friday-wichtelgeschenke/" data-zeit-von="2026-11-16" data-zeit-bis="2026-11-30" hidden>'
              '🏷️ <b>Black-Friday-Woche 19.–30.11.:</b> Wichtelgeschenke im Angebot <span aria-hidden="true">→</span></a>')
-BF_OHNE = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
+# Hinweis-Kasten auf die Spiele-Seite (Toni 19.11.) – eigene Seite, keine Werbung; nie auf KINDER_OHNE_AMAZON-Seiten
+SPIELE_HINWEIS = ('<aside class="praemie spiele-hinweis"><p><b>🎲 Auf der Suche nach Gesellschaftsspielen?</b> '
+                  'Unsere Top 10 für den Spieleabend – dazu Spiele für Kinder, Jugendliche und Erwachsene.</p>'
+                  '<p><a class="btn-secondary" href="/gesellschaftsspiele-verschenken/">Zu den Top 10 →</a></p></aside>\n')
+SPIELE_HINWEIS_SEITEN = {'/wichtelgeschenke-fuer-kinder/', '/nikolaus-geschenke/', '/adventskalender-befuellen/', '/geschenke-fuer-oma-und-opa/',
+                         '/wichtelgeschenke-fuer-teenager/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/weihnachtsfeier-ideen/'}
+BF_OHNE = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
 
 # Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
 POSES = {'winkt': (132, 152), 'geschenk': (120, 152), 'lupe': (132, 152), 'wuerfel': (132, 152), 'schlaeft': (152, 162)}
@@ -387,6 +392,11 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
         i = body.rfind('<div class="cta-box">')  # vor dem Auslosen-Kasten, sonst vor dem Seitenende
         i = i if i >= 0 else body.rfind('</article>')
         body = body[:i] + PRAEMIE_SEITEN[path] + body[i:] if i >= 0 else body + PRAEMIE_SEITEN[path]
+    if path in SPIELE_HINWEIS_SEITEN:  # Toni 19.11.: „Auf der Suche nach Gesellschaftsspielen?“ → Top 10
+        i = body.find('<h2 id="fragen">')
+        i = i if i >= 0 else body.rfind('<div class="cta-box">')
+        i = i if i >= 0 else body.rfind('</article>')
+        body = body[:i] + SPIELE_HINWEIS + body[i:] if i >= 0 else body + SPIELE_HINWEIS
     if not noindex and path not in BF_OHNE and 'bf-banner' not in body:
         body = body.replace('<h1>', BF_BANNER + '<h1>', 1)
     if crumb:
@@ -399,7 +409,7 @@ def page(path, title, desc, body, extra='', noindex=False, crumb=None, mascot=No
 {head(title, desc, path, extra, noindex)}
 </head>
 <body{(' class="' + ' '.join(c for c in ('verspielt' if playful else '', body_class) if c) + '"') if (playful or body_class) else ''}>
-{HEADER}
+{HEADER_KIND if path in KINDER_OHNE_AMAZON else HEADER}
 <main>
 {body}
 </main>
@@ -435,6 +445,79 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*', max_eur=None):
     return f'<a href="{esc(href)}" data-amazon="{esc(query)}"{mx} rel="sponsored nofollow noopener" target="_blank">{esc(label)}</a>'
 
 
+
+# „Direkt shoppen“ (Toni 17.11.: „man muss zu viel klicken“): Knopf im Kopf öffnet Feld mit Direktsprüngen –
+# Amazon-Suche mit Partner-ID (Werbung) + eigene Spreadshop-Produkte. Auf Kinderseiten (KINDER_OHNE_AMAZON) nur der eigene Shop.
+KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/'}
+_SHOP_EIGEN = [  # Spreadshop-Neuheiten 17.11. (Produkttyp 4914 Weihnachtspulli, 5058 Schürze, 5060 Kissen) – Motiv mit Wunschnamen
+    ('🎄', 'Weihnachtspulli mit Namen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+wunschname+weiss-A3286f96983df2110?sellable=rnth9dlkuya8-4914'),
+    ('🍪', 'Weihnachts-Schürze', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5058'),
+    ('🛋️', 'Weihnachts-Kissen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5060'),
+]
+
+
+def shop_panel(mit_amazon=True):
+    a = lambda href, txt, extra='': (f'<a class="sp-btn" href="{esc(href)}" rel="sponsored nofollow noopener" target="_blank"{extra}>{txt}* →</a>')
+    amz = ''
+    if mit_amazon:
+        deals = 'https://www.amazon.de/deals' + (f'?tag={AMAZON_TAG}' if AMAZON_TAG else '')
+        amz = ('<div class="sp-gruppe"><p class="sp-k">Bei Amazon <span>· Werbung*</span></p>'
+               + a(amazon_url('wichtelgeschenk', 10), '🎁 Wichtelgeschenke bis 10 €')
+               + a(amazon_url('wichtelgeschenk', 20), '🎁 Wichtelgeschenke bis 20 €')
+               + a(amazon_url('lustige wichtelgeschenke'), '😂 Lustige Wichtelgeschenke')
+               + a(deals, '🔥 Black-Friday-Angebote', ' data-zeit-von="2026-11-17" data-zeit-bis="2026-11-30"')
+               + '</div>')
+    eigen = ('<div class="sp-gruppe"><p class="sp-k">Unser Wichtel-Shop</p>'
+             + ''.join(f'<a class="sp-btn sp-eigen" href="{esc(h)}" rel="noopener" target="_blank">{i} {t} →</a>' for i, t, h in _SHOP_EIGEN)
+             + '<a class="sp-btn sp-eigen" href="/wichtel-tassen/">☕ Tassen, Shirts &amp; Teddys →</a></div>')
+    fuss = ('<p class="sp-fuss">* Amazon-Partnerlinks: Kaufst du dort, bekommen wir eine kleine Provision – für dich ändert sich nichts. '
+            '<a href="/geschenkfinder/">Lieber erst stöbern? Zum Geschenkfinder</a></p>' if mit_amazon else '')
+    return (f'<div id="shop-panel" class="shop-panel" hidden><div class="shop-inner">{amz}{eigen}{fuss}'
+            '<button type="button" class="shop-close" aria-label="Schließen">✕</button></div></div>')
+
+
+
+# Aufklapp-Menüs im Kopf (Toni 19.11.: „wie Direkt shoppen, bei allen“) – je Feld zwei Spalten, nur eigene Seiten (keine Werbung)
+MENUE = [
+    ('dd-ideen', [
+        [('🎲', 'Geschenke-Generator', '/geschenke-generator/'), ('🎯', 'Gesellschaftsspiele: Top 10', '/gesellschaftsspiele-verschenken/'), ('🔎', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
+         ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'), ('🔤', 'Wichtelgeschenke von A bis Z', '/wichtelgeschenke-mit-buchstaben/'),
+         ('⏰', 'Last-Minute-Wichtelgeschenke', '/last-minute-wichtelgeschenke/'), ('✂️', 'Selbst gemacht', '/wichtelgeschenke-selber-machen/')],
+        [('👔', 'Geschenke für Männer', '/geschenke-fuer-maenner/'), ('💐', 'Geschenke für Frauen', '/geschenke-fuer-frauen/'), ('💼', 'Wichtelgeschenke für Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Geschenke für Oma & Opa', '/geschenke-fuer-oma-und-opa/'), ('🎧', 'Wichtelgeschenke für Teenager', '/wichtelgeschenke-fuer-teenager/'), ('🍎', 'Geschenke für Erzieherinnen', '/geschenke-fuer-erzieherin/'),
+         ('🧸', 'Wichtelgeschenke für Kinder', '/wichtelgeschenke-fuer-kinder/'), ('🛋️', 'Kuscheldecken', '/kuscheldecke-verschenken/'),
+         ('☕', 'Wichtel-Tassen aus unserem Shop', '/wichtel-tassen/')]]),
+    ('dd-budget', [
+        [('💶', 'Wichtelgeschenke unter 5 €', '/wichtelgeschenke-unter-5-euro/'), ('💶', 'Wichtelgeschenke unter 10 €', '/wichtelgeschenke-unter-10-euro/'),
+         ('💶', 'Wichtelgeschenke unter 15 €', '/wichtelgeschenke-unter-15-euro/')],
+        [('💶', 'Wichtelgeschenke unter 20 €', '/wichtelgeschenke-unter-20-euro/'), ('💶', 'Wichtelgeschenke unter 30 €', '/wichtelgeschenke-unter-30-euro/'),
+         ('🏷️', 'Black Friday: im Angebot', '/black-friday-wichtelgeschenke/')]]),
+    ('dd-wichteln', [
+        [('🎁', 'Jetzt kostenlos auslosen', '/'), ('❓', 'Wie funktioniert Wichteln?', '/wie-funktioniert-wichteln/'),
+         ('🎲', 'Wichteln mit Würfeln', '/wichteln-wuerfeln-regeln/'), ('🗑️', 'Schrottwichteln', '/schrottwichteln/'),
+         ('🃏', 'Wichtel-Varianten', '/wichteln-varianten/'), ('🚪', 'Julklapp: Brauch & Regeln', '/julklapp/')],
+        [('💼', 'Wichteln im Büro', '/wichteln-im-buero/'), ('🏫', 'Schule & Kita', '/wichteln-schule-kita/'),
+         ('💬', 'Wichteln per WhatsApp', '/wichteln-per-whatsapp/'), ('📝', 'Wunschzettel', '/wunschzettel/'),
+         ('🎄', 'Weihnachtsfeier-Ideen', '/weihnachtsfeier-ideen/')]]),
+    ('dd-advent', [
+        [('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'), ('🔨', 'Wichteltür selber bauen', '/wichteltuer-selber-bauen/'),
+         ('✨', 'Wichtel-Zubehör', '/wichtel-zubehoer/'), ('🌙', 'Onnis Adventskalender', '/onni-adventskalender/'),
+         ('🖍️', 'Wichtel-Ausmalbilder', '/wichtel-ausmalbilder/'), ('👋', 'Wichtel-Abschied', '/wichtel-abschied/')],
+        [('📅', 'Adventskalender-Ideen', '/adventskalender-ideen/'), ('🎒', 'Adventskalender befüllen', '/adventskalender-befuellen/'),
+         ('🥾', 'Nikolaus-Geschenke', '/nikolaus-geschenke/'), ('🍪', 'Plätzchen backen mit Kindern', '/plaetzchen-backen-mit-kindern/')]]),
+]
+
+
+def menue_panels():
+    out = []
+    for pid, spalten in MENUE:
+        grp = ''.join('<div class="sp-gruppe">' + ''.join(f'<a class="sp-btn" href="{h}">{i} {esc(t)}</a>' for i, t, h in sp) + '</div>' for sp in spalten)
+        out.append(f'<div id="{pid}" class="shop-panel dd-panel" hidden><div class="shop-inner">{grp}'
+                   '<button type="button" class="shop-close" aria-label="Schließen">✕</button></div></div>')
+    return ''.join(out)
+
+
+HEADER_KIND = HEADER.replace('</div></header>', '</div>' + menue_panels() + shop_panel(False) + '</header>')
+HEADER = HEADER.replace('</div></header>', '</div>' + menue_panels() + shop_panel(True) + '</header>')
 
 def product_links(q, asin=None):
     # Direktlink aufs Produkt + Suchlink als Rückfallebene, falls es mal ausverkauft ist
@@ -991,6 +1074,10 @@ def finder_page():
 </div>
 <p class="hint">Bei Geschenken für Kinder bitte die Altersangabe auf der Verpackung beachten, zum Beispiel wegen verschluckbarer Kleinteile.</p>
 <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+<section class="personen-box">
+<h2>Ausführliche Ratgeber nach Person</h2>
+{personen_chips()}
+</section>
 {CTA}
 </article>'''
     page('/geschenkfinder/', f'Geschenkfinder fürs Wichteln: {len(IDEAS)} Ideen nach Alter & Budget',
@@ -1293,6 +1380,7 @@ def office_page():
 <p>Vom Weihnachtsmarkt mit Wichtel-Twist bis zur Online-Feier: <a href="/weihnachtsfeier-ideen/">10 Weihnachtsfeier-Ideen fürs Team</a>. Für die Karte zum Geschenk gibt es <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</p>
 
 <h2>Geschenkideen für Kollegen</h2>
+<p><a class="more-link" href="/wichtelgeschenke-fuer-kollegen/">28 Wichtelgeschenke für Kollegen: Schreibtisch, Kaffeepause, lustig &amp; neutral →</a></p>
 <p>Im Geschenkfinder findest du {n_office} bürotaugliche Ideen: <a class="more-link" href="/geschenkfinder/?fuer=office">Alle Ideen für Kollegen ansehen →</a></p>
 <p>Nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 Euro</a></p>
 <p>Mit Augenzwinkern: <a href="/wichtel-tassen/">Wichtel-Tassen mit Spruch</a> – vom „Wichtel-Champion“ bis „Bester Wichtel der Abteilung“.</p>
@@ -2494,6 +2582,7 @@ def onni_kalender_page():
   <li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> – Möbel, Lichterkette und Kleinigkeiten für seine Tür</li>
   <li><a href="/wichtel-ausmalbilder/">Ausmalbilder und Sticker mit Onni</a> – zum Ausmalen während der Folge</li>
   <li><a href="/wichteltuer/#wichtelname">Wichtelname-Generator</a> – falls euer eigener Wichtel einen Namen bekommen soll</li>
+  <li><a href="/wichtel-abschied/">Wichtel-Abschied</a> – Abschiedsbrief und Ideen, wenn Onni an Heiligabend nach Hause zieht</li>
 </ul>
 <div class="briefe-box briefe-onni">
   <a href="/wichteltuer/#briefe"><img src="/fotos/onni/onni-briefe-24-480.webp" width="480" height="679" alt="Titelseite „24 Briefe von Onni“ mit dem Wichtel Onni, der ein Geschenk hochhält" loading="lazy" decoding="async"></a>
@@ -2583,7 +2672,7 @@ def door_page():
 <p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
 <h2 id="streiche">24 Wichtel-Streiche: der Plan für den Advent</h2>
-<p>Für jeden Tag eine Idee – vom Einzug am 1. Dezember bis zum Abschied an Heiligabend. Die meisten dauern abends nur 5 Minuten.</p>
+<p>Für jeden Tag eine Idee – vom Einzug am 1. Dezember bis zum <a href="/wichtel-abschied/">Abschied an Heiligabend</a>. Die meisten dauern abends nur 5 Minuten.</p>
 <p><button type="button" class="btn-secondary" data-print>🖨️ Plan drucken</button></p>
 <details class="plan-details print-open">
 <summary>📋 Alle 24 Streiche anzeigen</summary>
@@ -3056,7 +3145,7 @@ def history_page():
 {erkl_box('kind', 'Für Kinder erklärt: Was ist ein Wichtel?')}
 
 <h2>Der Vorläufer: Julklapp</h2>
-<p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen.</p>
+<p>Julklapp ist ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland. „Jul“ steht für das Weihnachtsfest, „klapp“ für das Klopfen an der Tür: Ein Geschenk wurde heimlich ins Haus geworfen, oft mehrfach verpackt, und der Schenkende verschwand, bevor jemand öffnete. Der Beschenkte musste raten, von wem es kam. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen. Mehr dazu: <a href="/julklapp/">Julklapp – Brauch, Regeln &amp; Ablauf</a>.</p>
 
 <h2>Wichteln in anderen Ländern</h2>
 <ul>
@@ -3279,6 +3368,19 @@ HOW_TO = [
 ]
 
 
+# Geschenkideen nach Person (Toni 19.11.: Reichweite – Startseite, geheimer Link, Geschenkfinder verlinken die Ratgeber)
+PERSONEN = [('👔', 'Männer', '/geschenke-fuer-maenner/'), ('💐', 'Frauen', '/geschenke-fuer-frauen/'),
+            ('💼', 'Kollegen', '/wichtelgeschenke-fuer-kollegen/'), ('👵', 'Oma & Opa', '/geschenke-fuer-oma-und-opa/'),
+            ('🎧', 'Teenager', '/wichtelgeschenke-fuer-teenager/'), ('🧸', 'Kinder', '/wichtelgeschenke-fuer-kinder/'),
+            ('🍎', 'Erzieherin', '/geschenke-fuer-erzieherin/'), ('🎯', 'Spiele', '/gesellschaftsspiele-verschenken/'),
+            ('😂', 'Lustig', '/lustige-wichtelgeschenke/'), ('⏰', 'Last Minute', '/last-minute-wichtelgeschenke/')]
+
+
+def personen_chips():
+    return '<nav class="personen" aria-label="Geschenkideen nach Person">' + ''.join(
+        f'<a class="chip" href="{h}">{i} {esc(t)}</a>' for i, t, h in PERSONEN) + '</nav>'
+
+
 def faq_html():
     steps = '\n'.join(f'      <li data-i="{i}"><b>{esc(h)}</b> – {esc(x)}</li>' for i, h, x in HOW_TO)
     assert all(any(q == t for q, _ in FAQ) for t in FAQ_TOP), 'FAQ_TOP passt nicht zu FAQ'
@@ -3294,6 +3396,12 @@ def faq_html():
       <ol>
 {steps}
       </ol>
+    </section>
+
+    <section class="personen-box">
+      <h2>🎁 Geschenkideen für jeden</h2>
+      <p class="hint">Ausgelost – und jetzt? Ideen für jede Person in eurer Wichtelrunde:</p>
+      {personen_chips()}
     </section>
 
     <section class="faq">
@@ -3322,6 +3430,7 @@ def tool_page():
     gift = (SRC / 'grafik' / 'wichtel-geschenk.svg').read_text(encoding='utf-8').strip()
     gift = gift.replace('<svg ', '<svg class="mascot-reveal" aria-hidden="true" width="120" height="152" ', 1)
     html = html.replace('<!--WICHTEL-GESCHENK-->', gift)
+    html = html.replace('<!--PERSONEN-->', '<p class="f-label" style="margin-top:14px">Ideen nach Person:</p>' + personen_chips())
     html = html.replace('<!--VERPACKEN-->', supplies_block(WRAP, 'Schön verpacken – und geheim bleiben 🎀', note=False))
     html = html.replace('<!--HEADER-->', HEADER).replace('<!--FOOTER-->', FOOTER).replace('<!--FAQ-->', faq_html())
     (OUT / 'index.html').write_text(asset_v(html), encoding='utf-8')
@@ -3333,7 +3442,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3390,6 +3499,524 @@ def extras():
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n', encoding='utf-8')
 
 
+# /lustige-wichtelgeschenke/ (Toni 18.11.: mehr Amazon-Klicks; Suchbegriffe am 18.11. bei Amazon geprüft)
+LUSTIG_FAQ = [
+    ('Was ist ein gutes lustiges Wichtelgeschenk?', 'Eines, über das alle lachen – auch die beschenkte Person. Am besten funktionieren Dinge, die man danach wirklich benutzt: ein Spiel, Socken mit Spruch oder ein Gadget für den Schreibtisch.'),
+    ('Was ist ein lustiges Wichtelgeschenk für Kollegen?', 'Bürotaugliches wie ein Mini-Basketball für den Monitor, ein Bullshit-Buzzer oder ein Notizblock mit frechem Spruch. Peinliches oder Anzügliches lieber weglassen – im Team weiß man nie, wer was zieht.'),
+    ('Wo ist die Grenze beim lustigen Wichteln?', 'Lustig ja, verletzend nein: keine Witze über Aussehen, Gewicht oder Alter, nichts Ekliges oder Kaputtes. Alkohol und Trinkspiele nur, wenn alle erwachsen sind und das passt.'),
+    ('Was ist der Unterschied zum Schrottwichteln?', 'Beim Schrottwichteln verschenkt man Dinge, die man zu Hause nicht mehr braucht – meist ohne Geld auszugeben. Lustige Wichtelgeschenke sind neu gekauft und sollen Freude machen.'),
+]
+
+
+def lustig_page():
+    from themen import LUSTIG
+    path = '/lustige-wichtelgeschenke/'
+    secs, jump, n = idea_sections(LUSTIG, 'lus')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in LUSTIG_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in LUSTIG_FAQ]}
+    eigen = ''.join(f'<a class="btn-secondary" href="{esc(h)}" rel="noopener" target="_blank">{i} {t} →</a> ' for i, t, h in _SHOP_EIGEN)
+    body = f"""<article>
+<h1>Lustige Wichtelgeschenke: {n} Ideen zum Lachen</h1>
+{ai_photo('wichtel3d-schrott', 'Plüsch-Wichtel sitzt grinsend auf einem Berg kurioser Geschenke mit Teekanne, Quietscheente und Lavalampe')}
+<p class="lead">Ein Wichtelgeschenk, über das die ganze Runde lacht, bleibt am längsten in Erinnerung. Hier findest du {n} lustige Wichtelgeschenke – fürs Büro, für kleines Budget bis 10 €, für etwas mehr bis 20 €, Spiele für den Abend und einen Extra-Teil nur für Erwachsene.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+{PRIME_BOX}
+<p class="chips-line">Direkt zu: {jump} · <a href="#lus-shop">Aus unserem Shop</a> · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+<h2 id="lus-shop">Aus unserem Wichtel-Shop</h2>
+<p>Lustige Sprüche mit Onni, unserem Wichtel – auf Tasse, Pulli, Schürze und Kissen. Beim Pulli und bei der Schürze steht euer Wichtelname drauf.</p>
+<div class="idea-grid">
+{shop_card()}
+</div>
+<p class="shop-eigen-links">{eigen}</p>
+
+{DISC_SEARCH}
+
+<h2>Lustig ja, peinlich nein: 4 Regeln</h2>
+<ul>
+  <li><b>Für alle lustig:</b> Das Geschenk sollte auch die beschenkte Person zum Lachen bringen – nicht nur den Rest der Runde.</li>
+  <li><b>Benutzbar schlägt Staubfänger:</b> Ein Spiel oder Socken mit Spruch werden benutzt, ein reiner Gag landet oft im Müll.</li>
+  <li><b>Budget einhalten:</b> Legt es vorher fest – beim <a href="/">Auslosen</a> könnt ihr es gleich mit eintragen.</li>
+  <li><b>Ab 18 nur unter Erwachsenen:</b> Trinkspiele und Alkohol nie bei Wichtelrunden mit Kindern oder Jugendlichen.</li>
+</ul>
+<p>Noch mehr Ideen: <a href="/schrottwichteln/">Schrottwichteln</a> · <a href="/wichtelgeschenke-unter-5-euro/">unter 5 €</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/wichtelgeschenke-mit-buchstaben/">von A bis Z</a> · <a href="/wichteln-im-buero/">Wichteln im Büro</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Lustige Wichtelgeschenke: {n} Ideen zum Lachen (bis 10 & 20 €)',
+         f'{n} lustige Wichtelgeschenke: fürs Büro, bis 10 € und bis 20 €, Spiele zum Lachen und Ideen ab 18 – mit Regeln, damit es für alle lustig bleibt.',
+         body, crumb='Lustige Wichtelgeschenke', playful=True, extra=ld(faq_ld))
+
+
+# /last-minute-wichtelgeschenke/ (Toni 19.11.: „mach“ – Suche steigt ab Anfang Dezember; Suchbegriffe 19.11. bei Amazon geprüft)
+LASTMINUTE_FAQ = [
+    ('Was schenke ich, wenn das Wichteln schon morgen ist?', 'Am sichersten ist alles, was heute noch fertig wird: ein Gutschein zum Ausdrucken, ein selbst gemachtes Gutscheinheft oder eine Backmischung im Glas. Mit Prime kommen viele Kleinigkeiten außerdem schon am nächsten Tag.'),
+    ('Kommt eine Amazon-Bestellung bis morgen an?', 'Bei vielen Artikeln ja – mit Prime oft schon am nächsten Tag. Das genaue Lieferdatum steht beim Artikel direkt über dem Warenkorb-Knopf. Darauf achten, bevor du bestellst.'),
+    ('Ist ein Gutschein als Wichtelgeschenk unpersönlich?', 'Nicht, wenn du ihn nett verpackst: in ein Glas mit Süßigkeiten, mit einem Reim auf der Karte oder als Rubbellos per WhatsApp. Dann ist er eine kleine Überraschung statt Notlösung.'),
+    ('Wir haben noch gar nicht ausgelost – geht das noch?', 'Ja, in einer Minute: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp schicken. Kostenlos und ohne Anmeldung.'),
+]
+
+
+def lastminute_page():
+    from themen import LASTMINUTE
+    path = '/last-minute-wichtelgeschenke/'
+    secs, jump, n = idea_sections(LASTMINUTE, 'lm')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in LASTMINUTE_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in LASTMINUTE_FAQ]}
+    body = f"""<article>
+<h1>Last-Minute-Wichtelgeschenke: {n} Ideen für heute &amp; morgen</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel hält ein Geschenk mit roter Schleife vor einem leuchtenden Weihnachtsbaum')}
+<p class="lead">Morgen ist Wichteln und du hast noch nichts? Kein Problem. Hier findest du {n} Last-Minute-Wichtelgeschenke: zum Ausdrucken für heute, mit Prime oft schon morgen da – und Ideen, die du in zehn Minuten selbst machst.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: <a href="#lm-sofort">Ohne Bestellen</a> · {jump} · <a href="#fragen">Fragen</a></p>
+
+<h2 id="lm-sofort">Ganz ohne Bestellen: in fünf Minuten fertig</h2>
+<ul>
+  <li><b>Geschenk als Rubbellos:</b> Schreib deine Überraschung auf ein Rubbellos und schick es per WhatsApp – <a href="/rubbellos/">hier kostenlos erstellen</a>.</li>
+  <li><b>Wichtelgruß mit Reim:</b> Ein paar Zeilen auf der Karte machen jede Kleinigkeit persönlich – <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</li>
+  <li><b>Selbst gemacht:</b> Gutscheinheft, Plätzchen im Glas oder ein Foto im Rahmen – <a href="/wichtelgeschenke-selber-machen/">Anleitungen ansehen</a>.</li>
+</ul>
+{PRIME_BOX}
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>So klappt es auf den letzten Drücker</h2>
+<ul>
+  <li><b>Lieferdatum prüfen:</b> Bei Amazon steht es beim Artikel direkt über dem Warenkorb-Knopf.</li>
+  <li><b>Hübsch verpacken:</b> Ein Glas, eine Schleife und ein Anhänger mit Reim – dann sieht niemand, wie spät es war.</li>
+  <li><b>Budget einhalten:</b> Lieber eine kleine, passende Idee als ein teures Notgeschenk. Mehr Ideen: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/lustige-wichtelgeschenke/">lustige Wichtelgeschenke</a>.</li>
+  <li><b>Noch nicht ausgelost?</b> Das geht in einer Minute – <a href="/">jetzt Wichteln auslosen</a>.</li>
+</ul>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Last-Minute-Wichtelgeschenke: {n} Ideen für heute & morgen',
+         f'Last-Minute-Wichtelgeschenke: {n} Ideen zum Ausdrucken, mit Prime oft morgen da oder in 10 Minuten selbst gemacht – plus Tipps fürs Verpacken.',
+         body, crumb='Last-Minute-Wichtelgeschenke', playful=True, extra=ld(faq_ld))
+
+
+# /wichtelgeschenke-fuer-kollegen/ (Toni 19.11.: „mach“ – /wichteln-im-buero/ erklärt nur Regeln; Suchbegriffe 19.11. bei Amazon geprüft)
+KOLLEGEN_FAQ = [
+    ('Was schenkt man Kollegen beim Wichteln?', 'Am besten etwas, das im Büro benutzt wird: ein Tassenwärmer, ein Kaffee-Probierset oder ein Organizer für den Schreibtisch. Wer die Person kaum kennt, liegt mit Kuschelsocken, Schokolade oder einer Duftkerze richtig.'),
+    ('Wie viel gibt man beim Wichteln unter Kollegen aus?', 'Meist 5 bis 15 Euro. Wichtig ist, dass alle denselben Betrag kennen – legt ihn beim Auslosen fest, dann fühlt sich niemand über- oder unterbeschenkt.'),
+    ('Ist ein lustiges Geschenk im Büro okay?', 'Ja, solange alle mitlachen können: Meeting-Bingo oder ein Bullshit-Buzzer sind harmlos. Witze über Aussehen, Alter oder Gewicht und alles Anzügliche gehören nicht ins Büro.'),
+    ('Wie lost man im Team aus, wenn alle im Homeoffice sind?', 'Online in einer Minute: Namen eintragen, auslosen und jedem seinen geheimen Link schicken – per WhatsApp, Teams oder Mail. Kostenlos und ohne Anmeldung.'),
+]
+
+
+def kollegen_page():
+    from themen import KOLLEGEN
+    path = '/wichtelgeschenke-fuer-kollegen/'
+    secs, jump, n = idea_sections(KOLLEGEN, 'kol')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in KOLLEGEN_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in KOLLEGEN_FAQ]}
+    body = f"""<article>
+<h1>Wichtelgeschenke für Kollegen: {n} Ideen fürs Büro</h1>
+{ai_photo('wichtel3d-feier', 'Drei Plüsch-Wichtel feiern an einem Tisch mit Kakao, Kerzen und Keksen, einer hält ein Geschenk')}
+<p class="lead">Wichteln im Büro, und du hast eine Kollegin gezogen, die du kaum kennst? Hier findest du {n} Wichtelgeschenke für Kollegen: für den Schreibtisch, für die Kaffeepause, zum Lachen im Team – und neutrale Ideen, mit denen du nie danebenliegst.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+{PRIME_BOX}
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>4 Regeln fürs Wichteln unter Kollegen</h2>
+<ul>
+  <li><b>Budget festlegen:</b> Meist 5 bis 15 € – beim <a href="/">Auslosen</a> könnt ihr es gleich mit eintragen.</li>
+  <li><b>Lieber nützlich als peinlich:</b> Im Team weiß man nie, wer wen zieht. Nichts Anzügliches, keine Witze über Aussehen oder Alter.</li>
+  <li><b>An Allergien denken:</b> Bei Essbarem auf Nüsse, Laktose oder vegane Kolleginnen achten – im Zweifel lieber etwas für den Schreibtisch.</li>
+  <li><b>Wunschzettel hilft:</b> Mit einem <a href="/wunschzettel/">Wunschzettel</a> oder einem kurzen Tipp beim Auslosen trifft jeder besser.</li>
+</ul>
+<p>Mehr fürs Büro: <a href="/wichteln-im-buero/">Wichteln im Büro: Regeln &amp; Ablauf</a> · <a href="/lustige-wichtelgeschenke/">lustige Wichtelgeschenke</a> · <a href="/schrottwichteln/">Schrottwichteln</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/last-minute-wichtelgeschenke/">Last-Minute-Ideen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Wichtelgeschenke für Kollegen: {n} Ideen fürs Büro (bis 15 €)',
+         f'Wichtelgeschenke für Kollegen: {n} Ideen für Schreibtisch, Kaffeepause und Team – lustig oder neutral, mit Regeln fürs Wichteln im Büro.',
+         body, crumb='Wichtelgeschenke für Kollegen', playful=True, extra=ld(faq_ld))
+
+
+# /geschenke-fuer-oma-und-opa/ (Toni 19.11.: „mach“ – Familienwichteln; Suchbegriffe 19.11. bei Amazon geprüft)
+OMAOPA_FAQ = [
+    ('Was schenkt man Oma und Opa beim Wichteln?', 'Am meisten freuen sich Großeltern über Dinge mit Familienbezug: ein Fotoalbum mit Bildern der Enkel, ein „Oma, erzähl mal“-Buch oder ein Familienplaner. Dazu passen Gemütliches wie eine Decke mit Ärmeln oder warme Hausschuhe.'),
+    ('Was schenkt man Großeltern, die schon alles haben?', 'Zeit und Erinnerungen: einen Gutschein für einen gemeinsamen Ausflug, ein Fotoalbum oder ein Rätselbuch mit großer Schrift. Auch Verbrauchbares wie Tee, Honig oder Pralinen kommt immer gut an.'),
+    ('Können Kinder für Oma und Opa wichteln?', 'Ja, mit unserem Umschalter „Ohne Handy – für Kinder“ druckt ihr Lose aus, auf denen der Name steht. Ein selbst gemaltes Bild oder Plätzchen sind dann das schönste Geschenk.'),
+    ('Wie lost man in der Familie aus, wenn Oma kein Smartphone hat?', 'Druckt die Lose aus: Name außen, Partner innen – ganz ohne Handy. Alle anderen bekommen ihren geheimen Link per WhatsApp.'),
+]
+
+
+def omaopa_page():
+    from themen import OMAOPA
+    path = '/geschenke-fuer-oma-und-opa/'
+    secs, jump, n = idea_sections(OMAOPA, 'oo')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in OMAOPA_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in OMAOPA_FAQ]}
+    body = f"""<article>
+<h1>Geschenke für Oma &amp; Opa: {n} Ideen zum Wichteln</h1>
+{ai_photo('wichtel3d-kuscheldecke', 'Plüsch-Wichtel liegt gemütlich unter einer Kuscheldecke')}
+<p class="lead">Beim Familienwichteln Oma oder Opa gezogen? Hier findest du {n} Geschenke für Großeltern: zum Aufwärmen, für Erinnerungen an die Familie, für Garten und Vogelfreunde, zum Rätseln und zum Genießen.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Das Persönlichste kostet nichts</h2>
+<ul>
+  <li><b>Zeit schenken:</b> Ein Gutschein für einen Ausflug, ein Kinonachmittag oder gemeinsames Plätzchenbacken.</li>
+  <li><b>Von den Enkeln:</b> Ein selbst gemaltes Bild, gebastelte Sterne oder <a href="/plaetzchen-backen-mit-kindern/">Plätzchen</a> in einer schönen Dose.</li>
+  <li><b>Mit Reim:</b> Ein paar Zeilen auf der Karte machen jedes Geschenk persönlich – <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</li>
+</ul>
+<p>Mehr Ideen: <a href="/wichtelgeschenke-selber-machen/">selbst gemacht</a> · <a href="/kuscheldecke-verschenken/">Kuscheldecken</a> · <a href="/geschenke-fuer-frauen/">für Frauen</a> · <a href="/geschenke-fuer-maenner/">für Männer</a> · <a href="/last-minute-wichtelgeschenke/">Last-Minute-Ideen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Geschenke für Oma & Opa: {n} Ideen zum Wichteln & zu Weihnachten',
+         f'Geschenke für Oma & Opa: {n} Ideen zum Wichteln – gemütlich, mit Familienfotos, für Garten und Rätselfreunde. Plus Tipps für Großeltern, die schon alles haben.',
+         body, crumb='Geschenke für Oma & Opa', playful=True, extra=ld(faq_ld))
+
+
+# /wichtelgeschenke-fuer-teenager/ (Toni 19.11.: „mach“ – für Eltern/Verwandte, nie „ab 18“; Suchbegriffe 19.11. bei Amazon geprüft)
+TEENS_FAQ = [
+    ('Was schenkt man Teenagern beim Wichteln?', 'Dinge, die zum Alltag passen: ein Mini-Lautsprecher, LED-Streifen fürs Zimmer, ein Kartenspiel für den Spieleabend oder Sticker für Laptop und Trinkflasche. Im Zweifel lieber etwas Nützliches als etwas „Süßes“ – Teenager wollen ernst genommen werden.'),
+    ('Wie viel gibt man beim Wichteln für Jugendliche aus?', 'In der Klasse meist 5 bis 10 Euro, in der Familie oft 15 bis 25 Euro. Legt das Budget vorher fest – beim Auslosen könnt ihr es gleich eintragen.'),
+    ('Was schenkt man, wenn man den Teenager kaum kennt?', 'Neutrale Ideen kommen fast immer an: Kuschelsocken, eine Powerbank, ein Kartenspiel oder eine Fleecedecke. Noch besser: Beim Auslosen einen kurzen Tipp abfragen.'),
+    ('Wie lost eine Schulklasse online aus?', 'Namen eintragen, auslosen, jedem seinen geheimen Link schicken – kostenlos, ohne Anmeldung und ohne App. Ohne Handys geht es mit ausgedruckten Losen.'),
+]
+
+
+def teens_page():
+    from themen import TEENS
+    path = '/wichtelgeschenke-fuer-teenager/'
+    secs, jump, n = idea_sections(TEENS, 'tn')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in TEENS_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in TEENS_FAQ]}
+    body = f"""<article>
+<h1>Wichtelgeschenke für Teenager: {n} Ideen für 13- bis 17-Jährige</h1>
+{ai_photo('wichtel3d-handy', 'Plüsch-Wichtel schaut auf ein Smartphone')}
+<p class="lead">Beim Familienwichteln den Neffen gezogen oder in der Klasse die Banknachbarin? Hier findest du {n} Wichtelgeschenke für Teenager: Technik, Gemütliches fürs Zimmer, Spiele mit Freunden, Style und Kreatives.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>3 Tipps für Geschenke an Jugendliche</h2>
+<ul>
+  <li><b>Nicht zu kindlich:</b> Lieber Lautsprecher als Plüschtier – Teenager wollen ernst genommen werden.</li>
+  <li><b>Tipp abfragen:</b> Beim <a href="/">Auslosen</a> kann jeder einen kurzen Wunsch angeben, oder ihr nutzt einen <a href="/wunschzettel/">Wunschzettel</a>.</li>
+  <li><b>In der Klasse:</b> Budget klein halten und für alle gleich – mehr dazu unter <a href="/wichteln-schule-kita/">Wichteln in Schule &amp; Kita</a>.</li>
+</ul>
+<p>Mehr Ideen: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 €</a> · <a href="/wichtelgeschenke-unter-20-euro/">unter 20 €</a> · <a href="/lustige-wichtelgeschenke/">lustige Wichtelgeschenke</a> · <a href="/last-minute-wichtelgeschenke/">Last-Minute-Ideen</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Wichtelgeschenke für Teenager: {n} Ideen für 13- bis 17-Jährige',
+         f'Wichtelgeschenke für Teenager: {n} Ideen von Technik über Zimmer-Deko bis Spiele und Kreatives – für Familie und Schulklasse, mit Tipps fürs Budget.',
+         body, crumb='Wichtelgeschenke für Teenager', playful=True, extra=ld(faq_ld))
+
+
+# /gesellschaftsspiele-verschenken/ (Toni 19.11.: recherchierte Top 10 + nach Alter; Hinweis-Kasten SPIELE_HINWEIS auf Familien-/Kinderseiten)
+SPIELE_FAQ = [
+    ('Welche Gesellschaftsspiele sind gerade beliebt?', 'Bei Amazon gehören derzeit Kartenspiele wie Flip 7, UNO, Skip-Bo und Phase 10 zu den meistverkauften Spielen, dazu Dito! – das Spiel des Jahres 2026. Unsere Top 10 oben stammt aus diesen Bestsellern (Stand: 19. November 2026).'),
+    ('Welches Spiel eignet sich für die ganze Familie?', 'Spiele mit kurzen Regeln und schnellen Runden: Dobble, UNO, Kniffel oder Geistesblitz. Dabei haben Kinder oft genauso gute Chancen wie die Großen.'),
+    ('Welches Gesellschaftsspiel passt als Wichtelgeschenk?', 'Kartenspiele sind ideal: klein, günstig und sofort spielbar – zum Beispiel Flip 7, Skip-Bo oder Halt mal kurz. Dann kann die Runde direkt nach der Bescherung losspielen.'),
+    ('Was ist das Spiel des Jahres 2026?', '„Dito!“ von Martin Ang. Kinderspiel des Jahres 2026 wurde „Die Insel der Mookies“. 2025 gewannen „Bomb Busters“ und „Topp die Torte!“ (Kinderspiel).'),
+]
+
+
+def spiele_page():
+    from themen import SPIELE
+    path = '/gesellschaftsspiele-verschenken/'
+    top_t, top_st, top_i, top_items = SPIELE[0]
+    groups = [(top_t, top_st, top_i, [(f'{k}. {t}', *r) for k, (t, *r) in enumerate(top_items, 1)])] + SPIELE[1:]
+    secs, jump, n = idea_sections(groups, 'sp')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in SPIELE_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in SPIELE_FAQ]}
+    body = f"""<article>
+<h1>Gesellschaftsspiele verschenken: Top 10 für den Spieleabend</h1>
+{ai_photo('wichtel3d-wuerfel', 'Plüsch-Wichtel mit roter Zipfelmütze hält einen großen Holzwürfel')}
+<p class="lead">Ein Spiel ist das perfekte Wichtelgeschenk: Es wird ausgepackt und sofort gemeinsam gespielt. Hier sind unsere Top 10 für den Spieleabend – ausgewählt aus den aktuellen Bestsellern und dem Spiel des Jahres –, dazu {n - 10} weitere Ideen für Kinder, Jugendliche und Erwachsene.</p>
+<p class="hint">Stand: 19. November {GIFT_JAHR} · Quellen: Amazon-Bestseller „Spiele“, Spiel des Jahres e.&nbsp;V.</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Spiele für den Wichtelabend</h2>
+<p>Wer nicht nur Spiele verschenken, sondern auch beim Wichteln spielen will: <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a> (mit Online-Würfel und Timer), <a href="/schrottwichteln/">Schrottwichteln</a> und <a href="/wichteln-varianten/">12 weitere Wichtel-Varianten</a>.</p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Gesellschaftsspiele verschenken: Top 10 für den Spieleabend ({GIFT_JAHR})',
+         f'Gesellschaftsspiele verschenken: Unsere Top 10 aus den Bestsellern und dem Spiel des Jahres – plus Spiele für Kinder, Jugendliche und Erwachsene.',
+         body, crumb='Gesellschaftsspiele verschenken', playful=True, extra=ld(faq_ld))
+
+
+# /geschenke-fuer-erzieherin/ (Toni 19.11.: „ja“ – für Eltern, ganzjährig: Weihnachten, Abschied, Dankeschön; Suchbegriffe 19.11. geprüft)
+ERZIEHER_FAQ = [
+    ('Was schenkt man einer Erzieherin zu Weihnachten?', 'Am besten etwas Kleines mit persönlichem Gruß: eine Tasse, eine Duftkerze oder Tee. Noch schöner wird es mit einem selbst gemalten Bild des Kindes dazu.'),
+    ('Was schenkt man zum Abschied aus der Kita?', 'Ein Abschiedsbuch, in dem jedes Kind eine Seite gestaltet, ist der Klassiker. Viele Gruppen legen zusammen und schenken dazu einen Gutschein oder etwas für den Garten.'),
+    ('Wie viel gibt man für ein Geschenk an Erzieher oder Lehrer aus?', 'Einzeln meist nur wenige Euro – wichtiger ist die Geste. Als Gruppe legen viele Eltern 2 bis 5 Euro pro Kind zusammen. An öffentlichen Schulen und Kitas gelten teils Regeln für Geschenke; im Zweifel kurz bei der Leitung nachfragen.'),
+    ('Was schenken Kinder ihrer Lehrerin zum Schuljahresende?', 'Etwas Selbstgemachtes kommt am besten an: ein Bild, eine Karte mit Danke oder gebackene Plätzchen. Dazu passt eine Kleinigkeit wie Belohnungssticker oder ein Notizbuch.'),
+]
+
+
+def erzieher_page():
+    from themen import ERZIEHER
+    path = '/geschenke-fuer-erzieherin/'
+    secs, jump, n = idea_sections(ERZIEHER, 'erz')
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in ERZIEHER_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in ERZIEHER_FAQ]}
+    body = f"""<article>
+<h1>Geschenke für Erzieherinnen &amp; Lehrerinnen: {n} Ideen</h1>
+{ai_photo('wichtel3d-kinder', 'Plüsch-Wichtel zwischen Holzspielzeug: Schaukelpferd, Bauklötze, Eisenbahn und Teddy')}
+<p class="lead">Danke sagen an die Menschen, die jeden Tag mit unseren Kindern lernen, spielen und trösten: Hier findest du {n} Geschenkideen für Erzieherinnen, Erzieher und Lehrkräfte – zu Weihnachten, zum Abschied aus der Kita oder zum Ende des Schuljahres.</p>
+<p class="hint">Stand: November {GIFT_JAHR}</p>
+<p class="chips-line">Direkt zu: {jump} · <a href="#fragen">Fragen</a></p>
+
+{secs}
+
+{DISC_SEARCH}
+
+<h2>Das Schönste machen die Kinder selbst</h2>
+<ul>
+  <li><b>Ein Bild oder eine Karte:</b> Selbst gemalt und mit ein paar Worten – darüber freut sich jede Erzieherin am meisten.</li>
+  <li><b>Plätzchen in der Dose:</b> Gemeinsam gebacken und hübsch verpackt – <a href="/plaetzchen-backen-mit-kindern/">einfaches Rezept</a>.</li>
+  <li><b>Ein kleiner Reim:</b> Für die Karte gibt es <a href="/wichtelgedichte/">kurze Gedichte</a>.</li>
+</ul>
+<p>Wichtelt ihr in der Kita oder Klasse? <a href="/wichteln-schule-kita/">Wichteln in Schule &amp; Kita</a> · <a href="/wichtelgeschenke-fuer-kinder/">Wichtelgeschenke für Kinder</a> · <a href="/wichtelgeschenke-selber-machen/">selbst gemacht</a></p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, f'Geschenke für Erzieherinnen & Lehrerinnen: {n} Ideen für Weihnachten & Abschied',
+         f'Geschenke für Erzieherinnen, Erzieher und Lehrkräfte: {n} Ideen zu Weihnachten, zum Kita-Abschied und Schuljahresende – plus Selbstgemachtes von den Kindern.',
+         body, crumb='Geschenke für Erzieherinnen', playful=True, extra=ld(faq_ld))
+
+
+# /julklapp/ (Toni 19.11.: „danach suchen Leute auch“) – Fakten 19.11. geprüft: Wort = „Weihnachtsklopfen“, schwedisch seit 1741 belegt,
+# im 19. Jh. in bürgerlichen Haushalten verbreitet (Nordiska museet), „Julklapp-Werfen“ in Anklam/Pommern (Adler 1930 via Pommerscher Greif).
+JULKLAPP_FAQ = [
+    ('Was ist Julklapp?', 'Ein alter Weihnachtsbrauch aus Skandinavien und Norddeutschland: Ein Geschenk wird heimlich an die Tür gebracht, man klopft, wirft es hinein und verschwindet. Der Beschenkte soll raten, von wem es kommt. Heute sagen viele im Norden „Julklapp“, wenn sie Wichteln meinen.'),
+    ('Was bedeutet das Wort Julklapp?', '„Jul“ ist das skandinavische Wort für Weihnachten, „klapp“ steht für das Klopfen an der Tür – zusammen also etwa „Weihnachtsklopfen“. Im Schwedischen ist das Wort seit 1741 belegt.'),
+    ('Was ist der Unterschied zwischen Julklapp und Wichteln?', 'Im Grunde keiner mehr: Bei beiden beschenkt man eine ausgeloste Person, ohne sich zu verraten. Beim klassischen Julklapp gehört das Rätseln dazu – das Geschenk ist oft mehrfach verpackt und mit einem Vers versehen.'),
+    ('Wie lost man Julklapp aus?', 'Wie beim Wichteln: Namen eintragen, auslosen und jedem seinen geheimen Link schicken – kostenlos und ohne Anmeldung. Ohne Handy geht es mit ausgedruckten Losen.'),
+]
+
+
+def julklapp_page():
+    path = '/julklapp/'
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in JULKLAPP_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in JULKLAPP_FAQ]}
+    body = f"""<article>
+<h1>Julklapp: Was ist das? Brauch, Regeln &amp; Ablauf</h1>
+{ai_photo('wichtel3d-tuer', 'Plüsch-Wichtel vor einer kleinen Holztür mit Weihnachtskranz')}
+<p class="lead">Klopf, klopf – und schon liegt ein Päckchen vor der Tür, aber niemand ist zu sehen: Das ist Julklapp. Der alte Brauch aus Skandinavien und Norddeutschland ist der Vorläufer des heutigen Wichtelns. Hier erfährst du, woher er kommt, wie er früher ablief und wie ihr Julklapp heute spielt.</p>
+<p class="chips-line">Direkt zu: <a href="#herkunft">Herkunft</a> · <a href="#regeln">So geht Julklapp heute</a> · <a href="#unterschied">Julklapp oder Wichteln?</a> · <a href="#fragen">Fragen</a></p>
+
+<h2 id="herkunft">Woher kommt Julklapp?</h2>
+<p>„Jul“ ist das skandinavische Wort für Weihnachten, „klapp“ steht für das Klopfen an der Tür – Julklapp heißt also etwa <b>Weihnachtsklopfen</b>. Im Schwedischen ist das Wort seit 1741 belegt.</p>
+<p>Der Brauch ging so: Am Heiligabend schlich man zum Haus von Freunden oder Nachbarn, klopfte an die Tür, warf ein Päckchen hinein – und lief davon, bevor jemand öffnete. Oft war das Geschenk ein Scherz: ein Holzscheit oder eine geschnitzte Puppe, mehrfach eingewickelt. Im 19. Jahrhundert wurde Julklapp in bürgerlichen Familien beliebt.</p>
+<p>Auch an der deutschen Ostseeküste, etwa in Pommern, war das „Julklapp-Werfen“ verbreitet. Im Norden sagen manche bis heute „Julklapp“, wenn sie Wichteln meinen. Mehr zur Geschichte: <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></p>
+
+<h2 id="regeln">So geht Julklapp heute</h2>
+<ol>
+  <li><b>Auslosen:</b> Jede Person zieht heimlich einen Namen – online in einer Minute, <a href="/">kostenlos und ohne Anmeldung</a>.</li>
+  <li><b>Budget festlegen:</b> Meist 5 bis 20 Euro – damit sich niemand über- oder unterbeschenkt fühlt.</li>
+  <li><b>Mehrfach verpacken:</b> Typisch für Julklapp: Päckchen im Päckchen im Päckchen. Je mehr Lagen, desto größer der Spaß beim Auspacken.</li>
+  <li><b>Einen Vers dazulegen:</b> Ein kleiner Reim mit Hinweis auf das Geschenk – ohne den eigenen Namen. Ideen: <a href="/wichtelgedichte/">kurze Wichtelgedichte</a>.</li>
+  <li><b>Klopfen und verschwinden:</b> Wer mag, macht es wie früher: anklopfen, Päckchen vor die Tür legen, weglaufen. Bei der Feier landen alle Geschenke einfach in der Mitte.</li>
+  <li><b>Raten:</b> Beim Auspacken rät der Beschenkte, wer sein Julklapp war. Erst dann wird aufgelöst – oder nie.</li>
+</ol>
+
+<h2 id="unterschied">Julklapp oder Wichteln – was ist der Unterschied?</h2>
+<table class="rules">
+<thead><tr><th></th><th>Julklapp</th><th>Wichteln</th></tr></thead>
+<tbody>
+<tr><td>Herkunft</td><td>Skandinavien, Norddeutschland</td><td>Ganz Deutschland, Österreich, Schweiz</td></tr>
+<tr><td>Wer schenkt wem?</td><td>Ausgelost, geheim</td><td>Ausgelost, geheim</td></tr>
+<tr><td>Typisch</td><td>Klopfen, mehrfach verpacken, Vers</td><td>Budget, Wunschzettel, Bescherung in der Runde</td></tr>
+<tr><td>Heute</td><td colspan="2">Praktisch dasselbe – im Norden heißt es oft Julklapp</td></tr>
+</tbody>
+</table>
+<p>Weitere Spielarten wie Schrottwichteln oder Wichteln mit Würfeln: <a href="/wichteln-varianten/">12 Wichtel-Varianten</a>.</p>
+
+{supplies_block(WRAP, 'Zum Verpacken: Päckchen im Päckchen 🎀', note=False)}
+
+<h2>Geschenkideen für den Julklapp</h2>
+{personen_chips()}
+
+{DISC_SEARCH}
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+{CTA}
+</article>"""
+    page(path, 'Julklapp: Was ist das? Brauch, Regeln & Ablauf – online auslosen',
+         'Was ist Julklapp? Der Weihnachtsbrauch aus Skandinavien und Norddeutschland erklärt: Herkunft, Regeln für heute, Unterschied zum Wichteln – und kostenlos online auslosen.',
+         body, crumb='Julklapp', playful=True, extra=ld(faq_ld))
+
+
+# /wichtel-abschied/ (Toni 20.11.: „mach mal“, Plan 19.11. „Onnis Abschied“) – Onni-Seite: keine Amazon-/BF-Werbung (KINDER_OHNE_AMAZON).
+# Erzählt nichts aus Folge 24 (noch nicht geschrieben). Video „Onni sagt Tschüss“ erst nach Abnahme von Text + Bildern einbauen.
+ABSCHIED_IDEEN = [
+    ('Der Koffer steht bereit', 'Zwei, drei Tage vorher steht ein Mini-Koffer vor der Tür. So wissen die Kinder: Der Abschied kommt – und niemand wird überrascht.'),
+    ('Eine Krümelspur zum Fenster', 'Ein paar Kekskrümel führen von der Wichteltür bis zum Fenster: Hier ist der Wichtel in der Nacht hinausgelaufen.'),
+    ('„Bin nächstes Jahr wieder da!“', 'Ein kleines Schild an der Tür. Es tröstet und macht schon Vorfreude auf den nächsten Advent.'),
+    ('Eine Urkunde für die Kinder', 'Der Wichtel ernennt die Kinder zu offiziellen Wichtel-Freunden – die Vorlage gibt es oben zum Ausdrucken.'),
+    ('Ein kleines Abschiedsgeschenk', 'Ein bemalter Stein mit Herz, ein Mini-Brief oder ein Bild vom Wichtel – etwas, das bleibt.'),
+    ('Ein letzter Brief an den Wichtel', 'Die Kinder schreiben oder malen am Abend vorher einen Brief. Am Morgen ist er weg – der Wichtel hat ihn mitgenommen.'),
+    ('Die Tür ist zu', 'Vor der Tür hängt ein Schild „Geschlossen“ oder „Psst! Hier schläft ein Wichtel“. Die Türschilder findest du bei den Vorlagen der Wichteltür.'),
+    ('Ein Erinnerungsfoto', 'Ein Foto der geschmückten Wichteltür – vielleicht der Anfang eines kleinen Wichtel-Albums, Jahr für Jahr.'),
+]
+ABSCHIED_FAQ = [
+    ('Wann verabschiedet sich der Wichtel?', 'Meistens an Heiligabend, nach dem letzten Brief. Manche Familien lassen ihn noch bis Silvester oder bis zum 6. Januar bleiben. Wichtig ist nur, dass der Abschied ein paar Tage vorher angekündigt wird.'),
+    ('Was schreibt man in einen Wichtel-Abschiedsbrief?', 'Ein Dank für die schöne Zeit, eine Erinnerung an etwas Lustiges aus dem Advent, ein Hinweis auf ein kleines Abschiedsgeschenk – und das Versprechen, im nächsten Jahr wiederzukommen.'),
+    ('Kommt der Wichtel nächstes Jahr wieder?', 'Das entscheidet ihr. Die meisten Wichtel kommen Ende November oder am 1. Dezember zurück – oft mit einem Begrüßungsbrief, der an das letzte Jahr erinnert.'),
+    ('Was tun, wenn das Kind den Wichtel vermisst?', 'Den Kummer ernst nehmen und vom Wiedersehen erzählen. Manche Wichtel schicken im Sommer eine Postkarte – das hilft beim Warten.'),
+]
+
+
+def abschied_page():
+    path = '/wichtel-abschied/'
+    ideen = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in ABSCHIED_IDEEN)
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in ABSCHIED_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in ABSCHIED_FAQ]}
+    druck = ''.join(druck_card(n, t, 679, f'Vorschau: {t}') for n, t in DRUCK_TUER if n in ('tuer-abschied', 'tuer-urkunde'))
+    body = f"""<article>
+<h1>Wichtel-Abschied: Abschiedsbrief, Ideen &amp; was nach Weihnachten mit der Wichteltür passiert</h1>
+<figure class="photo photo-ai onni-portrait">{onni_img('winkt', 'Onni, der Wichtel von WichtelLos, winkt zum Abschied', 220, '')}<figcaption>Onni winkt · KI-generiert</figcaption></figure>
+<p class="lead">Wenn Heiligabend kommt, packt der Wichtel seinen Koffer. Für viele Kinder ist das der traurigste Moment der Adventszeit. Hier findest du Onnis Abschiedsbrief zum Vorlesen und Ausdrucken, Ideen für den letzten Wichtel-Tag und Tipps, wenn beim Abschied Tränen fließen.</p>
+<p class="chips-line">Direkt zu: <a href="#wann">Wann geht der Wichtel?</a> · <a href="#brief">Abschiedsbrief</a> · <a href="#ideen">8 Ideen</a> · <a href="#traurig">Wenn das Kind traurig ist</a> · <a href="#danach">Nach Weihnachten</a> · <a href="#fragen">Fragen</a></p>
+
+<h2 id="wann">Wann geht der Wichtel?</h2>
+<p>Meistens an <b>Heiligabend</b>, nach dem letzten Brief. Manche Familien lassen ihn noch bis Silvester oder bis zum 6. Januar bleiben. Wichtig ist nur, dass der Abschied angekündigt wird – zum Beispiel ein paar Tage vorher mit einem Mini-Koffer vor der Tür. So kommt er nicht plötzlich, und die Kinder können sich noch verabschieden.</p>
+
+<h2 id="brief">Onnis Abschiedsbrief zum Vorlesen</h2>
+<blockquote class="letter">
+<p><b>Frohe Weihnachten!</b></p>
+<p>Heute ist Heiligabend – und für mich wird es Zeit, nach Hause zu ziehen. Ich hatte so eine schöne Zeit bei euch!</p>
+<p>Danke für eure Briefe, die Kekse und dass ihr meine Tür nie aufgemacht habt. Ich habe euch ein kleines Abschiedsgeschenk dagelassen.</p>
+<p>Nächstes Jahr komme ich wieder. Versprochen!</p>
+<p>Euer Onni</p>
+</blockquote>
+<p>Zum Ausdrucken gibt es den Brief als kleine Wichtelpost (4 pro Seite) – den Namen eures Wichtels tragt ihr selbst ein. Dazu passt die Wichtel-Urkunde für die Kinder:</p>
+<div class="ausmal-grid druck-grid">
+{druck}
+</div>
+<p class="hint">🌙 Onnis letzte Geschichte im Advent erscheint an Heiligabend im <a href="/onni-adventskalender/">Onni-Adventskalender</a>.</p>
+
+<h2 id="ideen">8 Ideen für den letzten Wichtel-Tag</h2>
+<ol>
+{ideen}
+</ol>
+
+<h2 id="traurig">Wenn das Kind traurig ist</h2>
+<ul>
+  <li><b>Ernst nehmen:</b> Traurig sein ist in Ordnung. Sätze wie „Ist doch nicht schlimm“ helfen selten – besser: „Du hast Onni richtig lieb gewonnen, oder?“</li>
+  <li><b>Vom Wiedersehen erzählen:</b> Der Wichtel kommt im nächsten Advent wieder. Ein Kalender, auf dem die Kinder die Monate abstreichen, macht das greifbar.</li>
+  <li><b>Etwas bleibt da:</b> Der Abschiedsbrief, die Urkunde oder ein Foto der Tür kommen in eine Erinnerungskiste.</li>
+  <li><b>Post im Sommer:</b> Manche Wichtel schicken mitten im Jahr eine Postkarte aus ihrem Zuhause – eine schöne Überraschung beim Warten.</li>
+</ul>
+
+<h2 id="danach">Was passiert nach Weihnachten mit der Wichteltür?</h2>
+<p>Dafür gibt es keine feste Regel – jede Familie macht es ein bisschen anders:</p>
+<ul>
+  <li><b>Abbauen und einpacken:</b> Tür, Möbel und Briefe kommen in eine „Wichtel-Kiste“ und warten dort auf den nächsten Advent.</li>
+  <li><b>Die Tür bleibt, der Wichtel schläft:</b> Ein Schild „Psst! Hier schläft ein Wichtel“ – und die Tür darf das ganze Jahr bleiben.</li>
+  <li><b>Neu bauen:</b> Im nächsten Jahr eine eigene Tür basteln – Anleitung: <a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a>.</li>
+</ul>
+<p>Alles über den Brauch, den Begrüßungsbrief, die Türschilder und 24 Streiche für den Advent: <a href="/wichteltuer/">Wichteltür</a>.</p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+
+<h2>Und für die Großen: Wichteln in der Familie</h2>
+<p>Ihr wollt selbst wichteln – zu Weihnachten, mit Kollegen oder im neuen Jahr? Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
+{CTA}
+</article>"""
+    page(path, 'Wichtel-Abschied: Abschiedsbrief, Ideen & Tipps für Eltern',
+         'Wenn der Wichtel an Heiligabend geht: Abschiedsbrief zum Vorlesen und Ausdrucken, 8 Ideen für den letzten Wichtel-Tag, Tipps, wenn Kinder traurig sind, und was mit der Wichteltür passiert.',
+         body, crumb='Wichtel-Abschied', playful=True, extra=ld(faq_ld))
+
+
+# /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
+# noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
+LINKS_AKTUELL = [
+    ('🌙', 'Onnis Adventskalender: 24 Türchen ab 1.12.', '/onni-adventskalender/'),
+    ('🏷️', 'Black Friday: Wichtelgeschenke im Angebot', '/black-friday-wichtelgeschenke/'),
+    ('😂', 'Lustige Wichtelgeschenke', '/lustige-wichtelgeschenke/'),
+    ('🔤', 'Wichteln mit Buchstaben', '/wichtelgeschenke-mit-buchstaben/'),
+    ('🗑️', 'Schrottwichteln: Regeln & Ideen', '/schrottwichteln/'),
+]
+LINKS_FEST = [
+    ('🎲', 'Wichteln auslosen – kostenlos', '/'),
+    ('💶', 'Wichtelgeschenke unter 10 €', '/wichtelgeschenke-unter-10-euro/'),
+    ('🎁', 'Geschenkfinder: über 100 Ideen', '/geschenkfinder/'),
+    ('💼', 'Wichteln im Büro', '/wichteln-im-buero/'),
+    ('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'),
+    ('☕', 'Unser Shop: Tassen, Pullis & mehr', '/wichtel-tassen/'),
+]
+
+
+def links_page():
+    btn = lambda i, t, h: f'<a class="lb-btn" href="{esc(h)}"><span class="lb-ico" aria-hidden="true">{i}</span><span class="lb-txt">{esc(t)}</span></a>'
+    akt = '\n'.join(btn(*x) for x in LINKS_AKTUELL)
+    fest = '\n'.join(btn(*x) for x in LINKS_FEST)
+    body = f"""<article class="links-seite">
+<div class="lb-kopf">
+{onni_img('winkt', 'Onni, der WichtelLos-Wichtel, winkt', 128, 'links-onni')}
+<div class="lb-blase">
+<h1>Hallo, ich bin Onni! 👋</h1>
+<p>Schön, dass du hier bist!</p>
+</div>
+</div>
+<h2>👉 Hier geht's zu …</h2>
+<div class="lb-liste">
+{akt}
+</div>
+<h2>Außerdem beliebt</h2>
+<div class="lb-liste lb-hell">
+{fest}
+</div>
+<p class="social">Folge uns: {social_links()}</p>
+</article>"""
+    page('/links/', 'WichtelLos – alle Links', 'Alle Links von WichtelLos: Geschenkideen aus den Videos, Wichteln auslosen, Wichteltür und Shop.',
+         body, noindex=True)
+
+
 def main():
     # Nur den Inhalt löschen, nicht den Ordner selbst: Läuft ein Testserver in website/, ist der Ordner gesperrt –
     # rmtree brach dann mittendrin ab und ein halb leerer Stand wurde gepusht (03.11.)
@@ -3440,6 +4067,16 @@ def main():
     tassen_page()
     advent_page()
     themen_pages()
+    lustig_page()
+    lastminute_page()
+    kollegen_page()
+    omaopa_page()
+    teens_page()
+    spiele_page()
+    erzieher_page()
+    julklapp_page()
+    abschied_page()
+    links_page()
     invite_page()
     share_page()
     legal_pages()

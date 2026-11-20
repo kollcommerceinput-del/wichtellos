@@ -40,6 +40,19 @@ const PINS = [
   ['kuscheldecke', '../../../kuscheldecke/onni-kuscheldecke-2k.jpg', '50% 56%', 'Kuschel&shy;decke verschenken', '13 Ideen für gemütliche Winterabende', 'Alle Ideen ansehen →'],
   ['selber-bauen', '../../../selberbau/tuer-selbstgebaut-flow-2k.jpg', '50% 55%', 'Wichteltür selber bauen', 'Werkzeug, Material &amp; Anleitung', 'Zur Anleitung →'],
   ['zubehoer', 'tuer.jpg', '40% 50%', 'Wichtel-Zubehör', '46 Ideen: Möbel, Licht, Briefkasten &amp; mehr', 'Alle Ideen ansehen →'],
+  // 19.11. /lustige-wichtelgeschenke/ (Toni: 3 Pins, je einer pro Tag)
+  ['lustig', 'schrott.jpg', '50% 45%', 'Lustige Wichtel&shy;geschenke', '30 Ideen zum Lachen', 'Alle Ideen ansehen →'],
+  ['lustig-buero', 'feier.jpg', '50% 45%', 'Lustige Wichtel&shy;geschenke fürs Büro', 'Bullshit-Buzzer, Mini-Boxsack &amp; Co.', 'Ideen fürs Team →'],
+  ['lustig-10', 'geschenk.jpg', '50% -420px', 'Lustige Wichtel&shy;geschenke bis 10&nbsp;€', 'Furzkissen, Glückskekse &amp; Co.', 'Alle Ideen ansehen →'],
+  // 20.11. Pins für die neuen Seiten (Toni: Tabelle „ja“), je einer pro Tag ab 23.11. – ohne Ideen-Anzahl (Toni: Zahl veraltet, wirkt beliebig)
+  ['kollegen', 'geschenke/kakao.jpg', '50% 50%', 'Wichtel&shy;geschenke für Kollegen', 'Ideen für Schreibtisch &amp; Kaffeepause', 'Alle Ideen ansehen →'],
+  ['julklapp', 'tuer.jpg', '60% 50%', 'Julklapp: Was&nbsp;ist&nbsp;das?', 'Brauch, Regeln &amp; Ablauf', 'Mehr erfahren →'],
+  ['spiele', 'wuerfel.jpg', '50% -400px', 'Gesellschafts&shy;spiele verschenken', 'Top 10 für den Spieleabend', 'Zur Top 10 →'],
+  ['oma-opa', 'geschenke/pflanze.jpg', '50% 50%', 'Geschenke für Oma&nbsp;&amp;&nbsp;Opa', 'Gemütlich, Garten &amp; Erinnerungen', 'Alle Ideen ansehen →'],
+  ['teenager', 'onni-handy.jpg', '50% 45%', 'Wichtel&shy;geschenke für Teenager', 'Technik, Zimmer, Spiele &amp; Style', 'Alle Ideen ansehen →'],
+  ['erzieherin', 'basteln.jpg', '50% 40%', 'Geschenke für Erzieherinnen', 'Kleine Dankeschöns mit Herz', 'Alle Ideen ansehen →'],
+  ['last-minute', 'onni-handy-ruecken.jpg', '50% 45%', 'Last-Minute-Wichtel&shy;geschenke', 'Morgen schon da oder zum Ausdrucken', 'Alle Ideen ansehen →'],
+  ['abschied', 'umschlag.jpg', '50% -300px', 'Wichtel-Abschied', 'Abschiedsbrief &amp; Ideen für Heiligabend', 'Mehr erfahren →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
