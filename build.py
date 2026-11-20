@@ -110,7 +110,7 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/wichtel-abschied/">Wichtel-Abschied</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <!--SOCIAL--></p>
@@ -179,7 +179,7 @@ SPIELE_HINWEIS = ('<aside class="praemie spiele-hinweis"><p><b>🎲 Auf der Such
                   '<p><a class="btn-secondary" href="/gesellschaftsspiele-verschenken/">Zu den Top 10 →</a></p></aside>\n')
 SPIELE_HINWEIS_SEITEN = {'/wichtelgeschenke-fuer-kinder/', '/nikolaus-geschenke/', '/adventskalender-befuellen/', '/geschenke-fuer-oma-und-opa/',
                          '/wichtelgeschenke-fuer-teenager/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/weihnachtsfeier-ideen/'}
-BF_OHNE = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
+BF_OHNE = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
 
 # Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
 POSES = {'winkt': (132, 152), 'geschenk': (120, 152), 'lupe': (132, 152), 'wuerfel': (132, 152), 'schlaeft': (152, 162)}
@@ -448,7 +448,7 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*', max_eur=None):
 
 # „Direkt shoppen“ (Toni 17.11.: „man muss zu viel klicken“): Knopf im Kopf öffnet Feld mit Direktsprüngen –
 # Amazon-Suche mit Partner-ID (Werbung) + eigene Spreadshop-Produkte. Auf Kinderseiten (KINDER_OHNE_AMAZON) nur der eigene Shop.
-KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/'}
+KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/'}
 _SHOP_EIGEN = [  # Spreadshop-Neuheiten 17.11. (Produkttyp 4914 Weihnachtspulli, 5058 Schürze, 5060 Kissen) – Motiv mit Wunschnamen
     ('🎄', 'Weihnachtspulli mit Namen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+wunschname+weiss-A3286f96983df2110?sellable=rnth9dlkuya8-4914'),
     ('🍪', 'Weihnachts-Schürze', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5058'),
@@ -501,7 +501,7 @@ MENUE = [
     ('dd-advent', [
         [('🚪', 'Wichteltür & 24 Streiche', '/wichteltuer/'), ('🔨', 'Wichteltür selber bauen', '/wichteltuer-selber-bauen/'),
          ('✨', 'Wichtel-Zubehör', '/wichtel-zubehoer/'), ('🌙', 'Onnis Adventskalender', '/onni-adventskalender/'),
-         ('🖍️', 'Wichtel-Ausmalbilder', '/wichtel-ausmalbilder/')],
+         ('🖍️', 'Wichtel-Ausmalbilder', '/wichtel-ausmalbilder/'), ('👋', 'Wichtel-Abschied', '/wichtel-abschied/')],
         [('📅', 'Adventskalender-Ideen', '/adventskalender-ideen/'), ('🎒', 'Adventskalender befüllen', '/adventskalender-befuellen/'),
          ('🥾', 'Nikolaus-Geschenke', '/nikolaus-geschenke/'), ('🍪', 'Plätzchen backen mit Kindern', '/plaetzchen-backen-mit-kindern/')]]),
 ]
@@ -2582,6 +2582,7 @@ def onni_kalender_page():
   <li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> – Möbel, Lichterkette und Kleinigkeiten für seine Tür</li>
   <li><a href="/wichtel-ausmalbilder/">Ausmalbilder und Sticker mit Onni</a> – zum Ausmalen während der Folge</li>
   <li><a href="/wichteltuer/#wichtelname">Wichtelname-Generator</a> – falls euer eigener Wichtel einen Namen bekommen soll</li>
+  <li><a href="/wichtel-abschied/">Wichtel-Abschied</a> – Abschiedsbrief und Ideen, wenn Onni an Heiligabend nach Hause zieht</li>
 </ul>
 <div class="briefe-box briefe-onni">
   <a href="/wichteltuer/#briefe"><img src="/fotos/onni/onni-briefe-24-480.webp" width="480" height="679" alt="Titelseite „24 Briefe von Onni“ mit dem Wichtel Onni, der ein Geschenk hochhält" loading="lazy" decoding="async"></a>
@@ -2671,7 +2672,7 @@ def door_page():
 <p>Zum Ausmalen gibt es außerdem <a href="/wichtel-ausmalbilder/">6 Wichtel-Ausmalbilder</a> – eines davon mit Onni an der Wichteltür.</p>
 
 <h2 id="streiche">24 Wichtel-Streiche: der Plan für den Advent</h2>
-<p>Für jeden Tag eine Idee – vom Einzug am 1. Dezember bis zum Abschied an Heiligabend. Die meisten dauern abends nur 5 Minuten.</p>
+<p>Für jeden Tag eine Idee – vom Einzug am 1. Dezember bis zum <a href="/wichtel-abschied/">Abschied an Heiligabend</a>. Die meisten dauern abends nur 5 Minuten.</p>
 <p><button type="button" class="btn-secondary" data-print>🖨️ Plan drucken</button></p>
 <details class="plan-details print-open">
 <summary>📋 Alle 24 Streiche anzeigen</summary>
@@ -3441,7 +3442,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -3887,6 +3888,90 @@ def julklapp_page():
          body, crumb='Julklapp', playful=True, extra=ld(faq_ld))
 
 
+# /wichtel-abschied/ (Toni 20.11.: „mach mal“, Plan 19.11. „Onnis Abschied“) – Onni-Seite: keine Amazon-/BF-Werbung (KINDER_OHNE_AMAZON).
+# Erzählt nichts aus Folge 24 (noch nicht geschrieben). Video „Onni sagt Tschüss“ erst nach Abnahme von Text + Bildern einbauen.
+ABSCHIED_IDEEN = [
+    ('Der Koffer steht bereit', 'Zwei, drei Tage vorher steht ein Mini-Koffer vor der Tür. So wissen die Kinder: Der Abschied kommt – und niemand wird überrascht.'),
+    ('Eine Krümelspur zum Fenster', 'Ein paar Kekskrümel führen von der Wichteltür bis zum Fenster: Hier ist der Wichtel in der Nacht hinausgelaufen.'),
+    ('„Bin nächstes Jahr wieder da!“', 'Ein kleines Schild an der Tür. Es tröstet und macht schon Vorfreude auf den nächsten Advent.'),
+    ('Eine Urkunde für die Kinder', 'Der Wichtel ernennt die Kinder zu offiziellen Wichtel-Freunden – die Vorlage gibt es oben zum Ausdrucken.'),
+    ('Ein kleines Abschiedsgeschenk', 'Ein bemalter Stein mit Herz, ein Mini-Brief oder ein Bild vom Wichtel – etwas, das bleibt.'),
+    ('Ein letzter Brief an den Wichtel', 'Die Kinder schreiben oder malen am Abend vorher einen Brief. Am Morgen ist er weg – der Wichtel hat ihn mitgenommen.'),
+    ('Die Tür ist zu', 'Vor der Tür hängt ein Schild „Geschlossen“ oder „Psst! Hier schläft ein Wichtel“. Die Türschilder findest du bei den Vorlagen der Wichteltür.'),
+    ('Ein Erinnerungsfoto', 'Ein Foto der geschmückten Wichteltür – vielleicht der Anfang eines kleinen Wichtel-Albums, Jahr für Jahr.'),
+]
+ABSCHIED_FAQ = [
+    ('Wann verabschiedet sich der Wichtel?', 'Meistens an Heiligabend, nach dem letzten Brief. Manche Familien lassen ihn noch bis Silvester oder bis zum 6. Januar bleiben. Wichtig ist nur, dass der Abschied ein paar Tage vorher angekündigt wird.'),
+    ('Was schreibt man in einen Wichtel-Abschiedsbrief?', 'Ein Dank für die schöne Zeit, eine Erinnerung an etwas Lustiges aus dem Advent, ein Hinweis auf ein kleines Abschiedsgeschenk – und das Versprechen, im nächsten Jahr wiederzukommen.'),
+    ('Kommt der Wichtel nächstes Jahr wieder?', 'Das entscheidet ihr. Die meisten Wichtel kommen Ende November oder am 1. Dezember zurück – oft mit einem Begrüßungsbrief, der an das letzte Jahr erinnert.'),
+    ('Was tun, wenn das Kind den Wichtel vermisst?', 'Den Kummer ernst nehmen und vom Wiedersehen erzählen. Manche Wichtel schicken im Sommer eine Postkarte – das hilft beim Warten.'),
+]
+
+
+def abschied_page():
+    path = '/wichtel-abschied/'
+    ideen = '\n'.join(f'  <li><b>{esc(t)}:</b> {esc(x)}</li>' for t, x in ABSCHIED_IDEEN)
+    faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in ABSCHIED_FAQ)
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in ABSCHIED_FAQ]}
+    druck = ''.join(druck_card(n, t, 679, f'Vorschau: {t}') for n, t in DRUCK_TUER if n in ('tuer-abschied', 'tuer-urkunde'))
+    body = f"""<article>
+<h1>Wichtel-Abschied: Abschiedsbrief, Ideen &amp; was nach Weihnachten mit der Wichteltür passiert</h1>
+<figure class="photo photo-ai onni-portrait">{onni_img('winkt', 'Onni, der Wichtel von WichtelLos, winkt zum Abschied', 220, '')}<figcaption>Onni winkt · KI-generiert</figcaption></figure>
+<p class="lead">Wenn Heiligabend kommt, packt der Wichtel seinen Koffer. Für viele Kinder ist das der traurigste Moment der Adventszeit. Hier findest du Onnis Abschiedsbrief zum Vorlesen und Ausdrucken, Ideen für den letzten Wichtel-Tag und Tipps, wenn beim Abschied Tränen fließen.</p>
+<p class="chips-line">Direkt zu: <a href="#wann">Wann geht der Wichtel?</a> · <a href="#brief">Abschiedsbrief</a> · <a href="#ideen">8 Ideen</a> · <a href="#traurig">Wenn das Kind traurig ist</a> · <a href="#danach">Nach Weihnachten</a> · <a href="#fragen">Fragen</a></p>
+
+<h2 id="wann">Wann geht der Wichtel?</h2>
+<p>Meistens an <b>Heiligabend</b>, nach dem letzten Brief. Manche Familien lassen ihn noch bis Silvester oder bis zum 6. Januar bleiben. Wichtig ist nur, dass der Abschied angekündigt wird – zum Beispiel ein paar Tage vorher mit einem Mini-Koffer vor der Tür. So kommt er nicht plötzlich, und die Kinder können sich noch verabschieden.</p>
+
+<h2 id="brief">Onnis Abschiedsbrief zum Vorlesen</h2>
+<blockquote class="letter">
+<p><b>Frohe Weihnachten!</b></p>
+<p>Heute ist Heiligabend – und für mich wird es Zeit, nach Hause zu ziehen. Ich hatte so eine schöne Zeit bei euch!</p>
+<p>Danke für eure Briefe, die Kekse und dass ihr meine Tür nie aufgemacht habt. Ich habe euch ein kleines Abschiedsgeschenk dagelassen.</p>
+<p>Nächstes Jahr komme ich wieder. Versprochen!</p>
+<p>Euer Onni</p>
+</blockquote>
+<p>Zum Ausdrucken gibt es den Brief als kleine Wichtelpost (4 pro Seite) – den Namen eures Wichtels tragt ihr selbst ein. Dazu passt die Wichtel-Urkunde für die Kinder:</p>
+<div class="ausmal-grid druck-grid">
+{druck}
+</div>
+<p class="hint">🌙 Onnis letzte Geschichte im Advent erscheint an Heiligabend im <a href="/onni-adventskalender/">Onni-Adventskalender</a>.</p>
+
+<h2 id="ideen">8 Ideen für den letzten Wichtel-Tag</h2>
+<ol>
+{ideen}
+</ol>
+
+<h2 id="traurig">Wenn das Kind traurig ist</h2>
+<ul>
+  <li><b>Ernst nehmen:</b> Traurig sein ist in Ordnung. Sätze wie „Ist doch nicht schlimm“ helfen selten – besser: „Du hast Onni richtig lieb gewonnen, oder?“</li>
+  <li><b>Vom Wiedersehen erzählen:</b> Der Wichtel kommt im nächsten Advent wieder. Ein Kalender, auf dem die Kinder die Monate abstreichen, macht das greifbar.</li>
+  <li><b>Etwas bleibt da:</b> Der Abschiedsbrief, die Urkunde oder ein Foto der Tür kommen in eine Erinnerungskiste.</li>
+  <li><b>Post im Sommer:</b> Manche Wichtel schicken mitten im Jahr eine Postkarte aus ihrem Zuhause – eine schöne Überraschung beim Warten.</li>
+</ul>
+
+<h2 id="danach">Was passiert nach Weihnachten mit der Wichteltür?</h2>
+<p>Dafür gibt es keine feste Regel – jede Familie macht es ein bisschen anders:</p>
+<ul>
+  <li><b>Abbauen und einpacken:</b> Tür, Möbel und Briefe kommen in eine „Wichtel-Kiste“ und warten dort auf den nächsten Advent.</li>
+  <li><b>Die Tür bleibt, der Wichtel schläft:</b> Ein Schild „Psst! Hier schläft ein Wichtel“ – und die Tür darf das ganze Jahr bleiben.</li>
+  <li><b>Neu bauen:</b> Im nächsten Jahr eine eigene Tür basteln – Anleitung: <a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a>.</li>
+</ul>
+<p>Alles über den Brauch, den Begrüßungsbrief, die Türschilder und 24 Streiche für den Advent: <a href="/wichteltuer/">Wichteltür</a>.</p>
+
+<h2 id="fragen">Häufige Fragen</h2>
+{faq}
+
+<h2>Und für die Großen: Wichteln in der Familie</h2>
+<p>Ihr wollt selbst wichteln – zu Weihnachten, mit Kollegen oder im neuen Jahr? Namen eintragen, auslosen, jeder bekommt seinen geheimen Link – kostenlos und ohne Anmeldung.</p>
+{CTA}
+</article>"""
+    page(path, 'Wichtel-Abschied: Abschiedsbrief, Ideen & Tipps für Eltern',
+         'Wenn der Wichtel an Heiligabend geht: Abschiedsbrief zum Vorlesen und Ausdrucken, 8 Ideen für den letzten Wichtel-Tag, Tipps, wenn Kinder traurig sind, und was mit der Wichteltür passiert.',
+         body, crumb='Wichtel-Abschied', playful=True, extra=ld(faq_ld))
+
+
 # /links/ = „Link in Bio“ für Instagram, TikTok, YouTube, Pinterest (Toni 18.11.: Leute von Social Media zu Kaufseiten).
 # noindex, nicht in Sitemap/Fuß. Oben LINKS_AKTUELL = Seiten zu den aktuellen Videos (bei neuen Reels hier ergänzen).
 LINKS_AKTUELL = [
@@ -3990,6 +4075,7 @@ def main():
     spiele_page()
     erzieher_page()
     julklapp_page()
+    abschied_page()
     links_page()
     invite_page()
     share_page()

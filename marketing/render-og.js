@@ -58,6 +58,7 @@ const PAGES = [
   ['gesellschaftsspiele-verschenken', 'onni/sticker-jubel.png', 'Gesellschaftsspiele verschenken', 'Top 10 für den Spieleabend + Ideen nach Alter'],
   ['geschenke-fuer-erzieherin', 'onni/sticker-herz.png', 'Geschenke für Erzieherinnen', '19 Ideen für Weihnachten & Abschied'],
   ['julklapp', 'onni/sticker-psst.png', 'Julklapp', 'Brauch, Regeln & Ablauf – online auslosen'],
+  ['wichtel-abschied', 'onni/sticker-winkt.png', 'Wichtel-Abschied', 'Abschiedsbrief, Ideen & Tipps für Eltern'],
 ];
 
 const html = ([, pose, title, sub]) => `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
