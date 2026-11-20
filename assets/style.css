@@ -1075,3 +1075,4 @@ table.vergleich { border-collapse: collapse; min-width: 560px; width: 100%; back
 table.vergleich th, table.vergleich td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
 table.vergleich thead th { background: var(--primary); color: #fff; }
 table.vergleich tbody th { font-weight: 700; }
+.ms-kachel { min-width: 0; overflow-wrap: anywhere; }

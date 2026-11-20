@@ -60,6 +60,9 @@ WISSEN = [
 <p>Klassisches Wichteln ist der Anfang. Beliebt sind auch <a href="/schrottwichteln/">Schrottwichteln</a> mit kuriosen Fundstücken, <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>, bei dem Geschenke den Besitzer wechseln, und Fern-Wichteln <a href="/wichteln-per-post/">per Post</a>. Alle Spielarten im Überblick: <a href="/wichteln-varianten/">12 Wichtel-Varianten</a>.</p>
 <p>Woher der Brauch kommt, steht unter <a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a> – und was ein Wichtel eigentlich ist, unter <a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></p>''',
         faq=[
+            # 20.11.: Google „was ist wichteln“ (Platz 86), „wichteln englisch“ (43) → direkte Antworten
+            ('Was ist Wichteln?', 'Wichteln ist ein Brauch in der Adventszeit, bei dem sich eine Gruppe gegenseitig heimlich beschenkt: Jeder zieht per Los eine Person und besorgt für sie ein Geschenk im vereinbarten Budget. Wer wen beschenkt, bleibt bis zur Bescherung geheim – wie bei einem Wichtel, der Gutes tut, ohne gesehen zu werden.'),
+            ('Wie heißt Wichteln auf Englisch?', 'Auf Englisch heißt Wichteln „Secret Santa“, also „geheimer Weihnachtsmann“. Im Spanischen sagt man „Amigo invisible“, in Österreich und Bayern oft „Engerl-Bengerl“, in Norddeutschland und Skandinavien „Julklapp“.'),
             ('Wie funktioniert Wichteln kurz erklärt?', 'Jeder in der Gruppe zieht heimlich einen Namen und schenkt dieser Person etwas im vereinbarten Budget. Bei der Bescherung packen alle aus und raten, wer wessen Wichtel war.'),
             ('Ab wie vielen Personen kann man wichteln?', 'Ab 3 Personen. Bei 2 Personen weiß jeder sofort, wer ihn beschenkt – dafür gibt es eigene Ideen unter „Wichteln zu dritt und zu zweit“.'),
             ('Was macht man, wenn man sich selbst zieht?', 'Mit Zetteln wird neu gezogen. Beim Online-Auslosen kann das nicht passieren, weil niemand sich selbst zugeteilt wird.'),
@@ -268,5 +271,57 @@ WISSEN = [
             ('Kann man ohne Treffen wichteln?', 'Ja. Ausgelost wird online, verschickt per Post und ausgepackt im Videocall – auch im Homeoffice-Team.'),
         ],
         og=('onni/sticker-psst.png', 'Wichteln per Post', 'Fern-Wichteln ohne Treffen – so geht’s'),
+    ),
+    # 20.11. (Toni: „Was gesucht wird, müssen wir abdecken“ + ganzjährig): Google „geburtstagswichteln“ Platz 56, keine Seite
+    dict(
+        path='/geburtstagswichteln/',
+        title='Geburtstagswichteln: So funktioniert es im Team & Verein',
+        desc='Geburtstagswichteln: Jeder bekommt per Los einen Geburtstag, um den er sich das ganze Jahr kümmert – Ablauf, Budget, Regeln und Ideen. Kostenlos auslosen.',
+        crumb='Geburtstagswichteln', mascot='geschenk',
+        photo=('wichtel3d-geschenk-tisch', 'Plüsch-Wichtel Onni winkt neben einem kleinen Geschenk mit roter Schleife'),
+        h1='Geburtstagswichteln: Geburtstage im Team fair verteilen',
+        lead='Im Büro wird für jeden Geburtstag Geld gesammelt, eine Karte geht herum – und am Ende organisieren immer dieselben. Beim Geburtstagswichteln ist das anders: Jeder bekommt per Los einen Kollegen oder eine Kollegin und kümmert sich das ganze Jahr um genau diesen einen Geburtstag. So wird niemand vergessen, und die Arbeit ist gerecht verteilt.',
+        schritte=[
+            ('Gruppe festlegen', 'Wer macht mit? Das Team, die Abteilung, der Verein oder der Freundeskreis. Wer nicht möchte, muss nicht.'),
+            ('Geburtstage sammeln', 'Jeder trägt seinen Geburtstag in eine gemeinsame Liste ein – nur Tag und Monat, das Jahr bleibt privat.'),
+            ('Budget vereinbaren', 'Ein fester Betrag für alle, zum Beispiel 10 oder 15 Euro. So ist niemand enttäuscht und niemand überfordert.'),
+            ('Auslosen', 'Jede Person zieht genau einen Namen, aber nie den eigenen. Online geht das in einer Minute: Namen eintragen, auslosen, jeder bekommt seinen geheimen Link. Den Geburtstag könnt ihr beim Auslosen als 💡 Tipp zur Person eintragen.'),
+            ('Das ganze Jahr dranbleiben', 'Jeder trägt sich den Geburtstag seines Wichtelkindes in den Kalender ein und besorgt rechtzeitig ein kleines Geschenk oder eine Karte.'),
+            ('Am Geburtstag überraschen', 'Geschenk morgens auf den Schreibtisch legen oder in der Teamrunde überreichen – ob mit oder ohne Absender, entscheidet die Gruppe.'),
+        ],
+        body='''<!--SCHRITTE-->
+<!--CTA-->
+
+<h2>Warum Geburtstagswichteln?</h2>
+<ul>
+  <li><b>Niemand wird vergessen:</b> Für jeden Geburtstag ist genau eine Person zuständig.</li>
+  <li><b>Gerecht verteilt:</b> Nicht immer dieselben sammeln Geld, kaufen ein und lassen die Karte herumgehen.</li>
+  <li><b>Persönlicher:</b> Wer nur an ein Geschenk im Jahr denken muss, sucht es mit mehr Liebe aus.</li>
+  <li><b>Überschaubare Kosten:</b> Jeder zahlt einmal im Jahr das vereinbarte Budget – statt bei jedem Geburtstag ein paar Euro.</li>
+</ul>
+
+<h2>Regeln, die sich bewährt haben</h2>
+<ul>
+  <li><b>Neueinsteiger einbinden:</b> Wer im Laufe des Jahres dazukommt, wird beim nächsten Auslosen ergänzt. Bis dahin übernimmt eine Person zusätzlich oder es gibt eine Karte vom Team.</li>
+  <li><b>Wer geht, gibt Bescheid:</b> Verlässt jemand das Team, übernimmt sein Wichtelkind am besten der Organisator.</li>
+  <li><b>Urlaub mitdenken:</b> Fällt der Geburtstag in den Urlaub oder aufs Wochenende, wird am Tag davor oder danach gefeiert.</li>
+  <li><b>Einmal im Jahr neu losen:</b> Zum Beispiel jeden Januar – so bekommt jeder wieder eine neue Person.</li>
+  <li><b>Wünsche erlaubt:</b> Ein kurzer Tipp wie „mag Tee, keine Süßigkeiten“ hilft. Mit dem <a href="/wunschzettel/">Wunschzettel als Link</a> kann jeder selbst Wünsche aufschreiben.</li>
+</ul>
+
+<h2>Variante: Wichteln auf der Geburtstagsparty</h2>
+<p>Manche nennen auch ein Partyspiel „Geburtstagswichteln“: Auf einer Feier bringt jeder Gast ein kleines verpacktes Geschenk mit, und alle wichteln untereinander – zum Beispiel mit Würfeln. Wie das geht, steht unter <a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a>. Lustig wird es mit einem Thema, etwa <a href="/schrottwichteln/">Schrottwichteln</a>.</p>
+
+<h2>Geschenkideen fürs Geburtstagswichteln</h2>
+<p>Im Team passen kleine Dinge, die fast jedem gefallen: gute Schokolade, Tee oder Kaffee, eine Pflanze für den Schreibtisch, eine Tasse mit Spruch. Ideen nach Budget: <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · <a href="/wichtelgeschenke-fuer-kollegen/">Geschenke für Kollegen</a>. Für jeden Anlass und jedes Hobby hilft der <a href="/geschenke-generator/">Geschenke-Generator</a>.</p>''',
+        faq=[
+            ('Was ist Geburtstagswichteln?', 'Beim Geburtstagswichteln bekommt jede Person in einer Gruppe per Los einen anderen Teilnehmer zugeteilt. Um dessen Geburtstag kümmert sie sich das ganze Jahr: Sie denkt an den Tag und besorgt ein kleines Geschenk im vereinbarten Budget.'),
+            ('Wie funktioniert Geburtstagswichteln im Büro?', 'Geburtstage sammeln, ein Budget festlegen und auslosen, wer für wen zuständig ist. Jeder trägt sich den Geburtstag seines Wichtelkindes in den Kalender ein und überrascht es am Tag selbst.'),
+            ('Wie viel gibt man beim Geburtstagswichteln aus?', 'Im Büro sind 10 bis 15 Euro üblich. Wichtig ist, dass alle denselben Betrag kennen.'),
+            ('Wann lost man beim Geburtstagswichteln aus?', 'Am besten zu Jahresbeginn, zum Beispiel im Januar. Dann gilt die Zuteilung für ein ganzes Jahr, und im nächsten Januar wird neu gelost.'),
+            ('Was passiert, wenn jemand neu ins Team kommt?', 'Bis zum nächsten Auslosen übernimmt eine Person zusätzlich den neuen Geburtstag, oder das Team schenkt gemeinsam eine Karte. Beim nächsten Auslosen ist die neue Person ganz normal dabei.'),
+            ('Kann man Geburtstagswichteln online auslosen?', 'Ja. Bei WichtelLos tragt ihr alle Namen ein, und jeder bekommt einen geheimen Link mit seinem Wichtelkind – kostenlos und ohne Anmeldung. Den Geburtstag könnt ihr als Tipp zur Person dazuschreiben.'),
+        ],
+        og=('onni/sticker-geschenk.png', 'Geburtstagswichteln', 'Geburtstage im Team fair verteilen'),
     ),
 ]

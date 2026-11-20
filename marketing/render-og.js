@@ -31,6 +31,7 @@ const PAGES = [
   ['wie-funktioniert-wichteln', 'onni/sticker-winkt.png', 'Wie funktioniert Wichteln?', 'Regeln & Anleitung in 6 Schritten'],
   ['was-ist-ein-wichtel', 'onni/sticker-lupe.png', 'Was ist ein Wichtel?', 'Aussehen, Herkunft & Bedeutung'],
   ['wichteln-varianten', 'onni/sticker-jubel.png', 'Wichteln-Varianten', '12 Spielarten für mehr Spaß'],
+  ['geburtstagswichteln', 'onni/sticker-geschenk.png', 'Geburtstagswichteln', 'Geburtstage im Team fair verteilen'],
   ['wichteln-zu-dritt', 'onni/sticker-geschenk.png', 'Wichteln zu dritt', 'Oder zu zweit – so bleibt es spannend'],
   ['wichteln-per-post', 'onni/sticker-psst.png', 'Wichteln per Post', 'Fern-Wichteln ohne Treffen – so geht’s'],
   ['wichteltuer', 'wichtel-geschenk.svg', 'Wichteltür', 'Ideen, 24 Streiche & Zubehör für den Advent'],
