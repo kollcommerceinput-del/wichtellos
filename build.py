@@ -935,6 +935,8 @@ BUCHSTABEN_FAQ = [
     ('Was ist Buchstaben-Wichteln?', 'Eine Wichtel-Variante mit Zusatzregel: Das Geschenk muss mit einem bestimmten Buchstaben anfangen – meist mit dem Anfangsbuchstaben des Vornamens der beschenkten Person, oder jeder bekommt einen Buchstaben ausgelost. Wer Anna zieht, sucht also etwas mit A.'),
     ('Was schenkt man mit H für 5 Euro?', 'Zum Beispiel Handcreme, Haargummis aus Samt oder ein kleines Glas Honig. Etwas mehr Budget? Dann Handwärmer oder ein Häkelset für Anfänger.'),
     ('Was schenkt man mit M für 5 Euro?', 'Marmelade, Magnete mit Spruch oder ein kleines Malheft. Mit 10 Euro passen auch eine Mini-Pflanze oder ein Malbuch für Erwachsene.'),
+    ('Was schenkt man mit H für 15 Euro?', 'Ein Häkelset für Anfänger, dazu passt ein Glas Honig aus der Region. Auch Handwärmer mit Handcreme ergeben zusammen ein schönes H-Päckchen.'),
+    ('Was schenkt man mit S für 5 Euro?', 'Socken, Seifenblasen oder Schokolade – S ist einer der einfachsten Buchstaben. Mit 10 bis 15 Euro passen auch eine Sukkulente oder eine Schlafmaske.'),
     ('Welche Buchstaben sind schwierig?', 'Q, X und Y. Hier helfen Quizspiel oder Quittengelee, X-Mas- und XXL-Ideen sowie Yoga-Tee oder Yo-Yo. Viele Gruppen lassen schwierige Buchstaben auch einfach weg.'),
     ('Darf man beim Buchstaben-Wichteln ein Wortspiel nutzen?', 'Ja, das macht oft den meisten Spaß: „Kuschelsocken“ statt „Socken“ für K oder „XXL-Tasse“ für X. Hauptsache, die Gruppe hat vorher abgesprochen, dass das zählt.'),
     ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
@@ -956,6 +958,13 @@ def buchstaben_page():
     faq = '\n'.join(f'<h3>{esc(q)}</h3>\n<p>{esc(a)}</p>' for q, a in BUCHSTABEN_FAQ)
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in BUCHSTABEN_FAQ]}
+    # 20.11.: Google sucht „wichtelgeschenk mit h für 5 euro“ (41×), „mit m 5 euro“, „mit h für 15 euro“ → Übersicht je Budget
+    budget_teile = []
+    for eur in (5, 10, 15):
+        zeilen = '\n'.join(f'  <li><a href="#buchstabe-{L.lower()}"><b>{L}</b></a>: {esc(", ".join(nm for nm, b in ideen if b == eur))}</li>'
+                           for L, ideen in BUCHSTABEN.items() if any(b == eur for _, b in ideen))
+        budget_teile.append(f'<h3 id="budget-{eur}">Buchstaben-Wichteln für {eur} Euro</h3>\n<ul class="buchstaben-budget">\n{zeilen}\n</ul>')
+    budget_html = '\n'.join(budget_teile)
     buchst = ''.join(BUCHSTABEN)
     body = f'''<article>
 <h1>Wichtelgeschenke mit Buchstaben: {n} Ideen von A bis Z</h1>
@@ -979,6 +988,10 @@ def buchstaben_page():
   <li><b>Bei der Bescherung</b> darf jeder raten, warum das Geschenk zum Buchstaben passt.</li>
 </ol>
 {CTA}
+<h2 id="nach-budget">Nach Budget: von A bis Z für 5, 10 und 15 Euro</h2>
+<p>Ihr habt ein festes Budget? Hier stehen alle Ideen nach Preis sortiert – Buchstabe antippen, dann kommst du zu den Karten mit Link.</p>
+<p class="chips"><a class="chip" href="#budget-5">5 Euro</a> <a class="chip" href="#budget-10">10 Euro</a> <a class="chip" href="#budget-15">15 Euro</a></p>
+{budget_html}
 {chr(10).join(teile)}
 <p>Mehr Ideen nach Budget: <a href="/wichtelgeschenke-unter-5-euro/">unter 5 Euro</a> · <a href="/wichtelgeschenke-unter-10-euro/">unter 10 Euro</a> · <a href="/wichtelgeschenke-unter-15-euro/">unter 15 Euro</a> · weitere Spielarten unter <a href="/wichteln-varianten/">Wichteln-Varianten</a>.</p>
 <h2 id="fragen">Häufige Fragen</h2>
