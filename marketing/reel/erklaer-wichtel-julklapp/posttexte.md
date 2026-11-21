@@ -33,6 +33,6 @@ Tags: wichteln, julklapp, wichtel, woher kommt wichteln, wichteln geschichte, ni
 ## Facebook (Video-Beitrag)
 Woher kommt eigentlich das Wichteln? 🎁
 Vom „Wicht“ über die Heinzelmännchen bis zum schwedischen Julklapp, der als Scherz begann – die ganze Geschichte in 3 Minuten.
-Wusstet ihr, dass beim Wichteln mit Zetteln in 63 % der Fälle jemand sich selbst zieht? 😄
+Wusstet ihr: Wer mit Zetteln wichtelt, bei dem zieht sich ab fünf Leuten in rund 63 % der Fälle mindestens einer selbst? 😄
 👉 Kostenlos auslosen: https://wichtellos.de/
 #wichteln #julklapp #weihnachten
