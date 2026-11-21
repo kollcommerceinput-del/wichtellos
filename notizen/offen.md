@@ -272,3 +272,17 @@ Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md
 - Ko-fi: Video-Beitrag (YouTube eingebettet) https://ko-fi.com/post/Neu-Woher-kommt-das-Wichteln-Wichtel-Julklapp-I4K82B2IHK
 - Instagram/TikTok: nicht das lange 16:9-Video – dafür baut Video-Bauen neue Hochformat-Shorts (Tonis Aufteilung).
 - „ein“ statt „eine“ bei 1:49 bleibt drin (Toni: frei).
+
+### Erklär-Shorts Hochformat (von Video-Bauen) gepostet (21.11. abends, PC, Toni „fang an … egal wo“, „tik tok auch“)
+Dateien: G:\Video bauen Projekte\Erklär-Shorts Hochformat\<Short …>\ausgabe\*(Hochformat).mp4
+| Short | YouTube (öffentlich 21.11.) | Insta+FB-Reel | TikTok (Browser!) |
+|---|---|---|---|
+| Julklapp war ein Scherz | youtube.com/shorts/JxaqDR-6jNk | 21.11. 21:40 live | 21.11. live |
+| Woher kommt der Wichtel | youtube.com/shorts/_tEs06qtu8w | geplant 22.11. 18:47 | geplant 22.11. 18:45 |
+| Wichteln weltweit | youtube.com/shorts/rjQ-IeYTFjM | geplant 23.11. 18:23 | geplant 23.11. 18:25 |
+| Einer zieht sich selbst | youtube.com/shorts/tviArlPaa1c | geplant 24.11. 18:41 | geplant 24.11. 18:40 |
+YouTube: nicht für Kinder, KI „Ja“, eigene Tags, Link aufs lange Video. TikTok: KI-Label an (nur 5-Minuten-Schritte im Zeitplan).
+Pinterest: kommt automatisch über die Insta-Verknüpfung (kein #nopin).
+Stolperfallen: Business-Suite-Reel-Editor hängt manchmal → neuen Tab öffnen. Video-Upload dort: HTMLInputElement.click abfangen,
+Input sichtbar machen, dann file_upload direkt auf DIESES Input (DataTransfer+change wird ignoriert). Datum im Planer nur per Kalender-Klick.
+TikTok-Upload im Browser klappt (nur Folgen nicht).
