@@ -4,6 +4,10 @@ name: Pages
 on:
   push:
     branches: [main]
+    # Reine Notiz-Commits ändern die Website nicht – kein Deploy nötig (spart Läufe und Fehlschläge)
+    paths-ignore:
+      - 'notizen/**'
+      - 'CLAUDE.md'
   workflow_dispatch:
 
 permissions:
@@ -20,28 +24,40 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: website
+      # GitHub findet das gerade hochgeladene Paket manchmal nicht („No artifacts named github-pages“, 20./21.11.) –
+      # dann nach kurzer Pause ein zweiter Versuch
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
 
-  # Löscht das 66-MB-Website-Paket nach dem Veröffentlichen (sonst läuft der Actions-Speicher voll; das Original liegt in Git)
+  # Löscht die 71-MB-Website-Pakete nach dem Veröffentlichen (sonst läuft der Actions-Speicher voll; das Original liegt in Git).
+  # Läuft auch nach Fehlschlag und räumt dabei liegengebliebene Pakete früherer Läufe mit ab.
   aufraeumen:
     needs: deploy
+    if: always()
     runs-on: ubuntu-latest
     permissions:
       actions: write
     steps:
-      - name: Website-Paket dieses Laufs löschen
+      - name: Website-Pakete dieses und früherer Läufe löschen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for id in $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --jq '.artifacts[].id'); do
+          # nur Läufe bis einschließlich diesem – ein neuerer Lauf, der gerade hochlädt, bleibt unberührt
+          for id in $(gh api --paginate "repos/${{ github.repository }}/actions/artifacts?name=github-pages&per_page=100" \
+              --jq '.artifacts[] | select(.workflow_run.id <= ${{ github.run_id }}) | .id'); do
             gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" && echo "gelöscht: $id"
           done
 
