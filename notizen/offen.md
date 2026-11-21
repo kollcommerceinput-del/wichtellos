@@ -286,3 +286,7 @@ Pinterest: kommt automatisch über die Insta-Verknüpfung (kein #nopin).
 Stolperfallen: Business-Suite-Reel-Editor hängt manchmal → neuen Tab öffnen. Video-Upload dort: HTMLInputElement.click abfangen,
 Input sichtbar machen, dann file_upload direkt auf DIESES Input (DataTransfer+change wird ignoriert). Datum im Planer nur per Kalender-Klick.
 TikTok-Upload im Browser klappt (nur Folgen nicht).
+- „Die Wichtel-Geschichte in 1 Minute“ (Video-Bauen, 46 s): YouTube youtube.com/shorts/Qx1-H8OCXYI (öffentlich 21.11.), TikTok geplant 25.11. 18:45,
+  Insta+FB geplant 25.11. 18:43 (Upload-Kopie 9,2 MB, Bildzahl/Länge/Bilder gegen Original geprüft).
+- Achtung: Die 4 Hochformat-Shorts sind in der ALTEN Fassung (Tempo 1,2) gepostet/geplant; Video-Bauen hat danach 1,05 gebaut. Tausch = Tonis Entscheidung (offen).
+- Szenenpläne F15–F24 für die Bilder: marketing/reel/onni-neu/szenenplan-F*.md (Toni 21.11.: PC Texte/Pläne, Video-Bauen Bilder; Toni prüft nach allen Bildern).
