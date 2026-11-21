@@ -269,5 +269,6 @@ Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md
 - Facebook: Video-Beitrag nur FB (läuft dort als Reel, 3:14), Text aus marketing/reel/erklaer-wichtel-julklapp/posttexte.md
 - Pinterest: Video-Pin „Woher kommt das Wichteln? Wichtel & Julklapp erklärt“, Pinnwand Wichteln: Ideen & Reels, Link /woher-kommt-wichteln/,
   Themen Wichteln/Weihnachten/Weihnachtswichtel, Alt-Text, KI-Label + „KI-generierte Person“
+- Ko-fi: Video-Beitrag (YouTube eingebettet) https://ko-fi.com/post/Neu-Woher-kommt-das-Wichteln-Wichtel-Julklapp-I4K82B2IHK
 - Instagram/TikTok: nicht das lange 16:9-Video – dafür baut Video-Bauen neue Hochformat-Shorts (Tonis Aufteilung).
 - „ein“ statt „eine“ bei 1:49 bleibt drin (Toni: frei).
