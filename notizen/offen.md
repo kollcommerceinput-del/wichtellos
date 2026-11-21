@@ -257,3 +257,9 @@ Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md
 - 21.11. Erklärvideo „Wichtel & Julklapp – die ganze Geschichte“ (~4 min, 16:9 für YouTube+Facebook, „Wikipedia in Bildern“): Text von Toni freigegeben → marketing/reel/erklaer-wichtel-julklapp/skript.md (19 Absätze = 19 Bilder, Quellen Wikipedia de/sv). Projekt angelegt: G:\Video bauen Projekte\Erklärvideo Wichtel und Julklapp\ (projekt.json 16:9, BILDLISTE.md, bild-18/19 da). 21.11. an Video-Bauen-Sitzung übergeben (Toni) – baut, wenn Tonis Bilder 01–17 da sind; Gemini-OK vorher holen; dann 4 Shorts (Julklapp-Scherz zuerst).
 - 21.11. Idee Toni: Onni auch nach Weihnachten – 2 Geschichten/Monat (1. + 15.), Jan–März, spielen im Wichtelwald nach Folge 24 (Heimkehr, Tierspuren, Julbock, Schneesturm mit Ulla, Schneeglöckchen, Tauwetter). Texte ab Dezember schreiben (nach Adventskalender), Ablauf wie Dezember (Text freigeben → Toni Bilder → Video + Podcast).
 - 21.11. 4 Hochformat-Shorts aus dem Erklärvideo gerendert (PC, Charon tempo 1.2, Bilder der Video-Sitzung; Schriftgrafiken als hoch-XX.jpg mit Unschärfe-Rand): G:\Video bauen Projekte\Short Julklapp war ein Scherz (19,8 s) / Short Woher kommt der Wichtel (18,3 s) / Short Einer zieht sich selbst (13,4 s) / Short Wichteln weltweit (15,8 s), je ausgabe\*.mp4. Toni: „nicht so gut geworden, wir schauen später“ → NICHT veröffentlicht. Langes 16:9-Video baut die Video-Bauen-Sitzung.
+
+### Erklär-Shorts neu (21.11., PC, mit Video-Bauen abgestimmt)
+- 6 Shorts 9:16, Ton aus dem langen Video geschnitten (atempo 1.15, keine neue Stimme), Bilder groß auf unscharfem Hintergrund, Titel oben.
+- Ordner: G:\Video bauen Projekte\Erklärvideo Wichtel und Julklapp\ausgabe\shorts\ (Skript: Scratchpad shorts2/bau.py, Zeitmarken von Video-Bauen).
+- Warten auf Tonis Durchsicht. Szene 12 „ein“→„eine“ steckt in Short 4; Video-Bauen spricht neu, wenn Toni es will.
+- Alte 4 Shorts (Ordner „Short …“) ersetzt, nicht veröffentlicht.
