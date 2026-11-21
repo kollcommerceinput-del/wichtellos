@@ -558,7 +558,7 @@ Und jetzt du! Niest du mit? Eins, zwei, drei … HATSCHI!
 
 Da war der Teddy! Onni kuschelte sich in sein warmes Fell und ruhte sich ein bisschen aus.
 
-Dann schrieb er einen Brief: „Hatschi! Ich habe Schnupfen. Packst du dich schön kuschelig warm ein? So wie ein Wichtel in seiner Socke!“
+Dann schrieb er einen Brief: „Hatschi! Ich habe Schnupfen. Packst du dich schön kuschelig warm ein? So wie ein Wichtel unter seiner Ringelsocke!“
 
 Müde kroch er unter seine Ringelsocke. Ob er morgen wieder alles riechen kann?
 
