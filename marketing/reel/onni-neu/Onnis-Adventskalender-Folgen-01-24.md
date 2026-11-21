@@ -437,7 +437,7 @@ Im Wichtelwald feierten sie heute das Fest der Lichter. Alle Wichtel liefen mit 
 
 „Dann feiere ich eben hier“, beschloss Onni.
 
-Er nahm seine kleine Laterne und tapste los. Tapp, tapp, tapp. Dazu summte er. Summ, summ.
+Er nahm seine kleine Laterne und lief los. Dazu summte er. Summ, summ.
 
 Durch den Flur bis ins Wohnzimmer.
 
@@ -468,7 +468,7 @@ In der vierzehnten Nacht holte Onni zuerst seine Laterne beim Teddy ab.
 
 „Danke fürs Aufpassen“, flüsterte er.
 
-Dann tapste er in den Flur. Dort standen die Schuhe der ganzen Familie. Für Onni war jeder so groß wie eine Höhle.
+Dann lief er in den Flur. Dort standen die Schuhe der ganzen Familie. Für Onni war jeder so groß wie eine Höhle.
 
 Onni schnupperte. Der erste roch nach Matsch. Der zweite nach Herbstlaub. Und der dritte …
 
@@ -655,7 +655,7 @@ Und noch einer. Und noch einer.
 
 Zähl mal mit: Eins, zwei, drei Sterne!
 
-Zurück tapste er zu seiner Tür. Tapp, tapp, tapp. Hinter ihm blieben lauter kleine weiße Fußspuren.
+Zurück lief er zu seiner Tür. Hinter ihm blieben lauter kleine weiße Fußspuren.
 
 Dann schrieb er einen Brief: „Ich habe an eurem Mehl geschnuppert. Jetzt bin ich ein Schneewichtel! Findest du meine Spuren?“
 
@@ -668,7 +668,7 @@ Unter seinem weißen Tuch musste er kichern. Jetzt war alles weiß: das Tuch, de
 
 In der zwanzigsten Nacht klopfte Onni sich das letzte Mehl aus dem Bart. Pff, pff!
 
-Dann tapste er zum Weihnachtsbaum. Darunter lagen bunte Geschenke mit Schleifen.
+Dann lief er zum Weihnachtsbaum. Darunter lagen bunte Geschenke mit Schleifen.
 
 „Für jeden ein Geschenk“, staunte Onni. „Nur von mir ist keins dabei.“
 
@@ -769,7 +769,7 @@ In der dreiundzwanzigsten Nacht war Onnis Bart wieder schneeweiß.
 
 Er legte seine Sachen bereit: den Fingerhut, die Laterne, Ullas Feder und sein Notizbuch. Das war jetzt fast voll mit Briefen.
 
-Dann machte er eine letzte Runde durchs Haus. Tapp, tapp, tapp.
+Dann machte er eine letzte Runde durchs Haus.
 
 Im Flur winkte er in den Spiegel. Der Wichtel im Spiegel winkte zurück.
 
@@ -794,7 +794,7 @@ Ein letztes Mal kuschelte er sich unter sein weißes Tuch. Morgen wird ein ganz 
 
 In der vierundzwanzigsten Nacht war endlich Heiligabend. Im ganzen Haus duftete es nach Tannen, Plätzchen und Kakao.
 
-Ein letztes Mal tapste Onni zum Weihnachtsbaum. Da staunte er: Neben dem Teddy lag ein winziger Keks. Genau wichtelgroß! Dazu ein Zettel: „Für Onni“.
+Ein letztes Mal lief Onni zum Weihnachtsbaum. Da staunte er: Neben dem Teddy lag ein winziger Keks. Genau wichtelgroß! Dazu ein Zettel: „Für Onni“.
 
 „Ein Krümel-Wichtel-Keks!“, rief er. „Mein Wunsch!“
 
