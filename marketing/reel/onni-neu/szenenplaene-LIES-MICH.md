@@ -1,8 +1,8 @@
 # Szenenpläne Folgen 15–24 (für Video-Bauen, Bilder in Flow)
 
 Quelle: `Onnis-Adventskalender-Folgen-01-24.md` (Stand 21.11. abends, Tapsen ersetzt, F16 Socke = Decke).
-Format je Zeile: NN | Ort | was man sieht | Logik-Hinweis | wiederverwendbar?
-1 Absatz der Vorlage = 1 Bild (wie F13). „wiederverwendbar“ = Bild aus G:\Video bauen Projekte\Folge NN …\bild-XX.jpg (oder als Grundbild für Flow).
+Format je Zeile: NN | Ort | was man sieht | Logik-Hinweis | wiederverwendbar | Text des Absatzes
+STRENG 1 Absatz der Vorlage = 1 Bild (wie F13); bild-NN = Absatz NN = Szene NN in projekt.json. Ordner + projekt.json: G:\Video bauen Projekte\Folge NN – Titel\ (Geräusche leer, nur Hinweis „geraeuschWunsch“).
 
 ## Regeln, die durch alle Folgen laufen
 - Onni: Mütze tief über den Augen, KEIN Gesicht (keine Augen, kein Mund) – auch wo der Text „Mütze hoch“ sagt (dann nur leicht angehoben, Augen im Schatten, oder Onni von hinten).
@@ -12,7 +12,7 @@ Format je Zeile: NN | Ort | was man sieht | Logik-Hinweis | wiederverwendbar?
 - Kühlschrank = Brummschrank, wie F11 (weißer Retro-Kühlschrank).
 - Ab F17 hängt über der roten Wichteltür die Girlande aus Papier-Sternen und -Herzen – in JEDEM Türbild F17–F24.
 - Unter dem Baum: Teddy (immer derselbe wie F13). Ab F20 liegt neben dem Teddy das Nussschalen-Päckchen (Sternenpapier, rote schiefe Schleife) bis F24.
-- Laterne: steht seit F13 beim Teddy – so weiter, wie du es in F14 löst; spätestens F23 liegt sie wieder bei Onnis Sachen.
+- Laterne: F14 holt Onni sie beim Teddy ab – ab F14 wieder bei Onni (F23 bei seinen Sachen).
 - Bart: F19 Onni ganz weiß von Mehl; F20 am Anfang noch Mehlreste; F22 Bart braun (Kakao), ein Rest bleibt braun; F23 wieder schneeweiß.
 - Brief: liegt am Ende jeder Folge vor der roten Tür.
 
