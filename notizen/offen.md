@@ -263,3 +263,11 @@ Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md
 - Ordner: G:\Video bauen Projekte\Erklärvideo Wichtel und Julklapp\ausgabe\shorts\ (Skript: Scratchpad shorts2/bau.py, Zeitmarken von Video-Bauen).
 - Warten auf Tonis Durchsicht. Szene 12 „ein“→„eine“ steckt in Short 4; Video-Bauen spricht neu, wenn Toni es will.
 - Alte 4 Shorts (Ordner „Short …“) ersetzt, nicht veröffentlicht.
+
+### Erklärvideo lang veröffentlicht (21.11. abends, PC, Toni „ja frei“, „sofort posten“)
+- YouTube: https://youtu.be/BpF3rtKspqw (öffentlich, nicht für Kinder, KI „Ja“, Kapitelmarken, Kinder-Standard-Tags ersetzt)
+- Facebook: Video-Beitrag nur FB (läuft dort als Reel, 3:14), Text aus marketing/reel/erklaer-wichtel-julklapp/posttexte.md
+- Pinterest: Video-Pin „Woher kommt das Wichteln? Wichtel & Julklapp erklärt“, Pinnwand Wichteln: Ideen & Reels, Link /woher-kommt-wichteln/,
+  Themen Wichteln/Weihnachten/Weihnachtswichtel, Alt-Text, KI-Label + „KI-generierte Person“
+- Instagram/TikTok: nicht das lange 16:9-Video – dafür baut Video-Bauen neue Hochformat-Shorts (Tonis Aufteilung).
+- „ein“ statt „eine“ bei 1:49 bleibt drin (Toni: frei).
