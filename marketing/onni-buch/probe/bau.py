@@ -3,7 +3,8 @@ import html
 from pathlib import Path
 
 HIER = Path(__file__).parent
-TITEL = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni und der Keks', 'Onnis Waschtag', 'Onni im Sockenkorb',
+# Titel 4 im Buch „Waschtag bei ____“ statt „Onnis Waschtag“ (Toni 22.11.: sonst „____s Waschtag“)
+TITEL = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni und der Keks', 'Waschtag bei Onni', 'Onni im Sockenkorb',
          'Onni und der Nikolaus', 'Ein Lied für Onni', 'Onni und der Spiegel-Wichtel', 'Onni, der Baumeister',
          'Onni und die Mandarinen-Gesichter', 'Onni und das Licht im Kühlschrank', 'Onni und der Nordstern',
          'Onni und das Lichterfest', 'Onni im Schuhchaos', 'Onni und der Wunschzettel', 'Onni hat Schnupfen',
@@ -119,7 +120,7 @@ def druckbild(n):
         if bb:
             im = im.crop((0, max(0, bb[1] - 30), im.width, min(im.height, bb[3] + 10)))
         im = im.resize((im.width * 3, im.height * 3), Image.LANCZOS).point(lambda v: 255 if v > 150 else (0 if v < 90 else v))
-        im.save(ziel)
+        im.convert('1', dither=Image.Dither.NONE).save(ziel, optimize=True)  # 1-Bit: kleines PDF
     return ziel.name
 
 

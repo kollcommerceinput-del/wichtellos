@@ -110,7 +110,7 @@ FOOTER = '''<footer>
     <details class="fgroup"><summary>Wichteln organisieren</summary><ul><li><a href="/">Wichteln auslosen</a></li><li><a href="/wichteln-per-whatsapp/">Wichteln per WhatsApp</a></li><li><a href="/wichteln-einladung-vorlage/">Einladung zum Aushängen</a></li><li><a href="/wunschzettel/">Wunschzettel</a></li><li><a href="/wichtelgruss/">Wichtelgruß verschicken</a></li><li><a href="/wichtelgedichte/">Wichtelgedichte</a></li></ul></details>
     <details class="fgroup"><summary>Geschenkideen</summary><ul><li><a href="/geschenke-generator/">Geschenke-Generator</a></li><li><a href="/geschenkfinder/">Geschenkfinder</a></li><li><a href="/black-friday-wichtelgeschenke/">Black Friday</a></li><li><a href="/wichtelgeschenke-unter-10-euro/">Wichtelgeschenke</a></li><li><a href="/wichtelgeschenke-mit-buchstaben/">Geschenke von A bis Z</a></li><li><a href="/lustige-wichtelgeschenke/">Lustige Wichtelgeschenke</a></li><li><a href="/last-minute-wichtelgeschenke/">Last-Minute-Geschenke</a></li><li><a href="/wichtelgeschenke-fuer-kollegen/">Für Kollegen</a></li><li><a href="/geschenke-fuer-oma-und-opa/">Für Oma &amp; Opa</a></li><li><a href="/wichtelgeschenke-fuer-teenager/">Für Teenager</a></li><li><a href="/geschenke-fuer-erzieherin/">Für Erzieherinnen</a></li><li><a href="/gesellschaftsspiele-verschenken/">Gesellschaftsspiele</a></li><li><a href="/wichtelgeschenke-fuer-kinder/">Für Kinder</a></li><li><a href="/wichtelgeschenke-selber-machen/">Selbst gemacht</a></li><li><a href="/geschenke-fuer-maenner/">Für Männer</a></li><li><a href="/geschenke-fuer-frauen/">Für Frauen</a></li><li><a href="/rubbellos/">Rubbellos verschicken</a></li><li><a href="/wichtel-tassen/">Wichtel-Tassen</a></li><li><a href="/kuscheldecke-verschenken/">Kuscheldecken</a></li></ul></details>
     <details class="fgroup"><summary>Spiele &amp; Anlässe</summary><ul><li><a href="/wichteln-wuerfeln-regeln/">Wichteln mit Würfeln</a></li><li><a href="/schrottwichteln/">Schrottwichteln</a></li><li><a href="/julklapp/">Julklapp</a></li><li><a href="/wichteln-im-buero/">Wichteln im Büro</a></li><li><a href="/wichteln-schule-kita/">Schule &amp; Kita</a></li><li><a href="/weihnachtsfeier-ideen/">Weihnachtsfeier-Ideen</a></li><li><a href="/woher-kommt-wichteln/">Woher kommt Wichteln?</a></li><li><a href="/wie-funktioniert-wichteln/">Wie funktioniert Wichteln?</a></li><li><a href="/wichtel-generator-vergleich/">Wichtel-Generatoren im Vergleich</a></li><li><a href="/was-ist-ein-wichtel/">Was ist ein Wichtel?</a></li><li><a href="/wichteln-varianten/">Wichtel-Varianten</a></li><li><a href="/wichteln-zu-dritt/">Wichteln zu dritt</a></li><li><a href="/wichteln-per-post/">Wichteln per Post</a></li><li><a href="/geburtstagswichteln/">Geburtstagswichteln</a></li></ul></details>
-    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/wichtel-abschied/">Wichtel-Abschied</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
+    <details class="fgroup"><summary>Kinder &amp; Advent</summary><ul><li><a href="/wichteltuer/">Wichteltür</a></li><li><a href="/onni-adventskalender/">Onnis Adventskalender</a></li><li><a href="/wichtel-ausmalbilder/">Ausmalbilder</a></li><li><a href="/wichtel-ausmalbuch/">Ausmalbuch</a></li><li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a></li><li><a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a></li><li><a href="/wichtel-abschied/">Wichtel-Abschied</a></li><li><a href="/plaetzchen-backen-mit-kindern/">Plätzchen backen</a></li><li><a href="/adventskalender-ideen/">Adventskalender-Ideen</a></li><li><a href="/adventskalender-befuellen/">Adventskalender befüllen</a></li><li><a href="/nikolaus-geschenke/">Nikolaus-Geschenke</a></li></ul></details>
   </nav>
   <p class="disclosure">* Werbelinks: Kaufst du darüber ein, bekommen wir eine kleine Provision. Für dich bleibt der Preis gleich – und WichtelLos bleibt kostenlos. Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   <p class="social">Folge uns: <!--SOCIAL--></p>
@@ -1733,6 +1733,45 @@ def druck_card(n, t, h, alt):
             f'<figcaption><b>{esc(t)}</b><a class="btn-secondary" href="/fotos/onni/{n}.pdf" target="_blank" rel="noopener">🖨️ PDF drucken</a></figcaption></figure>')
 
 
+AUSMALBUCH_VORSCHAU = [('cover', 'Cover: „24 Wichtelgeschichten“, Hier wohnt …'), ('inhalt', 'Inhaltsverzeichnis mit Kästchen zum Abhaken'),
+                       ('t09', 'Türchen 9: ____, der Baumeister'), ('t22', 'Türchen 22: ____ und der Kakao-Bart')]
+
+
+def ausmalbuch_page():
+    # 22.11. (Toni): Mitmach-Ausmalbuch zu Onnis Adventskalender – 27 Seiten, ohne Namen „Onni“ (Kind setzt seinen Wichtelnamen ein),
+    # vor dem Advent komplett als PDF. Quelle: marketing/onni-buch/probe/bau.py → render.js → fotos/onni/wichtel-ausmalbuch.pdf
+    pdf = '/fotos/onni/wichtel-ausmalbuch.pdf'
+    karten = '\n'.join(f'<figure class="ausmal"><a href="{pdf}" target="_blank" rel="noopener"><img src="/fotos/onni/ausmalbuch-{n}-480.webp" '
+                       f'width="480" height="679" alt="Vorschau Ausmalbuch: {esc(t)}" loading="lazy" decoding="async"></a>'
+                       f'<figcaption>{esc(t)}</figcaption></figure>' for n, t in AUSMALBUCH_VORSCHAU)
+    body = f"""<article>
+<h1>Wichtel-Ausmalbuch: 24 Wichtelgeschichten zum Ausmalen</h1>
+<p class="lead">Ein ganzes Ausmalbuch für den Advent – kostenlos als PDF zum Ausdrucken: Cover, Inhaltsverzeichnis und für jedes Türchen vom 1. bis 24. Dezember eine Ausmalseite. Das Besondere: Euer Kind gibt dem Wichtel selbst einen Namen und schreibt ihn überall in die Lücken – so wird es sein eigenes Wichtelbuch.</p>
+<p><a class="btn-primary" href="{pdf}" target="_blank" rel="noopener">🖨️ Ausmalbuch als PDF (27 Seiten, A4)</a></p>
+
+<h2>So sieht das Buch aus</h2>
+<div class="ausmal-grid">
+{karten}
+</div>
+
+<h2>So funktioniert das Mitmach-Buch</h2>
+<ol>
+  <li><b>Ausdrucken:</b> alle 27 Seiten auf normalem A4-Papier – oder jeden Tag eine Seite.</li>
+  <li><b>Namen geben:</b> Auf Seite 3 steht der Wichtel zum Ausmalen und darunter „Mein Wichtel heißt: ____“. Diesen Namen schreibt euer Kind in alle Lücken, auf dem Cover an die Wichteltür und ins Inhaltsverzeichnis.</li>
+  <li><b>Jeden Tag ein Türchen:</b> Zu jeder Seite gibt es die passende Geschichte – als kurzes Video und als Gute-Nacht-Podcast in <a href="/onni-adventskalender/">Onnis Adventskalender</a>. Hören, ausmalen, im Inhaltsverzeichnis einen Haken setzen.</li>
+  <li><b>Sammeln:</b> Links ist auf jeder Seite ein Rand mit Lochmarken. Lochen, ein rotes Band durchziehen oder in einen Schnellhefter – an Heiligabend ist das Buch fertig.</li>
+</ol>
+<p class="hint">Tipp: Die Bilder haben dicke Linien und viel Platz – gut für Wachsmalstifte und kleine Hände. Noch kein Name für den Wichtel? Der <a href="/wichteltuer/#wichtelname">Wichtelnamen-Generator</a> hilft.</p>
+
+<h2>Mehr zum Ausmalen und Basteln</h2>
+<p><a href="/wichtel-ausmalbilder/">6 einzelne Wichtel-Ausmalbilder und WhatsApp-Sticker</a> · <a href="/wichteltuer/">Wichteltür mit 24 Streichen</a> · <a href="/wichteltuer-selber-bauen/">Wichteltür selber bauen</a> · <a href="/wunschzettel/">Wunschzettel zum Ausdrucken</a></p>
+<p class="hint">Das Ausmalbuch ist für zu Hause, Kita und Schule kostenlos. Die Bilder wurden mit KI erstellt (Google Gemini/Flow).</p>
+</article>"""
+    page('/wichtel-ausmalbuch/', 'Wichtel-Ausmalbuch kostenlos: 24 Wichtelgeschichten als PDF zum Ausmalen',
+         'Kostenloses Wichtel-Ausmalbuch für den Advent: 27 Seiten als PDF, für jedes Türchen vom 1. bis 24. Dezember eine Ausmalseite – zum Mitmachen mit eigenem Wichtelnamen.', body,
+         crumb='Wichtel-Ausmalbuch', playful=True)
+
+
 def ausmal_page():
     mal_shop = '\n'.join(f'<div class="idea">\n  <h3>{esc(t)}</h3>\n  <p>{esc(x)}</p>\n  {product_links(*r)}\n</div>'
                          for t, x, *r in MAL_SHOP)
@@ -1743,6 +1782,7 @@ def ausmal_page():
 <figure class="photo photo-ai onni-portrait">{onni_img('winkt', 'Onni, der Wichtel von WichtelLos, winkt', 220, '')}<figcaption>Das ist Onni · KI-generiert</figcaption></figure>
 <p class="lead">Das ist Onni, der Wichtel von WichtelLos – sein Name heißt auf Finnisch „Glück“. Hier gibt es 6 Ausmalbilder mit Onni zum kostenlosen Ausdrucken: für die Adventszeit zu Hause, die Wichteltür, die Kita oder die Grundschule. Oben auf jedem Blatt ist Platz für den Namen eures Wichtels.</p>
 <p><a class="btn-primary" href="/fotos/onni/ausmalbilder-alle.pdf" target="_blank" rel="noopener">🖨️ Alle 6 Ausmalbilder als PDF</a></p>
+<p class="hint">Neu: das <a href="/wichtel-ausmalbuch/">Wichtel-Ausmalbuch</a> mit einer Seite für jedes Türchen bis Heiligabend.</p>
 {KOFI_LINE}
 
 <h2>Die Ausmalbilder</h2>
@@ -2695,6 +2735,7 @@ def onni_kalender_page():
 <ul>
   <li><a href="/wichteltuer/">Wichteltür</a> – so stellt ihr Onnis Tür bei euch auf</li>
   <li><a href="/wichtel-zubehoer/">Wichtel-Zubehör</a> – Möbel, Lichterkette und Kleinigkeiten für seine Tür</li>
+  <li><a href="/wichtel-ausmalbuch/">Ausmalbuch zu allen 24 Türchen</a> – für jede Folge eine Ausmalseite, kostenlos als PDF</li>
   <li><a href="/wichtel-ausmalbilder/">Ausmalbilder und Sticker mit Onni</a> – zum Ausmalen während der Folge</li>
   <li><a href="/wichteltuer/#wichtelname">Wichtelname-Generator</a> – falls euer eigener Wichtel einen Namen bekommen soll</li>
   <li><a href="/wichtel-abschied/">Wichtel-Abschied</a> – Abschiedsbrief und Ideen, wenn Onni an Heiligabend nach Hause zieht</li>
@@ -3712,7 +3753,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/', '/wichtel-generator-vergleich/', '/geburtstagswichteln/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/', '/wichtel-generator-vergleich/', '/geburtstagswichteln/', '/wichtel-ausmalbuch/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -4331,6 +4372,7 @@ def main():
     door_page()
     onni_kalender_page()
     ausmal_page()
+    ausmalbuch_page()
     zubehoer_page()
     selberbau_page()
     plaetzchen_page()
