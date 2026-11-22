@@ -1088,8 +1088,3 @@ table.vergleich tbody th { font-weight: 700; }
 .video-text summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
 .video-text .quelle { font-size: .8rem; color: #6d5d57; }
 @media print { .video-kapitel { display: none; } }
-
-/* 22.11.: Folge 1 gratis zum Mitnehmen (Onnis Adventskalender) */
-.ak-gratis { background: #fff6e6; border: 2px solid #f2b705; border-radius: var(--radius, 14px); padding: 6px 18px 12px; margin: 18px 0; }
-.ak-gratis h2 { margin-top: 12px; }
-.ak-gratis-knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
