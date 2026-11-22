@@ -127,12 +127,14 @@ def druckbild(n):
 AUSLASSEN = {16}  # 22.11. Toni: Bild 16 missverständlich (Form unter der Bettdecke) – raus, bis Video-Bauen es neu zeichnet
 seiten = [folge(n, b, SAETZE.get(n, '')) for n in range(1, 25) if n not in AUSLASSEN and (b := druckbild(n))]
 def schluss_seite():
-    # 22.11. Toni: Schlussbild nach Türchen 24 – „Frohe Weihnachten!“ (ausmal-25.jpg von Video-Bauen, oberes Drittel frei für die Schrift)
+    # 22.11. Toni: Schlussbild nach Türchen 24 zum Verschenken – „Frohe Weihnachten!“ + Für/Von (ausmal-25.jpg von Video-Bauen, oberes Drittel frei für die Schrift)
     b = druckbild(25)
     if not b:
         return ''
     return (f'<section class="s onni">{LOCH}<p class="umriss" style="font-size:20mm;margin-top:4mm">Frohe Weihnachten!</p>'
-            f'<img src="{b}" alt="" style="height:215mm;margin-top:6mm">{fuss()}</section>')
+            f'<img src="{b}" alt="" style="height:195mm;margin-top:4mm">'
+            f'<div class="gehoert" style="margin:6mm 0 4mm">Für:<span></span></div>'
+            f'<div class="gehoert" style="margin:0 0 12mm">Von:<span></span></div>{fuss()}</section>')
 
 
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
