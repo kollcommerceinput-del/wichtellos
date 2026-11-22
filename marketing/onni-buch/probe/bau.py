@@ -83,7 +83,7 @@ def folge(n, bild, satz):
 # Sätze unter dem Bild (aus der Geschichte, ohne den Namen „Onni“) – fehlt einer, bleibt die Zeile leer
 SAETZE = {1: '„Eine Wichteltür! Hier wohne ich ab jetzt!“',
           2: '„Vorsichtig tastete er sich näher.“',
-          3: '„Unter dem Weihnachtsbaum stand ein Teller mit Keksen.“',
+          3: '„Dann biss er ein winziges Stück ab.“',
           4: '„Dann rubbelte und schrubbte er, bis es überall schäumte.“',
           5: '„Socken sind ja wie riesige Decken!“',
           6: '„Das riecht nach … Nikolaus!“',
