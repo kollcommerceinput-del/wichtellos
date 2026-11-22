@@ -92,7 +92,18 @@ SAETZE = {1: '„Eine Wichteltür! Hier wohne ich ab jetzt!“',
           10: '„Welches Gesicht würdest du malen?“',
           11: '„Wer macht da drin bloß das Licht an und aus?“',
           12: '„Der Nordstern!“, flüsterte er.',
-          13: '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“'}
+          13: '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“',
+          14: '„So geht das nicht. Da muss ein Wichtel helfen!“',
+          15: '„Oh! Psst! Wunschzettel sind geheim.“',
+          16: '„Ha … ha … HATSCHI!“',
+          17: '„Du bekommst jetzt auch etwas Schönes!“',
+          18: '„Hier ist sie wieder. Ich habe es doch versprochen.“',
+          19: '„Hihi! Jetzt bin ich ein Schneewichtel!“',
+          20: '„Dann packe ich eben auch eins ein!“',
+          21: '„Schnee. Tannen. Wichtelwald.“',
+          22: '„Was meinst du, welche Farbe hat sein Bart jetzt?“',
+          23: '„Du bist mein bester Freund hier.“',
+          24: '„Danke, dass ich bei euch wohnen durfte.“'}
 QUELLE = Path('G:/Video bauen Projekte/Ausmalbuch')
 
 
