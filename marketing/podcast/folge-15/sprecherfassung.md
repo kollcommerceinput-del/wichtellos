@@ -1,0 +1,89 @@
+# Onnis Adventskalender – Folge 15, Sprecherfassung
+
+Stimmen: E = Erzähler (Charon), O = Onni (Fenrir)
+
+Intro wie in Folge 14 (neues kurzes Intro).
+
+## Geschichte
+
+E: Türchen fünfzehn. Onni und der Wunschzettel.
+
+E: Onni wachte auf und streckte sich unter seiner Ringelsocke. Das Erste, woran er dachte, waren die Schuhe. Die vielen Schuhe, die er gestern kreuz und quer im Flur zurückgelassen hatte. Schnell stand er auf, nahm seine Laterne und öffnete seine rote Tür.
+
+[Geräusch: kleine Holztür öffnet sich leise]
+
+E: Der Brief von gestern war fort. Onni lief in den Flur und hob die Laterne. Und da staunte er. Alle Schuhe standen wieder ordentlich nebeneinander, immer zwei und zwei. Die großen Stiefel, die kleinen Turnschuhe, die weichen Hausschuhe. Jeder hatte seinen Partner wiedergefunden. Und aus jedem Schuh duftete es noch ein bisschen nach Mandarinen.
+
+O: Danke fürs Helfen! Jetzt passt wieder alles zusammen.
+
+E: Onni musste kichern. Dann lief er weiter, bis ins Wohnzimmer.
+
+[Geräusch: leise Schritte auf Holzboden]
+
+E: Unter dem Weihnachtsbaum saß der Teddy und schlief. Und neben ihm lag etwas, das gestern noch nicht da gewesen war. Ein großes Blatt Papier. Für Onni war es so groß wie ein Teppich.
+
+E: Vorsichtig kletterte Onni darauf und leuchtete mit der Laterne darüber. Auf das Blatt waren Bilder gemalt, mit bunten Stiften. Ein Fahrrad, ein Buch, ein kleiner Hund mit einer roten Schleife. Und oben stand ein Wort, in großen, etwas wackeligen Buchstaben.
+
+E: Onni schob seine Mütze hoch und las langsam, Buchstabe für Buchstabe.
+
+O: Wunsch … zettel. Ein Wunschzettel!
+
+E: Und dann erschrak er. Er legte schnell den Finger an den Bart.
+
+O: Oh! Psst! Wunschzettel sind doch geheim.
+
+E: Jeder Wichtel weiß das. Einen Wunschzettel liest man nicht einfach so. Der gehört dem, der ihn geschrieben hat, und dem Weihnachtsmann. Schnell drehte Onni sich um und hielt die Laterne in die andere Richtung, damit er ja nichts mehr sah.
+
+E: Eine Weile stand er so da, mit dem Rücken zum Wunschzettel. Und dann hatte er eine Idee.
+
+O: Ich mache mir auch einen! Einen eigenen Wunschzettel!
+
+E: Er kletterte von dem Blatt herunter, strich es noch einmal glatt und lief zurück. So schnell, dass die Laterne in seiner Hand hin und her schaukelte. Durch den Flur, an den ordentlichen Schuhen vorbei, bis in sein Stübchen.
+
+[Geräusch: kleine Holztür öffnet sich leise]
+
+E: Onni setzte sich an seinen Tisch und holte sein kleines Notizbuch hervor. Vorsichtig riss er ein Blatt heraus.
+
+[Geräusch: Papier raschelt]
+
+E: Dann nahm er seinen Stift und schrieb ganz oben: Mein Wunschzettel. Und darunter: Erstens.
+
+[Geräusch: Stift schreibt auf Papier]
+
+O: Erstens: Eine Mütze, die nicht rutscht.
+
+E: Kaum hatte er das geschrieben, rutschte ihm die Mütze über die Augen. Onni seufzte und schob sie wieder hoch.
+
+O: Siehst du. Genau deswegen.
+
+E: Er schrieb weiter.
+
+O: Zweitens: Ein Krümel-Wichtel-Keks.
+
+E: Bei dem Gedanken an einen Keks knurrte ihm ein bisschen der Bauch. Onni lächelte. Dann kam der dritte Wunsch. Und der war schwierig. Onni legte den Stift hin, stützte das Kinn in die Hände und dachte lange nach. Er dachte an den Wichtelwald und an Ulla. An den Teddy unter dem Baum. Und an die Familie, die hier im Haus schlief und ihm jeden Tag seine Briefe beantwortete.
+
+E: Das Wichtigste, fand Onni, kommt immer zum Schluss.
+
+O: Drittens: Dass alle hier ein wunderschönes Weihnachten haben.
+
+E: Onni schaute auf seinen Wunschzettel und war sehr zufrieden. Drei Wünsche. Ein kleiner, ein leckerer und ein großer.
+
+O: Und was wünschst du dir?
+
+E: Dann nahm er ein zweites Blatt und schrieb einen Brief.
+
+O: Hast du schon deinen Wunschzettel geschrieben? Ich habe auch einen!
+
+E: Den Brief legte er vor seine Tür. Dann machte er sie leise zu.
+
+E: Seinen eigenen Wunschzettel faltete Onni ganz klein zusammen. Wunschzettel sind schließlich geheim. Er hob einen Zipfel seiner Ringelsocke an und schob den Zettel tief hinein, ganz nach unten, bis in die Spitze. Da war er sicher.
+
+E: Dann kuschelte sich Onni unter die Ringelsocke. Er dachte an seine drei Wünsche.
+
+O: Ob wohl einer davon in Erfüllung geht?
+
+E: Und ganz leise flüsterte er:
+
+O: Gute Nacht. Bis morgen.
+
+E: Dann schlief Onni ein.
