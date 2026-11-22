@@ -8,9 +8,15 @@ Intro und Outro wie in Folge 01 (Fassung für alle Folgen).
 
 E: Türchen dreizehn. Onni und das Lichterfest.
 
-E: In der dreizehnten Nacht wachte Onni auf, und es war so dunkel wie noch nie. Kein Mond schien zum Fenster herein, und draußen hingen dicke Wolken vor den Sternen. Onni blieb noch einen Augenblick unter seiner Ringelsocke liegen und rieb sich die Nase. Dann setzte er sich mit einem Ruck auf.
+E: Onni wachte auf und blieb noch einen Augenblick unter seiner Ringelsocke liegen. In seinem Stübchen brannte die kleine Laterne, so wie jede Nacht, und alles war warm und hell. Er rieb sich die Nase, schlug die Ringelsocke zurück und stand auf.
 
-O: Heute ist doch Luciafest!
+E: Dann öffnete er seine rote Tür.
+
+[Geräusch: kleine Holztür öffnet sich leise]
+
+E: Draußen war es so dunkel wie noch nie. Kein Mond schien zum Fenster herein, und dicke Wolken hingen vor den Sternen. Onni konnte kaum die eigene Hand vor Augen sehen. Er tastete nach dem Brief von gestern. Der Brief war fort.
+
+O: So dunkel war es ja noch nie. Ach, natürlich! Heute ist doch Luciafest!
 
 E: Im Wichtelwald war das Luciafest eines der schönsten Feste im ganzen Winter. Wenn die Nächte am längsten und am dunkelsten waren, holten alle Wichtel ihre Laternen hervor. Dann liefen sie in einer langen Reihe zwischen den verschneiten Tannen hindurch und sangen dabei. Viele kleine Lichter wanderten durch den Wald, damit der Winter ein bisschen heller wurde.
 
@@ -18,31 +24,23 @@ E: Onni dachte an die Lichter zwischen den Bäumen, und das Herz wurde ihm ein w
 
 O: Dann feiere ich eben hier. Ein Lichterfest geht auch mit einem einzigen Licht.
 
-E: Er holte seine kleine Laterne vom Tisch. Ihr warmes Licht fiel auf die Wände seines Stübchens und machte seinen Schatten groß und lang. Onni hob die Laterne hoch, so wie die Wichtel es im Wald machten, und öffnete seine rote Tür.
+E: Er holte seine kleine Laterne vom Tisch. Ihr warmes Licht fiel in den dunklen Flur und machte seinen Schatten groß und lang. Onni hob die Laterne hoch, so wie die Wichtel es im Wald machten, und lief los.
 
-[Geräusch: kleine Holztür öffnet sich leise]
-
-E: Der Brief von gestern war fort. Onni lief los. Dabei summte er ganz leise das Lichterlied aus dem Wichtelwald, so leise, dass im Haus niemand aufwachte. Durch den dunklen Flur ging es, bis ins Wohnzimmer.
+E: Dabei summte er ganz leise das Lichterlied aus dem Wichtelwald, so leise, dass im Haus niemand aufwachte. Durch den dunklen Flur ging es, bis ins Wohnzimmer.
 
 [Geräusch: leise Schritte auf Holzboden]
 
-E: Dort stand der Weihnachtsbaum, groß und dunkel. Seine Zweige rochen nach Wald, fast wie zu Hause. Und unter dem Baum, zwischen den eingepackten Geschenken, saß jemand. Ganz allein im Dunkeln. Onni hob die Laterne ein Stück höher.
+E: Dort stand der Weihnachtsbaum, groß und dunkel. Seine Zweige rochen nach Wald, fast wie zu Hause. Und unter dem Baum, zwischen den eingepackten Geschenken, saß der Teddy mit dem weichen braunen Fell, ganz allein im Dunkeln. Er schlief, so wie jede Nacht. Kuscheltiere schlafen nachts nämlich auch.
 
-O: Der Teddy!
+O: Oh, du hast ja gar kein Licht. Und das am Luciafest.
 
-E: Es war der Teddy mit dem weichen braunen Fell. Er saß ganz still da und schaute mit seinen Knopfaugen in die Dunkelheit.
+E: Onni überlegte nicht lange. Ganz vorsichtig, damit der Teddy nicht aufwachte, stellte er seine Laterne direkt neben das weiche Fell. Sofort fiel ein warmer Schein auf den Teddy, auf seine runden Ohren und auf seine Pfoten. Und auf einmal sah er im Schlaf viel fröhlicher aus. Fast so, als würde er etwas Schönes träumen.
 
-O: Oh, du hast ja gar kein Licht. Sitzt du etwa die ganze Nacht hier im Dunkeln?
-
-E: Der Teddy antwortete nicht. Teddys antworten nie. Aber Onni fand, dass er ein bisschen traurig aussah.
-
-E: Onni überlegte nicht lange. Vorsichtig stellte er seine Laterne direkt neben das weiche Fell. Sofort fiel ein warmer Schein auf den Teddy, auf seine runden Ohren und auf seine Pfoten. Und auf einmal sah er viel fröhlicher aus. Fast so, als würde er lächeln.
-
-O: So ist es besser. Jetzt feierst du mit. Frohes Luciafest, Teddy.
+O: Schlaf gut, Teddy. Jetzt feierst du im Traum mit. Frohes Luciafest.
 
 E: Onni trat einen Schritt zurück und betrachtete den Teddy. Dann fiel ihm etwas auf. Rund um den Teddy war es jetzt hell. Aber überall sonst im Zimmer war es dunkel. Onni hatte selbst kein Licht mehr.
 
-E: Da musste er kichern.
+E: Da musste er leise kichern.
 
 O: Macht nichts. Meine Nase findet den Weg auch ohne Licht.
 
