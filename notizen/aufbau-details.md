@@ -69,6 +69,7 @@ Vollständige Notizen zu Seiten, Skripten, Marketing-Dateien und Abläufen. Kurz
 - **Onni** = Name des WichtelLos-Wichtels (Toni 02.11., finnisch „Glück“, aus Liste mein-wichtel.de gewählt). Sticker/Ausmalbilder/
   Vorlagen aus Google Flow (Bilder kostenlos im Pro-Abo). Wichtel sind KLEIN – Bäume, Häuser, Geschenke groß (Toni 02.11.).
   - `/wichtel-ausmalbilder/` (`ausmal_page()`): 6 Ausmalbilder als A4-PDF + Gesamt-PDF, 8 Onni-Sticker (WebP 512, ZIP) mit WhatsApp-Anleitung
+  - `/wichtel-ausmalbuch/` (`ausmalbuch_page()`, 22.11.): Mitmach-Ausmalbuch 27 S. (Cover, Inhalt mit Kästchen + QR, Wichtel-Figur, Türchen 1–24 mit Namenslücke statt „Onni“) → `fotos/onni/wichtel-ausmalbuch.pdf`. Bauen: Linienbilder von Video-Bauen in `G:Video bauen ProjekteAusmalbuchusmal-NN.jpg` → `python marketing/onni-buch/probe/bau.py` + `node marketing/onni-buch/probe/render.js` → PDF nach `fotos/onni/` kopieren, Vorschau-WebPs `ausmalbuch-*-480.webp`.
   - `/wichteltuer/`: Wichtelnamen-Generator (`WICHTEL_NAMEN`, eigene Bedeutungen, setzt Namen in den Begrüßungsbrief, JS in `site.js`)
     + Druckvorlagen (Begrüßungs-/Abschiedsbrief 4×A6, Urkunde, 6 Türschilder)
   - Tool: Onni-Sprechblase nach dem Auslosen (+ Konfetti) und auf der Seite des geheimen Links („Onni flüstert“)
