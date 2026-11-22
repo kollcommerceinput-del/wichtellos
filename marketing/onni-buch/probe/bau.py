@@ -28,7 +28,7 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .folge .kopf{display:flex;align-items:center;gap:6mm}
 .folge .nr{font-size:20mm;width:30mm;height:30mm;border:.8mm solid #111;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
 .folge .kopf small{font-size:6mm;color:#444}.folge .kopf h1{font-size:10mm;margin:1mm 0 0;line-height:1.1}
-.folge img{display:block;margin:6mm auto 0;width:100%;height:185mm;object-fit:contain}
+.folge img{display:block;margin:6mm auto 0;width:100%;height:200mm;object-fit:contain}
 .folge .satz{margin:6mm 0 0;font-size:5.6mm;text-align:center}
 .fuss{position:absolute;bottom:6mm;left:26mm;right:14mm;display:flex;justify-content:space-between;font-size:3.4mm;color:#777}'''
 
@@ -57,7 +57,7 @@ def folge(n, bild, satz):
 
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
        + cover('../../onni/ausmal-tuer.png') + inhalt()
-       + folge(13, '../../onni/ausmal-laterne.png', '„Vorsichtig stellte er seine Laterne neben den schlafenden Teddy.“')
+       + folge(13, 'ausmal-13-druck.png', '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“')
        + '</body></html>')
 (HIER / 'probe.html').write_text(doc, encoding='utf-8')
 print('probe.html geschrieben')
