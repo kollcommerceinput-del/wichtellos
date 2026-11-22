@@ -20,9 +20,9 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .umriss{color:#fff;-webkit-text-stroke:1.1mm #111;paint-order:stroke fill;font-weight:600;line-height:1;text-align:center;margin:0}
 .cbild{position:relative;height:250mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-14mm;right:-14mm;top:6%}.hierwohnt{position:absolute;left:-10mm;right:-10mm;top:27.5%;font-size:13mm}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
 .gehoert{margin-top:auto;font-size:8mm;display:flex;gap:4mm;align-items:flex-end}.gehoert span{flex:1;border-bottom:.6mm solid #111;height:10mm}
-.inhalt h1{font-size:12mm;margin:0 0 5mm;text-align:center}
-.inhalt ol{list-style:none;padding:0;margin:0;font-size:5.1mm}
-.inhalt li{display:flex;align-items:center;gap:4mm;padding:1.45mm 0;border-bottom:.2mm solid #ddd}
+.ikopf{display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;margin-bottom:3mm}.ikopf img{height:62mm;margin-right:6mm}.inhalt .unter{margin:2mm 0 0;font-size:4.6mm;color:#555}.inhalt h1{font-size:9mm;margin:5mm 0 0}
+.inhalt ol{list-style:none;padding:0;margin:0;font-size:4.7mm}
+.inhalt li{display:flex;align-items:center;gap:4mm;padding:.85mm 0;border-bottom:.2mm solid #ddd}
 .inhalt li b{width:8mm;text-align:right;color:#444}.box{width:6mm;height:6mm;border:.6mm solid #111;border-radius:1.2mm;flex:none}
 .inhalt .tipp{margin:4mm 0 0;text-align:center;font-size:4.2mm;color:#555}
 .folge .kopf{display:flex;align-items:center;gap:6mm}
@@ -45,7 +45,10 @@ def cover(bild):
 
 def inhalt():
     li = ''.join(f'<li><span class="box"></span><b>{i + 1}</b> {html.escape(t)}</li>' for i, t in enumerate(TITEL))
-    return (f'<section class="s inhalt">{LOCH}<h1>Meine 24 Türchen</h1><ol>{li}</ol>'
+    # 22.11. Toni: Seite 2 mit „Onni“ + Figur und dezent „Onnis Adventsgeschichten · wichtellos.de“, dann die Folgen mit Kästchen
+    return (f'<section class="s inhalt">{LOCH}<div class="ikopf"><div><p class="umriss" style="font-size:30mm;text-align:left">Onni</p>'
+            f'<p class="unter">Onnis Adventsgeschichten · wichtellos.de</p><h1>Meine 24 Türchen</h1></div>'
+            f'<img src="ausmal-onni-druck.png" alt=""></div><ol>{li}</ol>'
             f'<p class="tipp">Ausgemalt? Dann mach einen Haken ins Kästchen!</p>'
             f'<div class="fuss"><span>Onni – 24 Wichtelgeschichten · wichtellos.de</span><span>2</span></div></section>')
 
