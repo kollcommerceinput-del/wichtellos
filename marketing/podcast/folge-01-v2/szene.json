@@ -28,22 +28,21 @@
   "OI": {
    "stimme": "Fenrir",
    "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch. Hier gemütlich und vorfreudig, mit einem kleinen Kichern, das „pssst“ leise geflüstert."
+  },
+  "EE": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs, kurzer freundlicher Hinweis an die Eltern vor einer Gute-Nacht-Folge: warm, herzlich, natürliches Tempo, nicht verniedlichend. Auf Deutsch."
   }
  },
  "teile": [
   [
-   "EI",
-   "Hallo, liebe Eltern! Ein kurzer Hinweis vorab: Damit Onnis Welt so richtig lebendig wird, erzählen wir die Geschichten mit zauberhaften KI-Stimmen. Noch mehr Wichtel-Ideen für kleine und große Kinder findet ihr auf wichtellos Punkt de.",
+   "EE",
+   "Kurz vorab: Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
    2.2
   ],
   [
-   "EI",
-   "Und jetzt öffnet sich … Onnis Adventskalender! Jeden Tag ein neues Türchen.",
-   0.9
-  ],
-  [
-   "EI",
-   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Und ein Tipp für die Großen: Folgt uns, dann verpasst ihr kein einziges Abenteuer.",
+   "EE",
+   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich.",
    0.9
   ],
   [
@@ -275,154 +274,154 @@
    -20
   ],
   [
-   5,
+   4,
    0,
    "wind",
    "bis:8",
    -18
   ],
   [
-   8,
+   7,
    0,
    "kamin",
    "bis:11",
    null
   ],
   [
-   9,
+   8,
    0,
    "wind",
    5,
    -14
   ],
   [
-   9,
+   8,
    4.5,
    "schnuppern",
    1.6,
    null
   ],
   [
-   11,
+   10,
    0,
    "tuer-knarren",
    1.4,
    null
   ],
   [
-   11,
+   10,
    1.8,
    "schnee-schritte",
    5,
    null
   ],
   [
-   11,
+   10,
    1,
    "wind",
    "bis:19",
    -18
   ],
   [
-   19,
+   18,
    0,
    "rascheln-kurz",
    1.8,
    null
   ],
   [
-   19,
+   18,
    4.5,
    "eule",
    2,
    null
   ],
   [
-   23,
+   22,
    5,
    "schnee-schritte",
    3,
    null
   ],
   [
-   28,
+   27,
    0,
    "fluegel",
    3,
    null
   ],
   [
-   28,
+   27,
    1,
    "wind",
    "bis:33",
    -12
   ],
   [
-   33,
+   32,
    0,
    "fluegel",
    2.5,
    null
   ],
   [
-   33,
+   32,
    0.5,
    "wind",
    "bis:37",
    -20
   ],
   [
-   36,
+   35,
    0.5,
    "fluegel",
    2,
    -8
   ],
   [
-   37,
+   36,
    0,
    "uhr-takt",
    "bis:39",
    -16
   ],
   [
-   38,
+   37,
    0,
    "laufen-holz",
    3,
    null
   ],
   [
-   40,
+   39,
    0,
    "tuer-knarren",
    1.4,
    null
   ],
   [
-   42,
+   41,
    7,
    "bleistift",
    2.5,
    null
   ],
   [
-   44,
+   43,
    3,
    "tuer-knarren",
    1.2,
    null
   ],
   [
-   45,
+   44,
    4,
    "gaehnen",
    2.2,
    null
   ],
   [
-   51,
+   50,
    2.5,
    "gloeckchen",
    1.6,

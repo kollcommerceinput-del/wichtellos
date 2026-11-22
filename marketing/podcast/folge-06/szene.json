@@ -28,22 +28,21 @@
   "OI": {
    "stimme": "Fenrir",
    "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch. Hier gemütlich und vorfreudig, mit einem kleinen Kichern, das „pssst“ leise geflüstert."
+  },
+  "EE": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs, kurzer freundlicher Hinweis an die Eltern vor einer Gute-Nacht-Folge: warm, herzlich, natürliches Tempo, nicht verniedlichend. Auf Deutsch."
   }
  },
  "teile": [
   [
-   "EI",
-   "Hallo, liebe Eltern! Ein kurzer Hinweis vorab: Damit Onnis Welt so richtig lebendig wird, erzählen wir die Geschichten mit zauberhaften KI-Stimmen. Noch mehr Wichtel-Ideen für kleine und große Kinder findet ihr auf wichtellos Punkt de.",
+   "EE",
+   "Kurz vorab: Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
    2.2
   ],
   [
-   "EI",
-   "Und jetzt öffnet sich … Onnis Adventskalender! Jeden Tag ein neues Türchen.",
-   0.9
-  ],
-  [
-   "EI",
-   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Und ein Tipp für die Großen: Folgt uns, dann verpasst ihr kein einziges Abenteuer.",
+   "EE",
+   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich.",
    0.9
   ],
   [
@@ -198,77 +197,77 @@
    -20
   ],
   [
-   6,
+   5,
    -1.4,
    "gloeckchen",
    1.4,
    -24
   ],
   [
-   8,
+   7,
    -1.7,
    "laufen-holz",
    1.4,
    -14
   ],
   [
-   8,
+   7,
    -0.5,
    "rascheln-kurz",
    0.6,
    -12
   ],
   [
-   12,
+   11,
    -1.2,
    "tuer-knarren",
    1.2,
    null
   ],
   [
-   17,
+   16,
    -2.0,
    "laufen-holz",
    1.6,
    -18
   ],
   [
-   18,
+   17,
    -0.6,
    "glitzer",
    1.4,
    -14
   ],
   [
-   21,
+   20,
    -1.2,
    "laufen-holz",
    3,
    -14
   ],
   [
-   25,
+   24,
    3.5,
    "keks",
    1.5,
    -16
   ],
   [
-   28,
+   27,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   30,
+   29,
    -1.1,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   34,
+   33,
    2.5,
    "gloeckchen",
    1.6,

@@ -28,22 +28,21 @@
   "OI": {
    "stimme": "Fenrir",
    "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch. Hier gemütlich und vorfreudig, mit einem kleinen Kichern, das „pssst“ leise geflüstert."
+  },
+  "EE": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs, kurzer freundlicher Hinweis an die Eltern vor einer Gute-Nacht-Folge: warm, herzlich, natürliches Tempo, nicht verniedlichend. Auf Deutsch."
   }
  },
  "teile": [
   [
-   "EI",
-   "Hallo, liebe Eltern! Ein kurzer Hinweis vorab: Damit Onnis Welt so richtig lebendig wird, erzählen wir die Geschichten mit zauberhaften KI-Stimmen. Noch mehr Wichtel-Ideen für kleine und große Kinder findet ihr auf wichtellos Punkt de.",
+   "EE",
+   "Kurz vorab: Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
    2.2
   ],
   [
-   "EI",
-   "Und jetzt öffnet sich … Onnis Adventskalender! Jeden Tag ein neues Türchen.",
-   0.9
-  ],
-  [
-   "EI",
-   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Und ein Tipp für die Großen: Folgt uns, dann verpasst ihr kein einziges Abenteuer.",
+   "EE",
+   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich.",
    0.9
   ],
   [
@@ -216,56 +215,56 @@
    -20
   ],
   [
-   10,
+   9,
    0,
    "uhr-takt",
    "bis:13",
    -16
   ],
   [
-   8,
+   7,
    -1.1,
    "tuer-knarren",
    1.4,
    null
   ],
   [
-   11,
+   10,
    -0.9,
    "schnuppern",
    1.6,
    null
   ],
   [
-   13,
+   12,
    -1.1,
    "laufen-holz",
    4,
    -12
   ],
   [
-   30,
+   29,
    -1.1,
    "laufen-holz",
    3,
    -12
   ],
   [
-   31,
+   30,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   33,
+   32,
    -1.1,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   39,
+   38,
    2.5,
    "gloeckchen",
    1.6,
