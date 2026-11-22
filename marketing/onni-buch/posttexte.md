@@ -1,26 +1,28 @@
-# Werbe-Short „Geschichten + Ausmalen“ – Posttexte (22.11.2026)
+# Werbe-Short „Adventskalender + Ausmalbuch“ V3 – Posttexte (22.11.2026)
 
-Video: G:\Video bauen Projekte\Short Ausmalbuch\ (baut Video-Bauen; oben Folgenbild, unten passende Ausmalseite)
-Toni: „als Werbung quasi, also Geschichten und Ausmalen in einem“.
+Video: G:\Video bauen Projekte\Short Ausmalbuch\ausgabe\Short Ausmalbuch.mp4 (V3, 23,5 s, Haken „Hey du! Suchst du noch einen Adventskalender?“,
+Schluss „Folgen, liken, und schreib uns: Wie heißt dein Wichtel?“)
 Ziele: https://wichtellos.de/onni-adventskalender/ (Geschichten: Video + Podcast) · https://wichtellos.de/wichtel-ausmalbuch/ (PDF)
-KI-Label immer über den Plattform-Schalter, nicht im Text.
+KI-Label immer über den Plattform-Schalter, nicht im Text. Posten erst nach Tonis Ja.
 
 ## Instagram / Facebook (Reel)
-24 Türchen – 24 Wichtelgeschichten 🎄 Jeden Tag eine neue, als Video und zum Anhören. Und danach wird ausgemalt: Zu jedem Türchen gibt es das passende Bild! 🎨
-Das Besondere: Dein Kind gibt dem Wichtel seinen eigenen Namen. Und zum Schluss wartet ein Weihnachtsbild zum Verschenken.
-👉 Geschichten und Ausmalbuch (PDF, 28 Seiten) gibt es kostenlos auf wichtellos.de – Link in Bio
-Ab 1. Dezember jeden Tag ein Türchen. Speichern nicht vergessen! 📌
+Suchst du noch einen Adventskalender? 🎄
+Bei uns öffnet sich ab 1. Dezember jeden Tag ein Türchen – mit einer neuen Wichtelgeschichte als Video und zum Anhören. Und das Beste: Zu jedem Türchen gibt es das passende Bild zum Ausmalen! 🎨
+Zum Mitmachen gibt dein Kind dem Wichtel seinen eigenen Namen – und zum Schluss wartet ein Bild zum Verschenken.
+👉 Alles kostenlos auf wichtellos.de – Link in Bio
+💬 Schreib uns in die Kommentare: Wie heißt dein Wichtel?
 #adventskalender #wichtel #ausmalbilder #gutenachtgeschichte #adventszeitmitkindern #weihnachtenmitkindern #malenmitkindern #wichtelzauber #kinderpodcast #nopin
 
 ## TikTok
-24 Türchen, 24 Wichtelgeschichten 🎄 Erst die Geschichte hören, dann das passende Bild ausmalen 🎨 Alles kostenlos auf wichtellos.de #adventskalender #wichtel #ausmalbilder #gutenachtgeschichte #weihnachten #malenmitkindern
+Suchst du noch einen Adventskalender? 🎄 Jeden Tag eine Wichtelgeschichte + das passende Bild zum Ausmalen 🎨 Kostenlos auf wichtellos.de – und schreib uns: Wie heißt dein Wichtel? #adventskalender #wichtel #ausmalbilder #gutenachtgeschichte #weihnachten #malenmitkindern
 
 ## YouTube Shorts
-Titel: 24 Wichtelgeschichten + Ausmalbuch für den Advent 🎄🎨
+Titel: Suchst du noch einen Adventskalender? 24 Wichtelgeschichten + Ausmalbuch 🎄
 Beschreibung:
-Jeden Tag ein Türchen: eine Wichtelgeschichte als Video und Podcast – und das passende Bild zum Ausmalen. Kostenlos:
+Ab 1. Dezember jeden Tag ein Türchen: eine Wichtelgeschichte als Video und Podcast – und das passende Bild zum Ausmalen. Kostenlos:
 Geschichten: https://wichtellos.de/onni-adventskalender/
 Ausmalbuch (PDF): https://wichtellos.de/wichtel-ausmalbuch/
+Schreib uns in die Kommentare: Wie heißt dein Wichtel?
 #adventskalender #wichtel #ausmalbilder
 Einstellungen: nicht speziell für Kinder (richtet sich an Eltern) · KI-Verwendung Ja · Deutsch
 
