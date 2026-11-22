@@ -43,3 +43,11 @@ Je Folge das vorhandene **Titelbild** (G:\Video bauen Projekte\Titelbilder bzw. 
 | 22 | Onni und der Kakao-Bart | 7 | bild-07.jpg | Onni an der Kakaotasse |
 | 23 | Onni sagt allen Gute Nacht | 9 | bild-09.jpg | Onni umarmt den Teddy |
 | 24 | Onni fliegt nach Hause | 9 | bild-09.jpg | Onni fliegt auf Ulla |
+
+## Stand 22.11. abends (Toni über Video-Bauen)
+- **Mitmach-Buch ohne „Onni“:** Titel mit Namenslücke („1 ____ zieht ein“), das Kind gibt dem Wichtel selbst einen Namen
+  (Hinweis auf Seite 2, „Mein Wichtel heißt: ____“ auf Seite 3). Fußzeile auf jeder Seite: wichtellos.de + Mini-QR.
+- **Seiten:** 1 Cover (24 Wichtelgeschichten, Hier wohnt + Türschild, Dieses Buch gehört) · 2 Inhaltsverzeichnis mit Kästchen +
+  QR /onni-adventskalender/ · 3 Wichtel-Figur zum Ausmalen · ab 4 Türchen 1–24.
+- **Gesamt-PDF schon VOR dem Advent zum Download** auf der Website (zusätzlich tägliche Einzelseiten möglich).
+- Probe: marketing/onni-buch/probe/ (bau.py → render.js). Linienbilder: G:\Video bauen Projekte\Ausmalbuch\ausmal-NN.jpg
