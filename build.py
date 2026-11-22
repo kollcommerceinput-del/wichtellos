@@ -2644,6 +2644,8 @@ def tassen_page():
 ONNI_FOLGEN = ['Onni zieht ein', 'Onni und das Kuscheltier', 'Onni und der Keks', 'Onnis Waschtag', 'Onni im Sockenkorb', 'Onni und der Nikolaus', 'Ein Lied für Onni']
 # YouTube-Links je Folge (Tag: URL), sobald der Kanal steht – Knopf „Auf YouTube ansehen“ erscheint dann automatisch
 ONNI_YT = {}
+# Türchen, die schon vor ihrem Tag offen sind (Toni 22.11.: Folge 1 als Kostprobe zum Anlocken)
+ONNI_VORSCHAU = {1}
 # „Für die Großen“ unter dem Video – getrennt von der Geschichte, je nach Tag ein anderes Ziel (Toni 05.11.)
 ONNI_GROSS = [(5, '/nikolaus-geschenke/', 'Nikolaus-Geschenke für den Stiefel'),
               (19, '/geschenkfinder/', 'Geschenkideen für Weihnachten und zum Wichteln'),
@@ -2679,6 +2681,8 @@ def onni_kalender_page():
         href, label = next((h, l) for bis, h, l in ONNI_GROSS if tag <= bis)
         attrs = f' data-src="/fotos/onni/folge-{n}.mp4" data-poster="/fotos/onni/folge-{n}-poster.webp" data-titel="{esc(titel)}"' if has else ''
         yt = f' data-yt="{esc(ONNI_YT[tag])}"' if tag in ONNI_YT else ''
+        if has and tag in ONNI_VORSCHAU:
+            yt += ' data-vorschau="1"'
         doors.append(f'<button type="button" class="ak-door" id="tag-{tag}" data-tag="{tag}"{attrs}{yt} data-gross="{href}" data-gross-text="{esc(label)}">'
                      f'<span class="ak-num">{tag}</span><span class="ak-info">{tag}. Dezember</span></button>')
     # Türchen durcheinander wie bei einem echten Adventskalender (Toni 05.11.) – feste Reihenfolge, damit sie sich nicht ändert
@@ -2687,8 +2691,20 @@ def onni_kalender_page():
 <h1>Onnis Adventskalender: 24 Wichtel-Geschichten für kleine und große Kinder</h1>
 {ai_photo('wichtel3d-onni-kekse', 'Plüsch-Wichtel Onni steht unter dem Weihnachtsbaum neben einem Teddy vor einem Teller mit riesigen Keksen')}
 <p class="lead">Onni ist der kleine Wichtel, der hinter der Wichteltür wohnt. Jede Nacht im Advent erlebt er ein kleines Abenteuer: Er wäscht seine Wäsche in einer Teetasse, findet Kekse so groß wie Wagenräder und schreibt jeden Abend einen Brief. <b>Ab dem 1. Dezember öffnet sich hier jeden Tag ein Türchen mit einer neuen Geschichte als kurzes Video</b> – kostenlos und ohne Anmeldung.</p>
-<p class="tip">🎧 <b>Onni zum Hören:</b> Ab dem 1. Dezember gibt es jede Geschichte zusätzlich als Gute-Nacht-Geschichte zum Hören (ca. 6 Minuten) – zum Einschlafen und für unterwegs, für Kleine und Große. Den Trailer könnt ihr schon jetzt hören: <a href="https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE" rel="noopener" target="_blank">auf Spotify</a> oder <a href="https://music.amazon.de/podcasts/cad99cfb-d856-4dfc-ac25-3b03c2c006ab" rel="noopener" target="_blank">bei Amazon Music</a> (beide kostenlos, auch auf dem iPhone).</p>
-<p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 am <b>1. Dezember</b>, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
+<p class="tip">🎧 <b>Onni zum Hören:</b> Ab dem 1. Dezember gibt es jede Geschichte zusätzlich als Gute-Nacht-Geschichte zum Hören (ca. 6 Minuten) – zum Einschlafen und für unterwegs, für Kleine und Große. <b>Folge 1 könnt ihr schon jetzt hören:</b> <a href="https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE" rel="noopener" target="_blank">auf Spotify</a> oder <a href="https://music.amazon.de/podcasts/cad99cfb-d856-4dfc-ac25-3b03c2c006ab" rel="noopener" target="_blank">bei Amazon Music</a> (beide kostenlos, auch auf dem iPhone).</p>
+
+<div class="ak-gratis">
+<h2>🎁 Folge 1 gratis zum Mitnehmen</h2>
+<p>Schon vor dem 1. Dezember zum Reinschnuppern: <b>„Onni zieht ein“</b> als kurzes Video und als Gute-Nacht-Geschichte zum Hören – zum Herunterladen, für unterwegs oder für den Kreativ-Tonie und die Yoto-Box. Türchen 1 im Kalender unten ist schon offen.</p>
+<p class="ak-gratis-knoepfe"><a class="btn-primary" href="/fotos/onni/folge-01.mp4" download="Onni-Folge-01-Onni-zieht-ein.mp4">⬇️ Video herunterladen (MP4)</a>
+<a class="btn-primary" href="/fotos/onni/onni-folge-01.mp3" download="Onni-Folge-01-Onni-zieht-ein.mp3">🎧 Hörfassung herunterladen (MP3, 6 Min.)</a></p>
+<p><b>Mehr hören?</b> Abonniert Onni – dann verpasst ihr ab 1. Dezember kein Türchen:</p>
+<p class="ak-folgen-knoepfe"><a class="btn-secondary" href="https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE" rel="noopener" target="_blank">{ICONS["spotify"]} Auf Spotify folgen</a>
+<a class="btn-secondary" href="https://www.youtube.com/@WichtelLos?sub_confirmation=1" rel="noopener" target="_blank">{ICONS["youtube"]} YouTube abonnieren</a>
+<a class="btn-secondary" href="https://www.instagram.com/wichtellos/" rel="noopener" target="_blank">{ICONS["instagram"]} Instagram folgen</a></p>
+<p class="hint">Video und Stimmen sind mit KI erstellt. Für zu Hause, Kita und Schule kostenlos.</p>
+</div>
+<p class="tip">📅 Pünktlich wie ein Türchen: Jedes Video erscheint genau an seinem Tag um Mitternacht – Folge 1 gibt es schon jetzt als Kostprobe, Folge 24 an Heiligabend.<br>📖 <b>Ende November</b> kommen alle 24 Geschichten zusätzlich zum Vorlesen. Bis dahin kannst du schon alles vorbereiten – die Wichteltür, die Briefe und die Ausmalbilder findest du unten.</p>
 
 <details class="ak-folgen"><summary class="btn-primary">🔔 Keine Folge verpassen</summary>
 <p>Folge Onni – dann bekommst du jede neue Geschichte mit:</p>
