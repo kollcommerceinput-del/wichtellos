@@ -1747,7 +1747,7 @@ def ausmalbuch_page():
     body = f"""<article>
 <h1>Wichtel-Ausmalbuch: 24 Wichtelgeschichten zum Ausmalen</h1>
 <p class="lead">Ein ganzes Ausmalbuch für den Advent – kostenlos als PDF zum Ausdrucken: Cover, Inhaltsverzeichnis und für jedes Türchen vom 1. bis 24. Dezember eine Ausmalseite. Das Besondere: Euer Kind gibt dem Wichtel selbst einen Namen und schreibt ihn überall in die Lücken – so wird es sein eigenes Wichtelbuch.</p>
-<p><a class="btn-primary" href="{pdf}" target="_blank" rel="noopener">🖨️ Ausmalbuch als PDF (27 Seiten, A4)</a></p>
+<p><a class="btn-primary" href="{pdf}" target="_blank" rel="noopener">🖨️ Ausmalbuch als PDF (28 Seiten, A4)</a></p>
 
 <h2>So sieht das Buch aus</h2>
 <div class="ausmal-grid">
@@ -1756,10 +1756,11 @@ def ausmalbuch_page():
 
 <h2>So funktioniert das Mitmach-Buch</h2>
 <ol>
-  <li><b>Ausdrucken:</b> alle 27 Seiten auf normalem A4-Papier – oder jeden Tag eine Seite.</li>
+  <li><b>Ausdrucken:</b> alle 28 Seiten auf normalem A4-Papier – oder jeden Tag eine Seite.</li>
   <li><b>Namen geben:</b> Auf Seite 3 steht der Wichtel zum Ausmalen und darunter „Mein Wichtel heißt: ____“. Diesen Namen schreibt euer Kind in alle Lücken, auf dem Cover an die Wichteltür und ins Inhaltsverzeichnis.</li>
   <li><b>Jeden Tag ein Türchen:</b> Zu jeder Seite gibt es die passende Geschichte – als kurzes Video und als Gute-Nacht-Podcast in <a href="/onni-adventskalender/">Onnis Adventskalender</a>. Hören, ausmalen, im Inhaltsverzeichnis einen Haken setzen.</li>
   <li><b>Sammeln:</b> Links ist auf jeder Seite ein Rand mit Lochmarken. Lochen, ein rotes Band durchziehen oder in einen Schnellhefter – an Heiligabend ist das Buch fertig.</li>
+  <li><b>Verschenken:</b> Die letzte Seite „Frohe Weihnachten!“ hat Platz für „Für“ und „Von“ – ausmalen, heraustrennen und an Heiligabend verschenken.</li>
 </ol>
 <p class="hint">Tipp: Die Bilder haben dicke Linien und viel Platz – gut für Wachsmalstifte und kleine Hände. Noch kein Name für den Wichtel? Der <a href="/wichteltuer/#wichtelname">Wichtelnamen-Generator</a> hilft.</p>
 
@@ -1768,7 +1769,7 @@ def ausmalbuch_page():
 <p class="hint">Das Ausmalbuch ist für zu Hause, Kita und Schule kostenlos. Die Bilder wurden mit KI erstellt (Google Gemini/Flow).</p>
 </article>"""
     page('/wichtel-ausmalbuch/', 'Wichtel-Ausmalbuch kostenlos: 24 Wichtelgeschichten als PDF zum Ausmalen',
-         'Kostenloses Wichtel-Ausmalbuch für den Advent: 27 Seiten als PDF, für jedes Türchen vom 1. bis 24. Dezember eine Ausmalseite – zum Mitmachen mit eigenem Wichtelnamen.', body,
+         'Kostenloses Wichtel-Ausmalbuch für den Advent: 28 Seiten als PDF, für jedes Türchen vom 1. bis 24. Dezember eine Ausmalseite plus Weihnachtsbild zum Verschenken – zum Mitmachen mit eigenem Wichtelnamen.', body,
          crumb='Wichtel-Ausmalbuch', playful=True)
 
 
