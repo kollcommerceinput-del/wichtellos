@@ -18,7 +18,7 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .l1{top:90mm}.l2{top:170mm}
 .rand{position:absolute;left:19mm;top:10mm;bottom:10mm;border-left:.3mm dotted #bbb}
 .umriss{color:#fff;-webkit-text-stroke:1.1mm #111;paint-order:stroke fill;font-weight:600;line-height:1;text-align:center;margin:0}
-.cover img{display:block;margin:4mm auto 0;max-height:158mm;max-width:100%}
+.cbild{position:relative;height:269mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-12mm;right:-12mm;top:0}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
 .gehoert{margin-top:auto;font-size:8mm;display:flex;gap:4mm;align-items:flex-end}.gehoert span{flex:1;border-bottom:.6mm solid #111;height:10mm}
 .inhalt h1{font-size:12mm;margin:0 0 5mm;text-align:center}
 .inhalt ol{list-style:none;padding:0;margin:0;font-size:5.1mm}
@@ -36,9 +36,11 @@ LOCH = '<div class="rand"></div><div class="loch l1"></div><div class="loch l2">
 
 
 def cover(bild):
-    return (f'<section class="s cover">{LOCH}<p class="umriss" style="font-size:42mm">Onni</p>'
-            f'<p class="umriss" style="font-size:15mm;margin-top:3mm">24 Adventsgeschichten</p>'
-            f'<img src="{bild}" alt=""><div class="gehoert">Dieses Buch gehört:<span></span></div></section>')
+    # 22.11. Toni: Cover ohne Onni – nur seine Tür mit Holzschild („Hier wohnt … / Dieses Buch gehört …“), Titel oben im freien Bereich
+    return (f'<section class="s cover">{LOCH}<div class="cbild"><img src="{bild}" alt="">'
+            f'<div class="ctitel"><p class="umriss" style="font-size:32mm">Onni</p>'
+            f'<p class="umriss" style="font-size:12.5mm;margin-top:2mm">24 Adventsgeschichten</p></div>'
+            f'<div class="schild"><span>Dieses Buch gehört:</span><i></i><i></i></div></div></section>')
 
 
 def inhalt():
@@ -56,7 +58,7 @@ def folge(n, bild, satz):
 
 
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
-       + cover('../../onni/ausmal-tuer.png') + inhalt()
+       + cover('ausmal-cover-druck.png') + inhalt()
        + folge(13, 'ausmal-13-druck.png', '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“')
        + '</body></html>')
 (HIER / 'probe.html').write_text(doc, encoding='utf-8')
