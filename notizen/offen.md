@@ -290,3 +290,4 @@ TikTok-Upload im Browser klappt (nur Folgen nicht).
   Insta+FB geplant 25.11. 18:43 (Upload-Kopie 9,2 MB, Bildzahl/Länge/Bilder gegen Original geprüft).
 - Achtung: Die 4 Hochformat-Shorts sind in der ALTEN Fassung (Tempo 1,2) gepostet/geplant; Video-Bauen hat danach 1,05 gebaut. Tausch = Tonis Entscheidung (offen).
 - Szenenpläne F15–F24 für die Bilder: marketing/reel/onni-neu/szenenplan-F*.md (Toni 21.11.: PC Texte/Pläne, Video-Bauen Bilder; Toni prüft nach allen Bildern).
+- 22.11. Podcast Folge 13 „Onni und das Lichterfest“ gebaut (`marketing/podcast/folge-13/`, Sprecherfassung PC aus Geschichtentext, 5:47, 6 + 10 Einzel-Anfragen; Schnitte 19–22 im Bündel verrutscht → einzeln neu; Aussprache geprüft, nur „feier ich“). Toni hört ab. Weiter: 14–24 (Sprecherfassungen fehlen noch).
