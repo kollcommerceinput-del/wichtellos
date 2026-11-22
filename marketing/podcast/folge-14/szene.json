@@ -1,0 +1,241 @@
+{
+ "out": "onni-folge-14.mp3",
+ "rollen": {
+  "E": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs für Kinder ab 4: natürlich, warm und lebendig, normales Erzähltempo wie ein gutes Hörbuch. Nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "O": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch."
+  },
+  "U": {
+   "stimme": "Gacrux",
+   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+  },
+  "OF": {
+   "stimme": "Fenrir",
+   "stil": "Onni flüstert ganz leise und müde kurz vor dem Einschlafen, ruhig und sanft, natürlich, nicht kindlich. Auf Deutsch."
+  },
+  "EA": {
+   "stimme": "Charon",
+   "stil": "Erzähler zum Schluss einer Gute-Nacht-Geschichte: leise, ruhig, langsam und warm. Auf Deutsch."
+  },
+  "EI": {
+   "stimme": "Charon",
+   "stil": "Erzähler eines Kinderhörbuchs im Intro einer Gute-Nacht-Folge. Erster Absatz warm und freundlich an die Eltern, zweiter Absatz geheimnisvoll und freudig, dritter Absatz herzlich an das Kind. Natürliches, ruhiges Tempo, nicht verniedlichend, keine Babysprache. Auf Deutsch."
+  },
+  "OI": {
+   "stimme": "Fenrir",
+   "stil": "Onni, ein mutiger, abenteuerlustiger Wichtel. Klingt wie ein junger erwachsener Mann: wach, neugierig, begeistert, mit Energie. Auf keinen Fall kindlich, keine Kinderstimme, keine Babysprache. Auf Deutsch. Hier gemütlich und vorfreudig, mit einem kleinen Kichern, das „pssst“ leise geflüstert."
+  }
+ },
+ "teile": [
+  [
+   "EI",
+   "Hallo, liebe Eltern! Ein kurzer Hinweis vorab: Damit Onnis Welt so richtig lebendig wird, erzählen wir die Geschichten mit zauberhaften KI-Stimmen. Noch mehr Wichtel-Ideen für kleine und große Kinder findet ihr auf wichtellos Punkt de.",
+   2.2
+  ],
+  [
+   "EI",
+   "Und jetzt öffnet sich … Onnis Adventskalender! Jeden Tag ein neues Türchen.",
+   0.9
+  ],
+  [
+   "EI",
+   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Und ein Tipp für die Großen: Folgt uns, dann verpasst ihr kein einziges Abenteuer.",
+   0.9
+  ],
+  [
+   "OI",
+   "Macht es euch so richtig kuschelig und spitzt die Ohren … pssst, es geht los!",
+   2
+  ],
+  [
+   "E",
+   "Türchen vierzehn. Onni im Schuhchaos.",
+   1.6
+  ],
+  [
+   "E",
+   "Onni wachte auf und streckte sich unter seiner Ringelsocke. Sein Stübchen war heute dunkel. Natürlich, die Laterne stand ja noch beim Teddy. Onni stand auf und öffnete seine rote Tür."
+  ],
+  [
+   "E",
+   "Der Brief von gestern war fort. Onni lief durch den Flur bis ins Wohnzimmer. Unter dem Weihnachtsbaum saß der Teddy und schlief. Neben ihm leuchtete die kleine Laterne, genau da, wo Onni sie hingestellt hatte."
+  ],
+  [
+   "O",
+   "Danke fürs Aufpassen, Teddy. Jetzt brauche ich mein Licht wieder."
+  ],
+  [
+   "E",
+   "Onni nahm die Laterne und strich dem Teddy über die Pfote. Dann lief er zurück in den Flur."
+  ],
+  [
+   "E",
+   "Neben der Haustür standen die Schuhe der ganzen Familie. Große Stiefel, kleine Turnschuhe, weiche Hausschuhe, alle in einer langen Reihe. Für Onni war jeder Schuh so groß wie eine Höhle. Er hob die Laterne und leuchtete in den ersten hinein."
+  ],
+  [
+   "E",
+   "Neugierig steckte er die Nase hinein und schnupperte."
+  ],
+  [
+   "E",
+   "Der erste Schuh roch nach Matsch, nach nassen Wegen und nach Regen. Der zweite roch nach Herbstlaub, ein bisschen erdig und ein bisschen nach Wald. Onni nickte zufrieden. Dann ging er zum dritten Schuh und steckte die Nase hinein."
+  ],
+  [
+   "E",
+   "Und da roch es nach Käsefüßen. Und zwar so sehr, dass Onni rückwärts stolperte."
+  ],
+  [
+   "O",
+   "Oh nein! Das riecht ja schlimmer als ein alter Käse!"
+  ],
+  [
+   "E",
+   "Schnell hielt er sich die Nase zu. Dabei rutschte ihm die Mütze über die Augen, und jetzt sah er gar nichts mehr. Mit der einen Hand hielt er die Nase zu, mit der anderen schob er die Mütze wieder hoch."
+  ],
+  [
+   "O",
+   "So geht das nicht. Da muss ein Wichtel helfen."
+  ],
+  [
+   "E",
+   "Onni überlegte. Was riecht gut? Was riecht so gut, dass sogar Käsefüße dagegen nicht ankommen? Und dann fiel es ihm ein. Im Wohnzimmer lagen noch die Mandarinenschalen von neulich, von den Mandarinen mit den Gesichtern."
+  ],
+  [
+   "E",
+   "Onni lief zurück ins Wohnzimmer. Und da lagen sie, auf einem kleinen Teller neben dem Sofa. Die Schalen rochen frisch und süß, nach Sonne und nach Weihnachten."
+  ],
+  [
+   "O",
+   "Genau das Richtige."
+  ],
+  [
+   "E",
+   "Onni nahm ein Stück Schale und schleppte es in den Flur. Für ihn war es so groß wie ein Kissen. Dann lief er zurück und holte das nächste. Und das nächste. Hin und her, immer wieder hin und her, bis ihm die Beine wehtaten."
+  ],
+  [
+   "E",
+   "In jeden Schuh stopfte er ein Stück Mandarinenschale. In die großen Stiefel, in die kleinen Turnschuhe, in die weichen Hausschuhe. Und in den Käsefuß-Schuh gleich zwei."
+  ],
+  [
+   "E",
+   "Dann stellte er sich in die Mitte des Flurs und schnupperte noch einmal."
+  ],
+  [
+   "E",
+   "Kein Matsch mehr. Kein Käse mehr. Der ganze Flur duftete nach Mandarinen."
+  ],
+  [
+   "O",
+   "Herrlich. So riecht ein Wichtelflur."
+  ],
+  [
+   "E",
+   "Onni war sehr zufrieden mit sich. Doch dann hob er die Laterne und schaute sich genauer um. Beim vielen Hin und Her hatte er die Schuhe immer wieder angestoßen und umgeschubst. Jetzt lagen sie kreuz und quer im ganzen Flur. Ein Stiefel lag auf der Seite, ein Turnschuh stand verkehrt herum, und ein Hausschuh lag ganz allein unter der Garderobe."
+  ],
+  [
+   "O",
+   "Welcher gehört denn jetzt zu welchem?"
+  ],
+  [
+   "E",
+   "Onni versuchte es. Er stellte einen großen Stiefel neben einen kleinen Turnschuh. Das passte nicht. Er stellte einen Hausschuh neben einen Stiefel. Das passte auch nicht. Schließlich gab er auf."
+  ],
+  [
+   "E",
+   "Er lief zurück zu seiner roten Tür. Im Stübchen setzte er sich an den Tisch und schrieb im Licht der Laterne einen Brief."
+  ],
+  [
+   "O",
+   "Eure Schuhe duften jetzt nach Mandarinen! Nur weiß ich nicht mehr, welcher zu welchem gehört. Hilfst du mir?"
+  ],
+  [
+   "E",
+   "Den Brief legte er vor seine Tür. Dann machte er sie leise zu."
+  ],
+  [
+   "E",
+   "Onni kuschelte sich unter seine Ringelsocke. Es roch noch ein bisschen nach Mandarinen, denn seine Hände dufteten davon. Dann kam ihm ein Gedanke. Vorsichtig hob er einen Zipfel der Ringelsocke an die Nase und schnupperte daran."
+  ],
+  [
+   "O",
+   "Glück gehabt. Die riecht noch nicht nach Käsefüßen."
+  ],
+  [
+   "E",
+   "Und ganz leise flüsterte er:",
+   0.4
+  ],
+  [
+   "OF",
+   "Gute Nacht. Bis morgen.",
+   1
+  ],
+  [
+   "EA",
+   "Dann schlief Onni ein.",
+   3
+  ]
+ ],
+ "geraeusche": [
+  [
+   1,
+   -1.8,
+   "gloeckchen",
+   1.6,
+   -20
+  ],
+  [
+   6,
+   -1.4,
+   "tuer-knarren",
+   1.2,
+   null
+  ],
+  [
+   9,
+   -1.5,
+   "laufen-holz",
+   1.3,
+   -14
+  ],
+  [
+   11,
+   -1.5,
+   "schnuppern",
+   1.6,
+   null
+  ],
+  [
+   20,
+   -1.5,
+   "laufen-holz",
+   1.3,
+   -14
+  ],
+  [
+   22,
+   -1.5,
+   "schnuppern",
+   1.6,
+   null
+  ],
+  [
+   28,
+   -1.5,
+   "bleistift",
+   2.5,
+   null
+  ],
+  [
+   34,
+   2.5,
+   "gloeckchen",
+   1.6,
+   -26
+  ]
+ ]
+}
