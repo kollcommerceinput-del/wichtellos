@@ -1076,3 +1076,15 @@ table.vergleich th, table.vergleich td { border: 1px solid var(--border); paddin
 table.vergleich thead th { background: var(--primary); color: #fff; }
 table.vergleich tbody th { font-weight: 700; }
 .ms-kachel { min-width: 0; overflow-wrap: anywhere; }
+
+/* 22.11.: Querformat-Video (langes Erklärvideo) + Kapitel + Text zum Lesen */
+.video-wichtel.video-quer { float: none; width: 100%; max-width: 760px; margin: 10px auto 12px; }
+.video-quer .play { top: 76%; }
+.video-kapitel { list-style: none; margin: 0 auto 14px; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 12px; }
+.video-kapitel button { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 4px 2px; font: inherit; font-size: .92rem; color: inherit; cursor: pointer; border-radius: 6px; }
+.video-kapitel button:hover, .video-kapitel button:focus-visible { background: #fbeee0; }
+.video-kapitel span { display: inline-block; min-width: 2.6em; font-weight: 600; color: #c62828; font-variant-numeric: tabular-nums; }
+.video-text { max-width: 760px; margin: 0 auto 22px; }
+.video-text summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.video-text .quelle { font-size: .8rem; color: #6d5d57; }
+@media print { .video-kapitel { display: none; } }

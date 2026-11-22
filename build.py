@@ -216,8 +216,9 @@ def video_block(v=None):
               'caption': 'So geht’s in 25 Sekunden · KI-generiert'}
     # 16.11.: echtes <video preload="none"> statt Bild + Nachladen – Google fand sonst kein Video („Kein Video indexiert“);
     # preload="none" lädt weiterhin erst beim Abspielen (keine Daten vorher), eigener Play-Knopf darüber (site.js [data-play])
-    return (f'<figure class="video-wichtel"><div class="vw">'
-            f'<video src="{v['src']}" poster="{v['poster']}" preload="none" playsinline width="540" height="960" title="{esc(v['label'])}"></video>'
+    quer = v.get('quer')
+    return (f'<figure class="video-wichtel{" video-quer" if quer else ""}"><div class="vw">'
+            f'<video src="{v['src']}" poster="{v['poster']}" preload="none" playsinline width="{1280 if quer else 540}" height="{720 if quer else 960}" title="{esc(v['label'])}"></video>'
             f'<button type="button" class="play" data-play aria-label="Video abspielen: {v['label']}">▶</button></div>'
             f'<figcaption>{v['caption']}</figcaption></figure>')
 
@@ -247,9 +248,42 @@ VIDEO_ORGA = {'src': '/fotos/video-wichteln-organisieren.mp4', 'poster': '/fotos
               'beschreibung': 'Namen eintragen, mit einem Klick auslosen, jeder bekommt seinen geheimen Wichtel-Link per WhatsApp oder E-Mail – kostenlos und ohne Anmeldung.',
               'alt': 'Handy mit WhatsApp-Nachricht „Hier ist dein geheimer Wichtel-Link“',
               'caption': 'So geht’s in 18 Sekunden · Bilder und Stimme KI-generiert'}
-VIDEOS = [VIDEO_ERKLAERT, VIDEO_KINDER, VIDEO_TUER, VIDEO_ORGA]
+# 22.11. (Toni): langes Erklärvideo „Wichtel & Julklapp – die ganze Geschichte“ (YouTube BpF3rtKspqw) auch direkt bei uns, mit Kapiteln + Text
+VIDEO_GESCHICHTE = {'src': '/fotos/video-wichtel-julklapp-geschichte.mp4', 'poster': '/fotos/video-wichtel-julklapp-geschichte-poster.webp',
+                    'dauer': 'PT3M14S', 'datum': '2026-11-21T19:00:00+01:00', 'quer': True,
+                    'label': 'Wichtel & Julklapp – die ganze Geschichte (Woher kommt das Wichteln?)',
+                    'beschreibung': 'Woher kommt das Wichteln? Vom altdeutschen „Wicht“ über die Wichtelmänner der Brüder Grimm, die Heinzelmännchen und den Nisse bis zum Julklapp, der als Scherz begann – in 3 Minuten erklärt.',
+                    'alt': 'Titelbild: Wichtel · Julklapp · Wichteln – über tausend Jahre Geschichte',
+                    'seite': '/woher-kommt-wichteln/',
+                    'caption': 'Wichtel &amp; Julklapp – die ganze Geschichte (3:14) · Bilder und Stimme KI-generiert · '
+                               '<a href="https://youtu.be/BpF3rtKspqw" target="_blank" rel="noopener">auch auf YouTube</a>',
+                    'kapitel': [(0, 'Wichtel, Julklapp, Wichteln – was heißt „Wicht“?'), (13, 'Wichtel in Märchen und Sagen'),
+                                (27, 'Die Wichtelmänner und die Heinzelmännchen'), (51, 'Nisse und Tomte im Norden'),
+                                (73, 'Der älteste Nisse und der Julbock'), (87, 'Was heißt Julklapp?'), (100, 'Julklapp war ein Scherz'),
+                                (123, 'So wichteln wir heute'), (135, 'Wichteln weltweit'), (149, 'Die Wichteltür aus Dänemark'),
+                                (163, 'Warum zieht sich einer selbst?'), (177, 'Online auslosen')]}
+VIDEOS = [VIDEO_ERKLAERT, VIDEO_KINDER, VIDEO_TUER, VIDEO_ORGA, VIDEO_GESCHICHTE]
 VIDEO_EINBAU = {'/wichteltuer/': VIDEO_TUER}  # WhatsApp-Seite: VIDEO_ORGA direkt in whatsapp_page() (ersetzt dort das 3D-Video)
 
+
+
+def video_kapitel(v):
+    """Kapitel-Liste unter einem Video; Klick springt an die Stelle (site.js [data-zeit])."""
+    li = ''.join(f'<li><button type="button" data-zeit="{t}"><span>{t // 60}:{t % 60:02d}</span> {esc(n)}</button></li>' for t, n in v['kapitel'])
+    return f'<ol class="video-kapitel" aria-label="Kapitel im Video">{li}</ol>'
+
+
+GESCHICHTE_TEXT = """<p>Wichtel. Julklapp. Wichteln. Drei Wörter – eine Geschichte, die über tausend Jahre alt ist. „Wicht“ hieß im Altdeutschen einfach: Lebewesen. Ein Wichtel ist also ein kleines Wesen.</p>
+<p>In Märchen und Sagen sind Wichtel klein und leben in Gruppen – in Höhlen, unter der Erde oder in versteckten Ecken unserer Häuser. Sie helfen den Menschen heimlich bei der Arbeit. Aber: Werden sie entdeckt, verschwinden sie.</p>
+<p>Die Brüder Grimm erzählen davon im Märchen „Die Wichtelmänner“: Nachts nähen kleine Wichtel für einen armen Schuster die schönsten Schuhe. Als die Schusterfrau ihnen zum Dank Kleider näht, tanzen sie vor Freude – und kommen nie wieder. In Köln erzählt man dasselbe von den Heinzelmännchen: Sie erledigten nachts die Arbeit der Bürger – bis man sie beobachtete. Seitdem sind sie fort.</p>
+<p>Im Norden heißt der Wichtel Nisse – in Dänemark und Norwegen. In Schweden heißt er Tomte. Der Name Nisse kommt von Niels, der dänischen Form von Nikolaus. Der Nisse wohnt auf dem Hof, beschützt die Tiere und trägt eine rote Mütze. Wer ihn gut behandelt, hat Glück. Wer nicht, dem spielt er Streiche. Zu Weihnachten bekommt er eine Schüssel Grütze. Schon 1555 malte der schwedische Bischof Olaus Magnus den ältesten bekannten Nisse.</p>
+<p>Und die Geschenke? Die brachte in Skandinavien früher nicht der Weihnachtsmann, sondern der Julbock: ein Ziegenbock, heute meist aus Stroh.</p>
+<p>Jetzt wird es lustig: Julklapp. „Jul“ heißt Weihnachten, „klapp“ kommt von klopfen. Am Weihnachtsmorgen klopfte es an Tür oder Fenster – und sofort flog ein gut verpacktes Päckchen herein. Wer geworfen hatte? Niemand sah es. Angefangen hat das als Scherz: Die Jugendlichen im Dorf schlichen herum, klopften an und warfen ein Scherzgeschenk hinein – ein Holzscheit oder eine Strohfigur, dazu ein Zettel mit einem frechen Vers. Erwischen lassen durfte man sich nicht! Ein Scherzgeschenk, heimlich verschenkt – das ist der Urahn vom <a href="/schrottwichteln/">Schrottwichteln</a>.</p>
+<p>Aus Julklapp und Wichtel wurde das Wichteln, wie wir es kennen: Jeder zieht heimlich einen Namen und beschenkt genau diese Person. Keiner weiß, von wem was kommt – wie bei den Wichteln. Heute wichteln Familien, Schulklassen, Vereine und Kollegen. In Österreich sagt man Engerl-Bengerl, auf Englisch Secret Santa, in Spanien „amigo invisible“ – der unsichtbare Freund.</p>
+<p>Aus Dänemark kam ein neuer Brauch zu uns: die <a href="/wichteltuer/">Wichteltür</a>, auf Dänisch „Nissedør“. Eine winzige Tür über der Fußleiste. Abends legen Kinder etwas davor, morgens ist eine Überraschung da. Den Wichtel sehen sie nie – das gehört zum Spiel.</p>
+<p>Übrigens: Wer mit Zetteln wichtelt, kennt das Problem – einer zieht sich selbst. Bei mehr als vier Leuten passiert das in rund 63 Prozent der Fälle mindestens einmal. Darum losen heute viele online aus, zum Beispiel kostenlos hier auf <a href="/">wichtellos.de</a> – ohne Anmeldung, jeder bekommt seinen geheimen Link.</p>
+<p>Wichtel, Julklapp, Wichteln: Am Ende geht es immer um dasselbe – heimlich jemandem eine Freude machen.</p>
+<p class="quelle">Quellen: Wikipedia „Wichtel“, „Wichteln“, „Nisse“, „Julbock“, „Heinzelmännchen“; schwedische Wikipedia „Julklapp“.</p>"""
 
 def video_schema(body, extra):
     """VideoObject für jedes bekannte Video, das im Seiteninhalt steckt (nicht doppelt, wenn schon vorhanden)."""
@@ -257,7 +291,10 @@ def video_schema(body, extra):
         if f'src="{v["src"]}"' in body and DOMAIN + v['src'] not in extra:
             extra += ld({'@context': 'https://schema.org', '@type': 'VideoObject', 'name': v['label'], 'description': v['beschreibung'],
                          'thumbnailUrl': DOMAIN + v['poster'], 'contentUrl': DOMAIN + v['src'], 'uploadDate': v['datum'],
-                         'duration': v['dauer']})
+                         'duration': v['dauer'],
+                         **({'hasPart': [{'@type': 'Clip', 'name': n, 'startOffset': t,
+                                          'endOffset': (v['kapitel'][i + 1][0] if i + 1 < len(v['kapitel']) else int(v['dauer'][2:].split('M')[0]) * 60 + int(v['dauer'].split('M')[1].rstrip('S'))),
+                                          'url': f"{DOMAIN}{v.get('seite', '')}#t={t}"} for i, (t, n) in enumerate(v['kapitel'])]} if v.get('kapitel') else {})})
     return extra
 
 
@@ -271,7 +308,7 @@ ERKL_KIND = ('Ein Wichtel ist ganz klein – nur so groß wie eine Kaffeetasse. 
              'rutscht, und mag es kuschelig warm. Wichtel wohnen heimlich bei uns Menschen, manche sogar hinter einer winzigen Tür. Nachts, '
              'wenn alle schlafen, räumen sie auf, flicken Socken und bringen Glück – und manchmal machen sie ein bisschen Quatsch. Gesehen '
              'hat noch nie jemand einen. Denn das ist das größte Geheimnis der Wichtel: Sie wollen nie gesehen werden!')
-LINK_GROSS = '<a href="/woher-kommt-wichteln/">▶ Das ganze Video: Was ist Wichteln? (2 Min.)</a>'
+LINK_GROSS = '<a href="/woher-kommt-wichteln/">▶ Das ganze Video: Wichtel &amp; Julklapp – die Geschichte (3 Min.)</a>'
 LINK_KIND = '<a href="/onni-adventskalender/#was-ist-ein-wichtel">▶ Video für Kinder: Was ist ein Wichtel? (2:42)</a>'
 
 
@@ -2640,7 +2677,7 @@ def onni_kalender_page():
 <p>Bis das erste Türchen aufgeht: Hier erfahren Kinder, wie ein Wichtel aussieht, wo er wohnt und was er nachts macht, wenn alle schlafen.</p>
 {video_block(VIDEO_KINDER)}
 {erkl_box('kind', link=False)}
-<p class="erkl-gross-link">Für die Großen: <a href="/woher-kommt-wichteln/">Was ist Wichteln? – Video und Geschichte (2 Min.)</a></p>
+<p class="erkl-gross-link">Für die Großen: <a href="/woher-kommt-wichteln/">Wichtel &amp; Julklapp – Video und Geschichte (3 Min.)</a></p>
 
 <h2 id="so-gehts">So funktioniert Onnis Adventskalender</h2>
 <ul>
@@ -3349,7 +3386,12 @@ def history_page():
 <h1>Woher kommt Wichteln? Wichtel, Julklapp und Secret Santa</h1>
 {ai_photo('wichtel3d-lupe', 'Plüsch-Wichtel betrachtet ein kleines Geschenk durch eine große Lupe')}
 <p class="lead">Jeder zieht einen Namen, beschenkt diese Person heimlich – und erst bei der Bescherung wird geraten, wer wen hatte. Wichteln kennt man in Deutschland in fast jedem Büro und jeder Familie. Aber woher kommt der Brauch, und warum heißt er so?</p>
-{video_block(VIDEO_ERKLAERT)}
+<h2>Die ganze Geschichte im Video (3 Min.)</h2>
+{video_block(VIDEO_GESCHICHTE)}
+{video_kapitel(VIDEO_GESCHICHTE)}
+<details class="video-text"><summary>Den Text zum Video lesen</summary>
+{GESCHICHTE_TEXT}
+</details>
 
 <h2>Der Name: kleine Helfer aus dem Volksglauben</h2>
 <p>Wichtel sind im alten Volksglauben kleine, meist unsichtbare Hausgeister. Sie erledigen nachts heimlich Arbeiten oder bringen Glück – und wollen dabei nicht gesehen werden. Genau das ist der Kern des Wichtelns: Jemand tut dir etwas Gutes, und du weißt nicht, wer es war. Verwandte Figuren sind die Heinzelmännchen aus Köln und der skandinavische Nisse oder Tomte, der bis heute zu Weihnachten gehört – und der als <a href="/wichteltuer/">Wichtel hinter der Wichteltür</a> auch bei uns im Advent einzieht.</p>

@@ -255,6 +255,18 @@
     v.focus();
   }));
 
+  // 22.11.: Kapitel unter dem Video – springt an die Stelle und spielt ab
+  document.querySelectorAll('.video-kapitel [data-zeit]').forEach((b) => b.addEventListener('click', () => {
+    const fig = b.closest('.video-kapitel').previousElementSibling;
+    const v = fig && fig.querySelector('video'); if (!v) return;
+    const p = fig.querySelector('[data-play]'); if (p) p.remove();
+    const t = +b.dataset.zeit; v.controls = true;
+    if (v.readyState >= 1) v.currentTime = t;
+    else v.addEventListener('loadedmetadata', () => { v.currentTime = t; }, { once: true });
+    v.play().catch(() => {});
+    fig.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+
   document.querySelectorAll('[data-video]').forEach((b) => b.addEventListener('click', () => {
     const v = document.createElement('video');
     v.src = b.dataset.video;
