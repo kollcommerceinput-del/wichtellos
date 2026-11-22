@@ -79,10 +79,32 @@ def folge(n, bild, satz):
             f'{fuss(n)}</section>')
 
 
+# Sätze unter dem Bild (aus der Geschichte, ohne den Namen „Onni“) – fehlt einer, bleibt die Zeile leer
+SAETZE = {1: '„Eine Wichteltür! Hier wohne ich ab jetzt!“',
+          2: '„Vorsichtig tastete er sich näher.“',
+          13: '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“'}
+QUELLE = Path('G:/Video bauen Projekte/Ausmalbuch')
+
+
+def druckbild(n):
+    """ausmal-NN.jpg aus Flow → ×3 hochskaliert, Schwarz/Weiß geschärft, leerer Rand oben abgeschnitten."""
+    from PIL import Image, ImageOps
+    src, ziel = QUELLE / f'ausmal-{n:02d}.jpg', HIER / f'ausmal-{n:02d}-druck.png'
+    if not src.exists():
+        return None
+    if not ziel.exists() or ziel.stat().st_mtime < src.stat().st_mtime:
+        im = Image.open(src).convert('L')
+        bb = ImageOps.invert(im.point(lambda v: 255 if v > 200 else 0)).getbbox()
+        if bb:
+            im = im.crop((0, max(0, bb[1] - 30), im.width, min(im.height, bb[3] + 10)))
+        im = im.resize((im.width * 3, im.height * 3), Image.LANCZOS).point(lambda v: 255 if v > 150 else (0 if v < 90 else v))
+        im.save(ziel)
+    return ziel.name
+
+
+seiten = [folge(n, b, SAETZE.get(n, '')) for n in range(1, 25) if (b := druckbild(n))]
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
-       + cover('ausmal-cover-druck.png') + inhalt() + onni_seite()
-       + folge(1, 'ausmal-01-druck.png', '„Eine Wichteltür! Hier wohne ich ab jetzt!“')
-       + folge(13, 'ausmal-13-druck.png', '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“')
+       + cover('ausmal-cover-druck.png') + inhalt() + onni_seite() + ''.join(seiten)
        + '</body></html>')
 (HIER / 'probe.html').write_text(doc, encoding='utf-8')
-print('probe.html geschrieben')
+print('probe.html geschrieben,', len(seiten), 'Türchen-Seiten')
