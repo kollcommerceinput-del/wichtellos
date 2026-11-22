@@ -124,7 +124,8 @@ def druckbild(n):
     return ziel.name
 
 
-seiten = [folge(n, b, SAETZE.get(n, '')) for n in range(1, 25) if (b := druckbild(n))]
+AUSLASSEN = {16}  # 22.11. Toni: Bild 16 missverständlich (Form unter der Bettdecke) – raus, bis Video-Bauen es neu zeichnet
+seiten = [folge(n, b, SAETZE.get(n, '')) for n in range(1, 25) if n not in AUSLASSEN and (b := druckbild(n))]
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
        + cover('ausmal-cover-druck.png') + inhalt() + onni_seite() + ''.join(seiten)
        + '</body></html>')
