@@ -20,7 +20,7 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .umriss{color:#fff;-webkit-text-stroke:1.1mm #111;paint-order:stroke fill;font-weight:600;line-height:1;text-align:center;margin:0}
 .cbild{position:relative;height:250mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-14mm;right:-14mm;top:6%}.hierwohnt{position:absolute;left:-10mm;right:-10mm;top:27.5%;font-size:13mm}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
 .gehoert{margin-top:auto;font-size:8mm;display:flex;gap:4mm;align-items:flex-end}.gehoert span{flex:1;border-bottom:.6mm solid #111;height:10mm}
-.ikopf{display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;margin-bottom:3mm}.ikopf img{height:62mm;margin-right:6mm}.inhalt .unter{margin:2mm 0 0;font-size:4.6mm;color:#555}.inhalt h1{font-size:9mm;margin:5mm 0 0}
+.ikopf{display:flex;align-items:flex-end;justify-content:space-between;gap:6mm;margin-bottom:3mm}.ikopf img{height:62mm;margin-right:6mm}.inhalt .unter{margin:2mm 0 0;font-size:4.6mm;color:#555}.inhalt h1{font-size:8mm;margin:5mm 0 3mm}.werbung{margin-top:auto;display:flex;align-items:center;gap:5mm;border-top:.3mm solid #ccc;padding-top:3mm}.werbung img{width:22mm;height:22mm}.werbung p{margin:0;font-size:4.2mm;color:#444;line-height:1.35}.onni img{display:block;margin:8mm auto 0;height:225mm}
 .inhalt ol{list-style:none;padding:0;margin:0;font-size:4.7mm}
 .inhalt li{display:flex;align-items:center;gap:4mm;padding:.85mm 0;border-bottom:.2mm solid #ddd}
 .inhalt li b{width:8mm;text-align:right;color:#444}.box{width:6mm;height:6mm;border:.6mm solid #111;border-radius:1.2mm;flex:none}
@@ -44,13 +44,19 @@ def cover(bild):
 
 
 def inhalt():
+    # 22.11. Toni: Seite 2 = oben groß „Onnis Adventsgeschichten“, die 24 Folgen mit Kästchen, unten dezent wichtellos.de + kleiner QR-Code
     li = ''.join(f'<li><span class="box"></span><b>{i + 1}</b> {html.escape(t)}</li>' for i, t in enumerate(TITEL))
-    # 22.11. Toni: Seite 2 mit „Onni“ + Figur und dezent „Onnis Adventsgeschichten · wichtellos.de“, dann die Folgen mit Kästchen
-    return (f'<section class="s inhalt">{LOCH}<div class="ikopf"><div><p class="umriss" style="font-size:30mm;text-align:left">Onni</p>'
-            f'<p class="unter">Onnis Adventsgeschichten · wichtellos.de</p><h1>Meine 24 Türchen</h1></div>'
-            f'<img src="ausmal-onni-druck.png" alt=""></div><ol>{li}</ol>'
+    return (f'<section class="s inhalt">{LOCH}<p class="umriss" style="font-size:15mm">Onnis Adventsgeschichten</p>'
+            f'<h1>Meine 24 Türchen</h1><ol>{li}</ol>'
             f'<p class="tipp">Ausgemalt? Dann mach einen Haken ins Kästchen!</p>'
-            f'<div class="fuss"><span>Onni – 24 Wichtelgeschichten · wichtellos.de</span><span>2</span></div></section>')
+            f'<div class="werbung"><img src="qr-onni.svg" alt=""><p><b>Alle Folgen als Video und Podcast</b><br>'
+            f'und jeden Tag ein neues Ausmalbild:<br>wichtellos.de/onni-adventskalender</p></div></section>')
+
+
+def onni_seite():
+    # 22.11. Toni: Seite 3 = Onni als ganze Ausmalseite
+    return (f'<section class="s onni">{LOCH}<p class="umriss" style="font-size:20mm">Das ist Onni!</p>'
+            f'<img src="ausmal-onni-druck.png" alt=""></section>')
 
 
 def folge(n, bild, satz):
@@ -61,7 +67,7 @@ def folge(n, bild, satz):
 
 
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
-       + cover('ausmal-cover-druck.png') + inhalt()
+       + cover('ausmal-cover-druck.png') + inhalt() + onni_seite()
        + folge(13, 'ausmal-13-druck.png', '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“')
        + '</body></html>')
 (HIER / 'probe.html').write_text(doc, encoding='utf-8')
