@@ -11,7 +11,11 @@ Getrennt von „24 Briefe von Onni“ (/wichteltuer/#briefe) – das hier gehör
 - Hinweis nur in der Folgenbeschreibung für Eltern, nie im Kindertext.
 - Linienbilder: Video-Bauen in Flow aus dem Folgenbild (gleiche Szene, schwarz-weiß, klare Umrisse, wenig Kleinkram).
 
-## Bildauswahl (Ordner G:\Video bauen Projekte\Folge NN – …)
+## Bildgrundlage (Toni 22.11.: vereinfachen)
+Je Folge das vorhandene **Titelbild** (G:\Video bauen Projekte\Titelbilder bzw. „Titelbilder Entwurf 9-24“), Motiv ohne Schrift
+→ Linienbild zum Ausmalen. Titel sind überall gleich (Titelbilder, Ordner, Geschichten-Datei, Podcast, build.py ONNI_FOLGEN) – geprüft 22.11.
+
+## Alte Szenen-Auswahl (nur noch Ersatz, falls ein Titelbild schlecht zum Ausmalen taugt)
 | Türchen | Titel | Szene | Datei | Motiv |
 |---|---|---|---|---|
 | Cover | – | F15 Szene 6 | bild-06.jpg | Onni mit Laterne an seiner roten Tür |
