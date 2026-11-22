@@ -427,7 +427,7 @@
     grid.querySelectorAll('.ak-door').forEach((b) => {
       const n = +b.dataset.tag;
       const info = b.querySelector('.ak-info');
-      if (!offen(n)) {
+      if (!offen(n) && !b.dataset.vorschau) {
         const rest = Date.UTC(jahr, 11, n) / 864e5 - tagHeute;
         b.classList.add('zu');
         info.textContent = rest === 1 ? 'Morgen!' : `Noch ${rest}× schlafen`;
@@ -439,7 +439,7 @@
       } else if (b.dataset.src) {
         b.classList.add('auf');
         b.style.backgroundImage = `url("${b.dataset.poster}")`;
-        info.textContent = b.dataset.titel;
+        info.textContent = !offen(n) ? 'Schon offen: Kostprobe' : b.dataset.titel;
         b.setAttribute('aria-label', `Türchen ${n}: ${b.dataset.titel} – Video ansehen`);
         b.addEventListener('click', () => { zeige(b, true); vid.play().catch(() => {}); });
       } else {
