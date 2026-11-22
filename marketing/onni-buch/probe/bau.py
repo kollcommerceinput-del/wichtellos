@@ -124,7 +124,7 @@ def druckbild(n):
     return ziel.name
 
 
-AUSLASSEN = {16}  # 22.11. Toni: Bild 16 missverständlich (Form unter der Bettdecke) – raus, bis Video-Bauen es neu zeichnet
+AUSLASSEN = set()  # 22.11.: Bild 16 neu gezeichnet (Decke flach, kariert) – wieder drin
 seiten = [folge(n, b, SAETZE.get(n, '')) for n in range(1, 25) if n not in AUSLASSEN and (b := druckbild(n))]
 def schluss_seite():
     # 22.11. Toni: Schlussbild nach Türchen 24 zum Verschenken – „Frohe Weihnachten!“ + Für/Von (ausmal-25.jpg von Video-Bauen, oberes Drittel frei für die Schrift)
@@ -132,8 +132,8 @@ def schluss_seite():
     if not b:
         return ''
     return (f'<section class="s onni">{LOCH}<p class="umriss" style="font-size:20mm;margin-top:4mm">Frohe Weihnachten!</p>'
-            f'<img src="{b}" alt="" style="height:195mm;margin-top:4mm">'
-            f'<div class="gehoert" style="margin:6mm 0 4mm">Für:<span></span></div>'
+            f'<img src="{b}" alt="" style="height:172mm;margin-top:3mm">'
+            f'<div class="gehoert" style="margin:5mm 0 3mm">Für:<span></span></div>'
             f'<div class="gehoert" style="margin:0 0 12mm">Von:<span></span></div>{fuss()}</section>')
 
 
