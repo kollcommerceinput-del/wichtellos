@@ -11,7 +11,7 @@
   },
   "U": {
    "stimme": "Gacrux",
-   "stil": "Ulla, eine alte, weise Schneeeule. Ruhige, warme, reife Frauenstimme, gelassen und freundlich. Auf Deutsch."
+   "stil": "Ulla, eine alte, weise Schneeeule. Weiche, sanfte, warme Frauenstimme, ruhig und ein bisschen geheimnisvoll, so dass es spannend klingt – wie jemand, der schon viel gesehen hat und Onni gern hat. Freundlich, nicht streng, nicht kühl. Auf Deutsch."
   },
   "OF": {
    "stimme": "Fenrir",
@@ -37,13 +37,8 @@
  "teile": [
   [
    "EE",
-   "Kurz vorab: Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
-   2.2
-  ],
-  [
-   "EE",
-   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich.",
-   0.9
+   "Hallo, schön, dass du da bist – und danke fürs Zuhören! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
+   2.0
   ],
   [
    "OI",
@@ -274,154 +269,154 @@
    -20
   ],
   [
-   4,
+   3,
    0,
    "wind",
    "bis:8",
    -18
   ],
   [
-   7,
+   6,
    0,
    "kamin",
    "bis:11",
    null
   ],
   [
-   8,
+   7,
    0,
    "wind",
    5,
    -14
   ],
   [
-   8,
+   7,
    4.5,
    "schnuppern",
    1.6,
    null
   ],
   [
-   10,
+   9,
    0,
    "tuer-knarren",
    1.4,
    null
   ],
   [
-   10,
+   9,
    1.8,
    "schnee-schritte",
    5,
    null
   ],
   [
-   10,
+   9,
    1,
    "wind",
    "bis:19",
    -18
   ],
   [
-   18,
+   17,
    0,
    "rascheln-kurz",
    1.8,
    null
   ],
   [
-   18,
+   17,
    4.5,
    "eule",
    2,
    null
   ],
   [
-   22,
+   21,
    5,
    "schnee-schritte",
    3,
    null
   ],
   [
-   27,
+   26,
    0,
    "fluegel",
    3,
    null
   ],
   [
-   27,
+   26,
    1,
    "wind",
    "bis:33",
    -12
   ],
   [
-   32,
+   31,
    0,
    "fluegel",
    2.5,
    null
   ],
   [
-   32,
+   31,
    0.5,
    "wind",
    "bis:37",
    -20
   ],
   [
-   35,
+   34,
    0.5,
    "fluegel",
    2,
    -8
   ],
   [
-   36,
+   35,
    0,
    "uhr-takt",
    "bis:39",
    -16
   ],
   [
-   37,
+   36,
    0,
    "laufen-holz",
    3,
    null
   ],
   [
-   39,
+   38,
    0,
    "tuer-knarren",
    1.4,
    null
   ],
   [
-   41,
+   40,
    7,
    "bleistift",
    2.5,
    null
   ],
   [
-   43,
+   42,
    3,
    "tuer-knarren",
    1.2,
    null
   ],
   [
-   44,
+   43,
    4,
    "gaehnen",
    2.2,
    null
   ],
   [
-   50,
+   49,
    2.5,
    "gloeckchen",
    1.6,

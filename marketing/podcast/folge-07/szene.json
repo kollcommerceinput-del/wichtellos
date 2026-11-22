@@ -37,13 +37,8 @@
  "teile": [
   [
    "EE",
-   "Kurz vorab: Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
-   2.2
-  ],
-  [
-   "EE",
-   "Wie schön, dass du da bist! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich.",
-   0.9
+   "Hallo, schön, dass du da bist – und danke fürs Zuhören! Bis Heiligabend warten vierundzwanzig Wichtel-Geschichten auf dich. Damit Onnis Welt lebendig wird, erzählen wir mit verschiedenen KI-Stimmen. Mehr Wichtel-Ideen findet ihr auf wichtellos Punkt de. Und folgt oder abonniert uns, je nachdem, wo ihr gerade zuhört. Dann verpasst ihr kein Abenteuer!",
+   2.0
   ],
   [
    "OI",
@@ -198,63 +193,63 @@
    -20
   ],
   [
-   4,
+   3,
    0,
    "uhr-takt",
    "bis:32",
    -19
   ],
   [
-   14,
+   13,
    -1.2,
    "tuer-knarren",
    1.2,
    null
   ],
   [
-   14,
+   13,
    8.0,
    "tropfen-hahn",
    "bis:27",
    -24
   ],
   [
-   16,
+   15,
    3.2,
    "brummen",
    "bis:27",
    -2
   ],
   [
-   18,
+   17,
    14.100000000000001,
    "schnarchen",
    "bis:27",
    -1
   ],
   [
-   26,
+   25,
    -1.4,
    "laufen-holz",
    3,
    -16
   ],
   [
-   27,
+   26,
    -1.1,
    "bleistift",
    2.5,
    null
   ],
   [
-   29,
+   28,
    -1.2,
    "tuer-knarren",
    1.2,
    -10
   ],
   [
-   33,
+   32,
    2.5,
    "gloeckchen",
    1.6,
