@@ -18,7 +18,7 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .l1{top:90mm}.l2{top:170mm}
 .rand{position:absolute;left:19mm;top:10mm;bottom:10mm;border-left:.3mm dotted #bbb}
 .umriss{color:#fff;-webkit-text-stroke:1.1mm #111;paint-order:stroke fill;font-weight:600;line-height:1;text-align:center;margin:0}
-.cbild{position:relative;height:269mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-12mm;right:-12mm;top:0}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
+.cbild{position:relative;height:269mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-12mm;right:-12mm;top:0}.hierwohnt{position:absolute;left:-10mm;right:-10mm;top:27.5%;font-size:13mm}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
 .gehoert{margin-top:auto;font-size:8mm;display:flex;gap:4mm;align-items:flex-end}.gehoert span{flex:1;border-bottom:.6mm solid #111;height:10mm}
 .inhalt h1{font-size:12mm;margin:0 0 5mm;text-align:center}
 .inhalt ol{list-style:none;padding:0;margin:0;font-size:5.1mm}
@@ -36,25 +36,26 @@ LOCH = '<div class="rand"></div><div class="loch l1"></div><div class="loch l2">
 
 
 def cover(bild):
-    # 22.11. Toni: Cover ohne Onni – nur seine Tür mit Holzschild („Hier wohnt … / Dieses Buch gehört …“), Titel oben im freien Bereich
+    # 22.11. Toni: Cover ohne Onni – Rundbogentür, Titel „Onni / 24 Wichtelgeschichten“, darüber „Hier wohnt“, Name ins leere Schild auf der Tür
     return (f'<section class="s cover">{LOCH}<div class="cbild"><img src="{bild}" alt="">'
-            f'<div class="ctitel"><p class="umriss" style="font-size:32mm">Onni</p>'
-            f'<p class="umriss" style="font-size:12.5mm;margin-top:2mm">24 Adventsgeschichten</p></div>'
-            f'<div class="schild"><span>Dieses Buch gehört:</span><i></i><i></i></div></div></section>')
+            f'<div class="ctitel"><p class="umriss" style="font-size:34mm">Onni</p>'
+            f'<p class="umriss" style="font-size:13mm;margin-top:3mm">24 Wichtelgeschichten</p></div>'
+            f'<p class="umriss hierwohnt">Hier wohnt</p>'
+            f'</div></section>')
 
 
 def inhalt():
     li = ''.join(f'<li><span class="box"></span><b>{i + 1}</b> {html.escape(t)}</li>' for i, t in enumerate(TITEL))
     return (f'<section class="s inhalt">{LOCH}<h1>Meine 24 Türchen</h1><ol>{li}</ol>'
             f'<p class="tipp">Ausgemalt? Dann mach einen Haken ins Kästchen!</p>'
-            f'<div class="fuss"><span>Onni – 24 Adventsgeschichten · wichtellos.de</span><span>2</span></div></section>')
+            f'<div class="fuss"><span>Onni – 24 Wichtelgeschichten · wichtellos.de</span><span>2</span></div></section>')
 
 
 def folge(n, bild, satz):
     return (f'<section class="s folge">{LOCH}<div class="kopf"><div class="nr umriss">{n}</div>'
             f'<div><small>Türchen {n}</small><h1>{html.escape(TITEL[n - 1])}</h1></div></div>'
             f'<img src="{bild}" alt=""><p class="satz">{html.escape(satz)}</p>'
-            f'<div class="fuss"><span>Onni – 24 Adventsgeschichten · wichtellos.de</span><span>{n}</span></div></section>')
+            f'<div class="fuss"><span>Onni – 24 Wichtelgeschichten · wichtellos.de</span><span>{n}</span></div></section>')
 
 
 doc = (f'<!doctype html><html lang="de"><meta charset="utf-8"><title>Onni-Buch Probe</title><style>{CSS}</style><body>'
