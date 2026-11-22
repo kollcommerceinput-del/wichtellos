@@ -600,7 +600,7 @@ GIFTS = {
     10: dict(
         title='Wichtelgeschenke unter 10 Euro: 12 Ideen, auch für Kollegen',
         desc='Wichtelgeschenke unter 10 Euro: 12 Ideen, die fast immer passen – auch für Kollegen, die du kaum kennst. Mit Tipps fürs Büro-Wichteln.',
-        intro='10 Euro sind das Klassiker-Budget beim Wichteln – vor allem im Büro. Hier findest du Ideen, die für fast jeden passen, auch wenn du die beschenkte Person kaum kennst.',
+        intro='10 Euro sind das Klassiker-Budget beim Wichteln – vor allem unter Arbeitskollegen. Hier findest du Wichtelgeschenke bis 10 Euro, die für fast jeden passen: unisex, auch wenn du die beschenkte Person kaum kennst, und ein paar ausgefallene Ideen für mehr Lacher.',
         groups=[
             ('Passt für fast jeden', [
                 ('Kuschelsocken', 'Warm, weich und immer gern gesehen – gibt es in vielen lustigen Mustern.', 'Kuschelsocken'),
@@ -793,11 +793,14 @@ GIFT_AUSBAU_TEXT = {
         ],
     ),
     10: dict(
-        title='{n} Wichtelgeschenke unter 10 Euro ({j}): auch für Kollegen',
-        desc='{n} Wichtelgeschenke unter 10 Euro: vom Naschen über Gemütliches bis zu kleinen Spielen – sortiert nach Thema, mit Tipps fürs Büro-Wichteln.',
+        # 22.11.: Google findet die Seite v. a. für „wichtelgeschenke für (arbeits)kollegen bis 10 euro“ (Pos. 16–24), „10 euro unisex“, „ausgefallene … 10 euro“
+        title='{n} Wichtelgeschenke bis 10 Euro ({j}): für Kollegen & unisex',
+        desc='{n} Wichtelgeschenke bis 10 Euro für Arbeitskollegen, Familie und Freunde: unisex, ausgefallen oder zum Naschen – sortiert nach Thema, mit Tipps fürs Büro-Wichteln.',
         faq=[
             ('Was kann man zum Wichteln für 10 Euro verschenken?', 'Für 10 Euro passen besondere Schokolade oder Tee, Kuschelsocken, eine Duftkerze, ein Notizbuch oder ein kleines Spiel. Oben findest du alle Ideen nach Themen sortiert – vom Naschen bis zum Basteln.'),
             ('Was schenkt man Kollegen zum Wichteln für 10 Euro?', 'Etwas Neutrales, das fast jedem gefällt: Leckereien, Tee, eine Tasse mit Spruch, eine Mini-Pflanze oder etwas für den Schreibtisch. Besser nicht: Parfüm, Kleidung in bestimmten Größen oder sehr persönliche Dinge.'),
+            ('Welches Wichtelgeschenk bis 10 Euro passt für alle (unisex)?', 'Wenn du nicht weißt, wen du ziehst: besondere Schokolade oder Tee, Kuschelsocken, eine Tasse mit Spruch, eine Mini-Pflanze, Handwärmer oder ein kleines Kartenspiel. Das passt für Frauen und Männer gleichermaßen.'),
+            ('Was sind ausgefallene Wichtelgeschenke bis 10 Euro?', 'Zum Beispiel ein Knobelspiel aus Holz, ein Kresse-Anzuchtset, eine Gewürzmischung mit lustigem Namen oder ein Partyspiel für die nächste Feier. Noch mehr Ideen zum Lachen stehen bei den lustigen Wichtelgeschenken.'),
             ('Sind 10 Euro ein gutes Budget fürs Wichteln?', 'Ja, im Büro sind 10 Euro das häufigste Budget. Es ist für alle machbar und reicht für ein Geschenk, das wirklich Freude macht. Wichtig ist nur, dass sich alle vorher auf denselben Betrag einigen.'),
             ('Wie verpacke ich ein Wichtelgeschenk für 10 Euro schön?', 'Packpapier, eine Schleife und ein Tannenzweig genügen. Auf das Päckchen kommt nur der Name der beschenkten Person – so bleibt geheim, wer der Wichtel war.'),
             ('Wie lost man aus, wer wen beschenkt?', 'Am einfachsten online: Namen eintragen, auslosen und jedem seinen geheimen Link per WhatsApp oder E-Mail schicken. Bei WichtelLos geht das kostenlos und ohne Anmeldung.'),
