@@ -18,7 +18,7 @@ CSS = '''@font-face{font-family:Fredoka;src:url(../../../assets/fonts/fredoka-la
 .l1{top:90mm}.l2{top:170mm}
 .rand{position:absolute;left:19mm;top:10mm;bottom:10mm;border-left:.3mm dotted #bbb}
 .umriss{color:#fff;-webkit-text-stroke:1.1mm #111;paint-order:stroke fill;font-weight:600;line-height:1;text-align:center;margin:0}
-.cbild{position:relative;height:269mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-12mm;right:-12mm;top:0}.hierwohnt{position:absolute;left:-10mm;right:-10mm;top:27.5%;font-size:13mm}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
+.cbild{position:relative;height:250mm;aspect-ratio:768/1376;margin:0 auto}.cbild img{display:block;width:100%;height:100%}.ctitel{position:absolute;left:-14mm;right:-14mm;top:6%}.hierwohnt{position:absolute;left:-10mm;right:-10mm;top:27.5%;font-size:13mm}.schild{position:absolute;left:50%;top:38.9%;width:30%;transform:translate(-50%,-50%);text-align:center;font-size:4.6mm}.schild i{display:block;border-bottom:.5mm solid #111;height:9mm;margin:0 2mm}
 .gehoert{margin-top:auto;font-size:8mm;display:flex;gap:4mm;align-items:flex-end}.gehoert span{flex:1;border-bottom:.6mm solid #111;height:10mm}
 .inhalt h1{font-size:12mm;margin:0 0 5mm;text-align:center}
 .inhalt ol{list-style:none;padding:0;margin:0;font-size:5.1mm}
@@ -36,12 +36,11 @@ LOCH = '<div class="rand"></div><div class="loch l1"></div><div class="loch l2">
 
 
 def cover(bild):
-    # 22.11. Toni: Cover ohne Onni – Rundbogentür, Titel „Onni / 24 Wichtelgeschichten“, darüber „Hier wohnt“, Name ins leere Schild auf der Tür
+    # 22.11. Toni: Cover ohne Onni-Figur und ohne „Onni“-Schriftzug – oben „24 Wichtelgeschichten“, über der Tür „Hier wohnt“ (Name ins Türschild), unten „Dieses Buch gehört“
     return (f'<section class="s cover">{LOCH}<div class="cbild"><img src="{bild}" alt="">'
-            f'<div class="ctitel"><p class="umriss" style="font-size:34mm">Onni</p>'
-            f'<p class="umriss" style="font-size:13mm;margin-top:3mm">24 Wichtelgeschichten</p></div>'
+            f'<div class="ctitel"><p class="umriss" style="font-size:17mm">24 Wichtelgeschichten</p></div>'
             f'<p class="umriss hierwohnt">Hier wohnt</p>'
-            f'</div></section>')
+            f'</div><div class="gehoert">Dieses Buch gehört:<span></span></div></section>')
 
 
 def inhalt():
