@@ -82,6 +82,16 @@ def folge(n, bild, satz):
 # Sätze unter dem Bild (aus der Geschichte, ohne den Namen „Onni“) – fehlt einer, bleibt die Zeile leer
 SAETZE = {1: '„Eine Wichteltür! Hier wohne ich ab jetzt!“',
           2: '„Vorsichtig tastete er sich näher.“',
+          3: '„Unter dem Weihnachtsbaum stand ein Teller mit Keksen.“',
+          4: '„Dann rubbelte und schrubbte er, bis es überall schäumte.“',
+          5: '„Socken sind ja wie riesige Decken!“',
+          6: '„Das riecht nach … Nikolaus!“',
+          7: '„Im Wichtelwald singen wir jetzt alle zusammen.“',
+          8: '„Das bin ja ich! Das ist ein Spiegel!“',
+          9: '„Daraus baue ich den höchsten Turm, den ein Wichtel je gebaut hat!“',
+          10: '„Welches Gesicht würdest du malen?“',
+          11: '„Wer macht da drin bloß das Licht an und aus?“',
+          12: '„Der Nordstern!“, flüsterte er.',
           13: '„Vorsichtig stellte er seine Laterne neben das weiche Fell.“'}
 QUELLE = Path('G:/Video bauen Projekte/Ausmalbuch')
 
