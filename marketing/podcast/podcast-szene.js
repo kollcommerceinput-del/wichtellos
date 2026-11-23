@@ -21,7 +21,7 @@ async function tts(text, stil, stimme) {
       body: JSON.stringify({ model: process.env.TTS_MODELL || 'gemini-3.8-flash-tts', input: [{ type: 'user_input', content: [{ type: 'text', text, annotations: [{ type: 'speech_metadata', style: stil }] }] }],
         response_format: { type: 'audio', mime_type: 'audio/wav' }, generation_config: { speech_config: [{ voice: stimme }] } }),
     });
-    if (r.status === 429) { await new Promise((x) => setTimeout(x, 20000)); continue; }
+    if (r.status === 429) { const t = await r.text(); if (/per day/.test(t)) throw new Error('Tageskontingent Stimme aufgebraucht: ' + t.slice(0, 200)); await new Promise((x) => setTimeout(x, 20000)); continue; }
     const j = await r.json(); if (!r.ok) throw new Error(JSON.stringify(j).slice(0, 300));
     return Buffer.from(j.steps.filter((s) => s.type === 'model_output').flatMap((s) => s.content).filter((c) => c.type === 'audio').pop().data, 'base64');
   }
