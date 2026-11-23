@@ -3,6 +3,17 @@
 Alle offenen und erledigten Punkte mit Verlauf. Kurzliste steht in der CLAUDE.md.
 
 
+## Ab 25.12.2026: Advents-Bezug auf „Wichtelabenteuer“ umstellen (Toni 23.11.)
+Nach Weihnachten alle Texte mit „Adventskalender“, „ab 1. Dezember“, „jeden Abend ein Türchen“ auf ganzjährig umstellen
+(z. B. „Onnis Wichtelabenteuer“, Geschichten zum Nachhören). Neue Texte möglichst gleich zeitlos schreiben (Muster: FB-Beitrag 23.11.
+„Wir sind auch auf Instagram! … die Abenteuer von Onni …“ – ohne Datum).
+- [ ] Facebook-Seite: Kurzbeschreibung („… und Onnis Adventskalender.“) + Titelbild (Knopf „Onnis Adventskalender“)
+- [ ] Instagram-, TikTok-, YouTube-, Pinterest-Profiltexte und Banner prüfen
+- [ ] Spotify-Show „Onnis Adventskalender“: Beschreibung (Name ggf. lassen, Toni fragen)
+- [ ] Website: /onni-adventskalender/ (Türchen-Logik, „ab 1. Dezember“, Box „Folge 1 gratis“), Startseiten-/Fuß-Links, Ausmalbuch-Seite, llms.txt
+- [ ] Angepinnte/geplante Posts mit „ab 1. Dezember“ (Pins verlinken weiter – Ziel-Seite muss danach noch passen)
+
+
 - [x] Amazon-PartnerNet-Konto angelegt, Partner-ID `wichtellos-21` in `assets/site.js` eingetragen (30.10.2026)
 - [x] PartnerNet: Steuer-Interview (USA/Kanada) und Zahlungsempfänger (UG) vervollständigt (Toni, bestätigt 01.11.2026)
 - [x] Livegang und Live-Test (30.10.2026, alle Prüfungen oben grün, damals noch mit SSL)
