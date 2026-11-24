@@ -1,4 +1,4 @@
-# Onnis Adventskalender – Folge 16, Sprecherfassung (Entwurf PC 24.11., wartet auf Toni)
+# Onnis Adventskalender – Folge 16, Sprecherfassung (Toni 24.11. abgenommen, gebaut 248 s)
 
 Stimmen: E = Erzähler (Charon), O = Onni (Fenrir)
 Quelle: marketing/reel/onni-neu/Onnis-Adventskalender-Folgen-01-24.md, Folge 16 „Onni hat Schnupfen“
