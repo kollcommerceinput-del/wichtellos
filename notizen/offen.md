@@ -322,3 +322,5 @@ TikTok-Upload im Browser klappt (nur Folgen nicht).
 - 24.11. früh (Toni): TikTok **525 Follower**, Folge 1 **20,6K Aufrufe**. Ab 1000 Follower: Website-Link im TikTok-Profil setzen (https://wichtellos.de/onni-adventskalender/).
 
 - **Januar 2027: Onni auf Englisch testen** (Toni 24.11.): eigener TikTok-Account (nicht @wichtellos mischen), 5 Videos übersetzen (Wer ist Onni, Frühling, Sommer, Herbst, Folge 1), Bilder bleiben, neue Stimme/Text; 2–3 Wochen beobachten. Nie „Elf on the Shelf“ (geschützt) – „little Wichtel/gnome“. Website/Podcast Englisch erst bei Erfolg.
+
+- 24.11.: **Folge-15-Video (Wunschzettel) von Toni freigegeben** – G:Video bauen ProjekteFolge 15 – Onni und der Wunschzettelausgabe (68,6 s). Posten am **15.12.** (Reihenfolge Folgen ab 2.12. täglich), TikTok/Insta+FB/YouTube.
