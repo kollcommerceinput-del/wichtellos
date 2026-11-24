@@ -324,3 +324,5 @@ TikTok-Upload im Browser klappt (nur Folgen nicht).
 - **Januar 2027: Onni auf Englisch testen** (Toni 24.11.): eigener TikTok-Account (nicht @wichtellos mischen), 5 Videos übersetzen (Wer ist Onni, Frühling, Sommer, Herbst, Folge 1), Bilder bleiben, neue Stimme/Text; 2–3 Wochen beobachten. Nie „Elf on the Shelf“ (geschützt) – „little Wichtel/gnome“. Website/Podcast Englisch erst bei Erfolg.
 
 - 24.11.: **Folge-15-Video (Wunschzettel) von Toni freigegeben** – G:Video bauen ProjekteFolge 15 – Onni und der Wunschzettelausgabe (68,6 s). Posten am **15.12.** (Reihenfolge Folgen ab 2.12. täglich), TikTok/Insta+FB/YouTube.
+
+- 24.11. ~17:20: **Wichteljahr 1 „Was macht Onni das ganze Jahr?“ sofort gepostet** (Toni: „poste es jetzt“, Follower vor 1.12.) – TikTok (KI-Label an) + Insta/FB-Reel (Business Suite). TikTok Folge 1 jetzt 26K Aufrufe. Toni: Frühling/Sommer/Herbst passen erst nach Weihnachten → Januar; für 27.–29.11. stattdessen kleine Geschichten/Follow-Anreize vor dem Advent (Vorschlag offen). 30.11. „Bald geht es los“ bleibt.
