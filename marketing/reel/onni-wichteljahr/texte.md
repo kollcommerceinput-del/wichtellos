@@ -85,3 +85,33 @@ Stand der Geschichte: Onni wohnt im Wichtelwald im Baumhaus. Er riecht die Famil
 - Bewusst keine Lautmalerei, kein Mitmach-Satz, Onni „läuft“, Mütze über den Augen. Fingerhut, weißes Tuch und Notizbuch wie in Folge 1.
 - 30.11. verrät nicht, was in Folge 1 passiert (Duft, Flug), sondern endet davor.
 - Die Reihe ist ganzjährig weiterführbar („Mehr Abenteuer aus dem Wichtelwald“), nach Weihnachten passend zu „Wichtelabenteuer“.
+
+---
+
+# Neu 24.11. abends (Toni: Jahreszeiten → Januar; vor dem 1.12. Follower holen)
+
+## 28.11. – Onni übt für die Familie (Entwurf)
+
+| # | Einblendung | Gesprochen |
+|---|---|---|
+| 1 | Noch 3 Nächte! | Noch drei Nächte, dann geht es los. Und Onni übt. |
+| 2 | Leise laufen | Zuerst: ganz leise laufen. Auf Zehenspitzen, über das Laub im Wichtelwald. |
+| 3 | Knack! | Doch da lag ein Zweig. Knack! Ulla öffnete ein Auge. |
+| 4 | Noch mal! | Noch mal. Diesmal ganz langsam. Kein Knacken. Geschafft! |
+| 5 | Briefe schreiben | Dann: Briefe schreiben. Onni nahm sein kleines Notizbuch. |
+| 6 | Die Mütze! | Aber die Mütze rutschte ihm über die Augen, und der Brief wurde ganz schief. |
+| 7 | Gut genug | Ulla lachte leise. Schief ist nicht schlimm. Hauptsache, er kommt von Herzen. |
+| 8 | Folgt Onni! | Ab ersten Dezember ist Onni bei euch. Folgt Onni, damit ihr kein Türchen verpasst! |
+
+## 29.11. – Onnis Brief an euch (Entwurf)
+
+| # | Einblendung | Gesprochen |
+|---|---|---|
+| 1 | Post von Onni! | Psst, hier ist Onni! Ich habe euch einen Brief geschrieben. |
+| 2 | Ich komme bald | In zwei Nächten fliegt Ulla mich zu euch. |
+| 3 | Eine kleine Tür | Ich suche mir eine kleine Tür, und jeden Abend erlebe ich ein neues Abenteuer. |
+| 4 | Wie heißt euer Wichtel? | Und jetzt seid ihr dran: Wohnt bei euch auch schon ein Wichtel? Wie heißt er? |
+| 5 | Schreibt es mir! | Schreibt es mir in die Kommentare. Ich lese alles! |
+| 6 | Folgt Onni! | Ab ersten Dezember jeden Abend ein Türchen. Folgt Onni! |
+
+Hinweis: „Knack!“ ist Video-Einblendung, kein Podcast (dort keine Lautmalerei). 29.11. ist der Kommentar-Aufruf → Antworten danach selbst beantworten.
