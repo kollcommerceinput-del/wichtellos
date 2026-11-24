@@ -773,7 +773,7 @@ Dann machte er eine letzte Runde durchs Haus.
 
 Im Flur winkte er in den Spiegel. Der Wichtel im Spiegel winkte zurück.
 
-In der Küche klopfte er an den Brummschrank. „Gute Nacht, Lichtwichtel!“ Brumm, brumm.
+In der Küche klopfte er an den Brummkasten. „Gute Nacht, Lichtwichtel!“ Brumm, brumm.
 
 In der Abstellkammer schaute er zum Weidenkorb hinauf. „Gute Nacht, ihr zwei Ringelsocken!“
 
