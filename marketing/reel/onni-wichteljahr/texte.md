@@ -115,3 +115,26 @@ Stand der Geschichte: Onni wohnt im Wichtelwald im Baumhaus. Er riecht die Famil
 | 6 | Folgt Onni! | Ab ersten Dezember jeden Abend ein Türchen. Folgt Onni! |
 
 Hinweis: „Knack!“ ist Video-Einblendung, kein Podcast (dort keine Lautmalerei). 29.11. ist der Kommentar-Aufruf → Antworten danach selbst beantworten.
+
+---
+
+# Neu 25.11. abends (Toni: „morgen früh, Onni und Winter, freie Auswahl“)
+
+## 26.11. morgens – Onni und die erste Schneeflocke (Entwurf)
+
+Idee: Folge 1 (ganze kleine Geschichte) läuft am besten (30K) → wieder eine vollständige Mini-Geschichte statt Werbe-Clip, ca. 35–40 s. Schließt an „Noch 6 Nächte“ an.
+
+| # | Einblendung | Gesprochen |
+|---|---|---|
+| 1 | Noch 5 Nächte! | Noch fünf Nächte. Und heute Morgen war im Wichtelwald alles weiß. |
+| 2 | Der erste Schnee | Onni lief aus seinem Baumhaus. Der erste Schnee! |
+| 3 | Auf der Nase | Da landete eine Schneeflocke genau auf seiner Nase. |
+| 4 | So schön! | So eine schöne Flocke. Die wollte er den Kindern mitbringen! |
+| 5 | Im Fingerhut | Ganz vorsichtig legte er sie in seinen Fingerhut. |
+| 6 | Schnell zu Ulla | Und lief, so schnell ihn seine Wichtelbeine trugen, zu Ulla. |
+| 7 | Nur ein Tropfen | Doch als er hineinschaute, war da nur noch ein kleiner Tropfen. |
+| 8 | Ulla rückt zur Seite | Ulla rückte ein Stück zur Seite. Schneeflocken kann man nicht mitnehmen. Aber man kann sie zusammen anschauen. |
+| 9 | Zusammen | Also saßen die beiden im Schnee und schauten den Flocken zu. |
+| 10 | Folgt uns! | In fünf Nächten zieht Onni bei euch ein. Folgt uns, damit ihr kein Türchen verpasst! |
+
+Zeit: Insta/FB 7:43, TikTok 7:45 (Quellen: Morgen 7–9 Uhr zweitbestes Fenster nach Abend).
