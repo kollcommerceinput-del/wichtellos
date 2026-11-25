@@ -11,6 +11,7 @@
   Stattdessen erzählen, was passiert („Im Ofen knisterte leise das Feuer“, „Unter seinen Schuhen knirschte der Schnee“) –
   das echte Geräusch läuft gleichzeitig im Hintergrund.
 - **Nicht verniedlichen**: für Kinder ab ca. 4, aber keine Babysprache, keine Mitmach-Kleinkind-Sätze.
+- **Onni kennt nicht alles (Toni 25.11.):** Menschen-Dinge beschreibt er liebevoll statt sie zu benennen („eine komische weiße, weiche Rolle“ statt Klopapier); der Erzähler löst höchstens am Ende auf. Solche verniedlichenden Beschreibungen sind erwünscht (Zuhörer meist weiblich). Titel bleiben unverändert.
 - **Wörtliche Rede getrennt nach Sprecher** (Erzähler / Onni / Ulla …), Redebegleitsätze wie „fragte sie“ weglassen,
   wenn die Stimme schon zeigt, wer spricht.
 - Format für die Produktion: jede Zeile `E:` / `O:` / `U:` + Text; Geräusche als Hinweis in eckigen Klammern,
