@@ -126,7 +126,7 @@ Idee: Folge 1 (ganze kleine Geschichte) läuft am besten (30K) → wieder eine v
 
 | # | Einblendung | Gesprochen |
 |---|---|---|
-| 1 | Noch 5 Nächte! | Noch fünf Nächte. Und heute Morgen war im Wichtelwald alles weiß. |
+| 1 | Noch 5 Nächte! | Noch fünf Nächte. Und über Nacht war im Wichtelwald alles weiß geworden. |
 | 2 | Der erste Schnee | Onni lief aus seinem Baumhaus. Der erste Schnee! |
 | 3 | Auf der Nase | Da landete eine Schneeflocke genau auf seiner Nase. |
 | 4 | So schön! | So eine schöne Flocke. Die wollte er den Kindern mitbringen! |
