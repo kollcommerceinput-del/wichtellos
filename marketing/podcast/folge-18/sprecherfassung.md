@@ -11,7 +11,7 @@ E: Türchen achtzehn. Onni hält sein Versprechen.
 
 E: In dieser Nacht wachte Onni unter seiner Ringelsocke auf und blieb noch einen Moment liegen. Sie war so warm. So weich. Die allerbeste Decke, die ein Wichtel sich wünschen kann. Onni kuschelte sich noch tiefer hinein, bis nur noch seine Mütze herausschaute.
 
-E: Doch dann fuhr er hoch.
+E: Doch dann fiel es ihm ein.
 
 O: Oje! Mein Versprechen!
 
