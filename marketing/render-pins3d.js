@@ -53,6 +53,10 @@ const PINS = [
   ['erzieherin', 'basteln.jpg', '50% 40%', 'Geschenke für Erzieherinnen', 'Kleine Dankeschöns mit Herz', 'Alle Ideen ansehen →'],
   ['last-minute', 'onni-handy-ruecken.jpg', '50% 45%', 'Last-Minute-Wichtel&shy;geschenke', 'Morgen schon da oder zum Ausdrucken', 'Alle Ideen ansehen →'],
   ['abschied', 'umschlag.jpg', '50% -300px', 'Wichtel-Abschied', 'Abschiedsbrief &amp; Ideen für Heiligabend', 'Mehr erfahren →'],
+  // 27.11. Pinterest-Statistik: Schrottwichteln, Ausmalbilder, Weihnachtsfeier bringen die meisten Website-Klicks → zweiter Pin mit neuem Bild (1.–3.12.)
+  ['schrottwichteln', 'schrott.jpg', '50% 45%', 'Schrott&shy;wichteln', 'Regeln, Ablauf &amp; lustige Ideen', 'Spielregeln ansehen →'],
+  ['ausmalbilder', 'kinder.jpg', '50% 45%', 'Wichtel-Ausmalbilder', 'Kostenlos zum Ausdrucken', 'Jetzt ausdrucken →'],
+  ['weihnachtsfeier', 'feier.jpg', '50% 45%', 'Weihnachtsfeier-Ideen fürs Team', 'Spiele, Wichteln &amp; Tipps', 'Alle Ideen ansehen →'],
 ];
 // Nur einzelne Pins neu bauen: node marketing/render-pins3d.js wuerfeln
 const NUR = process.argv.slice(2);
