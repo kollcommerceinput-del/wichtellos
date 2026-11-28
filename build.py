@@ -179,7 +179,7 @@ SPIELE_HINWEIS = ('<aside class="praemie spiele-hinweis"><p><b>🎲 Auf der Such
                   '<p><a class="btn-secondary" href="/gesellschaftsspiele-verschenken/">Zu den Top 10 →</a></p></aside>\n')
 SPIELE_HINWEIS_SEITEN = {'/wichtelgeschenke-fuer-kinder/', '/nikolaus-geschenke/', '/adventskalender-befuellen/', '/geschenke-fuer-oma-und-opa/',
                          '/wichtelgeschenke-fuer-teenager/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/weihnachtsfeier-ideen/'}
-BF_OHNE = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/'}
+BF_OHNE = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/black-friday-wichtelgeschenke/', '/impressum/', '/datenschutz/', '/teilen/', '/onni/', '/onni-verschenken/'}
 
 # Wichtel-Posen in grafik/: Datei -> (Breite, Höhe) fürs img-Tag
 POSES = {'winkt': (132, 152), 'geschenk': (120, 152), 'lupe': (132, 152), 'wuerfel': (132, 152), 'schlaeft': (152, 162)}
@@ -485,7 +485,7 @@ def amazon_link(query, label='Ideen bei Amazon ansehen*', max_eur=None):
 
 # „Direkt shoppen“ (Toni 17.11.: „man muss zu viel klicken“): Knopf im Kopf öffnet Feld mit Direktsprüngen –
 # Amazon-Suche mit Partner-ID (Werbung) + eigene Spreadshop-Produkte. Auf Kinderseiten (KINDER_OHNE_AMAZON) nur der eigene Shop.
-KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/'}
+KINDER_OHNE_AMAZON = {'/onni-adventskalender/', '/wichtel-abschied/', '/wichtel-ausmalbilder/', '/was-ist-ein-wichtel/', '/onni/', '/onni-verschenken/'}
 _SHOP_EIGEN = [  # Spreadshop-Neuheiten 17.11. (Produkttyp 4914 Weihnachtspulli, 5058 Schürze, 5060 Kissen) – Motiv mit Wunschnamen
     ('🎄', 'Weihnachtspulli mit Namen', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+wunschname+weiss-A3286f96983df2110?sellable=rnth9dlkuya8-4914'),
     ('🍪', 'Weihnachts-Schürze', 'https://wichtellos.myspreadshop.de/mein+wichtel+heisst+mit+wunschnamen-A3286f9698f7fcc89?sellable=rnth9dot0689-5058'),
@@ -2728,7 +2728,7 @@ def onni_kalender_page():
   <div class="share-row ak-share"></div>
 </section>
 <h3>Onnis Adventskalender weiterschicken</h3>
-<p>Kennst du Kinder, die sich über Onni freuen? Schick den Kalender direkt weiter:</p>
+<p>Kennst du Kinder, die sich über Onni freuen? <b>🎁 <a href="/onni-verschenken/">Onni verschenken</a></b> – mit fertigem Text, der Empfänger wählt nur noch seinen Lieblingsplatz (Browser, Spotify, YouTube, Tonie …). Oder direkt weiterschicken:</p>
 {share_row(AK_SHARE, 'Onnis Adventskalender 🎄')}
 <p class="follow-row">Folge Onni, dann verpasst du keine Folge:<br>
     {social_links()}</p>
@@ -3572,6 +3572,126 @@ def share_page():
          body, noindex=True, mascot='winkt')
 
 
+# ---------- Onni verschenken (Toni 28.11.): Absender wählt Text → Empfänger wählt nur noch seinen Kanal ----------
+
+ONNI_GESCHENK_URL = f'{DOMAIN}/onni/'
+ONNI_GESCHENK_TEXTE = [  # Texte von Toni 28.11.
+    ('oma', '👵 Für Oma & Opa (an Eltern und Enkel)',
+     'Schaut mal, wen ich für euch entdeckt habe! 🎄✨ Das ist der kleine Wichtel Onni. Im Advent gibt es jeden Abend eine kostenlose '
+     'kleine Geschichte von ihm – als Video und zum Anhören vor dem Schlafengehen. Ich dachte, das wäre eine schöne Überraschung für die Kleinen! 🥰'),
+    ('freunde', '👨‍👩‍👧 Für Freunde & Familie',
+     'Kleiner Advents-Tipp für euch 🦉❄️ Der kleine Wichtel Onni bringt 24 kostenlose Gute-Nacht-Geschichten und Videos mit! '
+     'Perfekt zum Einkuscheln am Abend. Schaut mal rein:'),
+    ('kurz', '⚡ Ganz kurz & knackig',
+     'Ein kleines Adventsgeschenk für euch! 🎁✨ Jeden Abend öffnet sich ein kostenloses Türchen mit dem kleinen Wichtel Onni – '
+     'zum Anschauen & Anhören:'),
+]
+ONNI_KANAELE = [  # (Symbol, Titel, Untertitel, Link)
+    ('📺', 'Direkt hier ansehen', 'Im Browser, ohne App und ohne Anmeldung', '/onni-adventskalender/'),
+    ('spotify', 'Spotify', 'Gute-Nacht-Geschichte zum Hören', 'https://open.spotify.com/show/4SlLvid9eFpSNhi5XHzcTE'),
+    ('🎧', 'Amazon Music', 'Gute-Nacht-Geschichte zum Hören', 'https://music.amazon.de/podcasts/cad99cfb-d856-4dfc-ac25-3b03c2c006ab'),
+    ('youtube', 'YouTube', 'Alle Videos abonnieren', 'https://www.youtube.com/@WichtelLos?sub_confirmation=1'),
+    ('instagram', 'Instagram', 'Onni folgen', 'https://www.instagram.com/wichtellos/'),
+    ('tiktok', 'TikTok', 'Onni folgen', 'https://www.tiktok.com/@wichtellos'),
+    ('⬇️', 'Für Tonie & Yoto', 'Folge 1 als MP3 herunterladen', '/fotos/onni/onni-folge-01.mp3'),
+    ('🔔', 'Jeden Abend erinnern', 'Termin in den Handy-Kalender', '/onni-erinnerung.ics'),
+]
+ONNI_GESCHENK_CSS = '''<style>
+.og-kanaele{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:16px 0}
+.og-kanal{display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid #e6dccd;border-radius:14px;background:#fff;color:inherit;text-decoration:none}
+.og-kanal:hover,.og-kanal:focus{border-color:var(--primary)}
+.og-kanal .og-sym{font-size:1.7rem;width:2rem;text-align:center;flex:none}
+.og-kanal .og-sym svg{width:1.8rem;height:1.8rem}
+.og-kanal b{display:block;font-size:1.05rem}.og-kanal small{color:#6b5f52}
+.og-kanal.og-erst{border-color:var(--primary);background:#fff7f5}
+.og-texte label{display:block;border:2px solid #e6dccd;border-radius:14px;padding:12px 14px;margin:10px 0;background:#fff;cursor:pointer}
+.og-texte input{width:auto;display:inline-block;margin:0 8px 0 0;vertical-align:middle}.og-texte label:has(input:checked){border-color:var(--primary);background:#fff7f5}
+.og-texte .og-txt{display:block;margin-top:6px;font-size:.95rem;color:#4a4036}
+</style>'''
+
+
+def onni_geschenk_page():
+    """/onni/ = Empfänger-Seite: kurze Adresse aus der Verschenk-Nachricht, nur Kanal wählen (noindex, keine Werbung)."""
+    def sym(s):
+        return ICONS[s] if s in ICONS else s
+    karten = '\n'.join(
+        f'<a class="og-kanal{" og-erst" if i == 0 else ""}" href="{esc(u)}"'
+        + ('' if u.startswith('/') else ' target="_blank" rel="noopener"')
+        + (' download' if u.endswith('.mp3') else '')
+        + f'><span class="og-sym">{sym(s)}</span><span><b>{esc(t)}</b><small>{esc(st)}</small></span></a>'
+        for i, (s, t, st, u) in enumerate(ONNI_KANAELE))
+    body = f'''{ONNI_GESCHENK_CSS}<article>
+<h1>🎁 Ein kleines Adventsgeschenk für dich</h1>
+{ai_photo('wichtel3d-geschenk', 'Plüsch-Wichtel mit roter Mütze hält ein kleines Geschenk mit roter Schleife vor dem Weihnachtsbaum')}
+<p class="lead">Das ist <b>Onni</b>, ein kleiner Wichtel aus dem verschneiten Wichtelwald. Im Advent zieht er hinter einer Wichteltür ein und erlebt jeden Abend ein neues Abenteuer – als kurzes Video und als Gute-Nacht-Geschichte zum Hören. <b>Kostenlos und ohne Anmeldung.</b></p>
+<h2>Wo möchtest du Onni sehen oder hören?</h2>
+<p>Tipp einfach auf deinen Lieblingsplatz:</p>
+<div class="og-kanaele">
+{karten}
+</div>
+<p class="tip">🎄 Du kennst noch jemanden, der sich über Onni freut? <a href="/onni-verschenken/">Onni weiterverschenken →</a></p>
+<p class="hint">Video und Stimmen sind mit KI erstellt. Für zu Hause, Kita und Schule kostenlos.</p>
+</article>'''
+    page('/onni/', 'Ein Adventsgeschenk für dich: Onnis Adventskalender',
+         'Der kleine Wichtel Onni erlebt im Advent jeden Abend ein neues Abenteuer – kostenlos als Video und Gute-Nacht-Geschichte. Wähle einfach, wo du Onni sehen oder hören möchtest.',
+         body, noindex=True)
+
+
+def onni_verschenken_page():
+    """/onni-verschenken/ = Absender-Seite: Text wählen, per WhatsApp/E-Mail/Teilen verschicken. Link führt auf /onni/."""
+    wahl = '\n'.join(
+        f'<label><input type="radio" name="og-text" value="{k}"{" checked" if i == 0 else ""}><b>{esc(t)}</b>'
+        f'<span class="og-txt">{esc(txt)}<br>👉 {ONNI_GESCHENK_URL}</span></label>'
+        for i, (k, t, txt) in enumerate(ONNI_GESCHENK_TEXTE))
+    texte = {k: f'{txt}\n👉 {ONNI_GESCHENK_URL}' for k, _, txt in ONNI_GESCHENK_TEXTE}
+    body = f'''{ONNI_GESCHENK_CSS}<article>
+<h1>🎁 Onni verschenken</h1>
+{ai_photo('wichtel3d-umschlag', 'Plüsch-Wichtel mit roter Mütze hält einen Briefumschlag mit rotem Siegel in einer gemütlichen Werkstatt')}
+<p class="lead">Onnis Adventskalender ist kostenlos – und ein schönes kleines Geschenk für Kinder, Enkel, Nichten, Neffen und Lieblingsmenschen. Such dir einen Text aus und schick ihn weiter. <b>Der Empfänger tippt auf den Link und wählt nur noch aus, wo er Onni sehen oder hören möchte</b>: direkt im Browser, Spotify, Amazon Music, YouTube, Instagram, TikTok oder als MP3 für Tonie und Yoto.</p>
+<h2>1. Text aussuchen</h2>
+<div class="og-texte">
+{wahl}
+</div>
+<h2>2. Verschicken</h2>
+<div class="share-row">
+<a class="sh-wa" id="og-wa" href="#" target="_blank" rel="noopener">{ICONS["whatsapp"]}Per WhatsApp schicken</a>
+<a class="sh-mail" id="og-mail" href="#">{ICONS["mail"]}Per E-Mail schicken</a>
+<button type="button" id="og-copy">{ICONS["link"]}<span>Text kopieren</span></button>
+<button type="button" id="og-share" hidden>📤 <span>Andere App …</span></button>
+</div>
+<p>So sieht es beim Empfänger aus: <a href="/onni/">wichtellos.de/onni</a></p>
+</article>
+<script>
+(() => {{
+  const T = {json.dumps(texte, ensure_ascii=False)};
+  const wa = document.getElementById('og-wa'), mail = document.getElementById('og-mail');
+  const copy = document.getElementById('og-copy'), more = document.getElementById('og-share');
+  const text = () => T[(document.querySelector('input[name="og-text"]:checked') || {{}}).value || 'oma'];
+  const upd = () => {{
+    wa.href = 'https://wa.me/?text=' + encodeURIComponent(text());
+    mail.href = 'mailto:?subject=' + encodeURIComponent('Ein kleines Adventsgeschenk für euch 🎁') + '&body=' + encodeURIComponent(text());
+  }};
+  document.querySelectorAll('input[name="og-text"]').forEach(r => r.addEventListener('change', upd));
+  upd();
+  copy.addEventListener('click', async () => {{
+    try {{ await navigator.clipboard.writeText(text()); }} catch {{
+      const ta = document.createElement('textarea'); ta.value = text(); document.body.append(ta); ta.select();
+      try {{ document.execCommand('copy'); }} catch {{ /* nichts */ }} ta.remove();
+    }}
+    copy.querySelector('span').textContent = '✓ Kopiert';
+    setTimeout(() => {{ copy.querySelector('span').textContent = 'Text kopieren'; }}, 1800);
+  }});
+  if (navigator.share) {{
+    more.hidden = false;
+    more.addEventListener('click', () => navigator.share({{ text: text() }}).catch(() => {{}}));
+  }}
+}})();
+</script>'''
+    page('/onni-verschenken/', 'Onni verschenken: Adventskalender kostenlos weiterschicken',
+         'Onnis Adventskalender kostenlos verschenken: Text aussuchen und per WhatsApp oder E-Mail an Kinder, Enkel und Freunde schicken. Der Empfänger wählt nur noch, wo er Onni sehen oder hören möchte.',
+         body)
+
+
 # ---------- Rechtliches (Entwürfe) ----------
 
 COMPANY = ('KOLL Commerce UG (haftungsbeschränkt)<br>Leuchtenfabrik · Haus A, 1. Etage<br>'
@@ -3770,7 +3890,7 @@ def extras():
          noindex=True)
     shutil.move(OUT / '404' / 'index.html', OUT / '404.html')
     (OUT / '404').rmdir()
-    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/', '/wichtel-generator-vergleich/', '/geburtstagswichteln/', '/wichtel-ausmalbuch/']
+    urls = ['/'] + [f'/wichtelgeschenke-unter-{b}-euro/' for b in GIFT_BUDGETS] + ['/geschenkfinder/', '/wichtelgeschenke-fuer-kinder/', '/wichtelgeschenke-selber-machen/', '/wichteln-wuerfeln-regeln/', '/schrottwichteln/', '/wichteln-im-buero/', '/wichteln-per-whatsapp/', '/wichteln-schule-kita/', '/weihnachtsfeier-ideen/', '/wichtelgedichte/', '/woher-kommt-wichteln/', '/wie-funktioniert-wichteln/', '/was-ist-ein-wichtel/', '/wichteln-varianten/', '/wichteln-zu-dritt/', '/wichteln-per-post/', '/wichteltuer/', '/wichteln-einladung-vorlage/', '/wichtel-ausmalbilder/', '/wichtel-zubehoer/', '/wichtelgruss/', '/wunschzettel/', '/adventskalender-ideen/', '/adventskalender-befuellen/', '/geschenke-fuer-maenner/', '/geschenke-fuer-frauen/', '/onni-adventskalender/', '/nikolaus-geschenke/', '/geschenke-generator/', '/rubbellos/', '/black-friday-wichtelgeschenke/', '/wichtel-tassen/', '/wichteltuer-selber-bauen/', '/plaetzchen-backen-mit-kindern/', '/kuscheldecke-verschenken/', '/wichtelgeschenke-mit-buchstaben/', '/lustige-wichtelgeschenke/', '/last-minute-wichtelgeschenke/', '/wichtelgeschenke-fuer-kollegen/', '/geschenke-fuer-oma-und-opa/', '/wichtelgeschenke-fuer-teenager/', '/gesellschaftsspiele-verschenken/', '/geschenke-fuer-erzieherin/', '/julklapp/', '/wichtel-abschied/', '/wichtel-generator-vergleich/', '/geburtstagswichteln/', '/wichtel-ausmalbuch/', '/onni-verschenken/']
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + ''.join(
         f'  <url><loc>{DOMAIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>0.1</priority></url>\n'
@@ -4409,6 +4529,8 @@ def main():
     links_page()
     invite_page()
     share_page()
+    onni_geschenk_page()
+    onni_verschenken_page()
     legal_pages()
     extras()
     print('Fertig:', sorted(str(p.relative_to(OUT)) for p in OUT.rglob('*') if p.is_file()))
